@@ -1,0 +1,55 @@
+name: Presseschau
+
+on:
+  schedule:
+    # 05:25 UTC = 07:25 im Sommer, 06:25 im Winter (deutscher Zeit).
+    # Nicht zur vollen Stunde, weil GitHubs Scheduler dann überlastet ist
+    # und Läufe sich verspäten.
+    - cron: "25 5 * * *"
+  workflow_dispatch:        # erlaubt den Lauf auf Knopfdruck
+
+permissions:
+  contents: write           # nötig, damit die gebaute Seite committet wird
+
+concurrency:
+  group: presseschau
+  cancel-in-progress: false
+
+jobs:
+  bauen:
+    runs-on: ubuntu-latest
+    env:
+      BREVO_API_KEY: ${{ secrets.BREVO_API_KEY }}
+      MAIL_VON: ${{ secrets.MAIL_VON }}
+      MAIL_AN: ${{ secrets.MAIL_AN }}
+      SEITEN_URL: ${{ vars.SEITEN_URL }}
+    steps:
+      - name: Repository holen
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Abhängigkeiten installieren
+        run: pip install feedparser requests
+
+      - name: Übersicht bauen
+        run: python build.py
+
+      - name: Ergebnis committen
+        run: |
+          git config user.name "Presseschau Bot"
+          git config user.email "actions@github.com"
+          git add docs
+          if git diff --staged --quiet; then
+            echo "Nichts geändert."
+          else
+            git commit -m "Presseschau $(date -u +%Y-%m-%d)"
+            git push
+          fi
+
+      - name: Mail verschicken
+        if: env.BREVO_API_KEY != ''
+        run: python send_mail.py
