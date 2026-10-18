@@ -1,0 +1,47 @@
+[
+  {
+    "name": "tagesschau",
+    "url": "https://www.tagesschau.de/index~rss2.xml",
+    "kind": "oer"
+  },
+  {
+    "name": "ZDFheute",
+    "url": "https://www.zdf.de/rss/zdf/nachrichten",
+    "kind": "oer"
+  },
+  {
+    "name": "Deutschlandfunk",
+    "url": "https://www.deutschlandfunk.de/nachrichten-100.rss",
+    "kind": "oer"
+  },
+  {
+    "name": "Spiegel",
+    "url": "https://www.spiegel.de/schlagzeilen/tops/index.rss",
+    "kind": "zeitung"
+  },
+  {
+    "name": "Zeit Online",
+    "url": "https://newsfeed.zeit.de/index",
+    "kind": "zeitung"
+  },
+  {
+    "name": "Süddeutsche",
+    "url": "https://rss.sueddeutsche.de/rss/Topthemen",
+    "kind": "zeitung"
+  },
+  {
+    "name": "FAZ",
+    "url": "https://www.faz.net/rss/aktuell/",
+    "kind": "zeitung"
+  },
+  {
+    "name": "Welt",
+    "url": "https://www.welt.de/feeds/latest.rss",
+    "kind": "zeitung"
+  },
+  {
+    "name": "taz",
+    "url": "https://taz.de/!p4608;rss/",
+    "kind": "zeitung"
+  }
+]
