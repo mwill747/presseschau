@@ -1,20 +1,25 @@
 {
-  "stand": "2026-10-18T11:52:27.011064+02:00",
+  "stand": "2026-10-18T12:02:32.717176+02:00",
   "stunden": 26,
   "fehler": {},
   "themen": [
     {
-      "titel": "Wahlkampf - US-Vizepräsident Vance: Einwanderungspolitik Grund für Ausschreitungen in Frankreich",
+      "titel": "Frankreich: Der Moment, in dem das historische Rathaus von Limoges einstürzt",
       "medien": [
         "Deutschlandfunk",
         "FAZ",
+        "Spiegel",
         "Süddeutsche",
         "ZDFheute",
-        "Zeit Online",
         "tagesschau",
         "taz"
       ],
       "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Frankreich: Der Moment, in dem das historische Rathaus von Limoges einstürzt",
+          "link": "https://www.spiegel.de/ausland/frankreich-der-moment-in-dem-das-historische-rathaus-von-limoges-einstuerzt-a-5ac30ec7-416f-4449-b1af-458dd7d392e1#ref=rss"
+        },
         {
           "quelle": "Deutschlandfunk",
           "titel": "Wahlkampf - US-Vizepräsident Vance: Einwanderungspolitik Grund für Ausschreitungen in Frankreich",
@@ -24,16 +29,6 @@
           "quelle": "Deutschlandfunk",
           "titel": "Frankreich - Randalierer in Limoges setzen unter Denkmalschutz stehendes Rathaus in Brand",
           "link": "https://www.deutschlandfunk.de/randalierer-in-limoges-setzen-unter-denkmalschutz-stehendes-rathaus-in-brand-100.html"
-        },
-        {
-          "quelle": "Zeit Online",
-          "titel": "Nach den Ausschreitungen: 1.800 Festnahmen bei Protesten in Frankreich",
-          "link": "https://www.zeit.de/news/2026-10/18/frankreichs-protesttag-endet-in-gewalt-und-pluenderungen"
-        },
-        {
-          "quelle": "tagesschau",
-          "titel": "Ausschreitungen in Frankreich: Brennende Gebäude, verwüstete Innenstädte",
-          "link": "https://www.tagesschau.de/multimedia/bilder/ausschreitungen-frankreich-102.html"
         },
         {
           "quelle": "tagesschau",
@@ -59,11 +54,6 @@
           "quelle": "tagesschau",
           "titel": "Schwere Ausschreitungen bei Massenprotesten in Frankreich",
           "link": "https://www.tagesschau.de/ausland/europa/frankreich-proteste-212.html"
-        },
-        {
-          "quelle": "tagesschau",
-          "titel": "Ausschreitungen bei Protesten gegen Bildungsreformen in Brüssel",
-          "link": "https://www.tagesschau.de/ausland/europa/bruessel-ausschreitungen-100.html"
         },
         {
           "quelle": "ZDFheute",
@@ -141,63 +131,21 @@
       ]
     },
     {
-      "titel": "Nordpiste gesperrt - Erneuter Zwischenfall am Flughafen Leipzig/Halle - Sicherheitszaun offenbar von Fahrzeug durchbrochen",
-      "medien": [
-        "Deutschlandfunk",
-        "FAZ",
-        "Spiegel",
-        "Welt",
-        "ZDFheute",
-        "tagesschau"
-      ],
-      "artikel": [
-        {
-          "quelle": "Deutschlandfunk",
-          "titel": "Nordpiste gesperrt - Erneuter Zwischenfall am Flughafen Leipzig/Halle - Sicherheitszaun offenbar von Fahrzeug durchbrochen",
-          "link": "https://www.deutschlandfunk.de/erneuter-zwischenfall-am-flughafen-leipzig-halle-sicherheitszaun-offenbar-von-fahrzeug-durchbrochen-100.html"
-        },
-        {
-          "quelle": "tagesschau",
-          "titel": "Erneuter Vorfall am Flughafen Leipzig/Halle: Zaun nahe Antonow-Fliegern beschädigt",
-          "link": "https://www.tagesschau.de/inland/regional/sachsen/polizei-suche-,flughafen-sicherheit-zaun-102.html"
-        },
-        {
-          "quelle": "tagesschau",
-          "titel": "Fahrzeug durchbricht offenbar Zaun am Gelände des Flughafen Leipzig/Halle",
-          "link": "https://www.tagesschau.de/video/video-1668260.html"
-        },
-        {
-          "quelle": "Spiegel",
-          "titel": "Leipzig/Halle: Zwischenfall am Flughafen – Nordpiste gesperrt",
-          "link": "https://www.spiegel.de/panorama/leipzig-halle-zwischenfall-am-flughafen-betrieb-eingeschraenkt-a-a93457e3-82be-4857-ac73-505f849a953e#ref=rss"
-        },
-        {
-          "quelle": "FAZ",
-          "titel": "FLugbetrieb Eingeschränkt: Fahrzeug durchbricht offenbar Zaun am Flughafen Leipzig",
-          "link": "https://www.faz.net/aktuell/gesellschaft/flughafen-leipzig-offenbar-sicherheitszaun-durchbrochen-polizei-ermittelt-accg-201597705.html"
-        },
-        {
-          "quelle": "ZDFheute",
-          "titel": "Zwischenfall am Flughafen Leipzig: Betrieb eingeschränkt",
-          "link": "https://www.zdfheute.de/politik/deutschland/flughafen-leipzig-halle-zaun-100.html"
-        },
-        {
-          "quelle": "Welt",
-          "titel": "Fahrzeug durchbricht Sicherheitszaun am Flughafen Leipzig – Ermittlungen laufen in „alle Richtungen“",
-          "link": "https://www.welt.de/politik/deutschland/article6ad45d4651e5094f7a5705c2/zwischenfall-fahrzeug-durchbricht-sicherheitszaun-am-flughafen-leipzig-ermittlungen-laufen-in-alle-richtungen.html"
-        }
-      ]
-    },
-    {
-      "titel": "Deutschlandtag der Jungen Union - Söder dringt auf Umsetzung der Reformen",
+      "titel": "Junge Union: Junge Union nennt mögliche rot-grün-rote Koalition »Kulturbruch«",
       "medien": [
         "Deutschlandfunk",
         "FAZ",
         "Welt",
+        "Zeit Online",
         "tagesschau",
         "taz"
       ],
       "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Junge Union: Junge Union nennt mögliche rot-grün-rote Koalition »Kulturbruch«",
+          "link": "https://www.zeit.de/politik/deutschland/2026-10/junge-union-rot-gruen-rot-koalition-berlin"
+        },
         {
           "quelle": "Deutschlandfunk",
           "titel": "Deutschlandtag der Jungen Union - Söder dringt auf Umsetzung der Reformen",
@@ -232,6 +180,54 @@
           "quelle": "taz",
           "titel": "Rot-Grün-Rot in Berlin: Aufbruch oder Absturz?",
           "link": "https://taz.de/Rot-Gruen-Rot-in-Berlin/!6218123/"
+        }
+      ]
+    },
+    {
+      "titel": "Erneuter Vorfall am Flughafen Leipzig/Halle: Zaun nahe Antonow-Fliegern beschädigt",
+      "medien": [
+        "Deutschlandfunk",
+        "FAZ",
+        "Spiegel",
+        "Welt",
+        "ZDFheute",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Erneuter Vorfall am Flughafen Leipzig/Halle: Zaun nahe Antonow-Fliegern beschädigt",
+          "link": "https://www.tagesschau.de/inland/regional/sachsen/polizei-suche-,flughafen-sicherheit-zaun-102.html"
+        },
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Nordpiste gesperrt - Erneuter Zwischenfall am Flughafen Leipzig/Halle - Sicherheitszaun offenbar von Fahrzeug durchbrochen",
+          "link": "https://www.deutschlandfunk.de/erneuter-zwischenfall-am-flughafen-leipzig-halle-sicherheitszaun-offenbar-von-fahrzeug-durchbrochen-100.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Fahrzeug durchbricht offenbar Zaun am Gelände des Flughafen Leipzig/Halle",
+          "link": "https://www.tagesschau.de/video/video-1668260.html"
+        },
+        {
+          "quelle": "Spiegel",
+          "titel": "Leipzig/Halle: Zwischenfall am Flughafen – Nordpiste gesperrt",
+          "link": "https://www.spiegel.de/panorama/leipzig-halle-zwischenfall-am-flughafen-betrieb-eingeschraenkt-a-a93457e3-82be-4857-ac73-505f849a953e#ref=rss"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "FLugbetrieb Eingeschränkt: Fahrzeug durchbricht offenbar Zaun am Flughafen Leipzig",
+          "link": "https://www.faz.net/aktuell/gesellschaft/flughafen-leipzig-offenbar-sicherheitszaun-durchbrochen-polizei-ermittelt-accg-201597705.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Zwischenfall am Flughafen Leipzig: Betrieb eingeschränkt",
+          "link": "https://www.zdfheute.de/politik/deutschland/flughafen-leipzig-halle-zaun-100.html"
+        },
+        {
+          "quelle": "Welt",
+          "titel": "Fahrzeug durchbricht Sicherheitszaun am Flughafen Leipzig – Ermittlungen laufen in „alle Richtungen“",
+          "link": "https://www.welt.de/politik/deutschland/article6ad45d4651e5094f7a5705c2/zwischenfall-fahrzeug-durchbricht-sicherheitszaun-am-flughafen-leipzig-ermittlungen-laufen-in-alle-richtungen.html"
         }
       ]
     },
@@ -290,11 +286,6 @@
           "quelle": "tagesschau",
           "titel": "Tote und Verletzte bei Vorfall auf Militärbasis in Kanada",
           "link": "https://www.tagesschau.de/ausland/amerika/zwischenfall-militaerstutzpunkt-kanada-100.html"
-        },
-        {
-          "quelle": "Zeit Online",
-          "titel": "Provinz Alberta: Kanada meldet Tote und Verletzte nach Vorfall auf Militärbasis",
-          "link": "https://www.zeit.de/politik/ausland/2026-10/militaerstuetzpunkt-wainwright-kanada-alberta-zwischenfall-gxe"
         },
         {
           "quelle": "Zeit Online",
@@ -507,6 +498,36 @@
       ]
     },
     {
+      "titel": "US-Präsident setzt Sanktionen aus: Überparteiliche Kritik an Trumps Umgang mit der Ukraine",
+      "medien": [
+        "ZDFheute",
+        "tagesschau",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "US-Präsident setzt Sanktionen aus: Überparteiliche Kritik an Trumps Umgang mit der Ukraine",
+          "link": "https://taz.de/US-Praesident-setzt-Sanktionen-aus/!6222318/"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "US-Präsident Trump hat schon beschlossene Sanktionen gegen Russland gestoppt",
+          "link": "https://www.tagesschau.de/tagesthemen/video-1668182.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "\"Nationales Interesse\" - Trump setzt geplante Sanktionen gegen Russland aus",
+          "link": "https://www.tagesschau.de/ausland/amerika/usa-russland-ukraine-sanktionen-100.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Trump setzt geplante Sanktionen gegen Russland aus",
+          "link": "https://www.zdfheute.de/politik/ausland/usa-zoelle-russland-oel-sanktionen-trump-ukraine-krieg-100.html"
+        }
+      ]
+    },
+    {
       "titel": "Westjordanland - US-Außenminister Rubio fordert Israel zum Einschreiten gegen Siedlergewalt auf",
       "medien": [
         "Deutschlandfunk",
@@ -528,56 +549,6 @@
           "quelle": "tagesschau",
           "titel": "Olivenernte: Verletzte bei Siedlergewalt im Westjordanland",
           "link": "https://www.tagesschau.de/ausland/asien/westjordanland-olivenernte-angriffe-100.html"
-        }
-      ]
-    },
-    {
-      "titel": "Frankreich - \"Entsetzliches Ausmaß an Gewalt\": viele Verletzte nach landesweitem Protesttag - Präsident Macron droht Randalierern",
-      "medien": [
-        "Deutschlandfunk",
-        "FAZ",
-        "Spiegel"
-      ],
-      "artikel": [
-        {
-          "quelle": "Deutschlandfunk",
-          "titel": "Frankreich - \"Entsetzliches Ausmaß an Gewalt\": viele Verletzte nach landesweitem Protesttag - Präsident Macron droht Randalierern",
-          "link": "https://www.deutschlandfunk.de/entsetzliches-ausmass-an-gewalt-viele-verletzte-nach-landesweitem-protesttag-praesident-macron-droht-100.html"
-        },
-        {
-          "quelle": "FAZ",
-          "titel": "Unruhen in Frankreich: Premierminister Lecornu:„Entsetzliches Ausmaß an Gewalt“",
-          "link": "https://www.faz.net/aktuell/politik/ausland/unruhen-bei-protesten-in-frankreich-entsetzliches-ausmass-an-gewalt-accg-201596707.html"
-        },
-        {
-          "quelle": "Spiegel",
-          "titel": "Frankreich-Proteste: Premierminister beklagt »entsetzliches Ausmaß an Gewalt",
-          "link": "https://www.spiegel.de/ausland/frankreich-proteste-premierminister-beklagt-entsetzliches-ausmass-an-gewalt-a-fec939b4-9e40-45c7-9825-6657845cc77d#ref=rss"
-        }
-      ]
-    },
-    {
-      "titel": "US-Präsident setzt Sanktionen aus: Überparteiliche Kritik an Trumps Umgang mit der Ukraine",
-      "medien": [
-        "ZDFheute",
-        "tagesschau",
-        "taz"
-      ],
-      "artikel": [
-        {
-          "quelle": "taz",
-          "titel": "US-Präsident setzt Sanktionen aus: Überparteiliche Kritik an Trumps Umgang mit der Ukraine",
-          "link": "https://taz.de/US-Praesident-setzt-Sanktionen-aus/!6222318/"
-        },
-        {
-          "quelle": "tagesschau",
-          "titel": "\"Nationales Interesse\" - Trump setzt geplante Sanktionen gegen Russland aus",
-          "link": "https://www.tagesschau.de/ausland/amerika/usa-russland-ukraine-sanktionen-100.html"
-        },
-        {
-          "quelle": "ZDFheute",
-          "titel": "Trump setzt geplante Sanktionen gegen Russland aus",
-          "link": "https://www.zdfheute.de/politik/ausland/usa-zoelle-russland-oel-sanktionen-trump-ukraine-krieg-100.html"
         }
       ]
     },
@@ -625,6 +596,25 @@
       ]
     },
     {
+      "titel": "Frankreich - \"Entsetzliches Ausmaß an Gewalt\": viele Verletzte nach landesweitem Protesttag - Präsident Macron droht Randalierern",
+      "medien": [
+        "Deutschlandfunk",
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Frankreich - \"Entsetzliches Ausmaß an Gewalt\": viele Verletzte nach landesweitem Protesttag - Präsident Macron droht Randalierern",
+          "link": "https://www.deutschlandfunk.de/entsetzliches-ausmass-an-gewalt-viele-verletzte-nach-landesweitem-protesttag-praesident-macron-droht-100.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Unruhen in Frankreich: Premierminister Lecornu:„Entsetzliches Ausmaß an Gewalt“",
+          "link": "https://www.faz.net/aktuell/politik/ausland/unruhen-bei-protesten-in-frankreich-entsetzliches-ausmass-an-gewalt-accg-201596707.html"
+        }
+      ]
+    },
+    {
       "titel": "Shanghai - Bahnrad-WM: Teutenberg holt Gold im Ausscheidungsfahren - Friedrich gewinnt Silber im Keirin",
       "medien": [
         "Deutschlandfunk",
@@ -640,44 +630,6 @@
           "quelle": "Zeit Online",
           "titel": "Bahnrad-WM in Shanghai: Gold für Teutenberg und Silber für Friedrich bei Bahnrad-WM",
           "link": "https://www.zeit.de/sport/2026-10/bahnrad-wm-shanghai-tim-torn-teutenberg-ausscheidungsfahren-gold"
-        }
-      ]
-    },
-    {
-      "titel": "Bonn - CSU-Chef Söder spricht zum Abschluss der JU-Konferenz",
-      "medien": [
-        "Deutschlandfunk",
-        "Welt"
-      ],
-      "artikel": [
-        {
-          "quelle": "Deutschlandfunk",
-          "titel": "Bonn - CSU-Chef Söder spricht zum Abschluss der JU-Konferenz",
-          "link": "https://www.deutschlandfunk.de/csu-chef-soeder-spricht-zum-abschluss-der-ju-konferenz-102.html"
-        },
-        {
-          "quelle": "Welt",
-          "titel": "CSU-Chef Söder hält Abschlussrede",
-          "link": "https://www.welt.de/videos/video6ad4551f51e5094f7a570567/deutschlandtag-der-jungen-union-csu-chef-soeder-haelt-abschlussrede.html"
-        }
-      ]
-    },
-    {
-      "titel": "Opposition in Indien: Gründer der indischen Kakerlakenbewegung wieder freigelassen",
-      "medien": [
-        "ZDFheute",
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Zeit Online",
-          "titel": "Opposition in Indien: Gründer der indischen Kakerlakenbewegung wieder freigelassen",
-          "link": "https://www.zeit.de/politik/ausland/2026-10/abhijeet-dipke-cjp-kakerlakenpartei-festnahme-indien"
-        },
-        {
-          "quelle": "ZDFheute",
-          "titel": "Indien: Opposition geht gegen Wahlkommission vor",
-          "link": "https://www.zdfheute.de/politik/ausland/proteste-indien-modi-opposition-demokratie-100.html"
         }
       ]
     },
@@ -812,6 +764,45 @@
           "quelle": "ZDFheute",
           "titel": "Aktuelle Pressemitteilungen des ZDF",
           "link": "https://presseportal.zdf.de/pressemitteilungen/"
+        }
+      ]
+    },
+    {
+      "titel": "Notfälle: Großflächiger Stromausfall in Schleswig-Holstein behoben",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Notfälle: Großflächiger Stromausfall in Schleswig-Holstein behoben",
+          "link": "https://www.zeit.de/news/2026-10/18/grossflaechiger-stromausfall-in-schleswig-holstein-behoben"
+        }
+      ]
+    },
+    {
+      "titel": "Papst: In dieser Klinik glauben sie an Wunder, und manches Mal: zurecht",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Papst: In dieser Klinik glauben sie an Wunder, und manches Mal: zurecht",
+          "link": "https://www.zeit.de/zeit-magazin/2026-10/papst-leo-xiv-vatikan-rom-krankenhaus-gesundheit"
+        }
+      ]
+    },
+    {
+      "titel": "Sturmflutwarnung an der Ostsee: Erstes Hochwasser der Saison erwartet",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Sturmflutwarnung an der Ostsee: Erstes Hochwasser der Saison erwartet",
+          "link": "https://www.tagesschau.de/inland/regional/schleswigholstein/sturmflutwarnung-an-der-ostsee-erstes-hochwasser-der-saison-erwartet,hochwasserostsee-100.html"
         }
       ]
     },
@@ -998,19 +989,6 @@
       ]
     },
     {
-      "titel": "Nach Landtagswahl in Sachsen-Anhalt - Merz droht CDU-Politikern in Magdeburg bei Votum für AfD-Kandidaten mit Parteiausschluss",
-      "medien": [
-        "Deutschlandfunk"
-      ],
-      "artikel": [
-        {
-          "quelle": "Deutschlandfunk",
-          "titel": "Nach Landtagswahl in Sachsen-Anhalt - Merz droht CDU-Politikern in Magdeburg bei Votum für AfD-Kandidaten mit Parteiausschluss",
-          "link": "https://www.deutschlandfunk.de/merz-droht-cdu-politikern-in-magdeburg-bei-votum-fuer-afd-kandidaten-mit-parteiausschluss-106.html"
-        }
-      ]
-    },
-    {
       "titel": "Gesundheitswesen - Union will gegen lange Wartezeiten bei Fachärzten vorgehen",
       "medien": [
         "Deutschlandfunk"
@@ -1037,15 +1015,41 @@
       ]
     },
     {
-      "titel": "Mini-Gehirne aus dem Labor entziffern Buchstaben einer Blindenschrift",
+      "titel": "Steuern sparen: Gelungener Start ins Anlegerleben",
       "medien": [
-        "Welt"
+        "FAZ"
       ],
       "artikel": [
         {
-          "quelle": "Welt",
-          "titel": "Mini-Gehirne aus dem Labor entziffern Buchstaben einer Blindenschrift",
-          "link": "https://www.welt.de/wissenschaft/article6ad2067bd2eabbd56ed69e1d/auf-dem-weg-zum-bio-computer-mini-gehirne-aus-dem-labor-entziffern-buchstaben-einer-blindenschrift.html"
+          "quelle": "FAZ",
+          "titel": "Steuern sparen: Gelungener Start ins Anlegerleben",
+          "link": "https://www.faz.net/aktuell/finanzen/fruehstartrente-gelungener-start-ins-anlegerleben-accg-201465211.html"
+        }
+      ]
+    },
+    {
+      "titel": "JU-Deutschlandtag: Söder fordert Brandmauer nach links",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "JU-Deutschlandtag: Söder fordert Brandmauer nach links",
+          "link": "https://www.zeit.de/news/2026-10/18/soeder-fordert-brandmauer-nach-links"
+        }
+      ]
+    },
+    {
+      "titel": "Transatlantische Kontakte: Sachsen und Arizona wollen Halbleiterbranche vernetzen",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Transatlantische Kontakte: Sachsen und Arizona wollen Halbleiterbranche vernetzen",
+          "link": "https://www.zeit.de/news/2026-10/18/sachsen-und-arizona-wollen-halbleiterbranche-vernetzen"
         }
       ]
     },
@@ -1059,6 +1063,45 @@
           "quelle": "Zeit Online",
           "titel": "2. Fußball-Bundesliga: Emotionaler Lukovic trifft bei Debüt: FCK schlägt Bochum",
           "link": "https://www.zeit.de/news/2026-10/18/emotionaler-lukovic-trifft-bei-debuet-fck-schlaegt-bochum"
+        }
+      ]
+    },
+    {
+      "titel": "Alt bist du erst, wenn früher alles besser war",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Alt bist du erst, wenn früher alles besser war",
+          "link": "https://www.welt.de/debatte/plus6ad1fb780e64c69ce0e159b5/nostalgie-alt-bist-du-erst-wenn-frueher-alles-besser-war.html"
+        }
+      ]
+    },
+    {
+      "titel": "2. Bundesliga: Holstein Kiel hält an Trainer Tim Walter fest",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "2. Bundesliga: Holstein Kiel hält an Trainer Tim Walter fest",
+          "link": "https://www.zeit.de/news/2026-10/18/holstein-kiel-haelt-an-trainer-tim-walter-fest"
+        }
+      ]
+    },
+    {
+      "titel": "Mini-Gehirne aus dem Labor entziffern Buchstaben einer Blindenschrift",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Mini-Gehirne aus dem Labor entziffern Buchstaben einer Blindenschrift",
+          "link": "https://www.welt.de/wissenschaft/article6ad2067bd2eabbd56ed69e1d/auf-dem-weg-zum-bio-computer-mini-gehirne-aus-dem-labor-entziffern-buchstaben-einer-blindenschrift.html"
         }
       ]
     },
@@ -1102,19 +1145,6 @@
       ]
     },
     {
-      "titel": "Regionalbahnen: Madsen: Bahn-Investitionen aus Bundeshaushalt zahlen",
-      "medien": [
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Zeit Online",
-          "titel": "Regionalbahnen: Madsen: Bahn-Investitionen aus Bundeshaushalt zahlen",
-          "link": "https://www.zeit.de/news/2026-10/18/madsen-bahn-investitionen-aus-bundeshaushalt-zahlen"
-        }
-      ]
-    },
-    {
       "titel": "tagesschau in 100 Sekunden",
       "medien": [
         "tagesschau"
@@ -1124,32 +1154,6 @@
           "quelle": "tagesschau",
           "titel": "tagesschau in 100 Sekunden",
           "link": "https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1668294.html"
-        }
-      ]
-    },
-    {
-      "titel": "Brände: Feuer in Heidenauer Lagerhalle - Zwei Jungen im Krankenhaus",
-      "medien": [
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Zeit Online",
-          "titel": "Brände: Feuer in Heidenauer Lagerhalle - Zwei Jungen im Krankenhaus",
-          "link": "https://www.zeit.de/news/2026-10/18/feuer-in-heidenauer-lagerhalle-zwei-jungen-im-krankenhaus"
-        }
-      ]
-    },
-    {
-      "titel": "Wieder ein 0:2 aufgeholt: Die Comeback-Könige der Liga: Füllkrug treibt Werder an",
-      "medien": [
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Zeit Online",
-          "titel": "Wieder ein 0:2 aufgeholt: Die Comeback-Könige der Liga: Füllkrug treibt Werder an",
-          "link": "https://www.zeit.de/news/2026-10/18/die-comeback-koenige-der-liga-fuellkrug-treibt-werder-an"
         }
       ]
     },
@@ -1245,6 +1249,19 @@
       ]
     },
     {
+      "titel": "Ausschreitungen in Frankreich: Brennende Gebäude, verwüstete Innenstädte",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Ausschreitungen in Frankreich: Brennende Gebäude, verwüstete Innenstädte",
+          "link": "https://www.tagesschau.de/multimedia/bilder/ausschreitungen-frankreich-102.html"
+        }
+      ]
+    },
+    {
       "titel": "Kieferorthopädie: Zahnspangen, auch genannt: Gelddruckmaschine",
       "medien": [
         "Zeit Online"
@@ -1271,15 +1288,15 @@
       ]
     },
     {
-      "titel": "Sturmflutwarnung an der Ostsee: Erstes Hochwasser der Saison erwartet",
+      "titel": "Emiliano Martínez: Chelsea-Torwart nach Zusammenprall erfolgreich operiert",
       "medien": [
-        "tagesschau"
+        "Spiegel"
       ],
       "artikel": [
         {
-          "quelle": "tagesschau",
-          "titel": "Sturmflutwarnung an der Ostsee: Erstes Hochwasser der Saison erwartet",
-          "link": "https://www.tagesschau.de/inland/regional/schleswigholstein/sturmflutwarnung-an-der-ostsee-erstes-hochwasser-der-saison-erwartet,hochwasserostsee-100.html"
+          "quelle": "Spiegel",
+          "titel": "Emiliano Martínez: Chelsea-Torwart nach Zusammenprall erfolgreich operiert",
+          "link": "https://www.spiegel.de/sport/fussball/emiliano-martinez-chelsea-torwart-nach-zusammenprall-erfolgreich-operiert-a-cf9797d7-1e58-4234-9be5-6f37b74f527b#ref=rss"
         }
       ]
     },
@@ -1501,6 +1518,19 @@
           "quelle": "Welt",
           "titel": "Bis zu sechs Personen schlagen und treten auf 17-Jährigen ein",
           "link": "https://www.welt.de/vermischtes/kriminalitaet/article6ad484054b9e270c3872f6d2/niedersachsen-bis-zu-sechs-personen-schlagen-und-treten-auf-17-jaehrigen-ein.html"
+        }
+      ]
+    },
+    {
+      "titel": "Behrens: \"Ich habe gedacht, das ist ein Scherz\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Behrens: \"Ich habe gedacht, das ist ein Scherz\"",
+          "link": "https://www.zdfheute.de/sport/fussball-bundesliga/das-aktuelle-sportstudio-hennes-behrens-fussball-bundesliga-fc-augsburg-100.html"
         }
       ]
     },
@@ -2259,6 +2289,19 @@
       ]
     },
     {
+      "titel": "CSU-Chef Söder hält Abschlussrede",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "CSU-Chef Söder hält Abschlussrede",
+          "link": "https://www.welt.de/videos/video6ad4551f51e5094f7a570567/deutschlandtag-der-jungen-union-csu-chef-soeder-haelt-abschlussrede.html"
+        }
+      ]
+    },
+    {
       "titel": "Zwei Frauen, eine Mission",
       "medien": [
         "Welt"
@@ -2281,19 +2324,6 @@
           "quelle": "Welt",
           "titel": "10 Fragen zum Allgemeinwissen – hier sind acht Richtige für jeden drin",
           "link": "https://www.welt.de/kmpkt/article6acf3b714ba5238b7412feb4/quiz-10-fragen-zum-allgemeinwissen-hier-sind-acht-richtige-fuer-jeden-drin.html"
-        }
-      ]
-    },
-    {
-      "titel": "Kompromiss bei Enteignungen – Weg frei für Rot-Grün-Rot in der Hauptstadt",
-      "medien": [
-        "Welt"
-      ],
-      "artikel": [
-        {
-          "quelle": "Welt",
-          "titel": "Kompromiss bei Enteignungen – Weg frei für Rot-Grün-Rot in der Hauptstadt",
-          "link": "https://www.welt.de/videos/video6ad4556a51e5094f7a57056f/berlin-kompromiss-bei-enteignungen-weg-frei-fuer-rot-gruen-rot-in-der-hauptstadt.html"
         }
       ]
     },
@@ -2593,6 +2623,19 @@
           "quelle": "FAZ",
           "titel": "Ulrich Bettermann: Einer der letzten Unternehmer vom alten Schlag",
           "link": "https://www.faz.net/aktuell/wirtschaft/unternehmen/ulrich-bettermann-patriarch-aus-dem-sauerland-mit-milliardenvermoegen-201312041.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ausschreitungen bei Protesten gegen Bildungsreformen in Brüssel",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Ausschreitungen bei Protesten gegen Bildungsreformen in Brüssel",
+          "link": "https://www.tagesschau.de/ausland/europa/bruessel-ausschreitungen-100.html"
         }
       ]
     },
@@ -3022,6 +3065,19 @@
           "quelle": "tagesschau",
           "titel": "Livestream: Die Nachrichten auf tagesschau24",
           "link": "https://www.tagesschau.de/multimedia/livestreams/livestream-ts24-104.html"
+        }
+      ]
+    },
+    {
+      "titel": "Indien: Opposition geht gegen Wahlkommission vor",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Indien: Opposition geht gegen Wahlkommission vor",
+          "link": "https://www.zdfheute.de/politik/ausland/proteste-indien-modi-opposition-demokratie-100.html"
         }
       ]
     },
@@ -3583,45 +3639,6 @@
           "link": "https://www.tagesschau.de/ausland/amerika/usa-trump-russland-ukraine-100.html"
         }
       ]
-    },
-    {
-      "titel": "Fotoarbeit über das Erwachsenwerden: Warst du nicht gerade noch klein und niedlich?",
-      "medien": [
-        "taz"
-      ],
-      "artikel": [
-        {
-          "quelle": "taz",
-          "titel": "Fotoarbeit über das Erwachsenwerden: Warst du nicht gerade noch klein und niedlich?",
-          "link": "https://taz.de/Fotoarbeit-ueber-das-Erwachsenwerden/!6220263/"
-        }
-      ]
-    },
-    {
-      "titel": "Zwischen Herde und Heft",
-      "medien": [
-        "ZDFheute"
-      ],
-      "artikel": [
-        {
-          "quelle": "ZDFheute",
-          "titel": "Zwischen Herde und Heft",
-          "link": "https://www.zdfheute.de/politik/ausland/schule-unterricht-lesotho-afrika-kinder-bildung-100.html"
-        }
-      ]
-    },
-    {
-      "titel": "Welche Drohnen Satelliteninternet brauchen",
-      "medien": [
-        "ZDFheute"
-      ],
-      "artikel": [
-        {
-          "quelle": "ZDFheute",
-          "titel": "Welche Drohnen Satelliteninternet brauchen",
-          "link": "https://www.zdfheute.de/politik/ausland/drohnen-starlink-satellitenverbindung-ukraine-krieg-russland-100.html"
-        }
-      ]
     }
   ],
   "pro_quelle": {
@@ -3683,16 +3700,16 @@
     ],
     "Zeit Online": [
       {
-        "titel": "2. Fußball-Bundesliga: Emotionaler Lukovic trifft bei Debüt: FCK schlägt Bochum",
-        "link": "https://www.zeit.de/news/2026-10/18/emotionaler-lukovic-trifft-bei-debuet-fck-schlaegt-bochum"
+        "titel": "Notfälle: Großflächiger Stromausfall in Schleswig-Holstein behoben",
+        "link": "https://www.zeit.de/news/2026-10/18/grossflaechiger-stromausfall-in-schleswig-holstein-behoben"
       },
       {
-        "titel": "Krieg gegen die Ukraine: Verständigung zulasten der Ukraine: Trump geht auf Moskau zu",
-        "link": "https://www.zeit.de/news/2026-10/18/verstaendigung-zulasten-der-ukraine-trump-geht-auf-moskau-zu"
+        "titel": "Papst: In dieser Klinik glauben sie an Wunder, und manches Mal: zurecht",
+        "link": "https://www.zeit.de/zeit-magazin/2026-10/papst-leo-xiv-vatikan-rom-krankenhaus-gesundheit"
       },
       {
-        "titel": "Fußball-Bundesliga: Beim BVB wächst der Druck: Karetsas-Sorge im Reisestress",
-        "link": "https://www.zeit.de/news/2026-10/18/erst-polarkreis-jetzt-ueber-20-grad-dortmunds-wilde-reise"
+        "titel": "Junge Union: Junge Union nennt mögliche rot-grün-rote Koalition »Kulturbruch«",
+        "link": "https://www.zeit.de/politik/deutschland/2026-10/junge-union-rot-gruen-rot-koalition-berlin"
       }
     ],
     "Süddeutsche": [
@@ -3725,16 +3742,16 @@
     ],
     "Welt": [
       {
+        "titel": "Alt bist du erst, wenn früher alles besser war",
+        "link": "https://www.welt.de/debatte/plus6ad1fb780e64c69ce0e159b5/nostalgie-alt-bist-du-erst-wenn-frueher-alles-besser-war.html"
+      },
+      {
         "titel": "Mini-Gehirne aus dem Labor entziffern Buchstaben einer Blindenschrift",
         "link": "https://www.welt.de/wissenschaft/article6ad2067bd2eabbd56ed69e1d/auf-dem-weg-zum-bio-computer-mini-gehirne-aus-dem-labor-entziffern-buchstaben-einer-blindenschrift.html"
       },
       {
         "titel": "Herzlichen Glückwunsch, Schulfrieden!",
         "link": "https://www.welt.de/debatte/plus6ad1ff300e64c69ce0e15a0b/religioeser-extremismus-herzlichen-glueckwunsch-schulfrieden.html"
-      },
-      {
-        "titel": "„Ängstlich und viel zu lieb“ – Schalke schlägt Alarm",
-        "link": "https://www.welt.de/sport/fussball/bundesliga/fc-schalke-04/article6ad487be51e5094f7a570826/schalke-schlaegt-alarm-harmloser-aufsteiger-aengstlich-und-viel-zu-lieb.html"
       }
     ],
     "taz": [
