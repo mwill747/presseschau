@@ -145,7 +145,7 @@ def main() -> int:
         json={
             "sender": {"email": von, "name": "Presseschau"},
             "to": [{"email": an}],
-            "subject": f"Presseschau {stand:%d.%m.} — {mehrfach} Themen",
+            "subject": f"Presseschau {stand:%d.%m.} - {mehrfach} Themen",
             "htmlContent": baue_mail(daten, os.environ.get("SEITEN_URL")),
         },
         timeout=30,
