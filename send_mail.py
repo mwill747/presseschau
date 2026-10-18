@@ -103,7 +103,7 @@ def baue_mail(daten: dict, seiten_url: str | None) -> str:
 <div style="max-width:620px;margin:0 auto;">
   <div style="border-bottom:2px solid #161B22;padding-bottom:14px;margin-bottom:8px;">
     <div style="font-family:monospace;font-size:11px;letter-spacing:1.5px;
-     color:#125C6E;text-transform:uppercase;margin-bottom:8px;">{datum}</div>
+     color:#125C6E;text-transform:uppercase;margin-bottom:8px;">📰 {datum}</div>
     <div style="font-size:30px;font-weight:600;line-height:1.1;">Presseschau</div>
   </div>
   <p style="font-size:13px;color:#7A8592;margin:0 0 24px;">
