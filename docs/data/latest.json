@@ -1,10 +1,10 @@
 {
-  "stand": "2026-10-18T12:02:32.717176+02:00",
+  "stand": "2026-10-18T12:05:18.874982+02:00",
   "stunden": 26,
   "fehler": {},
   "themen": [
     {
-      "titel": "Frankreich: Der Moment, in dem das historische Rathaus von Limoges einstürzt",
+      "titel": "Gewalt, Plünderungen, Brände: Proteste in Frankreich eskaliert",
       "medien": [
         "Deutschlandfunk",
         "FAZ",
@@ -15,6 +15,11 @@
         "taz"
       ],
       "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Gewalt, Plünderungen, Brände: Proteste in Frankreich eskaliert",
+          "link": "https://www.tagesschau.de/ausland/europa/frankreich-ausschreitungen-116.html"
+        },
         {
           "quelle": "Spiegel",
           "titel": "Frankreich: Der Moment, in dem das historische Rathaus von Limoges einstürzt",
@@ -29,11 +34,6 @@
           "quelle": "Deutschlandfunk",
           "titel": "Frankreich - Randalierer in Limoges setzen unter Denkmalschutz stehendes Rathaus in Brand",
           "link": "https://www.deutschlandfunk.de/randalierer-in-limoges-setzen-unter-denkmalschutz-stehendes-rathaus-in-brand-100.html"
-        },
-        {
-          "quelle": "tagesschau",
-          "titel": "Gewalt, Plünderungen, Brände: Proteste in Frankreich eskaliert",
-          "link": "https://www.tagesschau.de/ausland/europa/frankreich-ausschreitungen-116.html"
         },
         {
           "quelle": "tagesschau",
@@ -768,6 +768,45 @@
       ]
     },
     {
+      "titel": "Ausschreitungen in Frankreich: Brennende Gebäude, verwüstete Innenstädte",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Ausschreitungen in Frankreich: Brennende Gebäude, verwüstete Innenstädte",
+          "link": "https://www.tagesschau.de/multimedia/bilder/ausschreitungen-frankreich-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Das ist lebensnotwendig für das Gefecht“, sagt Roland Kather",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Das ist lebensnotwendig für das Gefecht“, sagt Roland Kather",
+          "link": "https://www.welt.de/videos/video6ad493044b9e270c3872f829/krieg-in-der-ukraine-das-ist-lebensnotwendig-fuer-das-gefecht-sagt-roland-kather.html"
+        }
+      ]
+    },
+    {
+      "titel": "In der Debatte um Kimmich spricht Matthäus jetzt ein Machtwort",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "In der Debatte um Kimmich spricht Matthäus jetzt ein Machtwort",
+          "link": "https://www.welt.de/sport/fussball/bundesliga/fc-bayern-muenchen/article6ad47f9c51e5094f7a570766/fc-bayern-in-der-debatte-um-joshua-kimmich-spricht-lothar-matthaeus-ein-machtwort.html"
+        }
+      ]
+    },
+    {
       "titel": "Notfälle: Großflächiger Stromausfall in Schleswig-Holstein behoben",
       "medien": [
         "Zeit Online"
@@ -1015,19 +1054,6 @@
       ]
     },
     {
-      "titel": "Steuern sparen: Gelungener Start ins Anlegerleben",
-      "medien": [
-        "FAZ"
-      ],
-      "artikel": [
-        {
-          "quelle": "FAZ",
-          "titel": "Steuern sparen: Gelungener Start ins Anlegerleben",
-          "link": "https://www.faz.net/aktuell/finanzen/fruehstartrente-gelungener-start-ins-anlegerleben-accg-201465211.html"
-        }
-      ]
-    },
-    {
       "titel": "JU-Deutschlandtag: Söder fordert Brandmauer nach links",
       "medien": [
         "Zeit Online"
@@ -1245,19 +1271,6 @@
           "quelle": "taz",
           "titel": "Türkischer Sender Halk TV: Türkische Journalisten decken Börsenskandal auf",
           "link": "https://taz.de/Tuerkischer-Sender-Halk-TV/!6222338/"
-        }
-      ]
-    },
-    {
-      "titel": "Ausschreitungen in Frankreich: Brennende Gebäude, verwüstete Innenstädte",
-      "medien": [
-        "tagesschau"
-      ],
-      "artikel": [
-        {
-          "quelle": "tagesschau",
-          "titel": "Ausschreitungen in Frankreich: Brennende Gebäude, verwüstete Innenstädte",
-          "link": "https://www.tagesschau.de/multimedia/bilder/ausschreitungen-frankreich-102.html"
         }
       ]
     },
@@ -2298,32 +2311,6 @@
           "quelle": "Welt",
           "titel": "CSU-Chef Söder hält Abschlussrede",
           "link": "https://www.welt.de/videos/video6ad4551f51e5094f7a570567/deutschlandtag-der-jungen-union-csu-chef-soeder-haelt-abschlussrede.html"
-        }
-      ]
-    },
-    {
-      "titel": "Zwei Frauen, eine Mission",
-      "medien": [
-        "Welt"
-      ],
-      "artikel": [
-        {
-          "quelle": "Welt",
-          "titel": "Zwei Frauen, eine Mission",
-          "link": "https://www.welt.de/kultur/article6acb253c5528343575dffc9b/so-wird-der-kieler-tatort-zwei-frauen-eine-mission.html"
-        }
-      ]
-    },
-    {
-      "titel": "10 Fragen zum Allgemeinwissen – hier sind acht Richtige für jeden drin",
-      "medien": [
-        "Welt"
-      ],
-      "artikel": [
-        {
-          "quelle": "Welt",
-          "titel": "10 Fragen zum Allgemeinwissen – hier sind acht Richtige für jeden drin",
-          "link": "https://www.welt.de/kmpkt/article6acf3b714ba5238b7412feb4/quiz-10-fragen-zum-allgemeinwissen-hier-sind-acht-richtige-fuer-jeden-drin.html"
         }
       ]
     },
@@ -3742,16 +3729,16 @@
     ],
     "Welt": [
       {
+        "titel": "„Das ist lebensnotwendig für das Gefecht“, sagt Roland Kather",
+        "link": "https://www.welt.de/videos/video6ad493044b9e270c3872f829/krieg-in-der-ukraine-das-ist-lebensnotwendig-fuer-das-gefecht-sagt-roland-kather.html"
+      },
+      {
+        "titel": "In der Debatte um Kimmich spricht Matthäus jetzt ein Machtwort",
+        "link": "https://www.welt.de/sport/fussball/bundesliga/fc-bayern-muenchen/article6ad47f9c51e5094f7a570766/fc-bayern-in-der-debatte-um-joshua-kimmich-spricht-lothar-matthaeus-ein-machtwort.html"
+      },
+      {
         "titel": "Alt bist du erst, wenn früher alles besser war",
         "link": "https://www.welt.de/debatte/plus6ad1fb780e64c69ce0e159b5/nostalgie-alt-bist-du-erst-wenn-frueher-alles-besser-war.html"
-      },
-      {
-        "titel": "Mini-Gehirne aus dem Labor entziffern Buchstaben einer Blindenschrift",
-        "link": "https://www.welt.de/wissenschaft/article6ad2067bd2eabbd56ed69e1d/auf-dem-weg-zum-bio-computer-mini-gehirne-aus-dem-labor-entziffern-buchstaben-einer-blindenschrift.html"
-      },
-      {
-        "titel": "Herzlichen Glückwunsch, Schulfrieden!",
-        "link": "https://www.welt.de/debatte/plus6ad1ff300e64c69ce0e15a0b/religioeser-extremismus-herzlichen-glueckwunsch-schulfrieden.html"
       }
     ],
     "taz": [
