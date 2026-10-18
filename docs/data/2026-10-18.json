@@ -1,5 +1,5 @@
 {
-  "stand": "2026-10-18T11:37:02.568936+02:00",
+  "stand": "2026-10-18T11:52:27.011064+02:00",
   "stunden": 26,
   "fehler": {},
   "themen": [
@@ -10,6 +10,7 @@
         "FAZ",
         "Süddeutsche",
         "ZDFheute",
+        "Zeit Online",
         "tagesschau",
         "taz"
       ],
@@ -23,6 +24,16 @@
           "quelle": "Deutschlandfunk",
           "titel": "Frankreich - Randalierer in Limoges setzen unter Denkmalschutz stehendes Rathaus in Brand",
           "link": "https://www.deutschlandfunk.de/randalierer-in-limoges-setzen-unter-denkmalschutz-stehendes-rathaus-in-brand-100.html"
+        },
+        {
+          "quelle": "Zeit Online",
+          "titel": "Nach den Ausschreitungen: 1.800 Festnahmen bei Protesten in Frankreich",
+          "link": "https://www.zeit.de/news/2026-10/18/frankreichs-protesttag-endet-in-gewalt-und-pluenderungen"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Ausschreitungen in Frankreich: Brennende Gebäude, verwüstete Innenstädte",
+          "link": "https://www.tagesschau.de/multimedia/bilder/ausschreitungen-frankreich-102.html"
         },
         {
           "quelle": "tagesschau",
@@ -48,6 +59,11 @@
           "quelle": "tagesschau",
           "titel": "Schwere Ausschreitungen bei Massenprotesten in Frankreich",
           "link": "https://www.tagesschau.de/ausland/europa/frankreich-proteste-212.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Ausschreitungen bei Protesten gegen Bildungsreformen in Brüssel",
+          "link": "https://www.tagesschau.de/ausland/europa/bruessel-ausschreitungen-100.html"
         },
         {
           "quelle": "ZDFheute",
@@ -173,7 +189,7 @@
       ]
     },
     {
-      "titel": "Junge Union fordert „gesellschaftliche Ächtung“ von Rot-Grün-Rot in Berlin",
+      "titel": "Deutschlandtag der Jungen Union - Söder dringt auf Umsetzung der Reformen",
       "medien": [
         "Deutschlandfunk",
         "FAZ",
@@ -182,11 +198,6 @@
         "taz"
       ],
       "artikel": [
-        {
-          "quelle": "Welt",
-          "titel": "Junge Union fordert „gesellschaftliche Ächtung“ von Rot-Grün-Rot in Berlin",
-          "link": "https://www.welt.de/politik/deutschland/article6ad48a1dbbcd3ed7e302435c/rot-gruen-rot-in-berlin-junge-union-fordert-gesellschaftliche-aechtung.html"
-        },
         {
           "quelle": "Deutschlandfunk",
           "titel": "Deutschlandtag der Jungen Union - Söder dringt auf Umsetzung der Reformen",
@@ -198,9 +209,14 @@
           "link": "https://www.deutschlandfunk.de/junge-union-fordert-aechtung-von-rot-gruen-rot-in-berlin-100.html"
         },
         {
-          "quelle": "Deutschlandfunk",
-          "titel": "Rot-Grün-Rot - Berlins CDU-Landeschef Evers nennt Sondierungspapier \"Kapitulationserklärung\" vor \"radikaler, in Teilen antisemitischer Linkspartei\"",
-          "link": "https://www.deutschlandfunk.de/berlins-cdu-landeschef-evers-nennt-sondierungspapier-kapitulationserklaerung-vor-radikaler-in-teilen-100.html"
+          "quelle": "taz",
+          "titel": "Deutschlandtag der Jungen Union: Systematische Leerstellen",
+          "link": "https://taz.de/Deutschlandtag-der-Jungen-Union/!6222314/"
+        },
+        {
+          "quelle": "Welt",
+          "titel": "Junge Union fordert „gesellschaftliche Ächtung“ von Rot-Grün-Rot in Berlin",
+          "link": "https://www.welt.de/politik/deutschland/article6ad48a1dbbcd3ed7e302435c/rot-gruen-rot-in-berlin-junge-union-fordert-gesellschaftliche-aechtung.html"
         },
         {
           "quelle": "tagesschau",
@@ -216,6 +232,43 @@
           "quelle": "taz",
           "titel": "Rot-Grün-Rot in Berlin: Aufbruch oder Absturz?",
           "link": "https://taz.de/Rot-Gruen-Rot-in-Berlin/!6218123/"
+        }
+      ]
+    },
+    {
+      "titel": "Krieg gegen die Ukraine: Verständigung zulasten der Ukraine: Trump geht auf Moskau zu",
+      "medien": [
+        "Spiegel",
+        "Süddeutsche",
+        "ZDFheute",
+        "Zeit Online",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Krieg gegen die Ukraine: Verständigung zulasten der Ukraine: Trump geht auf Moskau zu",
+          "link": "https://www.zeit.de/news/2026-10/18/verstaendigung-zulasten-der-ukraine-trump-geht-auf-moskau-zu"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Aktuelles zum Krieg in der Ukraine",
+          "link": "https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html"
+        },
+        {
+          "quelle": "Spiegel",
+          "titel": "Ukraine: Eine Liebesgeschichte mitten im Krieg – die guten News der Woche",
+          "link": "https://www.spiegel.de/ausland/ukraine-eine-liebesgeschichte-mitten-im-krieg-die-guten-news-der-woche-a-a16558a9-6782-425e-b125-a4edac240c81#ref=rss"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Selenskyj kritisiert Trumps Aussetzung von Russland-Sanktionen",
+          "link": "https://www.tagesschau.de/ausland/europa/ukraine-usa-sanktionen-100.html"
+        },
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Krieg in der Ukraine: Selenskij kritisiert Aussetzung von US-Sanktionen gegen Russland",
+          "link": "https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-selenskij-usa-sanktionen-russland-li.3563283"
         }
       ]
     },
@@ -261,42 +314,6 @@
       ]
     },
     {
-      "titel": "Ukraine-Krieg - Zwei Tote bei russischen Luftangriffen auf die Ukraine - Russland meldet Drohnenangriff auf Region St. Petersburg",
-      "medien": [
-        "Deutschlandfunk",
-        "FAZ",
-        "Spiegel",
-        "Welt"
-      ],
-      "artikel": [
-        {
-          "quelle": "Deutschlandfunk",
-          "titel": "Ukraine-Krieg - Zwei Tote bei russischen Luftangriffen auf die Ukraine - Russland meldet Drohnenangriff auf Region St. Petersburg",
-          "link": "https://www.deutschlandfunk.de/zwei-tote-bei-russischen-luftangriffen-auf-die-ukraine-russland-meldet-drohnenangriff-auf-region-st--100.html"
-        },
-        {
-          "quelle": "Spiegel",
-          "titel": "Sankt Petersburg: Russland meldet massiven Drohnenangriff – offenbar ein Toter",
-          "link": "https://www.spiegel.de/ausland/sankt-petersburg-russland-meldet-massiven-drohnenangriff-offenbar-ein-toter-a-9a5f0174-e099-4f1f-93f7-3739050c0d61#ref=rss"
-        },
-        {
-          "quelle": "Welt",
-          "titel": "Russische Behörden melden massiven Drohnenangriff auf St. Petersburg",
-          "link": "https://www.welt.de/politik/ausland/article6ad4617d51e5094f7a5705ec/ukraine-krieg-russische-behoerden-melden-massiven-drohnenangriff-auf-st-petersburg.html"
-        },
-        {
-          "quelle": "Welt",
-          "titel": "„St. Petersburg wurde massiv getroffen“ – Kiew greift empfindliche Infrastruktur Russlands an",
-          "link": "https://www.welt.de/videos/video6ad45610199dc15f1abd7f3e/ukraine-krieg-st-petersburg-wurde-massiv-getroffen-kiew-greift-empfindliche-infrastruktur-russlands-an.html"
-        },
-        {
-          "quelle": "FAZ",
-          "titel": "Liveblog Ukrainekrieg: Russland meldet massiven ukrainischen Drohnenangriff auf St. Petersburg",
-          "link": "https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-massiver-ukrainischer-drohnenangriff-auf-st-petersburg-faz-110683325.html"
-        }
-      ]
-    },
-    {
       "titel": "Bayerns Offensive gegen Leipzig nicht zu stoppen",
       "medien": [
         "FAZ",
@@ -327,7 +344,7 @@
         },
         {
           "quelle": "FAZ",
-          "titel": "FC Bayern Siegt 6:1: Leipzig hat die Raupe des deutschen Fußballs aufgeweckt",
+          "titel": "FC Bayern siegt 6:1: Leipzig hat die Raupe des deutschen Fußballs aufgeweckt",
           "link": "https://www.faz.net/aktuell/sport/fussball/bundesliga/fc-bayern-muenchen-um-luis-diaz-spielen-rb-leipzig-schwindelig-201304065.html"
         }
       ]
@@ -364,33 +381,33 @@
       ]
     },
     {
-      "titel": "Aktuelles zum Krieg in der Ukraine",
+      "titel": "Ukraine-Krieg - Zwei Tote bei russischen Luftangriffen auf die Ukraine - Russland meldet Drohnenangriff auf Region St. Petersburg",
       "medien": [
+        "Deutschlandfunk",
+        "FAZ",
         "Spiegel",
-        "Süddeutsche",
-        "ZDFheute",
-        "tagesschau"
+        "Welt"
       ],
       "artikel": [
         {
-          "quelle": "ZDFheute",
-          "titel": "Aktuelles zum Krieg in der Ukraine",
-          "link": "https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html"
+          "quelle": "Deutschlandfunk",
+          "titel": "Ukraine-Krieg - Zwei Tote bei russischen Luftangriffen auf die Ukraine - Russland meldet Drohnenangriff auf Region St. Petersburg",
+          "link": "https://www.deutschlandfunk.de/zwei-tote-bei-russischen-luftangriffen-auf-die-ukraine-russland-meldet-drohnenangriff-auf-region-st--100.html"
         },
         {
           "quelle": "Spiegel",
-          "titel": "Ukraine: Eine Liebesgeschichte mitten im Krieg – die guten News der Woche",
-          "link": "https://www.spiegel.de/ausland/ukraine-eine-liebesgeschichte-mitten-im-krieg-die-guten-news-der-woche-a-a16558a9-6782-425e-b125-a4edac240c81#ref=rss"
+          "titel": "Sankt Petersburg: Russland meldet massiven Drohnenangriff – offenbar ein Toter",
+          "link": "https://www.spiegel.de/ausland/sankt-petersburg-russland-meldet-massiven-drohnenangriff-offenbar-ein-toter-a-9a5f0174-e099-4f1f-93f7-3739050c0d61#ref=rss"
         },
         {
-          "quelle": "tagesschau",
-          "titel": "Selenskyj kritisiert Trumps Aussetzung von Russland-Sanktionen",
-          "link": "https://www.tagesschau.de/ausland/europa/ukraine-usa-sanktionen-100.html"
+          "quelle": "Welt",
+          "titel": "Russische Behörden melden massiven Drohnenangriff auf St. Petersburg",
+          "link": "https://www.welt.de/politik/ausland/article6ad4617d51e5094f7a5705ec/ukraine-krieg-russische-behoerden-melden-massiven-drohnenangriff-auf-st-petersburg.html"
         },
         {
-          "quelle": "Süddeutsche",
-          "titel": "Krieg in der Ukraine: Selenskij kritisiert Aussetzung von US-Sanktionen gegen Russland",
-          "link": "https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-selenskij-usa-sanktionen-russland-li.3563283"
+          "quelle": "FAZ",
+          "titel": "Liveblog Ukrainekrieg: Russland meldet massiven ukrainischen Drohnenangriff auf St. Petersburg",
+          "link": "https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-massiver-ukrainischer-drohnenangriff-auf-st-petersburg-faz-110683325.html"
         }
       ]
     },
@@ -421,6 +438,11 @@
           "quelle": "tagesschau",
           "titel": "Mindestens 17 Tote bei Massenpanik in Indien",
           "link": "https://www.tagesschau.de/ausland/asien/indien-tote-bei-massenpanik-100.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Indien: Zehn Tote bei Feuer in Hotelanlage in Bangladesch",
+          "link": "https://www.faz.net/aktuell/gesellschaft/ungluecke/mindestens-zehn-tote-bei-hotelbrand-in-cox-s-bazar-in-bangladesch-accg-201596932.html"
         }
       ]
     },
@@ -560,30 +582,6 @@
       ]
     },
     {
-      "titel": "Shanghai - Bahnrad-WM: Teutenberg holt Gold im Ausscheidungsfahren - Friedrich gewinnt Silber im Keirin",
-      "medien": [
-        "Deutschlandfunk",
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Deutschlandfunk",
-          "titel": "Shanghai - Bahnrad-WM: Teutenberg holt Gold im Ausscheidungsfahren - Friedrich gewinnt Silber im Keirin",
-          "link": "https://www.deutschlandfunk.de/bahnrad-wm-teutenberg-holt-gold-im-ausscheidungsfahren-friedrich-gewinnt-silber-im-keirin-102.html"
-        },
-        {
-          "quelle": "Zeit Online",
-          "titel": "Bahnrad-WM in Shanghai: Drei deutsche Medaillen zum Abschluss - Gold für Teutenberg",
-          "link": "https://www.zeit.de/news/2026-10/18/bahnrad-wm-teutenberg-holt-gold-im-ausscheidungsfahren"
-        },
-        {
-          "quelle": "Zeit Online",
-          "titel": "Bahnrad-WM in Shanghai: Gold für Teutenberg und Silber für Friedrich bei Bahnrad-WM",
-          "link": "https://www.zeit.de/sport/2026-10/bahnrad-wm-shanghai-tim-torn-teutenberg-ausscheidungsfahren-gold"
-        }
-      ]
-    },
-    {
       "titel": "SPD-Frauen werfen Union \"Sexismus mit System\" vor",
       "medien": [
         "ZDFheute",
@@ -623,6 +621,25 @@
           "quelle": "ZDFheute",
           "titel": "Giftige Rauchwolken über Südostasien",
           "link": "https://www.zdfheute.de/video/zdfheute-xpress/giftige-rauchwolken-suedostasien-video-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Shanghai - Bahnrad-WM: Teutenberg holt Gold im Ausscheidungsfahren - Friedrich gewinnt Silber im Keirin",
+      "medien": [
+        "Deutschlandfunk",
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Shanghai - Bahnrad-WM: Teutenberg holt Gold im Ausscheidungsfahren - Friedrich gewinnt Silber im Keirin",
+          "link": "https://www.deutschlandfunk.de/bahnrad-wm-teutenberg-holt-gold-im-ausscheidungsfahren-friedrich-gewinnt-silber-im-keirin-102.html"
+        },
+        {
+          "quelle": "Zeit Online",
+          "titel": "Bahnrad-WM in Shanghai: Gold für Teutenberg und Silber für Friedrich bei Bahnrad-WM",
+          "link": "https://www.zeit.de/sport/2026-10/bahnrad-wm-shanghai-tim-torn-teutenberg-ausscheidungsfahren-gold"
         }
       ]
     },
@@ -799,97 +816,6 @@
       ]
     },
     {
-      "titel": "„Ängstlich und viel zu lieb“ – Schalke schlägt Alarm",
-      "medien": [
-        "Welt"
-      ],
-      "artikel": [
-        {
-          "quelle": "Welt",
-          "titel": "„Ängstlich und viel zu lieb“ – Schalke schlägt Alarm",
-          "link": "https://www.welt.de/sport/fussball/bundesliga/fc-schalke-04/article6ad487be51e5094f7a570826/schalke-schlaegt-alarm-harmloser-aufsteiger-aengstlich-und-viel-zu-lieb.html"
-        }
-      ]
-    },
-    {
-      "titel": "Kichererbsen-Eintopf: Eine Schüssel Griechenland",
-      "medien": [
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Zeit Online",
-          "titel": "Kichererbsen-Eintopf: Eine Schüssel Griechenland",
-          "link": "https://www.zeit.de/zeit-magazin/wochenmarkt/2026/11/kichererbsen-eintopg-ofen-rezept-wochenmarkt"
-        }
-      ]
-    },
-    {
-      "titel": "Leitantrag für Parteitag: CSU-Parteitag: Klare Kante gegen AfD und Linkspartei",
-      "medien": [
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Zeit Online",
-          "titel": "Leitantrag für Parteitag: CSU-Parteitag: Klare Kante gegen AfD und Linkspartei",
-          "link": "https://www.zeit.de/news/2026-10/18/csu-parteitag-klare-kante-gegen-afd-und-linkspartei"
-        }
-      ]
-    },
-    {
-      "titel": "Türkischer Sender Halk TV: Türkische Journalisten decken Börsenskandal auf",
-      "medien": [
-        "taz"
-      ],
-      "artikel": [
-        {
-          "quelle": "taz",
-          "titel": "Türkischer Sender Halk TV: Türkische Journalisten decken Börsenskandal auf",
-          "link": "https://taz.de/Tuerkischer-Sender-Halk-TV/!6222338/"
-        }
-      ]
-    },
-    {
-      "titel": "Ausschreitungen in Frankreich: Brennende Gebäude, verwüstete Innenstädte",
-      "medien": [
-        "tagesschau"
-      ],
-      "artikel": [
-        {
-          "quelle": "tagesschau",
-          "titel": "Ausschreitungen in Frankreich: Brennende Gebäude, verwüstete Innenstädte",
-          "link": "https://www.tagesschau.de/multimedia/bilder/ausschreitungen-frankreich-102.html"
-        }
-      ]
-    },
-    {
-      "titel": "Kieferorthopädie: Zahnspangen, auch genannt: Gelddruckmaschine",
-      "medien": [
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Zeit Online",
-          "titel": "Kieferorthopädie: Zahnspangen, auch genannt: Gelddruckmaschine",
-          "link": "https://www.zeit.de/arbeit/2026-09/kieferorthopaedie-zahnmedizin-krankenkasse-zuzahlung-kosten"
-        }
-      ]
-    },
-    {
-      "titel": "Sommerbilanz: Zahlreiche Kampfmittel-Einsätze wegen Niedrigwassers",
-      "medien": [
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Zeit Online",
-          "titel": "Sommerbilanz: Zahlreiche Kampfmittel-Einsätze wegen Niedrigwassers",
-          "link": "https://www.zeit.de/news/2026-10/18/zahlreiche-kampfmittel-einsaetze-wegen-niedrigwassers"
-        }
-      ]
-    },
-    {
       "titel": "Baltikum - Luftalarm in Litauen - Warnung auch in Lettland",
       "medien": [
         "Deutschlandfunk"
@@ -903,15 +829,15 @@
       ]
     },
     {
-      "titel": "Koalition - SPD-Chef Klingbeil fordert von seiner Partei Bekenntnis zum Regierungswillen",
+      "titel": "Brasilien - Politologe Maihold rechnet mit Sieg Bolsonaros bei Stichwahl am 25. Oktober",
       "medien": [
         "Deutschlandfunk"
       ],
       "artikel": [
         {
           "quelle": "Deutschlandfunk",
-          "titel": "Koalition - SPD-Chef Klingbeil fordert von seiner Partei Bekenntnis zum Regierungswillen",
-          "link": "https://www.deutschlandfunk.de/spd-chef-klingbeil-fordert-von-seiner-partei-bekenntnis-zum-regierungswillen-102.html"
+          "titel": "Brasilien - Politologe Maihold rechnet mit Sieg Bolsonaros bei Stichwahl am 25. Oktober",
+          "link": "https://www.deutschlandfunk.de/politologe-maihold-rechnet-mit-sieg-bolsonaros-bei-stichwahl-am-25-oktober-100.html"
         }
       ]
     },
@@ -925,6 +851,19 @@
           "quelle": "Deutschlandfunk",
           "titel": "Grenzkontrollen - Deutlich weniger unerlaubte Einreisen nach Bayern",
           "link": "https://www.deutschlandfunk.de/deutlich-weniger-unerlaubte-einreisen-nach-bayern-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Koalition - SPD-Chef Klingbeil fordert von seiner Partei Bekenntnis zum Regierungswillen",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Koalition - SPD-Chef Klingbeil fordert von seiner Partei Bekenntnis zum Regierungswillen",
+          "link": "https://www.deutschlandfunk.de/spd-chef-klingbeil-fordert-von-seiner-partei-bekenntnis-zum-regierungswillen-102.html"
         }
       ]
     },
@@ -1098,6 +1037,227 @@
       ]
     },
     {
+      "titel": "Mini-Gehirne aus dem Labor entziffern Buchstaben einer Blindenschrift",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Mini-Gehirne aus dem Labor entziffern Buchstaben einer Blindenschrift",
+          "link": "https://www.welt.de/wissenschaft/article6ad2067bd2eabbd56ed69e1d/auf-dem-weg-zum-bio-computer-mini-gehirne-aus-dem-labor-entziffern-buchstaben-einer-blindenschrift.html"
+        }
+      ]
+    },
+    {
+      "titel": "2. Fußball-Bundesliga: Emotionaler Lukovic trifft bei Debüt: FCK schlägt Bochum",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "2. Fußball-Bundesliga: Emotionaler Lukovic trifft bei Debüt: FCK schlägt Bochum",
+          "link": "https://www.zeit.de/news/2026-10/18/emotionaler-lukovic-trifft-bei-debuet-fck-schlaegt-bochum"
+        }
+      ]
+    },
+    {
+      "titel": "Fußball-Bundesliga: Beim BVB wächst der Druck: Karetsas-Sorge im Reisestress",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Fußball-Bundesliga: Beim BVB wächst der Druck: Karetsas-Sorge im Reisestress",
+          "link": "https://www.zeit.de/news/2026-10/18/erst-polarkreis-jetzt-ueber-20-grad-dortmunds-wilde-reise"
+        }
+      ]
+    },
+    {
+      "titel": "2. Bundesliga: Greuther Fürth feiert «traumhaften Kapitän» Klaus",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "2. Bundesliga: Greuther Fürth feiert «traumhaften Kapitän» Klaus",
+          "link": "https://www.zeit.de/news/2026-10/18/greuther-fuerth-feiert-traumhaften-kapitaen-klaus"
+        }
+      ]
+    },
+    {
+      "titel": "Burberry-Klassiker: Mantel der Zeitlosigkeit",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Burberry-Klassiker: Mantel der Zeitlosigkeit",
+          "link": "https://www.faz.net/aktuell/besser-leben/stil/burberry-trenchcoat-ikone-der-modegeschichte-im-va-london-accg-201312865.html"
+        }
+      ]
+    },
+    {
+      "titel": "Regionalbahnen: Madsen: Bahn-Investitionen aus Bundeshaushalt zahlen",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Regionalbahnen: Madsen: Bahn-Investitionen aus Bundeshaushalt zahlen",
+          "link": "https://www.zeit.de/news/2026-10/18/madsen-bahn-investitionen-aus-bundeshaushalt-zahlen"
+        }
+      ]
+    },
+    {
+      "titel": "tagesschau in 100 Sekunden",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "tagesschau in 100 Sekunden",
+          "link": "https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1668294.html"
+        }
+      ]
+    },
+    {
+      "titel": "Brände: Feuer in Heidenauer Lagerhalle - Zwei Jungen im Krankenhaus",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Brände: Feuer in Heidenauer Lagerhalle - Zwei Jungen im Krankenhaus",
+          "link": "https://www.zeit.de/news/2026-10/18/feuer-in-heidenauer-lagerhalle-zwei-jungen-im-krankenhaus"
+        }
+      ]
+    },
+    {
+      "titel": "Wieder ein 0:2 aufgeholt: Die Comeback-Könige der Liga: Füllkrug treibt Werder an",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Wieder ein 0:2 aufgeholt: Die Comeback-Könige der Liga: Füllkrug treibt Werder an",
+          "link": "https://www.zeit.de/news/2026-10/18/die-comeback-koenige-der-liga-fuellkrug-treibt-werder-an"
+        }
+      ]
+    },
+    {
+      "titel": "Naxos: Die Insel, auf der sich Dionysos verliebte",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Naxos: Die Insel, auf der sich Dionysos verliebte",
+          "link": "https://www.zeit.de/zeit-magazin/wochenmarkt/2026/11/naxos-griechenland-wein-traube-wochenmarkt"
+        }
+      ]
+    },
+    {
+      "titel": "Herzlichen Glückwunsch, Schulfrieden!",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Herzlichen Glückwunsch, Schulfrieden!",
+          "link": "https://www.welt.de/debatte/plus6ad1ff300e64c69ce0e15a0b/religioeser-extremismus-herzlichen-glueckwunsch-schulfrieden.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wie die Lausitz den Ärztemangel in den Griff bekommen will",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Wie die Lausitz den Ärztemangel in den Griff bekommen will",
+          "link": "https://www.tagesschau.de/inland/innenpolitik/gesundheit-aerztemangel-brandenburg-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Jahrgang 1966: Was sich mit dem Sechzigsten ändert",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Jahrgang 1966: Was sich mit dem Sechzigsten ändert",
+          "link": "https://www.faz.net/aktuell/rhein-main/kultur/sechzigster-geburtstag-wie-schon-curd-juergens-kein-bisschen-weise-201317976.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Ängstlich und viel zu lieb“ – Schalke schlägt Alarm",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Ängstlich und viel zu lieb“ – Schalke schlägt Alarm",
+          "link": "https://www.welt.de/sport/fussball/bundesliga/fc-schalke-04/article6ad487be51e5094f7a570826/schalke-schlaegt-alarm-harmloser-aufsteiger-aengstlich-und-viel-zu-lieb.html"
+        }
+      ]
+    },
+    {
+      "titel": "Kichererbsen-Eintopf: Eine Schüssel Griechenland",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Kichererbsen-Eintopf: Eine Schüssel Griechenland",
+          "link": "https://www.zeit.de/zeit-magazin/wochenmarkt/2026/11/kichererbsen-eintopg-ofen-rezept-wochenmarkt"
+        }
+      ]
+    },
+    {
+      "titel": "Türkischer Sender Halk TV: Türkische Journalisten decken Börsenskandal auf",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Türkischer Sender Halk TV: Türkische Journalisten decken Börsenskandal auf",
+          "link": "https://taz.de/Tuerkischer-Sender-Halk-TV/!6222338/"
+        }
+      ]
+    },
+    {
+      "titel": "Kieferorthopädie: Zahnspangen, auch genannt: Gelddruckmaschine",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Kieferorthopädie: Zahnspangen, auch genannt: Gelddruckmaschine",
+          "link": "https://www.zeit.de/arbeit/2026-09/kieferorthopaedie-zahnmedizin-krankenkasse-zuzahlung-kosten"
+        }
+      ]
+    },
+    {
       "titel": "Volksentscheid Proposition 40 in den USA: Big Beautiful Billions",
       "medien": [
         "taz"
@@ -1107,19 +1267,6 @@
           "quelle": "taz",
           "titel": "Volksentscheid Proposition 40 in den USA: Big Beautiful Billions",
           "link": "https://taz.de/Volksentscheid-Proposition-40-in-den-USA/!6218208/"
-        }
-      ]
-    },
-    {
-      "titel": "Unfälle: Auto prallt gegen Baum – 48-Jähriger stirbt bei Westhausen",
-      "medien": [
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Zeit Online",
-          "titel": "Unfälle: Auto prallt gegen Baum – 48-Jähriger stirbt bei Westhausen",
-          "link": "https://www.zeit.de/news/2026-10/18/auto-prallt-gegen-baum-48-jaehriger-stirbt-bei-westhausen"
         }
       ]
     },
@@ -1137,19 +1284,6 @@
       ]
     },
     {
-      "titel": "Brände: Rauchgas entzündet sich - Feuerwehrmann verletzt",
-      "medien": [
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Zeit Online",
-          "titel": "Brände: Rauchgas entzündet sich - Feuerwehrmann verletzt",
-          "link": "https://www.zeit.de/news/2026-10/18/rauchgas-entzuendet-sich-feuerwehrmann-verletzt"
-        }
-      ]
-    },
-    {
       "titel": "Schweden: Frau nach Schusswaffenangriff in Sportzentrum verstorben",
       "medien": [
         "FAZ"
@@ -1159,19 +1293,6 @@
           "quelle": "FAZ",
           "titel": "Schweden: Frau nach Schusswaffenangriff in Sportzentrum verstorben",
           "link": "https://www.faz.net/aktuell/gesellschaft/kriminalitaet/schusswaffenangriff-in-stockholm-frau-stirbt-nach-attacke-in-sportzentrum-accg-201598080.html"
-        }
-      ]
-    },
-    {
-      "titel": "Sicherheitsvorfall: Flughafen verweist nach Zaunschaden auf Sicherheitsstandards",
-      "medien": [
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Zeit Online",
-          "titel": "Sicherheitsvorfall: Flughafen verweist nach Zaunschaden auf Sicherheitsstandards",
-          "link": "https://www.zeit.de/news/2026-10/18/flughafen-verweist-nach-zaunschaden-auf-sicherheitsstandards"
         }
       ]
     },
@@ -1202,15 +1323,15 @@
       ]
     },
     {
-      "titel": "„Die westliche Welt kann sehr viel lernen. Aber die meisten Länder wollen es gar nicht“",
+      "titel": "„Dann haben wir zugeschlagen und Erfolg gehabt“",
       "medien": [
         "Welt"
       ],
       "artikel": [
         {
           "quelle": "Welt",
-          "titel": "„Die westliche Welt kann sehr viel lernen. Aber die meisten Länder wollen es gar nicht“",
-          "link": "https://www.welt.de/politik/ausland/plus6ad1d75d0e64c69ce0e155a8/ukraine-krieg-die-westliche-welt-kann-sehr-viel-lernen-aber-die-meisten-laender-wollen-es-gar-nicht.html"
+          "titel": "„Dann haben wir zugeschlagen und Erfolg gehabt“",
+          "link": "https://www.welt.de/politik/ausland/plus6ad1d75d0e64c69ce0e155a8/kommandeur-der-operation-vivaldi-dann-haben-wir-zugeschlagen-und-erfolg-gehabt.html"
         }
       ]
     },
@@ -1280,19 +1401,6 @@
       ]
     },
     {
-      "titel": "Musik: Helene Fischer lässt «Bombe platzen» - neues Album noch 2026",
-      "medien": [
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Zeit Online",
-          "titel": "Musik: Helene Fischer lässt «Bombe platzen» - neues Album noch 2026",
-          "link": "https://www.zeit.de/news/2026-10/18/helene-fischer-laesst-bombe-platzen-neues-album-noch-2026"
-        }
-      ]
-    },
-    {
       "titel": "„Typische Söder-Rede“ – Bayerns Ministerpräsident holt zum Rundumschlag aus",
       "medien": [
         "Welt"
@@ -1340,20 +1448,7 @@
         {
           "quelle": "FAZ",
           "titel": "Kritische Infrastruktur: Wie sich Flughäfen und Chemieparks gegen Drohnen schützen",
-          "link": "https://www.faz.net/aktuell/rhein-main/wirtschaft/wie-sich-flughaefen-datacenter-und-chemieparks-gegen-drohnen-schuetzen-accg-201194965.html"
-        }
-      ]
-    },
-    {
-      "titel": "Unfall: Auto prallt gegen Baum - ein Toter",
-      "medien": [
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Zeit Online",
-          "titel": "Unfall: Auto prallt gegen Baum - ein Toter",
-          "link": "https://www.zeit.de/news/2026-10/18/auto-prallt-gegen-baum-ein-toter"
+          "link": "https://www.faz.net/aktuell/rhein-main/wirtschaft/drohnenangriffe-wie-sich-flughaefen-datacenter-und-chemieparks-im-rhein-main-gebiet-schuetzen-accg-201194965.html"
         }
       ]
     },
@@ -1497,19 +1592,6 @@
           "quelle": "Welt",
           "titel": "Aigner, Rhein oder Di Fabio? In der Union beginnt das Ringen um das höchste Staatsamt",
           "link": "https://www.welt.de/politik/deutschland/article6ad47a2c199dc15f1abd80ee/bundespraesidenten-wahl-aigner-rhein-oder-di-fabio-in-der-union-beginnt-das-ringen-um-das-hoechste-staatsamt.html"
-        }
-      ]
-    },
-    {
-      "titel": "SPD in Berlin: Eine absurde Lotterie, bei der es nicht viel zu gewinnen gibt",
-      "medien": [
-        "Zeit Online"
-      ],
-      "artikel": [
-        {
-          "quelle": "Zeit Online",
-          "titel": "SPD in Berlin: Eine absurde Lotterie, bei der es nicht viel zu gewinnen gibt",
-          "link": "https://www.zeit.de/wirtschaft/2026-10/spd-berlin-wohnpolitik-vergesellschaftung-wohnungskonzern-linke"
         }
       ]
     },
@@ -1796,19 +1878,6 @@
           "quelle": "ZDFheute",
           "titel": "Offshore-Windparks: Geld für keinen Strom",
           "link": "https://www.zdfheute.de/wirtschaft/energie-strom-windpark-see-offshore-markt-regelreserve-100.html"
-        }
-      ]
-    },
-    {
-      "titel": "tagesschau in 100 Sekunden",
-      "medien": [
-        "tagesschau"
-      ],
-      "artikel": [
-        {
-          "quelle": "tagesschau",
-          "titel": "tagesschau in 100 Sekunden",
-          "link": "https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1668268.html"
         }
       ]
     },
@@ -2255,19 +2324,6 @@
       ]
     },
     {
-      "titel": "„Ein Mann, der keine Lust hat, bricht ein komplettes Tabu – er gilt sofort als krank“",
-      "medien": [
-        "Welt"
-      ],
-      "artikel": [
-        {
-          "quelle": "Welt",
-          "titel": "„Ein Mann, der keine Lust hat, bricht ein komplettes Tabu – er gilt sofort als krank“",
-          "link": "https://www.welt.de/kultur/plus6acf9d5485ec8093bcfbe3f3/es-ist-vollkommen-in-ordnung-dinge-erregend-zu-finden-die-patriarchal-gepraegt-sind.html"
-        }
-      ]
-    },
-    {
       "titel": "Leipzigs 1:6-Debakel: „Es war ein komplettes Versagen von uns“",
       "medien": [
         "FAZ"
@@ -2537,19 +2593,6 @@
           "quelle": "FAZ",
           "titel": "Ulrich Bettermann: Einer der letzten Unternehmer vom alten Schlag",
           "link": "https://www.faz.net/aktuell/wirtschaft/unternehmen/ulrich-bettermann-patriarch-aus-dem-sauerland-mit-milliardenvermoegen-201312041.html"
-        }
-      ]
-    },
-    {
-      "titel": "Ausschreitungen bei Protesten gegen Bildungsreformen in Brüssel",
-      "medien": [
-        "tagesschau"
-      ],
-      "artikel": [
-        {
-          "quelle": "tagesschau",
-          "titel": "Ausschreitungen bei Protesten gegen Bildungsreformen in Brüssel",
-          "link": "https://www.tagesschau.de/ausland/europa/bruessel-ausschreitungen-100.html"
         }
       ]
     },
@@ -3451,19 +3494,6 @@
       ]
     },
     {
-      "titel": "Wirtschaftspsychologe über Networking: „Auch Introvertierte können Netzwerken“",
-      "medien": [
-        "taz"
-      ],
-      "artikel": [
-        {
-          "quelle": "taz",
-          "titel": "Wirtschaftspsychologe über Networking: „Auch Introvertierte können Netzwerken“",
-          "link": "https://taz.de/Wirtschaftspsychologe-ueber-Networking/!6217684/"
-        }
-      ]
-    },
-    {
       "titel": "Nach dem Ende des \"Tankrabatts\": Bilger hält weitere Entlastungen für möglich",
       "medien": [
         "tagesschau"
@@ -3592,58 +3622,6 @@
           "link": "https://www.zdfheute.de/politik/ausland/drohnen-starlink-satellitenverbindung-ukraine-krieg-russland-100.html"
         }
       ]
-    },
-    {
-      "titel": "Wie Sklaven in Pompeji der soziale Aufstieg gelang",
-      "medien": [
-        "ZDFheute"
-      ],
-      "artikel": [
-        {
-          "quelle": "ZDFheute",
-          "titel": "Wie Sklaven in Pompeji der soziale Aufstieg gelang",
-          "link": "https://www.zdfheute.de/wissen/pompeji-ausgrabungen-antike-sklaven-roemisches-reich-100.html"
-        }
-      ]
-    },
-    {
-      "titel": "Frieze-Messe in London: Begegnungen auf Augenhöhe",
-      "medien": [
-        "FAZ"
-      ],
-      "artikel": [
-        {
-          "quelle": "FAZ",
-          "titel": "Frieze-Messe in London: Begegnungen auf Augenhöhe",
-          "link": "https://www.faz.net/aktuell/feuilleton/kunstmarkt/kunstmesse-frieze-in-london-accg-201529463.html"
-        }
-      ]
-    },
-    {
-      "titel": "Warum David Garret kein Fleisch isst",
-      "medien": [
-        "ZDFheute"
-      ],
-      "artikel": [
-        {
-          "quelle": "ZDFheute",
-          "titel": "Warum David Garret kein Fleisch isst",
-          "link": "https://www.zdfheute.de/panorama/prominente/david-garrett-immortals-fleischkonsum-100.html"
-        }
-      ]
-    },
-    {
-      "titel": "Hype ums Hähnchen: Wer profitiert und wer die Folgen trägt",
-      "medien": [
-        "ZDFheute"
-      ],
-      "artikel": [
-        {
-          "quelle": "ZDFheute",
-          "titel": "Hype ums Hähnchen: Wer profitiert und wer die Folgen trägt",
-          "link": "https://www.zdfheute.de/wirtschaft/haehnchen-tiktok-chicken-imbiss-landwirtschaft-tierwohl-100.html"
-        }
-      ]
     }
   ],
   "pro_quelle": {
@@ -3705,16 +3683,16 @@
     ],
     "Zeit Online": [
       {
-        "titel": "Kichererbsen-Eintopf: Eine Schüssel Griechenland",
-        "link": "https://www.zeit.de/zeit-magazin/wochenmarkt/2026/11/kichererbsen-eintopg-ofen-rezept-wochenmarkt"
+        "titel": "2. Fußball-Bundesliga: Emotionaler Lukovic trifft bei Debüt: FCK schlägt Bochum",
+        "link": "https://www.zeit.de/news/2026-10/18/emotionaler-lukovic-trifft-bei-debuet-fck-schlaegt-bochum"
       },
       {
-        "titel": "Leitantrag für Parteitag: CSU-Parteitag: Klare Kante gegen AfD und Linkspartei",
-        "link": "https://www.zeit.de/news/2026-10/18/csu-parteitag-klare-kante-gegen-afd-und-linkspartei"
+        "titel": "Krieg gegen die Ukraine: Verständigung zulasten der Ukraine: Trump geht auf Moskau zu",
+        "link": "https://www.zeit.de/news/2026-10/18/verstaendigung-zulasten-der-ukraine-trump-geht-auf-moskau-zu"
       },
       {
-        "titel": "Kieferorthopädie: Zahnspangen, auch genannt: Gelddruckmaschine",
-        "link": "https://www.zeit.de/arbeit/2026-09/kieferorthopaedie-zahnmedizin-krankenkasse-zuzahlung-kosten"
+        "titel": "Fußball-Bundesliga: Beim BVB wächst der Druck: Karetsas-Sorge im Reisestress",
+        "link": "https://www.zeit.de/news/2026-10/18/erst-polarkreis-jetzt-ueber-20-grad-dortmunds-wilde-reise"
       }
     ],
     "Süddeutsche": [
@@ -3747,16 +3725,16 @@
     ],
     "Welt": [
       {
+        "titel": "Mini-Gehirne aus dem Labor entziffern Buchstaben einer Blindenschrift",
+        "link": "https://www.welt.de/wissenschaft/article6ad2067bd2eabbd56ed69e1d/auf-dem-weg-zum-bio-computer-mini-gehirne-aus-dem-labor-entziffern-buchstaben-einer-blindenschrift.html"
+      },
+      {
+        "titel": "Herzlichen Glückwunsch, Schulfrieden!",
+        "link": "https://www.welt.de/debatte/plus6ad1ff300e64c69ce0e15a0b/religioeser-extremismus-herzlichen-glueckwunsch-schulfrieden.html"
+      },
+      {
         "titel": "„Ängstlich und viel zu lieb“ – Schalke schlägt Alarm",
         "link": "https://www.welt.de/sport/fussball/bundesliga/fc-schalke-04/article6ad487be51e5094f7a570826/schalke-schlaegt-alarm-harmloser-aufsteiger-aengstlich-und-viel-zu-lieb.html"
-      },
-      {
-        "titel": "Junge Union fordert „gesellschaftliche Ächtung“ von Rot-Grün-Rot in Berlin",
-        "link": "https://www.welt.de/politik/deutschland/article6ad48a1dbbcd3ed7e302435c/rot-gruen-rot-in-berlin-junge-union-fordert-gesellschaftliche-aechtung.html"
-      },
-      {
-        "titel": "„Die westliche Welt kann sehr viel lernen. Aber die meisten Länder wollen es gar nicht“",
-        "link": "https://www.welt.de/politik/ausland/plus6ad1d75d0e64c69ce0e155a8/ukraine-krieg-die-westliche-welt-kann-sehr-viel-lernen-aber-die-meisten-laender-wollen-es-gar-nicht.html"
       }
     ],
     "taz": [
