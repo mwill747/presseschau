@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 20.10.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Tuesday, 20. October 2026 &middot; 12:10 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">338 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Krawalle vom Wochenende - Premierminister Lecornu: Nächtliche Ausgangssperren in Frankreich haben gewirkt</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/premierminister-lecornu-naechtliche-ausgangssperren-in-frankreich-haben-gewirkt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Krawalle vom Wochenende - Premierminister Lecornu: Nächtliche Ausgangssperren in Frankreich haben gewirkt</span></a></li><li><a href="https://www.zeit.de/politik/ausland/2026-10/ausschreitungen-paris-ausgangssperre-proteste-sebastien-lecornu-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Ausschreitungen in Frankreich: Frankreich verlängert lokale Ausgangssperren nach ruhiger Nacht</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/frankreich-ausgangssperren-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Frankreich verlängert örtliche Ausgangssperren - nach ruhiger Nacht</span></a></li><li><a href="https://taz.de/Ausgangssperren-in-Frankreich/!6222840/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Ausgangssperren in Frankreich: Sollen sie doch drinnen bleiben</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/frankreich-proteste-ausgangssperren-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Ausgangssperren in französischen Städten verhängt</span></a></li><li><a href="https://www.sueddeutsche.de/politik/proteste-frankreich-gewalt-polizei-kontrollverlust-macron-ausganssperren-li.3565815" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Gewaltsame Proteste: Ausgangssperren in Frankreich verhängt</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/frankreich-proteste-ausschreitungen-ausgangssperren-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Frankreichs Premierminister Lecornu kündigt Ausgangssperren an</span></a></li><li><a href="https://www.phoenix.de/sendungen/ereignisse/phoenix-vor-ort/ua-pressekonferenz-der-cs-a-5232714.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Premier Sébastien Lecornu zu den Ausschreitungen in Frankreich</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Vorfall im September - AfD bestätigt Hackerangriff auf E-Mail-Konten der Partei</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/afd-bestaetigt-hackerangriff-auf-e-mail-konten-der-partei-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Vorfall im September - AfD bestätigt Hackerangriff auf E-Mail-Konten der Partei</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/afd-hackerangriff-e-mail-konten-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">E-Mail-Konten der AfD gehackt und Daten ins Netz gestellt</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/afd-hackerangriff-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">AfD bestätigt Hackerangriff auf E-Mail-Konten</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-afd-bestaetigt-hackerangriff-auf-e-mail-postfaecher-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: AfD bestätigt Hackerangriff auf E-Mail-Postfächer</span></a></li><li><a href="https://www.spiegel.de/netzwelt/web/afd-bestaetigt-hackerangriff-auf-e-mail-konten-a-d4b2543e-1dae-461a-a343-8c14b3b7d2ee#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">AfD bestätigt Hackerangriff auf E-Mail-Konten</span></a></li><li><a href="https://www.sueddeutsche.de/politik/bundesregierung-news-afd-hackerangriff-mails-li.3529564" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Newsblog zur Bundespolitik: Hackerangriff auf E-Mail-Konten der AfD</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Parteigremien - Grüne und SPD für Koalitionsverhandlungen mit Linkspartei in Berlin</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:83%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/gruene-und-spd-fuer-koalitionsverhandlungen-mit-linkspartei-in-berlin-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Parteigremien - Grüne und SPD für Koalitionsverhandlungen mit Linkspartei in Berlin</span></a></li><li><a href="https://www.zeit.de/politik/deutschland/2026-10/koalitionsverhandlungen-berlin-spd-parteispitze-linke-gruene" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Koalitionsverhandlungen in Berlin: Fraglich, ob die SPD das durchzieht</span></a></li><li><a href="https://www.tagesschau.de/tagesthemen/video-1669208.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Berlin: SPD und Grüne stimmen für Koalitionsgespräche mit Die Linke</span></a></li><li><a href="https://www.faz.net/aktuell/politik/wahl-in-berlin/berliner-gruene-stimmen-fuer-koalitionsverhandlungen-mit-spd-und-linke-201603305.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Rot-GRÜN-Rot: Berliner Grüne stimmen für Koalitionsverhandlungen</span></a></li><li><a href="https://www.tagesschau.de/inland/berlin-wahl-spd-gruene-koalitionsverhandlungen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Berlin: Grüne und SPD stimmen für Koalitionsgespräche mit Linke</span></a></li><li><a href="https://www.sueddeutsche.de/politik/landtagswahlen-deutschland-berlin-linke-gruene-spd-koalitionsverhandlungen-li.3540501" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Newsblog zu den Landtagswahlen: Berliner Grüne und SPD für Koalitionsgespräche mit Linke</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/koalitionsverhandlungen-berlin-spd-linke-gruene-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Berliner SPD für Koalitionsgespräche mit Linkspartei und Grünen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Berlin - Bundeskanzler Merz betont auf Investitionsgipfel Stärken des Standorts Deutschland</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:67%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bundeskanzler-merz-betont-auf-investitionsgipfel-staerken-des-standorts-deutschland-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Berlin - Bundeskanzler Merz betont auf Investitionsgipfel Stärken des Standorts Deutschland</span></a></li><li><a href="https://www.zeit.de/wirtschaft/2026-10/investitionen-deutschland-friedrich-merz-nvidia-jensen-huang-kuenstliche-intelligenz-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Investitionsgipfel in Berlin: Bundesregierung spricht von Investitionszusagen in Milliardenhöhe</span></a></li><li><a href="https://taz.de/Investitionsgipfel-der-Regierung-mit-uA-Nvidia-Blackrock-Siemens-Die-Shitshow-der-Big-Business-Versteher/!6222574/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Friedrich Merz’ Investitionsgipfel: Stromberg lässt grüßen</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/wirtschaft-investitionsgipfel-nvidia-ki-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Merz lädt zu Investitionsgipfel in Berlin</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Überschwemmungen - Spanien: Mindestens vier Tote durch Unwetter</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/spanien-mindestens-vier-tote-durch-unwetter-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Überschwemmungen - Spanien: Mindestens vier Tote durch Unwetter</span></a></li><li><a href="https://www.zdfheute.de/video/panorama-valencia-unwetter-evakuierung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Schwere Überschwemmungen in Spanien</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/spanien-unwetter-mallorca-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Mindestens zwei Tote durch Überschwemmungen im Osten Spaniens</span></a></li><li><a href="https://www.zdfheute.de/video/zdfheute-xpress/kanada-alberta-brand-video-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Mindestens vier Tote bei Großbrand in Kanada</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Ukraine-Krieg - Trump zu Dreiertreffen mit Putin und Xi bereit</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/trump-zu-dreiertreffen-mit-putin-und-xi-bereit-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Trump zu Dreiertreffen mit Putin und Xi bereit</span></a></li><li><a href="https://www.spiegel.de/ausland/nukleare-abruestung-donald-trump-offen-fuer-dreier-treffen-mit-wladimir-putin-und-xi-jinping-a-5fd8359c-db4e-4162-bcdf-b90d45a67726#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Nukleare Abrüstung: Donald Trump offen für Dreier-Treffen mit Wladimir Putin und Xi Jinping</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/trump-gipfel-putin-xi-ukraine-krieg-russland-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Trump offen für Gipfel mit Putin und Xi</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/russland-gespraeche-ukraine-krieg-putin-trump-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Ukraine-Krieg: Für Putin läuft es wieder</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Mitteilung der IG Metall: VW will Gehälter bis 2030 einfrieren</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Mitteilung-der-IG-Metall/!6222589/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Mitteilung der IG Metall: VW will Gehälter bis 2030 einfrieren</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/vw-1620.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Volkswagen will offenbar Gehälter einfrieren</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/unternehmen/ig-metall-volkswagen-gehaelter-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Volkswagen will laut IG Metall Gehälter bis 2030 einfrieren</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Finanzierungsvermittler - Immobilienkredite laut Interhyp so teuer wie seit 2009 nicht mehr</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/immobilienkredite-laut-interhyp-so-teuer-wie-seit-2009-nicht-mehr-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Finanzierungsvermittler - Immobilienkredite laut Interhyp so teuer wie seit 2009 nicht mehr</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/verbraucher/immobilienkredite-zinsen-darlehen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Immobilienkredite so teuer wie seit 2009 nicht mehr</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Armenien - Weltnaturkonferenz berät über Artenvielfalt</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/weltnaturkonferenz-beraet-ueber-artenvielfalt-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Armenien - Weltnaturkonferenz berät über Artenvielfalt</span></a></li><li><a href="https://www.tagesschau.de/wissen/klima/weltnaturkonferenz-in-armenien-startet-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">COP17 in Armenien: Weltnaturkonferenz startet mit großen Aufgaben</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Verkehrsminister - Bundesweites ÖPNV-Angebot für Gelegenheitsfahrer geplant</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bundesweites-oepnv-angebot-fuer-gelegenheitsfahrer-geplant-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Verkehrsminister - Bundesweites ÖPNV-Angebot für Gelegenheitsfahrer geplant</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/bahn-oepnv-deutschlandticket-gelegenheitsfahrer-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Kommt ein bundesweites ÖPNV-Ticket für Gelegenheitsfahrer?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Frankfurt am Main - Gericht untersagt Bilder von Grundstück bei Google Maps</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/gericht-untersagt-bilder-von-grundstueck-bei-google-maps-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Frankfurt am Main - Gericht untersagt Bilder von Grundstück bei Google Maps</span></a></li><li><a href="https://www.zeit.de/digital/2026-10/google-maps-earth-widerspruchsrecht-landgericht-frankfurt" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Landgericht Frankfurt : Gericht untersagt Bilder von Grundstück bei Google Maps</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Nordamerika - Fernsehsender CBC: Mehrheit der Wähler in Alberta gegen Loslösung von Kanada - Carney begrüßt Ergebnis</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/fernsehsender-cbc-mehrheit-der-waehler-in-alberta-gegen-losloesung-von-kanada-carney-begruesst-ergeb-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nordamerika - Fernsehsender CBC: Mehrheit der Wähler in Alberta gegen Loslösung von Kanada - Carney begrüßt Ergebnis</span></a></li><li><a href="https://www.spiegel.de/politik/alberta-mehrheit-laut-erster-prognose-gegen-unabhaengigkeit-von-kanada-a-ff960158-f339-4848-ae42-77f55ce38a67#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Alberta: Mehrheit laut erster Prognose gegen Unabhängigkeit von Kanada</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Worüber Merz und Huang beim Gipfel plaudern</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/video/panorama-nvidia-unternehmen-bundesregierung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Worüber Merz und Huang beim Gipfel plaudern</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/nvidia-chef-huang-zu-merz-gib-deutschland-eine-chance-201603218.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Huang zu Merz: „Gib Deutschland eine Chance!“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Deutschlandticket: Verkehrsminister planen neues Angebot für Gelegenheitsfahrer</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/mobilitaet/deutschlandticket-verkehrsminister-planen-neues-angebot-fuer-gelegenheitsfahrer-a-d4061c76-65fd-4d81-a398-408b44ee29a0#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Deutschlandticket: Verkehrsminister planen neues Angebot für Gelegenheitsfahrer</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/business-liveticker-verkehrsminister-wollen-deutschlandticket-fuer-gelegenheitsfahrer-faz-200452404.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Business-Ticker: Verkehrsminister wollen Deutschlandticket für Gelegenheitsfahrer</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Aktuelles zum Krieg in der Ukraine</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-selenskij-usa-trump-waffenlieferungen-patriot-li.3563283" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Krieg in der Ukraine: Trump: „Selenskij weiß nicht, wovon er spricht“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Streit um Waffenlieferungen: Spannungen zwischen Selenskyj und Trump</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/video/video-1669328.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Streit um Waffenlieferungen: Spannungen zwischen Selenskyj und Trump</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/trump-staerkt-putin-und-laesst-die-ukraine-im-stich-201602176.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Streit mit Selenskyj: Wird Trumps Torheit wieder Normalmaß annehmen?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Referendum: Carney: Einwohner von Alberta wollen Teil Kanadas bleiben</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/politik/ausland/alberta-referendum-ueber-76-prozent-stimmen-fuer-verbleib-in-kanada-accg-201604098.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Referendum: Carney: Einwohner von Alberta wollen Teil Kanadas bleiben</span></a></li><li><a href="https://taz.de/Referendum-in-Kanadas-Provinz-Alberta/!6222823/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Referendum in Kanadas Provinz Alberta: Keine Abspaltung, aber ein Zeichen an die Regierung</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Berliner Linke berät über umstrittene Abgeordnete Emde</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/inland/regional/berlin/berliner-linke-abgeordnete-emde-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Berliner Linke berät über umstrittene Abgeordnete Emde</span></a></li><li><a href="https://www.faz.net/podcasts/f-a-z-podcast-fruehdenker/bleibt-vanessa-emde-in-der-fraktion-der-berliner-linken-faz-fruehdenker-201603322.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">F.A.Z. Frühdenker: Wie geht die Berliner Linke mit der umstrittenen Abgeordneten Emde um?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>SPD-Vorsitz: Wer ruft nach Heil?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/politik/inland/wer-ruft-in-der-spd-nach-hubertus-heil-201602072.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">SPD-Vorsitz: Wer ruft nach Heil?</span></a></li><li><a href="https://taz.de/Hubertus-Heil-und-der-SPD-Vorsitz/!6222604/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Hubertus Heil und der SPD-Vorsitz: „Ich kann es nicht ausschließen, dass ich antrete“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Proteste in vielen Ländern Europas - aus ähnlichen Gründen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/ausland/europa/proteste-europa-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Proteste in vielen Ländern Europas - aus ähnlichen Gründen</span></a></li><li><a href="https://taz.de/Proteste-in-vielen-Teilen-von-Europa-Das-Nichtstun-der-EU-verstaerkt-die-Wut-weiter/!6218290/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Proteste in Europa: Und die EU-Spitze schaut weg</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Cold Case aus Regensburg: Durchbruch im Fall Langley: Geständnis und drei Tatverdächtige</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/bayern/regensburg-kerstin-lee-langley-knochen-vermisst-polizei-cold-case-li.3565546" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Cold Case aus Regensburg: Durchbruch im Fall Langley: Geständnis und drei Tatverdächtige</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/bayern/verbrechen-kerstin-langley-vermisste-opfer-gewalttat-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Durchbruch im Fall Langley: Vermisste wurde Opfer einer Gewalttat</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>„Victoria’s Secret“-Show: Kylie Jenner gibt Debüt im Fantasy-Bra</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/video/kylie-jenner-gibt-victorias-secret-debuet-201602592.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">„Victoria’s Secret“-Show: Kylie Jenner gibt Debüt im Fantasy-Bra</span></a></li><li><a href="https://www.zdfheute.de/panorama/prominente/stars-promi-news-bilder-oktober-2026-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Kylie Jenner präsentiert 50-Millionen-Dollar-BH</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/bosch-microsoft-ki-100.html" target="_blank" rel="noopener">Chance oder Risiko: Zusammenarbeit deutscher Unternehmen mit Big Tech</a></li><li><a href="https://www.tagesschau.de/video/video-1669256.html" target="_blank" rel="noopener">Mission Mars-Mond Phobos: Rover Idefix startet ins Weltall</a></li><li><a href="https://www.tagesschau.de/tagesthemen/video-1669210.html" target="_blank" rel="noopener">Frankreichs Regierung räumt Versäumnisse nach Ausschreitungen ein</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/ausland/usa-trump-ukraine-selenskyj-witkoff-kritik-hilfe-oslo-100.html" target="_blank" rel="noopener">Selenskyj und Witkoff in Oslo: Treffen soll die Wogen glätten</a></li><li><a href="https://www.zdfheute.de/politik/ausland/trump-gipfel-putin-xi-ukraine-krieg-russland-100.html" target="_blank" rel="noopener">Trump offen für Gipfel mit Putin und Xi</a></li><li><a href="https://www.zdfheute.de/politik/deutschland/vanessa-emde-linke-berlin-100.html" target="_blank" rel="noopener">Berlin: Linken-Politikerin Emde droht der Rauswurf</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/portugiesische-polizei-loest-zeltlager-in-lissabon-und-porto-auf-100.html" target="_blank" rel="noopener">Protest gegen steigende Wohnungskosten - Portugiesische Polizei löst Zeltlager in Lissabon und Porto auf</a></li><li><a href="https://www.deutschlandfunk.de/premierminister-lecornu-naechtliche-ausgangssperren-in-frankreich-haben-gewirkt-100.html" target="_blank" rel="noopener">Krawalle vom Wochenende - Premierminister Lecornu: Nächtliche Ausgangssperren in Frankreich haben gewirkt</a></li><li><a href="https://www.deutschlandfunk.de/afd-bestaetigt-hackerangriff-auf-e-mail-konten-der-partei-100.html" target="_blank" rel="noopener">Vorfall im September - AfD bestätigt Hackerangriff auf E-Mail-Konten der Partei</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/wirtschaft/spritpreisdeckel-wirtschaftsministerin-katherina-reiche-setzt-auf-verzoegerung-a-916ec221-c4bd-449e-8012-7dbeac7f6010#ref=rss" target="_blank" rel="noopener">Spritpreisdeckel: Wirtschaftsministerin Katherina Reiche setzt auf Verzögerung</a></li><li><a href="https://www.spiegel.de/wirtschaft/deutsche-wirtschaft-wie-berlin-investoren-anlocken-will-ohne-sich-zu-abhaengig-zu-machen-a-b438cd20-e234-4bbe-9d9e-bee1901cb3f2#ref=rss" target="_blank" rel="noopener">Deutsche Wirtschaft: Wie Berlin Investoren anlocken will, ohne sich zu abhängig zu machen</a></li><li><a href="https://www.spiegel.de/wirtschaft/verbrenner-aus-eu-parlament-findet-kompromiss-bei-co-zielen-a-2996d4eb-fe0d-4434-b54d-ce32833e8243#ref=rss" target="_blank" rel="noopener">Verbrenner-Aus: EU-Parlament findet Kompromiss bei CO₂-Zielen</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-10/16/hunderte-handys-in-gefaengnisse-im-suedwesten-geschmuggelt" target="_blank" rel="noopener">Kriminalität: Hunderte Handys in Gefängnisse im Südwesten geschmuggelt</a></li><li><a href="https://www.zeit.de/news/2026-10/20/jauch-kandidat-kennt-lustrinelli-nicht-so-reagiert-union" target="_blank" rel="noopener">Fußball-Bundesliga: Jauch-Kandidat kennt Lustrinelli nicht: So reagiert Union</a></li><li><a href="https://www.zeit.de/politik/ausland/2026-10/limoges-rathaus-brandanschlag-linksextremismus-frankreich-gxe" target="_blank" rel="noopener">Gewalt in Frankreich: Mutmaßlicher Brandstifter von Limoges festgenommen</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/politik/afd-hackerangriff-datenleck-cybersicherheit-rechtsextremismus-li.3566216" target="_blank" rel="noopener">Datenleck: AfD von Hackern angegriffen</a></li><li><a href="https://www.sueddeutsche.de/muenchen/der-perfekte-urlaub-premiere-muenchen-elyas-m-barek-li.3553390" target="_blank" rel="noopener">Premiere von „Der perfekte Urlaub“: „Man ist froh, dass man selbst nicht erleben muss, was wir auf der Leinwand erleben“</a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/raumfahrt-vyoma-satelliten-esa-space-x-li.3564538" target="_blank" rel="noopener">Raumfahrt: Wissen, was im Erdorbit passiert</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/amazon-will-2027-16-milliarden-euro-in-deutschland-investieren-accg-201603852.html" target="_blank" rel="noopener">Cloud und Satelliten: Amazon will 2027 16 Milliarden Euro in Deutschland investieren</a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/nvidia-chef-huang-zu-merz-gib-deutschland-eine-chance-201603218.html" target="_blank" rel="noopener">Huang zu Merz: „Gib Deutschland eine Chance!“</a></li><li><a href="https://www.faz.net/aktuell/wissen/geist-soziales/warum-sagen-junge-leute-nicht-mehr-bitte-linguistin-erklaert-accg-201313694.html" target="_blank" rel="noopener">Höflich sprechen: „Mit zunehmendem Alter wird das Siezen, das Respekt und Distanz ausdrückt, relevanter“</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/politik/ausland/article6ad736641935debc092ab6e9/limoges-historischer-turm-stuerzte-bei-feuerinferno-ein-polizei-nimmt-linksextremen-gefaehrder-fest.html" target="_blank" rel="noopener">Historischer Turm stürzte bei Feuerinferno ein – Polizei nimmt linksradikalen Gefährder fest</a></li><li><a href="https://www.welt.de/wirtschaft/video6ad737d151e5094f7a572b02/investitionsgipfel-es-reicht-nicht-ein-gipfel-sondern-es-geht-um-die-rahmenbedingungen.html" target="_blank" rel="noopener">„Es reicht nicht ein Gipfel, sondern es geht um die Rahmenbedingungen“</a></li><li><a href="https://www.welt.de/gesundheit/plus68de7d9989973cba61e7f93c/gesundheit-gesunde-hundertjaehrige-weisen-ein-praegnant-anderes-mikrobiom-als-kranke-aeltere-auf.html" target="_blank" rel="noopener">„Gesunde Hundertjährige weisen ein prägnant anderes Mikrobiom als kranke Ältere auf“</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Website-veroeffentlicht-tausende-Mails/!6222819/" target="_blank" rel="noopener">Website veröffentlicht tausende Mails: Riesiges E-Mail-Datenleak bei der AfD</a></li><li><a href="https://taz.de/Autorin-ueber-Onlineradikalisierung/!6221525/" target="_blank" rel="noopener">Gekränkte Männer in der Manosphere: „Frauenhass ist zu einem sehr lukrativen Geschäft geworden“</a></li><li><a href="https://taz.de/Ausgangssperren-in-Frankreich/!6222840/" target="_blank" rel="noopener">Ausgangssperren in Frankreich: Sollen sie doch drinnen bleiben</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.welt.de/politik/ausland/article6ad736641935debc092ab6e9/limoges-historischer-turm-stuerzte-bei-feuerinferno-ein-polizei-nimmt-linksextremen-gefaehrder-fest.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Historischer Turm stürzte bei Feuerinferno ein – Polizei nimmt linksradikalen Gefährder fest</span></a></li><li><a href="https://www.deutschlandfunk.de/portugiesische-polizei-loest-zeltlager-in-lissabon-und-porto-auf-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Protest gegen steigende Wohnungskosten - Portugiesische Polizei löst Zeltlager in Lissabon und Porto auf</span></a></li><li><a href="https://www.deutschlandfunk.de/migrationsbeauftragte-pawlik-anwerbeabkommen-mit-der-tuerkei-war-erfolgsgeschichte-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Vor 65 Jahren - Migrationsbeauftragte Pawlik: &quot;Anwerbeabkommen mit der Türkei war Erfolgsgeschichte&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/deutsche-erzeugerpreise-mit-groesstem-anstieg-seit-dreieinhalb-jahren-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wirtschaft - Deutsche Erzeugerpreise mit größtem Anstieg seit dreieinhalb Jahren</span></a></li><li><a href="https://www.deutschlandfunk.de/unvereinbarkeit-von-angehoerigen-pflege-und-beruf-verschaerft-arbeitskraeftemangel-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bertelsmann-Studie - Unvereinbarkeit von Angehörigen-Pflege und Beruf verschärft Arbeitskräftemangel</span></a></li><li><a href="https://www.deutschlandfunk.de/demonstranten-kleben-sich-vor-rheinmetall-firmengelaende-in-berlin-fest-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Gegen Rüstung - Demonstranten kleben sich vor Rheinmetall-Firmengelände in Berlin fest</span></a></li><li><a href="https://www.deutschlandfunk.de/selenskyj-wirft-us-regierung-verzoegerte-lieferung-bezahlter-abfangraketen-vor-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Selenskyj wirft US-Regierung verzögerte Lieferung bezahlter Abfangraketen vor</span></a></li><li><a href="https://www.deutschlandfunk.de/selenskyj-trifft-in-oslo-us-unterhaendler-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Selenskyj trifft in Oslo US-Unterhändler</span></a></li><li><a href="https://www.deutschlandfunk.de/tote-und-verletzte-bei-russischen-drohnenangriffen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine - Tote und Verletzte bei russischen Drohnenangriffen</span></a></li><li><a href="https://www.deutschlandfunk.de/unions-politiker-diskutieren-ueber-kompromiss-zur-abschlagsfreien-fruehrente-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bericht - Unions-Politiker diskutieren über Kompromiss zur abschlagsfreien Frührente</span></a></li><li><a href="https://www.deutschlandfunk.de/bovenschulte-nennt-umgang-der-cdu-mit-linkspartei-irrational-und-unverantwortlich-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Berliner Koalitionsverhandlungen - Bovenschulte nennt Umgang der CDU mit Linkspartei &quot;irrational und unverantwortlich&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/wohnungskonzern-vonovia-vergesellschaftung-in-geplanter-form-verfassungswidrig-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Rot-Grün-Rot in Berlin - Wohnungskonzern Vonovia: Vergesellschaftung in geplanter Form verfassungswidrig</span></a></li><li><a href="https://www.deutschlandfunk.de/europaeische-union-stellt-neue-arktisstrategie-vor-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Brüssel - Europäische Union stellt neue Arktisstrategie vor</span></a></li><li><a href="https://www.deutschlandfunk.de/suedkorea-zieht-weiteres-botschaftspersonal-aus-der-ukraine-ab-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Diplomatische Spannungen - Südkorea zieht weiteres Botschaftspersonal aus der Ukraine ab</span></a></li><li><a href="https://www.deutschlandfunk.de/eu-parlament-will-rechte-von-reisenden-staerken-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Brüssel - EU-Parlament will Rechte von Reisenden stärken</span></a></li><li><a href="https://www.deutschlandfunk.de/irans-aussenministerium-bestellt-deutschen-botschafter-ein-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Teheran - Irans Außenministerium bestellt deutschen Botschafter ein</span></a></li><li><a href="https://www.deutschlandfunk.de/slowenen-lehnen-abschaffung-der-rundfunkgebuehr-ab-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Volksbefragung - Slowenen lehnen Abschaffung der Rundfunkgebühr ab</span></a></li><li><a href="https://www.deutschlandfunk.de/14-tote-bei-grubenunglueck-in-kolumbien-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Illegale Mine - 14 Tote bei Grubenunglück in Kolumbien</span></a></li><li><a href="https://www.deutschlandfunk.de/mecklenburg-vorpommerns-neuer-landtag-konstituiert-sich-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Landtagswahl - Mecklenburg-Vorpommerns neuer Landtag konstituiert sich</span></a></li><li><a href="https://www.deutschlandfunk.de/festveranstaltung-zu-65-jahre-anwerbeabkommen-mit-der-tuerkei-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Berlin - Festveranstaltung zu 65 Jahre Anwerbeabkommen mit der Türkei</span></a></li><li><a href="https://www.deutschlandfunk.de/japanische-sonde-zum-mars-aufgebrochen-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Erkundung von Mond Phobos - Japanische Sonde zum Mars aufgebrochen</span></a></li><li><a href="https://www.deutschlandfunk.de/australische-abgeordnete-von-auto-erfasst-premier-albanese-spricht-von-vorsaetzlicher-tat-anti-terro-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Helen Haines - Australische Abgeordnete von Auto erfasst - Premier Albanese spricht von vorsätzlicher Tat - Anti-Terror-Einheit aktiviert</span></a></li><li><a href="https://www.deutschlandfunk.de/mehdi-moradpour-ist-mit-47-jahren-gestorben-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Autor und Dramaturg - Mehdi Moradpour ist mit 47 Jahren gestorben</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 20.10.2026 um 12:10 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
