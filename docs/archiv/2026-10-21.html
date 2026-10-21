@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 21.10.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Wednesday, 21. October 2026 &middot; 12:18 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">369 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Putin spricht mit Witkoff über Ukraine-Krieg – und lässt US-Bürger frei</h3>
+          <div class="zaehler">
+            <b>9</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/politik/ausland/article6ad882a8438656aeb2fad5f7/putin-spricht-mit-witkoff-ueber-ukraine-krieg-und-laesst-us-buerger-frei.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Putin spricht mit Witkoff über Ukraine-Krieg – und lässt US-Bürger frei</span></a></li><li><a href="https://www.zeit.de/politik/ausland/ukraine-krieg-news-liveblog" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Krieg gegen die Ukraine: US-Sondergesandter sieht Grundlage für Waffenruhe im Ukrainekrieg</span></a></li><li><a href="https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-witkoff-gespraeche-russland-putin-li.3563283" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Krieg in der Ukraine: Putin spricht mit Trump-Gesandten Witkoff über Ukraine-Krieg</span></a></li><li><a href="https://www.zeit.de/politik/ausland/2026-10/stephen-hubbard-wladimir-putin-freilassung-russland-usa-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Stephen Hubbard: US-Bürger Hubbard kommt nach langer Haft in Russland frei</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.tagesschau.de/ausland/hubbard-freilassung-usa-russland-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Russland lässt inhaftierten US-Bürger Stephen Hubbard frei</span></a></li><li><a href="https://www.deutschlandfunk.de/us-gesandter-witkoff-in-sankt-petersburg-zu-treffen-mit-putin-eingetroffen-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Russlands Krieg gegen die Ukraine - US-Gesandter Witkoff in Sankt Petersburg zu Treffen mit Putin eingetroffen</span></a></li><li><a href="https://www.deutschlandfunk.de/mehrere-tote-und-verletzte-nach-russischen-angriffen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Krieg gegen die Ukraine - Mehrere Tote und Verletzte nach russischen Angriffen</span></a></li><li><a href="https://www.deutschlandfunk.de/us-gesandter-witkoff-trifft-putin-in-st-petersburg-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Russlands Krieg gegen die Ukraine - US-Gesandter Witkoff trifft Putin in St. Petersburg</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/usa-witkoff-ukraine-krieg-russland-verhandlungen-unterhaendler-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Putin und Witkoff sprechen: Russland lässt US-Bürger frei</span></a></li><li><a href="https://www.welt.de/politik/ausland/video6ad880a9842f9bd88130a7ae/treffen-in-st-petersburg-putin-spricht-mit-trump-gesandten-witkoff-ueber-ukraine-krieg.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Putin spricht mit Trump-Gesandten Witkoff über Ukraine-Krieg</span></a></li><li><a href="https://www.tagesschau.de/video/video-1669976.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">&quot;War zu sechs Jahren Straflager verurteilt&quot;, Christian Saathoff, ARD-aktuell, zur Freilassung von US-Bürger Hubbard in Russland</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/ukraine-russland-usa-verhandlungen-104.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">US-Vermittler Witkoff berät mit Putin über Ukraine</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-russland-laesst-gefangen-genommenen-us-buerger-hubbard-frei-faz-110683325.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Ukrainekrieg: Russland lässt gefangen genommenen US-Bürger Hubbard frei</span></a></li><li><a href="https://www.spiegel.de/ausland/stephen-james-hubbard-russland-laesst-inhaftierten-us-buerger-frei-a-a50c9a9e-7223-4572-999e-8cf26f1f2c30#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Stephen James Hubbard: Russland lässt inhaftierten US-Bürger frei</span></a></li><li><a href="https://taz.de/-Nachrichten-im-Ukraine-Krieg-/!6223092/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">+++ Nachrichten im Ukraine-Krieg +++: Putin spricht mit Trump-Gesandten Witkoff</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Publizistik - Alice Schwarzer stellt Magazin &quot;Emma&quot; nach 50 Jahren ein</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:67%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/alice-schwarzer-stellt-magazin-emma-nach-50-jahren-ein-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Publizistik - Alice Schwarzer stellt Magazin &quot;Emma&quot; nach 50 Jahren ein</span></a></li><li><a href="https://www.welt.de/videos/video6ad87aa4438656aeb2fad4fb/wir-meinen-es-reicht-alice-schwarzer-stellt-zeitschrift-emma-nach-fast-50-jahren-ein.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Alice Schwarzer stellt Zeitschrift „Emma“ nach fast 50 Jahren ein</span></a></li><li><a href="https://www.tagesschau.de/kultur/emma-magazin-ende-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Alice Schwarzer stellt Magazin &quot;Emma&quot; ein</span></a></li><li><a href="https://www.zdfheute.de/panorama/emma-frauen-zeitschrift-schluss-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Alice Schwarzer stellt Frauenmagazin &quot;Emma&quot; ein</span></a></li><li><a href="https://www.spiegel.de/kultur/alice-schwarzer-stellt-magazin-emma-ein-wir-meinen-es-reicht-a-1f57462f-765e-48a3-95f0-b2d7ba6c09ad#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Alice Schwarzer stellt Magazin »Emma« ein: »Wir meinen: Es reicht!«</span></a></li><li><a href="https://www.sueddeutsche.de/medien/alice-schwarzer-emma-frauenmagazin-feminismus-frauenrechte-li.3566740" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Medien: Alice Schwarzer stellt „Emma“ ein</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Wirtschaft - Musk bestätigt: Tesla und SpaceX prüfen Zusammenschluss</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:56%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/musk-bestaetigt-tesla-und-spacex-pruefen-zusammenschluss-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wirtschaft - Musk bestätigt: Tesla und SpaceX prüfen Zusammenschluss</span></a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/tesla-space-x-elon-musk-fusion-kommentar-li.3566748" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Tesla und Space-X: Eine Fusion würde Musks Macht auf ein neues Level heben</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/unternehmen/spacex-umsatz-tesla-zusammenschluss-musk-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">SpaceX mit Milliardenplus - Musk: Fusion mit Tesla gute Idee</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/tesla-spacex-zusammenschluss-moeglich-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Tesla und SpaceX prüfen Zusammenschluss - noch mehr Macht für Musk?</span></a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/elon-musk-tesla-spacex-usa-zusammenschluss-li.3566717" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Autobauer und Weltraumfirma: Musk bestätigt: Tesla und Space-X prüfen Zusammenschluss</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/musk-imperium-spacex-und-tesla-pruefen-fusion-201606609.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Musk-Imperium: SpaceX und Tesla prüfen Fusion</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Attacke mit Auto – Australische Abgeordnete verliert beide Beine</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:44%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/vermischtes/article6ad86f342c40700de08002b5/australien-attacke-mit-auto-abgeordnete-verliert-beide-beine.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Attacke mit Auto – Australische Abgeordnete verliert beide Beine</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/australien-angefahrene-politikerin-verliert-beide-beine-accg-201607413.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Von Auto gerammt: Australische Politikerin verliert beide Beine</span></a></li><li><a href="https://www.spiegel.de/ausland/australien-abgeordnete-verliert-nach-mutmasslicher-autoattacke-beide-beine-a-75fe4b18-d8a6-4d7f-9780-f30c80fe1319#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Australien: Abgeordnete verliert nach mutmaßlicher Autoattacke beide Beine</span></a></li><li><a href="https://taz.de/Auto-rast-in-australische-Abgeordnete/!6222844/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Auto rast in australische Abgeordnete: Sie war kein Feindbild, trotzdem wurde Helen Haines Opfer</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Fehler des Ministeriums - Neues Tabaksteuer-Gesetz tritt aus Versehen bereits in Kraft</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:44%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/neues-tabaksteuer-gesetz-tritt-aus-versehen-bereits-in-kraft-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Fehler des Ministeriums - Neues Tabaksteuer-Gesetz tritt aus Versehen bereits in Kraft</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/tabak-gesetz-panne-in-kraft-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Technischer Fehler: Tabaksteuergesetz tritt zu früh in Kraft</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/tabaksteuer-aus-versehen-in-kraft-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Ministerium unterläuft Panne beim Gesetz zur Tabaksteuer</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/tabaksteuer-ministerium-laesst-gesetz-aus-versehen-zu-frueh-in-kraft-treten-accg-201606890.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Tabaksteuer: Nach Ministeriumsfehler: Gesetz tritt heute aus Versehen in Kraft</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Satelliten-Internet - Musk soll Drosselung von Starlink für Ukraine in Absprache mit US-Regierung angeordnet haben</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/musk-soll-drosselung-von-starlink-fuer-ukraine-in-absprache-mit-us-regierung-angeordnet-haben-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Satelliten-Internet - Musk soll Drosselung von Starlink für Ukraine in Absprache mit US-Regierung angeordnet haben</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/musk-spacelink-drosselung-ukraine-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Musk ordnete laut Medienberichten Drosselung von Starlink für Ukraine an</span></a></li><li><a href="https://www.tagesschau.de/video/video-1669832.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Elon Musk soll Starlink für Ukraine gedrosselt haben</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/elon-musk-drosselung-starlink-ukraine-krieg-russland-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Bericht: Musk hat Starlink-Drosselung angeordnet</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Klimawandel - Neuer UNO-Bericht: Erde steuert bis 2100 auf bis zu 2,8 Grad Erwärmung zu</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/neuer-uno-bericht-erde-steuert-bis-2100-auf-bis-zu-2-8-grad-erwaermung-zu-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Klimawandel - Neuer UNO-Bericht: Erde steuert bis 2100 auf bis zu 2,8 Grad Erwärmung zu</span></a></li><li><a href="https://www.tagesschau.de/wissen/klima/erderwaermung-un-bericht-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">UN-Bericht: Erde steuert auf 2,8 Grad Erwärmung zu</span></a></li><li><a href="https://www.tagesschau.de/video/video-1669852.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Laut UN-Bericht steuert Erde auf Erwärmung von 2,8 Grad zu</span></a></li><li><a href="https://www.faz.net/aktuell/wissen/erde-steuert-laut-un-auf-2-8-grad-erwaermung-zu-accg-201607102.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Klimawandel: Erde steuert laut UN auf 2,8 Grad Erwärmung zu</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Nach Ausschreitungen in Frankreich - Erneut nächtliche Ausgangssperren in mehreren Großstädten</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/erneut-naechtliche-ausgangssperren-in-mehreren-grossstaedten-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Ausschreitungen in Frankreich - Erneut nächtliche Ausgangssperren in mehreren Großstädten</span></a></li><li><a href="https://www.deutschlandfunk.de/frankreich-verhaengt-erneut-ausgangssperren-in-mehreren-grossstaedten-sicherheitskraefte-sollen-mass-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Ausschreitungen - Frankreich verhängt erneut Ausgangssperren in mehreren Großstädten - Sicherheitskräfte sollen massiv verstärkt werden</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/frankreich-ausschreitungen-120.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Wer an den Ausschreitungen in Frankreich beteiligt war</span></a></li><li><a href="https://taz.de/Ausschreitungen-in-Frankreich/!6218304/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Ausschreitungen in Frankreich: Le Pens nützliche Idioten</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>FC Bayern München: Kimmich verpasst Topspiel gegen FC Arsenal wegen eines Trauerfalls</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/sport/fussball/fc-bayern-muenchen-kimmich-verpasst-topspiel-gegen-fc-arsenal-wegen-eines-trauerfalls-a-78386c6e-5423-4fc1-9a9e-389476250cf2#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">FC Bayern München: Kimmich verpasst Topspiel gegen FC Arsenal wegen eines Trauerfalls</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/champions-league/vorsicht-fc-bayern-der-fc-arsenal-kann-kein-vorbild-sein-201604758.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">FC Arsenal: Vorsicht vor diesem Vorbild!</span></a></li><li><a href="https://www.zeit.de/news/2026-10/21/trauerfall-in-familie-kimmich-fehlt-fc-bayern-gegen-arsenal" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Champions League: Trauerfall in Familie: Kimmich fehlt FC Bayern gegen Arsenal</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Epidemie - Erster Ebola-Fall in Nigeria nachgewiesen</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/erster-ebola-fall-in-nigeria-nachgewiesen-108.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Epidemie - Erster Ebola-Fall in Nigeria nachgewiesen</span></a></li><li><a href="https://www.tagesschau.de/ausland/ebola-nigeria-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Nigeria bestätigt ersten Ebola-Fall</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/gesundheit/erster-ebola-fall-in-nigeria-201606616.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">FRau aus uganda: Erste Ebola-Infektion in Nigeria bestätigt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>NBA-Start mit den 76ers: Dann geht das Licht an – und alles dreht sich um LeBron James</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/sport/lebron-james-76ers-new-york-nba-li.3566733" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">NBA-Start mit den 76ers: Dann geht das Licht an – und alles dreht sich um LeBron James</span></a></li><li><a href="https://www.faz.net/aktuell/sport/mehr-sport/start-der-nba-saison-lebron-james-und-philadelphia-schlagen-die-knicks-accg-201607286.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Auftakt in der NBA: Der Meister verliert zum Start gegen „King James“</span></a></li><li><a href="https://www.spiegel.de/sport/basketball/nba-lebron-james-gewinnt-mit-philadelphia-76ers-beim-meister-vergleicht-topscorer-mit-dennis-schroeder-a-eb188e66-8190-4d38-bad5-4127cda9aa2b#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">NBA: LeBron James gewinnt mit Philadelphia 76ers beim Meister, vergleicht Topscorer mit Dennis Schröder</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Agenturberichte - Deutscher in Russland wegen &quot;Söldnertums&quot; für Ukraine festgenommen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/deutscher-in-russland-wegen-soeldnertums-fuer-ukraine-festgenommen-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Agenturberichte - Deutscher in Russland wegen &quot;Söldnertums&quot; für Ukraine festgenommen</span></a></li><li><a href="https://www.deutschlandfunk.de/deutscher-in-russland-wegen-soeldnertums-fuer-ukraine-festgenommen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Agenturberichte - Deutscher in Russland wegen &quot;Söldnertums&quot; für Ukraine festgenommen</span></a></li><li><a href="https://www.welt.de/politik/ausland/article6ad863ab29754e92ee68e077/deutscher-in-russland-wegen-soeldnertums-fuer-die-ukraine-festgenommen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Russland meldet Festnahme eines deutschen Scharfschützen wegen „Söldnertums“ für die Ukraine</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Britische Royals: Prinz Harry will Versöhnung mit Bruder William</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/gesellschaft/menschen/prinz-harry-will-sich-mit-bruder-william-versoehnen-accg-201606870.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Britische Royals: Prinz Harry will Versöhnung mit Bruder William</span></a></li><li><a href="https://www.zdfheute.de/video/panorama-prinz-harry-streit-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Prinz Harry hofft auf Versöhnung mit Familie</span></a></li><li><a href="https://www.zdfheute.de/panorama/prominente/harry-william-charles-grossbritannien-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Prinz Harry will &quot;Schlussstrich ziehen&quot;</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Frankreich: Emmanuel Macron am Ende, Gewalt in den Straßen – was, wenn uns Frankreich verloren geht?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/ausland/frankreich-emmanuel-macron-am-ende-gewalt-in-den-strassen-was-wenn-uns-frankreich-verloren-geht-a-0d0e4382-7bd9-48bd-931e-52524e89fccf#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Frankreich: Emmanuel Macron am Ende, Gewalt in den Straßen – was, wenn uns Frankreich verloren geht?</span></a></li><li><a href="https://www.welt.de/vermischtes/article6ad87316199dc15f1abdb72b/unruhen-in-frankreich-ulrich-wickert-ist-schockiert-von-der-gewalt-und-kritisiert-macron.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Ulrich Wickert ist schockiert von Gewalt in Frankreich – und kritisiert Macron</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Bevölkerungsforschung: Stadt und Land unterschiedlich von Alterung betroffen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/news/2026-10/21/stadt-und-land-unterschiedlich-von-alterung-betroffen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Bevölkerungsforschung: Stadt und Land unterschiedlich von Alterung betroffen</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/bevoelkerung-deutschland-demografie-stadt-land-demografischer-wandel-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Stadt und Land: So leben die Menschen in Deutschland</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Medienbericht - Interne Lageeinschätzung: Bundeswehr warnt vor russischen Anschlägen auf militärische Einrichtungen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/interne-lageeinschaetzung-bundeswehr-warnt-vor-russischen-anschlaegen-auf-militaerische-einrichtunge-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Medienbericht - Interne Lageeinschätzung: Bundeswehr warnt vor russischen Anschlägen auf militärische Einrichtungen</span></a></li><li><a href="https://www.tagesschau.de/investigativ/wdr/bundeswehr-russland-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Interne Lageeinschätzung - Bundeswehr warnt vor russischen Anschlägen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Nach Landtagswahl - Mecklenburg-Vorpommern: Bisherige Landtagspräsidentin Hesse (SPD) wiedergewählt</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/mecklenburg-vorpommern-bisherige-landtagspraesidentin-hesse-spd-wiedergewaehlt-110.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Landtagswahl - Mecklenburg-Vorpommern: Bisherige Landtagspräsidentin Hesse (SPD) wiedergewählt</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/mecklenburgvorpommern/neuer-landtag-in-mv-birgit-hesse-bleibt-praesidentin,mvlandtag-104.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">SPD-Politikerin Hesse bleibt Landtagspräsidentin</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Fußball-Champions-League - BVB siegt in Aserbaidschan bei Sabah FK - VfB spielt unentschieden gegen Atlético Madrid</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bvb-siegt-in-aserbaidschan-bei-sabah-fk-vfb-spielt-unentschieden-gegen-atl-tico-madrid-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Fußball-Champions-League - BVB siegt in Aserbaidschan bei Sabah FK - VfB spielt unentschieden gegen Atlético Madrid</span></a></li><li><a href="https://www.sportschau.de/fussball/championsleague/doppelter-guirassy-beendet-dortmunder-ergebniskrise,spielbericht-sabah-fk-borussia-dortmund-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Guirassy schießt BVB zum Arbeitssieg über Sabah FK</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Festakt zum 65. Jahrestag - Bundeskanzler lobt deutsch-türkisches Anwerbeabkommen als Erfolgsgeschichte</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bundeskanzler-lobt-deutsch-tuerkisches-anwerbeabkommen-als-erfolgsgeschichte-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Festakt zum 65. Jahrestag - Bundeskanzler lobt deutsch-türkisches Anwerbeabkommen als Erfolgsgeschichte</span></a></li><li><a href="https://www.phoenix.de/65-jahre-anwerbeabkommen-a-5241211.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Festakt 65 Jahre deutsch-türkisches Anwerbeabkommen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Koalition in Berlin: Es ist eine Mutfrage</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/2026/46/koalition-berlin-spd-gruene-linke-wohnungsunternehmen-vanessa-emde" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Koalition in Berlin: Es ist eine Mutfrage</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/rot-gruen-rot-fuer-berlin-eine-schlimme-entwicklung-201605075.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Rot-grün-rot: Es ist Zeit, in Berlin die Reißleine zu ziehen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Stuttgart verpasst die Überraschung gegen Atletico</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sportschau.de/fussball/championsleague/stuttgart-verpasst-die-dicke-ueberraschung,spielbericht-vfb-stuttgart-atletico-madrid-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Stuttgart verpasst die Überraschung gegen Atletico</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-champions-league/fussball-champions-league-vfb-stuttgart-atletico-madrid-tore-ergebnis-ligaphase-26-27-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Trotz Überzahl: Stuttgart verpasst Coup gegen Atlético</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>Batterie-Fehler: VW ruft mehr als 70.000 E-Autos zurück</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/wirtschaft/unternehmen/volkswagen-e-auto-batterie-rueckruf-id-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Batterie-Fehler: VW ruft mehr als 70.000 E-Autos zurück</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/vw-e-autos-rueckruf-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">VW ruft weltweit mehr als 70.000 E-Autos wegen Brandgefahr zurück</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">23</span>
+          <h3>AfD-Mails gehackt: Soll so die AfD diskreditiert werden?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/politik/inland/afd-leak-cybersecurity-experte-vermutet-hacktivism-hinter-hackerangriff-accg-201604381.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">AfD-Mails gehackt: Soll so die AfD diskreditiert werden?</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/afd-hackerangriff-e-mail-konten-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">E-Mail-Konten der AfD gehackt und Daten ins Netz gestellt</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/ausland/hubbard-freilassung-usa-russland-100.html" target="_blank" rel="noopener">Russland lässt inhaftierten US-Bürger Stephen Hubbard frei</a></li><li><a href="https://www.tagesschau.de/ausland/europa/ukraine-russland-usa-verhandlungen-104.html" target="_blank" rel="noopener">US-Vermittler Witkoff berät mit Putin über Ukraine</a></li><li><a href="https://www.tagesschau.de/ausland/europa/musk-spacelink-drosselung-ukraine-100.html" target="_blank" rel="noopener">Musk ordnete laut Medienberichten Drosselung von Starlink für Ukraine an</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/ausland/midterms-usa-themen-trump-wahlen-100.html" target="_blank" rel="noopener">Trump gewählt, nun frustriert: Eine Kleinstadt vor der Wahl</a></li><li><a href="https://www.zdfheute.de/politik/deutschland/bevoelkerung-deutschland-demografie-stadt-land-demografischer-wandel-100.html" target="_blank" rel="noopener">Stadt und Land: So leben die Menschen in Deutschland</a></li><li><a href="https://www.zdfheute.de/panorama/emma-frauen-zeitschrift-schluss-100.html" target="_blank" rel="noopener">Alice Schwarzer stellt Frauenmagazin &quot;Emma&quot; ein</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/us-gesandter-witkoff-in-sankt-petersburg-zu-treffen-mit-putin-eingetroffen-106.html" target="_blank" rel="noopener">Russlands Krieg gegen die Ukraine - US-Gesandter Witkoff in Sankt Petersburg zu Treffen mit Putin eingetroffen</a></li><li><a href="https://www.deutschlandfunk.de/deutscher-in-russland-wegen-soeldnertums-fuer-ukraine-festgenommen-104.html" target="_blank" rel="noopener">Agenturberichte - Deutscher in Russland wegen &quot;Söldnertums&quot; für Ukraine festgenommen</a></li><li><a href="https://www.deutschlandfunk.de/verbaende-fordern-mehr-investitionen-in-den-oeffentlichen-nahverkehr-102.html" target="_blank" rel="noopener">Sondervermögen - Verbände fordern mehr Investitionen in den öffentlichen Nahverkehr</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/ausland/frankreich-emmanuel-macron-am-ende-gewalt-in-den-strassen-was-wenn-uns-frankreich-verloren-geht-a-0d0e4382-7bd9-48bd-931e-52524e89fccf#ref=rss" target="_blank" rel="noopener">Frankreich: Emmanuel Macron am Ende, Gewalt in den Straßen – was, wenn uns Frankreich verloren geht?</a></li><li><a href="https://www.spiegel.de/geschichte/nsdap-kartei-sie-wollen-mit-der-nazi-kartei-chatten-probieren-sie-es-hier-aus-a-7f50cb81-3987-47bc-9072-7788bf95e8db#ref=rss" target="_blank" rel="noopener">NSDAP-Kartei: Sie wollen mit der Nazi-Kartei chatten? Probieren Sie es hier aus.</a></li><li><a href="https://www.spiegel.de/panorama/justiz/koeln-mitarbeiterin-des-auslaenderamts-unter-schleuserverdacht-a-f678f268-73ab-4e32-abfa-972ff9ddc9e2#ref=rss" target="_blank" rel="noopener">Köln: Mitarbeiterin des Ausländeramts unter Schleuserverdacht</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-10/21/feuerwehr-loescht-weiter-glutnester-in-alter-malzfabrik" target="_blank" rel="noopener">Nach Großbrand: Feuerwehr löscht weiter Glutnester in alter Malzfabrik</a></li><li><a href="https://www.zeit.de/mobilitaet/2026-10/regionalverkehr-zuege-verbindungen-nahverkehr-finanzierung-europaeischer-gerichtshof" target="_blank" rel="noopener">Regionalverkehr: Deshalb müssen Sie um Ihre Regionalzüge fürchten</a></li><li><a href="https://www.zeit.de/news/2026-10/21/hausbesitzer-bleibt-nach-gasexplosion-vermisst" target="_blank" rel="noopener">Vermisstensuche: Hausbesitzer bleibt nach Gasexplosion vermisst</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-witkoff-gespraeche-russland-putin-li.3563283" target="_blank" rel="noopener">Krieg in der Ukraine: Putin spricht mit Trump-Gesandten Witkoff über Ukraine-Krieg</a></li><li><a href="https://www.sueddeutsche.de/sport/bvb-champions-league-sabah-guirassy-kovac-li.3566759" target="_blank" rel="noopener">Borussia Dortmund: Die Expedition endet wie nach dem Freizeit-Kick im Park</a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/tesla-space-x-elon-musk-fusion-kommentar-li.3566748" target="_blank" rel="noopener">Tesla und Space-X: Eine Fusion würde Musks Macht auf ein neues Level heben</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/politik/inland/berlin-auch-auslaender-sollen-waehlen-duerfen-accg-201605464.html" target="_blank" rel="noopener">Sondierungspapier: Dürfen Menschen ohne deutschen Pass bald in Berlin wählen?</a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/trump-beschimpft-richterin-wegen-golfplatz-entscheidung-accg-201606514.html" target="_blank" rel="noopener">Richterin gegen Trump: „Wem soll ich nun glauben, dem Präsidenten?“</a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/us-midterms-2026-jon-ossoff-der-neue-star-der-demokraten-201311909.html" target="_blank" rel="noopener">US-Kongresswahlen: Für ihn hat Trump einen besonders fiesen Spitznamen</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/politik/ausland/video6ad890802c40700de0800685/proteste-am-31-oktober-streiken-wie-die-jungend-in-frankreich-aufrufe-zu-krawallen-auch-in-deutschland.html" target="_blank" rel="noopener">„Streiken wie die Jungend in Frankreich“ – Aufrufe zu Krawallen auch in Deutschland</a></li><li><a href="https://www.welt.de/wirtschaft/deutscher-ki-preis/article6ad878b12c40700de0800397/welt-ki-preis-2026-mit-ki-koennen-wir-deutschlands-schaetze-heben.html" target="_blank" rel="noopener">Mit KI können wir Deutschlands Schätze heben</a></li><li><a href="https://www.welt.de/politik/video6ad8854b2c40700de08004f5/panne-bei-der-tabaksteuer-das-ist-dilettantismus-das-spricht-gegen-den-chef-lars-klingbeil.html" target="_blank" rel="noopener">„Das ist Dilettantismus – das spricht gegen den Chef, Lars Klingbeil“</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Kakerlakenbewegung-in-Indien-Das-System-laesst-junge-Menschen-im-Stich/!6222829/" target="_blank" rel="noopener">Indischer Politiker über Massenproteste: „Das System lässt junge Menschen im Stich“</a></li><li><a href="https://taz.de/Feministisches-Magazin-Emma-wird-eingestellt-Was-steckt-dahinter/!6223094/" target="_blank" rel="noopener">Bedeutendes und umstrittenes Magazin: Ciao, „Emma“!</a></li><li><a href="https://taz.de/UN-Bericht-zur-Klimakrise/!6223118/" target="_blank" rel="noopener">UN-Bericht zur Klimakrise: Menschheit „gefährlich weit“ von 1,5 Grad entfernt</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.tagesschau.de/wetter/deutschland/wettervorhersage-deutschland-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Wetter Deutschland: Wolken, Temperaturen, Wind und Aussichten</span></a></li><li><a href="https://www.welt.de/politik/ausland/video6ad890802c40700de0800685/proteste-am-31-oktober-streiken-wie-die-jungend-in-frankreich-aufrufe-zu-krawallen-auch-in-deutschland.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Streiken wie die Jungend in Frankreich“ – Aufrufe zu Krawallen auch in Deutschland</span></a></li><li><a href="https://www.welt.de/wirtschaft/deutscher-ki-preis/article6ad878b12c40700de0800397/welt-ki-preis-2026-mit-ki-koennen-wir-deutschlands-schaetze-heben.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Mit KI können wir Deutschlands Schätze heben</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/kreuzbandriss-psg-muss-monatelang-auf-kwarazchelia-verzichten-accg-201608001.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Saison-Aus droht: PSG-Star Kwarazchelia erleidet Kreuzbandriss</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/debatten/autorin-schreibt-unter-pseudonym-einen-brief-aus-dem-irankrieg-accg-201604616.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Brief aus dem Irankrieg: Golden geschminkt, innerlich zerrissen</span></a></li><li><a href="https://www.welt.de/politik/video6ad8854b2c40700de08004f5/panne-bei-der-tabaksteuer-das-ist-dilettantismus-das-spricht-gegen-den-chef-lars-klingbeil.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Das ist Dilettantismus – das spricht gegen den Chef, Lars Klingbeil“</span></a></li><li><a href="https://www.zeit.de/news/2026-10/21/feuerwehr-loescht-weiter-glutnester-in-alter-malzfabrik" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Nach Großbrand: Feuerwehr löscht weiter Glutnester in alter Malzfabrik</span></a></li><li><a href="https://www.zeit.de/mobilitaet/2026-10/regionalverkehr-zuege-verbindungen-nahverkehr-finanzierung-europaeischer-gerichtshof" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Regionalverkehr: Deshalb müssen Sie um Ihre Regionalzüge fürchten</span></a></li><li><a href="https://www.faz.net/video/militaer-soll-polizei-bei-protesten-unterstuetzen-201607637.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Paris bleibt angespannt: Militär soll Polizei bei Protesten unterstützen</span></a></li><li><a href="https://www.faz.net/video/kokainladung-sollte-in-die-niederlande-kolumbien-beschlagnahmt-7-6-tonnen-kokain-201607634.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Rekordfund in Cartagena: Kolumbien beschlagnahmt 7,6 Tonnen Kokain</span></a></li><li><a href="https://www.faz.net/aktuell/rhein-main/region-und-hessen/jugendlicher-stiehlt-lkw-in-buettelborn-und-richtet-24-000-euro-schaden-an-accg-201607989.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Büttelborn: Jugendlicher kapert Lkw und richtet Verwüstung an</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/schufa-score-bgh-auskunft-klage-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Wie entsteht der Schufa-Score?</span></a></li><li><a href="https://www.zeit.de/news/2026-10/21/hausbesitzer-bleibt-nach-gasexplosion-vermisst" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Vermisstensuche: Hausbesitzer bleibt nach Gasexplosion vermisst</span></a></li><li><a href="https://www.faz.net/premium/digitalwirtschaft/kuenstliche-intelligenz/wolters-kluwer-wie-ki-das-juristische-arbeiten-veraendert-accg-201601998.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">F.A.Z. Exklusiv: „Anwälte haben ihr Wissen bislang gut geschützt, etwa durch Stundensätze“</span></a></li><li><a href="https://www.zeit.de/news/2026-10/21/eu-ermittelt-gegen-booking-com-wegen-betrugsfaellen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Verbraucherschutz: EU ermittelt gegen Booking.com wegen Betrugsfällen</span></a></li><li><a href="https://www.zeit.de/news/2026-10/21/seltene-affenart-bekommt-nachwuchs-im-heidelberger-zoo" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Tierischer Sprössling: Seltene Affenart bekommt Nachwuchs im Heidelberger Zoo</span></a></li><li><a href="https://www.zeit.de/news/2026-10/21/anta-manager-leitet-puma-aufsichtsrat" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Sportartikel: Anta-Manager leitet Puma-Aufsichtsrat</span></a></li><li><a href="https://www.zeit.de/news/2026-10/21/bundesbank-erwartet-jahresendspurt-nach-sommer-stagnation" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Deutsche Wirtschaft: Bundesbank erwartet Jahresendspurt nach Sommer-Stagnation</span></a></li><li><a href="https://www.sueddeutsche.de/sport/bvb-champions-league-sabah-guirassy-kovac-li.3566759" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Borussia Dortmund: Die Expedition endet wie nach dem Freizeit-Kick im Park</span></a></li><li><a href="https://www.welt.de/gesundheit/article6ad74ea81935debc092ab9aa/krebs-forscher-zuechten-mini-tumor-um-die-ueberlebenschance-bei-pankreaskrebs-zu-erhoehen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Forscher züchten Mini-Tumoren, um die Überlebenschance bei Pankreaskrebs zu erhöhen</span></a></li><li><a href="https://www.welt.de/wirtschaft/deutscher-ki-preis/article6ad7cd2d51e5094f7a57382a/panel-diskussion-um-ki-am-ende-duerfen-menschen-wieder-menschen-sein.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Am Ende dürfen Menschen wieder Menschen sein</span></a></li><li><a href="https://www.tagesschau.de/ausland/afrika/sudan-konferenz-108.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">UN-Konferenz: Delegationen bemühen sich um Frieden im Sudan</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/warum-die-schweiz-das-topauswanderungsziel-fuer-deutsche-ist-201290826.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Auswanderungsziel: Die Schweiz ist aus guten Gründen das Sehnsuchtsland der Deutschen</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 21.10.2026 um 12:18 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
