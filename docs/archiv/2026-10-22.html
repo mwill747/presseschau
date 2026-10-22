@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 22.10.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Thursday, 22. October 2026 &middot; 12:19 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">344 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Fußball - Champions League: Bayern und Arsenal trennen sich 2:2, Leipzig verliert in Madrid</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/champions-league-bayern-und-arsenal-trennen-sich-2-2-leipzig-verliert-in-madrid-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Fußball - Champions League: Bayern und Arsenal trennen sich 2:2, Leipzig verliert in Madrid</span></a></li><li><a href="https://www.faz.net/video/2-2-gegen-arsenal-bayern-zu-hause-ohne-sieg-201610950.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">UEFA Champions League: 2:2 gegen Arsenal – Bayern zu Hause ohne Sieg</span></a></li><li><a href="https://www.sportschau.de/fussball/championsleague/vier-tore-kein-sieger-remis-zwischen-bayern-und-arsenal,spielbericht-fc-bayern-fc-arsenal-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Champions League: Bayern und Arsenal mit intensivem Unentschieden</span></a></li><li><a href="https://www.sueddeutsche.de/sport/real-madrid-rb-leipzig-pleite-champions-league-diomande-li.3567127" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Leipzig unterliegt Real: Seriös unter die Räder gekommen</span></a></li><li><a href="https://www.sportschau.de/fussball/championsleague/am-ende-deutlich-leipzig-unterliegt-real-madrid,spielbericht-real-madrid-rb-leipzig-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Am Ende deutlich - Leipzig unterliegt Real Madrid</span></a></li><li><a href="https://www.sueddeutsche.de/sport/fc-bayern-arsenal-champions-league-kane-rice-li.3567124" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">2:2 gegen Arsenal: Rice entreißt Bayern den Sieg</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-champions-league/video/fc-bayern-muenchen-fc-arsenal-3-spieltag-zusammenfassung-saison-2026-27-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Bayern muss sich mit Remis gegen Arsenal begnügen</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-champions-league/video/real-madrid-rb-leipzig-3-spieltag-zusammenfassung-saison-2026-27-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Real Madrid eine Nummer zu groß für Leipzig</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-champions-league/fussball-champions-league-real-madrid-rasenballsport-leipzig-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Real Madrid zu stark für Leipzig</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Viessmann steigt beim FC Bayern ein: „Es ist diesmal eher wie bei einer Hochzeit“</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/sport/fc-bayern-viessmann-hainer-interview-einstieg-li.3564836" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Viessmann steigt beim FC Bayern ein: „Es ist diesmal eher wie bei einer Hochzeit“</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/bundesliga/viessmann-kauft-anteile-beim-fc-bayern-fuer-millionensumme-accg-201611341.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Millionensumme: Viessmann kauft Anteile beim FC Bayern</span></a></li><li><a href="https://www.welt.de/sport/fussball/bundesliga/fc-bayern-muenchen/article6ad9c2ed2c40700de08017a5/fussball-neuer-anteilsverkauf-bringt-dem-fc-bayern-eine-viertelmilliarde-euro.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Neuer Anteilsverkauf bringt dem FC Bayern eine Viertelmilliarde Euro</span></a></li><li><a href="https://www.welt.de/sport/fussball/video6ad9ca1c199dc15f1abdcceb/fc-bayern-muenchen-koennte-ein-besonderer-abend-werden-ballon-dor-fuer-harry-kane.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Könnte ein besonderer Abend werden“ – Ballon d‘Or für Harry Kane?</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/champions-league/champions-league-gala-gegen-arsenal-harry-kane-ist-der-herr-der-dinge-accg-201610158.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Champions League: Harry Kane ist der Herr der Dinge</span></a></li><li><a href="https://www.sueddeutsche.de/sport/fc-bayern-viessmann-anteile-verkauf-250-millionen-euro-li.3567248" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Fußball: Viessmann steigt beim FC Bayern ein</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-champions-league/fussball-champions-league-fc-bayern-muenchen-fc-arsenal-harry-kane-man-of-the-match-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Die überragende One-Man-Show des Harry Kane</span></a></li><li><a href="https://www.spiegel.de/sport/fussball/fc-bayern-muenchen-harry-kanes-multitasking-ueberfordert-sogar-juergen-klopp-a-512de855-c556-43ac-bc2c-50bc4b7b651b#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">FC Bayern München: Harry Kanes Multitasking überfordert sogar Jürgen Klopp</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-champions-league/fussball-champions-league-fc-bayern-fc-arsenal-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Der Druck auf den FC Bayern steigt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Vatikan - Ärzte: Krebs bei Papst Leo hat nicht gestreut</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/aerzte-krebs-bei-papst-leo-hat-nicht-gestreut-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Vatikan - Ärzte: Krebs bei Papst Leo hat nicht gestreut</span></a></li><li><a href="https://www.welt.de/videos/video6ad9c6dfd7092d3a5757ad98/vatikan-keine-weitere-therapie-noetig-aerzte-erklaeren-papst-leo-fuer-krebsfrei.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Keine weitere Therapie nötig – Ärzte erklären Papst Leo für krebsfrei</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/papst-leo-lungenkrebs-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Papst Leo XIV. braucht nach Lungenkrebs-OP keine weitere Behandlung</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/menschen/papst-leo-xiv-aerzte-geben-nach-lungenkrebs-op-entwarnung-201609884.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Ärzte geben Entwarnung: Lungenkrebs bei Papst Leo XIV. hat nicht gestreut</span></a></li><li><a href="https://www.zdfheute.de/panorama/papst-leo-krebs-erkrankung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Vatikan: Krebs bei Papst Leo hat nicht gestreut</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Angriffskrieg - Ukraine meldet Tote durch russische Angriffe - geringe Erwartungen an neue Gespräche unter US-Vermittlung</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:80%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/ukraine-meldet-tote-durch-russische-angriffe-geringe-erwartungen-an-neue-gespraeche-unter-us-vermitt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Angriffskrieg - Ukraine meldet Tote durch russische Angriffe - geringe Erwartungen an neue Gespräche unter US-Vermittlung</span></a></li><li><a href="https://www.deutschlandfunk.de/ein-toter-nach-angriffen-auf-flughafen-in-saudi-arabien-us-regierung-zieht-personal-aus-botschaft-ab-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Dammam - Ein Toter nach Angriffen auf Flughafen in Saudi-Arabien - US-Regierung zieht Personal aus Botschaft ab</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/flughafen-saudi-arabien-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Tote nach Angriff auf Flughafen in Saudi-Arabien</span></a></li><li><a href="https://taz.de/Saudi-Arabien-in-Huthi-Krise/!6223665/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Saudi-Arabien in Huthi-Krise: USA ziehen Diplomaten aus Golf-Region ab</span></a></li><li><a href="https://www.sueddeutsche.de/politik/liveblog-nahost-news-wahl-israel-gantz-riad-us-botschaft-li.3560260" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Nahost: Angriffe der Huthi: USA ziehen Botschaftspersonal aus Saudi-Arabien ab</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/huthi-saudi-arabien-104.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Huthi-Attacken auf Saudi-Arabien: Angriff auf bin Salmans Vision</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Verbrauchertäuschung - &quot;Cambridge Analytica&quot;-Skandal: Gericht verurteilt Meta zu 25 Milliarden Dollar Strafzahlung</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:80%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/cambridge-analytica-skandal-gericht-verurteilt-meta-zu-25-milliarden-dollar-strafzahlung-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Verbrauchertäuschung - &quot;Cambridge Analytica&quot;-Skandal: Gericht verurteilt Meta zu 25 Milliarden Dollar Strafzahlung</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/meta-strafe-cambridge-analytica-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Warum Meta eine Rekordstrafe zahlen soll</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/meta-quartalszahlen-ki-investitionen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Meta investiert mindestens 135 Milliarden Dollar in KI</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/meta-zu-25-milliarden-strafe-verurteilt-wegen-cambridge-analytica-201609794.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Datenskandal: Meta soll 25 Milliarden Dollar Strafe zahlen</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/unternehmen/meta-strafe-cambridge-analytika-usa-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Cambridge-Analytica-Skandal: Meta soll Milliarden zahlen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Landtag Sachsen-Anhalt: CDU-Politiker will bei Siegmund-Wahl im Saal bleiben</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:80%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.mdr.de/nachrichten/sachsen-anhalt/landtagswahl/landtag-afd-ministerpraesidentenwahl,heuer-cdu-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Landtag Sachsen-Anhalt: CDU-Politiker will bei Siegmund-Wahl im Saal bleiben</span></a></li><li><a href="https://www.spiegel.de/politik/sachsen-anhalt-cdu-politiker-will-bei-ministerpraesidentenwahl-von-ulrich-siegmund-im-saal-bleiben-a-2a122316-0493-424d-93d5-b0784e05c86d#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Sachsen-Anhalt: CDU-Politiker will bei Ministerpräsidentenwahl von Ulrich Siegmund im Saal bleiben</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-cdu-abgeordneter-heuer-will-bei-wahl-von-siegmund-im-plenarsaal-bleiben-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: CDU-Abgeordneter Heuer will bei Wahl von Siegmund im Plenarsaal bleiben</span></a></li><li><a href="https://www.sueddeutsche.de/politik/landtagswahlen-deutschland-sachsen-anhalt-cdu-siegmund-ministerpraesident-li.3540501" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Newsblog zu den Landtagswahlen: Sachsen-Anhalt: CDU-Abgeordneter will bei Ministerpräsidentenwahl im Saal bleiben</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Aktuelles zum Krieg in der Ukraine</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:60%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/russland-ukraine-krieg-putin-gespraeche-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Krieg gegen die Ukraine: Putin stimmt Wiederaufnahme von Gesprächen zu</span></a></li><li><a href="https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-putin-kreml-usa-gespraeche-li.3563283" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Krieg in der Ukraine: Kreml erklärt sich zu Gesprächen mit USA und Ukraine bereit</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/russland-gespraeche-usa-ukraine-krieg-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Kreml: Putin zu Gesprächen mit Ukraine und USA bereit</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>&quot;Söder mit Vorstoß für Extremismusklausel&quot;, Mirja Fiedler, RBB, zur MPK-Ausrichtung bei möglichem AfD-Ministerpräsidenten</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:60%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/video/video-1670580.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">&quot;Söder mit Vorstoß für Extremismusklausel&quot;, Mirja Fiedler, RBB, zur MPK-Ausrichtung bei möglichem AfD-Ministerpräsidenten</span></a></li><li><a href="https://www.deutschlandfunk.de/soeder-fordert-extremismusklausel-im-laenderfinanzausgleich-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Parteien - Söder fordert &quot;Extremismusklausel&quot; im Länderfinanzausgleich</span></a></li><li><a href="https://www.zdfheute.de/politik/soeder-extremismus-laenderfinanzausgleich-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Söder will Extremismusklausel beim Länderfinanzausgleich</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Medienbericht - Bürgergeld-Reform spart offenbar bisher kein Geld</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:60%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/buergergeld-reform-spart-offenbar-bisher-kein-geld-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Medienbericht - Bürgergeld-Reform spart offenbar bisher kein Geld</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6ad9ac69d7092d3a5757ab3b/grundsicherung-union-versprach-milliarden-doch-die-buergergeld-reform-spart-nichts-ein.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Union versprach Milliarden – doch die Bürgergeld-Reform spart nichts ein</span></a></li><li><a href="https://www.sueddeutsche.de/politik/buergergeld-reform-2026-grundsicherung-einsparungen-merz-li.3566853" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Neue Grundsicherung: Bürgergeld-Reform spart doch keine Milliarden</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Aber was, wenn Donald Trump ein Friedensaktivist wäre?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/kultur/plus6ad75fed199dc15f1abda9fa/slavoj-zizek-aber-was-wenn-donald-trump-ein-friedensaktivist-waere.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Aber was, wenn Donald Trump ein Friedensaktivist wäre?</span></a></li><li><a href="https://www.spiegel.de/ausland/donald-trump-xi-jinping-und-wladimir-putin-europa-muss-diese-maenner-stoppen-a-6cbfbcd4-540b-461c-9a38-7073b5e9a5bb#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Donald Trump, Xi Jinping und Wladimir Putin: Europa muss diese Männer stoppen</span></a></li><li><a href="https://www.spiegel.de/panorama/leute/iron-maiden-schlagzeuger-nicko-mcbrain-will-nicht-mit-donald-trump-golfen-gehen-a-b5af90cc-8425-437c-8090-df50c723a615#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Iron Maiden: Schlagzeuger Nicko McBrain will nicht mit Donald Trump golfen gehen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Wirtschaft - Kanada gehen die Ahornsirup-Reserven aus</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/kanada-gehen-die-ahornsirup-reserven-aus-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wirtschaft - Kanada gehen die Ahornsirup-Reserven aus</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/weltwirtschaft/kanada-ahornsirup-exporte-usa-deutschland-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Kanada gehen die Ahornsirup-Reserven aus</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Ministerpräsidentenkonferenz - Wüst fordert rasche Senkung der Stromsteuer für alle</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/wuest-fordert-rasche-senkung-der-stromsteuer-fuer-alle-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ministerpräsidentenkonferenz - Wüst fordert rasche Senkung der Stromsteuer für alle</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/wuest-stromsteuer-senkung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Wüst und Schnieder wollen Stromsteuer für alle senken</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Region Marseille - Vier Tote nach Unwettern in Südfrankreich</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/vier-tote-nach-unwettern-in-suedfrankreich-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Region Marseille - Vier Tote nach Unwettern in Südfrankreich</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/vier-tote-bei-unwettern-im-suedosten-frankreichs-accg-201611107.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Starke Regenfälle: Vier Tote bei Unwettern im Südosten Frankreichs</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Die Gelbe Wiesenraute ist Blume des Jahres 2027</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/wissen/klima/blume-des-jahres-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Die Gelbe Wiesenraute ist Blume des Jahres 2027</span></a></li><li><a href="https://www.zdfheute.de/panorama/gelbe-wiesenraute-blume-des-jahres-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Gelbe Wiesenraute ist Blume des Jahres 2027</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>&quot;Nichts ohne Regelung der Territorialfrage&quot; – ARD-Reporter zum Treffen zwischen Witkoff und Putin</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/video/video-1670536.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">&quot;Nichts ohne Regelung der Territorialfrage&quot; – ARD-Reporter zum Treffen zwischen Witkoff und Putin</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/usa-witkoff-ukraine-krieg-russland-verhandlungen-unterhaendler-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Ukraine-Krieg: Putin bleibt nach Treffen mit Witkoff vage</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>SPD: Unter diesen Bedingungen will Hubertus Heil Parteichef werden</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/politik/deutschland/spd-unter-diesen-bedingungen-will-hubertus-heil-parteichef-werden-a-03d04fa8-6a55-474b-bff2-6bcdba857aa1#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">SPD: Unter diesen Bedingungen will Hubertus Heil Parteichef werden</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/spd-vorsitz-noch-fehlen-hubertus-heil-die-verbuendeten-accg-201607362.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Hubertus Heil: Vom „Heldenfriedhof“ zum SPD-Vorsitz?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>BGH-Urteil: Ansprüche gegen Schufa müssen neu geprüft werden</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/finanzen/bgh-urteil-wann-haben-verbraucher-auskunftsrecht-gegenueber-der-schufa-accg-201608607.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">BGH-Urteil: Ansprüche gegen Schufa müssen neu geprüft werden</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/verbraucher/bgh-urteil-schufa-114.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">BGH-Urteil: Entscheidung zu Transparenz bei Schufa</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Le Pen legt in Umfrage zur Präsidentschaftswahl weiter zu</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/frankreich-ausschreitungen-umfrage-praesidentschaft-le-pen-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Le Pen legt in Umfrage zur Präsidentschaftswahl weiter zu</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/marine-le-pen-legt-in-umfrage-zur-praesidentschaftswahl-in-frankreich-zu-accg-201610186.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Nach Krawallen: Le Pen legt in Umfrage zu Präsidentschaftwahl zu</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Geleakte AfD-Mails: Folgen jetzt mal Konsequenzen?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Geleakte-AfD-Mails-Folgen-jetzt-endlich-mal-Konsequenzen/!6223153/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Geleakte AfD-Mails: Folgen jetzt mal Konsequenzen?</span></a></li><li><a href="https://www.zdfheute.de/politik/afd-mails-leak-was-wir-wissen-was-nicht-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Geleakte AfD-Mails: Was wir wissen und was nicht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Ende DER „eMMA“: Ermattet vom neuen Feminismus</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/politik/inland/alice-schwarzer-stellt-emma-ein-ermattung-oder-niederlage-201608437.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Ende DER „eMMA“: Ermattet vom neuen Feminismus</span></a></li><li><a href="https://taz.de/Warum-die-Zeitschrift-Emma-dem-Feminismus-zuletzt-mehr-schadete-als-nutzte/!6223119/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Nach 50 Jahren eingestellt: Warum „Emma“ dem Feminismus zuletzt mehr schadete als nutzte</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Alice Schwarzer stellt Frauenmagazin &quot;Emma&quot; ein</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/panorama/emma-frauen-zeitschrift-schluss-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Alice Schwarzer stellt Frauenmagazin &quot;Emma&quot; ein</span></a></li><li><a href="https://www.tagesschau.de/kultur/emma-magazin-ende-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Alice Schwarzer stellt Magazin &quot;Emma&quot; ein</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/inland/innenpolitik/renten-reform-kapitalrente-100.html" target="_blank" rel="noopener">Die Kapitalrente - Befreiungsschlag oder Risiko?</a></li><li><a href="https://www.tagesschau.de/video/video-1670534.html" target="_blank" rel="noopener">&quot;Eigentliches Update ist schnell erledigt&quot; – Sicherheitslücke bei Programmiersprache PHP</a></li><li><a href="https://www.tagesschau.de/video/video-1670536.html" target="_blank" rel="noopener">&quot;Nichts ohne Regelung der Territorialfrage&quot; – ARD-Reporter zum Treffen zwischen Witkoff und Putin</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/php-sicherheitsluecke-faq-websites-internet-100.html" target="_blank" rel="noopener">Was die PHP-Krise für das Internet bedeutet</a></li><li><a href="https://www.zdfheute.de/politik/php-luecke-cybersicherheit-experten-bedrohung-100.html" target="_blank" rel="noopener">Was Experten Website-Betreibern jetzt raten</a></li><li><a href="https://www.zdfheute.de/wirtschaft/cyberkrimialitaet-ethische-hacker-cybersicherheit-ki-100.html" target="_blank" rel="noopener">Wer kann Cyberkriminelle noch ausbremsen?</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/buergergeld-reform-spart-offenbar-bisher-kein-geld-102.html" target="_blank" rel="noopener">Medienbericht - Bürgergeld-Reform spart offenbar bisher kein Geld</a></li><li><a href="https://www.deutschlandfunk.de/ifo-tankrabatt-wirkt-bei-benzin-bei-diesel-aber-nur-teilweise-100.html" target="_blank" rel="noopener">Wirtschaft - Ifo: Tankrabatt wirkt bei Benzin - bei Diesel aber nur teilweise</a></li><li><a href="https://www.deutschlandfunk.de/viele-internetseiten-nach-it-sicherheitsvorfall-wieder-online-bsi-haelt-gefahr-noch-nicht-fuer-geban-100.html" target="_blank" rel="noopener">Problem bei PHP-Anwendungen - Viele Internetseiten nach IT-Sicherheitsvorfall wieder online - BSI hält Gefahr noch nicht für gebannt</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/wirtschaft/wirecard-ex-chef-markus-braun-interview-im-gefaengnis-ich-bin-nicht-mehr-der-der-ich-war-a-f22bd44b-671e-4f3d-8865-29c8a7262d9a#ref=rss" target="_blank" rel="noopener">Wirecard: Ex-Chef Markus Braun - Interview im Gefängnis: »Ich bin nicht mehr der, der ich war«</a></li><li><a href="https://www.spiegel.de/ausland/donald-trump-xi-jinping-und-wladimir-putin-europa-muss-diese-maenner-stoppen-a-6cbfbcd4-540b-461c-9a38-7073b5e9a5bb#ref=rss" target="_blank" rel="noopener">Donald Trump, Xi Jinping und Wladimir Putin: Europa muss diese Männer stoppen</a></li><li><a href="https://www.spiegel.de/netzwelt/php-sicherheitsluecke-auf-websites-was-sie-jetzt-tun-muessen-um-sich-abzusichern-a-625f6457-1437-4643-8fd1-b0624da87910#ref=rss" target="_blank" rel="noopener">PHP-Sicherheitslücke auf Websites: was Sie jetzt tun müssen, um sich abzusichern</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-10/22/randalierer-mit-4-4-promille-in-polizeigewahrsam" target="_blank" rel="noopener">Platzverweis mit Folgen: Randalierer mit 4,4 Promille in Polizeigewahrsam</a></li><li><a href="https://www.zeit.de/digital/2026-10/php-sicherheitsluecken-software-webseiten-cloudflare-gxe" target="_blank" rel="noopener">Sicherheitslücke in PHP: Sicherheitslücken lösen Millionen von Cyberattacken aus</a></li><li><a href="https://www.zeit.de/news/2026-10/21/otto-waalkes-sie-hat-mir-gesagt-wo-es-langgeht" target="_blank" rel="noopener">Song mit Paula Carolina: Otto Waalkes: «Sie hat mir gesagt, wo es langgeht»</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/sport/fc-bayern-viessmann-hainer-interview-einstieg-li.3564836" target="_blank" rel="noopener">Viessmann steigt beim FC Bayern ein: „Es ist diesmal eher wie bei einer Hochzeit“</a></li><li><a href="https://www.sueddeutsche.de/muenchen/muenchen-erding-flughafen-puma-ermittlungen-eingestellt-li.3567178" target="_blank" rel="noopener">Raubkatzen-Sichtung: Rätsel des Pumas am Münchner Flughafen bleibt vorerst ungelöst</a></li><li><a href="https://www.sueddeutsche.de/kultur/thelyson-orelien-ki-vorwurf-verlag-bestaetigt-li.3567259" target="_blank" rel="noopener">KI und Literatur: Verlag bestätigt KI-Vorwürfe gegen Thélyson Orélien</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/warum-die-schweiz-das-topauswanderungsziel-fuer-deutsche-ist-201290826.html" target="_blank" rel="noopener">Auswanderungsziel: Die Schweiz ist aus guten Gründen das Sehnsuchtsland der Deutschen</a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/schwachstelle-in-php-was-dahintersteckt-und-nun-jeder-tun-muss-accg-201610624.html" target="_blank" rel="noopener">Internetseiten offline: Was hinter den PHP-Schwachstellen steckt und was nun jeder tun muss</a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/amnestie-in-katalonien-warum-carles-puigdemont-mit-seiner-rueckkehr-zoegert-accg-201608515.html" target="_blank" rel="noopener">Katalonien: Noch zögert Puigdemont mit der Rückkehr</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/vermischtes/plus6ad20196199dc15f1abd6337/raetsel-um-zac-brettler-nur-zwei-menschen-wissen-was-in-der-todesnacht-geschah-und-keiner-von-beiden-ist-noch-am-leben.html" target="_blank" rel="noopener">Nur zwei Menschen wissen, was in der Todesnacht geschah – und keiner von beiden ist noch am Leben</a></li><li><a href="https://www.welt.de/politik/ausland/plus6ad715af2352c608d83cef74/sabotage-moskaus-2000-dollar-agent.html" target="_blank" rel="noopener">Moskaus 2000-Dollar-Agent</a></li><li><a href="https://www.welt.de/politik/ausland/article6ad8931f2c40700de08006d1/wuetende-demonstranten-hohe-lebenskosten-migration-warum-die-gewalt-bei-demos-in-staedten-afrikas-zunimmt.html" target="_blank" rel="noopener">Hohe Lebenskosten, Migration – Warum die Gewalt bei Demos in Städten Afrikas zunimmt</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Offener-Brief-fuer-Vergesellschaftungen/!6223442/" target="_blank" rel="noopener">Offener Brief für Vergesellschaftungen: „Ein Sperrgesetz ist verfassungswidrig“</a></li><li><a href="https://taz.de/Caroline-6-leidet-am-PUS3-Syndrom-Eine-Einzige-von-83-Millionen/!6217177/" target="_blank" rel="noopener">Seltene Erkrankung: Eine Einzige von 83 Millionen</a></li><li><a href="https://taz.de/Portugiesischer-Exil-Roman-Ilse-Lieblichs-unwahrscheinliche-Buecher/!6221184/" target="_blank" rel="noopener">Portugiesischer Exil-Roman: Ilse Lieblichs unwahrscheinliche Bücher</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://www.faz.net/aktuell/besser-leben/essen/wohlig-feuriger-eintopf-so-gelingt-der-koreanische-klassiker-kimchi-jjigae-accg-110717309.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Rezept für Kimchi-Jjigae: Ein wohlig-feuriger Eintopf für den Herbst</span></a></li><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://taz.de/Grossbank-Barclays-streicht-nach-KI-Investitionen-5000-Jobs/!6223742/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Stellenabbau bei Großbank: Barclays streicht nach KI-Investitionen 5.000 Jobs</span></a></li><li><a href="https://www.zeit.de/news/2026-10/22/randalierer-mit-4-4-promille-in-polizeigewahrsam" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Platzverweis mit Folgen: Randalierer mit 4,4 Promille in Polizeigewahrsam</span></a></li><li><a href="https://www.zeit.de/digital/2026-10/php-sicherheitsluecken-software-webseiten-cloudflare-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Sicherheitslücke in PHP: Sicherheitslücken lösen Millionen von Cyberattacken aus</span></a></li><li><a href="https://www.welt.de/vermischtes/plus6ad20196199dc15f1abd6337/raetsel-um-zac-brettler-nur-zwei-menschen-wissen-was-in-der-todesnacht-geschah-und-keiner-von-beiden-ist-noch-am-leben.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Nur zwei Menschen wissen, was in der Todesnacht geschah – und keiner von beiden ist noch am Leben</span></a></li><li><a href="https://www.zeit.de/news/2026-10/21/otto-waalkes-sie-hat-mir-gesagt-wo-es-langgeht" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Song mit Paula Carolina: Otto Waalkes: «Sie hat mir gesagt, wo es langgeht»</span></a></li><li><a href="https://www.zeit.de/news/2026-10/22/fliegerbombe-in-nuernberg-gefunden-evakuierung-geplant" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Bombenfund: Fliegerbombe in Nürnberg gefunden – Evakuierung geplant</span></a></li><li><a href="https://www.zeit.de/politik/2026-10/eu-parlament-ehrt-internationalen-strafgerichtshof-mit-sacharow-preis" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">EU-Parlament ehrt Internationalen Strafgerichtshof mit Sacharow-Preis</span></a></li><li><a href="https://www.spiegel.de/wirtschaft/soziales/erneuerbare-energien-eeg-novelle-koennte-mehrkosten-in-milliardenhoehe-verursachen-a-cb9f8276-4872-4a83-8c51-238362639eae#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Erneuerbare Energien: EEG-Novelle könnte Mehrkosten in Milliardenhöhe verursachen</span></a></li><li><a href="https://www.welt.de/politik/ausland/plus6ad715af2352c608d83cef74/sabotage-moskaus-2000-dollar-agent.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Moskaus 2000-Dollar-Agent</span></a></li><li><a href="https://www.welt.de/politik/ausland/article6ad8931f2c40700de08006d1/wuetende-demonstranten-hohe-lebenskosten-migration-warum-die-gewalt-bei-demos-in-staedten-afrikas-zunimmt.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Hohe Lebenskosten, Migration – Warum die Gewalt bei Demos in Städten Afrikas zunimmt</span></a></li><li><a href="https://www.faz.net/aktuell/sport/mehr-sport/langlauf-koenigin-johaug-koennte-als-leichtathletin-zu-olympia-accg-201611450.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Verband bestätigt: Langlauf-Königin Johaug könnte als Leichtathletin zu Olympia</span></a></li><li><a href="https://www.zeit.de/news/2026-10/22/europaeisches-parlament-ehrt-internationalen-strafgerichtshof" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Menschenrechte: Europäisches Parlament ehrt Internationalen Strafgerichtshof</span></a></li><li><a href="https://www.zeit.de/news/2026-10/22/dresdner-volleyballerinnen-verpflichten-kanadische-libera" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Volleyball-Bundesliga: Dresdner Volleyballerinnen verpflichten kanadische Libera</span></a></li><li><a href="https://www.deutschlandfunk.de/ifo-tankrabatt-wirkt-bei-benzin-bei-diesel-aber-nur-teilweise-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wirtschaft - Ifo: Tankrabatt wirkt bei Benzin - bei Diesel aber nur teilweise</span></a></li><li><a href="https://www.deutschlandfunk.de/viele-internetseiten-nach-it-sicherheitsvorfall-wieder-online-bsi-haelt-gefahr-noch-nicht-fuer-geban-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Problem bei PHP-Anwendungen - Viele Internetseiten nach IT-Sicherheitsvorfall wieder online - BSI hält Gefahr noch nicht für gebannt</span></a></li><li><a href="https://www.deutschlandfunk.de/italien-und-spanien-beenden-gegenseitige-grenzkontrollen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Migration - Italien und Spanien beenden gegenseitige Grenzkontrollen</span></a></li><li><a href="https://www.deutschlandfunk.de/vier-szenarien-zur-zukunft-der-medien-ki-und-tech-konzerne-erhoehen-den-druck-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Gutachten im Auftrag des ÖRR - Vier Szenarien zur Zukunft der Medien: KI und Tech-Konzerne erhöhen den Druck</span></a></li><li><a href="https://www.deutschlandfunk.de/verpasste-chance-verkehrsminister-vertagen-entscheidung-ueber-deutschlandticket-fuer-gelegenheitsfah-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Reaktion aus NRW - &quot;Verpasste Chance&quot;: Verkehrsminister vertagen Entscheidung über Deutschlandticket für Gelegenheitsfahrer</span></a></li><li><a href="https://www.deutschlandfunk.de/bundesschuelerkonferenz-begruesst-gen-z-protestaufruf-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">31. Oktober - Bundesschülerkonferenz begrüßt &quot;Gen Z&quot;-Protestaufruf</span></a></li><li><a href="https://www.deutschlandfunk.de/macron-beraet-mit-ministern-und-geheimdienstvertretern-ueber-gewalt-wochenende-in-frankreich-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Krawallen am Protesttag - Macron berät mit Ministern und Geheimdienstvertretern über Gewalt-Wochenende in Frankreich</span></a></li><li><a href="https://www.deutschlandfunk.de/spd-will-pflegereform-im-bundestag-nachbessern-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Berlin - SPD will Pflegereform im Bundestag nachbessern</span></a></li><li><a href="https://www.deutschlandfunk.de/spd-abgeordnete-wegge-fuer-auswertung-gehackter-e-mails-der-afd-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Forderung nach Verbotsverfahren - SPD-Abgeordnete Wegge für Auswertung gehackter E-Mails der AfD</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 22.10.2026 um 12:19 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
