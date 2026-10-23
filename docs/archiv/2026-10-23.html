@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 23.10.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Friday, 23. October 2026 &middot; 12:13 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">347 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Nach Angriff in Hebron: Israel bereitet Abriegelung des Westjordanlands vor</h3>
+          <div class="zaehler">
+            <b>8</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/ausland/asien/westjordanland-abriegelung-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Nach Angriff in Hebron: Israel bereitet Abriegelung des Westjordanlands vor</span></a></li><li><a href="https://www.deutschlandfunk.de/israel-bereitet-vollstaendige-abriegelung-des-westjordanlands-vor-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nahost - Israel bereitet vollständige Abriegelung des Westjordanlands vor</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/israel-netanjahu-abriegelung-westjordanland-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Israel will &quot;vollständige Abriegelung&quot; von Westjordanland</span></a></li><li><a href="https://www.welt.de/politik/ausland/video6adb1af7ea9d017b539af6f5/strassensperren-errichtet-israel-bereitet-nach-anschlag-vollstaendige-abriegelung-des-westjordanlands-vor.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Israel bereitet nach Anschlag „vollständige Abriegelung“ des Westjordanlands vor</span></a></li><li><a href="https://taz.de/Israel-bereitet-nach-Angriff-vollstaendige-Abriegelung-von-Westjordanland-vor/!6224010/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Westjordanland: Israel bereitet „vollständige Abriegelung“ vor</span></a></li><li><a href="https://www.sueddeutsche.de/politik/westjordanland-abriegelung-israel-netanjahu-angriff-li.3567934" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Nahost: Israel bereitet Abriegelung des Westjordanlands vor</span></a></li><li><a href="https://www.spiegel.de/ausland/westjordanland-israel-meldet-mehrere-verletzte-israelis-bei-schussangriff-a-2e600801-3b67-4030-8a35-5b254ecd1743#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Israel bereitet nach Angriff »vollständige Abriegelung« des Westjordanlands vor</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/liveblog-nahost-israel-will-westjordanland-abriegeln-faz-200583539.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Nahost: Israel will Westjordanland abriegeln</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Satelliten-Dienst - US-Präsident Trump: Musk hat Starlink-Zugang für Ukraine wiederhergestellt</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:62%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/us-praesident-trump-musk-hat-starlink-zugang-fuer-ukraine-wiederhergestellt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Satelliten-Dienst - US-Präsident Trump: Musk hat Starlink-Zugang für Ukraine wiederhergestellt</span></a></li><li><a href="https://taz.de/1702-Tage-Krieg-in-der-Ukraine/!6220337/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">1.703 Tage Krieg in der Ukraine: Drohnensurren in der Stille der Natur</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/trump-musk-starlink-drosselung-ukraine-krieg-russland-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Trump: Musk hat Starlink-Drosselung aufgehoben</span></a></li><li><a href="https://www.tagesschau.de/video/video-1671044.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Starlink-Zugang für Ukraine vollständig wiederhergestellt</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/musk-trump-starlink-ukraine-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Trump soll Musk gebeten haben, Drosselung aufzuheben</span></a></li><li><a href="https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-trump-musk-starlink-li.3563283" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Krieg in der Ukraine: Trump: Musk hat Starlink-Zugang für Ukraine wiederhergestellt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Nach Steuerschätzung - Forderungen nach Senkung der Stromsteuer für alle</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/forderungen-nach-senkung-der-stromsteuer-fuer-alle-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Steuerschätzung - Forderungen nach Senkung der Stromsteuer für alle</span></a></li><li><a href="https://taz.de/Konferenz-der-Landesverkehrsminister/!6223689/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Konferenz der Landesverkehrsminister: Länder fordern vom Bund mehr Geld für den Nahverkehr</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/steuerschaetzung-bund-klingbeil-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Steuerschätzung 2027: Mehr Geld, aber &quot;keine neuen Spielräume&quot;</span></a></li><li><a href="https://taz.de/Steuerschaetzung-fuer-2027/!6223940/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Steuerschätzung für 2027: Klingbeil will von Senkung der Stromsteuer nichts wissen</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/stromsteuer-senkung-laender-mpk-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Stromsteuer: Länder fordern Senkung für alle</span></a></li><li><a href="https://www.zdfheute.de/politik/steuer-steuern-steuerschaetzung-bund-kommunnen-einnahmen-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Mehr Steuereinnahmen für Bund, Länder und Kommunen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>New York verbietet Pferdekutschen im Central Park</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/video/panorama-centralpark-kutschenverbot-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">New York verbietet Pferdekutschen im Central Park</span></a></li><li><a href="https://www.deutschlandfunk.de/kutschfahrten-im-new-yorker-central-park-vor-dem-aus-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">New York - Kutschfahrten im New Yorker Central Park vor dem Aus</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/new-york-pferdekutschen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Pferdekutschen im New Yorker Central Park sollen abgeschafft werden</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/trends-nischen/pferdekutschen-im-central-park-new-york-beschliesst-das-ende-accg-201614111.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">New York: Aus für Pferdekutschen im Central Park</span></a></li><li><a href="https://www.faz.net/video/new-york-ringt-um-tradition-und-tierwohl-201612923.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Kutschen vor dem Aus: New York ringt um Tradition und Tierwohl</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>China - Erdbeben der Stärke 7,0 in Tibet - zahlreiche Tote und Verletzte</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/erdbeben-der-staerke-7-0-in-tibet-zahlreiche-tote-und-verletzte-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">China - Erdbeben der Stärke 7,0 in Tibet - zahlreiche Tote und Verletzte</span></a></li><li><a href="https://www.zdfheute.de/video/panorama-erdbeben-tibet-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Erdbeben in Tibet: Mindestens 16 Tote</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/tibet-erdbeben-104.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Tote und Verletzte: Erdbeben erschüttert Norden Tibets</span></a></li><li><a href="https://www.zdfheute.de/panorama/erdbeben-tibet-tote-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Starkes Erdbeben in Tibet - mindestens 16 Tote</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/erdbeben-der-staerke-7-0-in-tibet-mindestens-16-tote-201613646.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Region Tibet: Tote und Verletzte bei schwerem Erdbeben in China</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Tobias Rausch: AfD-Politiker Rausch erwägt Rückzug als Generalsekretär</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/politik/deutschland/2026-10/tobias-rausch-afd-sachsen-anhalt-landtagspraesident-generalsekretaer-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Tobias Rausch: AfD-Politiker Rausch erwägt Rückzug als Generalsekretär</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6adb0b09ea9d017b539af5b8/sachsen-anhalt-tobias-rausch-erwaegt-abgabe-seines-postens-als-afd-generalsekretaer.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Tobias Rausch erwägt Abgabe seines Postens als AfD-Generalsekretär</span></a></li><li><a href="https://www.mdr.de/nachrichten/sachsen-anhalt/landtagswahl/landtagspraesident-generalsekretaer,rausch-aemter-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">AfD-Generalsekretär und Landtagspräsident: Tobias Rausch sieht eigene Ämterhäufing kritisch</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Erste Proteste seit fast zwei Jahren - Venezuela: Tausende Menschen fordern freie Wahlen</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/venezuela-tausende-menschen-fordern-freie-wahlen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Erste Proteste seit fast zwei Jahren - Venezuela: Tausende Menschen fordern freie Wahlen</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/venezuela-demonstrationen-machado-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Venezuela: Tausende fordern Rückkehr von Machado</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/venezuela-proteste-freie-wahlen-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Proteste in Venezuela: Tausende fordern freie Wahlen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Studie - Mehr als 50.000 Hitzetote in ganz Europa</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/mehr-als-50-000-hitzetote-in-ganz-europa-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Studie - Mehr als 50.000 Hitzetote in ganz Europa</span></a></li><li><a href="https://taz.de/Oel-Kohle-Gas-und-ihre-Folgen/!6223996/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Öl, Kohle, Gas und ihre Folgen: An der Hitze in Europa starben im Sommer 50.000 Menschen</span></a></li><li><a href="https://www.tagesschau.de/wissen/klima/hitzetote-sommer-studie-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Etwa 50.000 Hitzetote im Sommer 2026 in Europa</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Kultur - &quot;Top Gun&quot;-Darsteller Tom Skerritt mit 93 Jahren gestorben</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/top-gun-darsteller-tom-skerritt-mit-93-jahren-gestorben-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Kultur - &quot;Top Gun&quot;-Darsteller Tom Skerritt mit 93 Jahren gestorben</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/tom-skerritt-gestorben-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">&quot;Top Gun&quot;-Darsteller Skerritt stirbt mit 93</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/medien-und-film/kino/bekannt-aus-top-gun-schauspieler-tom-skerritt-gestorben-accg-201613749.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Bekannt aus „Top Gun“: US-Schauspieler Tom Skerritt gestorben</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Conference League: Paris Brunner glänzt per Traumtor gegen SC Freiburg</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/sport/fussball/conference-league-paris-brunner-glaenzt-per-traumtor-gegen-freiburg-a-702ac5cd-9d4d-466b-a5e0-b3314f676a99#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Conference League: Paris Brunner glänzt per Traumtor gegen SC Freiburg</span></a></li><li><a href="https://www.sportschau.de/regional/swr/swr-brunner-knackt-den-sc-freiburg-verliert-bei-der-as-monaco-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Nach Brunners Traumtor: Freiburg verliert in Monaco</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-conference-league-as-monaco-sc-freiburg-tore-ergebnis-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Freiburg vergeigt Bayern-Generalprobe gegen Monaco</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Vor Parlamentswahl - Serbien: Zehntausende Anhänger der Opposition demonstrieren in Belgrad</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/serbien-zehntausende-anhaenger-der-opposition-demonstrieren-in-belgrad-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Vor Parlamentswahl - Serbien: Zehntausende Anhänger der Opposition demonstrieren in Belgrad</span></a></li><li><a href="https://www.zdfheute.de/video/zdfheute-xpress/serbien-proteste-vucic-wahl-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Belgrad: Zehntausende demonstrieren vor Wahl</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/serbien-protest-studenten-parlamentswahl-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Zehntausende demonstrieren gegen Vucic-Regierung</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Bundesregierung startet Strategie zur Sicherung der Raffinerien</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/wirtschaft/video6adb2584ea9d017b539af832/rohstoffe-bundesregierung-startet-strategie-zur-sicherung-der-raffinerien.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Bundesregierung startet Strategie zur Sicherung der Raffinerien</span></a></li><li><a href="https://www.deutschlandfunk.de/bundesregierung-startet-strategie-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Sicherung der Raffinerien - Bundesregierung startet Strategie</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Nordkorea verlegt fast eine Million Minen an Grenze zu Südkorea</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/videos/video6adb29acd8be1e987154e35a/abkehr-von-wiedervereinigung-nordkorea-verlegt-fast-eine-million-minen-an-grenze-zu-suedkorea.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Nordkorea verlegt fast eine Million Minen an Grenze zu Südkorea</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/nordkorea-verlegt-fast-eine-million-minen-an-der-grenze-zu-suedkorea-accg-201614131.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Seit 2024: Nordkorea verlegt fast eine Million Minen an der Grenze zu Südkorea</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>NDR-Recherche - Zahl der Extremisten mit Waffenerlaubnis steigt</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/zahl-der-extremisten-mit-waffenerlaubnis-steigt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">NDR-Recherche - Zahl der Extremisten mit Waffenerlaubnis steigt</span></a></li><li><a href="https://www.tagesschau.de/investigativ/ndr/waffen-extremisten-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Trotz Gesetzesverschärfung - Mehr Extremisten mit Waffenerlaubnis</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>München - CSU-Generalsekretär Huber plädiert für &quot;Extremismusklausel&quot;</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/csu-generalsekretaer-huber-plaediert-fuer-extremismusklausel-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">München - CSU-Generalsekretär Huber plädiert für &quot;Extremismusklausel&quot;</span></a></li><li><a href="https://www.welt.de/videos/video6adb2724400ffbb8e251b45b/laenderfinanzausgleich-csu-generalsekretaer-verteidigt-extremismusklausel.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">CSU-Generalsekretär verteidigt „Extremismusklausel“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>„Totale Schande“? Mit einem Satz kontert LeBron James die Trump-Schelte</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/sport/basketball/article6adb050c773b23ff64a39f40/donald-trump-totale-schande-mit-einem-satz-kontert-lebron-james-die-schelte.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Totale Schande“? Mit einem Satz kontert LeBron James die Trump-Schelte</span></a></li><li><a href="https://www.faz.net/aktuell/sport/mehr-sport/donald-trump-nennt-nba-star-lebron-james-totale-schande-accg-201614330.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Ärger wegen Hymne: Trump nennt LeBron James „totale Schande“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Autoindustrie: IG Metall droht VW mit größtem Konflikt in Geschichte des Konzerns</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/wirtschaft/vw-ig-metall-kuendigung-streik-heute-li.3566968" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Autoindustrie: IG Metall droht VW mit größtem Konflikt in Geschichte des Konzerns</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/unternehmen/vw-sparplaene-gespraeche-betriebsrat-ig-metall-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Worüber VW und IG Metall beim Krisengipfel sprechen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Was wusste Weidel über illegale Spenden?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/deutschland/weidel-afd-spenden-affaere-leaks-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Was wusste Weidel über illegale Spenden?</span></a></li><li><a href="https://www.tagesschau.de/investigativ/ndr-wdr/afd-leak-weidel-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Illegale Spenden aus der Schweiz - Hat Weidel nicht die ganze Wahrheit gesagt?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Abwahl unwahrscheinlicher: Asien unterstützt Infantino</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/sport/fussball-fifa-infantion-unterstuetzung-asiatischer-fussballverband-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Abwahl unwahrscheinlicher: Asien unterstützt Infantino</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/fifa-machtkampf-gianni-infantino-erhaelt-unterstuetzung-aus-asien-accg-201614117.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">FIFA-Machtkampf: Infantino erhält Unterstützung aus Asien</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Christa Pike: Mitarbeiter sollen schon vor Hinrichtung vor gerissener Vene gewarnt haben</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/christa-pike-neue-details-zur-gescheiterten-hinrichtung-in-tennessee-accg-201614122.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Christa Pike: Mitarbeiter sollen schon vor Hinrichtung vor gerissener Vene gewarnt haben</span></a></li><li><a href="https://taz.de/Gescheiterte-Exekution-von-Christa-Pike/!6223992/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Gescheiterte Exekution von Christa Pike: Gerissene Vene schon bei Injektion befürchtet</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>TV-Kritik „maybrit illner“: Illner lässt Scaramuccis schwersten Vorwurf stehen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/feuilleton/medien-und-film/talkshow/maybrit-illner-zu-trump-scaramuccis-vorwuerfe-bleiben-offen-accg-201613839.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">TV-Kritik „maybrit illner“: Illner lässt Scaramuccis schwersten Vorwurf stehen</span></a></li><li><a href="https://www.sueddeutsche.de/medien/maybrit-illner-usa-donald-trump-anthony-scaramucci-michael-mittermeier-armin-laschet-li.3567625" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Anthony Scaramucci bei „Maybrit Illner“: Trump? „Sie lassen ihn all das machen, was er machen möchte“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>Hofmann nutzt seine Chance - Bayer Leverkusen gewinnt gegen OFI Kreta</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sportschau.de/regional/wdr/wdr-hofmann-schiesst-leverkusen-zum-sieg-auf-kreta-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Hofmann nutzt seine Chance - Bayer Leverkusen gewinnt gegen OFI Kreta</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-europa-league-ofi-kreta-bayer-leverkusen-tore-ergebnis-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Doppelter Hofmann führt Leverkusen zum Sieg auf Kreta</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">23</span>
+          <h3>Sacharow-Preis für Strafgerichtshof: Die Vision einer Welt des Rechts</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Sacharow-Preis-fuer-Den-Haag/!6223825/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Sacharow-Preis für Strafgerichtshof: Die Vision einer Welt des Rechts</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/sacharow-preis-internationaler-strafgerichtshof-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Internationaler Strafgerichtshof erhält Sacharow-Preis</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">24</span>
+          <h3>Ministerpräsidentenwahl Sachsen-Anhalt: CDU-Abgeordneter Heuer will sitzen bleiben</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Ministerpraesidentenwahl-Sachsen-Anhalt/!6223720/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Ministerpräsidentenwahl Sachsen-Anhalt: CDU-Abgeordneter Heuer will sitzen bleiben</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/sachsen-anhalt-siegmund-ministerpraesidentenwahl-heuer-cdu-afd-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">CDU-Abgeordneter Heuer will Saal nicht verlassen</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/wirtschaft/finanzen/frankreich-anleiherenditen-schuldenkrise-eurokrise-ezb-100.html" target="_blank" rel="noopener">Frankreichs Schuldenkrise: Droht eine neue Eurokrise?</a></li><li><a href="https://www.tagesschau.de/video/video-1671044.html" target="_blank" rel="noopener">Starlink-Zugang für Ukraine vollständig wiederhergestellt</a></li><li><a href="https://www.tagesschau.de/tagesschau_20_uhr/video-1670940.html" target="_blank" rel="noopener">Lockerungen beim Verbrenner-Aus: Um was es geht</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/deutschland/weidel-afd-spenden-affaere-leaks-100.html" target="_blank" rel="noopener">Was wusste Weidel über illegale Spenden?</a></li><li><a href="https://www.zdfheute.de/politik/deutschland/afd-leaks-hakenkreuz-partei-ausschluss-100.html" target="_blank" rel="noopener">AfD-Leaks: Streit, Beschimpfungen und eine Hakenkreuzfahne</a></li><li><a href="https://www.zdfheute.de/politik/ausland/afd-alice-weidel-europa-eu-plaene-100.html" target="_blank" rel="noopener">Wie Alice Weidel die EU entmachten will</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/israel-bereitet-vollstaendige-abriegelung-des-westjordanlands-vor-100.html" target="_blank" rel="noopener">Nahost - Israel bereitet vollständige Abriegelung des Westjordanlands vor</a></li><li><a href="https://www.deutschlandfunk.de/csu-generalsekretaer-huber-plaediert-fuer-extremismusklausel-102.html" target="_blank" rel="noopener">München - CSU-Generalsekretär Huber plädiert für &quot;Extremismusklausel&quot;</a></li><li><a href="https://www.deutschlandfunk.de/forderungen-nach-senkung-der-stromsteuer-fuer-alle-100.html" target="_blank" rel="noopener">Nach Steuerschätzung - Forderungen nach Senkung der Stromsteuer für alle</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/politik/deutschland/datenleck-bei-der-afd-mails-belasten-alice-weidel-a-0e0e04c3-0f46-4f0d-afb1-fb7530b212a4#ref=rss" target="_blank" rel="noopener">Datenleck bei der AfD: Mails belasten Alice Weidel</a></li><li><a href="https://www.spiegel.de/ausland/midterms-in-den-usa-fake-umfragen-veroeffentlicht-meinungsforschungsinstitut-fliegt-auf-a-9063a2bf-0705-46b9-b3d8-7e74f0820b81#ref=rss" target="_blank" rel="noopener">Midterms in den USA: Fake-Umfragen veröffentlicht – Meinungsforschungsinstitut fliegt auf</a></li><li><a href="https://www.spiegel.de/ausland/westjordanland-israel-meldet-mehrere-verletzte-israelis-bei-schussangriff-a-2e600801-3b67-4030-8a35-5b254ecd1743#ref=rss" target="_blank" rel="noopener">Israel bereitet nach Angriff »vollständige Abriegelung« des Westjordanlands vor</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-10/23/wunderkind-im-wartestand-fc-bayern-hat-geduld-mit-karl" target="_blank" rel="noopener">Fußball-Bundesliga: Wunderkind im Wartestand - FC Bayern hat «Geduld» mit Karl</a></li><li><a href="https://www.zeit.de/politik/deutschland/2026-10/afd-leak-email-hackerangriff-waehlerdaten-privat" target="_blank" rel="noopener">AfD-Leak: Passwort: blau</a></li><li><a href="https://www.zeit.de/politik/deutschland/2026-10/tobias-rausch-afd-sachsen-anhalt-landtagspraesident-generalsekretaer-gxe" target="_blank" rel="noopener">Tobias Rausch: AfD-Politiker Rausch erwägt Rückzug als Generalsekretär</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/bayern/ingolstadt-femizid-mord-prozess-mutter-urteil-li.3567953" target="_blank" rel="noopener">Ingolstadt: Lebenslange Haft für Mord an Ex-Frau auf offener Straße</a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/vw-ig-metall-kuendigung-streik-heute-li.3566968" target="_blank" rel="noopener">Autoindustrie: IG Metall droht VW mit größtem Konflikt in Geschichte des Konzerns</a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/abfindung-bmw-mercedes-stellenabbau-arbeitsrecht-li.3566634" target="_blank" rel="noopener">Stellenabbau bei Autohersteller: Abfindungsangebot bekommen? Was Sie jetzt wissen sollten</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/feuilleton/debatten/gewalt-in-frankreich-alle-sprachen-nur-noch-von-umbringen-201609918.html" target="_blank" rel="noopener">Unruhen in Frankreich: „Alle sprachen nur noch von Umbringen“</a></li><li><a href="https://www.faz.net/aktuell/feuilleton/debatten/randale-ueberschatten-proteste-in-frankreich-accg-201610656.html" target="_blank" rel="noopener">Unruhen in Frankreich: Das sind die eigentlichen Ursachen der Schülerproteste</a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/frankreich-ladenbesitzerin-paris-bereiten-sich-auf-moegliche-pluenderungen-vor-accg-201611630.html" target="_blank" rel="noopener">Baseballschläger und Barrikaden: Frankreichs Ladenbesitzer rüsten sich gegen Randalierer</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/wirtschaft/video6adb2584ea9d017b539af832/rohstoffe-bundesregierung-startet-strategie-zur-sicherung-der-raffinerien.html" target="_blank" rel="noopener">Bundesregierung startet Strategie zur Sicherung der Raffinerien</a></li><li><a href="https://www.welt.de/vermischtes/kriminalitaet/article6adb24ef9fbb7e8e310dd09b/mord-in-marburg-nach-toedlichem-treffen-flieht-verdaechtiger-nach-polen.html" target="_blank" rel="noopener">Frau mit 19 Messerstichen getötet – Verdächtiger in Polen festgenommen</a></li><li><a href="https://www.welt.de/vermischtes/video6adb11d0ae90f8cf4e4baf90/herbststurm-grosses-sturmtief-kommt-vom-aermelkanal.html" target="_blank" rel="noopener">„Großes Sturmtief kommt vom Ärmelkanal“</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Konflikt-zwischen-Frauenaerztinnen/!6223957/" target="_blank" rel="noopener">Konflikt zwischen Frau­en­ärz­t:in­nen: Abtreibungsgegner an der Spitze der Gynäkologie</a></li><li><a href="https://taz.de/Zunehmende-Zensur-auf-Meta-Plattformen-Wer-schreibt-die-Regeln-des-digitalen-Raums/!6220962/" target="_blank" rel="noopener">Zensur auf Meta-Plattformen: Der mühsame Kampf gegen willkürliche Sperrungen</a></li><li><a href="https://taz.de/PHP-Luecke-Viele-Webseiten-sind-wieder-erreichbar/!6224040/" target="_blank" rel="noopener">PHP-Lücke in Deutschland: Viele deutsche Webseiten sind wieder erreichbar</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.zeit.de/news/2026-10/23/wunderkind-im-wartestand-fc-bayern-hat-geduld-mit-karl" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Fußball-Bundesliga: Wunderkind im Wartestand - FC Bayern hat «Geduld» mit Karl</span></a></li><li><a href="https://www.zeit.de/politik/deutschland/2026-10/afd-leak-email-hackerangriff-waehlerdaten-privat" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">AfD-Leak: Passwort: blau</span></a></li><li><a href="https://www.zeit.de/digital/2026-10/social-media-verbot-griechenland-unter-15-nea-dimokratia-kyriakos-mitsotakis-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Griechenland: Griechisches Parlament will Social-Media-Verbot für Unter-15-Jährige</span></a></li><li><a href="https://www.zeit.de/news/2026-10/23/schuesse-aus-auto-in-frankreich-ein-toter-verletzte" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Notfälle: Schüsse aus Auto in Frankreich - ein Toter, Verletzte</span></a></li><li><a href="https://www.zeit.de/news/2026-10/23/mutmasslicher-russland-spion-in-u-haft" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Nach Festnahme in Brandenburg: Mutmaßlicher Russland-Spion in U-Haft</span></a></li><li><a href="https://www.zeit.de/politik/ausland/2026-10/russland-diesel-lieferung-usa-donald-trump-wladimir-putin-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Diesel-Deal von USA und Russland: Erster russischer Diesel-Tanker offenbar auf dem Weg in die USA</span></a></li><li><a href="https://www.zeit.de/news/2026-10/23/getunte-e-scooter-schneller-als-die-polizei-erlaubt" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Tuning: Getunte E-Scooter: Schneller als die Polizei erlaubt</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-putin-nennt-ostukraine-historisch-russisches-land-faz-110683325.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Ukrainekrieg: Hunderttausende Ukrainer ohne Strom</span></a></li><li><a href="https://www.zeit.de/news/2026-10/23/herbst-steuerschaetzung-auch-mv-darf-mit-mehr-geld-rechnen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Steuern: Herbst-Steuerschätzung: Auch MV darf mit mehr Geld rechnen</span></a></li><li><a href="https://www.zeit.de/news/2026-10/23/a40-bei-dortmund-bleibt-bis-montag-gesperrt" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Umleitung ausgeschildert: A40 bei Dortmund bleibt bis Montag gesperrt</span></a></li><li><a href="https://www.welt.de/vermischtes/kriminalitaet/article6adb24ef9fbb7e8e310dd09b/mord-in-marburg-nach-toedlichem-treffen-flieht-verdaechtiger-nach-polen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Frau mit 19 Messerstichen getötet – Verdächtiger in Polen festgenommen</span></a></li><li><a href="https://www.welt.de/vermischtes/video6adb11d0ae90f8cf4e4baf90/herbststurm-grosses-sturmtief-kommt-vom-aermelkanal.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Großes Sturmtief kommt vom Ärmelkanal“</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/business-liveticker-verdi-ruft-zu-bundesweiten-warnstreiks-bei-privaten-banken-auf-faz-200452404.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Business-Ticker: Verdi ruft zu bundesweiten Warnstreiks bei privaten Banken auf</span></a></li><li><a href="https://www.faz.net/aktuell/rhein-main/region-und-hessen/italienisch-mit-kreativem-anspruch-restaurant-1811-in-hofheim-accg-201529615.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Restaurant „1811“: Vom Brasato di Manz bis zum gerösteten Pulpo</span></a></li><li><a href="https://www.spiegel.de/kultur/musik/french-pop-saengerin-angele-hymnen-fuer-den-aktuellen-aufstand-a-ea9e690c-5d02-4857-ad69-f832651c03b5#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">French-Pop-Sängerin Angèle: Hymnen für den aktuellen Aufstand</span></a></li><li><a href="https://www.zeit.de/news/2026-10/23/maedchen-fuer-lottoschein-verletzt-polizei-sucht-mann" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Mehrere Hinweise: Mädchen für Lottoschein verletzt? Polizei sucht Mann</span></a></li><li><a href="https://www.zeit.de/news/2026-10/23/anklage-gegen-17-jaehrigen-teenager-online-missbraucht" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Kriminalität: Anklage gegen 17-Jährigen: Teenager online missbraucht</span></a></li><li><a href="https://www.welt.de/vermischtes/kriminalitaet/article6adb2701400ffbb8e251b44f/dresden-18-jaehriger-soll-steine-von-bruecke-geworfen-haben-ermittlungen-wegen-versuchten-mordes.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">18-Jähriger soll Steine von Brücke geworfen haben – Ermittlungen wegen versuchten Mordes</span></a></li><li><a href="https://www.zeit.de/feuilleton/kunst/2026-10/claude-monet-gemaelde-iris-versteigerung-rekordpreis-paris-sothebys-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Auktionshaus Sotheby&#x27;s: Gemälde von Claude Monet erzielt bei Auktion Rekordpreis</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/celonis-dieses-einhorn-will-jetzt-palantir-konkurrenz-machen-accg-201607485.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Celonis: Dieses deutsche Tech-Unternehmen will Palantir Konkurrenz machen</span></a></li><li><a href="https://taz.de/Romane-ueber-Sex-Drogen-und-Entfremdung/!6224053/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Romane über Sex, Drogen und Entfremdung: Japanischer Schriftsteller Ryu Murakami gestorben</span></a></li><li><a href="https://www.zdfheute.de/panorama/wetter-herbst-sturm-wochenende-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Sturmböen und viel Regen: So ungemütlich wird&#x27;s bei Ihnen</span></a></li><li><a href="https://www.welt.de/sport/handball/video6adb171a773b23ff64a3a0b4/handball-bundesliga-hbl-live-auf-welt-rhein-neckar-loewen-gegen-den-sc-magdeburg.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">HBL LIVE AUF WELT - Rhein-Neckar Löwen gegen den SC Magdeburg</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 23.10.2026 um 12:13 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
