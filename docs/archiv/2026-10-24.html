@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 24.10.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Saturday, 24. October 2026 &middot; 11:37 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">331 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Ukraine - Moskau und Kiew bestätigen Einigung auf Waffenruhe in Oleschky</h3>
+          <div class="zaehler">
+            <b>7</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/moskau-und-kiew-bestaetigen-einigung-auf-waffenruhe-in-oleschky-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine - Moskau und Kiew bestätigen Einigung auf Waffenruhe in Oleschky</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://taz.de/-Nachrichten-im-Ukraine-Krieg-/!6224698/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">+++ Nachrichten im Ukraine-Krieg +++: Moskau und Kiew stimmen Waffenruhe in Oleschky zu</span></a></li><li><a href="https://www.welt.de/politik/ausland/video6adc4f179fbb7e8e310de024/ukraine-krieg-melania-trump-war-involviert-waffenruhe-um-frontstadt-oleschky-beschlossen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Melania Trump war involviert“ – Waffenruhe um Frontstadt Oleschky beschlossen</span></a></li><li><a href="https://www.tagesschau.de/tagesthemen/video-1671660.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Melania Trump soll lokale Waffenruhe für ukrainische Stadt Oleschky ausgehandelt haben</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/waffenruhe-oleschky-melania-trump-ukraine-krieg-russland-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Weißes Haus: Melania Trump hat Waffenruhe vermittelt</span></a></li><li><a href="https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-feuerpause-oleschky-melania-trump-papst-leo-li.3563283" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Krieg in der Ukraine: Kiew und Moskau stimmen Feuerpause für Oleschky zu – USA: Melania Trump hat vermittelt</span></a></li><li><a href="https://www.tagesschau.de/ausland/melania-trump-waffenruhe-oleschky-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Vermittelt durch Melania Trump - Waffenruhe für besetzte ukrainische Stadt</span></a></li><li><a href="https://www.faz.net/aktuell/ukrainische-bahn-im-krieg-russlands-angriff-auf-die-lebensader-der-ukraine-201614555.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Ukrainische Bahn im Krieg: Russlands Angriff auf die Lebensader der Ukraine</span></a></li><li><a href="https://taz.de/1702-Tage-Krieg-in-der-Ukraine/!6220337/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">1.703 Tage Krieg in der Ukraine: Drohnensurren in der Stille der Natur</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Bayern - Kehlsteinhaus am Obersalzberg durch Brand weitgehend zerstört</h3>
+          <div class="zaehler">
+            <b>7</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/kehlsteinhaus-am-obersalzberg-durch-brand-weitgehend-zerstoert-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bayern - Kehlsteinhaus am Obersalzberg durch Brand weitgehend zerstört</span></a></li><li><a href="https://taz.de/Verdacht-auf-Brandstiftung/!6224703/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Verdacht auf Brandstiftung: Hitlers „Teehaus“ am Obersalzberg niedergebrannt</span></a></li><li><a href="https://www.sueddeutsche.de/bayern/bayern-obersalzberg-kehlsteinhaus-brand-historie-bedeutung-li.3568362" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Brand auf dem Obersalzberg: Grandioser Ausblick, düstere Historie: Warum das Kehlsteinhaus so bekannt ist</span></a></li><li><a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-10/kehlsteinhaus-brand-obersalzberg-berchtesgaden-ns-zeit" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Kehlsteinhaus: Hitlers »Teehaus« am Obersalzberg durch Feuer weitgehend zerstört</span></a></li><li><a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-10/kehlsteinhaus-brand-obersalzberg-berchtesgaden-ns-zeit" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Kehlsteinhaus: Hitlers »Teehaus« am Obersalzberg durch Feuer weitgehend zerstört</span></a></li><li><a href="https://www.zeit.de/news/2026-10/23/brand-in-berggasthof-kehlsteinhaus-in-berchtesgaden" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Brand bei Berchtesgaden: Hitlers «Teehaus» am Obersalzberg niedergebrannt</span></a></li><li><a href="https://www.tagesschau.de/video/video-1671712.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Kehlsteinhaus in Bayern in Flammen</span></a></li><li><a href="https://www.welt.de/vermischtes/video6adc3c509fbb7e8e310ddf42/berchtesgaden-hitlers-teehaus-in-flammen-feuerwehr-im-grosseinsatz.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Hitlers Teehaus“ in Flammen – Feuerwehr im Großeinsatz</span></a></li><li><a href="https://www.sueddeutsche.de/bayern/kehlsteinhaus-obersalzberg-brand-teehaus-festnahme-li.3568281" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Verdacht auf Brandstiftung am Kehlsteinhaus: Hitlers „Teehaus“ am Obersalzberg niedergebrannt</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/kehlsteinhaus-am-obersalzberg-in-flammen-aufgegangen-accg-201617285.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Verdacht auf Brandstiftung: Kehlsteinhaus am Obersalzberg in Flammen aufgegangen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Proteste - Frankreich: 70.000 Polizisten sichern Demonstrationen - Sorge vor Ausschreitungen</h3>
+          <div class="zaehler">
+            <b>7</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/frankreich-70-000-polizisten-sichern-demonstrationen-sorge-vor-ausschreitungen-118.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Proteste - Frankreich: 70.000 Polizisten sichern Demonstrationen - Sorge vor Ausschreitungen</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/frankreich-demonstrationen-polizei-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Frankreich bereitet sich auf Demos und Krawalle vor</span></a></li><li><a href="https://taz.de/Anspannung-in-Frankreich-vor-landesweiten-Demonstrationen/!6224699/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Protesttag in Frankreich: Anspannung vor landesweiten Demonstrationen</span></a></li><li><a href="https://taz.de/Proteste-und-Gewalt/!6219055/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Proteste und Gewalt: Linker Selbstmord</span></a></li><li><a href="https://www.welt.de/politik/ausland/video6adc3be49fbb7e8e310ddf38/70-000-polizisten-im-einsatz-aufrufe-radikaler-linker-bewegungen-frankreich-ruestet-sich-fuer-neue-proteste.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Aufrufe radikaler linker Bewegungen“ – Frankreich rüstet sich für neue Proteste</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/vor-neuem-protesttag-liegen-in-frankreich-die-nerven-blank-accg-201617334.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Nach Ausschreitungen: Vor neuem Protesttag liegen in Frankreich die Nerven blank</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/frankreich-vorbereitung-ausschreittungen-paris-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Frankreich rüstet sich für nächsten Protesttag</span></a></li><li><a href="https://www.sueddeutsche.de/politik/frankreich-proteste-krawalle-pluenderungen-kundgebungen-li.3568230" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Proteste: Frankreich fürchtet neue Krawalle bei landesweiten Demos</span></a></li><li><a href="https://taz.de/Proteste-in-Frankreich/!6219118/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Proteste in Frankreich: Jugend ohne Jugend</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>CSU-Parteitag - Söder: &quot;Es geht jetzt um die Existenz der Volksparteien&quot;</h3>
+          <div class="zaehler">
+            <b>7</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/soeder-es-geht-jetzt-um-die-existenz-der-volksparteien-114.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">CSU-Parteitag - Söder: &quot;Es geht jetzt um die Existenz der Volksparteien&quot;</span></a></li><li><a href="https://taz.de/CSU-Parteitag-in-Muenchen/!6224692/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">CSU-Parteitag in München: Alle für Ilse</span></a></li><li><a href="https://www.welt.de/politik/deutschland/video6adc3d199fbb7e8e310ddf5a/csu-parteitag-soeder-fordert-extremismusklausel-beim-laenderfinanzausgleich.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Söder fordert „Extremismusklausel“ beim Länderfinanzausgleich</span></a></li><li><a href="https://www.spiegel.de/politik/deutschland/markus-soeder-wie-das-aigner-dilemma-seine-kanzlertraeume-gefaehrden-koennte-a-13dc7479-31aa-4131-a449-28c22a4aef6d#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Markus Söder: Wie das Aigner-Dilemma seine Kanzlerträume gefährden könnte</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/csu-soeder-parteitag-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">CSU-Parteitag: Söder fordert Kampf gegen AfD und Linke</span></a></li><li><a href="https://www.sueddeutsche.de/bayern/csu-parteitag-soeder-aigner-merz-brandmauer-li.3564629" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">CSU-Parteitag in München: Söder lässt den Saal für Ilse Aigner jubeln</span></a></li><li><a href="https://www.phoenix.de/csu-parteitag-a-5241864.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Rede Markus Söder auf dem CSU-Parteitag</span></a></li><li><a href="https://taz.de/Laenderfinanzausgleich/!6224104/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Länderfinanzausgleich: Finanzministerium sieht „Extremismusklausel“ kritisch</span></a></li><li><a href="https://taz.de/CSU-will-weniger-Geld-zahlen/!6224000/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Vorstoß aus Bayern: CSU für „Extremismusklausel“ im Länderfinanzausgleich</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Nach tödlichem Angriff - Israelische Armee startet Großoffensive im Westjordanland</h3>
+          <div class="zaehler">
+            <b>7</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/israelische-armee-startet-grossoffensive-im-westjordanland-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach tödlichem Angriff - Israelische Armee startet Großoffensive im Westjordanland</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/israel-netanjahu-abriegelung-westjordanland-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Israel startet Militäreinsatz nach tödlichem Angriff</span></a></li><li><a href="https://www.welt.de/politik/ausland/video6adc3e1aea9d017b539b0632/nahost-israel-startet-im-westjordanland-anti-terror-operation.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Israel startet im Westjordanland Anti-Terror-Operation</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/liveblog-nahost-israel-startet-anti-terror-operation-im-westjordanland-faz-200583539.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Nahost: Israel startet „Anti-Terror-Operation“ im Westjordanland</span></a></li><li><a href="https://www.tagesschau.de/ausland/israel-westjordanland-militaeroperation-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Nach Anschlag auf Soldaten: Israel startet Operation im Westjordanland</span></a></li><li><a href="https://www.sueddeutsche.de/politik/liveblog-nahost-news-wahl-israel-us-botschaft-westjordanland-li.3560260" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Nahost: Israel startet im Westjordanland „Anti-Terror-Operation“</span></a></li><li><a href="https://taz.de/Nach-toedlicher-Attacke-an-Checkpoint/!6224066/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Nach tödlicher Attacke an Checkpoint: Israel riegelt Westjordanland ab</span></a></li><li><a href="https://www.sueddeutsche.de/politik/westjordanland-abriegelung-israel-netanjahu-angriff-grosseinsatz-li.3567934" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Nahost: Israel bereitet Abriegelung des Westjordanlands vor – Netanjahu kündigt Großeinsatz an</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Fußball - Bayern-Cheftrainer Kompany muss nach Zusammenbruch im Krankenhaus bleiben</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:86%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bayern-cheftrainer-kompany-muss-nach-zusammenbruch-im-krankenhaus-bleiben-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Fußball - Bayern-Cheftrainer Kompany muss nach Zusammenbruch im Krankenhaus bleiben</span></a></li><li><a href="https://www.zeit.de/sport/2026-10/vincent-kompany-fc-bayern-zusammenbruch-krankenhaus-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Bayern München: Bayern-Trainer Kompany muss vorerst im Krankenhaus bleiben</span></a></li><li><a href="https://www.sportschau.de/regional/br/br-nach-zusammenbruch-fcb-coach-kompany-in-klinik-gebracht-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bayerns Trainer Vincent Kompany mit Notarzt in Klinik gebracht</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/bundesliga/vincent-kompanys-zustand-stabil-fc-bayern-gibt-vorsichtige-entwarnung-accg-201617577.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Kompany in der Klinik: „Vinnie wird alle Zeit bekommen“</span></a></li><li><a href="https://www.spiegel.de/sport/fussball/bayern-trainer-vincent-kompany-soll-nach-zusammenbruch-mehrere-tage-in-klinik-bleiben-a-a0c188a1-37cd-4a85-9dd8-5b199ec74f68#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Bayern-Trainer: Vincent Kompany soll nach Zusammenbruch mehrere Tage in Klinik bleiben</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-bundesliga/bundesliga-kompany-notarzt-kollaps-klinik-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Bayern-Coach Kompany nach Kollaps in der Klinik</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Herbststurm &quot;Luise&quot; - Sturmtief sorgt für Zugausfälle und Verspätungen bei der Bahn, zwei Schwerverletzte auf Stadtfest</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:71%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/sturmtief-sorgt-fuer-zugausfaelle-und-verspaetungen-bei-der-bahn-zwei-schwerverletzte-auf-stadtfest-116.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Herbststurm &quot;Luise&quot; - Sturmtief sorgt für Zugausfälle und Verspätungen bei der Bahn, zwei Schwerverletzte auf Stadtfest</span></a></li><li><a href="https://www.zeit.de/news/2026-10/24/sturmtief-luise-entwurzelt-baeume-ast-trifft-radfahrerin" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Unwetterschäden: Sturmtief «Luise» entwurzelt Bäume - Ast trifft Radfahrerin</span></a></li><li><a href="https://www.zeit.de/news/2026-10/24/umgestuerzter-baum-mehrere-haeuser-zeitweise-ohne-strom" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Sturmtief «Luise»: Umgestürzter Baum - mehrere Häuser zeitweise ohne Strom</span></a></li><li><a href="https://www.tagesschau.de/inland/herbststurm-104.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Verletzte und Schäden nach &quot;Sturmtief&quot; Luise</span></a></li><li><a href="https://www.tagesschau.de/video/video-1671720.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Zahlreiche Schäden nach Herbststurm &quot;Luise&quot; über Deutschland</span></a></li><li><a href="https://www.zdfheute.de/panorama/herbststurm-verletzte-bahnverkehr-wetter-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Sturm &quot;Luise&quot; hinterlässt Schäden - &quot;Manja&quot; zieht heran</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/herbststurm-luise-erste-verspaetungen-und-ausfaelle-bei-der-bahn-201616632.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Sturmtief „Luise“: Erster Herbststurm des Jahres führt zu Verletzten und Verkehrschaos</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>„Ihn vor sich selbst schützen“ – Kompany fehlt dem FC Bayern wohl wochenlang</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/sport/fussball/video6adc73af9fbb7e8e310de28a/zusammenbruch-des-trainers-ihn-vor-sich-selbst-schuetzen-kompany-fehlt-dem-fc-bayern-wohl-wochenlang.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Ihn vor sich selbst schützen“ – Kompany fehlt dem FC Bayern wohl wochenlang</span></a></li><li><a href="https://www.welt.de/sport/fussball/bundesliga/fc-bayern-muenchen/article6adc64855c76daa7a0fe5616/fc-bayern-ihn-vor-sich-selbst-schuetzen-vincent-kompany-fehlt-dem-fc-bayern-wochenlang.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Ihn vor sich selbst schützen“ – Kompany fehlt dem FC Bayern wohl wochenlang</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-bundesliga-frauen/video/rb-leipzig-fc-bayern-muenchen-frauen-saison-2026-27-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Auch Leipzig kann den FC Bayern nicht stoppen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Sozialdemokratie - Juso-Chef Türmer gegen erneute Kandidatur Klingbeils für SPD-Vorsitz</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/juso-chef-tuermer-gegen-erneute-kandidatur-klingbeils-fuer-spd-vorsitz-108.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Sozialdemokratie - Juso-Chef Türmer gegen erneute Kandidatur Klingbeils für SPD-Vorsitz</span></a></li><li><a href="https://www.sueddeutsche.de/politik/bundesregierung-news-juso-chef-tuermer-fuer-neuen-spd-vorsitzenden-und-gegen-klingbeil-li.3529564" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Newsblog zur Bundespolitik: Juso-Chef für neuen SPD-Vorsitzenden und gegen Klingbeil</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Skandal um Kryptowährung - Verfahren gegen Argentiniens Präsidenten Milei eingestellt</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/verfahren-gegen-argentiniens-praesidenten-milei-eingestellt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Skandal um Kryptowährung - Verfahren gegen Argentiniens Präsidenten Milei eingestellt</span></a></li><li><a href="https://taz.de/Verfahren-gegen-Argentiniens-Praesidenten-Milei-wegen-Krypto-Betrugs-eingestellt/!6224701/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Crash von Krypto-Währung: Verfahren gegen Javier Milei eingestellt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Frankreich - Ein Toter und 5 Verletzte nahe Paris: Marcon geht von rassistisch motiviertem Terrorakt aus</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/ein-toter-und-5-verletzte-nahe-paris-marcon-geht-von-rassistisch-motiviertem-terrorakt-aus-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Frankreich - Ein Toter und 5 Verletzte nahe Paris: Marcon geht von rassistisch motiviertem Terrorakt aus</span></a></li><li><a href="https://taz.de/Schuesse-aus-Auto-in-Frankreich/!6224379/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Schüsse aus Auto in Frankreich: Ein Toter, vier Verletzte</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>USA - Nach Hacks: OpenAI will Spitzen-KI ohne Internet trainieren</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/nach-hacks-openai-will-spitzen-ki-ohne-internet-trainieren-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">USA - Nach Hacks: OpenAI will Spitzen-KI ohne Internet trainieren</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/business-liveticker-open-ai-will-spitzen-ki-ohne-internet-trainieren-faz-200452404.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Business-Ticker: Nach Hacks: Open AI will Spitzen-KI ohne Internet trainieren</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Kim Jong-un: Nordkoreas Machthaber Kim Jong-un überraschend in China eingetroffen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/politik/ausland/2026-10/kim-jong-un-china-dandong-li-qiang-koreakrieg-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Kim Jong-un: Nordkoreas Machthaber Kim Jong-un überraschend in China eingetroffen</span></a></li><li><a href="https://www.welt.de/politik/article6adc613e9fbb7e8e310de160/nordkorea-kim-jong-un-zu-ueberraschendem-besuch-in-china-eingetroffen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Kim Jong-un zu überraschendem Besuch in China eingetroffen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Deutschland Liveblog: Wie wird sich Merz beim CSU-Parteitag äußern?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-wie-wird-sich-merz-beim-csu-parteitag-aeussern-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: Wie wird sich Merz beim CSU-Parteitag äußern?</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/bayern-parteitag-csu-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Abschluss des CSU-Parteitags mit Rede von Kanzler Merz</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Herbstwetter in Deutschland: Verletzte und Bahnchaos wegen Sturm – Sonntag drohen Orkanböen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/panorama/herbstwetter-in-deutschland-verletzte-und-bahnchaos-wegen-sturm-sonntag-drohen-orkanboeen-a-65d85963-3487-4e10-9466-c9cfa5c6c3e6#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Herbstwetter in Deutschland: Verletzte und Bahnchaos wegen Sturm – Sonntag drohen Orkanböen</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/herbststurm-loest-bahnchaos-aus-am-sonntag-droht-ein-orkan-201617191.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Herbstwetter: Erster Herbststurm brachte Bahnchaos – Sonntag droht Orkan</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Ermittlungen gegen Vater von Herzogin Meghan</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/panorama/prominente/meghan-markle-vater-kinderpornografie-koenigshaus-grossbritannien-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Ermittlungen gegen Vater von Herzogin Meghan</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/menschen/kinderpornographie-vorwuerfe-gegen-thomas-markle-meghan-aeussert-sich-201615391.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Kinderpornographie: Darum hat Meghan den Kontakt zu ihrem Vater abgebrochen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Was wusste Weidel über illegale Spenden?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/deutschland/weidel-afd-spenden-affaere-leaks-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Was wusste Weidel über illegale Spenden?</span></a></li><li><a href="https://www.tagesschau.de/investigativ/ndr-wdr/afd-leak-weidel-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Illegale Spenden aus der Schweiz - Hat Weidel nicht die ganze Wahrheit gesagt?</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/wirtschaft/weltwirtschaft/abhaengigkeit-russische-energie-100.html" target="_blank" rel="noopener">Energie-Entkoppelung: So abhängig ist Europa noch von Russland</a></li><li><a href="https://www.tagesschau.de/video/video-1671720.html" target="_blank" rel="noopener">Zahlreiche Schäden nach Herbststurm &quot;Luise&quot; über Deutschland</a></li><li><a href="https://www.tagesschau.de/tagesthemen/video-1671648.html" target="_blank" rel="noopener">Wadephul zieht positive Bilanz nach Außenministertreffen in Istanbul</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/ausland/polen-ostgrenze-putin-krieg-alarmmodus-100.html" target="_blank" rel="noopener">Alarm an Polens Ostgrenze: &quot;Wir leben hier in solcher Angst&quot;</a></li><li><a href="https://www.zdfheute.de/briefing/trump-effekt/midterms-newsletter-trump-umfragen-100.html" target="_blank" rel="noopener">Achtung, Treibsand!</a></li><li><a href="https://www.zdfheute.de/panorama/herbststurm-verletzte-bahnverkehr-wetter-100.html" target="_blank" rel="noopener">Sturm &quot;Luise&quot; hinterlässt Schäden - &quot;Manja&quot; zieht heran</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/ukrainischer-verteidigungsminister-starlink-internet-wieder-stabil-104.html" target="_blank" rel="noopener">Satelliten-Dienst - Ukrainischer Verteidigungsminister: Starlink-Internet wieder stabil</a></li><li><a href="https://www.deutschlandfunk.de/israelische-armee-startet-grossoffensive-im-westjordanland-104.html" target="_blank" rel="noopener">Nach tödlichem Angriff - Israelische Armee startet Großoffensive im Westjordanland</a></li><li><a href="https://www.deutschlandfunk.de/juso-chef-tuermer-gegen-erneute-kandidatur-klingbeils-fuer-spd-vorsitz-108.html" target="_blank" rel="noopener">Sozialdemokratie - Juso-Chef Türmer gegen erneute Kandidatur Klingbeils für SPD-Vorsitz</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/karriere/auswandern-nach-kanada-eine-deutsche-familie-zieht-nach-sechs-jahren-ein-fazit-a-660a768d-95a2-4c03-90d5-18f769adfc1d#ref=rss" target="_blank" rel="noopener">Auswandern nach Kanada: Eine deutsche Familie zieht nach sechs Jahren ein Fazit</a></li><li><a href="https://www.spiegel.de/ausland/wedgewood-polls-der-hintermann-des-fake-umfrageinstituts-aus-den-usa-a-a1a73e75-e004-4b8c-98cf-1b5f94878f00#ref=rss" target="_blank" rel="noopener">»Wedgewood Polls«: Der Hintermann des Fake-Umfrageinstituts aus den USA</a></li><li><a href="https://www.spiegel.de/ausland/suedtirol-das-zerrissene-land-podcastserie-a-a622a53f-25a4-4300-996b-19ff1d86e133#ref=rss" target="_blank" rel="noopener">Südtirol: Das zerrissene Land – Podcastserie</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/sport/2026-10/vincent-kompany-fc-bayern-zusammenbruch-krankenhaus-gxe" target="_blank" rel="noopener">Bayern München: Bayern-Trainer Kompany muss vorerst im Krankenhaus bleiben</a></li><li><a href="https://www.zeit.de/news/2026-10/24/messerangriff-in-neukoellner-pannierstrasse-zwei-verletzte" target="_blank" rel="noopener">Angriff vor Bar: Messerangriff in Neuköllner Pannierstraße - zwei Verletzte</a></li><li><a href="https://www.zeit.de/news/2026-10/24/wie-sich-der-herbststurm-im-nordwesten-entwickelt" target="_blank" rel="noopener">Wetter: Wie sich der Herbststurm im Nordwesten entwickelt</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/bayern/bayern-obersalzberg-kehlsteinhaus-brand-historie-bedeutung-li.3568362" target="_blank" rel="noopener">Brand auf dem Obersalzberg: Grandioser Ausblick, düstere Historie: Warum das Kehlsteinhaus so bekannt ist</a></li><li><a href="https://www.sueddeutsche.de/muenchen/nacht-der-autoren-sz-journalismus-veranstaltung-li.3562665" target="_blank" rel="noopener">SZ -Nacht der Autorinnen und Autoren: „Journalismus ist immer noch ein Traumberuf“</a></li><li><a href="https://www.sueddeutsche.de/sport/ski-alpin-soelden-auftakt-2026-heute-uebersicht-rennen-uhrzeit-tv-stream-li.3562584" target="_blank" rel="noopener">Weltcup-Auftakt 2026: Ski-Alpin-Saison startet in Sölden – Übersicht zu den Rennen</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/podcasts/loehr-pennekamp/die-illusion-der-antifaschistischen-wirtschaftspolitik-201613520.html" target="_blank" rel="noopener">Podcast Löhr &amp; Pennekamp: Populismus von links</a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/antwort-auf-tom-krebs-und-isabella-weber-chinas-erbarmungsloser-kapitalismus-accg-201610723.html" target="_blank" rel="noopener">Preiskontrollen und Co.: Chinas erbarmungsloser Kapitalismus</a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/proteste-in-frankreich-es-herrscht-das-gefuehl-dass-der-staat-zusammengebrochen-ist-accg-201609374.html" target="_blank" rel="noopener">Neue Protestaufrufe: Ladenbesitzer organisieren sich zur Selbstverteidigung</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/sport/fussball/bundesliga/fc-bayern-muenchen/article6adc67e7ea9d017b539b0836/fc-bayern-muenchen-wer-vincent-kompany-jetzt-ersetzt.html" target="_blank" rel="noopener">Er ist der heimliche Boss im Training – Wer Kompany jetzt ersetzt</a></li><li><a href="https://www.welt.de/politik/deutschland/video6adc75942fdeb2201fba959b/linke-chef-pantisano-wir-wollen-dass-alle-grundbeduerfnisse-die-die-menschen-in-dem-land-haben-vergesellschaftet-sind.html" target="_blank" rel="noopener">„Wir wollen, dass alle Grundbedürfnisse, die die Menschen in dem Land haben, vergesellschaftet sind“</a></li><li><a href="https://www.welt.de/sport/fussball/video6adc73af9fbb7e8e310de28a/zusammenbruch-des-trainers-ihn-vor-sich-selbst-schuetzen-kompany-fehlt-dem-fc-bayern-wohl-wochenlang.html" target="_blank" rel="noopener">„Ihn vor sich selbst schützen“ – Kompany fehlt dem FC Bayern wohl wochenlang</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Wer-wird-SPD-Vorsitzende/!6223638/" target="_blank" rel="noopener">Wer wird SPD-Vorsitzende?: Warten auf Manu</a></li><li><a href="https://taz.de/CSU-Parteitag-in-Muenchen/!6224692/" target="_blank" rel="noopener">CSU-Parteitag in München: Alle für Ilse</a></li><li><a href="https://taz.de/Proteste-und-Gewalt/!6219055/" target="_blank" rel="noopener">Proteste und Gewalt: Linker Selbstmord</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.deutschlandfunk.de/ukrainischer-verteidigungsminister-starlink-internet-wieder-stabil-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Satelliten-Dienst - Ukrainischer Verteidigungsminister: Starlink-Internet wieder stabil</span></a></li><li><a href="https://www.deutschlandfunk.de/gewerkschaftler-und-soziologe-urban-betont-recht-auf-vergesellschaftung-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Offener Brief - Gewerkschaftler und Soziologe Urban betont Recht auf Vergesellschaftung</span></a></li><li><a href="https://www.deutschlandfunk.de/bundesschuelerkonferenz-fordert-mehr-geld-und-kuendigt-proteste-im-november-an-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bildung - Bundesschülerkonferenz fordert mehr Geld und kündigt Proteste im November an</span></a></li><li><a href="https://www.deutschlandfunk.de/verkehrsminister-bilger-deutschlandticket-fuer-gelegenheitsfahrerer-ist-spannende-idee-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">ÖPNV - Verkehrsminister Bilger: Deutschlandticket für Gelegenheitsfahrerer ist &quot;spannende Idee&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/amazon-chef-cloud-kapazitaeten-wegen-ki-fuer-2027-und-2028-weitgehend-ausgebucht-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Cloud-Dienste - Amazon-Chef: Cloud-Kapazitäten wegen KI für 2027 und 2028 weitgehend ausgebucht</span></a></li><li><a href="https://www.deutschlandfunk.de/erster-sieg-fuer-moenchengladbach-nach-sechs-niederlagen-heute-will-dortmund-die-tabellenfuehrung-ue-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Fußball-Bundesliga - Erster Sieg für Mönchengladbach nach sechs Niederlagen - heute will Dortmund die Tabellenführung übernehmen</span></a></li><li><a href="https://www.deutschlandfunk.de/usa-hebt-zoelle-auf-manche-produkte-aus-kanada-wieder-auf-druck-von-us-grenzstaaten-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Handelsstreit - USA hebt Zölle auf manche Produkte aus Kanada wieder auf - Druck von US-Grenzstaaten</span></a></li><li><a href="https://www.deutschlandfunk.de/kenia-meldet-zweiten-todesfall-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ebola-Epidemie - Kenia meldet zweiten Todesfall</span></a></li><li><a href="https://www.deutschlandfunk.de/aufwind-fuer-die-opposition-das-ist-die-lage-vor-der-parlamentswahl-in-israel-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Naher Osten - Aufwind für die Opposition: Das ist die Lage vor der Parlamentswahl in Israel</span></a></li><li><a href="https://www.deutschlandfunk.de/uno-sicherheitsrat-fordert-aufklaerung-zu-toedlichen-drohnenangriffen-im-sudan-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">New York - UNO-Sicherheitsrat fordert Aufklärung zu tödlichen Drohnenangriffen im Sudan</span></a></li><li><a href="https://www.deutschlandfunk.de/linken-chef-pantisano-stellt-sich-gegen-gewinnerzielung-mit-mieten-108.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Geplante Vergesellschaftung - Linken-Chef Pantisano stellt sich gegen Gewinnerzielung mit Mieten</span></a></li><li><a href="https://www.deutschlandfunk.de/patti-smith-und-julian-barnes-erhalten-spanische-nobelpreise-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Prinzessin von Asturien - Patti Smith und Julian Barnes erhalten &quot;Spanische Nobelpreise&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/helmuth-feilke-ist-neuer-praesident-der-deutschen-akademie-fuer-sprache-und-dichtung-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nachfolger Ingo Schulzes - Helmuth Feilke ist neuer Präsident der Deutschen Akademie für Sprache und Dichtung</span></a></li><li><a href="https://www.deutschlandfunk.de/padel-waechst-in-deutschland-besonders-schnell-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Trendsport - Padel wächst in Deutschland besonders schnell</span></a></li><li><a href="https://www.deutschlandfunk.de/regnerisch-7-bis-14-grad-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wetter - Regnerisch, 7 bis 14 Grad</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/dem-soziologen-sighard-neckel-zum-siebzigsten-accg-201612321.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Sighard Neckel wird 70: Die soziale Struktur des Gefühls</span></a></li><li><a href="https://www.welt.de/sport/fussball/bundesliga/fc-bayern-muenchen/article6adc67e7ea9d017b539b0836/fc-bayern-muenchen-wer-vincent-kompany-jetzt-ersetzt.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Er ist der heimliche Boss im Training – Wer Kompany jetzt ersetzt</span></a></li><li><a href="https://www.zeit.de/news/2026-10/24/messerangriff-in-neukoellner-pannierstrasse-zwei-verletzte" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Angriff vor Bar: Messerangriff in Neuköllner Pannierstraße - zwei Verletzte</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/arm-und-reich/deutschlands-bildungsmisere-warum-kaum-jemand-aufbegehrt-accg-201231694.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Krise der Schulen: Bildung? Uns doch egal!</span></a></li><li><a href="https://www.zeit.de/news/2026-10/24/wie-sich-der-herbststurm-im-nordwesten-entwickelt" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Wetter: Wie sich der Herbststurm im Nordwesten entwickelt</span></a></li><li><a href="https://www.tagesschau.de/wetter/deutschland/wettervorhersage-deutschland-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Wetter Deutschland: Wolken, Temperaturen, Wind und Aussichten</span></a></li><li><a href="https://www.zeit.de/news/2026-10/24/oel-gelangt-bei-reinigungsarbeiten-in-den-inn" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Ölsperre eingerichtet: Öl gelangt bei Reinigungsarbeiten in den Inn</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-kiew-starlink-wieder-stabil-faz-110683325.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Ukrainekrieg: Kiew: Starlink wieder stabil</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 24.10.2026 um 11:37 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
