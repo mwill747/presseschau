@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 26.10.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Monday, 26. October 2026 &middot; 12:16 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">328 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Amtsinhaber Lula gewinnt Stichwahl um Präsidentenamt in Brasilien</h3>
+          <div class="zaehler">
+            <b>7</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/video/video-1672740.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Amtsinhaber Lula gewinnt Stichwahl um Präsidentenamt in Brasilien</span></a></li><li><a href="https://www.deutschlandfunk.de/lula-gewinnt-praesidenten-stichwahl-bolsonaro-erkennt-ergebnis-nicht-an-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Brasilien - Lula gewinnt Präsidenten-Stichwahl - Bolsonaro erkennt Ergebnis nicht an</span></a></li><li><a href="https://www.tagesschau.de/video/video-1672716.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Großer Jubel in Brasilien: Lula da Silva gewinnt Präsidentenwahl</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/brasilien-wahl-2026-lulas-historischem-sieg-droht-ein-nachspiel-accg-201620959.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Brasilien-Wahl: Lulas historischem Sieg droht ein Nachspiel</span></a></li><li><a href="https://taz.de/Jubel-nach-Lulas-Sieg/!6224965/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Jubel nach Lulas Sieg: Brasilien im Freudentaumel</span></a></li><li><a href="https://www.sueddeutsche.de/politik/wahl-brasilien-ergebnis-lula-sieg-bolsonaro-li.3568108" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Stichwahl in Brasilien: Präsident Lula gewinnt – Bolsonaro will Ergebnis nicht anerkennen</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/brasilien-wahlen-lula-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Lula gewinnt Wahl in Brasilien - Bolsonaro erkennt Niederlage nicht an</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/brasilien-stichwahl-bolsonaro-lula-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Amtsinhaber Lula gewinnt Stichwahl in Brasilien</span></a></li><li><a href="https://www.spiegel.de/ausland/brasilien-wie-lula-da-silva-ueberraschend-flavio-bolsonaro-besiegte-a-54205e62-424d-419d-b42b-78fd7a5d236d#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Brasilien: Wie Lula da Silva überraschend Flávio Bolsonaro besiegte</span></a></li><li><a href="https://www.sueddeutsche.de/meinung/brasilien-lula-wahl-praesident-sieg-bolsonaro-stichwahl-kommentar-li.3568672" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Brasilien: Lula ist ein schwacher Wahlsieger</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/wahl-in-brasilien-lula-gewinnt-knapp-bolsonaro-fordert-annullierung-accg-201620584.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Sieg in Stichwahl: Lula gewinnt Brasiliens Präsidentenwahl</span></a></li><li><a href="https://taz.de/Stichwahl-in-Brasilien/!6224962/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Stichwahl in Brasilien: Lula schlägt Bolsonaro junior</span></a></li><li><a href="https://www.faz.net/aktuell/wahl-in-brasilien-lula-gewinnt-accg-201618960.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Brasilien: Lula gewinnt Brasiliens Präsidentenwahl</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Bayern ohne Kompany: „Wir wissen noch gar nicht, was wir geleistet haben“</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:71%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/sport/fussball/bundesliga/fc-bayern-siegt-ohne-vincent-kompany-dank-grossem-zusammenhalt-accg-201621549.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Bayern ohne Kompany: „Wir wissen noch gar nicht, was wir geleistet haben“</span></a></li><li><a href="https://www.sueddeutsche.de/sport/fc-bayern-kompany-erkrankung-sieg-danks-sms-li.3568855" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">FC Bayern in Freiburg: Ein Sieg, damit Vincent Kompany nicht an Fußball denken muss</span></a></li><li><a href="https://www.spiegel.de/sport/fussball/fc-bayern-muenchen-schlaegt-sc-freiburg-ein-sieg-fuer-vinnie-ein-sieg-fuer-jo-a-edcf110d-3d60-45ca-837e-6a8caebd3d97#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">FC Bayern München schlägt SC Freiburg: »Ein Sieg für Vinnie. Ein Sieg für Jo«</span></a></li><li><a href="https://www.sportschau.de/regional/br/br-schwer-an-fussball-zu-denken-fcb-trotzt-seinen-sorgen-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">&quot;Schwer, an Fußball zu denken&quot; - Bayern trotzt seinen Sorgen</span></a></li><li><a href="https://www.sportschau.de/fussball/bundesliga/bayern-erobern-sich-gegen-freiburg-tabellenspitze-zurueck,spielbericht-sc-freiburg-bayern-muenchen-108.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Trotz Personalsorgen: Bayern rückt mit Sieg in Freiburg an die Spitze</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-bundesliga/video/sc-freiburg-fc-bayern-muenchen-saison-2026-27-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Bayern gewinnt auch ohne Kompany in Freiburg</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-bundesliga/bundesliga-sc-freiburg-bayern-muenchen-spielbericht-danks-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">FC Bayern trotzt dem Kompany-Schock</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Kreuzfahrtschiff »Mein Schiff 3«: Tui sagt nach Kollision Kreuzfahrt für 2.400 Passagiere ab</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:71%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-10/mein-schiff-3-bremerhaven-kollision-kreuzfahrtschiff-containerschiff-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Kreuzfahrtschiff »Mein Schiff 3«: Tui sagt nach Kollision Kreuzfahrt für 2.400 Passagiere ab</span></a></li><li><a href="https://www.deutschlandfunk.de/auslaufverbot-fuer-drei-schiffe-nach-kollision-in-bremerhaven-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Mein Schiff 3&quot; - Auslaufverbot für drei Schiffe nach Kollision in Bremerhaven</span></a></li><li><a href="https://www.spiegel.de/panorama/bremerhaven-kreuzfahrt-mit-der-mein-schiff-3-nach-kollision-abgesagt-a-bec8865f-4420-4479-9f46-a7b2ae887625#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Bremerhaven: Kreuzfahrt mit der »Mein Schiff 3« nach Kollision abgesagt</span></a></li><li><a href="https://www.tagesschau.de/video/video-1672666.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Schiffskollision in Bremerhaven: Wie kam es zum Unfall der Mein Schiff 3?</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/mein-schiff-3-kreuzfahrtschiff-rammt-frachtschiff-von-msc-in-bremerhaven-201620352.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Containerschiff gerammt: Windböe verursachte Unfall von Kreuzfahrtriese Mein Schiff 3</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/kollision-in-bremerhaven-was-beim-auslaufen-der-mein-schiff-3-schiefging-201620462.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Bremerhaven: Mit der „Mein Schiff 3“ zu hart am Wind</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Midterms - Obama greift Trump im Wahlkampf scharf an</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:71%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/obama-greift-trump-im-wahlkampf-scharf-an-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Midterms - Obama greift Trump im Wahlkampf scharf an</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/midterms-umfragen-trump-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Umfragen vor den Midterms: Trumps frühere Wähler wenden sich von ihm ab</span></a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/liveticker-usa-unter-trump-beschissenes-land-trump-erklaert-einwanderer-aus-norwegen-fuer-unerwuenscht-faz-19444916.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">USA unter Trump: Trump ruft Israelis dazu auf, für Netanjahu zu stimmen</span></a></li><li><a href="https://taz.de/US-Philosophin-ueber-Midterms/!6219042/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">US-Philosophin über Midterms: „Immer mehr Leute fühlen sich von Trump verraten“</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/usa-trump-wahl-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Vor Midterms: Ex-US-Präsident Obama schaltet sich mit Trump-Kritik in Wahlkampf ein</span></a></li><li><a href="https://www.zdfheute.de/video/politik-trump-midterms-stimme-abgegeben-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Midterms: Hier gibt Donald Trump seine Stimme ab</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Audi-Chef nach Auftritt mit Trump in der Kritik</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/video/2026-10/audi-chef-nach-auftritt-mit-trump-in-der-kritik" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Audi-Chef nach Auftritt mit Trump in der Kritik</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/audi-us-werk-doellner-trump-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Audi-Chef bei Trump - Verstoß gegen Konzernregeln?</span></a></li><li><a href="https://www.spiegel.de/wirtschaft/gernot-doellner-vw-betriebsratschefin-cavallo-nennt-auftritt-von-audi-chef-bei-trump-beschaemend-a-561cd07b-5304-4a93-9eec-d00532127bb6#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Gernot Döllner: VW-Betriebsratschefin Cavallo nennt Auftritt von Audi-Chef bei Trump beschämend</span></a></li><li><a href="https://taz.de/Audi-Chef-Doellner-zu-Besuch-bei-Trump/!6224792/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Audi-Chef Döllner zu Besuch bei Trump: Ingolstädter Autobauer plant neues SUV-Werk in den USA</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Sieg über Vucic - Studentenbewegung gewinnt Parlamentswahl in Serbien</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/studentenbewegung-gewinnt-parlamentswahl-in-serbien-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Sieg über Vucic - Studentenbewegung gewinnt Parlamentswahl in Serbien</span></a></li><li><a href="https://www.tagesschau.de/video/video-1672652.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Niederlage für Vucic: Studentenliste gewinnt Wahl in Serbien</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/serbien-vucic-niederlage-wahl-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Studentenliste gewinnt Wahl: &quot;Nie wieder Tyrannen&quot;</span></a></li><li><a href="https://www.sueddeutsche.de/politik/wahl-in-serbien-2026-aleksandar-vucic-wahlmanipulation-gewalt-li.3568103" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Sieg über Vučić: Studentenliste gewinnt historische Wahl in Serbien</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>&quot;Investitionsschutzgesetz&quot; - Innenminister Dobrindt plant hohe Hürden für Vergesellschaftungen von Wohnungen - verfassungsrechtliche Bedenken aus der SPD</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/innenminister-dobrindt-plant-hohe-huerden-fuer-vergesellschaftungen-von-wohnungen-verfassungsrechtli-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Investitionsschutzgesetz&quot; - Innenminister Dobrindt plant hohe Hürden für Vergesellschaftungen von Wohnungen - verfassungsrechtliche Bedenken aus der SPD</span></a></li><li><a href="https://www.welt.de/politik/deutschland/video6adf120de6e3b6a102d4f766/investitionsschutzgesetz-es-steckt-symbolpolitik-darin-dobrindt-plant-hohe-huerden-fuer-vergesellschaftungen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Es steckt Symbolpolitik darin“ – Dobrindt plant hohe Hürden für Vergesellschaftungen</span></a></li><li><a href="https://taz.de/Vorstoss-zur-Vergesellschaftung/!6224903/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Vorstoß zur Vergesellschaftung: Dobrindt plant hohe Hürden</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/dobrindt-vergesellschaftung-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Dobrindt plant hohe Hürden für Vergesellschaftungen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Clásico: Real Madrid siegt – Triumph für José Mourinho und seinen Kulturwandel</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/sport/clasico-real-madrid-siegt-triumph-fuer-jose-mourinho-und-seinen-kulturwandel-a-e27a3faa-85e0-4cbd-ab9b-d630c827d85a#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Clásico: Real Madrid siegt – Triumph für José Mourinho und seinen Kulturwandel</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-real-madrid-fc-barcelona-clasico-ewiges-ranking-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Dank Mbappé: Real rückt durch Clásico-Sieg an Barcelona ran</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/kylian-mbappe-entscheidet-clasico-fuer-real-madrid-bei-fc-barcelona-201620537.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Fußball in Spanien: Mbappé schießt Real Madrid im Clásico zum Sieg in Barcelona</span></a></li><li><a href="https://www.sueddeutsche.de/sport/el-clasico-fc-barcelona-real-madrid-kylian-mbappe-la-liga-li.3568847" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">El Clásico Barça gegen Real: Mbappés Torjubiläum macht La Liga spannend</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Frankreich: Mehr als 1.400 Menschen bei Protesten in Frankreich festgenommen</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/politik/ausland/2026-10/proteste-frankreich-festnahmen-waffen-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Frankreich: Mehr als 1.400 Menschen bei Protesten in Frankreich festgenommen</span></a></li><li><a href="https://www.zeit.de/politik/ausland/2026-10/proteste-frankreich-ausgangssperren-demonstrationen-verbot-laurent-nunez-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Proteste in Frankreich: Frankreichs Regierung hält wegen Protesten an Ausgangssperren fest</span></a></li><li><a href="https://taz.de/Proteste-in-Frankreich/!6224751/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Proteste in Frankreich: Lektion in Sachen Demokratie</span></a></li><li><a href="https://taz.de/Proteste-in-Frankreich/!6224892/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Proteste in Frankreich: Tanzen, Tränengas, Barrikaden</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/frankreich-neue-proteste-demonstrationen-festnahmen-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Proteste in Frankreich: Mehr als 1.300 Festnahmen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Konjunkturbelebung - Ifo-Index steigt sechstes Mal in Folge</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/ifo-index-steigt-sechstes-mal-in-folge-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Konjunkturbelebung - Ifo-Index steigt sechstes Mal in Folge</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/konjunktur/ifo-index-oktober-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Ifo-Index: Konjunkturbelebung setzt sich fort</span></a></li><li><a href="https://www.welt.de/wirtschaft/article6adf1f78c303dbdd291055f8/ifo-index-konjunkturbelebung-setzt-sich-fort-anstieg-zum-sechsten-mal-in-folge.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Konjunkturbelebung setzt sich fort“ – Ifo-Index steigt zum sechsten Mal in Folge</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Nach Exil - Oppositionsführerin Machado soll zurück in Venezuela sein</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/oppositionsfuehrerin-machado-soll-zurueck-in-venezuela-sein-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Exil - Oppositionsführerin Machado soll zurück in Venezuela sein</span></a></li><li><a href="https://taz.de/Demokratie-in-Venezuela/!6224993/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Demokratie in Venezuela: Oppositionsführerin Machado ist zurück in Venezuela</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/venezuela-machado-104.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Oppositionsführerin Machado meldet Rückkehr nach Venezuela</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Nach Wahlsieg gegen Vucic - Wofür steht die Studentenbewegung in Serbien?</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/wofuer-steht-die-studentenbewegung-in-serbien-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Wahlsieg gegen Vucic - Wofür steht die Studentenbewegung in Serbien?</span></a></li><li><a href="https://www.spiegel.de/ausland/wahlsieg-der-studenten-erst-ungarn-jetzt-serbien-geht-europas-autokraten-die-luft-aus-a-73977c82-1cdb-4625-a309-364b817d1380#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Erst Ungarn, jetzt Serbien: Wahlsieg der Studenten – geht Europas Autokraten die Luft aus?</span></a></li><li><a href="https://taz.de/Wahlsieg-der-Opposition/!6224976/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Wahlsieg der Opposition: Das Wunder von Serbien</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Kultur - Schriftsteller Joachim Lottmann im Alter von 70 Jahren gestorben</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/schriftsteller-joachim-lottmann-im-alter-von-70-jahren-gestorben-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Kultur - Schriftsteller Joachim Lottmann im Alter von 70 Jahren gestorben</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/buecher/autoren/popliterat-joachim-lottmann-ist-gestorben-accg-201621375.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Im Alter von 70 Jahren: Schriftsteller Joachim Lottmann gestorben</span></a></li><li><a href="https://www.spiegel.de/kultur/literatur/schriftsteller-joachim-lottmann-ist-tot-a-f43f4961-22b2-483a-8569-c4e34e2285e4#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Schriftsteller Joachim Lottmann ist tot</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Wahl in Serbien: Vucic räumt Niederlage ein</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/eilmeldung/serbien-niederlage-vucic-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Wahl in Serbien: Vucic räumt Niederlage ein</span></a></li><li><a href="https://taz.de/Parlamentswahl-in-Serbien/!6224963/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Parlamentswahl in Serbien: Niederlage für Machthaber Vučić</span></a></li><li><a href="https://www.sueddeutsche.de/politik/parlamentswahl-serbien-aleksandar-vucic-studentenbewegung-2026-li.3568833" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Serbien: Vučić räumt Niederlage bei Parlamentswahl ein</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Wirtschaftswachstum: Londoner Oxford Street soll Fußgängerzone werden</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/mobilitaet/2026-10/oxford-street-london-fussgaengerzone-sadiq-khan-verkehr-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Wirtschaftswachstum: Londoner Oxford Street soll Fußgängerzone werden</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/london-oxford-street-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Oxford Street in London wird zur Fußgängerzone</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/londons-oxford-street-wird-zur-fussgaengerzone-accg-201620713.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Shoppingmeile: Londoner Oxford Street wird zur Fußgängerzone</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Deutschland Liveblog: Eralp hält Dobrindts Vorstoß gegen Enteignungen für verfassungswidrig</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-eralp-haelt-dobrindts-vorstoss-gegen-enteignungen-fuer-verfassungswidrig-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: Eralp hält Dobrindts Vorstoß gegen Enteignungen für verfassungswidrig</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6adf16ea7846c6ec50e6fd7e/streit-um-enteignungen-werden-wir-nicht-hinnehmen-eralp-sieht-dobrindt-vorstoss-als-verfassungswidrig-an.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Werden wir nicht hinnehmen“ – Eralp sieht Dobrindt-Vorstoß als verfassungswidrig an</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/eralp-berlin-vergesellschaftung-wohnungen-dobrindt-investitionsschutzgesetz-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Eralp hält Dobrindts Pläne für verfassungswidrig</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Frankreich - Le Pen eröffnet den Präsidentschaftswahlkampf - &quot;Ordnung und nationales Selbstvertrauen&quot;</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/le-pen-eroeffnet-den-praesidentschaftswahlkampf-ordnung-und-nationales-selbstvertrauen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Frankreich - Le Pen eröffnet den Präsidentschaftswahlkampf - &quot;Ordnung und nationales Selbstvertrauen&quot;</span></a></li><li><a href="https://www.tagesschau.de/tagesthemen/video-1672564.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Auftakt von Wahlkampf: Le Pen spricht von &quot;Wiedergeburt&quot; Frankreichs</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/le-pen-frankreich-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Auftakt der RN-Wahlkampagne: Le Pen spricht von &quot;Wiedergeburt&quot; Frankreichs</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Rot-Rot-Grün in Berlin: Berliner SPD will Mitglieder über Koalitionspläne abstimmen lassen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/politik/deutschland/2026-10/mitgliederbefragung-spd-berlin-rot-gruen-rot-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Rot-Rot-Grün in Berlin: Berliner SPD will Mitglieder über Koalitionspläne abstimmen lassen</span></a></li><li><a href="https://www.sueddeutsche.de/politik/landtagswahlen-deutschland-berlin-spd-krach-giffey-eralp-li.3540501" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Newsblog zu den Landtagswahlen: Berliner SPD plant Mitgliederbefragung über Koalition</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Linksextremismus: Antifa-Ost-Komplex: Angeklagter gestorben</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/news/2026-10/26/antifa-ost-komplex-angeklagter-gestorben" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Linksextremismus: Antifa-Ost-Komplex: Angeklagter gestorben</span></a></li><li><a href="https://www.welt.de/vermischtes/article6adf1ec044ab625f2110bd2c/leipziger-hammerbande-angeklagter-in-antifa-ost-prozess-gestorben-anwalt-erhebt-vorwuerfe-gegen-gericht.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Angeklagter in „Antifa Ost“-Prozess gestorben – Anwalt erhebt Vorwürfe gegen Gericht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Entlastungen - Union und SPD diskutieren weiter über Stromsteuer - unterschiedliche Vorschläge von Kretschmer und Bovenschulte</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/union-und-spd-diskutieren-weiter-ueber-stromsteuer-unterschiedliche-vorschlaege-von-kretschmer-und-b-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Entlastungen - Union und SPD diskutieren weiter über Stromsteuer - unterschiedliche Vorschläge von Kretschmer und Bovenschulte</span></a></li><li><a href="https://www.tagesschau.de/inland/bericht-aus-berlin-stromsteuer-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Stromsteuer-Debatte: Union und SPD weiter weit auseinander</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Präsidentschaft - Stichwahl entscheidet über Staatsoberhaupt in Bulgarien</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/stichwahl-entscheidet-ueber-staatsoberhaupt-in-bulgarien-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Präsidentschaft - Stichwahl entscheidet über Staatsoberhaupt in Bulgarien</span></a></li><li><a href="https://taz.de/Bulgarien/!6224964/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Bulgarien: Stichwahl entscheidet über Staatsoberhaupt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>Dünnere Decken, weniger Steckdosen – Regierung bringt einfachen Baustandard auf den Weg</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/wirtschaft/article6adf145fe6e3b6a102d4f78f/gebaeudetyp-e-duennere-decken-weniger-steckdosen-regierung-bringt-einfachen-baustandard-auf-den-weg.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Dünnere Decken, weniger Steckdosen – Regierung bringt einfachen Baustandard auf den Weg</span></a></li><li><a href="https://taz.de/Neuer-Baustandard/!6224969/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Neuer Baustandard: Regierung bringt einfachere Norm auf den Weg</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">23</span>
+          <h3>Bahn bietet Familienticket ab heute wieder an</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/panorama/familienticket-start-deutsche-bahn-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Bahn bietet Familienticket ab heute wieder an</span></a></li><li><a href="https://taz.de/Deutsche-Bahn/!6224967/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Deutsche Bahn: Familientickets nun im Dauerangebot</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">24</span>
+          <h3>Sturmtief &quot;Manja&quot; richtet Schäden im Norden an</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/panorama/sturmtief-manja-sturmfluten-norden-nordseekueste-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Sturmtief &quot;Manja&quot; richtet Schäden im Norden an</span></a></li><li><a href="https://www.tagesschau.de/inland/wetter-sturm-112.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Sturmtief &quot;Manja&quot; fegt über Deutschland</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">25</span>
+          <h3>Kane, Yamal oder ein anderer: Wer holt den Ballon d&#x27;Or?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/sport/fussball-ballon-d-or-bayern-kane-kandidat-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Kane, Yamal oder ein anderer: Wer holt den Ballon d&#x27;Or?</span></a></li><li><a href="https://www.sportschau.de/fussball/mehr-internationale-ligen/harry-kane-und-die-hoffnung-auf-ballon-dor,harry-kane-ballon-d-or-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Harry Kane und die Hoffnung auf den Ballon d&#x27;Or</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">26</span>
+          <h3>Aktuelles zum Krieg in der Ukraine</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.sueddeutsche.de/politik/ukraine-krieg-russland-raketenfabrik-iskander-li.3563283" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Krieg in der Ukraine: Berichte: Ukraine greift russische Raketenfabrik an</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">27</span>
+          <h3>Leipzigs Halbzeit-Gala schickt Elversberg in die Auswärtskrise</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sportschau.de/fussball/bundesliga/leipzigs-halbzeit-gala-schickt-elversberg-in-die-auswaertskrise,spielbericht-rb-leipzig-sv-elverberg-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Leipzigs Halbzeit-Gala schickt Elversberg in die Auswärtskrise</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-bundesliga/video/rb-leipzig-sv-elversberg-saison-2026-27-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Leipzig dreht gegen Elversberg nach der Pause auf</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">28</span>
+          <h3>Formel 1: Antonelli gewinnt in Austin - Titel ganz nah</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sportschau.de/motorsport/formel1/formel-1-antonelli-gewinnt-in-austin-titel-ganz-nah,gp-usa-antonelli-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Formel 1: Antonelli gewinnt in Austin - Titel ganz nah</span></a></li><li><a href="https://www.faz.net/aktuell/sport/formel-1/kimi-antonelli-siegt-bei-formel-1-in-austin-ist-aber-noch-nicht-weltmeister-201244824.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Formel 1 in den USA: Antonelli siegt in Austin – ist aber noch nicht Weltmeister</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/audi-us-werk-doellner-trump-100.html" target="_blank" rel="noopener">Audi-Chef bei Trump - Verstoß gegen Konzernregeln?</a></li><li><a href="https://www.tagesschau.de/ausland/amerika/midterms-umfragen-trump-100.html" target="_blank" rel="noopener">Umfragen vor den Midterms: Trumps frühere Wähler wenden sich von ihm ab</a></li><li><a href="https://www.tagesschau.de/video/video-1672716.html" target="_blank" rel="noopener">Großer Jubel in Brasilien: Lula da Silva gewinnt Präsidentenwahl</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/deutschland/gen-z-proteste-demonstration-deutschland-100.html" target="_blank" rel="noopener">&quot;Wir haben das Gefühl, dass man auf die Jugend scheißt&quot;</a></li><li><a href="https://www.zdfheute.de/politik/deutschland/rente-reform-fruehrente-verdi-schweitzer-100.html" target="_blank" rel="noopener">Rente mit 63: Verdi macht Druck auf Schweitzer</a></li><li><a href="https://www.zdfheute.de/politik/ausland/serbien-vucic-niederlage-wahl-100.html" target="_blank" rel="noopener">Studentenliste gewinnt Wahl: &quot;Nie wieder Tyrannen&quot;</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/union-sieht-ersten-gesetzentwurf-fuer-guenstigeren-wohnungsbau-noch-skeptisch-100.html" target="_blank" rel="noopener">Koalitionsvorhaben - Union sieht ersten Gesetzentwurf für günstigeren Wohnungsbau noch skeptisch</a></li><li><a href="https://www.deutschlandfunk.de/wofuer-steht-die-studentenbewegung-in-serbien-100.html" target="_blank" rel="noopener">Nach Wahlsieg gegen Vucic - Wofür steht die Studentenbewegung in Serbien?</a></li><li><a href="https://www.deutschlandfunk.de/fischereiverbote-landwirtschaftsminister-rainer-pocht-auf-weitere-ausnahmen-fuer-deutsche-ostsee-fis-100.html" target="_blank" rel="noopener">EU-Verhandlungen - Fischereiverbote: Landwirtschaftsminister Rainer pocht auf weitere Ausnahmen für deutsche Ostsee-Fischer</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/ausland/wahlsieg-der-studenten-erst-ungarn-jetzt-serbien-geht-europas-autokraten-die-luft-aus-a-73977c82-1cdb-4625-a309-364b817d1380#ref=rss" target="_blank" rel="noopener">Erst Ungarn, jetzt Serbien: Wahlsieg der Studenten – geht Europas Autokraten die Luft aus?</a></li><li><a href="https://www.spiegel.de/ausland/serbien-studentenliste-feiert-unerwarteten-wahlerfolg-und-machtwechsel-a-905b36d0-999d-4e28-8064-dd88cb05f795#ref=rss" target="_blank" rel="noopener">Serbien: Studentenliste feiert unerwarteten Wahlerfolg und Machtwechsel</a></li><li><a href="https://www.spiegel.de/ausland/brasilien-wie-lula-da-silva-ueberraschend-flavio-bolsonaro-besiegte-a-54205e62-424d-419d-b42b-78fd7a5d236d#ref=rss" target="_blank" rel="noopener">Brasilien: Wie Lula da Silva überraschend Flávio Bolsonaro besiegte</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/politik/deutschland/2026-10/mitgliederbefragung-spd-berlin-rot-gruen-rot-gxe" target="_blank" rel="noopener">Rot-Rot-Grün in Berlin: Berliner SPD will Mitglieder über Koalitionspläne abstimmen lassen</a></li><li><a href="https://www.zeit.de/news/2026-10/26/grossbrand-in-gemuesebetrieb-in-singen-ist-geloescht" target="_blank" rel="noopener">Millionenschaden?: Großbrand in Gemüsebetrieb in Singen ist gelöscht</a></li><li><a href="https://www.zeit.de/2026/46/vegan-hotel-beck-hall-england-menue" target="_blank" rel="noopener">Veganes Hotel: Seitansbraten</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/bayern/reinhold-messner-allgaeu-bergwandern-influencer-kolumne-li.3567873" target="_blank" rel="noopener">Influencer vs. Wanderer: Warum Reinhold Messner den Ausflug in die Berge kontingentieren will</a></li><li><a href="https://www.sueddeutsche.de/politik/landtagswahlen-deutschland-berlin-spd-krach-giffey-eralp-li.3540501" target="_blank" rel="noopener">Newsblog zu den Landtagswahlen: Berliner SPD plant Mitgliederbefragung über Koalition</a></li><li><a href="https://www.sueddeutsche.de/panorama/promis-lewis-hamilton-kim-kardashian-hund-kinder-li.3568962" target="_blank" rel="noopener">Leute: Ein Hund für Familie Hamildashian?</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/wirtschaft/arm-und-reich/die-altersforscherin-cristina-polidori-ueber-hohe-lebenserwartung-accg-201611619.html" target="_blank" rel="noopener">Altersmedizinerin Polidori: „Ein Drittel der Pflegefälle könnte man vermeiden – oder um Jahre hinauszögern“</a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/brasilien-wahl-2026-lulas-historischem-sieg-droht-ein-nachspiel-accg-201620959.html" target="_blank" rel="noopener">Brasilien-Wahl: Lulas historischem Sieg droht ein Nachspiel</a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/flavio-bolsonaro-will-stichwahl-in-brasilien-annullieren-lassen-accg-201620649.html" target="_blank" rel="noopener">Bolsonaro nach Niederlage: „Was heute geschehen ist, war nicht normal. Es war inakzeptabel“</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/wirtschaft/article6adf242a44ab625f2110bdd1/heimstaden-bostad-top-vermieter-will-wegen-berliner-enteignungsplaenen-vorerst-nicht-mehr-in-deutschland-investieren.html" target="_blank" rel="noopener">Top-Vermieter will wegen Berliner Enteignungsplänen vorerst nicht mehr in Deutschland investieren</a></li><li><a href="https://www.welt.de/politik/ausland/plus6aa7cf5619aba9f8407b3f83/ostukraine-unfreier-als-nordkorea-oder-gaza-moskaus-brutale-unterdrueckungsmaschine.html" target="_blank" rel="noopener">Unfreier als Nordkorea oder Gaza – Moskaus brutale Unterdrückungsmaschine</a></li><li><a href="https://www.welt.de/politik/deutschland/video6adf27d244ab625f2110be86/geplante-halloween-proteste-wir-werden-es-mit-waschechten-linksextremisten-zu-tun-haben-im-schulterschluss-mit-islamisten.html" target="_blank" rel="noopener">„Wir werden es mit waschechten Linksextremisten zu tun haben, im Schulterschluss mit Islamisten“</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Wahlsieg-der-Opposition/!6224976/" target="_blank" rel="noopener">Wahlsieg der Opposition: Das Wunder von Serbien</a></li><li><a href="https://taz.de/Jubel-nach-Lulas-Sieg/!6224965/" target="_blank" rel="noopener">Jubel nach Lulas Sieg: Brasilien im Freudentaumel</a></li><li><a href="https://taz.de/Demokratie-in-Venezuela/!6224993/" target="_blank" rel="noopener">Demokratie in Venezuela: Oppositionsführerin Machado ist zurück in Venezuela</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.zeit.de/news/2026-10/26/grossbrand-in-gemuesebetrieb-in-singen-ist-geloescht" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Millionenschaden?: Großbrand in Gemüsebetrieb in Singen ist gelöscht</span></a></li><li><a href="https://www.zeit.de/2026/46/vegan-hotel-beck-hall-england-menue" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Veganes Hotel: Seitansbraten</span></a></li><li><a href="https://www.zeit.de/news/2026-10/26/mann-bezahlt-geldstrafe-mit-falschgeld" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Amtsgericht Hof: Mann bezahlt Geldstrafe mit Falschgeld</span></a></li><li><a href="https://www.zeit.de/2026/46/leben-in-deutschland-migration-krise-selbstbild" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Leben in Deutschland: »Mir scheint, ihr habt ein völlig verzerrtes Selbstbild«</span></a></li><li><a href="https://www.zeit.de/news/2026-10/26/21-jaehrige-stirbt-nach-zusammenstoss-mit-linienbus" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Unfälle: 21-Jährige stirbt nach Zusammenstoß mit Linienbus</span></a></li><li><a href="https://www.zeit.de/news/2026-10/26/polizei-bereitet-sich-auf-protest-in-stuttgart-vor" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Aufruf zur Demonstration: Polizei schließt Gewalt bei Protest in Stuttgart nicht aus</span></a></li><li><a href="https://www.zeit.de/news/2026-10/26/der-formel-1-galaktische-noch-zwei-punkte-zur-titel-landung" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Formel 1: Der Formel-1-Galaktische: Noch zwei Punkte zur Titel-Landung</span></a></li><li><a href="https://www.zeit.de/news/2026-10/26/unfall-mit-mehreren-verletzten-stau-auf-a72" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Unfall am frühen Morgen: Tödlicher Unfall auf A72 - Sperrung aufgehoben</span></a></li><li><a href="https://www.welt.de/wirtschaft/article6adf242a44ab625f2110bdd1/heimstaden-bostad-top-vermieter-will-wegen-berliner-enteignungsplaenen-vorerst-nicht-mehr-in-deutschland-investieren.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Top-Vermieter will wegen Berliner Enteignungsplänen vorerst nicht mehr in Deutschland investieren</span></a></li><li><a href="https://www.welt.de/politik/ausland/plus6aa7cf5619aba9f8407b3f83/ostukraine-unfreier-als-nordkorea-oder-gaza-moskaus-brutale-unterdrueckungsmaschine.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Unfreier als Nordkorea oder Gaza – Moskaus brutale Unterdrückungsmaschine</span></a></li><li><a href="https://www.faz.net/aktuell/rhein-main/f-a-z-leser-helfen-1/f-a-z-leser-helfen-probono-und-maedchenbuero-milena-wollen-maedchen-durch-bildung-staerken-accg-201206060.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">F.A.Z.-Leser helfen: Bildung als Ausweg aus Armut und Ausgrenzung</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/iran-israel-usa-angriff-liveblog-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Iran-Krieg und Nahost-Konflikt: Alle Nachrichten im Liveblog</span></a></li><li><a href="https://www.welt.de/politik/deutschland/video6adf27d244ab625f2110be86/geplante-halloween-proteste-wir-werden-es-mit-waschechten-linksextremisten-zu-tun-haben-im-schulterschluss-mit-islamisten.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Wir werden es mit waschechten Linksextremisten zu tun haben, im Schulterschluss mit Islamisten“</span></a></li><li><a href="https://www.spiegel.de/kultur/musik/sven-regener-saenger-von-element-of-crime-haelt-nicht-viel-von-politischer-musik-a-e969e963-3799-41ae-9ec8-d290479d5d72#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Sven Regener: Sänger von »Element of Crime« hält nicht viel von politischer Musik</span></a></li><li><a href="https://www.deutschlandfunk.de/union-sieht-ersten-gesetzentwurf-fuer-guenstigeren-wohnungsbau-noch-skeptisch-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Koalitionsvorhaben - Union sieht ersten Gesetzentwurf für günstigeren Wohnungsbau noch skeptisch</span></a></li><li><a href="https://www.deutschlandfunk.de/fischereiverbote-landwirtschaftsminister-rainer-pocht-auf-weitere-ausnahmen-fuer-deutsche-ostsee-fis-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">EU-Verhandlungen - Fischereiverbote: Landwirtschaftsminister Rainer pocht auf weitere Ausnahmen für deutsche Ostsee-Fischer</span></a></li><li><a href="https://www.deutschlandfunk.de/zwei-tote-in-russischem-woronesch-bei-ukrainischem-drohnenangriff-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Zwei Tote in russischem Woronesch bei ukrainischem Drohnenangriff</span></a></li><li><a href="https://www.deutschlandfunk.de/was-merz-und-steinmeier-mit-ihren-asien-reisen-bewirken-wollen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wirtschaftspolitik - Was Merz und Steinmeier mit ihren Asien-Reisen bewirken wollen</span></a></li><li><a href="https://www.deutschlandfunk.de/praesident-des-zentralrats-der-juden-zweifelt-an-abkehr-der-berliner-linken-vom-antisemitismus-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Zeitungsinterview - Präsident des Zentralrats der Juden zweifelt an Abkehr der Berliner Linken vom Antisemitismus</span></a></li><li><a href="https://www.deutschlandfunk.de/soeder-dringt-auf-rasche-entscheidung-winter-cdu-profil-wichtiger-als-geschlecht-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundespräsidentenamt - Söder dringt auf rasche Entscheidung - Winter (CDU): &quot;Profil wichtiger als Geschlecht&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/vorwuerfe-gegen-vw-nach-audi-chef-auftritt-bei-trump-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Wahlkampfhilfe für Autokraten&quot; - Vorwürfe gegen VW nach Audi-Chef-Auftritt bei Trump</span></a></li><li><a href="https://www.deutschlandfunk.de/mehr-menschen-lassen-sich-zur-bestattungsfachkraft-ausbilden-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Statistik - Mehr Menschen lassen sich zur Bestattungsfachkraft ausbilden</span></a></li><li><a href="https://www.deutschlandfunk.de/dgb-chefin-fahimi-fordert-mehr-fokus-der-regierung-auf-wirtschaftswachstum-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">DGB-Chefin Fahimi fordert mehr Fokus der Regierung auf Wirtschaftswachstum</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 26.10.2026 um 12:16 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
