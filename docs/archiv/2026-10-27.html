@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 27.10.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Tuesday, 27. October 2026 &middot; 11:41 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">342 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Krieg gegen die Ukraine: Stubb und Støre haben erstmals mit Putin über Ukrainekrieg gesprochen</h3>
+          <div class="zaehler">
+            <b>8</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/politik/ausland/ukraine-krieg-news-liveblog" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Krieg gegen die Ukraine: Stubb und Støre haben erstmals mit Putin über Ukrainekrieg gesprochen</span></a></li><li><a href="https://www.deutschlandfunk.de/waffenruhe-in-verminter-frontstadt-oleschky-in-kraft-humanitaere-hilfe-soll-beginnen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Waffenruhe in verminter Frontstadt Oleschky in Kraft - humanitäre Hilfe soll beginnen</span></a></li><li><a href="https://www.deutschlandfunk.de/neue-gegenseitige-angriffe-russlands-und-der-ukraine-bruecke-in-kiew-beschaedigt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Krieg - Neue gegenseitige Angriffe Russlands und der Ukraine - Brücke in Kiew beschädigt</span></a></li><li><a href="https://taz.de/-Nachrichten-im-Ukrainekrieg-/!6213890/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">+++ Nachrichten im Ukrainekrieg +++: Russland und Ukraine beginnen lokale Feuerpause in Oleschky</span></a></li><li><a href="https://www.welt.de/politik/ausland/article6ae048a07846c6ec50e70fb9/ukraine-krieg-waffenruhe-in-frontstadt-oleschky-in-kraft-wichtige-bruecke-in-kiew-getroffen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Waffenruhe in Frontstadt Oleschky in Kraft – wichtige Brücke in Kiew getroffen</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/ukraine-oleschky-waffenruhe-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Russland und Ukraine beginnen Waffenruhe für Frontstadt Oleschky</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/oleschky-waffenruhe-ukraine-krieg-russland-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Lokale Waffenruhe in Oleschky in Kraft getreten</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-treffer-auf-wichtige-bruecke-in-kiew-faz-110683325.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Ukrainekrieg: Treffer auf wichtige Brücke in Kiew</span></a></li><li><a href="https://www.sueddeutsche.de/politik/ukraine-krieg-russland-oleschky-hilfsgueter-feuerpause-hilfslieferungen-minen-li.3563283" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Krieg in der Ukraine: Hilfsaktion für Frontstadt Oleschky beginnt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Weltfußballer - Bayerns Harry Kane und Alexia Putellas gewinnen Ballon d&#x27;Or</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:75%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bayerns-harry-kane-und-alexia-putellas-gewinnen-ballon-d-or-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Weltfußballer - Bayerns Harry Kane und Alexia Putellas gewinnen Ballon d&#x27;Or</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-ballon-d-or-harry-kane-stimmen-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">&quot;Weil du einfach verdammt genial bist&quot;: Kane holt Ballon d&#x27;Or</span></a></li><li><a href="https://www.sportschau.de/fussball/dritter-ballon-dor-alexia-putellas-zurueck-auf-dem-thron,alexia-putellas-ballon-d-or-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Dritter Ballon d&#x27;Or: Alexia Putellas zurück auf dem Thron</span></a></li><li><a href="https://www.sportschau.de/fussball/bayern-stuermer-harry-kane-gewinnt-ballon-dor,ballon-d-or-kane-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Ballon d&#x27;Or: Harry Kane vom FC Bayern gewinnt Auszeichnung</span></a></li><li><a href="https://www.faz.net/video/ballon-d-or-spieler-des-jahres-ausgezeichnet-201624558.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Kane und Putellas: Weltfußballer des Jahres ausgezeichnet</span></a></li><li><a href="https://www.welt.de/sport/fussball/article6ae04edf7846c6ec50e71011/ballon-dor-absperrungen-durchbrochen-siegertexte-geleakt-grosses-chaos-rund-um-gala-in-london.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Absperrungen durchbrochen, Siegertexte geleakt – Chaos beim Ballon d&#x27;Or</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/pressestimmen-zur-ballon-d-or-wahl-von-harry-kane-accg-201624577.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Ballon D&#x27;or: „Weder Lamine noch Mbappé – Kane!“</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/kommentar-zur-wahl-von-harry-kane-zum-weltfussballer-balla-balla-201623830.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Wahl von Harry Kane: Das Bohei um den Weltfußballer</span></a></li><li><a href="https://www.sueddeutsche.de/sport/ballond-d-or-internationale-pressestimmen-kane-sieger-li.3569559" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Pressestimmen zum Ballon d&#x27;Or: „Kane ist ein absolut verdienter Gewinner“</span></a></li><li><a href="https://www.sueddeutsche.de/sport/harry-kane-ballon-d-or-2026-sieger-fc-bayern-gruende-li.3569535" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Ballon d’Or: Kanes Krönung</span></a></li><li><a href="https://www.sueddeutsche.de/sport/ballon-d-or-live-liveticker-gala-kane-li.3569528" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Ballon d&#x27;Or-Gala: Harry Kane gewinnt den Ballon d&#x27;Or</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/harry-kane-gewinnt-den-ballon-d-or-201623664.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Verleihung in London: Harry Kane und Alexia Putellas gewinnen den Ballon d’Or</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Beate Zschäpe: NSU-Rechtsterroristin Beate Zschäpe bleibt bis mindestens 2035 in Haft</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:75%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-10/beate-zschaepe-mindestverbuessungsdauer-haft-olg-muenchen-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Beate Zschäpe: NSU-Rechtsterroristin Beate Zschäpe bleibt bis mindestens 2035 in Haft</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/nsu-mittaeterin-beate-zschaepe-gefaengnis-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">NSU: Beate Zschäpe bleibt mindestens bis 2035 in Haft</span></a></li><li><a href="https://www.deutschlandfunk.de/nsu-terroristin-zschaepe-soll-mindestens-bis-zum-jahr-2035-im-gefaengnis-bleiben-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Gerichtsentscheidung - NSU-Terroristin Zschäpe soll mindestens bis zum Jahr 2035 im Gefängnis bleiben</span></a></li><li><a href="https://www.sueddeutsche.de/politik/beate-zschaepe-haft-gericht-muenchen-li.3569792" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">NSU-Terror: Gericht: Zschäpe soll bis mindestens 2035 in Haft bleiben</span></a></li><li><a href="https://www.spiegel.de/panorama/justiz/nsu-beate-zschaepe-bleibt-voraussichtlich-mindestens-bis-2035-in-haft-a-46d029fe-8d8d-4a4e-b534-426f3bcc3231#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">NSU: Beate Zschäpe bleibt voraussichtlich mindestens bis 2035 in Haft</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/gericht-beate-zschaepe-muss-mindestens-bis-2035-im-gefaengnis-bleiben-accg-201624869.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">NSU-Morde: Gericht: Beate Zschäpe muss mindestens bis 2035 im Gefängnis bleiben</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>&quot;Erkennen Ergebnis an&quot; - Partei von Flávio Bolsonaro räumt Niederlage bei Präsidentschaftswahl in Brasilien ein</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:62%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/partei-von-fl-vio-bolsonaro-raeumt-niederlage-bei-praesidentschaftswahl-in-brasilien-ein-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Erkennen Ergebnis an&quot; - Partei von Flávio Bolsonaro räumt Niederlage bei Präsidentschaftswahl in Brasilien ein</span></a></li><li><a href="https://www.deutschlandfunk.de/wegen-geldwaesche-ermittlungen-fl-vio-bolsonaro-darf-brasilien-nicht-verlassen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Anordnung des Obersten Gerichts - Wegen Geldwäsche-Ermittlungen: Flávio Bolsonaro darf Brasilien nicht verlassen</span></a></li><li><a href="https://www.faz.net/aktuell/finanzen/lulas-wahlsieg-loest-boersensturz-in-brasilien-aus-accg-201623742.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Brasilien-Wahl: Brasiliens Börse stürzt nach Lulas Wahlsieg ab</span></a></li><li><a href="https://taz.de/Brasilien-nach-der-Stichwahl/!6225261/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Brasilien nach der Stichwahl: Lulas Sieg crasht Brasiliens Börse</span></a></li><li><a href="https://taz.de/Praesidentschaftswahl-in-Brasilien/!6225258/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Präsidentschaftswahl in Brasilien: Bolsonaro darf das Land vorerst nicht verlassen</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/brasilien-wahl-bolsonaro-ermittlungen-geldwaesche-ausreiseverbot-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Ausreiseverbot für Bolsonaro: Ermittlungen wegen Geldwäsche</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/brasilien-bolsonaro-ausreiseverbot-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Nach Präsidentenwahl in Brasilien: Ausreiseverbot für Flávio Bolsonaro</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/brasilien-bolsonaros-partei-raeumt-wahlniederlage-ein-201623734.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Brasilien: Bolsonaros Partei gesteht Wahlniederlage ein</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/lula-wahl-brasilien-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Brasilien nach der Stichwahl: Was jetzt auf Lula zukommt</span></a></li><li><a href="https://www.tagesschau.de/tagesthemen/video-1673134.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Lula gewinnt Präsidentenwahl in Brasilien - Bolsonaro erkennt Niederlage nicht an</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/lulas-sieg-in-brasilien-kein-gewinn-fuer-den-westen-201621980.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Präsidentenwahl: Brasilien bleibt auf Anti-Trump-Kurs</span></a></li><li><a href="https://taz.de/Wahl-in-Brasilien/!6225017/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Wahl in Brasilien: Lula rettet die Demokratie</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/brasilien-stichwahl-bolsonaro-lula-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Amtsinhaber Lula gewinnt Stichwahl in Brasilien</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Wahl in Israel: Hält sich Benjamin Netanjahu an der Macht?</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:62%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/wahl-israel-netanjahu-eisenkot-liveblog-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Wahl in Israel: Hält sich Benjamin Netanjahu an der Macht?</span></a></li><li><a href="https://www.deutschlandfunk.de/richtungsweisende-wahl-in-israel-laeuft-enges-rennen-um-mehrheit-erwartet-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Knesset - Richtungsweisende Wahl in Israel läuft: Enges Rennen um Mehrheit erwartet</span></a></li><li><a href="https://www.deutschlandfunk.de/wer-ist-der-netanjahu-herausforderer-eisenkot-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wahl in Israel - Wer ist der Netanjahu-Herausforderer Eisenkot?</span></a></li><li><a href="https://www.tagesschau.de/video/video-1673294.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">&quot;Umfragen alles andere als eindeutig&quot;: ARD-Reporterin zur Wahl in Israel</span></a></li><li><a href="https://www.phoenix.de/sendungen/gespraeche/phoenix-tagesgespraech/shimon-stein-ehem-botscha-a-5243160.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Wahl in Israel: &quot;Lassen wir uns überraschen&quot;</span></a></li><li><a href="https://www.spiegel.de/ausland/israel-wahl-beginnt-mit-gedenken-an-hamas-opfer-a-a634b1dc-e6cd-4a4c-810c-5fb495d2ad90#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Israel: Wahl beginnt mit Gedenken an Hamas-Opfer</span></a></li><li><a href="https://www.tagesschau.de/podcast-11km-wahl-israel-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">11KM-Podcast: Wer gewinnt die Wahl in Israel?</span></a></li><li><a href="https://www.tagesschau.de/tagesthemen/video-1673136.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Wahl in Israel: Endet die Ära Netanjahu?</span></a></li><li><a href="https://taz.de/Vor-der-Wahl-in-Israel/!6222091/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Vor der Wahl in Israel: Was heißt links in Israel?</span></a></li><li><a href="https://taz.de/Wahl-in-Israel/!6222304/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Wahl in Israel: Königsmacherin ohne Anschluss</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Investitionen in den USA - Audi-Chef Döllner weist Kritik an Auftritt mit US-Präsident Trump zurück</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:62%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/audi-chef-doellner-weist-kritik-an-auftritt-mit-us-praesident-trump-zurueck-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Investitionen in den USA - Audi-Chef Döllner weist Kritik an Auftritt mit US-Präsident Trump zurück</span></a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/doellner-audi-auftritt-trump-rechtfertigung-us-wahlkampf-midterms-li.3569627" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">US-Wahlkampf: Audi-Chef Döllner rechtfertigt sich für Auftritt mit Trump</span></a></li><li><a href="https://www.tagesschau.de/tagesthemen/video-1673140.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Kritik an Auftritt von Audi-Chef Döllner auf US-Wahlkampfveranstaltung</span></a></li><li><a href="https://www.tagesschau.de/inland/audi-kritik-doellner-trump-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Kritik an Audi-Chef Döllner reißt nach Auftritt mit Trump nicht ab</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/unternehmen/audi-usa-trump-doellner-auto-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Audi-Chef bei Trump: Warum die Kritik am Auftritt wächst</span></a></li><li><a href="https://www.zdfheute.de/video/audi-chef-doellner-trump-usa-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Audi-Chef bei Trump: Der umstrittene Auftritt im Video</span></a></li><li><a href="https://www.faz.net/video/auftritt-mit-trump-scharfe-kritik-an-audi-chef-201622770.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">nach Auftritt mit Trump: Scharfe Kritik an Audi-Chef</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Neustadt am Rübenberge: Auto fährt bei Hannover in Menschengruppe</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:62%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/gesellschaft/2026-10/neustadt-am-ruebenberge-auto-menschengruppe-hannover-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Neustadt am Rübenberge: Auto fährt bei Hannover in Menschengruppe</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/niedersachsen/auto-steuert-in-menschenmenge-polizei-nimmt-drei-verdaechtige-fest,neustadt-158.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Niedersachsen: Auto fährt in Menschengruppe - mehrere Verletzte</span></a></li><li><a href="https://www.deutschlandfunk.de/niedersachsen-auto-faehrt-gezielt-in-menschengruppe-polizei-geht-nicht-von-anschlag-aus-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Neustadt am Rübenberge - Niedersachsen: Auto fährt gezielt in Menschengruppe - Polizei geht nicht von Anschlag aus</span></a></li><li><a href="https://www.zdfheute.de/panorama/kriminalitaet/auto-niedersachsen-neustadt-am-ruebenberge-menschengruppe-verletzte-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Niedersachsen: Auto fährt in Menschengruppe - kein Anschlag</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/bei-hannover-auto-faehrt-in-menschengruppe-polizei-schiesst-auf-wagen-accg-201624093.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Bei Hannover: Auto fährt in Menschengruppe – Polizei schießt auf Wagen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Studentska Lista - Wahl in Serbien: Grünen-Außenpolitiker Mijatovic warnt vor zu hohen Erwartungen an Studenten-Liste</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/wahl-in-serbien-gruenen-aussenpolitiker-mijatovic-warnt-vor-zu-hohen-erwartungen-an-studenten-liste-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Studentska Lista - Wahl in Serbien: Grünen-Außenpolitiker Mijatovic warnt vor zu hohen Erwartungen an Studenten-Liste</span></a></li><li><a href="https://www.tagesschau.de/tagesthemen/video-1673130.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Studentenliste gewinnt bei Wahl in Serbien</span></a></li><li><a href="https://taz.de/Nach-den-Wahlen-in-Serbien/!6224994/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Nach den Wahlen in Serbien: Das große Aufatmen</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/serbien-vucic-niederlage-wahl-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Studentenliste gewinnt Wahl: &quot;Nie wieder Tyrannen&quot;</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>&quot;Viele Fragezeichen&quot; - Bundesjustizministerin Hubig sieht Klärungsbedarf bei Dobrindts Plänen, Vergesellschaftungen zu erschweren</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bundesjustizministerin-hubig-sieht-klaerungsbedarf-bei-dobrindts-plaenen-vergesellschaftungen-zu-ers-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Viele Fragezeichen&quot; - Bundesjustizministerin Hubig sieht Klärungsbedarf bei Dobrindts Plänen, Vergesellschaftungen zu erschweren</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/hubig-sieht-klaerungsbedarf-bei-gesetz-zu-enteignungen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Justizministerin Hubig sieht noch &quot;viele Fragezeichen&quot; bei Gesetz zu Vergesellschaftungen</span></a></li><li><a href="https://taz.de/Justizministerin-skeptisch/!6225262/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Justizministerin skeptisch: „Viele Fragezeichen“ bei Gesetz gegen Vergesellschaftungen</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6ae0509bf519943c36c68973/nach-dobrindt-vorstoss-justizministerin-hubig-sieht-viele-fragezeichen-bei-gesetz-gegen-enteignungen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Justizministerin Hubig sieht „viele Fragezeichen“ bei Gesetz gegen Enteignungen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Polizei ermittelt nach Schiffskollision gegen Kapitän der „Mein Schiff 3“</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/vermischtes/video6ae05bbef519943c36c68a3f/bremerhaven-polizei-ermittelt-nach-schiffskollision-gegen-kapitaen-der-mein-schiff-3.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Polizei ermittelt nach Schiffskollision gegen Kapitän der „Mein Schiff 3“</span></a></li><li><a href="https://www.tagesschau.de/inland/herbststurm-norden-deutschland-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Kreuzfahrtschiff rammt Containerschiffe - Polizei ermittelt gegen Kapitän</span></a></li><li><a href="https://www.zdfheute.de/panorama/schiff-kreuzfahrt-bremerhaven-unfall-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Bremerhaven: Kreuzfahrtschiff rammt Containerschiffe</span></a></li><li><a href="https://www.zdfheute.de/video/mein-schiff-3-kollision-video-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Kreuzfahrtschiff kollidiert mit Containerschiff</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Asien-Reise - Kanzler Merz wirbt in Singapur für Freihandelsabkommen mit Ländern der Pazifik-Region</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/kanzler-merz-wirbt-in-singapur-fuer-freihandelsabkommen-mit-laendern-der-pazifik-region-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Asien-Reise - Kanzler Merz wirbt in Singapur für Freihandelsabkommen mit Ländern der Pazifik-Region</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/merz-asien-singapur-freihandel-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Merz will mehr Freihandel und Technologieaustausch mit Asien</span></a></li><li><a href="https://www.spiegel.de/wirtschaft/welthandel-merz-wirbt-in-asien-fuer-freihandelsabkommen-mit-pazifik-region-a-cd130177-0f37-4627-aafd-23990d1d3d69#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Welthandel: Merz wirbt in Asien für Freihandelsabkommen mit Pazifik-Region</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>American Football - Rapper Jay-Z übernimmt 2027 die Halbzeit-Show beim Super Bowl</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/rapper-jay-z-uebernimmt-2027-die-halbzeit-show-beim-super-bowl-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">American Football - Rapper Jay-Z übernimmt 2027 die Halbzeit-Show beim Super Bowl</span></a></li><li><a href="https://www.sueddeutsche.de/kultur/jay-z-halbzeitshow-super-bowl-li.3569748" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Pop: Jay-Z tritt beim Super Bowl 2027 auf</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/menschen/super-bowl-2027-rapper-jay-z-uebernimmt-half-time-show-accg-201624156.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Im Februar 2027: Rapper Jay-Z übernimmt Halbzeitshow beim Super Bowl</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Deutschland Liveblog: Berliner Linke berät über Umgang mit Vanessa Emde</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-berliner-linke-beraet-ueber-umgang-mit-vanessa-emde-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: Berliner Linke berät über Umgang mit Vanessa Emde</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6ae05034f519943c36c68965/antisemitismus-vorwuerfe-berliner-linke-beraet-ueber-radikale-abgeordnete-emde.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Berliner Linke berät über radikale Abgeordnete Emde</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/berlin/berlin-linke-emde-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Berliner Linksfraktion berät Ausschluss von Abgeordneter Emde</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Israels wichtigste Entscheidung</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/politik/ausland/article6adb3aabd8be1e987154e60d/parlamentswahl-israels-wichtigste-entscheidung.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Israels wichtigste Entscheidung</span></a></li><li><a href="https://www.welt.de/kultur/plus6ae049ff16ed143d64a1dc3c/mirna-funk-zum-ersten-mal-darf-ich-in-israel-waehlen-doch-die-entscheidung-faellt-mir-schwer.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Zum ersten Mal darf ich in Israel wählen – doch die Entscheidung fällt mir schwer</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/israel-vor-wahl-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Knesset-Wahl 2026: Israel vor der Entscheidung</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>In Kongo: Zahl der Ebola-Fälle steigt auf mehr als 10.000</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/gesellschaft/gesundheit/mehr-als-10-000-ebola-faelle-in-kongo-accg-201625097.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">In Kongo: Zahl der Ebola-Fälle steigt auf mehr als 10.000</span></a></li><li><a href="https://www.deutschlandfunk.de/zahl-der-ebola-infektionen-im-kongo-steigt-auf-mehr-als-10-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Westafrika - Zahl der Ebola-Infektionen im Kongo steigt auf mehr als 10.000</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Liveblog Nahost: In Israel zeichnet sich eine hohe Wahlbeteiligung ab</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/politik/ausland/liveblog-nahost-bei-israel-wahl-2026-zeichnet-sich-hohe-wahlbeteiligung-ab-faz-200583539.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Nahost: In Israel zeichnet sich eine hohe Wahlbeteiligung ab</span></a></li><li><a href="https://www.sueddeutsche.de/politik/liveblog-nahost-news-wahl-israel-ergebnisse-ablauf-infos-li.3560260" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Nahost: Parlamentswahl in Israel angelaufen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Autoindustrie: Porsche macht mehr Gewinn, verkauft aber weniger Autos</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/wirtschaft/porsche-quartalszahlen-2026-strategie-china-usa-li.3567548" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Autoindustrie: Porsche macht mehr Gewinn, verkauft aber weniger Autos</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/business-liveticker-porsche-verkauft-weniger-autos-aber-gewinn-steigt-faz-200452404.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Business-Ticker: Porsche verkauft weniger Autos – aber Gewinn steigt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Weltorganisation für Meteorologie - Klimaschädliche Treibhausgase in Atmosphäre steigen auf Rekordniveau</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/klimaschaedliche-treibhausgase-in-atmosphaere-steigen-auf-rekordniveau-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Weltorganisation für Meteorologie - Klimaschädliche Treibhausgase in Atmosphäre steigen auf Rekordniveau</span></a></li><li><a href="https://www.tagesschau.de/wissen/klima/treibhausgase-so-hoch-wie-nie-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bericht der Weltwetterorganisation: Immer mehr Treibhausgase in der Atmosphäre</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Raumschiff Enterprise - &quot;Star Trek&quot;-Schauspieler Walter Koenig mit 90 Jahren gestorben</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/star-trek-schauspieler-walter-koenig-mit-90-jahren-gestorben-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Raumschiff Enterprise - &quot;Star Trek&quot;-Schauspieler Walter Koenig mit 90 Jahren gestorben</span></a></li><li><a href="https://www.zdfheute.de/panorama/prominente/walter-koenig-schauspieler-tot-raumschiff-enterprise-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">&quot;Raumschiff Enterprise&quot;-Schauspieler Walter Koenig gestorben</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Infineon baut für über eine Milliarde Euro Werk in Österreich aus</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/infineon-investition-villach-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Infineon baut für über eine Milliarde Euro Werk in Österreich aus</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/ki-chips-infineon-investiert-1-1-milliarden-euro-in-villach-accg-201624396.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Zukunftstechnologie: Infineon investiert 1,1 Milliarden Euro in Villach</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Fußball: Kylian Mbappé verliert nach Mao-Äußerungen chinesische Sponsoren</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/sport/2026-10/kylian-mbappe-sponsoren-china-mao-zedong-dongpeng-mengniu-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Fußball: Kylian Mbappé verliert nach Mao-Äußerungen chinesische Sponsoren</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/kylian-mbappe-verliert-chinesische-sponsoren-wegen-scherz-ueber-mao-accg-201624452.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Scherz über MAo: Kylian Mbappé verliert chinesische Sponsoren</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>Brandenburger Tor, &quot;Vanda Friedrich Merz&quot;, Nebelkrähen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/multimedia/bilder/blickpunkte-10530.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Brandenburger Tor, &quot;Vanda Friedrich Merz&quot;, Nebelkrähen</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/friedrich-merz-in-singapur-der-betoerende-duft-der-orchideen-diplomatie-accg-201623924.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">„Vanda Friedrich Merz“: Der betörende Duft der Orchideen-Diplomatie</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">23</span>
+          <h3>Trump zweifelt Wahlergebnis in Brasilien an</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/trump-lula-brasilien-bolsonaro-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Trump zweifelt Wahlergebnis in Brasilien an</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/brasilien-wahl-126.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Welche Folgen das Wahlergebnis für Brasilien haben könnte</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">24</span>
+          <h3>Proteste in Frankreich: Schü­le­r:in­nen wollen keine „faulen Kompromisse“</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Proteste-in-Frankreich/!6225097/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Proteste in Frankreich: Schü­le­r:in­nen wollen keine „faulen Kompromisse“</span></a></li><li><a href="https://www.sueddeutsche.de/politik/frankreich-schuelerproteste-sebastien-lecornu-bildungspolitik-zugestaendnisse-li.3569506" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Proteste in Frankreich: Frankreichs Premier macht erste Zugeständnisse – doch die Schüler wollen mehr</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">25</span>
+          <h3>London: Teil von Oxford Street ist jetzt Fußgängerzone</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/panorama/oxford-street-london-fussgaengerzone-grossbritannien-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">London: Teil von Oxford Street ist jetzt Fußgängerzone</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/london-oxford-street-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Oxford Street in London wird zur Fußgängerzone</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/inland/innenpolitik/pflegekommission-pflegereform-100.html" target="_blank" rel="noopener">Pflegekommission der Bundesregierung nimmt ihre Arbeit auf</a></li><li><a href="https://www.tagesschau.de/multimedia/livestreams/livestream-ts24-104.html" target="_blank" rel="noopener">Livestream: Die Nachrichten auf tagesschau24</a></li><li><a href="https://www.tagesschau.de/video/video-1673294.html" target="_blank" rel="noopener">&quot;Umfragen alles andere als eindeutig&quot;: ARD-Reporterin zur Wahl in Israel</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/wirtschaft/medikamente-kosten-gkv-hersteller-preisgestaltung-100.html" target="_blank" rel="noopener">Wer bestimmt, wie viel Medikamente kosten dürfen?</a></li><li><a href="https://www.zdfheute.de/politik/deutschland/nsu-mittaeterin-beate-zschaepe-gefaengnis-100.html" target="_blank" rel="noopener">NSU: Beate Zschäpe bleibt mindestens bis 2035 in Haft</a></li><li><a href="https://www.zdfheute.de/politik/ausland/brasilien-wahl-bolsonaro-ermittlungen-geldwaesche-ausreiseverbot-100.html" target="_blank" rel="noopener">Ausreiseverbot für Bolsonaro: Ermittlungen wegen Geldwäsche</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/nsu-terroristin-zschaepe-soll-mindestens-bis-zum-jahr-2035-im-gefaengnis-bleiben-100.html" target="_blank" rel="noopener">Gerichtsentscheidung - NSU-Terroristin Zschäpe soll mindestens bis zum Jahr 2035 im Gefängnis bleiben</a></li><li><a href="https://www.deutschlandfunk.de/kanzler-merz-wirbt-in-singapur-fuer-freihandelsabkommen-mit-laendern-der-pazifik-region-100.html" target="_blank" rel="noopener">Asien-Reise - Kanzler Merz wirbt in Singapur für Freihandelsabkommen mit Ländern der Pazifik-Region</a></li><li><a href="https://www.deutschlandfunk.de/bundespraesident-steinmeier-beginnt-china-reise-100.html" target="_blank" rel="noopener">Staatsbesuch - Bundespräsident Steinmeier beginnt China-Reise</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/ausland/spannungen-zwischen-iran-und-usa-die-zeichen-stehen-auf-krieg-a-763fb589-ecc1-4c11-b9d6-b64daa6d1958#ref=rss" target="_blank" rel="noopener">Spannungen zwischen Iran und USA: Die Zeichen stehen auf Krieg</a></li><li><a href="https://www.spiegel.de/panorama/justiz/nsu-beate-zschaepe-bleibt-voraussichtlich-mindestens-bis-2035-in-haft-a-46d029fe-8d8d-4a4e-b534-426f3bcc3231#ref=rss" target="_blank" rel="noopener">NSU: Beate Zschäpe bleibt voraussichtlich mindestens bis 2035 in Haft</a></li><li><a href="https://www.spiegel.de/ausland/israel-wahl-beginnt-mit-gedenken-an-hamas-opfer-a-a634b1dc-e6cd-4a4c-810c-5fb495d2ad90#ref=rss" target="_blank" rel="noopener">Israel: Wahl beginnt mit Gedenken an Hamas-Opfer</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-10/27/stau-auf-der-a93-richtung-weiden-brennender-lkw" target="_blank" rel="noopener">Feuerwehr im Einsatz: Kühlanhänger mit Geflügelfleisch löst sich und fängt Feuer</a></li><li><a href="https://www.zeit.de/news/2026-10/27/bahn-strecke-hamburg-berlin-wegen-weltkriegsbombe-gesperrt" target="_blank" rel="noopener">Verkehr: Sperrung der Strecke Hamburg-Berlin wieder aufgehoben</a></li><li><a href="https://www.zeit.de/news/2026-10/27/wird-der-prozess-um-den-nord-stream-anschlag-eingestellt" target="_blank" rel="noopener">Vorwurf Kriegsverbrechen: Prozess um Nord-Stream-Anschlag wird nicht eingestellt</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/wirtschaft/porsche-quartalszahlen-2026-strategie-china-usa-li.3567548" target="_blank" rel="noopener">Autoindustrie: Porsche macht mehr Gewinn, verkauft aber weniger Autos</a></li><li><a href="https://www.sueddeutsche.de/politik/beate-zschaepe-haft-gericht-muenchen-li.3569792" target="_blank" rel="noopener">NSU-Terror: Gericht: Zschäpe soll bis mindestens 2035 in Haft bleiben</a></li><li><a href="https://www.sueddeutsche.de/kultur/jay-z-halbzeitshow-super-bowl-li.3569748" target="_blank" rel="noopener">Pop: Jay-Z tritt beim Super Bowl 2027 auf</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/kaliforniens-milliardaerssteuer-sergey-brin-kaempft-mit-millionen-dagegen-accg-201616258.html" target="_blank" rel="noopener">Vermögensabgabe: Kalifornien probt den Aufstand gegen die Superreichen</a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/us-midterms-2026-was-waeren-die-folgen-eines-erfolgs-der-demokraten-accg-201612085.html" target="_blank" rel="noopener">US-Midterms 2026: Wie die Demokraten Trump das Leben schwer machen könnten</a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/israel-wahl-2026-worum-geht-es-bei-der-knesset-wahl-accg-201621495.html" target="_blank" rel="noopener">Israel-Wahl 2026: Würde unter Eisenkot alles anders?</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/politik/ausland/video6ae0767541a652332eb6d524/parlamentswahl-in-israel-es-sieht-nicht-gut-aus-fuer-netanjahu.html" target="_blank" rel="noopener">„Es sieht nicht gut aus für Netanjahu“</a></li><li><a href="https://www.welt.de/vermischtes/video6ae07510dcd605c8d4cea191/aliens-es-muss-unendlich-viele-ausserirdische-geben.html" target="_blank" rel="noopener">„Es muss unendlich viele Außerirdische geben“</a></li><li><a href="https://www.welt.de/sport/article6ae0624e606708eb0870c0dd/super-bowl-rap-ikone-jay-z-hat-sich-selbst-fuer-die-halbzeitshow-gebucht.html" target="_blank" rel="noopener">Rap-Ikone Jay-Z hat sich selbst für die Halbzeitshow gebucht</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Klimaschutz-in-Zeiten-von-steigenden-Preisen-Fuenf-Massnahmen-die-uns-allen-helfen-wuerden/!6225031/" target="_blank" rel="noopener">Sozialer Klimaschutz: Fünf gezielte Maßnahmen, die uns allen helfen würden</a></li><li><a href="https://taz.de/Israel-waehlt/!6224719/" target="_blank" rel="noopener">Israel wählt: Fünf Szenarien für die Regierungsbildung</a></li><li><a href="https://taz.de/Vor-der-Wahl-in-Israel/!6222091/" target="_blank" rel="noopener">Vor der Wahl in Israel: Was heißt links in Israel?</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.zeit.de/news/2026-10/27/stau-auf-der-a93-richtung-weiden-brennender-lkw" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Feuerwehr im Einsatz: Kühlanhänger mit Geflügelfleisch löst sich und fängt Feuer</span></a></li><li><a href="https://www.zeit.de/news/2026-10/27/bahn-strecke-hamburg-berlin-wegen-weltkriegsbombe-gesperrt" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Verkehr: Sperrung der Strecke Hamburg-Berlin wieder aufgehoben</span></a></li><li><a href="https://www.zeit.de/news/2026-10/27/wird-der-prozess-um-den-nord-stream-anschlag-eingestellt" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Vorwurf Kriegsverbrechen: Prozess um Nord-Stream-Anschlag wird nicht eingestellt</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/tiere/angriff-in-marburg-bullterrier-verletzt-mutter-und-sohn-schwer-accg-201625101.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Marburg: Nach schwerem Angriff: Mann ersticht eigenen Hund</span></a></li><li><a href="https://www.zeit.de/news/2026-10/27/schwarzarbeit-am-bau-zoll-razzia-am-untermain" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Kriminalität am Bau: Schwarzarbeit am Bau? Zoll-Razzia am Untermain</span></a></li><li><a href="https://www.zeit.de/news/2026-10/27/polizei-stoppt-kind-auf-e-scooter-verfahren-gegen-mutter" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Zu jung: Polizei stoppt Kind auf E-Scooter - Verfahren gegen Mutter</span></a></li><li><a href="https://www.zeit.de/news/2026-10/27/wegen-mordes-verurteilter-45-jaehriger-gefasst" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Kriminalität: Wegen Mordes verurteilter 45-Jähriger gefasst</span></a></li><li><a href="https://www.zeit.de/news/2026-10/27/schiffswrack-von-1495-munitionskiste-und-kettenhemd" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Unterwasser-Archäologie: Schiffswrack von 1495: Munitionskiste und Kettenhemd</span></a></li><li><a href="https://www.zeit.de/news/2026-10/27/dynamo-will-erneut-gegen-schalke-pokalsensation-schaffen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">DFB-Pokal: Dynamo will erneut gegen Schalke Pokalsensation schaffen</span></a></li><li><a href="https://www.spiegel.de/sport/fussball/galatasaray-gegen-fenerbahce-istanbul-derby-muendet-nach-abpfiff-in-schlaegerei-a-79c8ee63-65d4-4dc0-9923-c88aa19be2b8#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Galatasaray gegen Fenerbahçe: Istanbul-Derby mündet nach Abpfiff in Schlägerei</span></a></li><li><a href="https://www.zeit.de/familie/2026-10/beziehung-rente-haushalt-ungleichgewicht-aufgaben" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Beziehung in der Rente: Wer kümmert sich bei Ihnen im Rentenalter um den Haushalt?</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/jordanische-angriffe-syrien-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Jordanische Luftwaffe greift Ziele in Syrien an</span></a></li><li><a href="https://www.zeit.de/2026/46/robotik-suedkorea-job-verlust-gewerkschaften-hyundai" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Robotik in Südkorea: Dieser Kollege wird nie krank, nimmt keinen Urlaub und streikt nie</span></a></li><li><a href="https://www.tagesschau.de/ausland/afrika/demokratische-republik-kongo-ebola-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Mehr als 10.000 Ebola-Fälle in Demokratischer Republik Kongo bestätigt</span></a></li><li><a href="https://www.spiegel.de/mobilitaet/bus-bahn/bahnstrecke-hamburg-berlin-wegen-weltkriegsbombe-gesperrt-a-f39202a3-9327-4090-a013-677ddbd8d738#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Bahnstrecke Hamburg–Berlin wegen Weltkriegsbombe gesperrt</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/verbraucher/sparquote-deutschland-2026-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Deutsche sparen weniger - aber immer noch viel</span></a></li><li><a href="https://www.faz.net/aktuell/rhein-main/wirtschaft/tegut-75-prozent-rabatt-in-der-letzten-abverkaufswoche-accg-201621456.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">75 Prozent Rabatt: Endspurt beim Ausverkauf in den Tegut-Märkten</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/kaliforniens-milliardaerssteuer-sergey-brin-kaempft-mit-millionen-dagegen-accg-201616258.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Vermögensabgabe: Kalifornien probt den Aufstand gegen die Superreichen</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/kolumnen/schlaflos/sprachentwicklung-erstes-hab-dich-lieb-erste-drohung-accg-201608592.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Sprachentwicklung: Ein erstes Mal „Ich hab dich lieb!“</span></a></li><li><a href="https://www.welt.de/politik/ausland/video6ae0767541a652332eb6d524/parlamentswahl-in-israel-es-sieht-nicht-gut-aus-fuer-netanjahu.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Es sieht nicht gut aus für Netanjahu“</span></a></li><li><a href="https://taz.de/Radio-aus-migrantischer-Sicht/!6225013/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Radio aus migrantischer Sicht: Die Ungehörten hörbar machen</span></a></li><li><a href="https://www.deutschlandfunk.de/bundespraesident-steinmeier-beginnt-china-reise-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Staatsbesuch - Bundespräsident Steinmeier beginnt China-Reise</span></a></li><li><a href="https://www.deutschlandfunk.de/ausschreitungen-bei-protesten-gegen-rechten-influencer-in-bilbao-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Spanien - Ausschreitungen bei Protesten gegen rechten Influencer in Bilbao</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 27.10.2026 um 11:41 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
