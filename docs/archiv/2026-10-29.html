@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 29.10.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Thursday, 29. October 2026 &middot; 12:36 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">351 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Mitteilung - EZB-Präsidentin Lagarde gibt ihr Amt im Februar vorzeitig auf</h3>
+          <div class="zaehler">
+            <b>9</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/ezb-praesidentin-lagarde-gibt-ihr-amt-im-februar-vorzeitig-auf-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Mitteilung - EZB-Präsidentin Lagarde gibt ihr Amt im Februar vorzeitig auf</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/lagarde-ezb-ruecktritt-februar-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">EZB-Chefin Lagarde geht vorzeitig</span></a></li><li><a href="https://www.zeit.de/wirtschaft/2026-10/christine-lagarde-hoert-vorzeitig-als-ezb-praesidentin-auf" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">EZB-Präsidentin: Christine Lagarde hört vorzeitig als EZB-Präsidentin auf</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/finanzen/lagarde-ezb-ruecktritt-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">EZB-Chefin Lagarde tritt im Februar vorzeitig zurück</span></a></li><li><a href="https://www.tagesschau.de/video/video-1674460.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">EZB-Chefin Lagarde tritt vorzeitig zurück</span></a></li><li><a href="https://taz.de/Leitung-der-Europaeischen-Zentralbank/!6225963/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Leitung der Europäischen Zentralbank: Christine Lagarde hört früher auf</span></a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/ezb-christine-lagarde-europaeische-zentralbank-nachfolge-deutschland-li.3571032" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Finanzen: EZB-Präsidentin Lagarde wird im Februar vorzeitig abtreten</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/ezb-praesidentin-christine-lagarde-wird-im-februar-vorzeitig-abtreten-accg-201632334.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Am 7. Februar 2027: EZB-Präsidentin Lagarde tritt im Februar vorzeitig zurück</span></a></li><li><a href="https://www.spiegel.de/wirtschaft/ezb-chefin-christine-lagarde-tritt-vorzeitig-zurueck-a-a66e7d48-d3d5-44cb-819d-1ef9f3ae427c#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">EZB-Chefin Christine Lagarde tritt vorzeitig zurück</span></a></li><li><a href="https://www.welt.de/wirtschaft/article6ae31aa94a674ddd4ba2368d/ezb-chefin-lagarde-tritt-vorzeitig-zurueck.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">EZB-Chefin Christine Lagarde tritt vorzeitig zurück</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Konzern in der Krise: Volkswagen fährt Milliardenverlust ein</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:67%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/video/volkswagen-faehrt-milliardenverlust-ein-201632574.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Konzern in der Krise: Volkswagen fährt Milliardenverlust ein</span></a></li><li><a href="https://www.deutschlandfunk.de/vw-meldet-milliardenverlust-im-dritten-quartal-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wolfsburg - VW meldet Milliardenverlust im dritten Quartal</span></a></li><li><a href="https://www.deutschlandfunk.de/tech-konzern-samsung-meldet-rekordgewinn-im-dritten-quartal-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wirtschaft - Tech-Konzern Samsung meldet Rekordgewinn im dritten Quartal</span></a></li><li><a href="https://www.tagesschau.de/video/video-1674470.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Für drittes Quartal meldet VW Verlust von rund 5,8 Milliarden Euro</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/volkswagen-milliardenverlust-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Milliardenverlust bei Volkswagen</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/unternehmen/vw-volkswagen-quartalszahlen-verlust-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Volkswagen meldet Mega-Verlust von 5,82 Milliarden Euro</span></a></li><li><a href="https://taz.de/582-Milliarden-Euro-Verlust-fuer-VW---Das-sind-die-Gruende/!6225916/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Krise der Autoindustrie: 5,82 Milliarden Euro Verlust für VW</span></a></li><li><a href="https://www.spiegel.de/wirtschaft/unternehmen/volkswagen-umsatz-und-absatz-brechen-ein-milliardenverlust-im-dritten-quartal-a-88c5c68a-79d0-4d3a-b4b8-59a784aba3e9#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">VW: Volkswagen meldet im dritten Quartal Milliardenverlust</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/vw-meldet-milliardenverlust-im-dritten-quartal-accg-201631461.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Autohersteller: Volkswagen macht 5,8 Milliarden Euro Verlust</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Russland greift ukrainischen Bahnhof an – 13 Tote</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:67%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/politik/ausland/article6ae320afec13b5a805f8ad49/ukraine-krieg-russland-greift-ukrainischen-bahnhof-an-13-tote.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Russland greift ukrainischen Bahnhof an – 13 Tote</span></a></li><li><a href="https://www.zeit.de/politik/ausland/ukraine-krieg-news-liveblog" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Krieg gegen die Ukraine: Mindestens 13 Tote nach russischem Angriff auf Bahnhof in Dnipro</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-ukraine-13-tote-bei-russischem-drohnenangriff-auf-bahnhof-in-dnipro-faz-110683325.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Ukrainekrieg: Ukraine: 13 Tote bei russischem Drohnenangriff auf Bahnhof in Dnipro</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.sueddeutsche.de/politik/ukraine-krieg-russland-moskau-drohnen-angriffe-li.3563283" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Krieg in der Ukraine: 1200 Drohnen: Russland meldet einen der bisher größten ukrainischen Angriffe</span></a></li><li><a href="https://www.faz.net/aktuell/ukrainische-bahn-im-krieg-russlands-angriff-auf-die-lebensader-201614555.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Bahn im Krieg: Russland zielt auf die Lebensader der Ukraine</span></a></li><li><a href="https://taz.de/1708-Tage-Krieg-in-der-Ukraine/!6223984/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">1.708 Tage Krieg in der Ukraine: Eiserner Vorhang 2.0</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Nach Flucht in die USA - Bolsonaro erklärt sich zum &quot;Anführer&quot; von Brasilien</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:56%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bolsonaro-erklaert-sich-zum-anfuehrer-von-brasilien-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Flucht in die USA - Bolsonaro erklärt sich zum &quot;Anführer&quot; von Brasilien</span></a></li><li><a href="https://taz.de/Nach-verlorener-Wahl-in-den-USA-Bolsonaro-stilisiert-sich-zum-Opfer/!6225911/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Nach Flucht in die USA: Bolsonaro stilisiert sich zum Opfer</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/brasilien-bolsonaro-wahlsieger-lula-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Bolsonaro erklärt sich in den USA zum &quot;Anführer&quot; Brasiliens</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/bolsonaro-flucht-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Brasiliens Wahlverlierer: Bolsonaros spektakuläre Flucht</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/flavio-bolsonaro-erklaert-sich-zum-praesidenten-brasiliens-201630574.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Flucht nach Florida: Bolsonaro erklärt sich zum gewählten Präsidenten – und rudert dann ein Stück zurück</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/flavio-bolsonaro-erklaerung-wahlsieger-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bolsonaro erklärt sich selbst zum Wahlsieger - aus den USA</span></a></li><li><a href="https://www.tagesschau.de/tagesthemen/video-1674312.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Ehemaliger Präsidentschaftskandidat Flávio Bolsonaro setzt sich in die USA ab</span></a></li><li><a href="https://www.zdfheute.de/video/politik-bolsonaro-in-usa-gelandet-brasilien-video-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Hier landet Bolsonaro im Privatjet in den USA</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Parlamentswahl in Israel: Behörden sehen keine Beweise für Betrug bei Wahl in Israel</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:56%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/politik/ausland/2026-10/parlamentswahl-israel-benjamin-netanjahu-gadi-eisenkot-live" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Parlamentswahl in Israel: Behörden sehen keine Beweise für Betrug bei Wahl in Israel</span></a></li><li><a href="https://www.deutschlandfunk.de/historiker-segev-rechnet-mit-regierung-der-nationalen-einheit-in-israel-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Parlamentswahl - Historiker Segev rechnet mit Regierung der nationalen Einheit in Israel</span></a></li><li><a href="https://www.zdfheute.de/video/heute-journal/israel-reichart-sievers-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Gemischte Stimmung in Israel nach der Wahl</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/israel-wahl-mehrheitsverhaeltnisse-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Netanjahu nach Wahl in Israel ohne Mehrheit und trotzdem am Hebel</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/israel-arabische-parteien-wahl-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Parlamentswahl in Israel: Wofür die arabischen Parteien stehen</span></a></li><li><a href="https://taz.de/Parlamentswahl-in-Israel/!6225584/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Parlamentswahl in Israel: Angezählt, aber nicht abgewählt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Suche nach Opfern des Zugunglücks in Spanien geht weiter</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:56%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/ausland/europa/spanien-zugunglueck-128.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Suche nach Opfern des Zugunglücks in Spanien geht weiter</span></a></li><li><a href="https://www.deutschlandfunk.de/demonstration-nach-zugunglueck-in-spanien-suche-nach-opfern-fortgesetzt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Madrid - Demonstration nach Zugunglück in Spanien, Suche nach Opfern fortgesetzt</span></a></li><li><a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-10/zugunglueck-spanien-bergungsarbeiten-tote-verletzte-staatstrauer" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Zugunglück in Spanien: Rettungskräfte suchen nach Zugunglück mit Kränen nach Vermissten</span></a></li><li><a href="https://www.zdfheute.de/panorama/spanien-zugunglueck-suche-opfer-vermisste-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Suche nach Opfern des Zugunglücks in Spanien dauert an</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/zugunglueck-in-spanien-suche-nach-opfern-dauert-an-ausschreitungen-in-madrid-accg-201631377.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Zugunglück in Spanien: Suche nach Opfern dauert an – Ausschreitungen in Madrid</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>SPD-Politiker Müller hält Linke Elif Eralp für erpressbar</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:56%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/linke-eralp-berlin-hamas-terror-angst-koalition-mueller-spd-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">SPD-Politiker Müller hält Linke Elif Eralp für erpressbar</span></a></li><li><a href="https://www.welt.de/politik/deutschland/video6ae31ec221fd087fed7ee961/berliner-linken-politikerin-elif-eralp-ist-doch-eher-eine-getriebene.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Elif Eralp ist doch eher eine Getriebene“</span></a></li><li><a href="https://taz.de/Bericht-des-Spiegel/!6225931/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Bericht des „Spiegels“: Elif Eralp hat Angst</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-elif-eralp-aeussert-intern-angst-vor-hamas-sympathisanten-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: Elif Eralp äußert intern Angst vor Hamas-Sympathisanten</span></a></li><li><a href="https://www.spiegel.de/politik/deutschland/linkenpolitikerin-elif-eralp-offenbart-angst-vor-terrorsympathisanten-a-94a0c067-ce3d-4435-9e5d-0d2dc2fbb81e#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Linke in Berlin: Elif Eralp offenbart Angst vor Terrorsympathisanten</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Nahost-Konflikt - Bericht: Vance soll Irans Sicherheitsratschef Resaei kontaktiert haben</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:44%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bericht-vance-soll-irans-sicherheitsratschef-resaei-kontaktiert-haben-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nahost-Konflikt - Bericht: Vance soll Irans Sicherheitsratschef Resaei kontaktiert haben</span></a></li><li><a href="https://www.sueddeutsche.de/politik/liveblog-nahost-news-iran-frieden-gespraeche-us-regierung-vermittler-li.3560260" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Nahost: Berichte: Vance lotet Chance auf Verhandlungen mit Iran aus</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/usa-iran-friedensverhandlungen-vance-resaei-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Bericht: Vance lotet Kontakt zu Iran aus</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/iran-jd-vance-kontaktierte-sicherheitsratschef-mohsen-resaei-accg-201631083.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">US-Vizepräsident: Vance soll mit Iran Chance auf Verhandlungen ausloten</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Linke-Abgeordnete Klein zur Präsidentin des Berliner Abgeordnetenhauses gewählt</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/politik/deutschland/article6ae327f3ec13b5a805f8ae70/berlin-linke-abgeordnete-klein-zur-praesidentin-des-abgeordnetenhauses-gewaehlt.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Linke-Abgeordnete Klein zur Präsidentin des Berliner Abgeordnetenhauses gewählt</span></a></li><li><a href="https://www.deutschlandfunk.de/berliner-abgeordnetenhaus-linken-politikerin-klein-zur-praesidentin-gewaehlt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Konstituierende Sitzung - Berliner Abgeordnetenhaus: Linken-Politikerin Klein zur Präsidentin gewählt</span></a></li><li><a href="https://www.deutschlandfunk.de/neues-abgeordnetenhaus-konstituiert-sich-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Berlin - Neues Abgeordnetenhaus konstituiert sich</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/berlin-abgeordnetenhaus-erste-sitzung-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Konstituierende Sitzung von neu gewähltem Abgeordnetenhaus in Berlin</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Zweite Runde - DFB-Pokal: Kiel besiegt Hoffenheim im Elfmeterschießen - Siege für Bayern, Leverkusen und Kaiserslautern</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/dfb-pokal-kiel-besiegt-hoffenheim-im-elfmeterschiessen-siege-fuer-bayern-leverkusen-und-kaiserslaute-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Zweite Runde - DFB-Pokal: Kiel besiegt Hoffenheim im Elfmeterschießen - Siege für Bayern, Leverkusen und Kaiserslautern</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-dfb-pokal-holstein-kiel-tsg-hoffenheim-tore-ergebnis26-27-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Kiel schockt Hoffenheim: Sieg nach Elfmeter-Krimi</span></a></li><li><a href="https://www.sueddeutsche.de/sport/dfb-pokal-ergebnisse-stuttgart-freiburg-schalke-hoffenheim-li.3570768" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">DFB-Pokal: Kiel wirft Hoffenheim raus – Dresden besiegt Schalke – Wagner verliert erneut</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-dfb-pokal/video/holstein-kiel-tsg-hoffenheim-2-runde-zusammenfassung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Kiel nach Elfer-Krimi gegen Hoffenheim weiter</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>USA - Hacker veröffentlichen Daten von ICE-Beschäftigten</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/hacker-veroeffentlichen-daten-von-ice-beschaeftigten-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">USA - Hacker veröffentlichen Daten von ICE-Beschäftigten</span></a></li><li><a href="https://www.sueddeutsche.de/politik/usa-news-liveblog-ice-hackerangriff-us-heimatschutzministerium-li.3568285" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">USA: Hackerangriff auf Daten von ICE-Beamten</span></a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/liveticker-usa-unter-trump-hacker-erbeuten-daten-von-tausenden-ice-beamten-faz-19444916.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">USA unter Trump: Hacker entwenden Daten von Tausenden ICE-Beamten</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>FC Bayern fertigt Magdeburg im DFB-Pokal ab – Kiel sorgt für Überraschung</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/teaservideos/video6ae313ef4a674ddd4ba235bc/zweite-runde-fc-bayern-fertigt-magdeburg-im-dfb-pokal-ab-kiel-sorgt-fuer-ueberraschung.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">FC Bayern fertigt Magdeburg im DFB-Pokal ab – Kiel sorgt für Überraschung</span></a></li><li><a href="https://www.sportschau.de/fussball/dfbpokal/fc-bayern-gegen-magdeburg-ohne-weltfussballer-und-ohne-gnade,spielbericht-dfb-pokal-bayern-magdeburg-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">DFB-Pokal: Bayern gegen Magdeburg gnadenlos - auch ohne Kane</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-dfb-pokal/video/fc-bayern-muenchen-1-fc-magdeburg-2-runde-zusammenfassung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Magdeburg ärgert FC Bayern nur kurz</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Merz fordert auf Asienreise neue Allianz für regelbasierten Handel</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/wirtschaft/weltwirtschaft/merz-asienbesuch-japan-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Merz fordert auf Asienreise neue Allianz für regelbasierten Handel</span></a></li><li><a href="https://www.faz.net/video/merz-schlaegt-in-japan-globale-allianz-fuer-regelgebundenen-handel-vor-201630073.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">„Einschließlich der WTO“: Merz schlägt in Japan globale Allianz für regelgebundenen Handel vor</span></a></li><li><a href="https://www.phoenix.de/merz-in-asien-a-5243284.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Deutsch-japanischer Wirtschaftsgipfel: &quot;Globale politische Allianz für regelgebundenen Handel&quot;</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Gesundheitspolitik - Linnemann hält Leistungskürzungen bei der Pflege für möglich</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/linnemann-haelt-leistungskuerzungen-bei-der-pflege-fuer-moeglich-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Gesundheitspolitik - Linnemann hält Leistungskürzungen bei der Pflege für möglich</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/linnemann-kuerzungen-pflegeleistungen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Pflegeversicherung: Linnemann schließt Leistungskürzungen nicht aus</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Brandenburg - Rotes Kreuz eröffnet größtes Bevölkerungsschutzzentrum Deutschlands</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/rotes-kreuz-eroeffnet-groesstes-bevoelkerungsschutzzentrum-deutschlands-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Brandenburg - Rotes Kreuz eröffnet größtes Bevölkerungsschutzzentrum Deutschlands</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/brandenburg/groesstes-bevoelkerungsschutzzentrum-deutschlands-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Rotes Kreuz eröffnet größtes Bevölkerungsschutzzentrum in Brandenburg</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Bayern - Ermittlungen gegen Belarussen wegen Sabotageverdachts</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/ermittlungen-gegen-belarussen-wegen-sabotageverdachts-112.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bayern - Ermittlungen gegen Belarussen wegen Sabotageverdachts</span></a></li><li><a href="https://www.tagesschau.de/inland/bayern-ermittlungen-gegen-belarusen-sabotage-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bayern: Ermittlungen gegen zwei Belarusen wegen Sabotageverdacht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Asien-Reise von Merz - Südkorea und Deutschland vereinbaren Zusammenarbeit bei Verteidigung</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/suedkorea-und-deutschland-vereinbaren-zusammenarbeit-bei-verteidigung-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Asien-Reise von Merz - Südkorea und Deutschland vereinbaren Zusammenarbeit bei Verteidigung</span></a></li><li><a href="https://taz.de/Asien-Reise-des-Bundeskanzlers/!6225746/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Asien-Reise des Bundeskanzlers: Merz wirbt für engere Zusammenarbeit</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Bericht - Nordkorea testet zehn Kurzstreckenraketen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/nordkorea-testet-zehn-kurzstreckenraketen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bericht - Nordkorea testet zehn Kurzstreckenraketen</span></a></li><li><a href="https://www.spiegel.de/ausland/suedkorea-nordkorea-testet-ballistische-kurzstreckenraketen-a-432a82a2-4d17-48bb-bd53-ff7b8506a649#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Südkorea: Nordkorea testet ballistische Kurzstreckenraketen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Folgen des Bürgerkriegs - UNO: Immer mehr Menschen im Jemen durch Kämpfe vertrieben</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/uno-immer-mehr-menschen-im-jemen-durch-kaempfe-vertrieben-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Folgen des Bürgerkriegs - UNO: Immer mehr Menschen im Jemen durch Kämpfe vertrieben</span></a></li><li><a href="https://taz.de/Krieg-im-und-um-den-Jemen/!6225921/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Krieg im und um den Jemen: Immer mehr Menschen im Jemen durch Kämpfe vertrieben</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Im Alter von 96 Jahren - US-Bürgerrechtlerin Dolores Huerta gestorben</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/us-buergerrechtlerin-dolores-huerta-gestorben-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Im Alter von 96 Jahren - US-Bürgerrechtlerin Dolores Huerta gestorben</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/medien-und-film/kino/schauspielerin-elke-sommer-ist-tot-accg-201632091.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Im Alter von 85 Jahren: Elke Sommer ist gestorben</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Jan Böhmermann: »ZDF Magazin Royale« laut ZDF-Intendant Himmler »vielleicht am Ende zu fanatisch«</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/kultur/tv/jan-boehmermann-zdf-magazin-royale-laut-zdf-intendant-himmler-vielleicht-am-ende-zu-fanatisch-a-e06e31fd-c853-474e-babc-94017ce2605b#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Jan Böhmermann: »ZDF Magazin Royale« laut ZDF-Intendant Himmler »vielleicht am Ende zu fanatisch«</span></a></li><li><a href="https://www.welt.de/kultur/medien/article6ae3165021fd087fed7ee838/zdf-magazin-royale-aus-boehmermann-show-war-am-ende-zu-fanatisch-kritisiert-der-zdf-intendant-himmler.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Böhmermann-Show war „am Ende zu fanatisch“, kritisiert der ZDF-Intendant Himmler</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>Christina Block: Christina Block muss bei Vater lebenden Kindern Unterhalt zahlen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-10/christina-block-unterhalt-daenemark-familiengericht-stephan-hensel-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Christina Block: Christina Block muss bei Vater lebenden Kindern Unterhalt zahlen</span></a></li><li><a href="https://www.welt.de/regionales/hamburg/article6ae31dd321fd087fed7ee942/familie-block-christina-block-muss-ihren-kindern-in-daenemark-unterhalt-zahlen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Christina Block muss ihren Kindern in Dänemark Unterhalt zahlen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">23</span>
+          <h3>Hausexplosion in Regensburg: Einsatzkräfte bereiten sich auf mögliche Leichenbergung vor</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/bayern/regensburg-brand-explosion-mehrfamilienhaus-li.3570290" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Hausexplosion in Regensburg: Einsatzkräfte bereiten sich auf mögliche Leichenbergung vor</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/hausexplosion-in-regensburg-zwei-personen-vermisst-accg-201631903.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Regensburg: Zwei Menschen nach Hausexplosion vermisst</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">24</span>
+          <h3>Zugunglück in Spanien: In der Nacht starb die letzte Hoffnung</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/trauer-und-wut-nach-verheerender-kollision-in-spanien-accg-201631708.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Zugunglück in Spanien: In der Nacht starb die letzte Hoffnung</span></a></li><li><a href="https://www.sueddeutsche.de/panorama/zugunglueck-spanien-tote-li.3570371" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Zugunglück in Spanien: In den Tod gerast</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">25</span>
+          <h3>Vor dem EU-Kanada-Gipfel: Kanada wird vorerst kein assoziiertes EU-Mitglied</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Kanada-wird-vorerst-kein-assoziiertes-EU-Mitglied/!6225915/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Vor dem EU-Kanada-Gipfel: Kanada wird vorerst kein assoziiertes EU-Mitglied</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/eu-kanada-gipfel-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">EU-Kanada-Gipfel: Kanada wird vorerst kein &quot;assoziiertes EU-Mitglied&quot;</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/wirtschaft/finanzen/lagarde-ezb-ruecktritt-100.html" target="_blank" rel="noopener">EZB-Chefin Lagarde tritt im Februar vorzeitig zurück</a></li><li><a href="https://www.tagesschau.de/video/video-1674430.html" target="_blank" rel="noopener">Zugunglück in Spanien: ARD-Reporter Kisters berichtet von Bergungsarbeiten an Unfallstelle</a></li><li><a href="https://www.tagesschau.de/video/video-1674434.html" target="_blank" rel="noopener">„Sehr unwahrscheinlich&quot;: ARD-Bahnexperte zu möglichen Zugunglücken in Deutschland</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/linke-eralp-berlin-hamas-terror-angst-koalition-mueller-spd-100.html" target="_blank" rel="noopener">SPD-Politiker Müller hält Linke Elif Eralp für erpressbar</a></li><li><a href="https://www.zdfheute.de/wirtschaft/lagarde-ezb-ruecktritt-februar-100.html" target="_blank" rel="noopener">EZB-Chefin Lagarde geht vorzeitig</a></li><li><a href="https://www.zdfheute.de/politik/ausland/brasilien-bolsonaro-wahlsieger-lula-100.html" target="_blank" rel="noopener">Bolsonaro erklärt sich in den USA zum &quot;Anführer&quot; Brasiliens</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/ezb-praesidentin-lagarde-gibt-ihr-amt-im-februar-vorzeitig-auf-100.html" target="_blank" rel="noopener">Mitteilung - EZB-Präsidentin Lagarde gibt ihr Amt im Februar vorzeitig auf</a></li><li><a href="https://www.deutschlandfunk.de/steinmeier-appelliert-an-china-wegen-ukraine-krieg-und-handelskonflikt-100.html" target="_blank" rel="noopener">Besuch in Peking - Steinmeier appelliert an China wegen Ukraine-Krieg und Handelskonflikt</a></li><li><a href="https://www.deutschlandfunk.de/suedkorea-und-deutschland-vereinbaren-zusammenarbeit-bei-verteidigung-100.html" target="_blank" rel="noopener">Asien-Reise von Merz - Südkorea und Deutschland vereinbaren Zusammenarbeit bei Verteidigung</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/politik/deutschland/linkenpolitikerin-elif-eralp-offenbart-angst-vor-terrorsympathisanten-a-94a0c067-ce3d-4435-9e5d-0d2dc2fbb81e#ref=rss" target="_blank" rel="noopener">Linke in Berlin: Elif Eralp offenbart Angst vor Terrorsympathisanten</a></li><li><a href="https://www.spiegel.de/wirtschaft/ezb-chefin-christine-lagarde-tritt-vorzeitig-zurueck-a-a66e7d48-d3d5-44cb-819d-1ef9f3ae427c#ref=rss" target="_blank" rel="noopener">EZB-Chefin Christine Lagarde tritt vorzeitig zurück</a></li><li><a href="https://www.spiegel.de/ausland/kanadas-mark-carney-donald-trumps-widersacher-ist-europas-neuer-bestie-a-5f307c42-f882-4912-b4b3-204c9a0b3261#ref=rss" target="_blank" rel="noopener">Kanadas Mark Carney: Donald Trumps Widersacher ist Europas neuer Bestie</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/mobilitaet/2026-10/volkswagen-krise-unternehmen-china-autoindustrie" target="_blank" rel="noopener">volkswagen: Das Desaster nimmt kein Ende</a></li><li><a href="https://www.zeit.de/news/2026-10/29/dauernebel-und-abkuehlung-hoch-bringt-truebere-herbsttage" target="_blank" rel="noopener">Wetter: Dauernebel und Abkühlung: Hoch bringt trübere Herbsttage</a></li><li><a href="https://www.zeit.de/news/2026-10/29/douglas-haelt-samstag-zwoelf-filialen-geschlossen" target="_blank" rel="noopener">Jugendproteste: Douglas hält Samstag zwölf Filialen geschlossen</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/politik/landtagswahlen-deutschland-berlin-linke-klein-parlamentspraesidentin-li.3540501" target="_blank" rel="noopener">Newsblog zu den Landtagswahlen: Linke-Politikerin Klein neue Berliner Parlamentspräsidentin</a></li><li><a href="https://www.sueddeutsche.de/gesundheit/vincent-kompany-hirnhautreizung-fc-bayern-meningismus-virusinfekt-li.3570990" target="_blank" rel="noopener">Medizin: Was ist eine Hirnhautreizung?</a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/ezb-christine-lagarde-europaeische-zentralbank-nachfolge-deutschland-li.3571032" target="_blank" rel="noopener">Finanzen: EZB-Präsidentin Lagarde wird im Februar vorzeitig abtreten</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/wirtschaft/ezb-praesidentin-christine-lagarde-wird-im-februar-vorzeitig-abtreten-accg-201632334.html" target="_blank" rel="noopener">Am 7. Februar 2027: EZB-Präsidentin Lagarde tritt im Februar vorzeitig zurück</a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-elif-eralp-aeussert-intern-angst-vor-hamas-sympathisanten-faz-110093143.html" target="_blank" rel="noopener">Deutschland Liveblog: Elif Eralp äußert intern Angst vor Hamas-Sympathisanten</a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/trauer-und-wut-nach-verheerender-kollision-in-spanien-accg-201631708.html" target="_blank" rel="noopener">Zugunglück in Spanien: In der Nacht starb die letzte Hoffnung</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/politik/deutschland/video6ae32af24a674ddd4ba23901/nach-spiegel-bericht-ich-werde-mich-von-niemandem-einschuechtern-lassen-sagt-eralp.html" target="_blank" rel="noopener">„Ich werde mich von niemandem einschüchtern lassen“, sagt Eralp</a></li><li><a href="https://www.welt.de/politik/deutschland/article6ae327f3ec13b5a805f8ae70/berlin-linke-abgeordnete-klein-zur-praesidentin-des-abgeordnetenhauses-gewaehlt.html" target="_blank" rel="noopener">Linke-Abgeordnete Klein zur Präsidentin des Berliner Abgeordnetenhauses gewählt</a></li><li><a href="https://www.welt.de/politik/ausland/article6ae320afec13b5a805f8ad49/ukraine-krieg-russland-greift-ukrainischen-bahnhof-an-13-tote.html" target="_blank" rel="noopener">Russland greift ukrainischen Bahnhof an – 13 Tote</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Proteste-in-Frankreich-Italien-Deutschland-Wie-waere-es-mit-einer-Politik-der-Bezahlbarkeit/!6225374/" target="_blank" rel="noopener">Frankreich, Italien, Deutschland: Die richtige Antwort auf die Proteste</a></li><li><a href="https://taz.de/Bericht-des-Spiegel/!6225931/" target="_blank" rel="noopener">Bericht des „Spiegels“: Elif Eralp hat Angst</a></li><li><a href="https://taz.de/Nach-der-Stichwahl-in-Brasilien/!6225913/" target="_blank" rel="noopener">Nach der Stichwahl in Brasilien: Flávio Bolsonaro macht sich lächerlich</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.zeit.de/mobilitaet/2026-10/volkswagen-krise-unternehmen-china-autoindustrie" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">volkswagen: Das Desaster nimmt kein Ende</span></a></li><li><a href="https://www.zeit.de/news/2026-10/29/dauernebel-und-abkuehlung-hoch-bringt-truebere-herbsttage" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Wetter: Dauernebel und Abkühlung: Hoch bringt trübere Herbsttage</span></a></li><li><a href="https://www.zeit.de/news/2026-10/29/douglas-haelt-samstag-zwoelf-filialen-geschlossen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Jugendproteste: Douglas hält Samstag zwölf Filialen geschlossen</span></a></li><li><a href="https://www.zeit.de/news/2026-10/29/bgh-hebt-urteil-gegen-anwaeltin-teilweise-auf" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Landgericht Frankfurt: BGH hebt Urteil gegen Anwältin teilweise auf</span></a></li><li><a href="https://www.zeit.de/news/2026-10/29/adidas-waechst-stark-mit-bekleidung" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Sportartikel: Adidas wächst stark mit Bekleidung</span></a></li><li><a href="https://www.zeit.de/news/2026-10/29/traum-comeback-nach-leidenszeit-prtajin-ist-wieder-da" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">DFB-Pokal: Traum-Comeback nach Leidenszeit: Prtajin ist wieder da</span></a></li><li><a href="https://www.zeit.de/news/2026-10/29/vogel-verstopft-abgasleitung-frau-stirbt-an-co-vergiftung" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Senioren kamen in Klinik: Vogel verstopft Abgasleitung – Frau stirbt an CO-Vergiftung</span></a></li><li><a href="https://www.zeit.de/news/2026-10/29/aok-viele-hessen-arbeiten-trotz-krankheitsgefuehl" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Gesundheitsumfrage: AOK: Viele Hessen arbeiten trotz Krankheitsgefühl</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/spanien-zugunglueck-reportage-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Zugunglück in Spanien: Der Schock sitzt tief</span></a></li><li><a href="https://www.welt.de/politik/deutschland/video6ae32af24a674ddd4ba23901/nach-spiegel-bericht-ich-werde-mich-von-niemandem-einschuechtern-lassen-sagt-eralp.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Ich werde mich von niemandem einschüchtern lassen“, sagt Eralp</span></a></li><li><a href="https://www.zeit.de/news/2026-10/29/olympiasiegerin-mit-stempel-carls-rueckkehr-nach-sperre" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Langlauf: Olympiasiegerin mit Stempel? Carls Rückkehr nach Sperre</span></a></li><li><a href="https://www.zdfheute.de/video/un-vertriebene-im-jemen-video-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Jemen: Krankenhaus bringt Babys vor Raketen in Sicherheit</span></a></li><li><a href="https://www.tagesschau.de/wetter/deutschland/wettervorhersage-deutschland-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Wetter Deutschland: Wolken, Temperaturen, Wind und Aussichten</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/steinmeier-china-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Steinmeier-Rede in China: &quot;Mit Größe und Macht kommt große Verantwortung&quot;</span></a></li><li><a href="https://www.faz.net/aktuell/sport/rhein-main-sport/mainz-05/mainz-05-schlechte-mainzer-pokaltradition-accg-201631757.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Aus im DFB-Pokal: Schlechte Mainzer Pokaltradition</span></a></li><li><a href="https://www.faz.net/aktuell/sport/rhein-main-sport/eintracht-frankfurt/eintracht-frauen-frankfurterinnen-vor-einzug-ins-viertelfinale-accg-201632216.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Europa Cup: Eintracht-Frauen vor Einzug ins Viertelfinale</span></a></li><li><a href="https://www.welt.de/politik/deutschland/plus6ae2fb534a674ddd4ba23376/demo-von-gen-z-regelt-wir-kommen-da-zu-einem-anderen-schluss-als-die-gruene-jugend.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Wir kommen da zu einem anderen Schluss als die Grüne Jugend“</span></a></li><li><a href="https://www.welt.de/videos/video6ae32653ec13b5a805f8ae1b/austausch-in-berlin-ukrainische-und-deutsche-jugendliche-treffen-sich-in-der-hauptstadt.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Ukrainische und deutsche Jugendliche treffen sich in der Hauptstadt</span></a></li><li><a href="https://www.tagesschau.de/tagesschau/ts-81730.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">tagesschau</span></a></li><li><a href="https://www.zeit.de/politik/deutschland/2026-10/bundesschuelerkonferenz-demonstration-berlin-amy-kirchhoff-gew-fridays-for-future-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Demonstration in Berlin: Bundesschülerkonferenz plant für 20. November Protest in Berlin</span></a></li><li><a href="https://www.deutschlandfunk.de/steinmeier-appelliert-an-china-wegen-ukraine-krieg-und-handelskonflikt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Besuch in Peking - Steinmeier appelliert an China wegen Ukraine-Krieg und Handelskonflikt</span></a></li><li><a href="https://www.deutschlandfunk.de/europaeische-oelkonzerne-fahren-hohe-milliardengewinne-ein-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Hoher Rohölpreis - Europäische Ölkonzerne fahren hohe Milliardengewinne ein</span></a></li><li><a href="https://www.deutschlandfunk.de/schuldenlast-2025-um-fast-zehn-prozent-gestiegen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Kommunen - Schuldenlast 2025 um fast zehn Prozent gestiegen</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 29.10.2026 um 12:36 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
