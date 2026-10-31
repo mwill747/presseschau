@@ -1,0 +1,455 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 31.10.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Saturday, 31. October 2026 &middot; 11:59 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">340 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Staatskrise in Polen: Heftiger Machtkampf um das Verfassungsgericht entbrannt</h3>
+          <div class="zaehler">
+            <b>7</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Heftiger-Machtkampf-um-Polens-Verfassungsgericht-entbrannt/!6226337/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Staatskrise in Polen: Heftiger Machtkampf um das Verfassungsgericht entbrannt</span></a></li><li><a href="https://www.deutschlandfunk.de/machtkampf-um-polens-verfassungsgericht-entbrannt-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Justiz - Machtkampf um Polens Verfassungsgericht entbrannt</span></a></li><li><a href="https://www.deutschlandfunk.de/tumulte-um-verfassungsgericht-praesident-nawrocki-vor-ort-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Polen - Tumulte um Verfassungsgericht - Präsident Nawrocki vor Ort</span></a></li><li><a href="https://www.spiegel.de/ausland/machtkampf-um-polens-verfassungsgericht-praesident-karol-nawrocki-bangt-um-die-innere-sicherheit-seines-landes-a-205fff52-2009-47fd-b343-7fdb27356b48#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Machtkampf um Polens Verfassungsgericht: Präsident Karol Nawrocki bangt um die innere Sicherheit seines Landes</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/machtkampf-in-polen-accg-201638508.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Chaos in polen: Beim Machtkampf um das Verfassungsgericht kommt die Flex zum Einsatz</span></a></li><li><a href="https://www.welt.de/politik/ausland/article6ae59f7e4db6c62483ec2f05/warschau-machtkampf-um-polens-verfassungsgericht-eskaliert-das-vaterland-ist-in-not-mahnt-lech-walesa.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Machtkampf um Polens Verfassungsgericht eskaliert – „Das Vaterland ist in Not!“, mahnt Lech Walesa</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/polen-verfassungsgericht-streit-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Polen: Tumult und Protest vor dem Verfassungsgericht</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/polen-verfassungsgericht-krise-polizei-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Polen: Richterstreit eskaliert - Tumult am Verfassungsgericht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Gesundheit - Schon mehr als 5.000 Ebola-Tote im Kongo</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/schon-mehr-als-5-000-ebola-tote-im-kongo-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Gesundheit - Schon mehr als 5.000 Ebola-Tote im Kongo</span></a></li><li><a href="https://taz.de/Ebola-im-Kongo/!6226330/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Ebola im Kongo: Schon mehr als 5.000 Ebola-Tote im Kongo</span></a></li><li><a href="https://www.welt.de/gesundheit/article6ae59b644db6c62483ec2ec2/virale-infektionskrankheit-zahl-der-ebola-toten-im-kongo-steigt-auf-mehr-als-5000-ueber-10-000-bestaetigte-infektionen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Zahl der Ebola-Toten im Kongo steigt auf mehr als 5000 – über 10.000 bestätigte Infektionen</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/gesundheit/schon-mehr-als-5000-ebola-tote-im-kongo-accg-201638716.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Viruserkrankung: Schon mehr als 5000 Ebola-Tote in Kongo</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Parteien - Berliner Linke entscheidet über Koalitionsverhandlungen - Medienbericht: Eralp mit Personenschützer auf Parteitag</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/berliner-linke-entscheidet-ueber-koalitionsverhandlungen-medienbericht-eralp-mit-personenschuetzer-a-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Parteien - Berliner Linke entscheidet über Koalitionsverhandlungen - Medienbericht: Eralp mit Personenschützer auf Parteitag</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/berlin-linke-gruene-spd-koalitionsverhandlungen-wahl-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Linke in Berlin entscheidet über Koalitionsverhandlungen</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/linke-berlin-parteitag-eralp-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Die Linke in Berlin: Aus dem Trubel in die Koalition?</span></a></li><li><a href="https://www.zdfheute.de/video/politik-joachim-gauck-maybrit-illner-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Gauck: Linke in Berlin regieren lassen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Fußball-Bundesliga - Elversberg gewinnt gegen Mainz</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/elversberg-gewinnt-gegen-mainz-110.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Fußball-Bundesliga - Elversberg gewinnt gegen Mainz</span></a></li><li><a href="https://www.sportschau.de/fussball/bundesliga/elversberg-ueberrumpelt-mainz,spielbericht-sv-elversberg-mainz-05-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Traumtor Campbell - Elversberg überrumpelt Mainz</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/bundesliga/fussball-bundesliga-sv-elversberg-gewinnt-auch-gegen-den-1-fsv-mainz-05-201304247.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">4:1 gegen Mainz: Elversberg bejubelt den nächsten beachtlichen Erfolg</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Weitgehend friedlich - Landesweite Massenproteste in Italien für bessere Bildung und gegen hohe Preise</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/landesweite-massenproteste-in-italien-fuer-bessere-bildung-und-gegen-hohe-preise-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Weitgehend friedlich - Landesweite Massenproteste in Italien für bessere Bildung und gegen hohe Preise</span></a></li><li><a href="https://www.zdfheute.de/video/politik-italien-proteste-meloni-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Landesweite Proteste in Italien</span></a></li><li><a href="https://taz.de/Proteste-in-Italien/!6226264/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Proteste in Italien: Gewerkschaften machen gegen Meloni mobil</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Hannover 96 trennt sich von Sportchef Boldt</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/sport/fussball-zweite-liga-hannover-96-jonas-boldt-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Hannover 96 trennt sich von Sportchef Boldt</span></a></li><li><a href="https://www.welt.de/sport/fussball/article6ae5b690f49d8246067607f4/2-liga-nach-nur-fuenf-monaten-muss-sportchef-boldt-bei-hannover-96-gehen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Nach nur fünf Monaten muss Sportchef Boldt bei Hannover 96 gehen</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/bundesliga/sportchef-jonas-boldt-bei-hannover-96-entlassen-accg-201638930.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Nach 5 Monaten: Sportchef Boldt bei Hannover 96 entlassen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>USA genehmigen &quot;Patriot&quot;-Lieferungen an Ukraine</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/video/video-1675598.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">USA genehmigen &quot;Patriot&quot;-Lieferungen an Ukraine</span></a></li><li><a href="https://taz.de/-Nachrichten-im-Ukraine-Krieg-/!6226329/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">+++ Nachrichten im Ukraine-Krieg +++: USA genehmigen Verkauf von 500 Patriot-Raketen an Ukraine</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/usa-patriot-lieferung-ukraine-krieg-russland-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">USA liefern Patriot-Raketen an Kiew</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Nachruf auf Patrick Stewart: Auf einer neuen Heldenreise</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Nachruf-auf-Patrick-Stewart/!6226279/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Nachruf auf Patrick Stewart: Auf einer neuen Heldenreise</span></a></li><li><a href="https://www.zdfheute.de/panorama/prominente/patrick-stewart-tot-reaktionen-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">So nimmt die Welt Abschied von Patrick Stewart</span></a></li><li><a href="https://www.tagesschau.de/kultur/patrick-stewart-nachruf-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Nachruf auf Patrick Stewart: Er konnte Science-Fiction - und Shakespeare</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Aktuelles zum Krieg in der Ukraine</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.faz.net/aktuell/politik/trotz-sanktionen-infineon-chips-in-russischen-raketen-accg-201622974.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Krieg in der Ukraine: Russische Raketen, deutsche Wertarbeit</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>&quot;Gen Z regelt&quot; - Bundesweite Jugendproteste geplant; Sprecherin Dinter weist mögliche Unterwanderung zurück</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bundesweite-jugendproteste-geplant-sprecherin-dinter-weist-moegliche-unterwanderung-zurueck-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Gen Z regelt&quot; - Bundesweite Jugendproteste geplant; Sprecherin Dinter weist mögliche Unterwanderung zurück</span></a></li><li><a href="https://www.tagesschau.de/inland/gesellschaft/gen-z-proteste-112.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Jugendproteste in mehr als 30 Städten geplant</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Abfangraketen - US-Regierung genehmigt Patriot-Verkauf an Ukraine</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/us-regierung-genehmigt-patriot-verkauf-an-ukraine-108.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Abfangraketen - US-Regierung genehmigt Patriot-Verkauf an Ukraine</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/usa-ukraine-patriot-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">US-Regierung genehmigt &quot;Patriot&quot;-Lieferungen an Ukraine</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Gipfel in Montreal - EU und Kanada verabreden &quot;Allianz für die Zukunft&quot; - Von der Leyen spricht mit Carney auch über Mitgliedschaft</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/eu-und-kanada-verabreden-allianz-fuer-die-zukunft-von-der-leyen-spricht-mit-carney-auch-ueber-mitgli-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Gipfel in Montreal - EU und Kanada verabreden &quot;Allianz für die Zukunft&quot; - Von der Leyen spricht mit Carney auch über Mitgliedschaft</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/kanada-eu-allianz-zukunft-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">&quot;Allianz für die Zukunft&quot;: Kanada und Europa gründen Bündnis</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Ukraine-Krieg - Menschen verlassen russisch besetzte Stadt Oleschky</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/menschen-verlassen-russisch-besetzte-stadt-oleschky-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Menschen verlassen russisch besetzte Stadt Oleschky</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/ukraine-erste-menschen-verlassen-oleschky-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Erste Einwohner aus besetzter ukrainischer Stadt Oleschky evakuiert</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>G20-Treffen - Wadephul hofft auf baldige Verhandlungen zwischen Russland und der Ukraine</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/wadephul-hofft-auf-baldige-verhandlungen-zwischen-russland-und-der-ukraine-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">G20-Treffen - Wadephul hofft auf baldige Verhandlungen zwischen Russland und der Ukraine</span></a></li><li><a href="https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5243942" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Statement Außenminister Wadephul vor G20-Treffen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Business-Ticker: China will mehr deutsche Produkte kaufen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/business-liveticker-steinmeier-bei-xi-china-will-mehr-deutsche-produkte-kaufen-faz-200452404.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Business-Ticker: China will mehr deutsche Produkte kaufen</span></a></li><li><a href="https://www.spiegel.de/ausland/nach-steinmeier-besuch-china-will-mehr-deutsche-produkte-importieren-a-70011b91-2e9e-4e99-88fc-c79022334652#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Nach Steinmeier-Besuch: China will mehr deutsche Produkte importieren</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Was ändert sich für Verbraucher im November?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/ratgeber/familienticket-deutschlandticket-november-2026-aenderungen-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Was ändert sich für Verbraucher im November?</span></a></li><li><a href="https://www.mdr.de/ratgeber/neu-ab/kredit-online-bestellen,november-106.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Verbraucher: Bonität, Pakete und KfZ-Versicherung: Das ändert sich im November</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Russlands Außenminister Lawrow kritisiert USA und Europa bei G20-Außenministertreffen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/video/video-1675616.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Russlands Außenminister Lawrow kritisiert USA und Europa bei G20-Außenministertreffen</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/lawrow-usa-ukraine-krieg-russland-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Lawrow: Keine Entspannung zwischen Russland und USA</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Von Trump enttäuscht: Latinos könnten Midterms entscheiden</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/video/politik-usa-midterms-latinos-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Von Trump enttäuscht: Latinos könnten Midterms entscheiden</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/usa-midterms-landwirtschaft-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Frust bei US-Farmern könnte Trump Stimmen bei den Midterms kosten</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Binance will alle Verluste nach Hackerangriff ersetzen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/wirtschaft/technologie/usa-binance-hackerangriff-verluste-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Binance will alle Verluste nach Hackerangriff ersetzen</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/binance-bitcoin-krypto-faq-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Was der Hackerangriff bei Binance bedeutet</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Debatte um Eralp überlagert Regierungsbildung</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/inland/innenpolitik/berlin-eralp-debatte-spiegel-bericht-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Debatte um Eralp überlagert Regierungsbildung</span></a></li><li><a href="https://taz.de/Debatte-um-Linken-Kandidatin-Eralp/!6226247/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Debatte um Linken-Kandidatin Eralp: Bundes-SPDler wollen Berliner SPD reinreden</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Steinmeier in China: Handelsüberschuss im Fokus</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/ausland/asien/steinmeiner-xi-treffen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Steinmeier in China: Handelsüberschuss im Fokus</span></a></li><li><a href="https://www.sueddeutsche.de/politik/steinmeier-china-staatsbesuch-xi-jinping-deutsch-chinesische-beziehungen-li.3571392" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Steinmeier in China: Eine Freundschaft voller Tücken</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>Ibrahim Ibrahim: Wer ist der Mann, vor dem Elif Eralp Angst hat?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/politik/deutschland/ibrahim-ibrahim-wer-ist-der-mann-vor-dem-elif-eralp-angst-hat-a-576aa72e-b0f6-413c-824f-fcf391d059ac#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Ibrahim Ibrahim: Wer ist der Mann, vor dem Elif Eralp Angst hat?</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/wer-ist-ibrahim-ibrahim-201636511.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Ihn fürchtet Eralp: Wer ist Ibrahim Ibrahim?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">23</span>
+          <h3>Vorschlag für mehr Pünktlichkeit der Bahn: Weniger Züge auf der Strecke</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/bahn-puenktlichkeit-expertenkommission-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Vorschlag für mehr Pünktlichkeit der Bahn: Weniger Züge auf der Strecke</span></a></li><li><a href="https://taz.de/Bahn-prueft-Reduzierung-des-Zugverkehrs-fuer-mehr-Puenktlichkeit/!6226284/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Expertenkommission eingesetzt: Weniger Züge, dafür mehr Pünktlichkeit?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">24</span>
+          <h3>Aus für russische „Nowaja Gaseta“: Schweigen ist keine Option</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Aus-fuer-russische-Nowaja-Gaseta/!6226297/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Aus für russische „Nowaja Gaseta“: Schweigen ist keine Option</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/kremlkritische-zeitung-russland-geschlossen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Aus für die Nowaja Gaseta in Russland: &quot;Die Zeitung gibt es nicht mehr&quot;</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/inland/innenpolitik/jugendproteste-bundesregierung-100.html" target="_blank" rel="noopener">Gen-Z-Proteste: Was die Bundesregierung für die Jugend macht</a></li><li><a href="https://www.tagesschau.de/inland/gesellschaft/gen-z-proteste-112.html" target="_blank" rel="noopener">Jugendproteste in mehr als 30 Städten geplant</a></li><li><a href="https://www.tagesschau.de/inland/gesellschaft/gen-z-proteste-gruende-100.html" target="_blank" rel="noopener">Jugendproteste: &quot;Sie meinen es jetzt wirklich ernst&quot;</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/ausland/trump-midterms-usa-latinos-texas-100.html" target="_blank" rel="noopener">Erst Hoffnung, jetzt Frust: Trumps Problem mit den Latinos</a></li><li><a href="https://www.zdfheute.de/briefing/trump-effekt/midterms-obama-cheesecake-umfragen-100.html" target="_blank" rel="noopener">Newsletter: Trumps geschlossene Gesellschaft</a></li><li><a href="https://www.zdfheute.de/politik/ausland/polen-verfassungsgericht-krise-polizei-100.html" target="_blank" rel="noopener">Polen: Richterstreit eskaliert - Tumult am Verfassungsgericht</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/linken-vorsitzende-schwerdtner-kritisiert-vorwuerfe-gegen-berliner-spitzenkandidatin-eralp-100.html" target="_blank" rel="noopener">Nach &quot;Spiegel&quot;-Bericht - Linken-Vorsitzende Schwerdtner kritisiert Vorwürfe gegen Berliner Spitzenkandidatin Eralp</a></li><li><a href="https://www.deutschlandfunk.de/berliner-linke-entscheidet-ueber-koalitionsverhandlungen-medienbericht-eralp-mit-personenschuetzer-a-100.html" target="_blank" rel="noopener">Parteien - Berliner Linke entscheidet über Koalitionsverhandlungen - Medienbericht: Eralp mit Personenschützer auf Parteitag</a></li><li><a href="https://www.deutschlandfunk.de/tuerkei-schickt-osze-chef-sinirlioglu-ins-rennen-um-amt-des-uno-generalsekretaers-100.html" target="_blank" rel="noopener">Diplomatie - Türkei schickt OSZE-Chef Sinirlioglu ins Rennen um Amt des UNO-Generalsekretärs</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/wirtschaft/soziales/hamburg-warum-in-einem-prachtbau-gleich-vier-mietvertraege-gekuendigt-wurden-a-8a22dfff-4452-4a6d-ad9f-92395a83592e#ref=rss" target="_blank" rel="noopener">Hamburg: Warum in einem Prachtbau gleich vier Mietverträge gekündigt wurden</a></li><li><a href="https://www.spiegel.de/politik/deutschland/ibrahim-ibrahim-wer-ist-der-mann-vor-dem-elif-eralp-angst-hat-a-576aa72e-b0f6-413c-824f-fcf391d059ac#ref=rss" target="_blank" rel="noopener">Ibrahim Ibrahim: Wer ist der Mann, vor dem Elif Eralp Angst hat?</a></li><li><a href="https://www.spiegel.de/politik/deutschland/g20-marco-rubio-hofiert-sergej-lawrow-johann-wadephul-aergert-ihn-a-3666c34d-0bf2-4f6d-8a84-9576572fa805#ref=rss" target="_blank" rel="noopener">G20: Marco Rubio hofiert Sergej Lawrow, Johann Wadephul ärgert ihn</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-10/31/defektes-stellwerk-verursacht-verspaetungen-und-ausfaelle" target="_blank" rel="noopener">Bahnverkehr im Ruhrgebiet: Defektes Stellwerk verursacht Verspätungen und Ausfälle</a></li><li><a href="https://www.zeit.de/feuilleton/film/2026-10/wolf-biermann-dokumentarfilm-jens-meurer-ddr-geburtstag" target="_blank" rel="noopener">»Biermann« von Jens Meurer: Er weint um die Heimat, die er trotz allem doch liebte</a></li><li><a href="https://www.zeit.de/zeit-magazin/2026/47/halloween-kostueme-grusel-trend-kim-kardashian-north-west" target="_blank" rel="noopener">Halloween-Kostüme: Gibt es ein größeres Schreckgespenst als die eigene Teenager-Tochter?</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/muenchen/genz-regelt-demonstration-muenchen-maximilianstrasse-laeden-verbarrikadiert-li.3569253" target="_blank" rel="noopener">Vor Gen-Z-Demo: Läden in München verbarrikadieren sich</a></li><li><a href="https://www.sueddeutsche.de/politik/ukraine-oleschky-hilfsgueter-russland-feuerpause-li.3569026" target="_blank" rel="noopener">Hilfsaktion in der Ukraine: „Ich hoffe, dass alles gut ausgeht“</a></li><li><a href="https://www.sueddeutsche.de/muenchen/gen-z-proteste-muenchen-demonstration-bildung-jugendliche-li.3569318" target="_blank" rel="noopener">Gen-Z-Kundgebung: Tausende junge Menschen wollen in München protestieren</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/politik/inland/afd-leaks-wie-alice-weidel-als-feministin-scheiterte-accg-201622966.html" target="_blank" rel="noopener">AfD-Leaks: Alice Weidel, die gescheiterte Feministin</a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/arm-und-reich/genz-die-klagen-der-schueler-im-faktencheck-accg-201628286.html" target="_blank" rel="noopener">Gen-Z-Demos: Die Klagen der Jugend im Faktencheck</a></li><li><a href="https://www.faz.net/aktuell/politik/inland/hurrelmann-und-roemmele-die-jugend-nicht-vergessen-accg-201629599.html" target="_blank" rel="noopener">Demographie: Die letzte Chance der alten Parteien ist die Jugend</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/politik/deutschland/video6ae5c247aedea8cd9ffbf2f7/linken-parteitag-sie-ist-ueberhaupt-nicht-auf-die-antisemitismusfrage-eingegangen-schupelius-kritisiert-eralp-rede.html" target="_blank" rel="noopener">„Sie ist überhaupt nicht auf die Antisemitismusfrage eingegangen“ - Schupelius kritisiert Eralp Rede</a></li><li><a href="https://www.welt.de/debatte/plus6ae331914a674ddd4ba2398c/kopftuch-als-safe-space-ja-ich-sorge-mich-um-meine-zehnjaehrige-tochter.html" target="_blank" rel="noopener">Ja, ich sorge mich um meine zehnjährige Tochter</a></li><li><a href="https://www.welt.de/politik/deutschland/video6ae5c216aedea8cd9ffbf2e9/elif-eralp-eine-andere-politik-ist-moeglich-und-eine-andere-politik-ist-noetig.html" target="_blank" rel="noopener">„Eine andere Politik ist möglich und eine andere Politik ist nötig“</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Ueberlebender-des-ersten-NSU-Anschlags/!6223257/" target="_blank" rel="noopener">Überlebender des ersten NSU-Anschlags: Er redete mit den Wänden darüber, was passiert war</a></li><li><a href="https://taz.de/Heftiger-Machtkampf-um-Polens-Verfassungsgericht-entbrannt/!6226337/" target="_blank" rel="noopener">Staatskrise in Polen: Heftiger Machtkampf um das Verfassungsgericht entbrannt</a></li><li><a href="https://taz.de/Der-Spiegel-und-Elif-Eralp/!6226304/" target="_blank" rel="noopener">„Der Spiegel“ und Elif Eralp: Lieber vor der eigenen Haustür kehren</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.zdfheute.de/video/politik-trump-umfragen-werte-midterms-usa-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">So stark sind die Beliebtheitswerte von Trump gesunken</span></a></li><li><a href="https://www.welt.de/politik/deutschland/video6ae5c247aedea8cd9ffbf2f7/linken-parteitag-sie-ist-ueberhaupt-nicht-auf-die-antisemitismusfrage-eingegangen-schupelius-kritisiert-eralp-rede.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Sie ist überhaupt nicht auf die Antisemitismusfrage eingegangen“ - Schupelius kritisiert Eralp Rede</span></a></li><li><a href="https://www.sueddeutsche.de/muenchen/genz-regelt-demonstration-muenchen-maximilianstrasse-laeden-verbarrikadiert-li.3569253" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Vor Gen-Z-Demo: Läden in München verbarrikadieren sich</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/midterms-alaska-sullivan-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Zwei Sullivans in Alaska - wollen Demokraten die Wahl manipulieren?</span></a></li><li><a href="https://www.zeit.de/news/2026-10/31/defektes-stellwerk-verursacht-verspaetungen-und-ausfaelle" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Bahnverkehr im Ruhrgebiet: Defektes Stellwerk verursacht Verspätungen und Ausfälle</span></a></li><li><a href="https://www.zdfheute.de/newsticker/schlagzeilen-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Schlagzeilen</span></a></li><li><a href="https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1675646.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">tagesschau in 100 Sekunden</span></a></li><li><a href="https://www.welt.de/debatte/plus6ae331914a674ddd4ba2398c/kopftuch-als-safe-space-ja-ich-sorge-mich-um-meine-zehnjaehrige-tochter.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Ja, ich sorge mich um meine zehnjährige Tochter</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/gen-z-proteste-deutschland-liveblog-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Initiative ruft zu bundesweiten Demonstrationen auf</span></a></li><li><a href="https://www.zeit.de/feuilleton/film/2026-10/wolf-biermann-dokumentarfilm-jens-meurer-ddr-geburtstag" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">»Biermann« von Jens Meurer: Er weint um die Heimat, die er trotz allem doch liebte</span></a></li><li><a href="https://www.zeit.de/zeit-magazin/2026/47/halloween-kostueme-grusel-trend-kim-kardashian-north-west" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Halloween-Kostüme: Gibt es ein größeres Schreckgespenst als die eigene Teenager-Tochter?</span></a></li><li><a href="https://www.zeit.de/2026-10/verliebtheit-phase-beziehung-spaet-scheidung" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Verliebtheitsphase: Fast ein Wunder: Das große Glow-up der Liebe</span></a></li><li><a href="https://www.zeit.de/2026-10/verliebtheit-phase-beziehung-spaet-scheidung" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Verliebtheitsphase: Fast ein Wunder: Das große Glow-up der Liebe</span></a></li><li><a href="https://www.zeit.de/news/2026-10/31/gruene-streben-20-prozent-bei-landtagswahl-an" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Programmparteitag: Grüne streben 20 Prozent bei Landtagswahl an</span></a></li><li><a href="https://www.tagesschau.de/video/video-1675642.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">&quot;Sehr viel Beifall für ihr Werben für Koalitionsvertrag&quot;, Andreas König, RBB, zum Parteitag der Berliner Linke</span></a></li><li><a href="https://www.zeit.de/news/2026-10/31/berichte-nuernbergs-chatzialexiou-wechselt-nach-frankfurt" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Fußball: Klose bestätigt: Nürnbergs Sportvorstand nach Frankfurt</span></a></li><li><a href="https://www.zeit.de/news/2026-10/31/truebes-herbst-wetter-in-hessen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Wettervorhersage: Trübes Herbst-Wetter in Hessen</span></a></li><li><a href="https://www.welt.de/politik/deutschland/video6ae5c216aedea8cd9ffbf2e9/elif-eralp-eine-andere-politik-ist-moeglich-und-eine-andere-politik-ist-noetig.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Eine andere Politik ist möglich und eine andere Politik ist nötig“</span></a></li><li><a href="https://www.zeit.de/news/2026-10/31/berliner-linke-befindet-ueber-koalitionsgespraeche" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Regierungsbildung: Berliner Linke-Chefin weist Antisemitismusvorwürfe zurück</span></a></li><li><a href="https://www.zeit.de/news/2026-10/31/bilder-des-tages" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Fotografie: Bilder des Tages</span></a></li><li><a href="https://www.zeit.de/news/2026-10/31/unbekannte-ueberfallen-tankstelle-mit-schusswaffe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Raub in Köpenick: Unbekannte überfallen Tankstelle mit Schusswaffe</span></a></li><li><a href="https://www.zeit.de/news/2026-10/31/herbst-bleibt-ueberwiegend-trueb-und-regnerisch" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Wettervorhersage: Herbst bleibt überwiegend trüb und regnerisch</span></a></li><li><a href="https://www.welt.de/politik/deutschland/video6ae5b48baedea8cd9ffbf1d3/richtungsstreit-linken-parteitag-entscheidet-ueber-rot-gruen-rot-antisemitismus-streit-birgt-sprengkraft.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Linken-Parteitag entscheidet über Rot-Grün-Rot – Antisemitismus-Streit birgt Sprengkraft</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 31.10.2026 um 11:59 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
