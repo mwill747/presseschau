@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 01.11.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Sunday, 01. November 2026 &middot; 12:54 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">309 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Hackerangriff - FBI macht nordkoreanische Hacker für Angriff auf Kryptowährungsbörse Binance verantwortlich</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/fbi-macht-nordkoreanische-hacker-fuer-angriff-auf-kryptowaehrungsboerse-binance-verantwortlich-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Hackerangriff - FBI macht nordkoreanische Hacker für Angriff auf Kryptowährungsbörse Binance verantwortlich</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/hack-binance-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">FBI macht Nordkorea für Hackerangriff auf Binance verantwortlich</span></a></li><li><a href="https://taz.de/Krypto-Boerse-Binance/!6226367/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Krypto-Börse Binance: FBI macht Nordkorea für Hack verantwortlich</span></a></li><li><a href="https://www.faz.net/aktuell/finanzen/fbi-macht-nordkorea-fuer-milliardendiebstahl-bei-binance-verantwortlich-accg-201640102.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Kryptobörse Binance: FBI macht Nordkorea für Milliardendiebstahl verantwortlich</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/unternehmen/fbi-binance-nordkorea-hack-kryptoboerse-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">FBI: Nordkorea steckt hinter dem Binance-Hackerangriff</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Krawalle nach friedlichen Protesten: Wie konnte es dazu kommen?</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:80%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/video/zdfheute-live/ausschreitungen-gen-z-proteste-nacht-video-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Krawalle nach friedlichen Protesten: Wie konnte es dazu kommen?</span></a></li><li><a href="https://www.deutschlandfunk.de/friedliche-proteste-am-tag-krawalle-am-abend-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Demonstrationen in Frankreich - Friedliche Proteste am Tag - Krawalle am Abend</span></a></li><li><a href="https://www.faz.net/video/dritter-protestsamstag-in-frankreich-teilnehmerzahl-sinkt-201640943.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Frankreich: Proteste verlieren an Zulauf, Polizei hält Lage unter Kontrolle</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/app-bitchat-boom-fuer-bluetooth-messenger-durch-proteste-in-frankreich-accg-201640634.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">App „Bitchat“: Bluetooth-Messenger boomt durch Proteste in Frankreich</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/frankreich-proteste-gegen-hohe-kosten-grossstaedte-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Frankreich: Zusammenstöße nach Protesten in mehreren Städten</span></a></li><li><a href="https://www.tagesschau.de/inland/ausschreitungen-frankfurt-koeln-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Ausschreitungen am Abend nach friedlichen Protesten am Nachmittag</span></a></li><li><a href="https://www.tagesschau.de/tagesthemen/video-1675938.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Erneute Ausschreitungen bei Protesten in Frankreich</span></a></li><li><a href="https://www.tagesschau.de/ausland/frankreich-proteste-242.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Erneut Proteste und Zusammenstöße in Frankreich</span></a></li><li><a href="https://www.faz.net/video/halloween-proteste-in-paris-wut-auf-regierung-201639446.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Frankreich: Proteste fallen auf Halloween, Polizei stellt 70.000 Beamte bereit</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Berlin - Linke stimmt für Koalitionsverhandlungen mit Grünen und SPD</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:80%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/linke-stimmt-fuer-koalitionsverhandlungen-mit-gruenen-und-spd-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Berlin - Linke stimmt für Koalitionsverhandlungen mit Grünen und SPD</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/berlin-linke-gruene-spd-koalitionsverhandlungen-wahl-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Berlin: Linken-Parteitag stimmt für Koalitionsverhandlungen</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/linke-parteitag-koalitionsverhandlungen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Berliner Linke stimmt für Aufnahme von Koalitionsverhandlungen mit Grünen und SPD</span></a></li><li><a href="https://www.sueddeutsche.de/politik/berlin-linke-koalitionsverhandlungen-elif-eralp-rot-rot-gruen-li.3571682" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Berlin: Linke stimmt für Koalitionsverhandlungen – scharfer Protest vor der Halle</span></a></li><li><a href="https://www.sueddeutsche.de/politik/landtagswahlen-deutschland-berlin-linke-eralp-koalition-li.3540501" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Newsblog zu den Landtagswahlen: Berliner Linke stimmt für Koalitionsverhandlungen mit Grünen und SPD</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Tarife - Erste Warnstreiks der IG Metall</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:60%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/erste-warnstreiks-der-ig-metall-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Tarife - Erste Warnstreiks der IG Metall</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/ig-metall-warnstreiks-elektro-industrie-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">IG Metall startet Warnstreiks</span></a></li><li><a href="https://www.tagesschau.de/video/video-1676012.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">IG Metall startet Warnstreiks in der Metall- und Elektroindustrie</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/arbeitsmarkt/ig-metall-warnstreiks-108.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Warnstreiks der IG Metall kurz nach Mitternacht angelaufen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Machtkampf mit Rechtsnationalen - Ex-Gerichtspräsidenten stärken Polens Regierung den Rücken</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:60%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/ex-gerichtspraesidenten-staerken-polens-regierung-den-ruecken-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Machtkampf mit Rechtsnationalen - Ex-Gerichtspräsidenten stärken Polens Regierung den Rücken</span></a></li><li><a href="https://www.zeit.de/politik/ausland/2026-11/polen-donald-tusk-justiz-gericht-nawrocki" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Polen: Ex-Gerichtspräsidenten unterstützen Polens Regierung</span></a></li><li><a href="https://www.spiegel.de/ausland/polen-ex-gerichtspraesidenten-staerken-donald-tusk-den-ruecken-a-50466069-ce9c-4480-9d4b-870666760a8b#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Polen: Ex-Gerichtspräsidenten stärken Donald Tusk den Rücken</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Proteste: Gen-Z-Proteste in Deutschland: Gewalt und Plünderungen in Frankfurt</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:60%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/video/gen-z-proteste-in-frankfurt-eskalieren-polizei-im-grosseinsatz-201640775.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Proteste: Gen-Z-Proteste in Deutschland: Gewalt und Plünderungen in Frankfurt</span></a></li><li><a href="https://www.sueddeutsche.de/politik/gen-z-regelt-demo-proteste-gewalt-polizei-li.3572191" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Deutschland: Krawalle in Frankfurt im Anschluss an Gen-Z-Proteste</span></a></li><li><a href="https://taz.de/Nach-Gen-Z-regelt-Protest/!6226354/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Nach Gen-Z-regelt-Protest: Krawalle in Frankfurt am Main</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Krawalle und Plünderungen überschatten &quot;Gen Z regelt&quot;-Demos</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:60%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/deutschland/gen-z-proteste-pluenderungen-gewalt-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Krawalle und Plünderungen überschatten &quot;Gen Z regelt&quot;-Demos</span></a></li><li><a href="https://www.tagesschau.de/inland/gesellschaft/gen-z-demos-bilanz-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">&quot;Gen Z regelt&quot; will Demos fortsetzen</span></a></li><li><a href="https://www.spiegel.de/panorama/justiz/nach-demo-von-gen-z-regelt-ausschreitungen-und-pluenderungen-in-frankfurt-und-koeln-a-2baa26e4-2d9c-4fc2-8585-533727c4d00c#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Frankfurt und Köln: Ausschreitungen und Plünderungen nach »Gen Z regelt« Demo</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Bundesweite Jugendproteste - Zehntausende demonstrieren friedlich - Danach kommt es teils zu Ausschreitungen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/zehntausende-demonstrieren-friedlich-danach-kommt-es-teils-zu-ausschreitungen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundesweite Jugendproteste - Zehntausende demonstrieren friedlich - Danach kommt es teils zu Ausschreitungen</span></a></li><li><a href="https://www.zdfheute.de/sport/tennis-atp-wien-zverev-dtb-wer-kommt-danach-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Zverev auf dem Höhepunkt - wer kommt danach?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Trotz Verbots durch die UNO - Nordkorea meldet Test von Streumunition für ballistische Raketen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/nordkorea-meldet-test-von-streumunition-fuer-ballistische-raketen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Trotz Verbots durch die UNO - Nordkorea meldet Test von Streumunition für ballistische Raketen</span></a></li><li><a href="https://www.spiegel.de/ausland/nordkorea-testet-raketensprengkoepfe-mit-streumunition-a-e69a0279-7324-41e3-b4c8-fe875b9b6e8b#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Nordkorea testet Raketensprengköpfe mit Streumunition</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Dürre und drohende Überschwemmungen - Bolivien ruft wegen El Niño Notstand aus</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bolivien-ruft-wegen-el-ni-o-notstand-aus-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Dürre und drohende Überschwemmungen - Bolivien ruft wegen El Niño Notstand aus</span></a></li><li><a href="https://www.spiegel.de/panorama/bolivien-ruft-wegen-el-nino-notstand-aus-a-401ee340-5c87-4ef0-9e04-6f4678cf51ae#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Bolivien ruft wegen El Niño Notstand aus</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Artenvielfalt - Handel mit wilden Arten ist viel größer als gedacht</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/handel-mit-wilden-arten-ist-viel-groesser-als-gedacht-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Artenvielfalt - Handel mit wilden Arten ist viel größer als gedacht</span></a></li><li><a href="https://www.spiegel.de/wissenschaft/natur/wildtierhandel-handel-mit-wild-lebenden-tieren-und-pflanzen-viel-groesser-als-gedacht-a-166ba43b-e054-401a-a15d-904c07802ffd#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Wildtierhandel: Handel mit wild lebenden Tieren und Pflanzen viel größer als gedacht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Jugendproteste: Bundesinnenminister Dobrindt kündigt harte Strafen für Randalierer an</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/politik/deutschland/2026-11/gen-z-regelt-proteste-alexander-dobrindt-innenminister-deutschland" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Jugendproteste: Bundesinnenminister Dobrindt kündigt harte Strafen für Randalierer an</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/jugendproteste-gekapert-pluenderungen-in-frankfurt-in-der-halloweennacht-accg-201640262.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">HalloweenNacht: Randalierer kapern den Jugendprotest</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Gen-Z-Demos: Dobrindt: Gewaltbereite linke Gruppen und Chaoten aus migrantischem Milieu</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-gen-z-proteste-dobrindt-gewaltbereite-linke-gruppen-und-chaoten-aus-migrantischem-milieu-faz-201635936.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Gen-Z-Demos: Dobrindt: Gewaltbereite linke Gruppen und Chaoten aus migrantischem Milieu</span></a></li><li><a href="https://www.welt.de/vermischtes/article6ae4b4253620137294c24bb2/gen-z-proteste-gewaltbereite-linke-gruppen-und-chaoten-aus-dem-migrantischen-milieu-sagt-dobrindt-ueber-krawalle.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Gewaltbereite linke Gruppen und Chaoten aus dem migrantischen Milieu“, sagt Dobrindt über Krawalle</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Aktuelles zum Krieg in der Ukraine</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/ukraine-erholung-soldaten-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Ukraine: Zehn Tage gegen den Krieg im Kopf</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Drei verletzte Bayern: Wer spielt jetzt gegen Atlético?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/sport/fussball/bayern-muenchen-bangt-nach-bvb-spiel-um-gnabry-saibari-und-olise-accg-201640538.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Drei verletzte Bayern: Wer spielt jetzt gegen Atlético?</span></a></li><li><a href="https://www.sueddeutsche.de/sport/bayern-bvb-bundesliga-kane-olise-verletzungen-li.3572197" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Bayerns 2:2 gegen den BVB: Drei Verletzte und ein unglücklicher Goldjunge</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Borussia Dortmund: Siehe da: ein Bayern-Konkurrent</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/sport/bundesliga-bvb-bayern-konkurrent-meisterschaft-schlotterbeck-li.3572256" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Borussia Dortmund: Siehe da: ein Bayern-Konkurrent</span></a></li><li><a href="https://www.spiegel.de/sport/fussball/fc-bayern-2-2-gegen-borussia-dortmund-meister-im-ausnahmezustand-a-7ba738f3-3b3b-4273-951e-a07e26cb19e8#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">FC Bayern 2:2 gegen Borussia Dortmund: Meister im Ausnahmezustand</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Halloween in New York: Auf diesem Foto ist Heidi Klum zu sehen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/gesellschaft/menschen/heidi-klum-kommt-als-abgerissene-riesenhand-zur-halloween-party-accg-201640310.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Halloween in New York: Auf diesem Foto ist Heidi Klum zu sehen</span></a></li><li><a href="https://www.zdfheute.de/panorama/prominente/heidi-klum-halloween-party-new-york-kostuem-hand-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Heidi Klum kommt als Horror-Hand zu Halloween</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/inland/gesellschaft/demonstration-protest-genz-100.html" target="_blank" rel="noopener">FAQ: Wie lief der &quot;Gen Z regelt&quot;-Protest? Wie geht es weiter?</a></li><li><a href="https://www.tagesschau.de/inland/ausschreitungen-frankfurt-koeln-100.html" target="_blank" rel="noopener">Ausschreitungen am Abend nach friedlichen Protesten am Nachmittag</a></li><li><a href="https://www.tagesschau.de/inland/gesellschaft/gen-z-demos-bilanz-100.html" target="_blank" rel="noopener">&quot;Gen Z regelt&quot; will Demos fortsetzen</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/video/zdfheute-live/ausschreitungen-gen-z-proteste-nacht-video-100.html" target="_blank" rel="noopener">Krawalle nach friedlichen Protesten: Wie konnte es dazu kommen?</a></li><li><a href="https://www.zdfheute.de/politik/deutschland/gen-z-proteste-pluenderungen-gewalt-100.html" target="_blank" rel="noopener">Krawalle und Plünderungen überschatten &quot;Gen Z regelt&quot;-Demos</a></li><li><a href="https://www.zdfheute.de/politik/deutschland/gen-z-proteste-deutschland-liveblog-100.html" target="_blank" rel="noopener">Dobrindt: Polizei hat &quot;Gewaltexzesse&quot; verhindert - Liveblog</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/london-hunderte-festnahmen-bei-solidaritaets-demonstration-fuer-verbotene-aktivistengruppe-palestine-100.html" target="_blank" rel="noopener">Großbritannien - London: Hunderte Festnahmen bei Solidaritäts-Demonstration für verbotene Aktivistengruppe &quot;Palestine Action&quot;</a></li><li><a href="https://www.deutschlandfunk.de/gesundheitsversorgung-im-gazastreifen-katastrophal-100.html" target="_blank" rel="noopener">&quot;Ärzte ohne Grenzen&quot; - Gesundheitsversorgung im Gazastreifen katastrophal</a></li><li><a href="https://www.deutschlandfunk.de/moskau-meldet-drohnenangriff-auf-industrieunternehmen-nahe-moskau-100.html" target="_blank" rel="noopener">Ukraine-Krieg - Moskau meldet Drohnenangriff auf Industrieunternehmen nahe Moskau</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/panorama/justiz/nach-demo-von-gen-z-regelt-ausschreitungen-und-pluenderungen-in-frankfurt-und-koeln-a-2baa26e4-2d9c-4fc2-8585-533727c4d00c#ref=rss" target="_blank" rel="noopener">Frankfurt und Köln: Ausschreitungen und Plünderungen nach »Gen Z regelt« Demo</a></li><li><a href="https://www.spiegel.de/panorama/todestagsrechner-wann-schlaegt-wohl-ihre-letzte-stunde-a-0db91349-14ad-49e4-acf9-2c1a87dcaf24#ref=rss" target="_blank" rel="noopener">Todestagsrechner: Wann schlägt wohl Ihre letzte Stunde?</a></li><li><a href="https://www.spiegel.de/wirtschaft/audi-gernot-doellners-auftritt-mit-donald-trump-schreckt-womoeglich-amerikanische-kaeufer-ab-a-a7d5a0cc-e192-4bca-b657-909509183087#ref=rss" target="_blank" rel="noopener">Audi: Gernot Döllners Auftritt mit Donald Trump schreckt womöglich amerikanische Käufer ab</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-11/01/nrw-innenminister-verurteilt-ausschreitungen-in-koeln" target="_blank" rel="noopener">Randale nach Jugend-Demo: NRW-Innenminister verurteilt Ausschreitungen in Köln</a></li><li><a href="https://www.zeit.de/news/2026-11/01/hiv-testwochen-fruehe-behandlung-kann-aids-verhindern" target="_blank" rel="noopener">Aktion &quot;Teste Jetzt&quot;: HIV-Testwochen - Frühe Behandlung kann Aids verhindern</a></li><li><a href="https://www.zeit.de/news/2026-11/01/40-jaehriger-durch-schuesse-lebensgefaehrlich-verletzt" target="_blank" rel="noopener">Kriminalität: 40-Jähriger durch Schüsse lebensgefährlich verletzt</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/sport/bayer-dortmund-kommentar-schlagbar-2-2-meisterschaft-li.3572321" target="_blank" rel="noopener">Bundesliga: Gute Nachricht für die Liga: Man muss gegen die Bayern gerade nicht verlieren</a></li><li><a href="https://www.sueddeutsche.de/meinung/gen-z-regelt-protest-boomer-gemeinsamkeiten-klischees-kommentar-li.3571265" target="_blank" rel="noopener">Jugendproteste: Zwischen Boomern und Gen Z gibt es mehr Gemeinsamkeiten, als viele denken</a></li><li><a href="https://www.sueddeutsche.de/politik/gen-z-regelt-demo-proteste-gewalt-polizei-li.3572191" target="_blank" rel="noopener">Deutschland: Krawalle in Frankfurt im Anschluss an Gen-Z-Proteste</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/finanzen/daenemarks-rentensystem-was-deutschland-davon-lernen-kann-accg-201630231.html" target="_blank" rel="noopener">Altersversorgung: Wie die Dänen ihr Renten-Problem gelöst haben</a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-gen-z-proteste-dobrindt-gewaltbereite-linke-gruppen-und-chaoten-aus-migrantischem-milieu-faz-201635936.html" target="_blank" rel="noopener">Gen-Z-Demos: Dobrindt: Gewaltbereite linke Gruppen und Chaoten aus migrantischem Milieu</a></li><li><a href="https://www.faz.net/aktuell/politik/inland/die-gen-z-proteste-im-ueberblick-accg-201640452.html" target="_blank" rel="noopener">Gen-Z-Demos: Die Proteste im Überblick</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/sport/fussball/bundesliga/fc-schalke-04/article6ae720c06a5ed9f213134634/fc-schalke-04-scheisssituation-kampf-gegen-die-krise-und-eine-kopfsache.html" target="_blank" rel="noopener">„Scheißsituation“ – Schalke kämpft gegen die Krise und eine Kopfsache</a></li><li><a href="https://www.welt.de/politik/ausland/video6ae6f65e4b901a24d5d479ae/frankreich-in-der-krise-man-hat-das-gefuehl-macron-hat-aufgegeben.html" target="_blank" rel="noopener">„Man hat das Gefühl, Macron hat aufgegeben“</a></li><li><a href="https://www.welt.de/politik/ausland/plus6adb4271ea9d017b539afb6b/iran-es-geht-ums-ueberleben-fuer-die-iraner-ist-der-krieg-entschieden.html" target="_blank" rel="noopener">„Es geht ums Überleben!“ – Für die Iraner ist der Krieg entschieden</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Folgen-der-neuen-Grundsicherung/!6226309/" target="_blank" rel="noopener">Folgen der neuen Grundsicherung: Bloß nicht für die Kinder sparen</a></li><li><a href="https://taz.de/Wissenschaft-unter-Druck/!6226257/" target="_blank" rel="noopener">Wissenschaft unter Druck: „Wir müssen das Recht verteidigen“</a></li><li><a href="https://taz.de/Die-Wasserbilanz-des-Sommers/!6226370/" target="_blank" rel="noopener">Die Wasserbilanz des Sommers: Zu trocken und zu heiß</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.welt.de/sport/fussball/bundesliga/fc-schalke-04/article6ae720c06a5ed9f213134634/fc-schalke-04-scheisssituation-kampf-gegen-die-krise-und-eine-kopfsache.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Scheißsituation“ – Schalke kämpft gegen die Krise und eine Kopfsache</span></a></li><li><a href="https://taz.de/Mitlaufen-beim-Hamburger-Halbmarathon/!6223221/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Mitlaufen beim Hamburger Halbmarathon: Am Schluss lockt das Franzbrötchen</span></a></li><li><a href="https://taz.de/Erstes-deutsches-Frauenhaus/!6223208/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Erstes deutsches Frauenhaus: Eine Villa für Frauen in Not</span></a></li><li><a href="https://taz.de/Museum-ueber-die-Polizei/!6226386/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Museum über die Polizei: Eierlikör mitten am Tag</span></a></li><li><a href="https://taz.de/Handke-am-Schauspiel-Koeln/!6226369/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Handke am Schauspiel Köln: Abschiedsreif geschlagen</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/trump-vs-obama-stilstreit-um-cheesecake-factory-und-das-weisse-haus-accg-201639908.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">US-Wahlkampf: Trump im Vergoldungswahn</span></a></li><li><a href="https://www.zeit.de/news/2026-11/01/nrw-innenminister-verurteilt-ausschreitungen-in-koeln" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Randale nach Jugend-Demo: NRW-Innenminister verurteilt Ausschreitungen in Köln</span></a></li><li><a href="https://www.zeit.de/news/2026-11/01/hiv-testwochen-fruehe-behandlung-kann-aids-verhindern" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Aktion &quot;Teste Jetzt&quot;: HIV-Testwochen - Frühe Behandlung kann Aids verhindern</span></a></li><li><a href="https://taz.de/Die-Wasserbilanz-des-Sommers/!6226370/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Die Wasserbilanz des Sommers: Zu trocken und zu heiß</span></a></li><li><a href="https://www.zeit.de/news/2026-11/01/40-jaehriger-durch-schuesse-lebensgefaehrlich-verletzt" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Kriminalität: 40-Jähriger durch Schüsse lebensgefährlich verletzt</span></a></li><li><a href="https://www.welt.de/politik/ausland/video6ae6f65e4b901a24d5d479ae/frankreich-in-der-krise-man-hat-das-gefuehl-macron-hat-aufgegeben.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Man hat das Gefühl, Macron hat aufgegeben“</span></a></li><li><a href="https://www.faz.net/aktuell/sport/formel-1/formel-1-antonelli-greift-beim-grand-prix-von-mexiko-nach-dem-wm-titel-accg-201640872.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Wird er heute Weltmeister?: Das vermutlich wichtigste Rennen im Leben von Kimi Antonelli</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/kunstmarkt/kunstmesse-artissima-in-turin-accg-201636159.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Artissima in Turin: Auf dieser Messe ist alles vorstellbar</span></a></li><li><a href="https://www.faz.net/aktuell/besser-leben/essen/soeder-isst-jetzt-auch-live-accg-201623172.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">So isst Politik: Söder isst jetzt sogar live</span></a></li><li><a href="https://www.deutschlandfunk.de/london-hunderte-festnahmen-bei-solidaritaets-demonstration-fuer-verbotene-aktivistengruppe-palestine-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Großbritannien - London: Hunderte Festnahmen bei Solidaritäts-Demonstration für verbotene Aktivistengruppe &quot;Palestine Action&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/gesundheitsversorgung-im-gazastreifen-katastrophal-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Ärzte ohne Grenzen&quot; - Gesundheitsversorgung im Gazastreifen katastrophal</span></a></li><li><a href="https://www.deutschlandfunk.de/moskau-meldet-drohnenangriff-auf-industrieunternehmen-nahe-moskau-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Moskau meldet Drohnenangriff auf Industrieunternehmen nahe Moskau</span></a></li><li><a href="https://www.deutschlandfunk.de/demonstrationen-als-deckmantel-fuer-gewalt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">CDU-Generalsekretärin Hoppermann - Demonstrationen als Deckmantel für Gewalt</span></a></li><li><a href="https://www.deutschlandfunk.de/spd-fordert-bildungsgipfel-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Jugend-Demos - SPD fordert Bildungsgipfel</span></a></li><li><a href="https://www.deutschlandfunk.de/landesweite-massenproteste-in-italien-fuer-bessere-bildung-und-gegen-hohe-preise-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Weitgehend friedlich - Landesweite Massenproteste in Italien für bessere Bildung und gegen hohe Preise</span></a></li><li><a href="https://www.deutschlandfunk.de/mueller-gasversorgung-auch-bei-verfehlten-speicherzielen-sicher-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Chef der Bundesnetzagentur - Müller: Gasversorgung auch bei verfehlten Speicherzielen sicher</span></a></li><li><a href="https://www.deutschlandfunk.de/kramp-karrenbauer-warnt-vor-regierungen-von-afd-und-linken-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Interview - Kramp-Karrenbauer warnt vor Regierungen von AfD und Linken</span></a></li><li><a href="https://www.deutschlandfunk.de/bericht-zahl-islamistisch-motivierter-antisemitischer-straftaten-auf-hoechststand-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">BKA - Bericht: Zahl islamistisch motivierter antisemitischer Straftaten auf Höchststand</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 01.11.2026 um 12:54 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
