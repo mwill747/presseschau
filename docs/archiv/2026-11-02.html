@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 02.11.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Monday, 02. November 2026 &middot; 14:39 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">359 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>„Nicht um jeden Preis“ – Mehr als 1000 SPD-Mitglieder stellen sich gegen Rot-Grün-Rot in Berlin</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/politik/deutschland/article6ae881dafa18ad14b908eb7a/berlin-nicht-um-jeden-preis-mehr-als-1000-spd-mitglieder-stellen-sich-gegen-rot-gruen-rot.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Nicht um jeden Preis“ – Mehr als 1000 SPD-Mitglieder stellen sich gegen Rot-Grün-Rot in Berlin</span></a></li><li><a href="https://www.deutschlandfunk.de/rot-gruen-rote-koalitionsverhandlungen-beginnen-in-berlin-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Abgeordnetenhaus - Rot-grün-rote Koalitionsverhandlungen beginnen in Berlin</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/berlin/koalitionsgespraeche-rot-gruen-rot-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Rot-grün-rote Koalitionsgespräche in Berlin gestartet</span></a></li><li><a href="https://www.welt.de/geschichte/article6ae84ed3a44ac0400ca56ee1/nsdap-ao-pflp-hamas-die-tradition-in-die-sich-spd-und-gruene-in-berlin-stellen-wollen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Die Tradition, in die sich SPD und Grüne in Berlin stellen wollen</span></a></li><li><a href="https://taz.de/Rot-gruen-rote-Regierung-in-Berlin/!6226597/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Rot-grün-rote Regierung in Berlin: Die Koalitionsverhandlungen starten</span></a></li><li><a href="https://www.sueddeutsche.de/politik/landtagswahlen-deutschland-berlin-koalitionsverhandlungen-linke-gruene-spd-li.3540501" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Newsblog zu den Landtagswahlen: Linke, Grüne und SPD starten Koalitionsverhandlungen in Berlin</span></a></li><li><a href="https://www.zdfheute.de/politik/pistorius-rot-gruen-rot-berlin-eralp-spd-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Pistorius plädiert: Rot-Grün-Rot in Berlin stoppen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>USA - Neun Tote bei Absturz von Geschäftsflugzeug in Florida</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:67%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/neun-tote-bei-absturz-von-geschaeftsflugzeug-in-florida-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">USA - Neun Tote bei Absturz von Geschäftsflugzeug in Florida</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/flugzeugabsturz-usa-florida-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Neun Tote bei Flugzeugabsturz in Florida</span></a></li><li><a href="https://www.zdfheute.de/panorama/privatjet-absturz-florida-usa-video-learjet-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Privatjet stürzt in Florida ab - neun Tote</span></a></li><li><a href="https://www.faz.net/video/florida-privatjet-stuerzt-in-wohngebiet-ab-201642908.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Florida: Privatjet stürzt in Wohngebiet ab</span></a></li><li><a href="https://www.tagesschau.de/video/video-1676482.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Neun Tote bei Flugzeugabsturz in Florida</span></a></li><li><a href="https://www.zdfheute.de/video/panorama-flugzeug-absturz-florida-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Neun Tote bei Privatjet-Absturz in Florida</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Stichwahl - Amtsinhaberin Jotowa gewinnt Präsidentschaftswahl in Bulgarien</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:67%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/amtsinhaberin-jotowa-gewinnt-praesidentschaftswahl-in-bulgarien-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Stichwahl - Amtsinhaberin Jotowa gewinnt Präsidentschaftswahl in Bulgarien</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/stichwahl-bulgarien-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bulgariens amtierende Präsidentin Jotowa gewinnt Stichwahl</span></a></li><li><a href="https://taz.de/Praesidentschaftswahl-in-Bulgarien/!6226593/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Präsidentschaftswahl in Bulgarien: Jotowa laut Prognosen vorn</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/bulgarien-wahl-jotowa-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Bulgarien: Präsidentin Jotowa gewinnt Stichwahl</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Nadeln und Nägel in Halloween-Süßigkeiten entdeckt</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/inland/nadeln-suessigkeiten-halloween-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Nadeln und Nägel in Halloween-Süßigkeiten entdeckt</span></a></li><li><a href="https://www.zeit.de/news/2026-11/02/echter-horror-an-halloween-nadeln-und-naegel-in-suessigkeiten" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Polizei warnt Eltern: Echter Horror an Halloween: Nadeln und Nägel in Süßigkeiten</span></a></li><li><a href="https://www.deutschlandfunk.de/polizei-ermittelt-wegen-nadeln-und-naegeln-in-suessigkeiten-an-halloween-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Mehrere Bundesländer betroffen - Polizei ermittelt wegen Nadeln und Nägeln in Süßigkeiten an Halloween</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Michigan: Demokratin wechselt zu Republikanern</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/usa-wahlen-midterms-michigan-el-sayed-rogers-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Michigan: Demokratin wechselt zu Republikanern</span></a></li><li><a href="https://www.welt.de/videos/video6ae874a38cf0ad2f474f5cb0/el-sayed-schuert-hass-demokratin-stevens-unterstuetzt-auf-einmal-republikaner-rogers.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Demokratin Stevens unterstützt auf einmal Republikaner Rogers</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/midterms-michigan-streit-demokraten-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Michigan vor US-Zwischenwahl: Demokratin unterstützt jetzt Republikaner</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Forderung nach mehr Lohn: Warnstreiks in Thüringen - IG Metall erhöht Druck</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/news/2026-11/02/warnstreiks-in-thueringen-ig-metall-erhoeht-druck" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Forderung nach mehr Lohn: Warnstreiks in Thüringen - IG Metall erhöht Druck</span></a></li><li><a href="https://www.deutschlandfunk.de/weitere-warnstreiks-der-ig-metall-kritik-der-arbeitgeber-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Tarife - Weitere Warnstreiks der IG Metall - Kritik der Arbeitgeber</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/arbeitsmarkt/ig-metall-warnstreiks-120.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">IG Metall weitet im Tarifstreit Warnstreiks aus</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>falscher Alarm: Ukrainische Warn-App gehackt</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/video/ukrainische-warn-app-gehackt-201644106.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">falscher Alarm: Ukrainische Warn-App gehackt</span></a></li><li><a href="https://www.deutschlandfunk.de/falsche-warnungen-vor-radioaktivitaet-warn-apps-in-ukraine-und-russland-offenbar-gehackt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Cyberkriminalität - Falsche Warnungen vor Radioaktivität: Warn-Apps in Ukraine und Russland offenbar gehackt</span></a></li><li><a href="https://taz.de/Warn-Apps-in-Ukraine-und-Russland/!6226598/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Warn-Apps in Ukraine und Russland: Achtung, Achtung, hier hackt Ihr Desinformant</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Chancen und Risiken von KI - Digitalgipfel der Bundesregierung hat begonnen - Wildberger: &quot;Anschluss nicht verpassen&quot;</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/digitalgipfel-der-bundesregierung-hat-begonnen-wildberger-anschluss-nicht-verpassen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Chancen und Risiken von KI - Digitalgipfel der Bundesregierung hat begonnen - Wildberger: &quot;Anschluss nicht verpassen&quot;</span></a></li><li><a href="https://www.phoenix.de/sendungen/ereignisse/phoenix-vor-ort/ua-eroeffnung-des-digital-a-5243962.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Digitalgipfel: Eröffnung mit Karsten Wildberger</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/digitalgipfel-bundesregierung-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Digitalgipfel der Bundesregierung: Ist der KI-Zug in Deutschland schon abgefahren?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Landgericht - Prozessauftakt nach Raserfahrt durch Leipziger Fußgängerzone mit zwei Toten</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/prozessauftakt-nach-raserfahrt-durch-leipziger-fussgaengerzone-mit-zwei-toten-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Landgericht - Prozessauftakt nach Raserfahrt durch Leipziger Fußgängerzone mit zwei Toten</span></a></li><li><a href="https://www.zeit.de/gesellschaft/2026-11/amokfahrt-leipzig-prozess-landgericht-mord" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Leipzig: Tatverdächtiger schweigt zum Prozessauftakt um Amokfahrt in Leipzig</span></a></li><li><a href="https://www.mdr.de/nachrichten/sachsen/leipzig/news-anklage-motiv-staatsanwaltschaft-verteidigung,amokfahrt-prozess-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Tödliche Amokfahrt in Leipziger Fußgängerzone: Angeklagter schweigt zum Prozessauftakt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Film und Fernsehen - Produzentin Regina Ziegler gestorben</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/produzentin-regina-ziegler-gestorben-112.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Film und Fernsehen - Produzentin Regina Ziegler gestorben</span></a></li><li><a href="https://www.zdfheute.de/panorama/prominente/regina-ziegler-tot-film-fernsehen-produzentin-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Filmproduzentin Regina Ziegler mit 82 Jahren gestorben</span></a></li><li><a href="https://www.tagesschau.de/kultur/ziegler-regina-gestorben-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Nach mehr als 500 Produktionen: Filmproduzentin Regina Ziegler gestorben</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Ort der Bildung und Begegnung - Jüdische Akademie in Frankfurt am Main eröffnet - Bundespräsident: Keine Partei darf Antisemiten in ihren Reihen dulden</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/juedische-akademie-in-frankfurt-am-main-eroeffnet-bundespraesident-keine-partei-darf-antisemiten-in--100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ort der Bildung und Begegnung - Jüdische Akademie in Frankfurt am Main eröffnet - Bundespräsident: Keine Partei darf Antisemiten in ihren Reihen dulden</span></a></li><li><a href="https://www.zdfheute.de/wissen/juedische-akademie-frankfurt-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Steinmeier und Schuster eröffnen erste Jüdische Akademie</span></a></li><li><a href="https://www.faz.net/aktuell/rhein-main/frankfurt/juedische-akademie-in-frankfurt-eroeffnet-wir-lassen-uns-nicht-vertreiben-accg-201619489.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Jüdische Akademie: „Wir sind hier, und wir lassen uns nicht vertreiben“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Formel 1 - Mercedes-Pilot Kimi Antonelli zum ersten Mal Weltmeister</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/mercedes-pilot-kimi-antonelli-zum-ersten-mal-weltmeister-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Formel 1 - Mercedes-Pilot Kimi Antonelli zum ersten Mal Weltmeister</span></a></li><li><a href="https://www.faz.net/video/antonelli-wird-juengster-formel-1-weltmeister-aller-zeiten-201643544.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Jüngster Weltmeister: Antonelli schreibt Formel-1-Geschichte</span></a></li><li><a href="https://www.sueddeutsche.de/sport/formel-1-kimi-antonelli-weltmeister-mercedes-mexiko-kommentar-li.3572615" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Formel 1: Dieser erste Titel von Kimi Antonelli ist erst der Anfang</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>„Gen Z regelt“: Bildungsgipfel nach Krawallen gefordert</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/gen-z-proteste-spd-fordert-bildungsgipfel-nach-den-krawallen-accg-201641190.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">„Gen Z regelt“: Bildungsgipfel nach Krawallen gefordert</span></a></li><li><a href="https://taz.de/Gen-Z-regelt-Demonstrationen/!6226455/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">„Gen Z regelt“-Demonstrationen: Eine Bühne für die Unzufriedenheit</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/gen-z-proteste-pluenderungen-gewalt-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Krawalle und Plünderungen überschatten &quot;Gen Z regelt&quot;-Demos</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Russlands Krieg in der Ukraine - Bundespräsident Steinmeier: Chinas Staats- und Parteichef Xi &quot;irritiert&quot; über Berichte zu Gipfel mit USA und Russland zur Ukraine</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bundespraesident-steinmeier-chinas-staats-und-parteichef-xi-irritiert-ueber-berichte-zu-gipfel-mit-u-110.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Russlands Krieg in der Ukraine - Bundespräsident Steinmeier: Chinas Staats- und Parteichef Xi &quot;irritiert&quot; über Berichte zu Gipfel mit USA und Russland zur Ukraine</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/steinmeier-china-russland-usa-gipfel-ukraine-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Steinmeier: China nicht bereit für Ukraine-Gipfel</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>„Die wichtigste Person in meinem Leben“ – Zverevs Liebeserklärung an seine Mutter</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/sport/tennis/article6ae86224a68c18ce70cdbc13/tennis-die-wichtigste-person-in-meinem-leben-zverevs-liebeserklaerung-an-seine-mutter.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Die wichtigste Person in meinem Leben“ – Zverevs Liebeserklärung an seine Mutter</span></a></li><li><a href="https://www.zdfheute.de/sport/tennis-alexander-zverev-weltrangliste-nummer-1-mutter-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Zverev: &quot;Wichtigste Person in meinem Leben&quot;</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Energie - Reiche plant Kraftstoffpreisdeckel nur bei hohen Preissprüngen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/reiche-plant-kraftstoffpreisdeckel-nur-bei-hohen-preisspruengen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Energie - Reiche plant Kraftstoffpreisdeckel nur bei hohen Preissprüngen</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/klima-nachhaltigkeit/weg-von-fossilen-energien-diese-chance-bieten-die-hohen-energiepreise-201528233.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Hohe Energiepreise: Weg von fossilen Energien – jetzt oder nie!</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Haushaltsstreit - Belgiens Premierminister De Wever bietet König Philippe seinen Rücktritt an</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/belgiens-premierminister-de-wever-bietet-koenig-philippe-seinen-ruecktritt-an-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Haushaltsstreit - Belgiens Premierminister De Wever bietet König Philippe seinen Rücktritt an</span></a></li><li><a href="https://www.zeit.de/politik/ausland/2026-11/bart-de-wever-ruecktritt-belgien-koenig-philippe-n-va" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Brüssel: Belgischer Premierminister Bart De Wever bietet Rücktritt an</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>&quot;Blanker Rassismus&quot; - Politik attackiert Ex-Sportreporter Waldemar Hartmann nach Aussage zu Eralp (Die Linke)</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/politik-attackiert-ex-sportreporter-waldemar-hartmann-nach-aussage-zu-eralp-die-linke-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Blanker Rassismus&quot; - Politik attackiert Ex-Sportreporter Waldemar Hartmann nach Aussage zu Eralp (Die Linke)</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6ae827fca609ad98395994f2/waldemar-hartmann-aussage-ueber-elif-eralp-ex-sportmoderator-aeussert-sich-nach-rassismus-vorwuerfen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Aussage über Elif Eralp – Waldemar Hartmann äußert sich nach Rassismus-Vorwürfen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>USA - Trump scheitert mit Präventiv-Klage zur Zwischenwahl in Alaska</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/trump-scheitert-mit-praeventiv-klage-zur-zwischenwahl-in-alaska-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">USA - Trump scheitert mit Präventiv-Klage zur Zwischenwahl in Alaska</span></a></li><li><a href="https://taz.de/Zwischenwahlen-in-den-USA/!6223303/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Zwischenwahlen in den USA: Magier ohne Zauber</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Hamburg - Deutscher Beatles-Wegbereiter Horst Fascher gestorben</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/deutscher-beatles-wegbereiter-horst-fascher-gestorben-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Hamburg - Deutscher Beatles-Wegbereiter Horst Fascher gestorben</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/musik-und-buehne/star-club-gruender-horst-fascher-ist-tot-accg-201642674.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">„Star-Club“-Gründer gestorben: Der Mann, der die Beatles nach Hamburg holte</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Offensive im Westjordanland: Israels Armee zieht ab</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Offensive-im-Westjordanland/!6226639/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Offensive im Westjordanland: Israels Armee zieht ab</span></a></li><li><a href="https://www.spiegel.de/ausland/westjordanland-israelische-armee-zieht-aus-hebron-ab-a-60069143-666b-418a-9eed-c4bbda8b16c1#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Westjordanland: Israelische Armee zieht aus Hebron ab</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>Trumps Geheimplan für die Wahlniederlage – Das sagen die letzten Umfragen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/politik/ausland/article6ae86c76b3f0fa60211d5fd2/midterms-2026-geheimplan-von-donald-trump-fuer-verlust-der-kongressmehrheit-und-die-letzten-umfragen-liveticker.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Trumps Geheimplan für die Wahlniederlage – Das sagen die letzten Umfragen</span></a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/us-midterms-2026-verliert-donald-trump-seine-macht-aktuelle-umfragen-kurz-vor-der-wahl-accg-201302007.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">US-Midterms 2026: Bekommt Trump die Quittung? Das sagen die Umfragen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">23</span>
+          <h3>Reporter ohne Grenzen: Trump schafft es auf die Liste der „Feinde der Pressefreiheit“</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/feuilleton/medien-und-film/medienpolitik/donald-trump-auf-der-liste-der-groessten-feinde-der-pressefreiheit-accg-201643530.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Reporter ohne Grenzen: Trump schafft es auf die Liste der „Feinde der Pressefreiheit“</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/reporter-ohne-grenzen-trump-pressefreiheit-usa-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Trump auf Liste der &quot;Feinde der Pressefreiheit&quot;</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">24</span>
+          <h3>Hackerangriff auf Regierungshandys: Minister bestätigt Attacke</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/deutschland/hackerangriff-regierung-wildberger-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Hackerangriff auf Regierungshandys: Minister bestätigt Attacke</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/wildberger-hackerangriff-bundestagsabgeordnete-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Wildberger bestätigt ARD-Bericht zu Hackerangriff</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">25</span>
+          <h3>Bas beklagt im ARD-Interview mangelnde Menschlichkeit im Politikbetrieb</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/inland/innenpolitik/bas-ruecktritt-feldenkirchen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bas beklagt im ARD-Interview mangelnde Menschlichkeit im Politikbetrieb</span></a></li><li><a href="https://www.spiegel.de/politik/deutschland/baerbel-bas-spd-politikerin-beklagt-mangelnde-menschlichkeit-in-der-politik-auch-in-ihrer-eigenen-partei-a-d721ad94-a03e-41a8-acc4-7aceccfe8500#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Bärbel Bas: Ex-SPD-Chefin beklagt fehlende Menschlichkeit in der Politik</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">26</span>
+          <h3>Antonelli krönt sich zum Formel-1-Weltmeister</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sportschau.de/motorsport/formel1/antonelli-kroent-sich-zum-formel-1-weltmeister,gp-mexiko-antonelli-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Antonelli krönt sich zum Formel-1-Weltmeister</span></a></li><li><a href="https://www.sueddeutsche.de/sport/formel-1-weltmeister-champions-kimi-antonelli-mercedes-mexiko-portraet-li.3572688" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Formel-1-Weltmeister Kimi Antonelli: „Oh mein Gott, ich habe heute viel zu viel geweint“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">27</span>
+          <h3>Wer hinter Amerikas Kriegen steckt</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdf.de/video/dokus/die-akte-trump-100/zdfinfo-die-akte-trump-wer-hinter-amerikas-kriegen-steckt-100" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Wer hinter Amerikas Kriegen steckt</span></a></li><li><a href="https://www.tagesschau.de/tagesthemen/video-1676398.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Gekaperte Gen-Z-Proteste: Wer steckt hinter der Gewalt?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">28</span>
+          <h3>DFB-Pokal: Frankfurt empfängt Dortmund, Bayern gegen Hertha</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sportschau.de/fussball/dfbpokal/jetzt-live-die-auslosung-der-achtelfinals,auslosung-achtelfinale-120.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">DFB-Pokal: Frankfurt empfängt Dortmund, Bayern gegen Hertha</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-dfb-pokal-2026-2027-auslosung-achtelfinale-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Bayern gegen Hertha - BVB zu Gast in Frankfurt</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/wirtschaft/weltwirtschaft/zwischenstand-us-wirtschaft-entwicklung-100.html" target="_blank" rel="noopener">Vor den US-Zwischenwahlen: Wie ist Trumps Wirtschaftsbilanz?</a></li><li><a href="https://www.tagesschau.de/ausland/amerika/usa-midterms-demokraten-republikaner-100.html" target="_blank" rel="noopener">Was das Rennen bei den Midterms entscheiden könnte</a></li><li><a href="https://www.tagesschau.de/ausland/amerika/midterms-michigan-streit-demokraten-100.html" target="_blank" rel="noopener">Michigan vor US-Zwischenwahl: Demokratin unterstützt jetzt Republikaner</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/ausland/usa-krieg-donald-trump-berater-maga-100.html" target="_blank" rel="noopener">Trump und seine Berater: Fast nur Loyalisten und Chamäleons</a></li><li><a href="https://www.zdfheute.de/politik/deutschland/hackerangriff-regierung-wildberger-100.html" target="_blank" rel="noopener">Hackerangriff auf Regierungshandys: Minister bestätigt Attacke</a></li><li><a href="https://www.zdfheute.de/politik/deutschland/amokfahrt-in-leipzig-prozess-jeffrey-k-100.html" target="_blank" rel="noopener">Leipzig: Warum tötete Jeffrey K. mit seinem Auto?</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/reiche-plant-kraftstoffpreisdeckel-nur-bei-hohen-preisspruengen-100.html" target="_blank" rel="noopener">Energie - Reiche plant Kraftstoffpreisdeckel nur bei hohen Preissprüngen</a></li><li><a href="https://www.deutschlandfunk.de/juedische-akademie-in-frankfurt-am-main-eroeffnet-bundespraesident-keine-partei-darf-antisemiten-in--100.html" target="_blank" rel="noopener">Ort der Bildung und Begegnung - Jüdische Akademie in Frankfurt am Main eröffnet - Bundespräsident: Keine Partei darf Antisemiten in ihren Reihen dulden</a></li><li><a href="https://www.deutschlandfunk.de/hubig-stellt-gesetzentwurf-fuer-schaerferes-sexualstrafrecht-vor-hoeheres-strafmass-etwa-bei-gruppen-100.html" target="_blank" rel="noopener">Bundesjustizministerin - Hubig stellt Gesetzentwurf für schärferes Sexualstrafrecht vor - höheres Strafmaß etwa bei Gruppenvergewaltigungen</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/sport/gespraech-mit-boris-becker-ueber-alexander-zverev-man-muss-diesen-jungen-leuten-auch-mal-sagen-was-sie-nicht-gern-hoeren-a-278243eb-56c0-4e79-ae2b-238d12acb3a3#ref=rss" target="_blank" rel="noopener">Gespräch mit Boris Becker über Alexander Zverev: »Man muss diesen jungen Leuten auch mal sagen, was sie nicht gern hören«</a></li><li><a href="https://www.spiegel.de/politik/afd-frueher-zog-alice-weidel-ueber-bjoern-hoecke-her-heute-hofiert-sie-ihn-a-a4f5109a-b823-47b4-a11f-3b5c5e5b6a73#ref=rss" target="_blank" rel="noopener">AfD: Früher zog Alice Weidel über Björn Höcke her, heute hofiert sie ihn</a></li><li><a href="https://www.spiegel.de/ausland/midterms-donald-trump-will-um-keinen-preis-verlieren-und-greift-zu-umstrittenen-mitteln-a-7b1cf105-5722-4f57-a7a6-cb0434a77631#ref=rss" target="_blank" rel="noopener">Midterms: Donald Trump will um keinen Preis verlieren – und greift zu umstrittenen Mitteln</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/politik/deutschland/2026-10/afd-leaks-alice-weidel-thor-kunkel-wahlkampf-2017-eidbrecherin-angela-merkel" target="_blank" rel="noopener">AfD-Leaks: »Das Etikett ›Eidbrecherin‹ muss penetriert werden«</a></li><li><a href="https://www.zeit.de/news/2026-11/02/feuerwehr-schon-wieder-ziel-von-einbrechern" target="_blank" rel="noopener">Einbruchsversuch: Feuerwehr schon wieder Ziel von Einbrechern</a></li><li><a href="https://www.zeit.de/news/2026-11/02/nadel-in-schokoriegel-lidl-im-austausch-mit-ermittlern" target="_blank" rel="noopener">Halloween-Fund: Nadel in Schokoriegel: Lidl im Austausch mit Ermittlern</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/bayern/soeder-abu-dhabi-emirate-reise-miliardeninvestitionen-bayern-li.3571131" target="_blank" rel="noopener">Arabien-Reise des bayerischen Ministerpräsidenten: Söder und die K-Frage in Abu Dhabi</a></li><li><a href="https://www.sueddeutsche.de/politik/gen-z-jugendproteste-hessen-frankfurt-merz-verbot-dobrindt-pistorius-li.3572698" target="_blank" rel="noopener">Gen-Z-Demonstrationen: Merz würdigt politische Jugend-Proteste – und verurteilt Gewalt</a></li><li><a href="https://www.sueddeutsche.de/sport/tennis-alcaraz-atp-wien-zverev-li.3572516" target="_blank" rel="noopener">Tennisprofi Alcaraz: Die Fans lieben ihn, die Medien lieben ihn – selbst die Gegner lieben ihn</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/politik/ausland/nordkorea-und-der-groesste-cyberdiebstahl-der-geschichte-accg-201642739.html" target="_blank" rel="noopener">Nordkoreas Hack: Gestohlenes Krypto für Kims Bombe</a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/us-midterms-2026-auf-diese-demokraten-kommt-es-an-accg-201624859.html" target="_blank" rel="noopener">US-Midterms 2026: Wo bleibt der Demokrat, der Trump das Fürchten lehrt?</a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/us-midterms-2026-verliert-donald-trump-seine-macht-aktuelle-umfragen-kurz-vor-der-wahl-accg-201302007.html" target="_blank" rel="noopener">US-Midterms 2026: Bekommt Trump die Quittung? Das sagen die Umfragen</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/sport/tennis/article6ae86224a68c18ce70cdbc13/tennis-die-wichtigste-person-in-meinem-leben-zverevs-liebeserklaerung-an-seine-mutter.html" target="_blank" rel="noopener">„Die wichtigste Person in meinem Leben“ – Zverevs Liebeserklärung an seine Mutter</a></li><li><a href="https://www.welt.de/politik/ausland/plus6ae81bf8aedea8cd9ffc1328/midterms-aggressive-und-ungewoehnliche-eingriffe-die-angst-dass-trump-die-wahl-nicht-akzeptiert.html" target="_blank" rel="noopener">„Aggressive“ und „ungewöhnliche“ Eingriffe – Die Angst, dass Trump die Wahl nicht akzeptiert</a></li><li><a href="https://www.welt.de/wirtschaft/video6ae8843cfa18ad14b908ebdf/midterm-wahlen-in-der-handelspolitik-waere-es-gut-moeglich-dass-trump-wieder-handelskriege-vom-zaun-bricht.html" target="_blank" rel="noopener">„In der Handelspolitik wäre es gut möglich, dass Trump wieder Handelskriege vom Zaun bricht“</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Falschinformationen-vor-US-Zwischenwahl/!6226503/" target="_blank" rel="noopener">Falschinformationen vor US-Zwischenwahl: „Meine größte Sorge ist die Spaltung darüber, was als Fakt gilt“</a></li><li><a href="https://taz.de/HIV-Prophylaxe-in-Brasilien/!6223241/" target="_blank" rel="noopener">HIV-Prophylaxe in Brasilien: Behandeln statt verhandeln</a></li><li><a href="https://taz.de/Gen-Z-regelt-Sprecherin-ueber-den-3110/!6226615/" target="_blank" rel="noopener">Gen-Z-regelt-Sprecherin über den 31.10.: „Es ist dieselbe Wut“</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.zeit.de/politik/deutschland/2026-10/afd-leaks-alice-weidel-thor-kunkel-wahlkampf-2017-eidbrecherin-angela-merkel" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">AfD-Leaks: »Das Etikett ›Eidbrecherin‹ muss penetriert werden«</span></a></li><li><a href="https://www.zeit.de/news/2026-11/02/feuerwehr-schon-wieder-ziel-von-einbrechern" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Einbruchsversuch: Feuerwehr schon wieder Ziel von Einbrechern</span></a></li><li><a href="https://www.zeit.de/news/2026-11/02/nadel-in-schokoriegel-lidl-im-austausch-mit-ermittlern" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Halloween-Fund: Nadel in Schokoriegel: Lidl im Austausch mit Ermittlern</span></a></li><li><a href="https://taz.de/Falschinformationen-vor-US-Zwischenwahl/!6226503/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Falschinformationen vor US-Zwischenwahl: „Meine größte Sorge ist die Spaltung darüber, was als Fakt gilt“</span></a></li><li><a href="https://www.zeit.de/news/2026-11/02/kein-hubschrauberspritzen-in-mosel-apollo-gebieten-ab-2027" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Bedrohter Schmetterling: Kein Hubschrauberspritzen in Mosel-Apollo-Gebieten ab 2027</span></a></li><li><a href="https://www.faz.net/aktuell/sport/mehr-sport/alexander-zverev-ist-nummer-eins-was-kerber-und-langer-ihm-raten-accg-201637473.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Tipps für Zverev: So lebt es sich auf dem Gipfel der Sportwelt</span></a></li><li><a href="https://www.tagesschau.de/wetter/deutschland/wettervorhersage-deutschland-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Wetter Deutschland: Wolken, Temperaturen, Wind und Aussichten</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/steinmeiers-zuruf-duerfen-spd-und-gruene-nicht-ueberhoeren-201643831.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Steinmeier Mahnt: Ein Zuruf, den die Berliner nicht überhören dürfen</span></a></li><li><a href="https://www.faz.net/aktuell/technik-motor/digital/wechseljahre-was-bringen-smartwatches-und-apps-accg-201607944.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Wechseljahre: Vertrackte Situation</span></a></li><li><a href="https://www.zeit.de/news/2026-11/02/niedersachsen-wird-partnerland-der-gruenen-woche-2027" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Messen: Niedersachsen wird Partnerland der Grünen Woche 2027</span></a></li><li><a href="https://www.tagesschau.de/tagesschau/ts-81920.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">tagesschau</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-steinmeier-mahnt-parteien-zu-klarheit-bei-antisemitismus-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: Steinmeier warnt indirekt vor Koalition mit der Linken in Berlin</span></a></li><li><a href="https://www.zeit.de/news/2026-11/02/prozess-zum-vw-dieselskandal-verzoegert-kein-ende-absehbar" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">VW-Abgasaffäre: Prozess zum VW-Dieselskandal verzögert - kein Ende absehbar</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/amokfahrt-in-leipzig-prozess-jeffrey-k-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Leipzig: Warum tötete Jeffrey K. mit seinem Auto?</span></a></li><li><a href="https://www.zeit.de/news/2026-11/02/ki-als-kriegswaffe-europa-drohen-exportkontrollen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Digitalgipfel: KI als Kriegswaffe? Europa drohen Exportkontrollen</span></a></li><li><a href="https://www.welt.de/politik/ausland/plus6ae81bf8aedea8cd9ffc1328/midterms-aggressive-und-ungewoehnliche-eingriffe-die-angst-dass-trump-die-wahl-nicht-akzeptiert.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Aggressive“ und „ungewöhnliche“ Eingriffe – Die Angst, dass Trump die Wahl nicht akzeptiert</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/usa-krieg-donald-trump-berater-maga-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Trump und seine Berater: Fast nur Loyalisten und Chamäleons</span></a></li><li><a href="https://www.welt.de/wirtschaft/video6ae8843cfa18ad14b908ebdf/midterm-wahlen-in-der-handelspolitik-waere-es-gut-moeglich-dass-trump-wieder-handelskriege-vom-zaun-bricht.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„In der Handelspolitik wäre es gut möglich, dass Trump wieder Handelskriege vom Zaun bricht“</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/debatten/kokain-an-frankreichs-atlantikkueste-hunderte-suchen-an-straenden-accg-201643253.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Drogensuche am meer: 150 Tonnen Kokain treiben vor der Atlantikküste – angeblich</span></a></li><li><a href="https://www.deutschlandfunk.de/hubig-stellt-gesetzentwurf-fuer-schaerferes-sexualstrafrecht-vor-hoeheres-strafmass-etwa-bei-gruppen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundesjustizministerin - Hubig stellt Gesetzentwurf für schärferes Sexualstrafrecht vor - höheres Strafmaß etwa bei Gruppenvergewaltigungen</span></a></li><li><a href="https://www.deutschlandfunk.de/who-chef-tedros-fordert-ratifizierung-von-pandemie-abkommen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ebola-Epidemie im Kongo - WHO-Chef Tedros fordert Ratifizierung von Pandemie-Abkommen</span></a></li><li><a href="https://www.deutschlandfunk.de/bundesregierung-lobt-schueler-fuer-friedliche-proteste-sie-werden-von-der-politik-gehoert-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;GenZ regelt&quot; - Bundesregierung lobt Schüler für friedliche Proteste: &quot;Sie werden von der Politik gehört&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/cyberangriffe-auf-kuehlanlagen-in-supermaerkten-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Belgien und Schweden - Cyberangriffe auf Kühlanlagen in Supermärkten</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 02.11.2026 um 14:39 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
