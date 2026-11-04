@@ -1,0 +1,4556 @@
+{
+  "stand": "2026-11-04T14:05:59.394210+01:00",
+  "stunden": 26,
+  "fehler": {},
+  "themen": [
+    {
+      "titel": "Midterms - Demokraten erobern Mehrheit im Senat und im Repräsentantenhaus",
+      "medien": [
+        "Deutschlandfunk",
+        "FAZ",
+        "Spiegel",
+        "Süddeutsche",
+        "ZDFheute",
+        "Zeit Online",
+        "tagesschau",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Midterms - Demokraten erobern Mehrheit im Senat und im Repräsentantenhaus",
+          "link": "https://www.deutschlandfunk.de/demokraten-erobern-mehrheit-im-senat-und-im-repraesentantenhaus-100.html"
+        },
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Newsblog zu den US-\"Midterms\" - US-Präsident Trump will nach Wahlsieg der Demokraten \"nicht gegen alles ein Veto einlegen\"",
+          "link": "https://www.deutschlandfunk.de/us-praesident-trump-will-nach-wahlsieg-der-demokraten-nicht-gegen-alles-ein-veto-einlegen-100.html"
+        },
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Handy-Blitzer - Auch Deutsche Verkehrssicherheitsrat fordert härtere Maßnahmen gegen Handy am Steuer",
+          "link": "https://www.deutschlandfunk.de/auch-deutsche-verkehrssicherheitsrat-fordert-haertere-massnahmen-gegen-handy-am-steuer-100.html"
+        },
+        {
+          "quelle": "Zeit Online",
+          "titel": "US-Kongresswahlen: Die Ergebnisse der Midterms 2026 – live",
+          "link": "https://www.zeit.de/politik/ausland/2026-11/midterms-us-kongresswahlen-ergebnisse-live"
+        },
+        {
+          "quelle": "Spiegel",
+          "titel": "Demokraten-Erfolg bei den Midterms: Dies ist Amerikas neue Garde",
+          "link": "https://www.spiegel.de/ausland/demokraten-erfolg-bei-den-midterms-dies-ist-amerikas-neue-garde-a-90d75e18-ba14-46a4-b47a-c0ef0bbd69db#ref=rss"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "USA unter Trump: Diese Pläne wollen die Demokraten jetzt umsetzen",
+          "link": "https://www.faz.net/aktuell/politik/usa-unter-trump/liveticker-usa-unter-trump-das-sind-die-plaene-der-demokraten-nach-dem-sieg-bei-den-us-midterms-2026-faz-19444916.html"
+        },
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Midterms 2026: Demokraten erringen Kongress-Mehrheit und feiern historischen Wahlsieg",
+          "link": "https://www.sueddeutsche.de/politik/usa-midterms-2026-wahlen-news-liveblog-ergebnisse-demokraten-sieg-trump-li.3573278"
+        },
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Midterms: Was die Demokraten jetzt gegen Trump ausrichten können",
+          "link": "https://www.sueddeutsche.de/politik/midterms-2026-demokraten-macht-donald-trump-us-kongress-hakeem-jeffries-li.3574028"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Midterms: Demokraten holen Mehrheiten in beiden Kammern des Kongresses",
+          "link": "https://www.tagesschau.de/eilmeldung/usa-midterms-118.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Rachel Tausendfreund, Politikwissenschaftlerin, mit Einordnungen zu den Ergebnissen der Midterms",
+          "link": "https://www.tagesschau.de/video/video-1677884.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Die Ergebnisse der Midterms in den USA in Zahlen und Karten",
+          "link": "https://www.tagesschau.de/ausland/amerika/midterms-ergebnisse-102.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "US-Präsident Trump will Demokraten nach Midterms-Sieg mit seinem Veto in Schach halten",
+          "link": "https://www.tagesschau.de/video/video-1677888.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Demokraten gewinnen Midterms, jetzt müssen sie liefern",
+          "link": "https://www.zdfheute.de/politik/ausland/midterms-demokraten-trump-kongress-wahl-100.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "500 Euro Bußgeld für Handy am Steuer?",
+          "link": "https://www.zdfheute.de/panorama/handy-am-steuer-bussgeld-blitzer-monocam-100.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Trump zu Midterms: \"Herzlichen Glückwunsch an die Demokraten!\"",
+          "link": "https://www.tagesschau.de/ausland/amerika/trump-reaktion-midterms-100.html"
+        },
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Midterms 2026: Das könnte der Beginn eines neuen Amerikas sein",
+          "link": "https://www.sueddeutsche.de/politik/usa-midterms-2026-wahlerfolg-demokraten-niederlage-trump-veraenderung-li.3573673"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "US-Kongress: Siegeszug in Serie für Demokraten bei Midterms",
+          "link": "https://www.tagesschau.de/video/video-1677784.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Nach der Niederlage: Plötzlich lobt Donald Trump die Demokraten",
+          "link": "https://www.faz.net/aktuell/politik/usa-unter-trump/was-das-ergebnis-der-us-midterms-2026-fuer-donald-trump-heisst-accg-201648633.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Midterms 2026: So deutlich fällt der Sieg der Demokraten aus",
+          "link": "https://www.faz.net/aktuell/politik/usa-unter-trump/us-midterms-2026-ergebnisse-der-zwischenwahlen-in-den-usa-unter-donald-trump-201644176.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Was der Wahlerfolg der Demokraten für Trump bedeutet",
+          "link": "https://www.zdfheute.de/politik/ausland/midterms-demokraten-trump-usa-wahl-kongress-100.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Midterms: Schlappe für Trump / Cyberangriffe auf Supermärkte / Blitzer gegen Handy am Steuer",
+          "link": "https://www.tagesschau.de/multimedia/podcast/15-minuten/audio-midterms-wahlen-in-den-usa-100.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "US-Zwischenwahlen: Demokraten steuern auf Wahlerfolg zu",
+          "link": "https://www.tagesschau.de/ausland/amerika/midterms-usa-wahl-100.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Was eine Niederlage Trumps bei den Midterms für die EU bedeuten würde",
+          "link": "https://www.tagesschau.de/ausland/europa/us-midterms-europa-100.html"
+        },
+        {
+          "quelle": "taz",
+          "titel": "Überwachung mit Handyblitzer: Massenüberwachung gegen Handy am Steuer",
+          "link": "https://taz.de/Ueberwachung-mit-Handyblitzer/!6226932/"
+        }
+      ]
+    },
+    {
+      "titel": "Berlin - Merz ruft Russland zu Friedensverhandlungen mit der Ukraine auf",
+      "medien": [
+        "Deutschlandfunk",
+        "FAZ",
+        "Welt",
+        "ZDFheute",
+        "tagesschau",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Berlin - Merz ruft Russland zu Friedensverhandlungen mit der Ukraine auf",
+          "link": "https://www.deutschlandfunk.de/merz-ruft-russland-zu-friedensverhandlungen-mit-der-ukraine-auf-114.html"
+        },
+        {
+          "quelle": "Welt",
+          "titel": "Der Kanzler will eine Frau",
+          "link": "https://www.welt.de/debatte/kolumnen/zippert_zappt/article6aeb270709e0301c03e7f182/zippert-zappt-der-kanzler-will-eine-frau.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Selenskyj, Merz und der Kampf gegen die Zweifel",
+          "link": "https://www.tagesschau.de/ausland/europa/merz-selenskyj-ukrainehilfe-100.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Selenskyj in Berlin: Der Ukraine den Rücken stärken",
+          "link": "https://www.faz.net/aktuell/politik/ukraine/selenskyj-bei-merz-berlin-muss-die-ukraine-staerken-201647657.html"
+        },
+        {
+          "quelle": "taz",
+          "titel": "Merz empfängt Selenskyj: Der Kanzler will mitspielen",
+          "link": "https://taz.de/Merz-empfaengt-Selenskyj/!6226981/"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Selenskyj trifft Merz in Berlin",
+          "link": "https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5244879"
+        }
+      ]
+    },
+    {
+      "titel": "Inflation im Euroraum steigt auf 4,0 Prozent",
+      "medien": [
+        "FAZ",
+        "Spiegel",
+        "ZDFheute",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Inflation im Euroraum steigt auf 4,0 Prozent",
+          "link": "https://www.tagesschau.de/wirtschaft/konjunktur/inflation-eurozone-oktober-102.html"
+        },
+        {
+          "quelle": "Spiegel",
+          "titel": "Hohe Energiepreise: Inflation im Euroraum steigt auf vier Prozent",
+          "link": "https://www.spiegel.de/wirtschaft/hohe-energiepreise-inflation-im-euroraum-steigt-auf-vier-prozent-a-6aa49e04-4639-4134-acf6-08d84917b500#ref=rss"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Teure Energie: Inflation im Euroraum steigt auf vier Prozent",
+          "link": "https://www.faz.net/aktuell/finanzen/finanzmarkt/inflation-im-euroraum-steigt-auf-4-0-prozent-ezb-vor-zinserhoehung-accg-201650074.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Renten könnten 2027 um 4,1 Prozent steigen",
+          "link": "https://www.tagesschau.de/inland/innenpolitik/rentenerhoehung-entwurf-100.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Renten steigen voraussichtlich um über vier Prozent",
+          "link": "https://www.zdfheute.de/politik/deutschland/rente-anstieg-rentenbericht-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Champions League - Stuttgart verliert gegen Galatasaray Istanbul",
+      "medien": [
+        "Deutschlandfunk",
+        "Süddeutsche",
+        "ZDFheute",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Champions League - Stuttgart verliert gegen Galatasaray Istanbul",
+          "link": "https://www.deutschlandfunk.de/stuttgart-verliert-gegen-galatasaray-istanbul-106.html"
+        },
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Stuttgart in der Champions League: „Ich kann nur den Hut ziehen“",
+          "link": "https://www.sueddeutsche.de/sport/vfb-stuttgart-galatasaray-istanbul-undav-hoeness-stimmung-li.3574100"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "VfB Stuttgart verliert hitziges Duell bei Galatasaray",
+          "link": "https://www.sportschau.de/fussball/championsleague/stuttgart-verliert-hitziges-duell-mit-galatasaray-fahrlaessig,spielbericht-cl-galatasaray-stuttgart-100.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Stuttgart verliert bei Galatasaray Istanbul",
+          "link": "https://www.zdfheute.de/sport/fussball-champions-league/fussball-champions-league-galatasaray-vfb-stuttgart-ligaphase-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "\"Oh wie schön ist Panama\" - Schriftsteller und Ilustrator Janosch mit 95 Jahren gestorben",
+      "medien": [
+        "Deutschlandfunk",
+        "Süddeutsche",
+        "ZDFheute",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "\"Oh wie schön ist Panama\" - Schriftsteller und Ilustrator Janosch mit 95 Jahren gestorben",
+          "link": "https://www.deutschlandfunk.de/schriftsteller-und-ilustrator-janosch-mit-95-jahren-gestorben-100.html"
+        },
+        {
+          "quelle": "taz",
+          "titel": "Tigerenten-Schöpfer Janosch ist tot: Oh wie traurig ist Panama",
+          "link": "https://taz.de/Tigerenten-Schoepfer-Janosch-ist-tot/!6227285/"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Schriftsteller und Künstler Janosch gestorben",
+          "link": "https://www.zdfheute.de/panorama/janosch-schriftsteller-kuenstler-tot-100.html"
+        },
+        {
+          "quelle": "Süddeutsche",
+          "titel": "„Oh, wie schön ist Panama“-Autor: Schriftsteller und Künstler Janosch ist tot",
+          "link": "https://www.sueddeutsche.de/kultur/janosch-tot-autor-tiger-baer-oh-wie-schoen-ist-panama-li.3574141"
+        }
+      ]
+    },
+    {
+      "titel": "Sicherheitsabkommen - Grönland gibt grünes Licht für Abkommen mit den USA",
+      "medien": [
+        "Deutschlandfunk",
+        "ZDFheute",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Sicherheitsabkommen - Grönland gibt grünes Licht für Abkommen mit den USA",
+          "link": "https://www.deutschlandfunk.de/groenland-gibt-gruenes-licht-fuer-abkommen-mit-den-usa-100.html"
+        },
+        {
+          "quelle": "taz",
+          "titel": "Abkommen mit den USA: Grönland gibt grünes Licht",
+          "link": "https://taz.de/Abkommen-mit-den-USA/!6227225/"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Grönland billigt Sicherheitsabkommen mit USA und Dänemark",
+          "link": "https://www.zdfheute.de/politik/ausland/groenland-abkommen-usa-daenemark-arktis-sicherheit-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wiesbaden - Museum Wiesbaden gibt zehn Schädel aus Kolonialzeit an Indonesien zurück",
+      "medien": [
+        "Deutschlandfunk",
+        "FAZ",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Wiesbaden - Museum Wiesbaden gibt zehn Schädel aus Kolonialzeit an Indonesien zurück",
+          "link": "https://www.deutschlandfunk.de/museum-wiesbaden-gibt-zehn-schaedel-aus-kolonialzeit-an-indonesien-zurueck-100.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "„Feierlicher Akt“: Museum Wiesbaden gibt zehn Schädel aus Kolonialzeit zurück",
+          "link": "https://www.faz.net/aktuell/rhein-main/region-und-hessen/museum-wiesbaden-gibt-zehn-schaedel-aus-kolonialzeit-an-indonesien-zurueck-accg-201651148.html"
+        },
+        {
+          "quelle": "taz",
+          "titel": "Aufarbeitung der Kolonialzeit: Museum Wiesbaden übergibt Schädel an Indonesien",
+          "link": "https://taz.de/Aufarbeitung-der-Kolonialzeit/!6227258/"
+        }
+      ]
+    },
+    {
+      "titel": "Ministerpräsidentenwahl in Sachsen-Anhalt: Von Angern zieht Kandidatur gegen Siegmund in Betracht",
+      "medien": [
+        "FAZ",
+        "ZDFheute",
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Ministerpräsidentenwahl in Sachsen-Anhalt: Von Angern zieht Kandidatur gegen Siegmund in Betracht",
+          "link": "https://www.zeit.de/politik/deutschland/2026-11/ministerpraesidentenwahl-sachsen-anhalt-eva-von-angern-afd-ulrich-siegmund-gxe"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Linke erwägt Gegenkandidatin zu AfD-Mann Siegmund",
+          "link": "https://www.zdfheute.de/politik/deutschland/sachsen-anhalt-von-angern-kandidatur-siegmund-100.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Deutschland Liveblog: Linken-Fraktionschefin erwägt Kandidatur gegen Siegmund",
+          "link": "https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-berlin-linken-fraktionschefin-erwaegt-kandidatur-gegen-siegmund-faz-110093143.html"
+        }
+      ]
+    },
+    {
+      "titel": "Janosch ist tot: Er ließ sich von nichts fesseln. Auch nicht von der Wirklichkeit",
+      "medien": [
+        "FAZ",
+        "Spiegel",
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Janosch ist tot: Er ließ sich von nichts fesseln. Auch nicht von der Wirklichkeit",
+          "link": "https://www.spiegel.de/kultur/janosch-ist-tot-er-liess-sich-von-nichts-fesseln-auch-nicht-von-der-wirklichkeit-a-cd7a5982-a1d1-49a9-8013-50ec16266e47#ref=rss"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Zum Tod von Janosch: Er schuf die Tigerente und den Quasselkasper",
+          "link": "https://www.faz.net/aktuell/feuilleton/buecher/autoren/tigerenten-erfinder-janosch-ist-im-alter-von-95-jahren-gestorben-accg-201650535.html"
+        },
+        {
+          "quelle": "Welt",
+          "titel": "Er war der Janosch und aus Sehnsucht gemacht",
+          "link": "https://www.welt.de/kultur/article255207282/horst-eckert-er-war-der-janosch-und-aus-sehnsucht-gemacht.html"
+        }
+      ]
+    },
+    {
+      "titel": "Spaniens Verkehrsminister tritt nach Zugunglück zurück",
+      "medien": [
+        "FAZ",
+        "ZDFheute",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Spaniens Verkehrsminister tritt nach Zugunglück zurück",
+          "link": "https://www.zdfheute.de/politik/ausland/spanien-verkehrsminister-unglueck-ruecktritt-100.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "„könne nicht im Amt bleiben“: Verkehrsminister Puente tritt nach zwei schweren Zugunglücken zurück",
+          "link": "https://www.faz.net/video/verkehrsminister-puente-tritt-nach-zwei-schweren-zugungluecken-zurueck-201650351.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Reaktion auf Zugunglücke: Spaniens Verkehrsminister tritt zurück",
+          "link": "https://www.tagesschau.de/ausland/spanien-zugunglueck-puente-ruecktritt-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wahlen in den USA: „Der Anfang vom Ende von Trump und seiner Politik“",
+      "medien": [
+        "FAZ",
+        "tagesschau",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Wahlen in den USA: „Der Anfang vom Ende von Trump und seiner Politik“",
+          "link": "https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/der-anfang-vom-ende-von-trump-und-seiner-politik-was-die-midterms-fuer-europa-bedeuten-accg-201650311.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Politikexperte: \"Es ist eine Wahl gegen Donald Trump\"",
+          "link": "https://www.tagesschau.de/ausland/amerika/usa-ergebnisse-midterms-2026-100.html"
+        },
+        {
+          "quelle": "taz",
+          "titel": "USA und Israel: Trump kündigt Ende von Milliarden-Hilfen für Israel an",
+          "link": "https://taz.de/USA-und-Israel/!6227089/"
+        }
+      ]
+    },
+    {
+      "titel": "Jubelgeste in Madrid: Lennart Karl und die drei Affen des FC Bayern",
+      "medien": [
+        "FAZ",
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Jubelgeste in Madrid: Lennart Karl und die drei Affen des FC Bayern",
+          "link": "https://www.faz.net/aktuell/sport/fussball/champions-league/lennart-karl-tor-und-jubel-geste-fuer-fc-bayern-muenchen-bei-atletico-accg-201649730.html"
+        },
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Sieg bei Atlético Madrid: FC Bayern Balboa",
+          "link": "https://www.sueddeutsche.de/sport/fc-bayern-atletico-champions-league-laimer-karl-upamecano-li.3573943"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "2:0 bei Atlético: FC Bayern zeigt sich widerstandsfähig",
+          "link": "https://www.faz.net/aktuell/sport/fussball/champions-league/geschwaechter-fc-bayern-gewinnt-2-0-bei-atletico-madrid-201305394.html"
+        }
+      ]
+    },
+    {
+      "titel": "Experte zu US-Midterms: „Keine blaue Welle, sondern ein Dammbruch“",
+      "medien": [
+        "FAZ",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Experte zu US-Midterms: „Keine blaue Welle, sondern ein Dammbruch“",
+          "link": "https://www.faz.net/video/keine-blaue-welle-sondern-ein-dammbruch-201650357.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "US-Midterms 2026: Trump rechnete mit einer blauen Welle. Es kam ein Tsunami",
+          "link": "https://www.faz.net/aktuell/politik/usa-unter-trump/midterms-trump-rechnete-mit-einer-blauen-welle-es-kam-ein-tsunami-accg-201649837.html"
+        },
+        {
+          "quelle": "taz",
+          "titel": "Blaue Welle bei den US-Midterms: Trumps Niederlage als Netanjahus Niederlage",
+          "link": "https://taz.de/Midterms/!6226893/"
+        }
+      ]
+    },
+    {
+      "titel": "Westbalkan - EU-Kommission: Montenegro könnte nächstes EU-Mitglied werden",
+      "medien": [
+        "Deutschlandfunk",
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Westbalkan - EU-Kommission: Montenegro könnte nächstes EU-Mitglied werden",
+          "link": "https://www.deutschlandfunk.de/eu-kommission-montenegro-koennte-naechstes-eu-mitglied-werden-102.html"
+        },
+        {
+          "quelle": "Zeit Online",
+          "titel": "Europäische Union: Montenegro könnte laut EU-Kommission 2028 Mitgliedsstaat werden",
+          "link": "https://www.zeit.de/politik/2026-11/montenegro-eu-beitritt-europaeische-union-kommission-gxe"
+        }
+      ]
+    },
+    {
+      "titel": "Cyberkriminalität - Hacker haben in Frankreich auch Blutspendedienst angegriffen",
+      "medien": [
+        "Deutschlandfunk",
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Cyberkriminalität - Hacker haben in Frankreich auch Blutspendedienst angegriffen",
+          "link": "https://www.deutschlandfunk.de/hacker-haben-in-frankreich-auch-blutspendedienst-angegriffen-104.html"
+        },
+        {
+          "quelle": "Spiegel",
+          "titel": "Cyberkriminalität: Hacker greifen französischen Blutspendedienst an",
+          "link": "https://www.spiegel.de/netzwelt/web/cyberkriminalitaet-hacker-greifen-franzoesischen-blutspendedienst-an-a-e95bd312-8d41-49b3-93ff-e2b390d6b9bd#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Videokommentar: »Amerika ist größer als Trump«",
+      "medien": [
+        "Welt",
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Videokommentar: »Amerika ist größer als Trump«",
+          "link": "https://www.zeit.de/video/2026-11/usa-trump-midterms-demokratie-kommentar"
+        },
+        {
+          "quelle": "Welt",
+          "titel": "„Trump hat diese Wahl an den Tankstellen Amerikas verloren“",
+          "link": "https://www.welt.de/politik/ausland/video6aeafeeb1a1d431301d4667b/norbert-roettgen-trump-hat-diese-wahl-an-den-tankstellen-amerikas-verloren.html"
+        }
+      ]
+    },
+    {
+      "titel": "Israel: Streit um endgültiges Wahlergebnis geht weiter",
+      "medien": [
+        "Spiegel",
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Israel: Streit um endgültiges Wahlergebnis geht weiter",
+          "link": "https://www.zdfheute.de/politik/ausland/wahlergebnis-knesset-endgueltig-vorwuerfe-israel-100.html"
+        },
+        {
+          "quelle": "Spiegel",
+          "titel": "Israel: Wahlprüfung abgeschlossen. Aber der Streit über die Regierungsbildung geht weiter",
+          "link": "https://www.spiegel.de/ausland/israel-wahlpruefung-abgeschlossen-aber-der-streit-um-die-regierungsbildung-geht-weiter-a-9a74985f-1b94-4c1e-8a3a-6cdda021ae16#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Ukraine-Krieg: Wolodymyr Selenskyj verleiht Melania Trump Orden wegen Oleschky-Waffenruhe",
+      "medien": [
+        "FAZ",
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Ukraine-Krieg: Wolodymyr Selenskyj verleiht Melania Trump Orden wegen Oleschky-Waffenruhe",
+          "link": "https://www.spiegel.de/ausland/ukraine-krieg-wolodymyr-selenskyj-verleiht-melania-trump-orden-wegen-oleschky-waffenruhe-a-f1ad025e-e638-4111-9363-d9a7f6503294#ref=rss"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Liveblog Ukrainekrieg: Selenskyj verleiht Staatsorden an Melania Trump",
+          "link": "https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-selenskyj-verleiht-staatsorden-an-melania-trump-faz-110683325.html"
+        }
+      ]
+    },
+    {
+      "titel": "Midterms in den USA: Ganz langsam schwappt die blaue Welle nach Berlin",
+      "medien": [
+        "Süddeutsche",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Midterms in den USA: Ganz langsam schwappt die blaue Welle nach Berlin",
+          "link": "https://www.sueddeutsche.de/politik/usa-midterms-2026-auswirkungen-deutschland-merz-bundesregierung-li.3574082"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Midterms-Analyse: Sechs Erkenntnisse nach der \"blauen Welle\"",
+          "link": "https://www.tagesschau.de/ausland/amerika/midterms-analyse-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "München: Totes Kind in Hotelzimmer entdeckt – Verdacht auf Gewalttat",
+      "medien": [
+        "FAZ",
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "München: Totes Kind in Hotelzimmer entdeckt – Verdacht auf Gewalttat",
+          "link": "https://www.faz.net/aktuell/gesellschaft/kriminalitaet/totes-kind-in-muenchner-hotel-entdeckt-mordkommissariat-ermittelt-accg-201651144.html"
+        },
+        {
+          "quelle": "Welt",
+          "titel": "Totes Kind in Münchner Hotelzimmer entdeckt – Polizei geht von Tötungsdelikt aus",
+          "link": "https://www.welt.de/vermischtes/article6aeb0fde3f6a429425b7354e/muenchen-totes-kind-in-hotelzimmer-entdeckt-polizei-geht-von-toetungsdelikt-aus.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Es kann doch nicht der Volkswille sein …“ – CDU-Basis attackiert Schulze vor Siegmund-Wahl",
+      "medien": [
+        "Welt",
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Es kann doch nicht der Volkswille sein …“ – CDU-Basis attackiert Schulze vor Siegmund-Wahl",
+          "link": "https://www.welt.de/politik/deutschland/article6aeae5b7edb44911fb21ea84/sachsen-anhalt-es-kann-doch-nicht-der-volkswille-sein-cdu-basis-attackiert-schulze-vor-siegmund-wahl.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Schulze gegen Schulze - die Revolte der CDU-Basis",
+          "link": "https://www.zdfheute.de/politik/deutschland/cdu-sachsen-anhalt-schulze-brandmauer-afd-ministerpraesident-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Angriffe auf Kühlanlagen: Eiskalt erwischt",
+      "medien": [
+        "tagesschau",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Angriffe auf Kühlanlagen: Eiskalt erwischt",
+          "link": "https://taz.de/Angriffe-auf-Kuehlanlagen/!6221032/"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Angriffe auf Kühlsysteme: Warum Supermärkte von Cyberangriffen kalt erwischt werden",
+          "link": "https://www.tagesschau.de/wissen/kuehlsysteme-schutz-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Dobrindt verteidigt \"Chaoten\"-Aussage nach Krawallen vom Wochenende",
+      "medien": [
+        "ZDFheute",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Dobrindt verteidigt \"Chaoten\"-Aussage nach Krawallen vom Wochenende",
+          "link": "https://www.tagesschau.de/inland/innenpolitik/dobrindt-genz-proteste-100.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Dobrindt: \"Wir haben es mit Chaoten auf der Straße zu tun\"",
+          "link": "https://www.phoenix.de/bundeskongress-a-5244714.html"
+        }
+      ]
+    },
+    {
+      "titel": "Entdecken Sie das ZDF-Nachrichtenstudio",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Entdecken Sie das ZDF-Nachrichtenstudio",
+          "link": "https://3d.zdf.de/nachrichten-studio-design/"
+        }
+      ]
+    },
+    {
+      "titel": "Aktuelle Pressemitteilungen des ZDF",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Aktuelle Pressemitteilungen des ZDF",
+          "link": "https://presseportal.zdf.de/pressemitteilungen/"
+        }
+      ]
+    },
+    {
+      "titel": "Checks and Balances - USA nach den Zwischenwahlen: Welche Folgen hat das Ergebnis für Präsident Trump?",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Checks and Balances - USA nach den Zwischenwahlen: Welche Folgen hat das Ergebnis für Präsident Trump?",
+          "link": "https://www.deutschlandfunk.de/usa-nach-den-zwischenwahlen-welche-folgen-hat-das-ergebnis-fuer-praesident-trump-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Midterms - Bundesregierung zurückhaltend, deutsche Politiker gratulieren US-Demokraten",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Midterms - Bundesregierung zurückhaltend, deutsche Politiker gratulieren US-Demokraten",
+          "link": "https://www.deutschlandfunk.de/bundesregierung-zurueckhaltend-deutsche-politiker-gratulieren-us-demokraten-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Europäische Zentralbank - Niederlande nominieren Ex-Notenbankchef Knot für Chefposten",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Europäische Zentralbank - Niederlande nominieren Ex-Notenbankchef Knot für Chefposten",
+          "link": "https://www.deutschlandfunk.de/niederlande-nominieren-ex-notenbankchef-knot-fuer-chefposten-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Teuerung - Inflationsrate im Euro-Raum erreicht 4,0 Prozent",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Teuerung - Inflationsrate im Euro-Raum erreicht 4,0 Prozent",
+          "link": "https://www.deutschlandfunk.de/inflationsrate-im-euro-raum-erreicht-4-0-prozent-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Israel - Wahlkommission sieht keine Unregelmäßigkeiten - Konsultationen beginnen",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Israel - Wahlkommission sieht keine Unregelmäßigkeiten - Konsultationen beginnen",
+          "link": "https://www.deutschlandfunk.de/wahlkommission-sieht-keine-unregelmaessigkeiten-konsultationen-beginnen-104.html"
+        }
+      ]
+    },
+    {
+      "titel": "Verdacht auf Körperverletzung - Nadeln in weiteren Süßigkeiten entdeckt",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Verdacht auf Körperverletzung - Nadeln in weiteren Süßigkeiten entdeckt",
+          "link": "https://www.deutschlandfunk.de/nadeln-in-weiteren-suessigkeiten-entdeckt-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Berlin - Kabinett beschließt verpflichtenden Standard für bundesweite Wohnsitzanmeldung",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Berlin - Kabinett beschließt verpflichtenden Standard für bundesweite Wohnsitzanmeldung",
+          "link": "https://www.deutschlandfunk.de/kabinett-beschliesst-verpflichtenden-standard-fuer-bundesweite-wohnsitzanmeldung-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Deutsche Krankenhausgesellschaft - Kliniken, Ärzte und Pflege erarbeiten Leitbild gegen Machtmissbrauch",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Deutsche Krankenhausgesellschaft - Kliniken, Ärzte und Pflege erarbeiten Leitbild gegen Machtmissbrauch",
+          "link": "https://www.deutschlandfunk.de/kliniken-aerzte-und-pflege-erarbeiten-leitbild-gegen-machtmissbrauch-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ukraine-Krieg - Drohnenangriff auf Filiale des russischen Internet-Händlers Ozon",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Ukraine-Krieg - Drohnenangriff auf Filiale des russischen Internet-Händlers Ozon",
+          "link": "https://www.deutschlandfunk.de/drohnenangriff-auf-filiale-des-russischen-internet-haendlers-ozon-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Spanien - Gedenkfeier für gestorbenen Fußballer Jesús de Miguel",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Spanien - Gedenkfeier für gestorbenen Fußballer Jesús de Miguel",
+          "link": "https://www.deutschlandfunk.de/gedenkfeier-fuer-gestorbenen-fussballer-jes-s-de-miguel-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Cervantes-Preis - Spanierin Cristina Fernández Cubas erhält Auszeichnung",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Cervantes-Preis - Spanierin Cristina Fernández Cubas erhält Auszeichnung",
+          "link": "https://www.deutschlandfunk.de/spanierin-cristina-fern-ndez-cubas-erhaelt-auszeichnung-108.html"
+        }
+      ]
+    },
+    {
+      "titel": "Industrie - Metall-Arbeitgeber gehen von weiterem Job-Abbau aus",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Industrie - Metall-Arbeitgeber gehen von weiterem Job-Abbau aus",
+          "link": "https://www.deutschlandfunk.de/metall-arbeitgeber-gehen-von-weiterem-job-abbau-aus-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wahlversprechen von Lula - Senat in Brasilien beschließt Gesetz zur Bekämpfung der organisierten Kriminalität",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Wahlversprechen von Lula - Senat in Brasilien beschließt Gesetz zur Bekämpfung der organisierten Kriminalität",
+          "link": "https://www.deutschlandfunk.de/senat-in-brasilien-beschliesst-gesetz-zur-bekaempfung-der-organisierten-kriminalitaet-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ukraine - Grüne halten Hilfe für Kiew für unverzichtbar - Wagener: Druck auf Moskau muss bleiben",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Ukraine - Grüne halten Hilfe für Kiew für unverzichtbar - Wagener: Druck auf Moskau muss bleiben",
+          "link": "https://www.deutschlandfunk.de/gruene-halten-hilfe-fuer-kiew-fuer-unverzichtbar-wagener-druck-auf-moskau-muss-bleiben-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Raketentest - Nordkorea feuert offenbar erneut Geschosse Richtung Meer",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Raketentest - Nordkorea feuert offenbar erneut Geschosse Richtung Meer",
+          "link": "https://www.deutschlandfunk.de/nordkorea-feuert-offenbar-erneut-geschosse-richtung-meer-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Nach tödlichen Zugunfällen - Spaniens Verkehrsminister Puente kündigt Rücktritt an",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Nach tödlichen Zugunfällen - Spaniens Verkehrsminister Puente kündigt Rücktritt an",
+          "link": "https://www.deutschlandfunk.de/spaniens-verkehrsminister-puente-kuendigt-ruecktritt-an-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Teuerungsrate - Bundesbankpräsident Nagel erwartet höheren EZB-Leitzins im Dezember",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Teuerungsrate - Bundesbankpräsident Nagel erwartet höheren EZB-Leitzins im Dezember",
+          "link": "https://www.deutschlandfunk.de/bundesbankpraesident-nagel-erwartet-hoeheren-ezb-leitzins-im-dezember-104.html"
+        }
+      ]
+    },
+    {
+      "titel": "Katastrophenschutz - Nationale Krisenübung zu Dürre und Hitzewelle hat begonnen",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Katastrophenschutz - Nationale Krisenübung zu Dürre und Hitzewelle hat begonnen",
+          "link": "https://www.deutschlandfunk.de/nationale-krisenuebung-zu-duerre-und-hitzewelle-hat-begonnen-104.html"
+        }
+      ]
+    },
+    {
+      "titel": "Flugverkehr - Lufthansa steigt bei der portugiesischen Tap ein",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Flugverkehr - Lufthansa steigt bei der portugiesischen Tap ein",
+          "link": "https://www.deutschlandfunk.de/lufthansa-steigt-bei-der-portugiesischen-tap-ein-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Nach Protesten - Richter des polnischen Verfassungsgerichts setzen Disziplinarkommission ein",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Nach Protesten - Richter des polnischen Verfassungsgerichts setzen Disziplinarkommission ein",
+          "link": "https://www.deutschlandfunk.de/richter-des-polnischen-verfassungsgerichts-setzen-disziplinarkommission-ein-108.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wirtschaft - BMW senkt Prognose für das laufende Jahr",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Wirtschaft - BMW senkt Prognose für das laufende Jahr",
+          "link": "https://www.deutschlandfunk.de/bmw-senkt-prognose-fuer-das-laufende-jahr-106.html"
+        }
+      ]
+    },
+    {
+      "titel": "Rundfunk - Tschechische öffentlich-rechtliche Medien streiken wegen geplanter Gebührenreform",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Rundfunk - Tschechische öffentlich-rechtliche Medien streiken wegen geplanter Gebührenreform",
+          "link": "https://www.deutschlandfunk.de/tschechische-oeffentlich-rechtliche-medien-streiken-wegen-geplanter-gebuehrenreform-110.html"
+        }
+      ]
+    },
+    {
+      "titel": "Weiterer Anlauf - Schwedischer Ministerpräsident Kristersson erneut mit Regierungsbildung beauftragt",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Weiterer Anlauf - Schwedischer Ministerpräsident Kristersson erneut mit Regierungsbildung beauftragt",
+          "link": "https://www.deutschlandfunk.de/schwedischer-ministerpraesident-kristersson-erneut-mit-regierungsbildung-beauftragt-108.html"
+        }
+      ]
+    },
+    {
+      "titel": "Schule und Ausbildung - Nordrhein-Westfalen will verbindliche Berufsorientierungsstunde für Schüler",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Schule und Ausbildung - Nordrhein-Westfalen will verbindliche Berufsorientierungsstunde für Schüler",
+          "link": "https://www.deutschlandfunk.de/nordrhein-westfalen-will-verbindliche-berufsorientierungsstunde-fuer-schueler-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Sabotage-Verdacht - Weitere Festnahme in Deutschland nach Brand in polnischer \"Starlink\"-Anlage",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Sabotage-Verdacht - Weitere Festnahme in Deutschland nach Brand in polnischer \"Starlink\"-Anlage",
+          "link": "https://www.deutschlandfunk.de/weitere-festnahme-in-deutschland-nach-brand-in-polnischer-starlink-anlage-108.html"
+        }
+      ]
+    },
+    {
+      "titel": "Natur - Esche ist Baum des Jahres 2027 - \"Dramatik und Hoffnung\"",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Natur - Esche ist Baum des Jahres 2027 - \"Dramatik und Hoffnung\"",
+          "link": "https://www.deutschlandfunk.de/esche-ist-baum-des-jahres-2027-dramatik-und-hoffnung-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wetter - Bewölkt, örtlich Auflockerungen, 5 bis 11 Grad",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Wetter - Bewölkt, örtlich Auflockerungen, 5 bis 11 Grad",
+          "link": "https://www.deutschlandfunk.de/bewoelkt-oertlich-auflockerungen-5-bis-11-grad-104.html"
+        }
+      ]
+    },
+    {
+      "titel": "Großbritannien: Harry-Potter-Shop auf Londons Einkaufsmeile eröffnet",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Großbritannien: Harry-Potter-Shop auf Londons Einkaufsmeile eröffnet",
+          "link": "https://www.zeit.de/news/2026-11/04/harry-potter-shop-auf-londons-einkaufsmeile-eroeffnet"
+        }
+      ]
+    },
+    {
+      "titel": "Internationaler Haftbefehl: Einbrüche in Hamburg – Verdächtiger in Rumänien gefasst",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Internationaler Haftbefehl: Einbrüche in Hamburg – Verdächtiger in Rumänien gefasst",
+          "link": "https://www.zeit.de/news/2026-11/04/einbrueche-in-hamburg-verdaechtiger-in-rumaenien-gefasst"
+        }
+      ]
+    },
+    {
+      "titel": "Heidi Klum findet es \"okay, älter zu werden\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Heidi Klum findet es \"okay, älter zu werden\"",
+          "link": "https://www.zdfheute.de/panorama/prominente/heidi-klum-wechseljahre-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Landkreis Karlsruhe: Halloween-Süßigkeiten: Kaubonbons manipuliert",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Landkreis Karlsruhe: Halloween-Süßigkeiten: Kaubonbons manipuliert",
+          "link": "https://www.zeit.de/news/2026-11/04/halloween-suessigkeiten-schraube-in-kaubonbon-entdeckt"
+        }
+      ]
+    },
+    {
+      "titel": "Rechte von Abgeordneten: Bundesverfassungsgericht prüft Ausschluss aus AfD-Fraktion",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Rechte von Abgeordneten: Bundesverfassungsgericht prüft Ausschluss aus AfD-Fraktion",
+          "link": "https://www.zeit.de/politik/deutschland/2026-11/jan-wenzel-schmidt-afd-bundestag-fraktion-ausschluss-gxe"
+        }
+      ]
+    },
+    {
+      "titel": "Fund nach Einbruchsversuch: 300 Kilo Kokain in Bananenkisten gefunden",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Fund nach Einbruchsversuch: 300 Kilo Kokain in Bananenkisten gefunden",
+          "link": "https://www.zeit.de/news/2026-11/04/300-kilo-kokain-in-bananenkisten-gefunden"
+        }
+      ]
+    },
+    {
+      "titel": "Wadephul und Warken stellen sich den Abgeordneten",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Wadephul und Warken stellen sich den Abgeordneten",
+          "link": "https://www.zdfheute.de/politik/deutschland/bundestag-regierungsbefragung-wadephul-warken-cdu-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Sicher schwimmen lernen: Bund fördert Schwimmen-Lernen mit 20 Millionen Euro",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Sicher schwimmen lernen: Bund fördert Schwimmen-Lernen mit 20 Millionen Euro",
+          "link": "https://www.zeit.de/news/2026-11/04/bund-foerdert-schwimmen-lernen-mit-20-millionen-euro"
+        }
+      ]
+    },
+    {
+      "titel": "Verteidigung: Uni Kassel ändert Zivilklausel - Proteste gehen weiter",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Verteidigung: Uni Kassel ändert Zivilklausel - Proteste gehen weiter",
+          "link": "https://www.zeit.de/news/2026-11/04/uni-kassel-senat-entscheidet-ueber-zivilklausel"
+        }
+      ]
+    },
+    {
+      "titel": "Zwischenwahlen in den Vereinigten Staaten: Schluss mit Daddy!",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Zwischenwahlen in den Vereinigten Staaten: Schluss mit Daddy!",
+          "link": "https://www.zeit.de/politik/ausland/2026-11/zwischenwahlen-vereinigte-staaten-usa-ergebnisse-internationale-bedeutung"
+        }
+      ]
+    },
+    {
+      "titel": "Im Dezember: Duell bei Ministerpräsidentenwahl in Sachsen-Anhalt?",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Im Dezember: Duell bei Ministerpräsidentenwahl in Sachsen-Anhalt?",
+          "link": "https://www.zeit.de/news/2026-11/04/von-angern-erwaegt-kandidatur-gegen-siegmund"
+        }
+      ]
+    },
+    {
+      "titel": "Deutsche Reaktionen auf Midterms: Gratulation und gedämpfte Erwartungen",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Deutsche Reaktionen auf Midterms: Gratulation und gedämpfte Erwartungen",
+          "link": "https://www.tagesschau.de/inland/innenpolitik/reaktionen-deutschland-midterms-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ausbildungsmarkt: Mehr als 1.600 Jugendliche in Sachsen ohne Lehrstelle",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Ausbildungsmarkt: Mehr als 1.600 Jugendliche in Sachsen ohne Lehrstelle",
+          "link": "https://www.zeit.de/news/2026-11/04/mehr-als-1-600-jugendliche-in-sachsen-ohne-lehrstelle"
+        }
+      ]
+    },
+    {
+      "titel": "Liveblog zu den Midterms: ++ Iran erwartet keinen Kurswechsel der US-Politik",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Liveblog zu den Midterms: ++ Iran erwartet keinen Kurswechsel der US-Politik",
+          "link": "https://www.tagesschau.de/newsticker/liveblog-midterms-2026-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Donald, hör mal …“ – El-Sayed wendet sich in Siegesrede direkt an Trump",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Donald, hör mal …“ – El-Sayed wendet sich in Siegesrede direkt an Trump",
+          "link": "https://www.welt.de/politik/ausland/article6ae86c76b3f0fa60211d5fd2/midterms-2026-donald-hoer-mal-el-sayed-wendet-sich-in-siegesrede-direkt-an-trump-liveticker.html"
+        }
+      ]
+    },
+    {
+      "titel": "Flucht über das Mittelmeer: Sea-Watch meldet erhöhte Gewalt gegen Seenotretter und Geflüchtete",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Flucht über das Mittelmeer: Sea-Watch meldet erhöhte Gewalt gegen Seenotretter und Geflüchtete",
+          "link": "https://www.zeit.de/gesellschaft/2026-11/libysche-kuestenwache-sea-watch-angriffe-seenotretter-mittelmeer-gxe"
+        }
+      ]
+    },
+    {
+      "titel": "Iran-Krieg und Nahost-Konflikt: Alle Nachrichten im Liveblog",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Iran-Krieg und Nahost-Konflikt: Alle Nachrichten im Liveblog",
+          "link": "https://www.zdfheute.de/politik/ausland/iran-israel-usa-angriff-liveblog-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wo die Menschen in Deutschland am längsten leben",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Wo die Menschen in Deutschland am längsten leben",
+          "link": "https://www.tagesschau.de/wissen/gesundheit/lebenserwartung-maenner-frauen-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "US-Midterms: Trump will kooperieren, aber Veto-Macht nutzen",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "US-Midterms: Trump will kooperieren, aber Veto-Macht nutzen",
+          "link": "https://www.zdfheute.de/politik/ausland/midterms-usa-wahl-kongress-liveticker-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Pressefreiheit Tschechien: Tschechiens Sender sehen schwarz",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Pressefreiheit Tschechien: Tschechiens Sender sehen schwarz",
+          "link": "https://taz.de/Pressefreiheit-Tschechien/!6227203/"
+        }
+      ]
+    },
+    {
+      "titel": "Josh O'Connor über Bond-Gerüchte: \"Kneif mich, ich träume\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Josh O'Connor über Bond-Gerüchte: \"Kneif mich, ich träume\"",
+          "link": "https://www.zdfheute.de/panorama/prominente/stars-promi-news-bilder-november-2026-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "BMW: „Wir gehen so weit, wie die Füße uns tragen“",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "BMW: „Wir gehen so weit, wie die Füße uns tragen“",
+          "link": "https://www.sueddeutsche.de/wirtschaft/bmw-quartalsbilanz-abfindungen-china-elektroautos-li.3574067"
+        }
+      ]
+    },
+    {
+      "titel": "Geht Deutschland bei Aufrüstung zu national vor? So weist Pistorius den Vorwurf zurück",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Geht Deutschland bei Aufrüstung zu national vor? So weist Pistorius den Vorwurf zurück",
+          "link": "https://www.welt.de/politik/deutschland/article6aeb20d11a1d431301d46aff/berliner-sicherheitskonferenz-geht-deutschland-bei-aufruestung-zu-national-vor-so-weist-pistorius-den-vorwurf-zurueck.html"
+        }
+      ]
+    },
+    {
+      "titel": "Diese Grafiken zeigen den Einfluss der Sozialisten in den USA",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Diese Grafiken zeigen den Einfluss der Sozialisten in den USA",
+          "link": "https://www.welt.de/politik/ausland/article6ae9aa3836ba9db5f4e96cb0/sieg-der-us-demokraten-bei-midterms-diese-karte-zeigt-den-einfluss-der-sozialisten.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ausgetrumpt nach Midterms? ZDF-Korrespondenten ordnen ein",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Ausgetrumpt nach Midterms? ZDF-Korrespondenten ordnen ein",
+          "link": "https://www.zdf.de/video/talk/auslandsjournal-der-podcast-100/podcast-trump-effekt-folge80-100"
+        }
+      ]
+    },
+    {
+      "titel": "Ines Schwerdtner: Debatte um GenZ-Proteste \"rassistisch\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Ines Schwerdtner: Debatte um GenZ-Proteste \"rassistisch\"",
+          "link": "https://www.zdfheute.de/video/politik-lanz-schwerdtner-ausschreitungen-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Autoindustrie: BMW hat zumindest die Chance, dass es 2027 besser wird",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Autoindustrie: BMW hat zumindest die Chance, dass es 2027 besser wird",
+          "link": "https://www.sueddeutsche.de/wirtschaft/bmw-krise-nedeljkovic-gewinnwarnung-kommentar-li.3574133"
+        }
+      ]
+    },
+    {
+      "titel": "Italienischer Filmregisseur: Mordfall Pasolini wird neu aufgerollt",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Italienischer Filmregisseur: Mordfall Pasolini wird neu aufgerollt",
+          "link": "https://www.faz.net/aktuell/feuilleton/debatten/neuer-zeuge-mordfall-pasolini-neu-aufgerollt-accg-201651236.html"
+        }
+      ]
+    },
+    {
+      "titel": "Katharina Dröge: Ergebnis der Midterms \"Großartiges Signal\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Katharina Dröge: Ergebnis der Midterms \"Großartiges Signal\"",
+          "link": "https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5245166"
+        }
+      ]
+    },
+    {
+      "titel": "Wetter Deutschland: Wolken, Temperaturen, Wind und Aussichten",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Wetter Deutschland: Wolken, Temperaturen, Wind und Aussichten",
+          "link": "https://www.tagesschau.de/wetter/deutschland/wettervorhersage-deutschland-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Trumps blauer Albtraum – Horror-Nacht für die Republikaner",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Trumps blauer Albtraum – Horror-Nacht für die Republikaner",
+          "link": "https://www.welt.de/politik/ausland/video6aeb241899c6bf1f5f1aa90e/midterms-in-den-usa-trumps-blauer-albtraum-horror-nacht-fuer-die-republikaner.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Sie sind erledigt“ – Die große Entfremdung von den Republikanern",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Sie sind erledigt“ – Die große Entfremdung von den Republikanern",
+          "link": "https://www.welt.de/politik/ausland/plus6aeafe7f748580e4813c388e/abkehr-von-trump-sie-sind-erledigt-die-grosse-entfremdung-von-den-republikanern.html"
+        }
+      ]
+    },
+    {
+      "titel": "Marathon: 24-Jährige stirbt nach Zusammenbruch in New York",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Marathon: 24-Jährige stirbt nach Zusammenbruch in New York",
+          "link": "https://www.spiegel.de/sport/marathon-24-jaehrige-stirbt-nach-zusammenbruch-in-new-york-a-eae6683c-b5f0-447e-8ce4-e2f98298af4b#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "„Trump ist so jenseits von mancher Realität, dass ich heute freudig bin, aber sehr, sehr abwartend“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Trump ist so jenseits von mancher Realität, dass ich heute freudig bin, aber sehr, sehr abwartend“",
+          "link": "https://www.welt.de/politik/ausland/video6aeb1a981a1d431301d46a52/strack-zimmermann-ueber-midterms-trump-ist-so-jenseits-von-mancher-realitaet-dass-ich-heute-freudig-bin-aber-sehr-sehr-abwartend.html"
+        }
+      ]
+    },
+    {
+      "titel": "Gaskraftwerke: Kraftwerkscoup für die Lausitz",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Gaskraftwerke: Kraftwerkscoup für die Lausitz",
+          "link": "https://www.faz.net/aktuell/wirtschaft/leag-raeumt-bei-kraftwerksausschreibung-ab-lausitz-profitiert-accg-201647105.html"
+        }
+      ]
+    },
+    {
+      "titel": "Die Ergebnisse der Wahlen live",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Die Ergebnisse der Wahlen live",
+          "link": "https://www.zdfheute.de/politik/ausland/midterms-2026-usa-ergebnisse-live-grafik-karte-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Schlagzeilen",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Schlagzeilen",
+          "link": "https://www.zdfheute.de/newsticker/schlagzeilen-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Ein schönes Beispiel dafür, wie man sich erfolgreich selbst den Hintern wegballern kann“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Ein schönes Beispiel dafür, wie man sich erfolgreich selbst den Hintern wegballern kann“",
+          "link": "https://www.welt.de/mediathek/talk/meine-welt-meine-meinung/video6aeb1a3c1a1d431301d46a36/trumps-midterms-niederlage-ein-schoenes-beispiel-dafuer-wie-man-sich-erfolgreich-selbst-den-hintern-wegballern-kann.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ein Abend im Autohaus – hier offenbart sich die neue Realität des Christian Lindner",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Ein Abend im Autohaus – hier offenbart sich die neue Realität des Christian Lindner",
+          "link": "https://www.welt.de/wirtschaft/plus6aea43eae0471f4ef8388602/ein-abend-im-autohaus-hier-offenbart-sich-die-neue-realitaet-des-christian-lindner.html"
+        }
+      ]
+    },
+    {
+      "titel": "Modedesignerin Frick: „Und wo spart man als erstes? An der Kleidung“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Modedesignerin Frick: „Und wo spart man als erstes? An der Kleidung“",
+          "link": "https://www.faz.net/aktuell/besser-leben/stil/modedesignerin-wir-koennen-nicht-mit-portugal-mithalten-accg-201614472.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wohngeldreform könnte Bedürftige doppelt treffen",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Wohngeldreform könnte Bedürftige doppelt treffen",
+          "link": "https://www.tagesschau.de/inland/gesellschaft/wohngeld-reform-sozialkaufhaus-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Chats Infiltriert: NDR-Recherche löst Prozess wegen Vergewaltigung aus",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Chats Infiltriert: NDR-Recherche löst Prozess wegen Vergewaltigung aus",
+          "link": "https://www.faz.net/aktuell/feuilleton/medien-und-film/medienpolitik/ndr-recherche-loest-prozess-wegen-vergewaltigung-in-england-aus-accg-201650330.html"
+        }
+      ]
+    },
+    {
+      "titel": "Rubens-Zeichnungen: Die Welt auf einem Blatt Papier",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Rubens-Zeichnungen: Die Welt auf einem Blatt Papier",
+          "link": "https://www.faz.net/aktuell/feuilleton/kunst-und-architektur/ausstellung/peter-paul-rubens-und-die-flaemischen-meister-im-kupferstichkabinett-201528038.html"
+        }
+      ]
+    },
+    {
+      "titel": "Enorme Verschiebungen – diese Wähler wandten sich von Trumps Republikanern ab",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Enorme Verschiebungen – diese Wähler wandten sich von Trumps Republikanern ab",
+          "link": "https://www.welt.de/politik/ausland/article6aeb082adbf7fd911f5d18bc/junge-latinos-arbeiter-enorme-verschiebungen-diese-waehler-wandten-sich-von-trumps-republikanern-ab.html"
+        }
+      ]
+    },
+    {
+      "titel": "Aktuelles zum Krieg in der Ukraine",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Aktuelles zum Krieg in der Ukraine",
+          "link": "https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Parlamentspräsident des Iran warnt, dass Washington ein Albtraum drohen könnte“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Parlamentspräsident des Iran warnt, dass Washington ein Albtraum drohen könnte“",
+          "link": "https://www.welt.de/politik/ausland/video6aeb0c3ab1907deb6c9416d4/reaktion-auf-us-midterms-parlamentspraesident-des-iran-warnt-dass-washington-ein-albtraum-drohen-koennte.html"
+        }
+      ]
+    },
+    {
+      "titel": "Stollenprüfung, Einweg-Kopfhörer Forum Romanum, Räuchermännchen",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Stollenprüfung, Einweg-Kopfhörer Forum Romanum, Räuchermännchen",
+          "link": "https://www.tagesschau.de/multimedia/bilder/blickpunkte-10546.html"
+        }
+      ]
+    },
+    {
+      "titel": "Trumps Debakel: Der Tag, an dem der Führerkult endete",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Trumps Debakel: Der Tag, an dem der Führerkult endete",
+          "link": "https://www.faz.net/aktuell/politik/usa-unter-trump/nach-den-us-midterms-2026-stehen-beide-parteien-ohne-fuehrung-da-201650651.html"
+        }
+      ]
+    },
+    {
+      "titel": "15 Jahre danach bleiben Schmerz und offene Fragen",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "15 Jahre danach bleiben Schmerz und offene Fragen",
+          "link": "https://www.tagesschau.de/inland/gesellschaft/nsu-enttarnung-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Dem Geheimnis auf der Spur: Woher stammt dieser weltbekannte Slogan?",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Dem Geheimnis auf der Spur: Woher stammt dieser weltbekannte Slogan?",
+          "link": "https://www.sueddeutsche.de/reise/keep-calm-and-carry-on-zweiter-weltkrieg-grossbritannien-propaganda-geschichte-li.3564283"
+        }
+      ]
+    },
+    {
+      "titel": "Zwei Kammern, ein Denkzettel",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Zwei Kammern, ein Denkzettel",
+          "link": "https://www.zdfheute.de/briefing/trump-effekt/midterms-usa-trump-wahlnacht-ergebnisse-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "150 Grad im Kühlhaus – Hacker greifen jetzt auch Metzgerei in Bayern an",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "150 Grad im Kühlhaus – Hacker greifen jetzt auch Metzgerei in Bayern an",
+          "link": "https://www.welt.de/vermischtes/article6aeaf5fa748580e4813c3725/oberpfalz-150-grad-im-kuehlhaus-hacker-greifen-jetzt-auch-metzgerei-in-bayern-an.html"
+        }
+      ]
+    },
+    {
+      "titel": "Für Wohnraum, Bildung und Renten: Aufruf zu koordinierten Demonstrationen in Europa",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Für Wohnraum, Bildung und Renten: Aufruf zu koordinierten Demonstrationen in Europa",
+          "link": "https://taz.de/Fuer-Wohnraum-Bildung-und-Renten/!6227250/"
+        }
+      ]
+    },
+    {
+      "titel": "52-Jähriger schlägt mit Axt auf Polizeiwache ein und hinterlässt „Spur der Verwüstung“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "52-Jähriger schlägt mit Axt auf Polizeiwache ein und hinterlässt „Spur der Verwüstung“",
+          "link": "https://www.welt.de/vermischtes/article6aeb0dee3f6a429425b73517/polizei-mann-verwuestet-wache-mit-axt-und-machete.html"
+        }
+      ]
+    },
+    {
+      "titel": "Drei große Trimarane gekentert – Boris Herrmann rückt nach vorn",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Drei große Trimarane gekentert – Boris Herrmann rückt nach vorn",
+          "link": "https://www.welt.de/sport/article6aeb0fa31a1d431301d46922/segeln-drei-trimarane-gekentert-boris-herrmann-rueckt-bei-route-du-rhum-nach-vorn.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Die Persönlichkeit von Herrn Trump ist wenig geeignet, eine friedliche Lame Duck abzugeben“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Die Persönlichkeit von Herrn Trump ist wenig geeignet, eine friedliche Lame Duck abzugeben“",
+          "link": "https://www.welt.de/politik/ausland/video6aeb0bb21a1d431301d468be/hofreiter-ueber-midterms-die-persoenlichkeit-von-herrn-trump-ist-wenig-geeignet-eine-friedliche-lame-duck-abzugeben.html"
+        }
+      ]
+    },
+    {
+      "titel": "Pressekonferenz: Gegen Machtmissbrauch im Krankenhaus",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Pressekonferenz: Gegen Machtmissbrauch im Krankenhaus",
+          "link": "https://www.phoenix.de/machtmissbrauch-a-5244958.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Das wird nicht vergnügungssteuerpflichtig“ – Ischinger warnt nach Trump-Klatsche vor „Siegesgeheul“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Das wird nicht vergnügungssteuerpflichtig“ – Ischinger warnt nach Trump-Klatsche vor „Siegesgeheul“",
+          "link": "https://www.welt.de/politik/ausland/article6aeb0225748580e4813c3932/us-midterms-das-wird-nicht-vergnuegungssteuerpflichtig-ischinger-warnt-nach-trump-klatsche-vor-siegesgeheul.html"
+        }
+      ]
+    },
+    {
+      "titel": "Kolumne „Hin und weg“: Geldregen bei Airbnb",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Kolumne „Hin und weg“: Geldregen bei Airbnb",
+          "link": "https://www.sueddeutsche.de/reise/wetter-urlaub-regen-versicherung-li.3563443"
+        }
+      ]
+    },
+    {
+      "titel": "Midterms: Eine historische Wahl mit vielen Premieren",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Midterms: Eine historische Wahl mit vielen Premieren",
+          "link": "https://www.tagesschau.de/ausland/amerika/midterms-historische-siege-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Kongresswahlen: Das ganze Geld von Musk hat nichts gebracht",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Kongresswahlen: Das ganze Geld von Musk hat nichts gebracht",
+          "link": "https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/bittere-pleite-fuer-elon-musk-bei-us-midterms-2026-halbe-milliarde-dollar-an-wahlkampfspenden-ohne-erfolg-accg-201649321.html"
+        }
+      ]
+    },
+    {
+      "titel": "Angesagtes Mitbringsel: Pickles in Geschenkpapier",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Angesagtes Mitbringsel: Pickles in Geschenkpapier",
+          "link": "https://www.faz.net/aktuell/feuilleton/debatten/pickles-statt-wein-uk-hat-ein-neues-trend-gastgeschenk-201629698.html"
+        }
+      ]
+    },
+    {
+      "titel": "Archäologen legen Kleiderschrank in Pompeji frei. Der Inhalt gewährt intime Einblicke",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Archäologen legen Kleiderschrank in Pompeji frei. Der Inhalt gewährt intime Einblicke",
+          "link": "https://www.welt.de/wissenschaft/article6ae9a4f8c7a7a2ac56c6e2db/archaeologie-forscher-legen-kleiderschrank-in-pompeji-frei-der-inhalt-gewaehrt-intime-einblicke.html"
+        }
+      ]
+    },
+    {
+      "titel": "Energiepreise: Deutsche kaufen 38 Prozent weniger Heizöl",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Energiepreise: Deutsche kaufen 38 Prozent weniger Heizöl",
+          "link": "https://www.spiegel.de/wirtschaft/energiepreise-deutsche-kaufen-38-prozent-weniger-heizoel-a-0eef58fb-5baa-4c21-8938-98aca25e9769#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Zum Tod des Illustrators Janosch: Vom Glück, ein bisschen anders zu sein",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Zum Tod des Illustrators Janosch: Vom Glück, ein bisschen anders zu sein",
+          "link": "https://www.tagesschau.de/kultur/illustrator-janosch-tod-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Für die Gehirn- und Allgemeingesundheit ist die Variabilität der Herzrate entscheidend“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Für die Gehirn- und Allgemeingesundheit ist die Variabilität der Herzrate entscheidend“",
+          "link": "https://www.welt.de/gesundheit/plus69bd1ca0ea8bf301e4ae2088/herz-was-smartwatches-ueber-stress-schlaf-und-krankheitsrisiken-erkennen-koennen.html"
+        }
+      ]
+    },
+    {
+      "titel": "Midterms wecken Hoffnung auf Stabilität in den USA",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Midterms wecken Hoffnung auf Stabilität in den USA",
+          "link": "https://www.zdfheute.de/politik/ausland/midterms-usa-reaktionen-deutschland-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Bund und Länder üben Krisenmanagement bei Hitzewellen",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Bund und Länder üben Krisenmanagement bei Hitzewellen",
+          "link": "https://www.tagesschau.de/inland/bbk-krisenmanagement-duerre-hitze-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Einen solchen Chef wünscht sich jeder",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Einen solchen Chef wünscht sich jeder",
+          "link": "https://www.welt.de/kultur/article6ae4268baacefa08f5b98d14/psychologische-zwickmuehle-einen-solchen-chef-wuenscht-sich-jeder.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wettbewerb im Schienenverkehr: Eine bessere Bahn? So nicht!",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Wettbewerb im Schienenverkehr: Eine bessere Bahn? So nicht!",
+          "link": "https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/wettbewerb-auf-der-schiene-warum-italo-in-deutschland-scheitert-201614457.html"
+        }
+      ]
+    },
+    {
+      "titel": "Jetzt zeigt sich, auf wen Klopp wirklich setzt",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Jetzt zeigt sich, auf wen Klopp wirklich setzt",
+          "link": "https://www.welt.de/sport/fussball/article6aeac3a4955da465e2264cca/nationalmannschaft-jetzt-zeigt-sich-auf-wen-juergen-klopp-wirklich-setzt.html"
+        }
+      ]
+    },
+    {
+      "titel": "Leute: „Der hat mich in dem Moment halt als Frauen-Magnet gebraucht“",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Leute: „Der hat mich in dem Moment halt als Frauen-Magnet gebraucht“",
+          "link": "https://www.sueddeutsche.de/panorama/til-schweiger-harvey-weinstein-einladung-inglourious-basterds-promis-li.3574074"
+        }
+      ]
+    },
+    {
+      "titel": "Ocon muss sofort gehen – und die Hintergründe sind mysteriös",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Ocon muss sofort gehen – und die Hintergründe sind mysteriös",
+          "link": "https://www.welt.de/sport/formel1/article6aeafa541a1d431301d465d5/formel-1-ocon-muss-bei-haas-sofort-gehen-und-die-hintergruende-sind-mysterioes.html"
+        }
+      ]
+    },
+    {
+      "titel": "Die Midterms und die EU: Europa darf aufatmen – aber nur ein klein wenig",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Die Midterms und die EU: Europa darf aufatmen – aber nur ein klein wenig",
+          "link": "https://www.sueddeutsche.de/meinung/kommentar-eu-midterms-2026-trump-rechtspopulismus-auswirkungen-li.3574060"
+        }
+      ]
+    },
+    {
+      "titel": "US-Midterms 2026: Der Mann mit der Steinschleuder",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "US-Midterms 2026: Der Mann mit der Steinschleuder",
+          "link": "https://www.faz.net/aktuell/politik/usa-unter-trump/us-midterms-2026-wer-ist-james-talarico-accg-201650594.html"
+        }
+      ]
+    },
+    {
+      "titel": "»The Legend of Zelda: Ocarina of Time«-Remake im Test: Ein nostalgischer Fiebertraum",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "»The Legend of Zelda: Ocarina of Time«-Remake im Test: Ein nostalgischer Fiebertraum",
+          "link": "https://www.spiegel.de/netzwelt/games/the-legend-of-zelda-ocarina-of-time-remake-im-test-ein-nostalgischer-fiebertraum-a-c59cebd3-350a-4221-93f5-3a976333b8f9#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Früher Feierabend: Kita-Personal vergisst Dreijährige",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Früher Feierabend: Kita-Personal vergisst Dreijährige",
+          "link": "https://www.faz.net/aktuell/gesellschaft/kita-in-hennigsdorf-erzieherinnen-vergessen-dreijaehrige-accg-201650954.html"
+        }
+      ]
+    },
+    {
+      "titel": "Hochschule und Politik: Rettungssanitäter der Demokratie",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Hochschule und Politik: Rettungssanitäter der Demokratie",
+          "link": "https://www.faz.net/aktuell/karriere-hochschule/universitaeten-und-demokratie-retter-oder-stiller-naehrboden-accg-201643425.html"
+        }
+      ]
+    },
+    {
+      "titel": "GdP-Chef Kopelke: „Vielleicht braucht es eine neue Form der Härte“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "GdP-Chef Kopelke: „Vielleicht braucht es eine neue Form der Härte“",
+          "link": "https://www.faz.net/aktuell/politik/inland/gdp-chef-jochen-kopelke-nach-krawallen-fuer-neue-form-der-haerte-accg-201650189.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Ich warne vor Siegesgeheul oder vor Schadenfreude über diese Niederlage der Republikaner“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Ich warne vor Siegesgeheul oder vor Schadenfreude über diese Niederlage der Republikaner“",
+          "link": "https://www.welt.de/politik/ausland/video6aeaf9d25e8645bd10666219/ischinger-ueber-midterms-ich-warne-vor-siegesgeheul-oder-vor-schadenfreude-ueber-diese-niederlage-der-republikaner.html"
+        }
+      ]
+    },
+    {
+      "titel": "Der „Antifa-Jurist“ und seine dubiosen Spendenkampagnen",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Der „Antifa-Jurist“ und seine dubiosen Spendenkampagnen",
+          "link": "https://www.welt.de/politik/deutschland/plus6adf7ce544ab625f2110c7e0/der-fall-dennis-k-der-antifa-jurist-und-seine-dubiosen-spendenkampagnen.html"
+        }
+      ]
+    },
+    {
+      "titel": "Service in Frankfurt: Wo der Koffer neue Rollen kriegt",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Service in Frankfurt: Wo der Koffer neue Rollen kriegt",
+          "link": "https://www.faz.net/aktuell/rhein-main/wirtschaft/rollentausch-in-frankfurt-wie-sie-ihren-koffer-vor-dem-muell-retten-accg-201609339.html"
+        }
+      ]
+    },
+    {
+      "titel": "Mendelssohn-Festtage Leipzig: Mendelssohn war skeptisch gegen die eigene Routine",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Mendelssohn-Festtage Leipzig: Mendelssohn war skeptisch gegen die eigene Routine",
+          "link": "https://www.faz.net/aktuell/feuilleton/musik-und-buehne/konzert/die-mendelssohn-festtage-leipzig-blicken-in-die-werkstatt-201646159.html"
+        }
+      ]
+    },
+    {
+      "titel": "Rhein-Main-Liveblog: Hessen übt Krisenfall bei extremer Hitze",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Rhein-Main-Liveblog: Hessen übt Krisenfall bei extremer Hitze",
+          "link": "https://www.faz.net/aktuell/rhein-main/frankfurt-protest-gegen-polizeigewalt-bei-gen-z-demo-aktuelle-nachrichten-aus-frankfurt-hessen-faz-19735361.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wiener Akademie: Wie die Kunst verwaltet wurde",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Wiener Akademie: Wie die Kunst verwaltet wurde",
+          "link": "https://taz.de/Wiener-Akademie/!6223209/"
+        }
+      ]
+    },
+    {
+      "titel": "„Lage ist katastrophal. Und Besserung ist nicht in Sicht“ – Verband warnt vor Aus von 300.000 Jobs",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Lage ist katastrophal. Und Besserung ist nicht in Sicht“ – Verband warnt vor Aus von 300.000 Jobs",
+          "link": "https://www.welt.de/wirtschaft/article6aeaf543edb44911fb21ebed/lage-ist-katastrophal-und-besserung-ist-nicht-in-sicht-verband-warnt-vor-aus-von-300-000-jobs.html"
+        }
+      ]
+    },
+    {
+      "titel": "Vor anderen sprechen: Wie schaffe ich es, rhetorisch zu überzeugen?",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Vor anderen sprechen: Wie schaffe ich es, rhetorisch zu überzeugen?",
+          "link": "https://www.faz.net/aktuell/karriere-hochschule/die-karrierefrage/so-sprechen-sie-ueberzeugend-vor-gruppen-eine-rhetorik-trainerin-gibt-tipps-accg-201612788.html"
+        }
+      ]
+    },
+    {
+      "titel": "Auf welche Entwicklungen Europa jetzt achten muss",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Auf welche Entwicklungen Europa jetzt achten muss",
+          "link": "https://www.welt.de/politik/ausland/video6aeb07d41a1d431301d46806/us-midterms-auf-welche-entwicklungen-europa-jetzt-achten-muss.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ungarischer Volksaufstand: Wie der Kreml den Ungarn-Aufstand für Propaganda nutzt",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Ungarischer Volksaufstand: Wie der Kreml den Ungarn-Aufstand für Propaganda nutzt",
+          "link": "https://taz.de/Wie-der-Kreml-den-70-Jahre-alten-ungarischen-Volksaufstand-fuer-Propaganda-benutzt/!6226908/"
+        }
+      ]
+    },
+    {
+      "titel": "Vorwürfe gegen Özdemir-Berater: War Palmer übergriffig?",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Vorwürfe gegen Özdemir-Berater: War Palmer übergriffig?",
+          "link": "https://taz.de/Vorwuerfe-gegen-Oezdemir-Berater/!6227190/"
+        }
+      ]
+    },
+    {
+      "titel": "Erfinder der Tigerente: Illustrator und Autor Janosch ist tot",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Erfinder der Tigerente: Illustrator und Autor Janosch ist tot",
+          "link": "https://www.tagesschau.de/video/video-1677904.html"
+        }
+      ]
+    },
+    {
+      "titel": "Veganes Kinderessen: Eier, wir brauchen Eier",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Veganes Kinderessen: Eier, wir brauchen Eier",
+          "link": "https://www.spiegel.de/familie/veganes-kinderessen-eier-wir-brauchen-eier-a-c09db804-8192-4bf3-aa77-40fada9da270#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Nachruf: Lasst euch bloß nichts gefallen",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Nachruf: Lasst euch bloß nichts gefallen",
+          "link": "https://www.sueddeutsche.de/kultur/janosch-tot-nachruf-kleiner-baer-tigerente-li.3574147"
+        }
+      ]
+    },
+    {
+      "titel": "Hauseingänge in Paris: Sie haben Post!",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Hauseingänge in Paris: Sie haben Post!",
+          "link": "https://www.faz.net/aktuell/wirtschaft/immobilien-wohnen/sie-haben-post-pariser-hauseingaenge-201633783.html"
+        }
+      ]
+    },
+    {
+      "titel": "Deutschland: Lebenserwartung steigt, Unterschiede zwischen Regionen und Geschlechtern",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Deutschland: Lebenserwartung steigt, Unterschiede zwischen Regionen und Geschlechtern",
+          "link": "https://www.spiegel.de/wissenschaft/mensch/deutschland-lebenserwartung-steigt-unterschiede-zwischen-regionen-und-geschlechtern-a-cdb82ffd-97cc-4431-aff5-ca0658826ce6#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Die unglaubliche Geschichte zweier Männer, die dasselbe Herz trugen und dieselbe Frau liebten",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Die unglaubliche Geschichte zweier Männer, die dasselbe Herz trugen und dieselbe Frau liebten",
+          "link": "https://www.welt.de/vermischtes/plus6ae9a5a1c7a7a2ac56c6e2f2/wesensveraenderung-die-unglaubliche-geschichte-zweier-maenner-die-dasselbe-herz-trugen-und-dieselbe-frau-liebten.html"
+        }
+      ]
+    },
+    {
+      "titel": "Newsblog zur Bundespolitik: Erste Reaktionen auf US-Midterms: „Ein Morgen der Zuversicht“",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Newsblog zur Bundespolitik: Erste Reaktionen auf US-Midterms: „Ein Morgen der Zuversicht“",
+          "link": "https://www.sueddeutsche.de/politik/bundesregierung-deutschland-newsblog-midterms-reaktionen-pistorius-prien-gabriel-li.3568524"
+        }
+      ]
+    },
+    {
+      "titel": "EU-Verbrennerverbot: Wie wäre es, die CO₂-Grenzwerte von Neuwagen komplett abzuschaffen?",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "EU-Verbrennerverbot: Wie wäre es, die CO₂-Grenzwerte von Neuwagen komplett abzuschaffen?",
+          "link": "https://www.faz.net/aktuell/wirtschaft/unternehmen/verbrennerverbot-braucht-die-eu-einen-neuen-weg-zur-dekarbonisierung-accg-201307501.html"
+        }
+      ]
+    },
+    {
+      "titel": "\"Blabla\"-Geste inklusive: Karl antwortet mit Tor auf Kritik",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "\"Blabla\"-Geste inklusive: Karl antwortet mit Tor auf Kritik",
+          "link": "https://www.zdfheute.de/sport/fussball-champions-league/fussball-champions-league-atletico-madrid-fc-bayern-muenchen-nachbericht-lennart-karl-tor-jubelgeste-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Sind Männer gesundheitlich schlechter dran als Frauen?",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Sind Männer gesundheitlich schlechter dran als Frauen?",
+          "link": "https://www.tagesschau.de/wissen/gesundheit/maenner-gesundheit-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Aufstieg der AfD: Der Code der radikalen Rechten",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Aufstieg der AfD: Der Code der radikalen Rechten",
+          "link": "https://www.faz.net/aktuell/feuilleton/debatten/der-code-der-radikalen-rechten-was-den-aufstieg-der-afd-erklaert-accg-201603997.html"
+        }
+      ]
+    },
+    {
+      "titel": "Neues von den Promis: Paris Jackson will an das Erbe ihres Vaters",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Neues von den Promis: Paris Jackson will an das Erbe ihres Vaters",
+          "link": "https://www.faz.net/aktuell/gesellschaft/menschen/neues-von-den-promis-paris-jackson-will-an-das-erbe-ihres-vaters-accg-201650579.html"
+        }
+      ]
+    },
+    {
+      "titel": "tagesschau",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "tagesschau",
+          "link": "https://www.tagesschau.de/tagesschau/ts-81942.html"
+        }
+      ]
+    },
+    {
+      "titel": "Marktbericht: DAX-Anleger reagieren gelassen",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Marktbericht: DAX-Anleger reagieren gelassen",
+          "link": "https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/marktbericht-dax-boerse-118.html"
+        }
+      ]
+    },
+    {
+      "titel": "Israels Präsident Herzog startet Konsultationen zur Regierungsbildung",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Israels Präsident Herzog startet Konsultationen zur Regierungsbildung",
+          "link": "https://www.tagesschau.de/ausland/asien/israel-wahl-konsultationen-herzog-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Rezept für Stroganoff mit Pilzen und Gnocchi – schnell und herzhaft",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Rezept für Stroganoff mit Pilzen und Gnocchi – schnell und herzhaft",
+          "link": "https://www.spiegel.de/effilee/rezept-fuer-stroganoff-mit-pilzen-und-gnocchi-schnell-und-herzhaft-a-fffbdca3-32f2-4ef8-a59a-39b1b5a713c5#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Praktisches Jahr: „Das reicht nicht einmal, wenn man sich von Luft und Liebe ernährt“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Praktisches Jahr: „Das reicht nicht einmal, wenn man sich von Luft und Liebe ernährt“",
+          "link": "https://www.faz.net/aktuell/rhein-main/frankfurt/medizinstudenten-im-praktischen-jahr-399-euro-reichen-nicht-zum-leben-accg-201643003.html"
+        }
+      ]
+    },
+    {
+      "titel": "Harley-Davidson Sprint 440: Klein, aber harley",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Harley-Davidson Sprint 440: Klein, aber harley",
+          "link": "https://www.faz.net/aktuell/technik-motor/motor/harley-davidson-sprint-440-im-test-accg-201632476.html"
+        }
+      ]
+    },
+    {
+      "titel": "BMW in der Krise: Kein Aufbruch, nur Krisenmanagement",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "BMW in der Krise: Kein Aufbruch, nur Krisenmanagement",
+          "link": "https://www.faz.net/aktuell/wirtschaft/bmw-chef-milan-nedeljkovi-kein-aufbruch-nur-krisenmanagement-201650292.html"
+        }
+      ]
+    },
+    {
+      "titel": "Finnland und Norwegen drohen mit Boykott bei Eishockey-WM",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Finnland und Norwegen drohen mit Boykott bei Eishockey-WM",
+          "link": "https://www.sportschau.de/eishockey/mehrere-nationen-drohen-mit-boykott-der-eishockey-wm,eishockey-boykott-finnland-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Lebenserwartung: Männer leben länger – Frauen auch, aber nicht überall",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Lebenserwartung: Männer leben länger – Frauen auch, aber nicht überall",
+          "link": "https://www.faz.net/aktuell/gesellschaft/gesundheit/lebenserwartung-in-deutschland-maenner-holen-auf-frauen-fallen-zurueck-accg-201650320.html"
+        }
+      ]
+    },
+    {
+      "titel": "Gianna Nannini: Italienische Rocksängerin absolviert Triathlon und will mit 72 »nicht einrosten«",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Gianna Nannini: Italienische Rocksängerin absolviert Triathlon und will mit 72 »nicht einrosten«",
+          "link": "https://www.spiegel.de/panorama/gianna-nannini-italienische-rocksaengerin-absolviert-triathlon-und-will-mit-72-nicht-einrosten-a-3d5680c8-bda3-457d-8ac6-82167085147e#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Markt für MOrbides: Kaufe Mumie",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Markt für MOrbides: Kaufe Mumie",
+          "link": "https://www.faz.net/aktuell/wissen/medizin-ernaehrung/mumia-vera-warum-mumienprodukte-im-internet-riskant-sind-accg-201643715.html"
+        }
+      ]
+    },
+    {
+      "titel": "BMW verzeichnet Gewinnrückgang und senkt Jahresprognose",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "BMW verzeichnet Gewinnrückgang und senkt Jahresprognose",
+          "link": "https://www.zdfheute.de/wirtschaft/unternehmen/bmw-gewinn-einbruch-china-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Digitale Hausmeister: „Die Reinigungstour nachts macht der Roboter allein“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Digitale Hausmeister: „Die Reinigungstour nachts macht der Roboter allein“",
+          "link": "https://www.faz.net/aktuell/wirtschaft/immobilien-wohnen/buero-gewerbe/wolf-dieter-adlhoch-wie-dussmann-auf-reinigungsroboter-setzt-accg-201623340.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Entscheidungen schaden Menschen“: Erster Senatssitz für Demokraten in Kansas seit fast 100 Jahren",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "„Entscheidungen schaden Menschen“: Erster Senatssitz für Demokraten in Kansas seit fast 100 Jahren",
+          "link": "https://www.faz.net/video/erster-senatssitz-fuer-demokraten-in-kansas-seit-fast-100-jahren-201650346.html"
+        }
+      ]
+    },
+    {
+      "titel": "Champions League: Bayern München gewinnt bei Atletico Madrid",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Champions League: Bayern München gewinnt bei Atletico Madrid",
+          "link": "https://www.sportschau.de/fussball/championsleague/karl-und-laimer-treffen-bayern-gelingen-big-points-in-madrid,spielbericht-cl-atletico-bayern-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Porträt der Künstlerin Susanne Ahner: Das Gedächtnis in den Dingen",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Porträt der Künstlerin Susanne Ahner: Das Gedächtnis in den Dingen",
+          "link": "https://taz.de/Portraet-der-Kuenstlerin-Susanne-Ahner/!6223117/"
+        }
+      ]
+    },
+    {
+      "titel": "Midterms-Ergebnis der US-Republikaner: Riesenklatsche, unsichere Zukunft",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Midterms-Ergebnis der US-Republikaner: Riesenklatsche, unsichere Zukunft",
+          "link": "https://taz.de/US-Republikaner-bei-den-Midterms-Krachende-Niederlage-unsichere-Zukunft/!6227184/"
+        }
+      ]
+    },
+    {
+      "titel": "IG-Metall-Chefin Christiane Benner vs. Audi: »Ich habe mich fremdgeschämt«",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "IG-Metall-Chefin Christiane Benner vs. Audi: »Ich habe mich fremdgeschämt«",
+          "link": "https://www.spiegel.de/wirtschaft/ig-metall-chefin-christiane-benner-vs-audi-ich-habe-mich-fremdgeschaemt-a-ed782c85-684f-4c18-99da-f55a1b350837#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Business-Ticker: Cyberangriff auf Kühlhäuser von Metzgerei",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Business-Ticker: Cyberangriff auf Kühlhäuser von Metzgerei",
+          "link": "https://www.faz.net/aktuell/wirtschaft/unternehmen/business-liveticker-cyberangriff-auf-kuehlhaeuser-von-metzgerei-hoher-schaden-faz-200452404.html"
+        }
+      ]
+    },
+    {
+      "titel": "Nach den Midterms: Dax nimmt Kurs auf 26.000-Marke",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Nach den Midterms: Dax nimmt Kurs auf 26.000-Marke",
+          "link": "https://www.faz.net/aktuell/finanzen/finanzmarkt/dax-naehert-sich-26-000-punkten-nach-us-midterms-2026-accg-201650347.html"
+        }
+      ]
+    },
+    {
+      "titel": "Kampagne gegen Linke: Die neue Maßlosigkeit",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Kampagne gegen Linke: Die neue Maßlosigkeit",
+          "link": "https://taz.de/Kampagne-gegen-Linke/!6226930/"
+        }
+      ]
+    },
+    {
+      "titel": "Talarico: \"Wir haben Texas zurückerobert\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Talarico: \"Wir haben Texas zurückerobert\"",
+          "link": "https://www.zdfheute.de/video/texas-talarico-us-midterms-video-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Belastung der Justiz: Wenn die Kettensäge droht",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Belastung der Justiz: Wenn die Kettensäge droht",
+          "link": "https://www.faz.net/aktuell/politik/inland/die-strafjustiz-nicht-ueberlasten-201647556.html"
+        }
+      ]
+    },
+    {
+      "titel": "Neue Bücher über Drogen und Verbote: Dem Irrsinn nahe",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Neue Bücher über Drogen und Verbote: Dem Irrsinn nahe",
+          "link": "https://taz.de/Buecher-ueber-Drogen-und-Verbote-Drogen-sind-ueberall-nicht-zuletzt-an-der-Supermarktkasse/!6226895/"
+        }
+      ]
+    },
+    {
+      "titel": "BMW erwirtschaftet noch weniger Gewinn",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "BMW erwirtschaftet noch weniger Gewinn",
+          "link": "https://www.tagesschau.de/wirtschaft/unternehmen/bmw-gewinnwarnung-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Jörg Schönenborn, ARD-Wahlexperte, zum Sieg der Demokraten bei US-Zwischenwahlen",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Jörg Schönenborn, ARD-Wahlexperte, zum Sieg der Demokraten bei US-Zwischenwahlen",
+          "link": "https://www.tagesschau.de/video/video-1677836.html"
+        }
+      ]
+    },
+    {
+      "titel": "US-Midterm-Wahlen: Die Demokraten räumen auch in Texas ab",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "US-Midterm-Wahlen: Die Demokraten räumen auch in Texas ab",
+          "link": "https://taz.de/US-Midterm-Wahlen/!6227189/"
+        }
+      ]
+    },
+    {
+      "titel": "tagesschau in 100 Sekunden",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "tagesschau in 100 Sekunden",
+          "link": "https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1677826.html"
+        }
+      ]
+    },
+    {
+      "titel": "\"Regieren per Dekret\", ARD-Korrespondent zum Machtwechsel in den USA",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "\"Regieren per Dekret\", ARD-Korrespondent zum Machtwechsel in den USA",
+          "link": "https://www.tagesschau.de/video/video-1677832.html"
+        }
+      ]
+    },
+    {
+      "titel": "Analyse: Warum es sogar ein Erdrutschsieg der Demokraten wurde",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Analyse: Warum es sogar ein Erdrutschsieg der Demokraten wurde",
+          "link": "https://www.tagesschau.de/ausland/amerika/midterms-ergebnisse-analyse-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "+++ Nachrichten im Ukrainekrieg +++: Ukraine trifft Logistikzentrum von russischem Onlinehändler",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "+++ Nachrichten im Ukrainekrieg +++: Ukraine trifft Logistikzentrum von russischem Onlinehändler",
+          "link": "https://taz.de/-Nachrichten-im-Ukrainekrieg-/!6227186/"
+        }
+      ]
+    },
+    {
+      "titel": "Texas, Georgia und Co: Wo historische Entscheidungen fielen",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Texas, Georgia und Co: Wo historische Entscheidungen fielen",
+          "link": "https://www.zdfheute.de/politik/ausland/midterms-usa-wahl-kongress-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Hakeem Jeffries: Der ranghöchste Demokrat der USA",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Hakeem Jeffries: Der ranghöchste Demokrat der USA",
+          "link": "https://taz.de/Wahlen-in-den-USA/!6227187/"
+        }
+      ]
+    },
+    {
+      "titel": "Livestream: Die Nachrichten auf tagesschau24",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Livestream: Die Nachrichten auf tagesschau24",
+          "link": "https://www.tagesschau.de/multimedia/livestreams/livestream-ts24-104.html"
+        }
+      ]
+    },
+    {
+      "titel": "So erklären ZDF-Korrespondenten die überraschenden Ergebnisse",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "So erklären ZDF-Korrespondenten die überraschenden Ergebnisse",
+          "link": "https://www.zdfheute.de/politik/ausland/midterms-usa-ueberraschende-ergebnisse-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Zukunft der Grünen: Die stillen Zweifel der Franziska Brantner",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Zukunft der Grünen: Die stillen Zweifel der Franziska Brantner",
+          "link": "https://www.faz.net/aktuell/politik/inland/gruene-die-stillen-zweifel-der-franziska-brantner-accg-201636851.html"
+        }
+      ]
+    },
+    {
+      "titel": "Pressestimmen: Spanische Medien bezeichnen FC Bayern als „pure Elite“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Pressestimmen: Spanische Medien bezeichnen FC Bayern als „pure Elite“",
+          "link": "https://www.faz.net/aktuell/sport/fussball/champions-league/spanische-presse-bezeichnen-fc-bayern-muenchen-als-pure-elite-accg-201650145.html"
+        }
+      ]
+    },
+    {
+      "titel": "Dagmar Knops seit 1988 verschwunden - zwei anonyme Briefe",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Dagmar Knops seit 1988 verschwunden - zwei anonyme Briefe",
+          "link": "https://www.zdfheute.de/panorama/kriminalitaet/aktenzeichen-xy-november-2026-studentin-vermisst-kempen-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "80 Jahre Lucky Luke: Ein Cowboy im Wandel der Zeit",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "80 Jahre Lucky Luke: Ein Cowboy im Wandel der Zeit",
+          "link": "https://www.tagesschau.de/kultur/80-jahre-lucky-luke-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Neues von den Promis: Til Schweiger: Habe Party-Einladung von Harvey Weinstein abgelehnt",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Neues von den Promis: Til Schweiger: Habe Party-Einladung von Harvey Weinstein abgelehnt",
+          "link": "https://www.faz.net/aktuell/gesellschaft/smalltalk/til-schweiger-habe-einladung-von-harvey-weinstein-abgelehnt-accg-201650076.html"
+        }
+      ]
+    },
+    {
+      "titel": "Stromsteuer: Kommt die Entlastung für Bürgerinnen und Bürger noch?",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Stromsteuer: Kommt die Entlastung für Bürgerinnen und Bürger noch?",
+          "link": "https://www.tagesschau.de/inland/innenpolitik/stromsteuer-bundesregierung-entlastung-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Internationale Presse sieht Trump als großen Verlierer",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Internationale Presse sieht Trump als großen Verlierer",
+          "link": "https://www.zdfheute.de/politik/ausland/midterms-usa-presseschau-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Bei Hamburg: Jugendliche werfen 200 Steine auf Autobahn",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Bei Hamburg: Jugendliche werfen 200 Steine auf Autobahn",
+          "link": "https://www.faz.net/aktuell/gesellschaft/kriminalitaet/200-steine-auf-a7-geworfen-jugendliche-in-hamburg-gestellt-accg-201649958.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ausschluss in Kanada: „Dort werden die Russen nicht sein“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Ausschluss in Kanada: „Dort werden die Russen nicht sein“",
+          "link": "https://www.faz.net/aktuell/sport/wintersport/kanadas-premier-mark-carney-schliesst-teilnahme-russlands-bei-eishockey-wm-aus-accg-201649959.html"
+        }
+      ]
+    },
+    {
+      "titel": "Steuern statt Kunst: Für Kultur hat die Berliner Linke nichts mehr übrig",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Steuern statt Kunst: Für Kultur hat die Berliner Linke nichts mehr übrig",
+          "link": "https://www.faz.net/aktuell/feuilleton/debatten/die-berliner-linke-hat-fuer-kultur-nichts-mehr-uebrig-201646549.html"
+        }
+      ]
+    },
+    {
+      "titel": "11KM-Podcast: Wie die Demokraten das US-Parlament zurückerobern",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "11KM-Podcast: Wie die Demokraten das US-Parlament zurückerobern",
+          "link": "https://www.tagesschau.de/multimedia/podcast/11km/midterms-usa-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wahlsiegerin in Georgia: Wer ist Keisha Lance Bottoms?",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Wahlsiegerin in Georgia: Wer ist Keisha Lance Bottoms?",
+          "link": "https://www.zdfheute.de/politik/ausland/keisha-lance-bottoms-demokration-georgia-midterms-usa-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Chronische Entzündung: Darauf müssen Fettleber-Patienten unbedingt achten",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Chronische Entzündung: Darauf müssen Fettleber-Patienten unbedingt achten",
+          "link": "https://www.faz.net/aktuell/wissen/medizin-ernaehrung/fettleber-heisst-jetzt-masld-auswirkungen-fuer-diagnose-und-therapie-accg-201607263.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ausstellung über Künstlerkolonien: Wir essen Salat, ja, wir essen Salat",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Ausstellung über Künstlerkolonien: Wir essen Salat, ja, wir essen Salat",
+          "link": "https://taz.de/Ausstellung-ueber-Kuenstlerkolonien/!6226775/"
+        }
+      ]
+    },
+    {
+      "titel": "Geplanter Börsengang: Anthropic-Roulette für Privatanleger",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Geplanter Börsengang: Anthropic-Roulette für Privatanleger",
+          "link": "https://www.faz.net/aktuell/finanzen/anthropic-boersengang-was-privatanleger-jetzt-wissen-muessen-accg-201647122.html"
+        }
+      ]
+    },
+    {
+      "titel": "Liveblog Nahost: Trump: Keine unmittelbaren Pläne für Angriff auf Iran",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Liveblog Nahost: Trump: Keine unmittelbaren Pläne für Angriff auf Iran",
+          "link": "https://www.faz.net/aktuell/politik/ausland/liveblog-nahost-trump-keine-unmittelbaren-plaene-fuer-angriff-auf-iran-faz-200583539.html"
+        }
+      ]
+    },
+    {
+      "titel": "Midterms: Erste Erkenntnisse am Morgen",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Midterms: Erste Erkenntnisse am Morgen",
+          "link": "https://www.zdfheute.de/video/midterm-usa-texas-einschaetzung-video-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Milliardengrab Bundeswehr: Mit dem USB-Stick an der Front",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Milliardengrab Bundeswehr: Mit dem USB-Stick an der Front",
+          "link": "https://taz.de/Digitalisierung-des-Heeres/!6226945/"
+        }
+      ]
+    },
+    {
+      "titel": "Aktivistin aus Kolumbien: „Menschenhandel ist Sklaverei“",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Aktivistin aus Kolumbien: „Menschenhandel ist Sklaverei“",
+          "link": "https://taz.de/Aktivistin-aus-Kolumbien/!6224028/"
+        }
+      ]
+    },
+    {
+      "titel": "\"Demokraten werden beide Häuser anführen\"",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "\"Demokraten werden beide Häuser anführen\"",
+          "link": "https://www.tagesschau.de/video/video-1677760.html"
+        }
+      ]
+    },
+    {
+      "titel": "Südafrika vor den Kommunalwahlen: Ratlose Politiker und hoffnungslose Bürger",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Südafrika vor den Kommunalwahlen: Ratlose Politiker und hoffnungslose Bürger",
+          "link": "https://taz.de/Suedafrika-vor-den-Kommunalwahlen/!6227027/"
+        }
+      ]
+    },
+    {
+      "titel": "Die Wahrheit: Wummsen und Schlenkern",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Die Wahrheit: Wummsen und Schlenkern",
+          "link": "https://taz.de/Die-Wahrheit/!6226919/"
+        }
+      ]
+    },
+    {
+      "titel": "TV-Kritik Maischberger: Wolfram Weimer betet den Kanzler gesund",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "TV-Kritik Maischberger: Wolfram Weimer betet den Kanzler gesund",
+          "link": "https://www.faz.net/aktuell/feuilleton/medien-und-film/talkshow/maischberger-in-der-tv-kritik-wolfram-weimer-betet-merz-gesund-accg-201649236.html"
+        }
+      ]
+    },
+    {
+      "titel": "Darmstädter Akademie: Der mönchische Habitus ist nicht der beste Gelehrtenwitz",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Darmstädter Akademie: Der mönchische Habitus ist nicht der beste Gelehrtenwitz",
+          "link": "https://www.faz.net/aktuell/wissen/forschung-politik/die-darmstaedter-akademie-debattiert-die-zukunft-der-geisteswissenschaften-accg-201620470.html"
+        }
+      ]
+    },
+    {
+      "titel": "Aus der Praxis: Zehn Prompts, die der KI das Raten abgewöhnen",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Aus der Praxis: Zehn Prompts, die der KI das Raten abgewöhnen",
+          "link": "https://www.faz.net/premium/digitalwirtschaft/ki-akademie/ki-und-erfundene-quellen-zehn-prompts-fuer-zuverlaessigere-antworten-accg-201648867.html"
+        }
+      ]
+    },
+    {
+      "titel": "15. Jahrestag der NSU-Terrorserie: Wie die NSU-Helfer davonkamen",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "15. Jahrestag der NSU-Terrorserie: Wie die NSU-Helfer davonkamen",
+          "link": "https://taz.de/15-Jahrestag-der-NSU-Terrorserie/!6226928/"
+        }
+      ]
+    },
+    {
+      "titel": "Bafin lässt das Berliner Fintech Solaris nicht von der Leine",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Bafin lässt das Berliner Fintech Solaris nicht von der Leine",
+          "link": "https://www.manager-magazin.de/unternehmen/solaris-bafin-laesst-das-berliner-fintech-nicht-von-der-leine-a-0ce8f6b1-31b7-43e3-bc77-5d9e195a7ff9#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Jüdische Akademie: Genau am richtigen Ort",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Jüdische Akademie: Genau am richtigen Ort",
+          "link": "https://www.faz.net/aktuell/rhein-main/frankfurt/fuer-die-juedische-akademie-gibt-es-keine-bessere-heimat-als-frankfurt-201646967.html"
+        }
+      ]
+    },
+    {
+      "titel": "Acht Prompts: Wie die KI am Black Friday echte Rabatte erkennt",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Acht Prompts: Wie die KI am Black Friday echte Rabatte erkennt",
+          "link": "https://www.faz.net/premium/digitalwirtschaft/ki-akademie/black-friday-mit-ki-echte-rabatte-erkennen-und-fake-shops-meiden-accg-201647875.html"
+        }
+      ]
+    },
+    {
+      "titel": "Digitale Geographie: Die Weltkarte der Arbeitsteilung zwischen Mensch und KI",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Digitale Geographie: Die Weltkarte der Arbeitsteilung zwischen Mensch und KI",
+          "link": "https://www.faz.net/premium/digitalwirtschaft/zukunft-der-arbeit/agent-delegability-index-deutschland-fuehrt-in-eu-bei-ki-delegation-accg-201647152.html"
+        }
+      ]
+    },
+    {
+      "titel": "KI-Aktien: Die KI-Konzerne investieren schneller, als sie verdienen",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "KI-Aktien: Die KI-Konzerne investieren schneller, als sie verdienen",
+          "link": "https://www.faz.net/premium/digitalwirtschaft/kuenstliche-intelligenz/ki-konzerne-alphabet-amazon-und-meta-investieren-schneller-als-sie-verdienen-accg-201644232.html"
+        }
+      ]
+    },
+    {
+      "titel": "F.A.Z. Frühdenker: Steht eine neue Angriffswelle auf Iran bevor?",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "F.A.Z. Frühdenker: Steht eine neue Angriffswelle auf Iran bevor?",
+          "link": "https://www.faz.net/podcasts/f-a-z-podcast-fruehdenker/us-midterms-2026-demokraten-stehen-vor-deutlichem-sieg-faz-fruehdenker-accg-201649144.html"
+        }
+      ]
+    },
+    {
+      "titel": "Kunst? Nein, Apfelernte!",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Kunst? Nein, Apfelernte!",
+          "link": "https://www.zdfheute.de/video/apfelernte-tuerkei-kunst-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Erbe: Was bei Erbschaftssteuer, Erbschein und Co. gilt",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Erbe: Was bei Erbschaftssteuer, Erbschein und Co. gilt",
+          "link": "https://www.zdfheute.de/ratgeber/erbschaft-erbe-erben-fristen-pflichten-erbschaftssteuer-erbschein-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Pfiffe in Istanbul: „Ich dachte mir: Da stimmt doch was nicht“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Pfiffe in Istanbul: „Ich dachte mir: Da stimmt doch was nicht“",
+          "link": "https://www.faz.net/aktuell/sport/fussball/champions-league/vfb-stuttgart-bei-galatasaray-istanbul-pfiffe-auf-lautsprechern-accg-201649693.html"
+        }
+      ]
+    },
+    {
+      "titel": "Designhotel: Wo die Adler der Kindheit fliegen",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Designhotel: Wo die Adler der Kindheit fliegen",
+          "link": "https://www.faz.net/aktuell/reise/hotel-bella-vista-mit-blick-auf-die-ortlergruppe-accg-201628376.html"
+        }
+      ]
+    },
+    {
+      "titel": "Airlines streichen Flüge: Verliert Deutschland den Anschluss?",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Airlines streichen Flüge: Verliert Deutschland den Anschluss?",
+          "link": "https://www.tagesschau.de/wirtschaft/luftfahrt-lufthansa-wirtschaftsstandort-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Karlsruhe prüft Fraktionsausschluss von AfD-Politiker",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Karlsruhe prüft Fraktionsausschluss von AfD-Politiker",
+          "link": "https://www.tagesschau.de/inland/innenpolitik/bundesverfassungsgericht-afd-fraktionsausschluss-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Sport und Ehrenamt: „Für ein Vereinsfest brauchst du heute drei Waschbecken und sechs Schulungen“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Sport und Ehrenamt: „Für ein Vereinsfest brauchst du heute drei Waschbecken und sechs Schulungen“",
+          "link": "https://www.faz.net/aktuell/sport/sportpolitik/sport-und-ehrenamt-interview-mit-gruender-vom-verein-anpfiff-ins-leben-accg-201646805.html"
+        }
+      ]
+    },
+    {
+      "titel": "Hält Leipzigs Heimbilanz auch gegen City?",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Hält Leipzigs Heimbilanz auch gegen City?",
+          "link": "https://www.zdfheute.de/sport/fussball-champions-league/fussball-champions-league-rb-leipzig-manchester-city-ausblick-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wie junge Athleten lernen, mit Druck umzugehen",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Wie junge Athleten lernen, mit Druck umzugehen",
+          "link": "https://www.zdfheute.de/sport/youth-olympic-games-nachwuchssport-druck-soziale-medien-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Kolumne „Midlife-Crisis“: Als hätte der Sargdeckel auch die Akte der Hoffnung geschlossen",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Kolumne „Midlife-Crisis“: Als hätte der Sargdeckel auch die Akte der Hoffnung geschlossen",
+          "link": "https://www.faz.net/aktuell/besser-leben/familie/tod-des-vaters-trauer-um-eine-beziehung-die-nie-war-accg-201646353.html"
+        }
+      ]
+    },
+    {
+      "titel": "Frischhalteboxen richtig nutzen und reinigen",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Frischhalteboxen richtig nutzen und reinigen",
+          "link": "https://www.zdfheute.de/ratgeber/frischhaltedosen-reinigen-brotdose-spuelmaschine-mikrowelle-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Handel in Cäsars Reich",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Handel in Cäsars Reich",
+          "link": "https://www.zdf.de/video/dokus/zdfinfo-rom-im-schatten-des-imperiums-100/zdfinfo-rom-im-schatten-des-imperiums-handel-in-caesars-reich-100"
+        }
+      ]
+    },
+    {
+      "titel": "In der Arena von Commodus",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "In der Arena von Commodus",
+          "link": "https://www.zdf.de/video/dokus/zdfinfo-rom-im-schatten-des-imperiums-100/zdfinfo-rom-im-schatten-des-imperiums-in-der-arena-von-commodus-100"
+        }
+      ]
+    },
+    {
+      "titel": "Caracallas Garde",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Caracallas Garde",
+          "link": "https://www.zdf.de/video/dokus/zdfinfo-rom-im-schatten-des-imperiums-100/zdfinfo-rom-im-schatten-des-imperiums-caracallas-garde-100"
+        }
+      ]
+    },
+    {
+      "titel": "Überleben unter Nero",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Überleben unter Nero",
+          "link": "https://www.zdf.de/video/dokus/zdfinfo-rom-im-schatten-des-imperiums-100/zdfinfo-rom-im-schatten-des-imperiums-ueberleben-unter-nero-100"
+        }
+      ]
+    },
+    {
+      "titel": "Schwerdtner: \"Spiegel\" verschlechterte Eralps Sicherheitslage",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Schwerdtner: \"Spiegel\" verschlechterte Eralps Sicherheitslage",
+          "link": "https://www.zdfheute.de/politik/deutschland/lanz-berlin-koalitionsverhandlungen-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Berlin: Sido gibt seinen Späti wegen zu hoher Miete auf",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Berlin: Sido gibt seinen Späti wegen zu hoher Miete auf",
+          "link": "https://www.faz.net/aktuell/gesellschaft/menschen/sido-gibt-seinen-spaeti-in-berlin-wegen-zu-hoher-miete-auf-accg-201649275.html"
+        }
+      ]
+    },
+    {
+      "titel": "Kurioses Urteil: Streit um Sorgerecht: Pendeln für Katze nicht zumutbar",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Kurioses Urteil: Streit um Sorgerecht: Pendeln für Katze nicht zumutbar",
+          "link": "https://www.faz.net/aktuell/gesellschaft/tiere/gerichtsurteil-zum-sorgerecht-pendeln-fuer-katze-nicht-zumutbar-201649173.html"
+        }
+      ]
+    },
+    {
+      "titel": "tagesthemen",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "tagesthemen",
+          "link": "https://www.tagesschau.de/tagesthemen/tt-12960.html"
+        }
+      ]
+    },
+    {
+      "titel": "Karl und Laimer schießen Bayern zum Sieg bei Atletico",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Karl und Laimer schießen Bayern zum Sieg bei Atletico",
+          "link": "https://www.zdfheute.de/sport/fussball-champions-league/fussball-champions-league-atletico-madrid-bayern-muenchen-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Gen Z: Zwischen Protest und Krawall",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Gen Z: Zwischen Protest und Krawall",
+          "link": "https://www.zdfheute.de/video/frontal/gen-z-zwischen-protest-und-krawall-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Streit um KI-Überwachung im US-Wahlkampf",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Streit um KI-Überwachung im US-Wahlkampf",
+          "link": "https://www.zdfheute.de/video/frontal/ki-ueberwachung-im-us-wahlkampf-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Verdacht auf Erbschleicherei",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Verdacht auf Erbschleicherei",
+          "link": "https://www.zdfheute.de/video/frontal/verdacht-auf-erbschleicherei-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Gen Z-Proteste | Verdacht auf Erbschleicherei",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Gen Z-Proteste | Verdacht auf Erbschleicherei",
+          "link": "https://www.zdf.de/video/magazine/frontal-das-magazin-100/frontal-vom-3-november-2026-100"
+        }
+      ]
+    },
+    {
+      "titel": "Gefahr durch manipulierte Fatbikes",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Gefahr durch manipulierte Fatbikes",
+          "link": "https://www.zdfheute.de/video/frontal/manipulierte-fatbikes-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Tausende protestieren gegen tschechische Rundfunk-Pläne",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Tausende protestieren gegen tschechische Rundfunk-Pläne",
+          "link": "https://www.tagesschau.de/ausland/europa/protest-tschechien-rundfunk-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "tagesschau",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "tagesschau",
+          "link": "https://www.tagesschau.de/tagesschau_20_uhr/ts-81856.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wahlkampfabschluss von Donald Trump: Zurück und noch viel schöner!",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Wahlkampfabschluss von Donald Trump: Zurück und noch viel schöner!",
+          "link": "https://taz.de/Wahlkampfabschluss-von-Donald-Trump/!6226921/"
+        }
+      ]
+    },
+    {
+      "titel": "Debatte um Steinmeiers Nachfolge: Wir brauchen keine Bundespräsidentin",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Debatte um Steinmeiers Nachfolge: Wir brauchen keine Bundespräsidentin",
+          "link": "https://taz.de/Debatte-um-Steinmeiers-Nachfolge/!6227000/"
+        }
+      ]
+    },
+    {
+      "titel": "Soziologe zu „Gen Z regelt“-Demos: „Was die CDU macht, ist gemeingefährlich“",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Soziologe zu „Gen Z regelt“-Demos: „Was die CDU macht, ist gemeingefährlich“",
+          "link": "https://taz.de/Soziologe-zu-Gen-Z-regelt-Demos/!6226822/"
+        }
+      ]
+    },
+    {
+      "titel": "Opferberatung in Sachsen-Anhalt: Zum Jubiläum braucht es Solidarität",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Opferberatung in Sachsen-Anhalt: Zum Jubiläum braucht es Solidarität",
+          "link": "https://taz.de/Opferberatung-in-Sachsen-Anhalt/!6222204/"
+        }
+      ]
+    },
+    {
+      "titel": "Bilger für Handyblitzer: Das Problem am falschen Ende angepackt",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Bilger für Handyblitzer: Das Problem am falschen Ende angepackt",
+          "link": "https://taz.de/Bilger-fuer-Handyblitzer/!6227012/"
+        }
+      ]
+    },
+    {
+      "titel": "Eishockey-WM in Deutschland: Ein Tor für Russland",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Eishockey-WM in Deutschland: Ein Tor für Russland",
+          "link": "https://taz.de/Eishockey-WM-in-Deutschland/!6226948/"
+        }
+      ]
+    },
+    {
+      "titel": "Neuer Lucky-Luke-Band: Muh! Der Lucky-Kult geht um",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Neuer Lucky-Luke-Band: Muh! Der Lucky-Kult geht um",
+          "link": "https://taz.de/Neuer-Lucky-Luke-Band/!6226566/"
+        }
+      ]
+    },
+    {
+      "titel": "Digitalgipfel: Die letzte Warnung",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Digitalgipfel: Die letzte Warnung",
+          "link": "https://www.faz.net/aktuell/wirtschaft/unternehmen/digitalgipfel-ritual-der-absichtserklaerungen-statt-echter-ki-politik-201647041.html"
+        }
+      ]
+    },
+    {
+      "titel": "Dinosaurier in Weihnachtsstimmung",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Dinosaurier in Weihnachtsstimmung",
+          "link": "https://www.zdfheute.de/video/pullover-dino-video-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Auch wenn es so wirkt: Es ist kein Routinetreffen",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Auch wenn es so wirkt: Es ist kein Routinetreffen",
+          "link": "https://www.zdfheute.de/politik/deutschland/merz-selenskyi-treffen-berlin-ukraine-hilfe-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Die US-Midterms - die nächste wichtige Wahl für Israel",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Die US-Midterms - die nächste wichtige Wahl für Israel",
+          "link": "https://www.tagesschau.de/ausland/asien/israel-usa-midterms-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Hubschrauberkollision in Nepal",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Hubschrauberkollision in Nepal",
+          "link": "https://www.zdfheute.de/video/mount-everest-hubschrauber-kollision-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "So will der BVB die Leistung aus dem Bayern-Spiel konservieren",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "So will der BVB die Leistung aus dem Bayern-Spiel konservieren",
+          "link": "https://www.sportschau.de/regional/wdr/wdr-so-will-der-bvb-die-bayern-leistung-konservieren-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Schaeffler-Schließungen: Darum sind Zulieferer unter Druck",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Schaeffler-Schließungen: Darum sind Zulieferer unter Druck",
+          "link": "https://www.zdfheute.de/wirtschaft/unternehmen/schaeffler-stellenabbau-standortschliessung-autozulieferer-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ausschreibungen: Wie alte Kohlemeiler den Kraftwerkspoker gewonnen haben",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Ausschreibungen: Wie alte Kohlemeiler den Kraftwerkspoker gewonnen haben",
+          "link": "https://www.faz.net/aktuell/wirtschaft/klima-nachhaltigkeit/leag-gewinnt-den-kraftwerkspoker-mit-alten-kohlemeilern-201647098.html"
+        }
+      ]
+    },
+    {
+      "titel": "Evers' Angebot: Wie realistisch eine Kenia-Koalition ist",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Evers' Angebot: Wie realistisch eine Kenia-Koalition ist",
+          "link": "https://www.zdfheute.de/politik/deutschland/kenia-koalition-berlin-eralp-evers-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Botanik-Kolumne: Zombies im Regenwald",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Botanik-Kolumne: Zombies im Regenwald",
+          "link": "https://www.faz.net/aktuell/wissen/ab-in-die-botanik/zombie-baumfarn-erstaunlicher-fund-in-panama-201617991.html"
+        }
+      ]
+    },
+    {
+      "titel": "Lucky Luke feiert seinen 80. Geburtstag mit neuem Comic",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Lucky Luke feiert seinen 80. Geburtstag mit neuem Comic",
+          "link": "https://www.zdfheute.de/video/lucky-luke-jubilaeum-comic-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Reiches Entwurf für Spritpreisdeckel: Hohe Hürden bei der Preisbremse für Benzin und Diesel",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Reiches Entwurf für Spritpreisdeckel: Hohe Hürden bei der Preisbremse für Benzin und Diesel",
+          "link": "https://taz.de/Reiches-Entwurf-fuer-Spritpreisdeckel/!6226946/"
+        }
+      ]
+    },
+    {
+      "titel": "CDU in der Krise: Dem Ärger Luft gemacht – und nun?",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "CDU in der Krise: Dem Ärger Luft gemacht – und nun?",
+          "link": "https://taz.de/CDU-in-der-Krise/!6227059/"
+        }
+      ]
+    },
+    {
+      "titel": "Schock in Spanien: Fußballer stirbt nach Foul",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Schock in Spanien: Fußballer stirbt nach Foul",
+          "link": "https://www.zdfheute.de/sport/fussball-spanien-zweite-liga-teneriffa-miguel-tod-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Warum die Telekom Elon Musk fürchtet",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Warum die Telekom Elon Musk fürchtet",
+          "link": "https://www.zdfheute.de/wirtschaft/unternehmen/telekom-starlink-musk-mobilfunk-konkurrenz-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Max Slevogt als Illustrator in Berlin: Nicht zuletzt ein Kräftemessen",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Max Slevogt als Illustrator in Berlin: Nicht zuletzt ein Kräftemessen",
+          "link": "https://taz.de/Max-Slevogt-als-Illustrator-in-Berlin/!6218852/"
+        }
+      ]
+    },
+    {
+      "titel": "Kritik von Grünen und Umweltschützern: Satte Zuschläge für LEAG und RWE",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Kritik von Grünen und Umweltschützern: Satte Zuschläge für LEAG und RWE",
+          "link": "https://taz.de/Kritik-von-Gruenen-und-Umweltschuetzern/!6226929/"
+        }
+      ]
+    },
+    {
+      "titel": "Wetter erschwert die US-Midterms",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Wetter erschwert die US-Midterms",
+          "link": "https://www.zdfheute.de/video/usa-suedstaaten-ueberschwemmungen-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Festnahmen bei linker Gruppe aus Sachsen: Mit Hammer, Sichel und Pfefferspray",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Festnahmen bei linker Gruppe aus Sachsen: Mit Hammer, Sichel und Pfefferspray",
+          "link": "https://taz.de/Festnahmen-bei-linker-Gruppe-aus-Sachsen/!6227013/"
+        }
+      ]
+    },
+    {
+      "titel": "F.A.Z. Podcast für Deutschland: Pulverfass Frankfurt: „Es ist verstörend“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "F.A.Z. Podcast für Deutschland: Pulverfass Frankfurt: „Es ist verstörend“",
+          "link": "https://www.faz.net/podcasts/f-a-z-podcast-fuer-deutschland/pulverfass-frankfurt-krawalle-nach-gen-z-protesten-201646691.html"
+        }
+      ]
+    },
+    {
+      "titel": "Weitere gefährliche Halloween-Süßigkeiten entdeckt - auch im Ausland",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Weitere gefährliche Halloween-Süßigkeiten entdeckt - auch im Ausland",
+          "link": "https://www.tagesschau.de/inland/halloween-suessigkeiten-nadeln-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Demonstrationsverbot bei G20 in Hamburg: Attac kämpft für die Versammlungsfreiheit",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Demonstrationsverbot bei G20 in Hamburg: Attac kämpft für die Versammlungsfreiheit",
+          "link": "https://taz.de/Demonstrationsverbot-bei-G20-in-Hamburg/!6226996/"
+        }
+      ]
+    },
+    {
+      "titel": "Jugendliches Trinken: Enthält Alkohol",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Jugendliches Trinken: Enthält Alkohol",
+          "link": "https://taz.de/Jugendliches-Trinken/!6223171/"
+        }
+      ]
+    },
+    {
+      "titel": "Zivilklauseln unter Druck: Wird in Kassel bald für die Rüstung geforscht?",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Zivilklauseln unter Druck: Wird in Kassel bald für die Rüstung geforscht?",
+          "link": "https://taz.de/Zivilklauseln-unter-Druck/!6226966/"
+        }
+      ]
+    },
+    {
+      "titel": "Umweltpolitik der Türkei: Schlechtes Klima, schlechte Luft",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Umweltpolitik der Türkei: Schlechtes Klima, schlechte Luft",
+          "link": "https://taz.de/Umweltpolitik-der-Tuerkei/!6226936/"
+        }
+      ]
+    },
+    {
+      "titel": "Was hinter den Hacker-Angriffen auf Supermärkte steckt",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Was hinter den Hacker-Angriffen auf Supermärkte steckt",
+          "link": "https://www.zdfheute.de/panorama/sabotage-supermarkt-tiefkuehltruhen-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ukraine unter massivem Beschuss: Kältetod mit Ansage",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Ukraine unter massivem Beschuss: Kältetod mit Ansage",
+          "link": "https://taz.de/Ukraine-unter-massivem-Beschuss/!6226985/"
+        }
+      ]
+    },
+    {
+      "titel": "BSC: Rede Selenskyj",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "BSC: Rede Selenskyj",
+          "link": "https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5244917"
+        }
+      ]
+    },
+    {
+      "titel": "Krise der Katechese: Zwölf Sakramente statt sieben?",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Krise der Katechese: Zwölf Sakramente statt sieben?",
+          "link": "https://www.faz.net/aktuell/feuilleton/debatten/krise-der-katechese-warum-nicht-zwoelf-sakramente-201646782.html"
+        }
+      ]
+    },
+    {
+      "titel": "\"Gen Z\"-Proteste: Wann dürfen Demos verboten werden?",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "\"Gen Z\"-Proteste: Wann dürfen Demos verboten werden?",
+          "link": "https://www.tagesschau.de/inland/gesellschaft/gen-z-proteste-verbot-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Kommunalwahlen in Südafrika: Kap der falschen Hoffnung",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Kommunalwahlen in Südafrika: Kap der falschen Hoffnung",
+          "link": "https://taz.de/Kommunalwahlen-in-Suedafrika/!6226941/"
+        }
+      ]
+    },
+    {
+      "titel": "USA beschießen Ziele in Iran: Der nächste Irankrieg steht vor der Tür",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "USA beschießen Ziele in Iran: Der nächste Irankrieg steht vor der Tür",
+          "link": "https://taz.de/USA-beschiessen-Ziele-in-Iran/!6226986/"
+        }
+      ]
+    },
+    {
+      "titel": "Rhein-Main-Feierabendbriefing: Frankfurt bereitet sich auf die nächsten Jugendproteste vor",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Rhein-Main-Feierabendbriefing: Frankfurt bereitet sich auf die nächsten Jugendproteste vor",
+          "link": "https://www.faz.net/podcasts/rhein-main-feierabendbriefing/gen-z-demo-frankfurt-bereitet-sich-auf-neue-jugendproteste-vor-201648650.html"
+        }
+      ]
+    },
+    {
+      "titel": "Bundesbank: Ein neues Gesicht für den digitalen Euro",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Bundesbank: Ein neues Gesicht für den digitalen Euro",
+          "link": "https://www.faz.net/aktuell/finanzen/finanzmarkt/ein-neues-gesicht-fuer-den-digitalen-euro-201648154.html"
+        }
+      ]
+    },
+    {
+      "titel": "Förderung neuer Gaskraftwerke: Saurer Apfel",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Förderung neuer Gaskraftwerke: Saurer Apfel",
+          "link": "https://taz.de/Foerderung-neuer-Gaskraftwerke/!6226902/"
+        }
+      ]
+    },
+    {
+      "titel": "Weihnachtsgeschäft: Kinderwünsche und Händlerträume",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Weihnachtsgeschäft: Kinderwünsche und Händlerträume",
+          "link": "https://www.tagesschau.de/wirtschaft/unternehmen/spielwaren-hde-weihnachtsgeschaeft-rofu-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Erster Spot vor 70 Jahren: Als die Werbung ins Fernsehen kam",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Erster Spot vor 70 Jahren: Als die Werbung ins Fernsehen kam",
+          "link": "https://www.tagesschau.de/wirtschaft/unternehmen/70-jahre-werbefernsehen-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Gewalt an Cottbuser Schule: Wenn der Lehrer zuschlägt",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Gewalt an Cottbuser Schule: Wenn der Lehrer zuschlägt",
+          "link": "https://taz.de/Gewalt-an-Cottbuser-Schule/!6226990/"
+        }
+      ]
+    },
+    {
+      "titel": "Verfahren gegen Flughafen-Ausbau: Klage gegen 8.100 Nachtflüge in Leipzig/Halle",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Verfahren gegen Flughafen-Ausbau: Klage gegen 8.100 Nachtflüge in Leipzig/Halle",
+          "link": "https://taz.de/Verfahren-gegen-Flughafen-Ausbau/!6226943/"
+        }
+      ]
+    },
+    {
+      "titel": "Palm Beach: Flugzeugabsturz in Florida – wie eine Rakete, die mitten im Wohngebiet einschlägt",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Palm Beach: Flugzeugabsturz in Florida – wie eine Rakete, die mitten im Wohngebiet einschlägt",
+          "link": "https://www.spiegel.de/panorama/palm-beach-flugzeug-absturz-in-florida-wie-eine-rakete-die-mitten-im-wohngebiet-einschlaegt-a-ec22a71e-b6bc-4ca4-9a03-15c26df1d213#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Chipmunk in Rente: So dankt man seinem Pferd",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Chipmunk in Rente: So dankt man seinem Pferd",
+          "link": "https://www.faz.net/aktuell/sport/mehr-sport/olympiasieger-michael-jung-und-chipmunk-so-dankt-man-seinem-pferd-201647684.html"
+        }
+      ]
+    },
+    {
+      "titel": "Evonik wehrt sich gegen Chemieriese BASF",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Evonik wehrt sich gegen Chemieriese BASF",
+          "link": "https://www.tagesschau.de/wirtschaft/unternehmen/evonik-basf-fusion-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Fraktionsspitzen zu aktuellen Themen",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Fraktionsspitzen zu aktuellen Themen",
+          "link": "https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5244881"
+        }
+      ]
+    },
+    {
+      "titel": "Pop-Autor Andreas Neumeister gestorben: Seine Texte wollen nicht Bild werden, sondern Laut",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Pop-Autor Andreas Neumeister gestorben: Seine Texte wollen nicht Bild werden, sondern Laut",
+          "link": "https://taz.de/Nachruf-auf-Andreas-Neumeister/!6226905/"
+        }
+      ]
+    },
+    {
+      "titel": "Merz: \"Es ist Zeit für ein Ende dieses Krieges\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Merz: \"Es ist Zeit für ein Ende dieses Krieges\"",
+          "link": "https://www.zdfheute.de/politik/ausland/selenskyj-berlin-besuch-merz-ukraine-krieg-russland-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Hyundai Tucson (2027): Im Grund genommen anders",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Hyundai Tucson (2027): Im Grund genommen anders",
+          "link": "https://www.faz.net/aktuell/technik-motor/motor/der-neue-hyundai-tucson-2027-wesentlich-anders-201605090.html"
+        }
+      ]
+    },
+    {
+      "titel": "Bilger will Handy-Blitzer deutschlandweit einführen",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Bilger will Handy-Blitzer deutschlandweit einführen",
+          "link": "https://www.zdfheute.de/politik/handy-blitzer-bilger-verkehr-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Immobilien vor Gericht: Eigentümer haben Recht auf außerordentliche Versammlung",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Immobilien vor Gericht: Eigentümer haben Recht auf außerordentliche Versammlung",
+          "link": "https://www.faz.net/aktuell/wirtschaft/immobilien-wohnen/bauen-kaufen/eigentuemer-haben-recht-auf-ausserordentliche-versammlung-accg-201313667.html"
+        }
+      ]
+    },
+    {
+      "titel": "EU genehmigt MediaMarktSaturn-Übernahme durch JD.com",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "EU genehmigt MediaMarktSaturn-Übernahme durch JD.com",
+          "link": "https://www.tagesschau.de/wirtschaft/unternehmen/eu-mediamarkt-saturn-jd-genehmigung-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Interaktive Karte: Wo in Deutschland künftig Rechenzentren stehen",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Interaktive Karte: Wo in Deutschland künftig Rechenzentren stehen",
+          "link": "https://www.faz.net/aktuell/wissen/computer-mathematik/deutschlandkarte-hier-stehen-die-rechenzentren-201636066.html"
+        }
+      ]
+    },
+    {
+      "titel": "Burnout & Boreout: „Mein Lieblingsprompt ist: ,Kürze um 50 Prozent‘“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Burnout & Boreout: „Mein Lieblingsprompt ist: ,Kürze um 50 Prozent‘“",
+          "link": "https://www.faz.net/aktuell/karriere-hochschule/buero-co/macht-ki-die-arbeit-langweilig-oft-sitze-ich-da-und-denke-was-mache-ich-hier-201296926.html"
+        }
+      ]
+    },
+    {
+      "titel": "Olympische Jugendspiele: Judoka Reinhold holt erstes deutsches Gold",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Olympische Jugendspiele: Judoka Reinhold holt erstes deutsches Gold",
+          "link": "https://www.sportschau.de/olympia/judoka-jolina-reinhold-holt-erstes-deutsches-gold,youth-olympic-games-2026-108.html"
+        }
+      ]
+    },
+    {
+      "titel": "Erfolgsverein Como 1907: Mit einem Schuss Freiheit",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Erfolgsverein Como 1907: Mit einem Schuss Freiheit",
+          "link": "https://taz.de/Como-1907-in-der-Champions-League-Woher-kommt-der-ploetzliche-Erfolg-dieser-Mannschaft/!6226942/"
+        }
+      ]
+    },
+    {
+      "titel": "Milliarden für neue Kraftwerke",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Milliarden für neue Kraftwerke",
+          "link": "https://www.zdfheute.de/wirtschaft/bundesnetzagentur-milliardenhilfe-kraftwerke-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wahlen in den USA: Wie geht es nach den Midterms weiter? Vier Szenarien",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Wahlen in den USA: Wie geht es nach den Midterms weiter? Vier Szenarien",
+          "link": "https://www.tagesschau.de/ausland/amerika/midterms-szenarien-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Russland bombardiert Krankenhaus in Charkiw",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Russland bombardiert Krankenhaus in Charkiw",
+          "link": "https://www.tagesschau.de/ausland/europa/ukraine-russische-angriffe-118.html"
+        }
+      ]
+    },
+    {
+      "titel": "Mediamarkt-Saturn: Brüssel genehmigt chinesische Übernahme",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Mediamarkt-Saturn: Brüssel genehmigt chinesische Übernahme",
+          "link": "https://www.zdfheute.de/wirtschaft/mediamarkt-saturn-china-eu-uebernahme-100.html"
+        }
+      ]
+    }
+  ],
+  "pro_quelle": {
+    "tagesschau": [
+      {
+        "titel": "Midterms: Eine historische Wahl mit vielen Premieren",
+        "link": "https://www.tagesschau.de/ausland/amerika/midterms-historische-siege-100.html"
+      },
+      {
+        "titel": "Deutsche Reaktionen auf Midterms: Gratulation und gedämpfte Erwartungen",
+        "link": "https://www.tagesschau.de/inland/innenpolitik/reaktionen-deutschland-midterms-100.html"
+      },
+      {
+        "titel": "Liveblog zu den Midterms: ++ Iran erwartet keinen Kurswechsel der US-Politik",
+        "link": "https://www.tagesschau.de/newsticker/liveblog-midterms-2026-100.html"
+      }
+    ],
+    "ZDFheute": [
+      {
+        "titel": "Ausgetrumpt nach Midterms? ZDF-Korrespondenten ordnen ein",
+        "link": "https://www.zdf.de/video/talk/auslandsjournal-der-podcast-100/podcast-trump-effekt-folge80-100"
+      },
+      {
+        "titel": "US-Midterms: Trump will kooperieren, aber Veto-Macht nutzen",
+        "link": "https://www.zdfheute.de/politik/ausland/midterms-usa-wahl-kongress-liveticker-100.html"
+      },
+      {
+        "titel": "Zwei Kammern, ein Denkzettel",
+        "link": "https://www.zdfheute.de/briefing/trump-effekt/midterms-usa-trump-wahlnacht-ergebnisse-100.html"
+      }
+    ],
+    "Deutschlandfunk": [
+      {
+        "titel": "Midterms - Demokraten erobern Mehrheit im Senat und im Repräsentantenhaus",
+        "link": "https://www.deutschlandfunk.de/demokraten-erobern-mehrheit-im-senat-und-im-repraesentantenhaus-100.html"
+      },
+      {
+        "titel": "Newsblog zu den US-\"Midterms\" - US-Präsident Trump will nach Wahlsieg der Demokraten \"nicht gegen alles ein Veto einlegen\"",
+        "link": "https://www.deutschlandfunk.de/us-praesident-trump-will-nach-wahlsieg-der-demokraten-nicht-gegen-alles-ein-veto-einlegen-100.html"
+      },
+      {
+        "titel": "Checks and Balances - USA nach den Zwischenwahlen: Welche Folgen hat das Ergebnis für Präsident Trump?",
+        "link": "https://www.deutschlandfunk.de/usa-nach-den-zwischenwahlen-welche-folgen-hat-das-ergebnis-fuer-praesident-trump-100.html"
+      }
+    ],
+    "Spiegel": [
+      {
+        "titel": "Demokraten-Erfolg bei den Midterms: Dies ist Amerikas neue Garde",
+        "link": "https://www.spiegel.de/ausland/demokraten-erfolg-bei-den-midterms-dies-ist-amerikas-neue-garde-a-90d75e18-ba14-46a4-b47a-c0ef0bbd69db#ref=rss"
+      },
+      {
+        "titel": "Janosch ist tot: Er ließ sich von nichts fesseln. Auch nicht von der Wirklichkeit",
+        "link": "https://www.spiegel.de/kultur/janosch-ist-tot-er-liess-sich-von-nichts-fesseln-auch-nicht-von-der-wirklichkeit-a-cd7a5982-a1d1-49a9-8013-50ec16266e47#ref=rss"
+      },
+      {
+        "titel": "IG-Metall-Chefin Christiane Benner vs. Audi: »Ich habe mich fremdgeschämt«",
+        "link": "https://www.spiegel.de/wirtschaft/ig-metall-chefin-christiane-benner-vs-audi-ich-habe-mich-fremdgeschaemt-a-ed782c85-684f-4c18-99da-f55a1b350837#ref=rss"
+      }
+    ],
+    "Zeit Online": [
+      {
+        "titel": "Großbritannien: Harry-Potter-Shop auf Londons Einkaufsmeile eröffnet",
+        "link": "https://www.zeit.de/news/2026-11/04/harry-potter-shop-auf-londons-einkaufsmeile-eroeffnet"
+      },
+      {
+        "titel": "Internationaler Haftbefehl: Einbrüche in Hamburg – Verdächtiger in Rumänien gefasst",
+        "link": "https://www.zeit.de/news/2026-11/04/einbrueche-in-hamburg-verdaechtiger-in-rumaenien-gefasst"
+      },
+      {
+        "titel": "Landkreis Karlsruhe: Halloween-Süßigkeiten: Kaubonbons manipuliert",
+        "link": "https://www.zeit.de/news/2026-11/04/halloween-suessigkeiten-schraube-in-kaubonbon-entdeckt"
+      }
+    ],
+    "Süddeutsche": [
+      {
+        "titel": "BMW: „Wir gehen so weit, wie die Füße uns tragen“",
+        "link": "https://www.sueddeutsche.de/wirtschaft/bmw-quartalsbilanz-abfindungen-china-elektroautos-li.3574067"
+      },
+      {
+        "titel": "Autoindustrie: BMW hat zumindest die Chance, dass es 2027 besser wird",
+        "link": "https://www.sueddeutsche.de/wirtschaft/bmw-krise-nedeljkovic-gewinnwarnung-kommentar-li.3574133"
+      },
+      {
+        "titel": "Midterms in den USA: Ganz langsam schwappt die blaue Welle nach Berlin",
+        "link": "https://www.sueddeutsche.de/politik/usa-midterms-2026-auswirkungen-deutschland-merz-bundesregierung-li.3574082"
+      }
+    ],
+    "FAZ": [
+      {
+        "titel": "Trumps Debakel: Der Tag, an dem der Führerkult endete",
+        "link": "https://www.faz.net/aktuell/politik/usa-unter-trump/nach-den-us-midterms-2026-stehen-beide-parteien-ohne-fuehrung-da-201650651.html"
+      },
+      {
+        "titel": "USA unter Trump: Diese Pläne wollen die Demokraten jetzt umsetzen",
+        "link": "https://www.faz.net/aktuell/politik/usa-unter-trump/liveticker-usa-unter-trump-das-sind-die-plaene-der-demokraten-nach-dem-sieg-bei-den-us-midterms-2026-faz-19444916.html"
+      },
+      {
+        "titel": "US-Midterms 2026: Trump rechnete mit einer blauen Welle. Es kam ein Tsunami",
+        "link": "https://www.faz.net/aktuell/politik/usa-unter-trump/midterms-trump-rechnete-mit-einer-blauen-welle-es-kam-ein-tsunami-accg-201649837.html"
+      }
+    ],
+    "Welt": [
+      {
+        "titel": "Der Kanzler will eine Frau",
+        "link": "https://www.welt.de/debatte/kolumnen/zippert_zappt/article6aeb270709e0301c03e7f182/zippert-zappt-der-kanzler-will-eine-frau.html"
+      },
+      {
+        "titel": "„Donald, hör mal …“ – El-Sayed wendet sich in Siegesrede direkt an Trump",
+        "link": "https://www.welt.de/politik/ausland/article6ae86c76b3f0fa60211d5fd2/midterms-2026-donald-hoer-mal-el-sayed-wendet-sich-in-siegesrede-direkt-an-trump-liveticker.html"
+      },
+      {
+        "titel": "Geht Deutschland bei Aufrüstung zu national vor? So weist Pistorius den Vorwurf zurück",
+        "link": "https://www.welt.de/politik/deutschland/article6aeb20d11a1d431301d46aff/berliner-sicherheitskonferenz-geht-deutschland-bei-aufruestung-zu-national-vor-so-weist-pistorius-den-vorwurf-zurueck.html"
+      }
+    ],
+    "taz": [
+      {
+        "titel": "Midterms-Ergebnis der US-Republikaner: Riesenklatsche, unsichere Zukunft",
+        "link": "https://taz.de/US-Republikaner-bei-den-Midterms-Krachende-Niederlage-unsichere-Zukunft/!6227184/"
+      },
+      {
+        "titel": "Blaue Welle bei den US-Midterms: Trumps Niederlage als Netanjahus Niederlage",
+        "link": "https://taz.de/Midterms/!6226893/"
+      },
+      {
+        "titel": "US-Midterm-Wahlen: Die Demokraten räumen auch in Texas ab",
+        "link": "https://taz.de/US-Midterm-Wahlen/!6227189/"
+      }
+    ]
+  }
+}

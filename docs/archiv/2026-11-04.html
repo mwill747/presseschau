@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 04.11.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Wednesday, 04. November 2026 &middot; 14:05 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">376 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Midterms - Demokraten erobern Mehrheit im Senat und im Repräsentantenhaus</h3>
+          <div class="zaehler">
+            <b>8</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/demokraten-erobern-mehrheit-im-senat-und-im-repraesentantenhaus-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Midterms - Demokraten erobern Mehrheit im Senat und im Repräsentantenhaus</span></a></li><li><a href="https://www.deutschlandfunk.de/us-praesident-trump-will-nach-wahlsieg-der-demokraten-nicht-gegen-alles-ein-veto-einlegen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Newsblog zu den US-&quot;Midterms&quot; - US-Präsident Trump will nach Wahlsieg der Demokraten &quot;nicht gegen alles ein Veto einlegen&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/auch-deutsche-verkehrssicherheitsrat-fordert-haertere-massnahmen-gegen-handy-am-steuer-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Handy-Blitzer - Auch Deutsche Verkehrssicherheitsrat fordert härtere Maßnahmen gegen Handy am Steuer</span></a></li><li><a href="https://www.zeit.de/politik/ausland/2026-11/midterms-us-kongresswahlen-ergebnisse-live" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">US-Kongresswahlen: Die Ergebnisse der Midterms 2026 – live</span></a></li><li><a href="https://www.spiegel.de/ausland/demokraten-erfolg-bei-den-midterms-dies-ist-amerikas-neue-garde-a-90d75e18-ba14-46a4-b47a-c0ef0bbd69db#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Demokraten-Erfolg bei den Midterms: Dies ist Amerikas neue Garde</span></a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/liveticker-usa-unter-trump-das-sind-die-plaene-der-demokraten-nach-dem-sieg-bei-den-us-midterms-2026-faz-19444916.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">USA unter Trump: Diese Pläne wollen die Demokraten jetzt umsetzen</span></a></li><li><a href="https://www.sueddeutsche.de/politik/usa-midterms-2026-wahlen-news-liveblog-ergebnisse-demokraten-sieg-trump-li.3573278" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Midterms 2026: Demokraten erringen Kongress-Mehrheit und feiern historischen Wahlsieg</span></a></li><li><a href="https://www.sueddeutsche.de/politik/midterms-2026-demokraten-macht-donald-trump-us-kongress-hakeem-jeffries-li.3574028" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Midterms: Was die Demokraten jetzt gegen Trump ausrichten können</span></a></li><li><a href="https://www.tagesschau.de/eilmeldung/usa-midterms-118.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Midterms: Demokraten holen Mehrheiten in beiden Kammern des Kongresses</span></a></li><li><a href="https://www.tagesschau.de/video/video-1677884.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Rachel Tausendfreund, Politikwissenschaftlerin, mit Einordnungen zu den Ergebnissen der Midterms</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/midterms-ergebnisse-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Die Ergebnisse der Midterms in den USA in Zahlen und Karten</span></a></li><li><a href="https://www.tagesschau.de/video/video-1677888.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">US-Präsident Trump will Demokraten nach Midterms-Sieg mit seinem Veto in Schach halten</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/midterms-demokraten-trump-kongress-wahl-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Demokraten gewinnen Midterms, jetzt müssen sie liefern</span></a></li><li><a href="https://www.zdfheute.de/panorama/handy-am-steuer-bussgeld-blitzer-monocam-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">500 Euro Bußgeld für Handy am Steuer?</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/trump-reaktion-midterms-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Trump zu Midterms: &quot;Herzlichen Glückwunsch an die Demokraten!&quot;</span></a></li><li><a href="https://www.sueddeutsche.de/politik/usa-midterms-2026-wahlerfolg-demokraten-niederlage-trump-veraenderung-li.3573673" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Midterms 2026: Das könnte der Beginn eines neuen Amerikas sein</span></a></li><li><a href="https://www.tagesschau.de/video/video-1677784.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">US-Kongress: Siegeszug in Serie für Demokraten bei Midterms</span></a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/was-das-ergebnis-der-us-midterms-2026-fuer-donald-trump-heisst-accg-201648633.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Nach der Niederlage: Plötzlich lobt Donald Trump die Demokraten</span></a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/us-midterms-2026-ergebnisse-der-zwischenwahlen-in-den-usa-unter-donald-trump-201644176.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Midterms 2026: So deutlich fällt der Sieg der Demokraten aus</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/midterms-demokraten-trump-usa-wahl-kongress-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Was der Wahlerfolg der Demokraten für Trump bedeutet</span></a></li><li><a href="https://www.tagesschau.de/multimedia/podcast/15-minuten/audio-midterms-wahlen-in-den-usa-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Midterms: Schlappe für Trump / Cyberangriffe auf Supermärkte / Blitzer gegen Handy am Steuer</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/midterms-usa-wahl-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">US-Zwischenwahlen: Demokraten steuern auf Wahlerfolg zu</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/us-midterms-europa-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Was eine Niederlage Trumps bei den Midterms für die EU bedeuten würde</span></a></li><li><a href="https://taz.de/Ueberwachung-mit-Handyblitzer/!6226932/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Überwachung mit Handyblitzer: Massenüberwachung gegen Handy am Steuer</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Berlin - Merz ruft Russland zu Friedensverhandlungen mit der Ukraine auf</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:75%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/merz-ruft-russland-zu-friedensverhandlungen-mit-der-ukraine-auf-114.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Berlin - Merz ruft Russland zu Friedensverhandlungen mit der Ukraine auf</span></a></li><li><a href="https://www.welt.de/debatte/kolumnen/zippert_zappt/article6aeb270709e0301c03e7f182/zippert-zappt-der-kanzler-will-eine-frau.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Der Kanzler will eine Frau</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/merz-selenskyj-ukrainehilfe-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Selenskyj, Merz und der Kampf gegen die Zweifel</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/selenskyj-bei-merz-berlin-muss-die-ukraine-staerken-201647657.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Selenskyj in Berlin: Der Ukraine den Rücken stärken</span></a></li><li><a href="https://taz.de/Merz-empfaengt-Selenskyj/!6226981/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Merz empfängt Selenskyj: Der Kanzler will mitspielen</span></a></li><li><a href="https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5244879" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Selenskyj trifft Merz in Berlin</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Inflation im Euroraum steigt auf 4,0 Prozent</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/wirtschaft/konjunktur/inflation-eurozone-oktober-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Inflation im Euroraum steigt auf 4,0 Prozent</span></a></li><li><a href="https://www.spiegel.de/wirtschaft/hohe-energiepreise-inflation-im-euroraum-steigt-auf-vier-prozent-a-6aa49e04-4639-4134-acf6-08d84917b500#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Hohe Energiepreise: Inflation im Euroraum steigt auf vier Prozent</span></a></li><li><a href="https://www.faz.net/aktuell/finanzen/finanzmarkt/inflation-im-euroraum-steigt-auf-4-0-prozent-ezb-vor-zinserhoehung-accg-201650074.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Teure Energie: Inflation im Euroraum steigt auf vier Prozent</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/rentenerhoehung-entwurf-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Renten könnten 2027 um 4,1 Prozent steigen</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/rente-anstieg-rentenbericht-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Renten steigen voraussichtlich um über vier Prozent</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Champions League - Stuttgart verliert gegen Galatasaray Istanbul</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/stuttgart-verliert-gegen-galatasaray-istanbul-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Champions League - Stuttgart verliert gegen Galatasaray Istanbul</span></a></li><li><a href="https://www.sueddeutsche.de/sport/vfb-stuttgart-galatasaray-istanbul-undav-hoeness-stimmung-li.3574100" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Stuttgart in der Champions League: „Ich kann nur den Hut ziehen“</span></a></li><li><a href="https://www.sportschau.de/fussball/championsleague/stuttgart-verliert-hitziges-duell-mit-galatasaray-fahrlaessig,spielbericht-cl-galatasaray-stuttgart-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">VfB Stuttgart verliert hitziges Duell bei Galatasaray</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-champions-league/fussball-champions-league-galatasaray-vfb-stuttgart-ligaphase-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Stuttgart verliert bei Galatasaray Istanbul</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>&quot;Oh wie schön ist Panama&quot; - Schriftsteller und Ilustrator Janosch mit 95 Jahren gestorben</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/schriftsteller-und-ilustrator-janosch-mit-95-jahren-gestorben-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Oh wie schön ist Panama&quot; - Schriftsteller und Ilustrator Janosch mit 95 Jahren gestorben</span></a></li><li><a href="https://taz.de/Tigerenten-Schoepfer-Janosch-ist-tot/!6227285/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Tigerenten-Schöpfer Janosch ist tot: Oh wie traurig ist Panama</span></a></li><li><a href="https://www.zdfheute.de/panorama/janosch-schriftsteller-kuenstler-tot-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Schriftsteller und Künstler Janosch gestorben</span></a></li><li><a href="https://www.sueddeutsche.de/kultur/janosch-tot-autor-tiger-baer-oh-wie-schoen-ist-panama-li.3574141" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">„Oh, wie schön ist Panama“-Autor: Schriftsteller und Künstler Janosch ist tot</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Sicherheitsabkommen - Grönland gibt grünes Licht für Abkommen mit den USA</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/groenland-gibt-gruenes-licht-fuer-abkommen-mit-den-usa-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Sicherheitsabkommen - Grönland gibt grünes Licht für Abkommen mit den USA</span></a></li><li><a href="https://taz.de/Abkommen-mit-den-USA/!6227225/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Abkommen mit den USA: Grönland gibt grünes Licht</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/groenland-abkommen-usa-daenemark-arktis-sicherheit-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Grönland billigt Sicherheitsabkommen mit USA und Dänemark</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Wiesbaden - Museum Wiesbaden gibt zehn Schädel aus Kolonialzeit an Indonesien zurück</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/museum-wiesbaden-gibt-zehn-schaedel-aus-kolonialzeit-an-indonesien-zurueck-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wiesbaden - Museum Wiesbaden gibt zehn Schädel aus Kolonialzeit an Indonesien zurück</span></a></li><li><a href="https://www.faz.net/aktuell/rhein-main/region-und-hessen/museum-wiesbaden-gibt-zehn-schaedel-aus-kolonialzeit-an-indonesien-zurueck-accg-201651148.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">„Feierlicher Akt“: Museum Wiesbaden gibt zehn Schädel aus Kolonialzeit zurück</span></a></li><li><a href="https://taz.de/Aufarbeitung-der-Kolonialzeit/!6227258/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Aufarbeitung der Kolonialzeit: Museum Wiesbaden übergibt Schädel an Indonesien</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Ministerpräsidentenwahl in Sachsen-Anhalt: Von Angern zieht Kandidatur gegen Siegmund in Betracht</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/politik/deutschland/2026-11/ministerpraesidentenwahl-sachsen-anhalt-eva-von-angern-afd-ulrich-siegmund-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Ministerpräsidentenwahl in Sachsen-Anhalt: Von Angern zieht Kandidatur gegen Siegmund in Betracht</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/sachsen-anhalt-von-angern-kandidatur-siegmund-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Linke erwägt Gegenkandidatin zu AfD-Mann Siegmund</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-berlin-linken-fraktionschefin-erwaegt-kandidatur-gegen-siegmund-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: Linken-Fraktionschefin erwägt Kandidatur gegen Siegmund</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Janosch ist tot: Er ließ sich von nichts fesseln. Auch nicht von der Wirklichkeit</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/kultur/janosch-ist-tot-er-liess-sich-von-nichts-fesseln-auch-nicht-von-der-wirklichkeit-a-cd7a5982-a1d1-49a9-8013-50ec16266e47#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Janosch ist tot: Er ließ sich von nichts fesseln. Auch nicht von der Wirklichkeit</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/buecher/autoren/tigerenten-erfinder-janosch-ist-im-alter-von-95-jahren-gestorben-accg-201650535.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Zum Tod von Janosch: Er schuf die Tigerente und den Quasselkasper</span></a></li><li><a href="https://www.welt.de/kultur/article255207282/horst-eckert-er-war-der-janosch-und-aus-sehnsucht-gemacht.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Er war der Janosch und aus Sehnsucht gemacht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Spaniens Verkehrsminister tritt nach Zugunglück zurück</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/spanien-verkehrsminister-unglueck-ruecktritt-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Spaniens Verkehrsminister tritt nach Zugunglück zurück</span></a></li><li><a href="https://www.faz.net/video/verkehrsminister-puente-tritt-nach-zwei-schweren-zugungluecken-zurueck-201650351.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">„könne nicht im Amt bleiben“: Verkehrsminister Puente tritt nach zwei schweren Zugunglücken zurück</span></a></li><li><a href="https://www.tagesschau.de/ausland/spanien-zugunglueck-puente-ruecktritt-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Reaktion auf Zugunglücke: Spaniens Verkehrsminister tritt zurück</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Wahlen in den USA: „Der Anfang vom Ende von Trump und seiner Politik“</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/der-anfang-vom-ende-von-trump-und-seiner-politik-was-die-midterms-fuer-europa-bedeuten-accg-201650311.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Wahlen in den USA: „Der Anfang vom Ende von Trump und seiner Politik“</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/usa-ergebnisse-midterms-2026-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Politikexperte: &quot;Es ist eine Wahl gegen Donald Trump&quot;</span></a></li><li><a href="https://taz.de/USA-und-Israel/!6227089/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">USA und Israel: Trump kündigt Ende von Milliarden-Hilfen für Israel an</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Jubelgeste in Madrid: Lennart Karl und die drei Affen des FC Bayern</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/sport/fussball/champions-league/lennart-karl-tor-und-jubel-geste-fuer-fc-bayern-muenchen-bei-atletico-accg-201649730.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Jubelgeste in Madrid: Lennart Karl und die drei Affen des FC Bayern</span></a></li><li><a href="https://www.sueddeutsche.de/sport/fc-bayern-atletico-champions-league-laimer-karl-upamecano-li.3573943" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Sieg bei Atlético Madrid: FC Bayern Balboa</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/champions-league/geschwaechter-fc-bayern-gewinnt-2-0-bei-atletico-madrid-201305394.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">2:0 bei Atlético: FC Bayern zeigt sich widerstandsfähig</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Experte zu US-Midterms: „Keine blaue Welle, sondern ein Dammbruch“</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/video/keine-blaue-welle-sondern-ein-dammbruch-201650357.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Experte zu US-Midterms: „Keine blaue Welle, sondern ein Dammbruch“</span></a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/midterms-trump-rechnete-mit-einer-blauen-welle-es-kam-ein-tsunami-accg-201649837.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">US-Midterms 2026: Trump rechnete mit einer blauen Welle. Es kam ein Tsunami</span></a></li><li><a href="https://taz.de/Midterms/!6226893/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Blaue Welle bei den US-Midterms: Trumps Niederlage als Netanjahus Niederlage</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Westbalkan - EU-Kommission: Montenegro könnte nächstes EU-Mitglied werden</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/eu-kommission-montenegro-koennte-naechstes-eu-mitglied-werden-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Westbalkan - EU-Kommission: Montenegro könnte nächstes EU-Mitglied werden</span></a></li><li><a href="https://www.zeit.de/politik/2026-11/montenegro-eu-beitritt-europaeische-union-kommission-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Europäische Union: Montenegro könnte laut EU-Kommission 2028 Mitgliedsstaat werden</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Cyberkriminalität - Hacker haben in Frankreich auch Blutspendedienst angegriffen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/hacker-haben-in-frankreich-auch-blutspendedienst-angegriffen-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Cyberkriminalität - Hacker haben in Frankreich auch Blutspendedienst angegriffen</span></a></li><li><a href="https://www.spiegel.de/netzwelt/web/cyberkriminalitaet-hacker-greifen-franzoesischen-blutspendedienst-an-a-e95bd312-8d41-49b3-93ff-e2b390d6b9bd#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Cyberkriminalität: Hacker greifen französischen Blutspendedienst an</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Videokommentar: »Amerika ist größer als Trump«</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/video/2026-11/usa-trump-midterms-demokratie-kommentar" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Videokommentar: »Amerika ist größer als Trump«</span></a></li><li><a href="https://www.welt.de/politik/ausland/video6aeafeeb1a1d431301d4667b/norbert-roettgen-trump-hat-diese-wahl-an-den-tankstellen-amerikas-verloren.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Trump hat diese Wahl an den Tankstellen Amerikas verloren“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Israel: Streit um endgültiges Wahlergebnis geht weiter</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/wahlergebnis-knesset-endgueltig-vorwuerfe-israel-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Israel: Streit um endgültiges Wahlergebnis geht weiter</span></a></li><li><a href="https://www.spiegel.de/ausland/israel-wahlpruefung-abgeschlossen-aber-der-streit-um-die-regierungsbildung-geht-weiter-a-9a74985f-1b94-4c1e-8a3a-6cdda021ae16#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Israel: Wahlprüfung abgeschlossen. Aber der Streit über die Regierungsbildung geht weiter</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Ukraine-Krieg: Wolodymyr Selenskyj verleiht Melania Trump Orden wegen Oleschky-Waffenruhe</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/ausland/ukraine-krieg-wolodymyr-selenskyj-verleiht-melania-trump-orden-wegen-oleschky-waffenruhe-a-f1ad025e-e638-4111-9363-d9a7f6503294#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Ukraine-Krieg: Wolodymyr Selenskyj verleiht Melania Trump Orden wegen Oleschky-Waffenruhe</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-selenskyj-verleiht-staatsorden-an-melania-trump-faz-110683325.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Ukrainekrieg: Selenskyj verleiht Staatsorden an Melania Trump</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Midterms in den USA: Ganz langsam schwappt die blaue Welle nach Berlin</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/politik/usa-midterms-2026-auswirkungen-deutschland-merz-bundesregierung-li.3574082" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Midterms in den USA: Ganz langsam schwappt die blaue Welle nach Berlin</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/midterms-analyse-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Midterms-Analyse: Sechs Erkenntnisse nach der &quot;blauen Welle&quot;</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>München: Totes Kind in Hotelzimmer entdeckt – Verdacht auf Gewalttat</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/totes-kind-in-muenchner-hotel-entdeckt-mordkommissariat-ermittelt-accg-201651144.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">München: Totes Kind in Hotelzimmer entdeckt – Verdacht auf Gewalttat</span></a></li><li><a href="https://www.welt.de/vermischtes/article6aeb0fde3f6a429425b7354e/muenchen-totes-kind-in-hotelzimmer-entdeckt-polizei-geht-von-toetungsdelikt-aus.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Totes Kind in Münchner Hotelzimmer entdeckt – Polizei geht von Tötungsdelikt aus</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>„Es kann doch nicht der Volkswille sein …“ – CDU-Basis attackiert Schulze vor Siegmund-Wahl</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/politik/deutschland/article6aeae5b7edb44911fb21ea84/sachsen-anhalt-es-kann-doch-nicht-der-volkswille-sein-cdu-basis-attackiert-schulze-vor-siegmund-wahl.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Es kann doch nicht der Volkswille sein …“ – CDU-Basis attackiert Schulze vor Siegmund-Wahl</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/cdu-sachsen-anhalt-schulze-brandmauer-afd-ministerpraesident-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Schulze gegen Schulze - die Revolte der CDU-Basis</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>Angriffe auf Kühlanlagen: Eiskalt erwischt</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Angriffe-auf-Kuehlanlagen/!6221032/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Angriffe auf Kühlanlagen: Eiskalt erwischt</span></a></li><li><a href="https://www.tagesschau.de/wissen/kuehlsysteme-schutz-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Angriffe auf Kühlsysteme: Warum Supermärkte von Cyberangriffen kalt erwischt werden</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">23</span>
+          <h3>Dobrindt verteidigt &quot;Chaoten&quot;-Aussage nach Krawallen vom Wochenende</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/inland/innenpolitik/dobrindt-genz-proteste-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Dobrindt verteidigt &quot;Chaoten&quot;-Aussage nach Krawallen vom Wochenende</span></a></li><li><a href="https://www.phoenix.de/bundeskongress-a-5244714.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Dobrindt: &quot;Wir haben es mit Chaoten auf der Straße zu tun&quot;</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/ausland/amerika/midterms-historische-siege-100.html" target="_blank" rel="noopener">Midterms: Eine historische Wahl mit vielen Premieren</a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/reaktionen-deutschland-midterms-100.html" target="_blank" rel="noopener">Deutsche Reaktionen auf Midterms: Gratulation und gedämpfte Erwartungen</a></li><li><a href="https://www.tagesschau.de/newsticker/liveblog-midterms-2026-100.html" target="_blank" rel="noopener">Liveblog zu den Midterms: ++ Iran erwartet keinen Kurswechsel der US-Politik</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdf.de/video/talk/auslandsjournal-der-podcast-100/podcast-trump-effekt-folge80-100" target="_blank" rel="noopener">Ausgetrumpt nach Midterms? ZDF-Korrespondenten ordnen ein</a></li><li><a href="https://www.zdfheute.de/politik/ausland/midterms-usa-wahl-kongress-liveticker-100.html" target="_blank" rel="noopener">US-Midterms: Trump will kooperieren, aber Veto-Macht nutzen</a></li><li><a href="https://www.zdfheute.de/briefing/trump-effekt/midterms-usa-trump-wahlnacht-ergebnisse-100.html" target="_blank" rel="noopener">Zwei Kammern, ein Denkzettel</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/demokraten-erobern-mehrheit-im-senat-und-im-repraesentantenhaus-100.html" target="_blank" rel="noopener">Midterms - Demokraten erobern Mehrheit im Senat und im Repräsentantenhaus</a></li><li><a href="https://www.deutschlandfunk.de/us-praesident-trump-will-nach-wahlsieg-der-demokraten-nicht-gegen-alles-ein-veto-einlegen-100.html" target="_blank" rel="noopener">Newsblog zu den US-&quot;Midterms&quot; - US-Präsident Trump will nach Wahlsieg der Demokraten &quot;nicht gegen alles ein Veto einlegen&quot;</a></li><li><a href="https://www.deutschlandfunk.de/usa-nach-den-zwischenwahlen-welche-folgen-hat-das-ergebnis-fuer-praesident-trump-100.html" target="_blank" rel="noopener">Checks and Balances - USA nach den Zwischenwahlen: Welche Folgen hat das Ergebnis für Präsident Trump?</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/ausland/demokraten-erfolg-bei-den-midterms-dies-ist-amerikas-neue-garde-a-90d75e18-ba14-46a4-b47a-c0ef0bbd69db#ref=rss" target="_blank" rel="noopener">Demokraten-Erfolg bei den Midterms: Dies ist Amerikas neue Garde</a></li><li><a href="https://www.spiegel.de/kultur/janosch-ist-tot-er-liess-sich-von-nichts-fesseln-auch-nicht-von-der-wirklichkeit-a-cd7a5982-a1d1-49a9-8013-50ec16266e47#ref=rss" target="_blank" rel="noopener">Janosch ist tot: Er ließ sich von nichts fesseln. Auch nicht von der Wirklichkeit</a></li><li><a href="https://www.spiegel.de/wirtschaft/ig-metall-chefin-christiane-benner-vs-audi-ich-habe-mich-fremdgeschaemt-a-ed782c85-684f-4c18-99da-f55a1b350837#ref=rss" target="_blank" rel="noopener">IG-Metall-Chefin Christiane Benner vs. Audi: »Ich habe mich fremdgeschämt«</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-11/04/harry-potter-shop-auf-londons-einkaufsmeile-eroeffnet" target="_blank" rel="noopener">Großbritannien: Harry-Potter-Shop auf Londons Einkaufsmeile eröffnet</a></li><li><a href="https://www.zeit.de/news/2026-11/04/einbrueche-in-hamburg-verdaechtiger-in-rumaenien-gefasst" target="_blank" rel="noopener">Internationaler Haftbefehl: Einbrüche in Hamburg – Verdächtiger in Rumänien gefasst</a></li><li><a href="https://www.zeit.de/news/2026-11/04/halloween-suessigkeiten-schraube-in-kaubonbon-entdeckt" target="_blank" rel="noopener">Landkreis Karlsruhe: Halloween-Süßigkeiten: Kaubonbons manipuliert</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/wirtschaft/bmw-quartalsbilanz-abfindungen-china-elektroautos-li.3574067" target="_blank" rel="noopener">BMW: „Wir gehen so weit, wie die Füße uns tragen“</a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/bmw-krise-nedeljkovic-gewinnwarnung-kommentar-li.3574133" target="_blank" rel="noopener">Autoindustrie: BMW hat zumindest die Chance, dass es 2027 besser wird</a></li><li><a href="https://www.sueddeutsche.de/politik/usa-midterms-2026-auswirkungen-deutschland-merz-bundesregierung-li.3574082" target="_blank" rel="noopener">Midterms in den USA: Ganz langsam schwappt die blaue Welle nach Berlin</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/nach-den-us-midterms-2026-stehen-beide-parteien-ohne-fuehrung-da-201650651.html" target="_blank" rel="noopener">Trumps Debakel: Der Tag, an dem der Führerkult endete</a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/liveticker-usa-unter-trump-das-sind-die-plaene-der-demokraten-nach-dem-sieg-bei-den-us-midterms-2026-faz-19444916.html" target="_blank" rel="noopener">USA unter Trump: Diese Pläne wollen die Demokraten jetzt umsetzen</a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/midterms-trump-rechnete-mit-einer-blauen-welle-es-kam-ein-tsunami-accg-201649837.html" target="_blank" rel="noopener">US-Midterms 2026: Trump rechnete mit einer blauen Welle. Es kam ein Tsunami</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/debatte/kolumnen/zippert_zappt/article6aeb270709e0301c03e7f182/zippert-zappt-der-kanzler-will-eine-frau.html" target="_blank" rel="noopener">Der Kanzler will eine Frau</a></li><li><a href="https://www.welt.de/politik/ausland/article6ae86c76b3f0fa60211d5fd2/midterms-2026-donald-hoer-mal-el-sayed-wendet-sich-in-siegesrede-direkt-an-trump-liveticker.html" target="_blank" rel="noopener">„Donald, hör mal …“ – El-Sayed wendet sich in Siegesrede direkt an Trump</a></li><li><a href="https://www.welt.de/politik/deutschland/article6aeb20d11a1d431301d46aff/berliner-sicherheitskonferenz-geht-deutschland-bei-aufruestung-zu-national-vor-so-weist-pistorius-den-vorwurf-zurueck.html" target="_blank" rel="noopener">Geht Deutschland bei Aufrüstung zu national vor? So weist Pistorius den Vorwurf zurück</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/US-Republikaner-bei-den-Midterms-Krachende-Niederlage-unsichere-Zukunft/!6227184/" target="_blank" rel="noopener">Midterms-Ergebnis der US-Republikaner: Riesenklatsche, unsichere Zukunft</a></li><li><a href="https://taz.de/Midterms/!6226893/" target="_blank" rel="noopener">Blaue Welle bei den US-Midterms: Trumps Niederlage als Netanjahus Niederlage</a></li><li><a href="https://taz.de/US-Midterm-Wahlen/!6227189/" target="_blank" rel="noopener">US-Midterm-Wahlen: Die Demokraten räumen auch in Texas ab</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.deutschlandfunk.de/usa-nach-den-zwischenwahlen-welche-folgen-hat-das-ergebnis-fuer-praesident-trump-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Checks and Balances - USA nach den Zwischenwahlen: Welche Folgen hat das Ergebnis für Präsident Trump?</span></a></li><li><a href="https://www.deutschlandfunk.de/bundesregierung-zurueckhaltend-deutsche-politiker-gratulieren-us-demokraten-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Midterms - Bundesregierung zurückhaltend, deutsche Politiker gratulieren US-Demokraten</span></a></li><li><a href="https://www.deutschlandfunk.de/niederlande-nominieren-ex-notenbankchef-knot-fuer-chefposten-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Europäische Zentralbank - Niederlande nominieren Ex-Notenbankchef Knot für Chefposten</span></a></li><li><a href="https://www.deutschlandfunk.de/inflationsrate-im-euro-raum-erreicht-4-0-prozent-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Teuerung - Inflationsrate im Euro-Raum erreicht 4,0 Prozent</span></a></li><li><a href="https://www.deutschlandfunk.de/wahlkommission-sieht-keine-unregelmaessigkeiten-konsultationen-beginnen-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Israel - Wahlkommission sieht keine Unregelmäßigkeiten - Konsultationen beginnen</span></a></li><li><a href="https://www.deutschlandfunk.de/nadeln-in-weiteren-suessigkeiten-entdeckt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Verdacht auf Körperverletzung - Nadeln in weiteren Süßigkeiten entdeckt</span></a></li><li><a href="https://www.deutschlandfunk.de/kabinett-beschliesst-verpflichtenden-standard-fuer-bundesweite-wohnsitzanmeldung-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Berlin - Kabinett beschließt verpflichtenden Standard für bundesweite Wohnsitzanmeldung</span></a></li><li><a href="https://www.deutschlandfunk.de/kliniken-aerzte-und-pflege-erarbeiten-leitbild-gegen-machtmissbrauch-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Deutsche Krankenhausgesellschaft - Kliniken, Ärzte und Pflege erarbeiten Leitbild gegen Machtmissbrauch</span></a></li><li><a href="https://www.deutschlandfunk.de/drohnenangriff-auf-filiale-des-russischen-internet-haendlers-ozon-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Drohnenangriff auf Filiale des russischen Internet-Händlers Ozon</span></a></li><li><a href="https://www.deutschlandfunk.de/gedenkfeier-fuer-gestorbenen-fussballer-jes-s-de-miguel-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Spanien - Gedenkfeier für gestorbenen Fußballer Jesús de Miguel</span></a></li><li><a href="https://www.deutschlandfunk.de/spanierin-cristina-fern-ndez-cubas-erhaelt-auszeichnung-108.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Cervantes-Preis - Spanierin Cristina Fernández Cubas erhält Auszeichnung</span></a></li><li><a href="https://www.deutschlandfunk.de/metall-arbeitgeber-gehen-von-weiterem-job-abbau-aus-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Industrie - Metall-Arbeitgeber gehen von weiterem Job-Abbau aus</span></a></li><li><a href="https://www.deutschlandfunk.de/senat-in-brasilien-beschliesst-gesetz-zur-bekaempfung-der-organisierten-kriminalitaet-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wahlversprechen von Lula - Senat in Brasilien beschließt Gesetz zur Bekämpfung der organisierten Kriminalität</span></a></li><li><a href="https://www.deutschlandfunk.de/gruene-halten-hilfe-fuer-kiew-fuer-unverzichtbar-wagener-druck-auf-moskau-muss-bleiben-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine - Grüne halten Hilfe für Kiew für unverzichtbar - Wagener: Druck auf Moskau muss bleiben</span></a></li><li><a href="https://www.deutschlandfunk.de/nordkorea-feuert-offenbar-erneut-geschosse-richtung-meer-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Raketentest - Nordkorea feuert offenbar erneut Geschosse Richtung Meer</span></a></li><li><a href="https://www.deutschlandfunk.de/spaniens-verkehrsminister-puente-kuendigt-ruecktritt-an-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach tödlichen Zugunfällen - Spaniens Verkehrsminister Puente kündigt Rücktritt an</span></a></li><li><a href="https://www.deutschlandfunk.de/bundesbankpraesident-nagel-erwartet-hoeheren-ezb-leitzins-im-dezember-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Teuerungsrate - Bundesbankpräsident Nagel erwartet höheren EZB-Leitzins im Dezember</span></a></li><li><a href="https://www.deutschlandfunk.de/nationale-krisenuebung-zu-duerre-und-hitzewelle-hat-begonnen-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Katastrophenschutz - Nationale Krisenübung zu Dürre und Hitzewelle hat begonnen</span></a></li><li><a href="https://www.deutschlandfunk.de/lufthansa-steigt-bei-der-portugiesischen-tap-ein-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Flugverkehr - Lufthansa steigt bei der portugiesischen Tap ein</span></a></li><li><a href="https://www.deutschlandfunk.de/richter-des-polnischen-verfassungsgerichts-setzen-disziplinarkommission-ein-108.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Protesten - Richter des polnischen Verfassungsgerichts setzen Disziplinarkommission ein</span></a></li><li><a href="https://www.deutschlandfunk.de/bmw-senkt-prognose-fuer-das-laufende-jahr-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wirtschaft - BMW senkt Prognose für das laufende Jahr</span></a></li><li><a href="https://www.deutschlandfunk.de/tschechische-oeffentlich-rechtliche-medien-streiken-wegen-geplanter-gebuehrenreform-110.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Rundfunk - Tschechische öffentlich-rechtliche Medien streiken wegen geplanter Gebührenreform</span></a></li><li><a href="https://www.deutschlandfunk.de/schwedischer-ministerpraesident-kristersson-erneut-mit-regierungsbildung-beauftragt-108.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Weiterer Anlauf - Schwedischer Ministerpräsident Kristersson erneut mit Regierungsbildung beauftragt</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 04.11.2026 um 14:05 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
