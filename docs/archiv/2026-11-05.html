@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 05.11.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Thursday, 05. November 2026 &middot; 14:19 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">378 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Bayern - Trauer und Anteilnahme nach Tod von Freie Wähler-Chef Hubert Aiwanger</h3>
+          <div class="zaehler">
+            <b>8</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/trauer-und-anteilnahme-nach-tod-von-freie-waehler-chef-hubert-aiwanger-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bayern - Trauer und Anteilnahme nach Tod von Freie Wähler-Chef Hubert Aiwanger</span></a></li><li><a href="https://www.zeit.de/news/2026-11/05/dobrindt-aiwanger-hat-politik-in-bayern-mitgepraegt" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Nach überraschendem Tod: Dobrindt: Aiwanger hat Politik in Bayern mitgeprägt</span></a></li><li><a href="https://www.tagesschau.de/inland/freie-waehler-beraten-naechste-schritte-nach-aiwangers-tod-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Freie Wähler beraten nach Aiwangers Tod über weiteres Vorgehen</span></a></li><li><a href="https://www.sueddeutsche.de/bayern/hubert-aiwanger-tod-markus-soeder-statement-pressekonferenz-li.3574751" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Nach dem Tod von Hubert Aiwanger: Söder: „So einer fehlt“</span></a></li><li><a href="https://www.spiegel.de/panorama/hubert-aiwanger-video-nachruf-der-wichtigste-ideengeber-ist-der-stammtisch-a-a6a5ff44-9938-48d7-9665-1233de643c0b#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Hubert Aiwanger - Video-Nachruf: »Der wichtigste Ideengeber ist der Stammtisch«</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-soeder-ueber-aiwanger-ich-habe-es-nicht-glauben-koennen-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: Söder über Aiwanger: „Ich habe es nicht glauben können“</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/hubert-aiwanger-freie-waehler-bayern-tot-todesursache-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Söder würdigt Aiwanger: &quot;Starker Bayer&quot; und &quot;warmherzig&quot;</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/hubert-aiwanger-ist-tot-wie-immer-man-zu-ihm-stand-er-war-eine-figur-accg-201653663.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Hubert Aiwanger tot: Ein Mann mit Gespür für den politischen Reiz</span></a></li><li><a href="https://www.sueddeutsche.de/bayern/hubert-aiwanger-tod-reaktionen-politik-li.3574570" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Reaktionen auf den Tod von Hubert Aiwanger: „Wir sind alle zutiefst geschockt“</span></a></li><li><a href="https://www.tagesschau.de/video/video-1678472.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Reaktionen und Folgen: ARD-Korrespondentin zum Tod Hubert Aiwangers</span></a></li><li><a href="https://www.tagesschau.de/video/video-1678466.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bayerns Wirtschaftsminister Hubert Aiwanger tot in Berliner Hotel gefunden</span></a></li><li><a href="https://www.sueddeutsche.de/bayern/hubert-aiwanger-tod-freie-waehler-parteitag-tobias-gotthardt-li.3574723" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Nach dem Tod von Hubert Aiwanger: FW-Parteitag verschoben – Gotthardt übernimmt zunächst als Wirtschaftsminister</span></a></li><li><a href="https://www.faz.net/video/bayerns-wirtschaftsminister-aiwanger-tot-aufgefunden-201654243.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Freie-Wähler-Chef: Bayerns Wirtschaftsminister Aiwanger tot aufgefunden</span></a></li><li><a href="https://taz.de/Hubert-Aiwanger-ist-tot---er-hinterlaesst-auch-politisch-viele-Luecken/!6227524/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Schock in Bayern: Hubert Aiwanger ist tot</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/bayern/hubert-aiwanger-nachruf-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Hubert Aiwanger - das Gesicht der Freien Wähler</span></a></li><li><a href="https://taz.de/Freie-Waehler-Chef-Aiwanger-tot-im-Hotelzimmer-gefunden---Mordkommission-ermittelt/!6227523/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Tot im Hotel gefunden: Freie-Wähler-Chef Aiwanger ist tot</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/hubert-aiwanger-tot-in-berliner-hotel-entdeckt-201653069.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Freie-Wähler-Chef: Hubert Aiwanger tot in Berliner Hotel entdeckt – Staatsanwaltschaft ermittelt</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/hubert-aiwanger-tod-bayern-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Hubert Aiwanger - der Mann mit dem Gespür fürs Land</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/hubert-aiwanger-tot-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bayerns Wirtschaftsminister Hubert Aiwanger ist tot</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/hubert-aiwanger-tot-aufgefunden-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Hubert Aiwanger tot in Berlin aufgefunden</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Champions League - Dortmund feiert dritten Sieg in der Königsklasse - Leipzig verliert</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:62%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/dortmund-feiert-dritten-sieg-in-der-koenigsklasse-leipzig-verliert-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Champions League - Dortmund feiert dritten Sieg in der Königsklasse - Leipzig verliert</span></a></li><li><a href="https://www.sueddeutsche.de/sport/champions-league-leipzig-mancity-demichelis-zukunft-li.3574765" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">RB Leipzig in der Champions League: Ein paar Argumente gegen das übliche Herbstgeraune</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/champions-league/champions-league-erling-haaland-trifft-fuer-manchester-city-gegen-rb-leipzig-accg-201654130.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Champions League: Haaland trägt die Bananen nach Leipzig</span></a></li><li><a href="https://www.sueddeutsche.de/sport/como-champions-league-lens-9-1-rekord-li.3574747" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Rekordergebnis in der Champions League: Wenn Como spielt, dann fallen Tore</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-champions-league/fussball-champions-league-como-1907-rc-lens-rekordsieg-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Como feiert 9:1-Rekordsieg in der Champions League</span></a></li><li><a href="https://www.sportschau.de/fussball/championsleague/diesmal-karetsas-bvb-jubelt-auch-gegen-betis-dank-seiner-joker,spielbericht-bvb-betis-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Joker-Tor: Karetsas schießt Dortmund gegen Betis zum Sieg</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-champions-league/video/borussia-dortmund-real-betis-sevilla-4-spieltag-zusammenfassung-saison-2026-27-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Dortmund müht sich zum Sieg gegen Betis</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-champions-league/video/zdfsportstudio-uefa-champions-league---ligaphase-4-spieltag-vom-4-november-2026-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Ligaphase, 4. Spieltag - alle Spiele, alle Tore</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Fußballnationalmannschaft - Niclas Füllkrug kehrt zurück: Hat Jürgen Klopp die Revolution schon wieder abgesagt?</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:62%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/sport/fussball/fussballnationalmannschaft-niclas-fuellkrug-kehrt-zurueck-hat-juergen-klopp-die-revolution-schon-wieder-abgesagt-a-e321ee75-90b1-4210-85a9-1f1c54151e73#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Fußballnationalmannschaft - Niclas Füllkrug kehrt zurück: Hat Jürgen Klopp die Revolution schon wieder abgesagt?</span></a></li><li><a href="https://www.sportschau.de/fussball/nationalmannschaft/klopp-nominiert-mohya-el-mala-und-fuellkrug,kader-nations-league-klopp-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">DFB-Kader Nominierung: Klopp nominiert Mohya und Füllkrug</span></a></li><li><a href="https://www.zeit.de/sport/2026-11/juergen-klopp-nationalmannschaft-kader-niclas-fuellkrug-wael-mohya-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">DFB-Team: Jürgen Klopp holt Niclas Füllkrug zurück in die Nationalmannschaft</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-nations-league/dfb-kader-nominierung-klopp-fuellkrug-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Klopp holt Füllkrug zurück und nominiert Teenager Mohya</span></a></li><li><a href="https://www.sueddeutsche.de/sport/kader-klopp-nominierung-fuellkrug-nations-league-mohya-li.3574797" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">DFB-Kader: Klopp nominiert Füllkrug und Mohya</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Englischer Stürmer - Harry Kane und Bayern München verlängern Vertrag</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/harry-kane-und-bayern-muenchen-verlaengern-vertrag-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Englischer Stürmer - Harry Kane und Bayern München verlängern Vertrag</span></a></li><li><a href="https://www.sportschau.de/regional/br/br-massives-ausrufezeichen-harry-kane-verlaengert-beim-fc-bayern-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bis 2029: Harry Kane verlängert beim FC Bayern</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-bundesliga/bundesliga-bayern-kane-vertrag-verlaengerung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Harry Kane verlängert Vertrag beim FC Bayern</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/bundesliga/harry-kane-verlaengert-beim-fc-bayern-bis-2029-accg-201654207.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Bis SOmmer 2029: FC Bayern verlängert Vertrag mit Weltfußballer Harry Kane</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Cristiano Ronaldo tritt aus Nationalmannschaft zurück</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/sport/fussball-portugal-ronaldo-ruecktritt-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Cristiano Ronaldo tritt aus Nationalmannschaft zurück</span></a></li><li><a href="https://www.sportschau.de/fussball/cristiano-ronaldo-tritt-aus-portugals-nationalteam-zurueck,cr7-ende-natio-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Cristiano Ronaldo tritt aus Portugals Nationalteam zurück</span></a></li><li><a href="https://www.welt.de/sport/fussball/article6aec5cead913494ed7629e1a/an-die-menschen-portugals-cristiano-ronaldo-verkuendet-seinen-ruecktritt.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„An die Menschen Portugals ...“ – Cristiano Ronaldo verkündet seinen Rücktritt</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/cristiano-ronaldo-tritt-aus-portugals-nationalteam-zurueck-accg-201654917.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Nach 234 Spielen: Cristiano Ronaldo tritt aus Portugals Nationalteam zurück</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Hongkongs Demokratie-Aktivist Wong zu weiteren zehn Jahren Haft verurteilt</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/ausland/hong-kong-wong-urteil-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Hongkongs Demokratie-Aktivist Wong zu weiteren zehn Jahren Haft verurteilt</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/wong-hongkong-demokratie-aktivist-haft-weiteres-urteil-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Hongkong: Neue Haftstrafe für Demokratie-Aktivisten Wong</span></a></li><li><a href="https://taz.de/Repressionen-in-Hongkong/!6227530/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Repressionen in Hongkong: Noch mal zehn Jahre Haft für Demokratieaktivisten Wong</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/china-demokratieaktivist-joshua-wong-muss-weitere-zehn-jahre-in-haft-accg-201653518.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Hongkong: Demokratieaktivist Joshua Wong muss weitere zehn Jahre in Haft</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Rechtsextremismus - Bundestag debattiert über Aufarbeitung der NSU-Verbrechen</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bundestag-debattiert-ueber-aufarbeitung-der-nsu-verbrechen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Rechtsextremismus - Bundestag debattiert über Aufarbeitung der NSU-Verbrechen</span></a></li><li><a href="https://www.deutschlandfunk.de/bundestag-debattiert-ueber-erste-pflegereform-linnemann-kuendigt-nachbesserungen-an-gesetzentwurf-an-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Berlin - Bundestag debattiert über erste Pflegereform - Linnemann kündigt Nachbesserungen an Gesetzentwurf an</span></a></li><li><a href="https://www.tagesschau.de/video/video-1678574.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Pflegegesetz: Bundestag debattiert über Vorhaben des Gesundheitsministers</span></a></li><li><a href="https://taz.de/Erste-Lesung/!6227525/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Erste Lesung: Bundestag debattiert über Pflegereform</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/pflege-reform-bundestag-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bundestag debattiert über Pflegereform</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/gen-z-aktuelle-stunde-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">&quot;Gen-Z&quot;-Protest: Bundestag debattiert über Konsequenzen nach Krawallen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Luftfahrt - Mehrere Bombendrohungen gegen Passagierflugzeuge</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/mehrere-bombendrohungen-gegen-passagierflugzeuge-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Luftfahrt - Mehrere Bombendrohungen gegen Passagierflugzeuge</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/bombendrohungen-flugzeuge-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Mehrere Bombendrohungen gegen Passagierflüge in Europa</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/bombendrohung-linienflug-von-dublin-nach-rom-nach-frankreich-umgeleitet-accg-201654847.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Flüge in Europa: Mehrere Bombendrohungen gegen Passagiermaschinen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Wirtschaft - Dax steigt auf Rekordhoch</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/dax-steigt-auf-rekordhoch-120.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wirtschaft - Dax steigt auf Rekordhoch</span></a></li><li><a href="https://www.welt.de/wirtschaft/video6aec71e0c7da7601aa4f88da/26-626-zaehler-dax-erreicht-rekordhoch-wir-sind-schon-mittendrin-in-der-jahresendrallye.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Dax erreicht Rekordhoch – „Wir sind schon mittendrin in der Jahresendrallye“</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/marktbericht-dax-dow-zwischenwahlen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Marktbericht: DAX springt auf Rekordhoch</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Donald Trumps historischer Fehler</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/debatte/plus6aec3f1409e0301c03e80225/midterm-niederlage-donald-trumps-historischer-fehler.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Donald Trumps historischer Fehler</span></a></li><li><a href="https://www.spiegel.de/ausland/usa-warum-donald-trump-abstuerzte-und-wer-nach-ihm-kommen-koennte-a-8e129a92-82a0-42a2-b0ee-58327a06a041#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">USA: Warum Donald Trump abstürzte. Und wer nach ihm kommen könnte</span></a></li><li><a href="https://taz.de/Ausschluss-aus-AGOA-Abkommen/!6227230/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Ausschluss aus AGOA-Abkommen: Donald Trump ärgert Südafrika und Rwanda</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Herbert Blomstedt: Der Methusalem der Musik</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/feuilleton/2026-11/herbert-blomstedt-dirigent-trauer-dresdner-staatskapelle-leipzig" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Herbert Blomstedt: Der Methusalem der Musik</span></a></li><li><a href="https://www.zdfheute.de/panorama/prominente/dirigent-herbert-blomstedt-tot-gewandhaus-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Dirigent Herbert Blomstedt mit 99 Jahren gestorben</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/sachsen/dirigent-herbert-blomstedt-gewandhaus-gestorben-kultur-news-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Dirigent Herbert Blomstedt im Alter von 99 Jahren gestorben</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Migranten setzen Zeichen: Zahlreiche Geschäfte in Halle schließen aus Protest gegen Rassismus</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/inland/regional/sachsenanhalt/laeden-bleiben-zu-demonstration,migranten-streik-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Migranten setzen Zeichen: Zahlreiche Geschäfte in Halle schließen aus Protest gegen Rassismus</span></a></li><li><a href="https://www.deutschlandfunk.de/protestaktion-migranten-in-halle-schliessen-geschaefte-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Sachsen-Anhalt - Protestaktion: Migranten in Halle schließen Geschäfte</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Der Politik-Podcast der taz: Wie viel Macht bleibt Trump nach den Midterms?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Der-Politik-Podcast-der-taz/!6227715/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Der Politik-Podcast der taz: Wie viel Macht bleibt Trump nach den Midterms?</span></a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/nach-us-midterms-2026-die-weltsicht-von-donald-trump-wird-sich-nicht-aendern-201651234.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Nach den Midterms: Trumps Weltsicht wird sich nicht ändern</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Reform im Bundestag - Wie der Führerschein günstiger werden soll</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/wie-der-fuehrerschein-guenstiger-werden-soll-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Reform im Bundestag - Wie der Führerschein günstiger werden soll</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/bundestag-fuehrerschein-reform-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Wie der Führerschein günstiger werden soll</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Tierschutz - Kameras im Schlachthof: Bundestag stimmt über Videopflicht ab</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/kameras-im-schlachthof-bundestag-stimmt-ueber-videopflicht-ab-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Tierschutz - Kameras im Schlachthof: Bundestag stimmt über Videopflicht ab</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/bundestag-tierschutzgesetz-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Kameras in Schlachthöfen: Mehr Überwachung für den Tierschutz</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Universität Kassel - Polizei räumt Hörsaal nach Protesten</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/polizei-raeumt-hoersaal-nach-protesten-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Universität Kassel - Polizei räumt Hörsaal nach Protesten</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/hessen/polizei-raeumt-besetzten-hoersaal-an-uni-kassel-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Nach Zivilklausel-Entscheidung: Polizei räumt Hörsaal an Uni Kassel</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Ukraine-Krieg - Interview mit Böhmermann: Selenskyj hofft nach US-Wahlen auf mehr Unterstützung</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/interview-mit-boehmermann-selenskyj-hofft-nach-us-wahlen-auf-mehr-unterstuetzung-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Interview mit Böhmermann: Selenskyj hofft nach US-Wahlen auf mehr Unterstützung</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-selenskyj-bei-boehmermann-us-wahlausgang-kann-ukraine-helfen-faz-110683325.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Ukrainekrieg: Selenskyj bei Böhmermann: US-Wahlausgang kann Ukraine helfen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Frankreich - Gewerkschaften rufen zu Generalstreik auf</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/gewerkschaften-rufen-zu-generalstreik-auf-108.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Frankreich - Gewerkschaften rufen zu Generalstreik auf</span></a></li><li><a href="https://taz.de/Neuer-Generalstreik-in-Frankreich/!6227249/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Neuer Generalstreik in Frankreich: Klassenkampf und Kufija</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Fifa-Führung: Früherer Fußballprofi aus Japan will Infantino herausfordern</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/sport/2026-11/fifa-gianni-infantino-kozo-tashima-praesidentenwahl" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Fifa-Führung: Früherer Fußballprofi aus Japan will Infantino herausfordern</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/fifa-machtkampf-funktionaer-aus-japan-will-infantino-herausfordern-accg-201655327.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">FIFA-Machtkampf: Funktionär aus Japan will Infantino herausfordern</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Welche Bundespräsidentin wäre Ilse Aigner?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/deutschland/ilse-aigner-bundespraesidentenwahl-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Welche Bundespräsidentin wäre Ilse Aigner?</span></a></li><li><a href="https://www.tagesschau.de/video/video-1678386.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Immer mehr CDU-Politiker sprechen sich für Aigner als neue Bundespräsidentin aus</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Business-Ticker: Offenbar Einigung auf Einstieg des Bundes bei KNDS</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/business-liveticker-bund-mit-eigentuemerfamilien-offenbar-ueber-knds-einstieg-einig-faz-200452404.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Business-Ticker: Offenbar Einigung auf Einstieg des Bundes bei KNDS</span></a></li><li><a href="https://www.zeit.de/wirtschaft/unternehmen/2026-11/knds-bund-uebernahme-wegmann-boersengang" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Rüstungsunternehmen KNDS: Bund und KNDS-Eigentümerfamilien einigen sich offenbar auf Übernahme</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>„Muss ja auch jemanden geben, der es nicht guckt“ – Kaulitz-Brüder witzeln über Gottschalks Absage</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/vermischtes/article6aec7102a389bc337cfc69ef/wetten-dass-neuauflage-muss-ja-auch-jemanden-geben-der-es-nicht-guckt-kaulitz-brueder-witzeln-ueber-gottschalks-absage.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Muss ja auch jemanden geben, der es nicht guckt“ – Kaulitz-Brüder witzeln über Gottschalks Absage</span></a></li><li><a href="https://www.sueddeutsche.de/panorama/tom-kaulitz-bill-kaulitz-thomas-gottschalk-wetten-dass-felix-lobrecht-stuttgart-li.3574704" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Leute: „Muss ja auch jemanden geben, der es nicht guckt“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">23</span>
+          <h3>Schäden an Unterseekabeln in der Ostsee: Urteil gegen russischen Kapitän</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/ausland/europa/kapitaen-sabotage-urteil-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Schäden an Unterseekabeln in der Ostsee: Urteil gegen russischen Kapitän</span></a></li><li><a href="https://www.welt.de/vermischtes/article6aec63dbeca9cecdd5d47c2b/ostsee-russischer-kapitaen-nach-kabel-sabotage-zu-haftstrafe-verurteilt.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Russischer Kapitän nach Kabel-Sabotage in der Ostsee zu Haftstrafe verurteilt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">24</span>
+          <h3>Bankenpleite löst Staatskrise in Paraguay aus – Millionen Menschen fürchten um ihr Geld</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/wirtschaft/article6aec5a2109e0301c03e8055d/bankkonten-eingefroren-bankenpleite-loest-staatskrise-in-paraguay-aus-millionen-menschen-fuerchten-um-ihr-geld.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Bankenpleite löst Staatskrise in Paraguay aus – Millionen Menschen fürchten um ihr Geld</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/weltwirtschaft/bankenkrise-paraguay-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bankenpleite stürzt Paraguay in eine Krise</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">25</span>
+          <h3>Im Hoodie beim Papst: Bob Dylan besucht Leo</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/panorama/prominente/stars-promi-news-bilder-november-2026-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Im Hoodie beim Papst: Bob Dylan besucht Leo</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/menschen/bob-dylan-zu-privataudienz-bei-papst-leo-xiv-accg-201654138.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Dylan beim Papst: Wenn sich Bob und Bob im Vatikan treffen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">26</span>
+          <h3>USA unter Trump: Republikaner fordert Amtsenthebung von Hegseth</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/liveticker-usa-unter-trump-republikaner-fordert-amtsenthebung-von-hegseth-faz-19444916.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">USA unter Trump: Republikaner fordert Amtsenthebung von Hegseth</span></a></li><li><a href="https://taz.de/Midterm-Wahlen-in-den-USA/!6227287/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Midterm-Wahlen in den USA: Debakel für die Republikaner – aber Trump noch nicht am Ende</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">27</span>
+          <h3>Selbstenttarnung des NSU vor 15 Jahren: Noch immer bleiben Fragen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Selbstenttarnung-des-NSU-vor-15-Jahren/!6227286/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Selbstenttarnung des NSU vor 15 Jahren: Noch immer bleiben Fragen</span></a></li><li><a href="https://www.tagesschau.de/inland/gesellschaft/nsu-enttarnung-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">15 Jahre danach bleiben Schmerz und offene Fragen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">28</span>
+          <h3>LFI-Politikerin über Frankreichs Protest: „Bravo, Gen Z!“</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/LFI-Politikerin-ueber-Frankreichs-Protest/!6227263/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">LFI-Politikerin über Frankreichs Protest: „Bravo, Gen Z!“</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/proteste-streiks-frankreich-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Frankreich: Nach den Protesten sollen jetzt Streiks folgen</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/inland/freie-waehler-beraten-naechste-schritte-nach-aiwangers-tod-100.html" target="_blank" rel="noopener">Freie Wähler beraten nach Aiwangers Tod über weiteres Vorgehen</a></li><li><a href="https://www.tagesschau.de/inland/regional/bayern/hubert-aiwanger-nachruf-100.html" target="_blank" rel="noopener">Hubert Aiwanger - das Gesicht der Freien Wähler</a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/aiwanger-gestorben-reaktionen-100.html" target="_blank" rel="noopener">Reaktionen auf Tod Aiwangers: Söder spricht von &quot;absoluter Tragödie&quot;</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/spd-linke-rot-gruen-rot-berlin-klingbeil-100.html" target="_blank" rel="noopener">Wie kraftvoll ist das Machtwort von Lars Klingbeil?</a></li><li><a href="https://www.zdfheute.de/politik/selenskyj-boehmermann-zdf-magazin-royale-100.html" target="_blank" rel="noopener">Selenskyj bei Böhmermann: &quot;Es muss ein würdevolles Ende sein&quot;</a></li><li><a href="https://www.zdfheute.de/sport/fussball-nations-league/dfb-kader-nominierung-klopp-fuellkrug-100.html" target="_blank" rel="noopener">Klopp holt Füllkrug zurück und nominiert Teenager Mohya</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/bundestag-debattiert-ueber-aufarbeitung-der-nsu-verbrechen-100.html" target="_blank" rel="noopener">Rechtsextremismus - Bundestag debattiert über Aufarbeitung der NSU-Verbrechen</a></li><li><a href="https://www.deutschlandfunk.de/wie-der-fuehrerschein-guenstiger-werden-soll-102.html" target="_blank" rel="noopener">Reform im Bundestag - Wie der Führerschein günstiger werden soll</a></li><li><a href="https://www.deutschlandfunk.de/artjom-pusch-will-fuer-cdu-landesvorsitz-von-sachsen-anhalt-kandidieren-100.html" target="_blank" rel="noopener">Nachfolgesuche für Schulze - Artjom Pusch will für CDU-Landesvorsitz von Sachsen-Anhalt kandidieren</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/kultur/spiegel-buchpreis-2026-das-sind-die-20-besten-buecher-des-jahres-a-d09542e6-e898-489d-ae14-2dc02a43fbe4#ref=rss" target="_blank" rel="noopener">SPIEGEL Buchpreis 2026: Das sind die 20 besten Bücher des Jahres</a></li><li><a href="https://www.spiegel.de/ausland/usa-warum-donald-trump-abstuerzte-und-wer-nach-ihm-kommen-koennte-a-8e129a92-82a0-42a2-b0ee-58327a06a041#ref=rss" target="_blank" rel="noopener">USA: Warum Donald Trump abstürzte. Und wer nach ihm kommen könnte</a></li><li><a href="https://www.spiegel.de/panorama/gesellschaft/gen-z-regelt-woher-kam-die-gewalt-ein-forscher-hat-antworten-a-ed9f79d7-1c9e-469a-9f36-b6822701ea56#ref=rss" target="_blank" rel="noopener">»Gen Z regelt«: Woher kam die Gewalt? Ein Forscher hat Antworten</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/politik/deutschland/2026-11/bundespraesidentin-friedrich-merz-karin-prien-ilse-aigner" target="_blank" rel="noopener">Bundespräsidentin: Es braucht eine mutige Entscheidung für eine mutige Frau</a></li><li><a href="https://www.zeit.de/news/2026-11/05/barmer-pflegebeduerftige-bekommen-zu-selten-zahnvorsorge" target="_blank" rel="noopener">Saarland: Barmer: Pflegebedürftige bekommen zu selten Zahnvorsorge</a></li><li><a href="https://www.zeit.de/news/2026-11/05/gemuese-streit-am-bodensee-gericht-will-entscheiden" target="_blank" rel="noopener">Prozess: Gericht entscheidet Streit um Gurken und Tomaten am Bodensee</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/meinung/internationaler-strafgerichtshof-usa-sanktionen-deutschland-li.3570093" target="_blank" rel="noopener">Justiz: Trump darf mit seinen Attacken auf das Gericht in Den Haag nicht durchkommen</a></li><li><a href="https://www.sueddeutsche.de/politik/zuege-alstom-baden-wuerttemberg-verzoegerungen-stuttgart-21-li.3573071" target="_blank" rel="noopener">Baden-Württemberg: Die zweite schlechte Nachricht für Bahnreisende rund um Stuttgart</a></li><li><a href="https://www.sueddeutsche.de/bayern/hubert-aiwanger-tod-markus-soeder-statement-pressekonferenz-li.3574751" target="_blank" rel="noopener">Nach dem Tod von Hubert Aiwanger: Söder: „So einer fehlt“</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/us-midterms-2026-diese-acht-demokraten-koennten-2028-fuer-das-praesidentenamt-kandidieren-201654770.html" target="_blank" rel="noopener">Nach US-Midterms: Wer sind die Hoffnungsträger der Demokraten für 2028?</a></li><li><a href="https://www.faz.net/aktuell/feuilleton/medien-und-film/medienpolitik/konservative-us-medien-loesen-sich-aus-trumps-wuergegriff-accg-201653960.html" target="_blank" rel="noopener">MAGA-Lager zerfällt: „Schuld hat Trump, ihr Idioten“</a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/trumps-niederlage-warum-milliardaere-die-zwischenwahl-nicht-kaufen-konnten-201649714.html" target="_blank" rel="noopener">US-Zwischenwahlen: Die krachende Niederlage der Milliardäre</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/politik/ausland/video6aec7b5fc7da7601aa4f89f8/demokraten-gewinnen-midterms-es-war-so-ueberwaeltigend-dass-trump-nicht-mal-versuchen-konnte-da-rumzutricksen.html" target="_blank" rel="noopener">„Es war so überwältigend, dass Trump nicht mal versuchen konnte, da rumzutricksen“</a></li><li><a href="https://www.welt.de/politik/ausland/video6aec7bf747b5fce02f878f86/midterms-es-kann-sehr-gut-sein-dass-trump-nochmal-richtig-ausholen-wird-und-vance-angreift.html" target="_blank" rel="noopener">„Es kann sehr gut sein, dass Trump nochmal richtig ausholen wird und Vance angreift“</a></li><li><a href="https://www.welt.de/politik/deutschland/article6aec7abbc7da7601aa4f89e9/verteidigung-christian-freuding-steigt-zum-generalinspekteur-der-bundeswehr-auf.html" target="_blank" rel="noopener">Christian Freuding steigt zum Generalinspekteur der Bundeswehr auf</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Alice-Brauner-ueber-KZ-Film-Block-10/!6221449/" target="_blank" rel="noopener">Alice Brauner über KZ-Film „Block 10“: „Die massenhafte Gewalt gegen Frauen sichtbar machen“</a></li><li><a href="https://taz.de/Harsche-Kritik-am-Bundeskanzler/!6227563/" target="_blank" rel="noopener">Harsche Kritik am Bundeskanzler: Merz no show bei der COP</a></li><li><a href="https://taz.de/Der-Politik-Podcast-der-taz/!6227715/" target="_blank" rel="noopener">Der Politik-Podcast der taz: Wie viel Macht bleibt Trump nach den Midterms?</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/totes-kind-in-muenchner-hotel-entdeckt-mordkommissariat-ermittelt-accg-201651144.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">München: Totes Kind in Hotelzimmer entdeckt – Mutter unter Tatverdacht</span></a></li><li><a href="https://www.welt.de/politik/ausland/video6aec7b5fc7da7601aa4f89f8/demokraten-gewinnen-midterms-es-war-so-ueberwaeltigend-dass-trump-nicht-mal-versuchen-konnte-da-rumzutricksen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Es war so überwältigend, dass Trump nicht mal versuchen konnte, da rumzutricksen“</span></a></li><li><a href="https://www.faz.net/aktuell/rhein-main/region-und-hessen/forscherin-susanne-foitzik-was-ameisen-und-menschen-wirklich-gemeinsam-haben-accg-201624610.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Forschung an Ameisen: Die Farbe Gelb steht für langes Leben</span></a></li><li><a href="https://www.welt.de/politik/ausland/video6aec7bf747b5fce02f878f86/midterms-es-kann-sehr-gut-sein-dass-trump-nochmal-richtig-ausholen-wird-und-vance-angreift.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Es kann sehr gut sein, dass Trump nochmal richtig ausholen wird und Vance angreift“</span></a></li><li><a href="https://www.tagesschau.de/tagesschau/ts-81898.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">tagesschau</span></a></li><li><a href="https://taz.de/Wut-wegen-Wohngeldkuerzungen/!6227274/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Wut wegen Wohngeldkürzungen: „Absolut inakzeptabel und unsozial“</span></a></li><li><a href="https://www.zeit.de/politik/deutschland/2026-11/bundespraesidentin-friedrich-merz-karin-prien-ilse-aigner" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Bundespräsidentin: Es braucht eine mutige Entscheidung für eine mutige Frau</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/gerichtsstreit-ritter-sport-gewinnt-gegen-quadrat-riegel-accg-201655507.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Gerichtsstreit: Ritter Sport gewinnt gegen quadratischen Haferriegel</span></a></li><li><a href="https://www.zeit.de/news/2026-11/05/barmer-pflegebeduerftige-bekommen-zu-selten-zahnvorsorge" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Saarland: Barmer: Pflegebedürftige bekommen zu selten Zahnvorsorge</span></a></li><li><a href="https://www.zeit.de/news/2026-11/05/gemuese-streit-am-bodensee-gericht-will-entscheiden" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Prozess: Gericht entscheidet Streit um Gurken und Tomaten am Bodensee</span></a></li><li><a href="https://www.deutschlandfunk.de/artjom-pusch-will-fuer-cdu-landesvorsitz-von-sachsen-anhalt-kandidieren-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nachfolgesuche für Schulze - Artjom Pusch will für CDU-Landesvorsitz von Sachsen-Anhalt kandidieren</span></a></li><li><a href="https://www.deutschlandfunk.de/grossbritannien-will-russland-nicht-einladen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">G20-Gipfel 2027 - Großbritannien will Russland nicht einladen</span></a></li><li><a href="https://www.deutschlandfunk.de/mehrere-festnahmen-in-polen-gemeldet-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Spionage für Russland? - Mehrere Festnahmen in Polen gemeldet</span></a></li><li><a href="https://www.deutschlandfunk.de/indien-investiert-massiv-in-energiespeicher-fuer-gruenen-strom-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Umwelt - Indien investiert massiv in Energiespeicher für grünen Strom</span></a></li><li><a href="https://www.deutschlandfunk.de/ursachenforschung-bei-republikanern-trumps-rolle-im-fokus-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach US-Zwischenwahlen - Ursachenforschung bei Republikanern: Trumps Rolle im Fokus</span></a></li><li><a href="https://www.deutschlandfunk.de/ronaldo-beendet-karriere-im-nationalteam-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Fußball - Ronaldo beendet Karriere im Nationalteam</span></a></li><li><a href="https://www.deutschlandfunk.de/unionsfraktionschef-frei-nennt-die-bayerische-landtagspraesidentin-aigner-eine-hervorragende-persona-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundespräsidentinnenwahl - Unionsfraktionschef Frei nennt die bayerische Landtagspräsidentin Aigner eine &quot;hervorragende Personalie&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/studienbedingungen-nach-hackerangriff-auf-uni-leipzig-weiter-eingeschraenkt-attacken-auf-hochschulen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Cyberkriminalität - Studienbedingungen nach Hackerangriff auf Uni Leipzig weiter eingeschränkt - Attacken auf Hochschulen reißen nicht ab</span></a></li><li><a href="https://www.deutschlandfunk.de/erneut-russische-angriffe-auf-mehrere-ziele-in-der-ukraine-verletzte-bei-drohnenangriffen-in-dnipro-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Erneut russische Angriffe auf mehrere Ziele in der Ukraine - Verletzte bei Drohnenangriffen in Dnipro</span></a></li><li><a href="https://www.deutschlandfunk.de/suedkorea-will-sich-an-absicherung-der-schifffahrt-in-strasse-von-hormus-beteiligen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nahost - Südkorea will sich an Absicherung der Schifffahrt in Straße von Hormus beteiligen</span></a></li><li><a href="https://www.deutschlandfunk.de/nve-szene-experten-warnen-vor-extremismus-ohne-ideologien-als-wachsende-gefahr-in-deutschland-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;White Tiger&quot; - NVE-Szene: Experten warnen vor Extremismus ohne Ideologien als wachsende Gefahr in Deutschland</span></a></li><li><a href="https://www.deutschlandfunk.de/psychologe-unternehmen-unterschaetzen-schlaf-von-beschaeftigten-als-wirtschaftsfaktor-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Somnologie - Psychologe: Unternehmen unterschätzen Schlaf von Beschäftigten als Wirtschaftsfaktor</span></a></li><li><a href="https://www.deutschlandfunk.de/kapitalrente-aufs-neue-jahr-verschoben-junge-unionsabgeordnete-sauer-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Altersvorsorge - Kapitalrente aufs neue Jahr verschoben - junge Unionsabgeordnete sauer</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 05.11.2026 um 14:19 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
