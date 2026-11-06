@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 06.11.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Friday, 06. November 2026 &middot; 14:02 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">385 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Aktuelles zum Krieg in der Ukraine</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.zeit.de/politik/ausland/ukraine-krieg-news-liveblog" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Krieg gegen die Ukraine: Merz berät mit Trump über Ende des Ukrainekriegs</span></a></li><li><a href="https://www.welt.de/politik/ausland/plus6aed981847b5fce02f879d6e/neue-sicherheitsarchitektur-ein-grosses-wunderschoenes-abkommen-mit-einem-einzigen-satz-versetzt-trump-europa-in-panik.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Ein großes, wunderschönes Abkommen“ – Mit einem einzigen Satz versetzt Trump Europa in Panik</span></a></li><li><a href="https://taz.de/Nachrichten-im-Ukrainekrieg/!6228148/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">+++Nachrichten im Ukrainekrieg+++: Trump kündigt „sehr großes Abkommen“ mit Russland und der Ukraine an</span></a></li><li><a href="https://taz.de/Tagebuch-aus-der-Ukraine/!6225353/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Tagebuch aus der Ukraine: Ein Krieg, in dem Cafés geöffnet und Medikamente knapp sind</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/trump-ankuendigung-deal-fuer-europa-ukraine-krieg-russland-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Trump stellt umfassendes Abkommen mit Russland in Aussicht</span></a></li><li><a href="https://www.zdfheute.de/video/politik-trump-abkommen-ukraine-krieg-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Donald Trump kündigt &quot;großes Abkommen&quot; mit Russland an</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/trump-ukraine-russland-108.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Trump trifft Kreml-Vertreter und stellt Abkommen in Aussicht</span></a></li><li><a href="https://www.tagesschau.de/video/video-1679004.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Trump stellt Ukraine-Abkommen mit Russland in Aussicht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Bundestagsbeschluss - K.o.-Tropfen werden künftig ähnlich wie Waffen eingestuft: Was die neue Strafverschärfung bedeutet</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/k-o-tropfen-werden-kuenftig-aehnlich-wie-waffen-eingestuft-was-die-neue-strafverschaerfung-bedeutet-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundestagsbeschluss - K.o.-Tropfen werden künftig ähnlich wie Waffen eingestuft: Was die neue Strafverschärfung bedeutet</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/strafen-ko-tropfen-bundestag-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bundestag beschließt härtere Strafen für Einsatz von K.o.-Tropfen</span></a></li><li><a href="https://www.tagesschau.de/video/video-1679098.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bundestag stimmt für Strafverschärfung beim Einsatz von K.o.-Tropfen</span></a></li><li><a href="https://www.sueddeutsche.de/politik/bundesregierung-deutschland-newsblog-k-o-tropfen-bundestag-gesetz-li.3568524" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Newsblog zur Bundespolitik: Bundestag beschließt härtere Strafen für Gewalttaten mit K.-o.-Tropfen</span></a></li><li><a href="https://www.zdfheute.de/panorama/kriminalitaet/k-o-tropfen-freiheitsstrafe-strafverschaerfung-bundestag-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">K.o.-Tropfen: Bundestag beschließt Strafverschärfung</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/bundestag-beschliesst-haertere-strafen-fuer-einsatz-von-k-o-tropfen-accg-201656074.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Bundestagsbeschluss: Härtere Strafen für den Einsatz von K.-o.-Tropfen</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/ko-tropfen-gesetz-bundestag-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bundestag plant härtere Strafen für den Einsatz von K.o.-Tropfen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Wegen Suchtgefahr - EU-Kommission fordert Tiktok zu Änderungen bei schädlichem Algorithmus auf</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/eu-kommission-fordert-tiktok-zu-aenderungen-bei-schaedlichem-algorithmus-auf-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wegen Suchtgefahr - EU-Kommission fordert Tiktok zu Änderungen bei schädlichem Algorithmus auf</span></a></li><li><a href="https://taz.de/Suchtgefahr-und-Essstoerungen/!6228215/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Suchtgefahr und Essstörungen: EU verlangt Änderungen im Algorithmus von Tiktok</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/eu-tiktok-mentale-gesundheit-gefaehrdung-algorithmus-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">EU-Kommission wirft TikTok Gesundheitsgefährdung vor</span></a></li><li><a href="https://www.zeit.de/digital/2026-11/tiktok-eu-kommission-algorithmus-empfehlungen-strafe-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Videoplattform: EU-Kommission droht Tiktok mit Strafe wegen »schädlichem« Algorithmus</span></a></li><li><a href="https://www.spiegel.de/netzwelt/netzpolitik/tiktok-gefaehrdet-seine-nutzer-eu-kommission-verlangt-aenderungen-an-schaedlichem-algorithmus-a-ecd6a398-499c-4ccc-b2f7-bd2e90262a68#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">TikTok gefährdet seine Nutzer – EU-Kommission verlangt Änderungen an »schädlichem« Algorithmus</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Berliner Linken-Abgeordnete Emde: Auf Crashkurs</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:80%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Berliner-Linken-Abgeordnete-Emde/!6224135/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Berliner Linken-Abgeordnete Emde: Auf Crashkurs</span></a></li><li><a href="https://www.spiegel.de/politik/deutschland/berlin-linke-gregor-gysi-draengt-auf-rausschmiss-von-vanessa-emde-antisemitisch-und-indiskutabel-a-5e8a4831-69b5-4e0d-a365-408573329745#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Berlin – Linke: Gregor Gysi drängt auf Rausschmiss von Vanessa Emde - »antisemitisch und indiskutabel«</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6aeda70ba389bc337cfc7b9e/gregor-gysi-erhoeht-druck-wegen-emde-auf-berliner-linke-ich-hoffe-dass-wir-sie-ausschliessen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Ich hoffe, dass wir sie ausschließen“ – Gysi will Linken-Abgeordnete Vanessa Emde loswerden</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-gysi-hofft-auf-ausschluss-von-emde-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: Gysi hofft auf Ausschluss von Emde</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>USA - Kaliforniens Gouverneur Newsom will fast 550 Todesurteile in lebenslange Haftstrafen umwandeln</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:80%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/kaliforniens-gouverneur-newsom-will-fast-550-todesurteile-in-lebenslange-haftstrafen-umwandeln-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">USA - Kaliforniens Gouverneur Newsom will fast 550 Todesurteile in lebenslange Haftstrafen umwandeln</span></a></li><li><a href="https://taz.de/Todesstrafe-in-den-USA/!6228158/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Todesstrafe in den USA: Kalifornien wandelt alle Todesurteile in Haftstrafen um</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/usa-kalifornien-newsom-todesurteile-haftstrafen-umwandlung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Kaliforniens Gouverneur wandelt Todesurteile um</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/kalifornien-todesstrafe-umwandlung-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Kalifornien wandelt Todesstrafen in lebenslange Haftstrafen um</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Weißes Haus - US-Präsident Trump lässt Oval Office als nationales Denkmal schützen</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:80%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/us-praesident-trump-laesst-oval-office-als-nationales-denkmal-schuetzen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Weißes Haus - US-Präsident Trump lässt Oval Office als nationales Denkmal schützen</span></a></li><li><a href="https://www.zdfheute.de/video/panorama-trump-oval-office-denkmalschutz-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Gold im Weißen Haus: Trump macht Oval Office zum Denkmal</span></a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/liveticker-usa-unter-trump-trump-macht-oval-office-zum-national-monument-faz-19444916.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">USA unter Trump: Trump macht Oval Office zum „National Monument“</span></a></li><li><a href="https://www.sueddeutsche.de/politik/usa-news-liveblog-midterms-trump-oval-office-denkmal-li.3573278" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Midterms 2026: Trump will Oval Office als nationales Denkmal schützen lassen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Fußball - Europa League: Leverkusen unterliegt Marseille, unentschieden zwischen Crystal Palace und Hoffenheim</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:60%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/europa-league-leverkusen-unterliegt-marseille-unentschieden-zwischen-crystal-palace-und-hoffenheim-108.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Fußball - Europa League: Leverkusen unterliegt Marseille, unentschieden zwischen Crystal Palace und Hoffenheim</span></a></li><li><a href="https://www.sportschau.de/regional/wdr/wdr-marseille-verpasst-leverkusen-den-naechsten-daempfer-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Europa League: Marseille verpasst Leverkusen den nächsten Dämpfer</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-champions-league/fussball-europa-league-leverkusen-marseille-hoffenheim-crystal-palace-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Hoffenheim und Leverkusen lassen Punkte liegen</span></a></li><li><a href="https://www.sportschau.de/regional/swr/swr-trotz-ueberzahl-hoffenheim-vergibt-sieg-bei-crystal-palace-in-der-nachspielzeit-104.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Europa League: Hoffenheim vergibt Sieg bei Crystal Palace</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Midterms in den USA: Warum in Mississippi noch immer ausgezählt wird</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:60%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/politik/midterms-mississippi-auszaehlung-senat-li.3575195" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Midterms in den USA: Warum in Mississippi noch immer ausgezählt wird</span></a></li><li><a href="https://www.zdfheute.de/video/heute-journal-update/bates-usa-midterms-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Midterms: Wie geht es weiter in den USA?</span></a></li><li><a href="https://taz.de/Demokratische-Sozialisten-in-den-USA/!6227953/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Demokratische Sozialisten in den USA: Die andere „rote Welle“ bei den Midterms</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Rassismus-Vorwürfe: «Warum Du so sprechen?» - Minister erntet Rassismuskritik</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/news/2026-11/06/warum-du-so-sprechen-minister-erntet-rassismuskritik" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Rassismus-Vorwürfe: «Warum Du so sprechen?» - Minister erntet Rassismuskritik</span></a></li><li><a href="https://www.welt.de/politik/deutschland/video6aedb7ab47b5fce02f87a0ea/manfred-pentz-warum-du-so-sprechen-cduminister-loescht-rassistischen-kommentar-in-debatte-um-krawalle.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Warum Du so sprechen?“ – CDU‑Minister löscht „rassistischen“ Kommentar in Debatte um Krawalle</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>«Lauter Tag»: Hamburger Schüler planen Protest gegen Bildungskürzungen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/news/2026-11/06/hamburger-schueler-planen-protest-gegen-bildungskuerzungen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">«Lauter Tag»: Hamburger Schüler planen Protest gegen Bildungskürzungen</span></a></li><li><a href="https://www.welt.de/regionales/hamburg/article6aedbacf320931eb80f5c0db/geplante-kuerzungen-lauter-tag-schuelerkammer-ruft-zum-unterrichtsprotest-auf.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Lauter Tag“ – Schülerkammer ruft zum Unterrichtsprotest auf</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Berlin - Bundestag korrigiert Panne bei Tabaksteuererhöhung</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bundestag-korrigiert-panne-bei-tabaksteuererhoehung-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Berlin - Bundestag korrigiert Panne bei Tabaksteuererhöhung</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/tabaksteuer-138.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bundestag korrigiert Panne bei Tabaksteuererhöhung</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>&quot;Reichsbürger&quot; - Auftakt zum Prozess gegen mutmaßliche Rädelsführer des &quot;Königreichs Deutschland&quot;</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/auftakt-zum-prozess-gegen-mutmassliche-raedelsfuehrer-des-koenigreichs-deutschland-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Reichsbürger&quot; - Auftakt zum Prozess gegen mutmaßliche Rädelsführer des &quot;Königreichs Deutschland&quot;</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/nordrheinwestfalen/wdr-prozessauftakt-in-duesseldorf-koenig-von-deutschland-vor-gericht-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Prozessauftakt gegen Reichsbürger: &quot;König von Deutschland&quot; vor Gericht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Staatsoberhaupt - Auch Unionsfrauen und SPD-Spitzenkandidat in NRW Ott sprechen sich für Aigner als Bundespräsidentin aus</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/auch-unionsfrauen-und-spd-spitzenkandidat-in-nrw-ott-sprechen-sich-fuer-aigner-als-bundespraesidenti-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Staatsoberhaupt - Auch Unionsfrauen und SPD-Spitzenkandidat in NRW Ott sprechen sich für Aigner als Bundespräsidentin aus</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/ilse-aigner-bundespraesidentenwahl-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Welche Bundespräsidentin wäre Ilse Aigner?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Bedrohung - USA warnen vor Hackerangriffen auf industrielle Kühlsysteme</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/usa-warnen-vor-hackerangriffen-auf-industrielle-kuehlsysteme-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bedrohung - USA warnen vor Hackerangriffen auf industrielle Kühlsysteme</span></a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/cyberangriffe-kuehlsysteme-supermarkt-hacker-europa-usa-warnung-li.3575160" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Cybersicherheit: USA warnen vor weiteren Hackerangriffen auf Kühlsysteme</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Autobranche - Daimler Truck mit Gewinnplus von 73 Prozent - Erholung in Nordamerika</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/daimler-truck-mit-gewinnplus-von-73-prozent-erholung-in-nordamerika-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Autobranche - Daimler Truck mit Gewinnplus von 73 Prozent - Erholung in Nordamerika</span></a></li><li><a href="https://www.welt.de/wirtschaft/video6aedc340a389bc337cfc7ed0/nutzfahrzeuge-daimler-truck-steigert-quartalsgewinn-um-73-prozent.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Daimler Truck steigert Quartalsgewinn um 73 Prozent</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Frankfurt am Main - Landgericht: Verlängerung der Mietpreisbremse in Hessen unwirksam</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/landgericht-verlaengerung-der-mietpreisbremse-in-hessen-unwirksam-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Frankfurt am Main - Landgericht: Verlängerung der Mietpreisbremse in Hessen unwirksam</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/immobilien-wohnen/hessische-mietpreisbremse-unwirksam-landgericht-frankfurt-ruegt-veraltete-daten-201655673.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Wohnungskrise: Mietpreisbremse in Hessen unwirksam</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Flugverkehr: Neue Serie von Bombendrohungen gegen Passagierflugzeuge in Europa</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-11/bombendrohungen-flugzeuge-frankreich-wizz-air-europa-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Flugverkehr: Neue Serie von Bombendrohungen gegen Passagierflugzeuge in Europa</span></a></li><li><a href="https://www.zdfheute.de/panorama/kriminalitaet/bombendrohung-flughafen-verkehr-europa-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Rätselhafte Bombendrohungen stören Europas Flugverkehr</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Liebeserklärung von Harry Kane an den FC Bayern</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/sport/fussball/video6aedb2cd47b5fce02f87a05c/fc-bayern-muenchen-liebeserklaerung-von-harry-kane-an-den-fc-bayern.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Liebeserklärung von Harry Kane an den FC Bayern</span></a></li><li><a href="https://www.sportschau.de/regional/br/br-massives-ausrufezeichen-harry-kane-verlaengert-beim-fc-bayern-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bis 2029: Harry Kane verlängert beim FC Bayern</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Frankreich: Rund 600.000 Menschen gehen auf die Straße</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/ausland/frankreich-rund-600-000-menschen-gehen-auf-die-strasse-a-2619f68b-6061-40c5-969d-3ec16f0bd6a1#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Frankreich: Rund 600.000 Menschen gehen auf die Straße</span></a></li><li><a href="https://www.sueddeutsche.de/politik/proteste-frankreich-generalstreik-paris-gewerkschaften-li.3574706" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Proteste in Frankreich: „Macron, du bist erledigt, die Jugend ist auf der Straße“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>„Omas gegen Rechts“ werfen Schulamt Ausschluss von Schulen vor – Minister nimmt Stellung</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/politik/deutschland/article6aed9d46a389bc337cfc7a7b/omas-gegen-rechts-nach-projekttag-werden-weitere-termine-gestrichen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Omas gegen Rechts“ werfen Schulamt Ausschluss von Schulen vor – Minister nimmt Stellung</span></a></li><li><a href="https://taz.de/Warnungen-auf-der-Schulleiterkonferenz/!6227984/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Warnungen auf der Schulleiterkonferenz: „Omas gegen Rechts“ an Schulen unerwünscht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Schüler an Bord: Zwei Tote bei Busunfall in Frankreich</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/von-der-strasse-abgekommen-zwei-tote-bei-busunfall-in-frankreich-accg-201658795.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Schüler an Bord: Zwei Tote bei Busunfall in Frankreich</span></a></li><li><a href="https://www.spiegel.de/panorama/frankreich-zwei-tote-bei-busunfall-schueler-an-bord-a-0ec29c32-28e4-4f6c-aff0-c7050c70d491#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Frankreich: Zwei Tote bei Busunfall - Schüler an Bord</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>Bayern-Coach Kompany auf dem Weg zur &quot;kompletten Erholung&quot;</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/sport/fussball-bundesliga/bundesliga-fc-bayern-muenchen-vincent-kompany-hirnhautentzuendung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Bayern-Coach Kompany auf dem Weg zur &quot;kompletten Erholung&quot;</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/bundesliga/fc-bayern-coach-vincent-kompany-auf-dem-weg-zur-kompletten-erholung-accg-201658625.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Nach Hirnhautreizung: Bayern-Coach Kompany auf dem Weg zur „kompletten Erholung“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">23</span>
+          <h3>Staatskrise in Paraguay: Wenn der politische Ziehvater sich gegen den Präsidenten stellt</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Staatskrise-in-Paraguay/!6228141/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Staatskrise in Paraguay: Wenn der politische Ziehvater sich gegen den Präsidenten stellt</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/paraguay-pena-ruecktritt-ueno-bank-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Paraguay: Die Bankenkrise wird zur Staatskrise</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">24</span>
+          <h3>Angst vor KI-Regulierung nach den Midterms: Kursrutsch an den internationalen Aktienmärkten</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/video/video-1679092.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Angst vor KI-Regulierung nach den Midterms: Kursrutsch an den internationalen Aktienmärkten</span></a></li><li><a href="https://www.faz.net/aktuell/finanzen/techaktienindex-nasdaq-100-faellt-um-mehr-als-fuenf-prozent-201656726.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Nach den Midterms: Angst vor KI-Regulierung schickt US-Börsen auf Talfahrt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">25</span>
+          <h3>AfD-Leak: Das sind die mutmaßlichen Hacker hinter dem Datenleak</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/netzwelt/afd-leak-das-sind-die-mutmasslichen-hacker-hinter-dem-datenleak-a-13904fc6-e4f0-40d7-86dc-5c02c82a6f0a#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">AfD-Leak: Das sind die mutmaßlichen Hacker hinter dem Datenleak</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/hacker-afd-leak-emails-usa-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Stecken diese Hacker hinter den AfD-Leaks?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">26</span>
+          <h3>Conference League: SC Freiburg siegt dank starker Nerven</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sportschau.de/regional/swr/swr-sc-freiburg-gewinnt-auswaertsspiel-bei-trabzonspor-dank-starker-nerven-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Conference League: SC Freiburg siegt dank starker Nerven</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-champions-league/fussball-conference-league-trabzonspor-sc-freiburg-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Dank Kübler: Freiburg siegt bei Trabzonspor</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">27</span>
+          <h3>Reform für den Führerschein: Make Fahrerlaubnis günstig again</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Reform-fuer-den-Fuehrerschein/!6227707/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Reform für den Führerschein: Make Fahrerlaubnis günstig again</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/bundestag-fuehrerschein-reform-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Wie der Führerschein günstiger werden soll</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">28</span>
+          <h3>Apple MacBook Pro Proled XDR im Test: Angucken erlaubt, anfassen auch</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/netzwelt/gadgets/apple-macbook-pro-proled-xdr-im-test-angucken-erlaubt-anfassen-auch-a-5bf5994b-04b4-48d7-8711-9800b77c34c4#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Apple MacBook Pro Proled XDR im Test: Angucken erlaubt, anfassen auch</span></a></li><li><a href="https://www.faz.net/aktuell/technik-motor/digital/macbook-pro-proled-xdr-von-apple-im-test-201647036.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Macbook Pro PROLED XDR: Touch ist nicht alles</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/wirtschaft/midterms-wirtschaft-handelspolitik-100.html" target="_blank" rel="noopener">Welche Folgen die US-Midterms für die deutsche Wirtschaft haben</a></li><li><a href="https://www.tagesschau.de/ausland/amerika/amerika-midterms-republikaner-100.html" target="_blank" rel="noopener">Richtungsstreit bei US-Republikanern: Was kommt nach der Trump-Ära?</a></li><li><a href="https://www.tagesschau.de/ausland/amerika/los-angeles-buergermeisterin-100.html" target="_blank" rel="noopener">Los Angeles bekommt linke Bürgermeisterin</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/wirtschaft/brenner-basistunnel-nordzulauf-bayern-100.html" target="_blank" rel="noopener">Wie Deutschland das Jahrhundertprojekt am Brenner gefährdet</a></li><li><a href="https://www.zdfheute.de/politik/deutschland/hacker-afd-leak-emails-usa-100.html" target="_blank" rel="noopener">Stecken diese Hacker hinter den AfD-Leaks?</a></li><li><a href="https://www.zdfheute.de/panorama/neustadt-gewalt-kriminalitaet-ruebenberge-100.html" target="_blank" rel="noopener">Clankriminalität: &quot;Werden alle in Mitleidenschaft gezogen&quot;</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/migrationskommissar-brunner-legt-analyse-vor-deutschland-muss-keine-zusaetzlichen-fluechtlinge-aufne-100.html" target="_blank" rel="noopener">Europäisches Asylsystem - Migrationskommissar Brunner legt Analyse vor - Deutschland muss keine zusätzlichen Flüchtlinge aufnehmen</a></li><li><a href="https://www.deutschlandfunk.de/copernicus-1-5-grad-marke-wird-2026-wohl-erneut-ueberschritten-100.html" target="_blank" rel="noopener">Wärmster Oktober der Messgeschichte - Copernicus: 1,5-Grad-Marke wird 2026 wohl erneut überschritten</a></li><li><a href="https://www.deutschlandfunk.de/bundesregierung-unterstuetzt-elektrifizierungs-ziel-merz-begruendet-abwesenheit-mit-vollem-terminkal-100.html" target="_blank" rel="noopener">Weltklimakonferenz ab Montag - Bundesregierung unterstützt Elektrifizierungs-Ziel - Merz begründet Abwesenheit mit &quot;vollem Terminkalender&quot;</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/wirtschaft/service/boerse-beben-an-der-wall-street-ist-das-jetzt-der-ki-crash-a-0317ec61-e5b3-4fcc-8613-ec7f576866ae#ref=rss" target="_blank" rel="noopener">Börse: Beben an der Wall Street – ist das jetzt der KI-Crash?</a></li><li><a href="https://www.spiegel.de/ausland/texas-kuenftige-gouverneurin-kuendigt-mehr-schutz-vor-ki-rechenzentren-an-a-7412786d-9f32-40e4-94d1-2f00b0246476#ref=rss" target="_blank" rel="noopener">Texas: Künftige Gouverneurin kündigt mehr Schutz vor KI-Rechenzentren an</a></li><li><a href="https://www.spiegel.de/wirtschaft/unternehmen/volkswagen-macht-rueckzieher-bei-lohnstopp-plaenen-bis-2030-a-cc8efb62-b1b2-44a3-a60b-46c412c24cfd#ref=rss" target="_blank" rel="noopener">Volkswagen macht Rückzieher bei Lohnstopp-Plänen bis 2030</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/politik/ausland/2026-11/bart-de-wever-belgien-premier-ruecktritt-gesuch-koenig-philippe-gxe" target="_blank" rel="noopener">Haushaltskrise: Belgiens Premier De Wever bleibt trotz Rücktrittsgesuch im Amt</a></li><li><a href="https://www.zeit.de/news/2026-11/06/eu-um-1-1-millionen-euro-foerdermittel-betrogen-festnahme" target="_blank" rel="noopener">Kriminalität: EU um 1,1 Millionen Euro Fördermittel betrogen? Festnahme</a></li><li><a href="https://www.zeit.de/news/2026-11/06/diakonie-startet-winternotprogramm-im-norden" target="_blank" rel="noopener">Schutz vor Erfrieren: Diakonie startet Winternotprogramm im Norden</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/wirtschaft/boersencrash-us-wahl-aktiensparer-etf-nasdaq-li.3575306" target="_blank" rel="noopener">Geldanlage: Was bedeutet der Kurssturz für Aktiensparer?</a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/singapore-airlines-investition-sitze-recaro-li.3575249" target="_blank" rel="noopener">Luftfahrt: Teuer fliegen, bequem sitzen</a></li><li><a href="https://www.sueddeutsche.de/panorama/ethan-hawke-schwiegersohn-clown-tonight-show-jimmy-fallon-promis-li.3575275" target="_blank" rel="noopener">Leute: Meine Tochter, ihr „Clown“-Ehemann und ich</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/politik/ukraine/donald-trump-verhandelt-mit-putins-vertrautem-ueber-die-ukraine-201658190.html" target="_blank" rel="noopener">Friedensvertrag?: Und schon mauschelt Trump mit Putins Vertrautem</a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-merz-friedensvereinbarung-muss-konsens-der-nato-partner-haben-faz-110683325.html" target="_blank" rel="noopener">Liveblog Ukrainekrieg: Regierungssprecher: Verhandlungen ohne Europa nicht zielführend</a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/daron-acemoglu-wir-steuern-mit-volldampf-in-die-falsche-richtung-accg-201269417.html" target="_blank" rel="noopener">Nobelpreisträger Acemoglu: „Wo es Groll gibt, hat die Identitätspolitik die Spaltung vertieft“</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/debatte/plus6aeda495a389bc337cfc7b40/buchmesse-halle-rettet-die-baeume-stoppt-den-linken-quark-den-niemand-lesen-will.html" target="_blank" rel="noopener">Rettet die Bäume, stoppt den linken Quark, den niemand lesen will!</a></li><li><a href="https://www.welt.de/regionales/hamburg/article6aedb22a1d9d38d6d601b22d/bruecken-kaimauern-schienen-und-strassen-hamburg-ringt-um-die-sanierung-des-hafens.html" target="_blank" rel="noopener">Hamburg ringt um die Sanierung des Hafens</a></li><li><a href="https://www.welt.de/politik/ausland/plus6aed981847b5fce02f879d6e/neue-sicherheitsarchitektur-ein-grosses-wunderschoenes-abkommen-mit-einem-einzigen-satz-versetzt-trump-europa-in-panik.html" target="_blank" rel="noopener">„Ein großes, wunderschönes Abkommen“ – Mit einem einzigen Satz versetzt Trump Europa in Panik</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/KI-loest-Matheprobleme/!6227496/" target="_blank" rel="noopener">KI löst Matheprobleme: Das Ende des reinen Denkens</a></li><li><a href="https://taz.de/Bundestag-aendert-Tierschutzgesetz/!6228140/" target="_blank" rel="noopener">Bundestag ändert Tierschutzgesetz: Videoaufzeichnung nur für große Schlachthöfe</a></li><li><a href="https://taz.de/Suchtgefahr-und-Essstoerungen/!6228215/" target="_blank" rel="noopener">Suchtgefahr und Essstörungen: EU verlangt Änderungen im Algorithmus von Tiktok</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/trends-nischen/nach-mehr-als-400-jahren-wissenschaftler-knacken-code-eines-antiken-messingschlosses-accg-201658274.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Nach mehr als 400 Jahren: Wissenschaftler knacken Code eines antiken Messingschlosses</span></a></li><li><a href="https://www.spiegel.de/panorama/justiz/k-o-tropfen-gesetz-sieht-kuenftig-mindestens-fuenf-jahre-haft-vor-a-a0c6a102-492d-4dfe-9d8a-a123afa9208f#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">K.-o.-Tropfen: Gesetz sieht künftig mindestens fünf Jahre Haft vor</span></a></li><li><a href="https://www.welt.de/debatte/plus6aeda495a389bc337cfc7b40/buchmesse-halle-rettet-die-baeume-stoppt-den-linken-quark-den-niemand-lesen-will.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Rettet die Bäume, stoppt den linken Quark, den niemand lesen will!</span></a></li><li><a href="https://www.zeit.de/politik/ausland/2026-11/bart-de-wever-belgien-premier-ruecktritt-gesuch-koenig-philippe-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Haushaltskrise: Belgiens Premier De Wever bleibt trotz Rücktrittsgesuch im Amt</span></a></li><li><a href="https://www.zeit.de/news/2026-11/06/eu-um-1-1-millionen-euro-foerdermittel-betrogen-festnahme" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Kriminalität: EU um 1,1 Millionen Euro Fördermittel betrogen? Festnahme</span></a></li><li><a href="https://www.zeit.de/news/2026-11/06/diakonie-startet-winternotprogramm-im-norden" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Schutz vor Erfrieren: Diakonie startet Winternotprogramm im Norden</span></a></li><li><a href="https://www.zdfheute.de/newsticker/schlagzeilen-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Schlagzeilen</span></a></li><li><a href="https://www.zeit.de/news/2026-11/05/abwahlverfahren-gegen-freibergs-oberbuergermeister-gestartet" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Kommunen: Abwahlverfahren gegen Freibergs Oberbürgermeister gestartet</span></a></li><li><a href="https://www.zeit.de/news/2026-11/06/politologin-politik-soll-junge-generation-ernst-nehmen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Gen Z-Demo: Politologin: Politik soll junge Generation ernst nehmen</span></a></li><li><a href="https://www.zeit.de/news/2026-11/06/zschaepe-akzeptiert-haft-bis-mindestens-2035" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">NSU-Terror: Zschäpe akzeptiert Haft bis mindestens 2035</span></a></li><li><a href="https://www.zdfheute.de/panorama/prominente/heidi-klum-wechseljahre-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Heidi Klum findet es &quot;okay, älter zu werden&quot;</span></a></li><li><a href="https://www.zeit.de/video/2026-11/dax-startet-nach-ki-ausverkauf-deutlich-im-minus" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Dax startet nach KI-Ausverkauf deutlich im Minus</span></a></li><li><a href="https://www.faz.net/video/papst-leo-reist-nach-uruguay-argentinien-und-peru-201658883.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Vatikan: Papst Leo reist zwölf Tage nach Südamerika</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/brenner-basistunnel-nordzulauf-bayern-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Wie Deutschland das Jahrhundertprojekt am Brenner gefährdet</span></a></li><li><a href="https://www.deutschlandfunk.de/migrationskommissar-brunner-legt-analyse-vor-deutschland-muss-keine-zusaetzlichen-fluechtlinge-aufne-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Europäisches Asylsystem - Migrationskommissar Brunner legt Analyse vor - Deutschland muss keine zusätzlichen Flüchtlinge aufnehmen</span></a></li><li><a href="https://www.deutschlandfunk.de/copernicus-1-5-grad-marke-wird-2026-wohl-erneut-ueberschritten-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wärmster Oktober der Messgeschichte - Copernicus: 1,5-Grad-Marke wird 2026 wohl erneut überschritten</span></a></li><li><a href="https://www.deutschlandfunk.de/bundesregierung-unterstuetzt-elektrifizierungs-ziel-merz-begruendet-abwesenheit-mit-vollem-terminkal-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Weltklimakonferenz ab Montag - Bundesregierung unterstützt Elektrifizierungs-Ziel - Merz begründet Abwesenheit mit &quot;vollem Terminkalender&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/wadephul-europa-muss-zentrale-rolle-bei-ukraine-loesung-spielen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Trump-Äußerung - Wadephul: &quot;Europa muss zentrale Rolle bei Ukraine-Lösung spielen&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/gruene-fuer-verpflichtendes-kita-jahr-vor-der-einschulung-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bildung - Grüne für verpflichtendes Kita-Jahr vor der Einschulung</span></a></li><li><a href="https://www.deutschlandfunk.de/belgiens-koenig-philippe-lehnt-ruecktritt-von-ministerpraesident-de-wever-ab-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Haushaltsstreit - Belgiens König Philippe lehnt Rücktritt von Ministerpräsident De Wever ab</span></a></li><li><a href="https://www.deutschlandfunk.de/demokratische-designierte-texas-gouverneurin-hinojosa-will-bau-von-rechenzentren-fuer-ki-eindaemmen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">USA - Demokratische designierte Texas-Gouverneurin Hinojosa will Bau von Rechenzentren für KI eindämmen</span></a></li><li><a href="https://www.deutschlandfunk.de/studie-warnt-vor-wasserstress-durch-neue-mega-rechenzentren-in-deutschland-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Öko-Institut - Studie warnt vor Wasserstress durch neue Mega-Rechenzentren in Deutschland</span></a></li><li><a href="https://www.deutschlandfunk.de/berliner-linke-politikerin-bei-gerichtstermin-von-polizeibekannten-palaestinensern-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Spiegel&quot;-Bericht - Berliner Linke-Politikerin bei Gerichtstermin von polizeibekannten Palästinensern</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 06.11.2026 um 14:02 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
