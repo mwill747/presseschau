@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 07.11.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Saturday, 07. November 2026 &middot; 12:48 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">353 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Bundespräsidentenwahl - Medienberichte: Auch CDU für Ilse Aigner - Merz schweigt weiter - CDU-Parteikollege Kiesewetter kritisiert Merz</h3>
+          <div class="zaehler">
+            <b>7</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/medienberichte-auch-cdu-fuer-ilse-aigner-merz-schweigt-weiter-cdu-parteikollege-kiesewetter-kritisie-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundespräsidentenwahl - Medienberichte: Auch CDU für Ilse Aigner - Merz schweigt weiter - CDU-Parteikollege Kiesewetter kritisiert Merz</span></a></li><li><a href="https://www.tagesschau.de/inland/ilse-aigner-portraet-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Ilse Aigner im Porträt: Krisenerprobt, bürgernah - und bald Staatsoberhaupt?</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6aeef89ea389bc337cfc8e66/bundespraesidentenamt-personalverfahren-entglitten-nouripour-kritisiert-merz-und-lobt-aigner.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Personalverfahren entglitten“ – Nouripour kritisiert Merz – und lobt Aigner</span></a></li><li><a href="https://www.spiegel.de/politik/deutschland/bundespraesidenten-nachfolge-omid-nouripour-kritisiert-verhalten-von-friedrich-merz-a-17a92a69-2408-4233-a873-8c443abf5d39#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Bundespräsidenten-Nachfolge: Omid Nouripour kritisiert Verhalten von Friedrich Merz</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-nouripour-kritisiert-merz-in-bundespraesidenten-frage-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: Nouripour kritisiert Merz in Bundespräsidenten-Frage</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/ilse-aigner-die-csu-bekommt-doch-noch-ihre-praesidentin-accg-201659503.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Steinmeier-Nachfolge: Aigner nervt nicht</span></a></li><li><a href="https://www.sueddeutsche.de/politik/ilse-aigner-bundespraesidentin-gruene-spd-linke-reaktionen-li.3575672" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Reaktionen: „Ilse Aigner schätzen wir“</span></a></li><li><a href="https://www.sueddeutsche.de/politik/ilse-aigner-bundespraesidentin-bayern-landtagspraesidentin-csu-li.3574561" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Ilse Aigner: Eine, die verbindet – und die sich wehren kann</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/cdu-csu-aigner-bundespraesidentin-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Ilse Aigner soll laut ARD-Informationen Bundespräsidentin werden</span></a></li><li><a href="https://taz.de/Union-will-Aigner-als-Bundespraesidentin/!6224226/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Union will Aigner als Bundespräsidentin: Es ist keine Schwäche, sich hinter eine starke Frau zu stellen</span></a></li><li><a href="https://taz.de/Bundespraesidentschafts-Kandidatin-Aigner/!6228205/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Bundespräsidentschafts-Kandidatin Aigner: Die Bundespräsidentin als Demokratiewächterin</span></a></li><li><a href="https://taz.de/Berichte-CDU-will-Ilse-Aigner-als-Bundespraesidentin/!6228285/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Nachfolge von Frank-Walter Steinmeier: CDU will laut Medien Ilse Aigner als Bundespräsidentin</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/ilse-aigner-csu-bekommt-das-bundespraesidentenamt-201659945.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Ilse Aigner: Bundespräsidentin der Herzen</span></a></li><li><a href="https://www.sueddeutsche.de/politik/bundespraesidentin-kandidatin-ilse-aigner-friedrich-merz-nominierung-bekanntgabe-li.3575265" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Steinmeier-Nachfolge: Ilse Aigner soll Bundespräsidentin werden</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Nach Entlassung von Stabschefin Wiles - Trump rückt rechten Hardliner Stephen Miller ins Zentrum des Machtzirkels</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:86%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/trump-rueckt-rechten-hardliner-stephen-miller-ins-zentrum-des-machtzirkels-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Entlassung von Stabschefin Wiles - Trump rückt rechten Hardliner Stephen Miller ins Zentrum des Machtzirkels</span></a></li><li><a href="https://www.zdfheute.de/video/zdfheute-xpress/stephen-miller-trumps-neuer-stabschef-video-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Stephen Miller wird Trumps neuer Stabschef</span></a></li><li><a href="https://taz.de/Neuer-Stabschef-im-Weissen-Haus/!6228313/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Neuer Stabschef im Weißen Haus: Extremist Stephen Miller rückt auf</span></a></li><li><a href="https://www.tagesschau.de/video/video-1679686.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Vorheriger Vize Stephen Miller ist neuer Stabschef von US-Präsident Trump</span></a></li><li><a href="https://www.welt.de/videos/video6aeec28360cba7c536e2b86a/us-regierung-nach-wahldebakel-trump-feuert-stabschefin-susie-wiles.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Nach Wahldebakel – Trump feuert Stabschefin Susie Wiles</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/trump-miller-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Trumps neuer Stabschef Miller: &quot;Ein Warnschuss in Richtung des künftigen Kongresses&quot;</span></a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/warum-trump-miller-als-neuen-stabschef-will-accg-201660644.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Miller neuer Stabschef: Trump lässt seinen Pitbull von der Leine</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/usa-midterms-susie-wiles-stephen-miller-trump-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Donald Trumps neuer Stabschef: Wer ist Stephen Miller?</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/trump-wiles-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Trumps Stabschefin Wiles verlässt das Weiße Haus</span></a></li><li><a href="https://www.zdfheute.de/video/panorama-trump-oval-office-denkmalschutz-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Gold im Weißen Haus: Trump macht Oval Office zum Denkmal</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Antisemitismus-Vorwurf - Berliner Landesverband fordert Abgeordnete Emde zum Mandatsverzicht auf</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:86%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/berliner-landesverband-fordert-abgeordnete-emde-zum-mandatsverzicht-auf-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Antisemitismus-Vorwurf - Berliner Landesverband fordert Abgeordnete Emde zum Mandatsverzicht auf</span></a></li><li><a href="https://www.welt.de/politik/video6aeef1065c7ccdedbffd2999/rot-gruen-rot-berliner-linke-fordert-mandatsverzicht-von-emde.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Berliner Linke fordert Mandatsverzicht von Emde</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/berlin/rbb-berlin-aufforderung-zu-mandatsverzicht-von-emde-nicht-sicher-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Berliner Linkspartei fordert von Emde Mandatsverzicht</span></a></li><li><a href="https://taz.de/Ansage-der-Berliner-Linkspartei/!6228309/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Ansage der Berliner Linkspartei: Mit Emde soll Ende sein</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/emde-linke-berlin-mandat-verzicht-nahost-konflikt-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Berliner Linke fordert Emde zum Mandatsverzicht auf</span></a></li><li><a href="https://www.sueddeutsche.de/politik/vanessa-emde-linke-berlin-li.3575552" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Abgeordnetenhaus: Berliner Linke fordert Mandatsverzicht von Emde</span></a></li><li><a href="https://taz.de/Berliner-Linken-Abgeordnete-Emde/!6224135/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Berliner Linken-Abgeordnete Emde: Auf Crashkurs</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Europa - Bombendrohungen gegen Flüge in Europa weiten sich aus</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bombendrohungen-gegen-fluege-in-europa-weiten-sich-aus-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Europa - Bombendrohungen gegen Flüge in Europa weiten sich aus</span></a></li><li><a href="https://www.zeit.de/gesellschaft/2026-11/bombendrohungen-fluege-europa-flugzeuge-luftverkehr-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Flugverkehr: Wie Europa mit der Serie von Bombendrohungen im Flugverkehr umgeht</span></a></li><li><a href="https://www.zdfheute.de/politik/bombendrohungen-flugverkehr-europa-passagiere-regeln-rechte-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Bombendrohungen gegen Flüge: Was an Bord passiert</span></a></li><li><a href="https://www.tagesschau.de/ausland/bombendrohungen-faq-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Was passiert bei einer Bombendrohung im Flugzeug?</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/bombendrohungen-europa-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bombendrohungen in Europa: Anzeichen auf koordinierten Angriff verdichten sich</span></a></li><li><a href="https://www.zdfheute.de/panorama/kriminalitaet/bombendrohung-flug-europa-flugzeug-flughafen-bombe-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Serie von Bombendrohungen gegen Flüge geht weiter</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Bundesjustizministerin - Hubig will AfD-Leaks für Prüfung von Parteiverbot nutzen</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/hubig-will-afd-leaks-fuer-pruefung-von-parteiverbot-nutzen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundesjustizministerin - Hubig will AfD-Leaks für Prüfung von Parteiverbot nutzen</span></a></li><li><a href="https://taz.de/AfD-Verbotsverfahren-Hubig-will-Datenleak-Mails-fuer-die-Pruefung-nutzen/!6228320/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Datenleak bei der AfD: Hubig will E-Mails bei Prüfung für Verbotsverfahren nutzen</span></a></li><li><a href="https://www.spiegel.de/politik/deutschland/afd-verbot-stefanie-hubig-will-e-mails-bei-pruefung-fuer-antrag-nutzen-a-e340c29d-e222-4ee6-8299-320a906dc468#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">AfD-Verbot: Stefanie Hubig will E-Mails bei Prüfung für Antrag nutzen</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/hubig-afd-verbotsverfahren-leak-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Hubig will geleakte E-Mails zur Prüfung von AfD-Verbotsverfahren nutzen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Ueno-Bank - Staatskrise in Paraguay: Präsident Peña abgesetzt und festgenommen</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/staatskrise-in-paraguay-praesident-pe-a-abgesetzt-und-festgenommen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ueno-Bank - Staatskrise in Paraguay: Präsident Peña abgesetzt und festgenommen</span></a></li><li><a href="https://taz.de/Staats--und-Finanzkrise-in-Paraguay/!6228316/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Staats- und Finanzkrise in Paraguay: Haftbefehl gegen abgesetzten Präsidenten</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/paraguay-praesident-pena-amtsenthebung-hausarrest-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Paraguays abgesetzter Präsident Peña unter Hausarrest</span></a></li><li><a href="https://www.tagesschau.de/ausland/paraguay-amtsenthebung-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Paraguay: Peña als Präsident abgesetzt und unter Hausarrest</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>USA - Vater von Herzogin Meghan festgenommen - Aufnahmen von Kindesmissbrauch entdeckt</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/vater-von-herzogin-meghan-festgenommen-aufnahmen-von-kindesmissbrauch-entdeckt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">USA - Vater von Herzogin Meghan festgenommen - Aufnahmen von Kindesmissbrauch entdeckt</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/thomas-markle-in-florida-verhaftet-vorwuerfe-wegen-kinderpornografie-201660024.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Meghans Vater: So kam es zur Festnahme von Thomas Markle in Florida</span></a></li><li><a href="https://www.welt.de/vermischtes/video6aeed2c7a389bc337cfc8bc5/florida-aufnahmen-von-kindesmissbrauch-entdeckt-fbi-nimmt-meghan-markles-vater-fest.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Aufnahmen von Kindesmissbrauch entdeckt – FBI nimmt Meghan Markles Vater fest</span></a></li><li><a href="https://www.zdfheute.de/panorama/prominente/thomas-markle-festgenommen-herzogin-meghan-fbi-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">FBI verhaftet Meghans Vater Thomas Markle</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Kleinflugzeug auf A2 bei Magdeburg verunglückt</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/inland/regional/sachsenanhalt/polizei-feuerwehr-einsatz-tote-bfu-,a-zwei-flugzeug-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Kleinflugzeug auf A2 bei Magdeburg verunglückt</span></a></li><li><a href="https://www.zdfheute.de/panorama/sachsen-anhalt-flugzeugabsturz-a2-tote-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Kleinflugzeug stürzt auf A2 in Sachsen-Anhalt - zwei Tote</span></a></li><li><a href="https://www.zdfheute.de/video/a2-flugzeugabsturz-video-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Kleinflugzeug stürzt auf A2</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/zwei-tote-bei-flugzeug-absturz-auf-a2-201659958.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Bei Magdeburg: Zwei Tote bei Flugzeug-Absturz auf A2</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Soldatinnen und Soldaten - Pistorius sieht Personalplanung der Bundeswehr auf gutem Weg - erstmal keine Wehrpflicht nötig</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/pistorius-sieht-personalplanung-der-bundeswehr-auf-gutem-weg-erstmal-keine-wehrpflicht-noetig-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Soldatinnen und Soldaten - Pistorius sieht Personalplanung der Bundeswehr auf gutem Weg - erstmal keine Wehrpflicht nötig</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/pistorius-bundeswehr-wehrpflicht-freiwillige-anzahl-ausreichend-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Wehrpflicht: Pistorius sieht derzeit keinen Bedarf</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/bundeswehr-diskussion-wehrpflicht-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Pistorius rechnet derzeit nicht mit Rückkehr zur Wehrpflicht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Parlamentswahl: Regierungskoalition in Neuseeland knapp unter absoluter Mehrheit</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/politik/ausland/2026-11/parlamentswahl-neuseeland-christopher-luxon-chris-hipkins-opportunity-party-ergebnis-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Parlamentswahl: Regierungskoalition in Neuseeland knapp unter absoluter Mehrheit</span></a></li><li><a href="https://taz.de/Neuseeland-hat-gewaehlt/!6228315/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Neuseeland hat gewählt: Knappes Rennen zwischen Konservativen und Sozialdemokraten</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/knappes-rennen-bei-wahl-in-neuseeland-accg-201661051.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Keine klare Mehrheit: Knappes Rennen bei Wahl in Neuseeland</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Karibik stellt sich gegen eigenen Dachverband – Infantinos Wiederwahl zeichnet sich ab</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/sport/fussball/article6aeef3ff40d99b081ef01b71/fifa-gianni-infantinos-wiederwahl-zeichnet-sich-ab-karibik-stellt-sich-gegen-eigenen-dachverband.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Karibik stellt sich gegen eigenen Dachverband – Infantinos Wiederwahl zeichnet sich ab</span></a></li><li><a href="https://www.faz.net/aktuell/sport/sportpolitik/gianni-infantino-erhaelt-unterstuetzung-vom-karibikverband-fuer-wiederwahl-accg-201661073.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Fifa-Machtkampf: Karibikverband für Wiederwahl von Infantino</span></a></li><li><a href="https://www.spiegel.de/sport/fussball/gianni-infantino-auch-die-karibik-stellt-sich-jetzt-hinter-fifa-boss-a-17905877-18b7-4c90-941f-5a1b1a90e47b#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Gianni Infantino: Auch die Karibik stellt sich jetzt hinter Fifa-Boss</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Papst Leo XIV. startet Südamerika-Reise trotz Lungenoperation</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/politik/ausland/video6aeedfe276360e13d64a8cab/uruguay-argentinien-peru-papst-leo-xiv-startet-suedamerika-reise-trotz-lungenoperation.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Papst Leo XIV. startet Südamerika-Reise trotz Lungenoperation</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/leo-lobt-uruguays-demokratie-und-beklagt-saekularisierung-accg-201660997.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Leo in Montevideo: Der Papst preist Uruguays Demokratie</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/papst-suedamerika-104.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Papst Leo XIV. beginnt Südamerika-Reise in Uruguay</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Bundestag stimmt für Strafverschärfung: Tropfen als Waffe</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Bundestag-stimmt-fuer-Strafverschaerfung/!6227549/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Bundestag stimmt für Strafverschärfung: Tropfen als Waffe</span></a></li><li><a href="https://www.zdfheute.de/panorama/kriminalitaet/k-o-tropfen-freiheitsstrafe-strafverschaerfung-bundestag-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">K.o.-Tropfen: Bundestag beschließt Strafverschärfung</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/strafen-ko-tropfen-bundestag-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bundestag beschließt härtere Strafen für Einsatz von K.-o.-Tropfen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Copernicus: 2026 wird 1,5-Grad-Marke wohl überschreiten</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/wissen/klimawandel-klima-ziel-hitze-copernicus-vereinte-nationen-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Copernicus: 2026 wird 1,5-Grad-Marke wohl überschreiten</span></a></li><li><a href="https://www.faz.net/aktuell/wissen/erde-klima/2026-uebertrifft-wohl-die-1-5-grad-marke-201659976.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">EU-Copernicus-Daten: Wird 2026 endgültig die 1,5-Grad-Marke überschritten?</span></a></li><li><a href="https://www.tagesschau.de/wissen/klima/copernicus-klimakrise-1komma5-grad-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">EU-Dienst Copernicus: 1,5-Grad-Marke wird 2026 wohl überschritten</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Cyberkriminalität - Erneut Hackerangriff auf Uni: Persönliche Daten von Studenten und Beschäftigten der TU München betroffen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/erneut-hackerangriff-auf-uni-persoenliche-daten-von-studenten-und-beschaeftigten-der-tu-muenchen-bet-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Cyberkriminalität - Erneut Hackerangriff auf Uni: Persönliche Daten von Studenten und Beschäftigten der TU München betroffen</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/bayern/hackerangriff-tum-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Erneut Hackerangriff auf Münchener Universität - TUM betroffen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Am Rande von Protesten - Frankreich: AFP prangert Gewalt von Polizisten gegen Journalisten an</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/frankreich-afp-prangert-gewalt-von-polizisten-gegen-journalisten-an-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Am Rande von Protesten - Frankreich: AFP prangert Gewalt von Polizisten gegen Journalisten an</span></a></li><li><a href="https://www.zdf.de/video/dokus/zdf-info-100/zdfinfo-inside-linksextrem-protest-sabotage-gewalt-100" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Protest, Sabotage, Gewalt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Medienbericht - Geheimdienste schalten sich ein nach Cyberangriffen auf Kühlregale in deutschen Supermärkten</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/geheimdienste-schalten-sich-ein-nach-cyberangriffen-auf-kuehlregale-in-deutschen-supermaerkten-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Medienbericht - Geheimdienste schalten sich ein nach Cyberangriffen auf Kühlregale in deutschen Supermärkten</span></a></li><li><a href="https://www.spiegel.de/netzwelt/deutschland-nachrichtendienste-schalten-sich-offenbar-bei-cyberangriffen-auf-supermaerkte-ein-a-1f86ee1a-be83-497a-bc91-91da57d27fb7#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Deutschland: Nachrichtendienste schalten sich offenbar bei Cyberangriffen auf Supermärkte ein</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Sachsen-Anhalt - AfD-Politiker Siegmund schließt mehrere Wahlgänge nicht mehr aus</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/afd-politiker-siegmund-schliesst-mehrere-wahlgaenge-nicht-mehr-aus-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Sachsen-Anhalt - AfD-Politiker Siegmund schließt mehrere Wahlgänge nicht mehr aus</span></a></li><li><a href="https://www.sueddeutsche.de/politik/landtagswahlen-deutschland-sachsen-anhalt-ulrich-siegmund-berlin-vanessa-emde-li.3540501" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Newsblog zu den Landtagswahlen: Siegmund schließt mehrere Wahlgänge nicht mehr aus</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Polizei bittet um Hinweise: Mehr als 100 Beamte suchen nach vermisster Schülerin</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/news/2026-11/07/suche-nach-13-jaehriger-schuelerin-in-berlin-wird-fortgesetzt" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Polizei bittet um Hinweise: Mehr als 100 Beamte suchen nach vermisster Schülerin</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/vermisste-13-jaehrige-in-marzahn-polizei-schliesst-straftat-nicht-aus-201659825.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Berlin: 13-jährige Schülerin vermisst – Polizei sucht mit Spürhunden</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>US-Basketball: Ist Taylor Swift wirklich ein Fan der New York Knicks?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/sport/basketball/us-basketball-ist-taylor-swift-wirklich-ein-fan-der-new-york-knicks-a-46a94d5e-dba1-438e-b6c1-e2c63ad9dde4#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">US-Basketball: Ist Taylor Swift wirklich ein Fan der New York Knicks?</span></a></li><li><a href="https://www.welt.de/sport/basketball/article6aeefbefbd9dc1882a99eab6/nba-taylor-swift-kein-fan-der-new-york-knicks-es-wirkt-schon-ein-wenig-inszeniert.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Taylor Swift ein Fan der New York Knicks? – „Es wirkt schon ein wenig inszeniert“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Cornell-Universität: Fakultätssenat spricht Leitung ihr Misstrauen aus</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/ausland/cornell-universitaet-fakultaetssenat-spricht-leitung-ihr-misstrauen-aus-a-a8b7551b-d108-48ad-b2c2-5662f761552a#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Cornell-Universität: Fakultätssenat spricht Leitung ihr Misstrauen aus</span></a></li><li><a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-11/cornell-university-misstrauensvotum-chi-phi-verbindung-gruppenvergewaltigung-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Mutmaßliche Gruppenvergewaltigung: Fakultät spricht Leitung von Cornell-Universität ihr Misstrauen aus</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>Aktuelles zum Krieg in der Ukraine</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.faz.net/podcasts/f-a-z-podcast-machtprobe/elon-musk-kapituliert-die-ukraine-ohne-starlink-201659466.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">F.A.Z. MACHTPROBE: Wie Satelliten den Krieg in der Ukraine entscheiden</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">23</span>
+          <h3>Tod von Hubert Aiwanger: Warum er fehlen wird</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Tod-von-Hubert-Aiwanger/!6228138/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Tod von Hubert Aiwanger: Warum er fehlen wird</span></a></li><li><a href="https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5245881" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Freie Wähler nach Tod von Hubert Aiwanger: &quot;Nichts was begonnen wurde, wird stoppen&quot;</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">24</span>
+          <h3>Weltweiter KI-Ausverkauf: DAX rutscht nach Rekordhoch ab</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/wirtschaft/finanzen/marktberichte/marktbericht-dax-dow-ki-nasdaq-wall-street-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Weltweiter KI-Ausverkauf: DAX rutscht nach Rekordhoch ab</span></a></li><li><a href="https://www.faz.net/video/boerse-in-frankfurt-ki-sorgen-druecken-tech-werte-201659220.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Aktien: Dax rutscht nach Rekordhoch ins Minus</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">25</span>
+          <h3>Tesla stellt Produktion von Cybertruck in Texas ein</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/wirtschaft/unternehmen/tesla-cybertruck-produktion-cybercab-robotaxi-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Tesla stellt Produktion von Cybertruck in Texas ein</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/tesla-produktion-cybertruck-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Tesla will Cybertruck-Produktion in Texas einstellen</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/inland/ilse-aigner-portraet-100.html" target="_blank" rel="noopener">Ilse Aigner im Porträt: Krisenerprobt, bürgernah - und bald Staatsoberhaupt?</a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/aigner-bundespraesidentin-interview-tt-100.html" target="_blank" rel="noopener">Politologin über Aigner: &quot;Sie hat viel politische Erfahrung&quot;</a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/cdu-csu-aigner-bundespraesidentin-100.html" target="_blank" rel="noopener">Ilse Aigner soll laut ARD-Informationen Bundespräsidentin werden</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/ausland/usa-trump-veto-macht-faq-100.html" target="_blank" rel="noopener">Trumps Veto-Macht: Wie weit reicht sein Einfluss?</a></li><li><a href="https://www.zdfheute.de/politik/ausland/usa-midterms-susie-wiles-stephen-miller-trump-100.html" target="_blank" rel="noopener">Donald Trumps neuer Stabschef: Wer ist Stephen Miller?</a></li><li><a href="https://www.zdfheute.de/politik/deutschland/pistorius-bundeswehr-wehrpflicht-freiwillige-anzahl-ausreichend-100.html" target="_blank" rel="noopener">Wehrpflicht: Pistorius sieht derzeit keinen Bedarf</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/reza-pahlavi-nimmt-stellvertretend-freiheitspreis-fuer-iranisches-volk-entgegen-102.html" target="_blank" rel="noopener">Frankfurt am Main - Reza Pahlavi nimmt stellvertretend Freiheitspreis für iranisches Volk entgegen</a></li><li><a href="https://www.deutschlandfunk.de/pistorius-sieht-personalplanung-der-bundeswehr-auf-gutem-weg-erstmal-keine-wehrpflicht-noetig-100.html" target="_blank" rel="noopener">Soldatinnen und Soldaten - Pistorius sieht Personalplanung der Bundeswehr auf gutem Weg - erstmal keine Wehrpflicht nötig</a></li><li><a href="https://www.deutschlandfunk.de/trump-rueckt-rechten-hardliner-stephen-miller-ins-zentrum-des-machtzirkels-100.html" target="_blank" rel="noopener">Nach Entlassung von Stabschefin Wiles - Trump rückt rechten Hardliner Stephen Miller ins Zentrum des Machtzirkels</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/wirtschaft/staroekonomin-mariana-mazzucato-die-techbranche-ist-nichts-anderes-als-die-mafia-a-385ed8b4-1e39-48d4-adc1-bd129b76f28e#ref=rss" target="_blank" rel="noopener">Starökonomin Mariana Mazzucato: »Die Techbranche ist nichts anderes als die Mafia«</a></li><li><a href="https://www.spiegel.de/wirtschaft/donald-trump-und-die-wirtschaft-wo-die-demokraten-seinen-kurs-korrigieren-koennten-a-ad25686b-5dca-498e-9239-e1e7a131cf4a#ref=rss" target="_blank" rel="noopener">Donald Trump und die Wirtschaft: Wo die Demokraten seinen Kurs korrigieren könnten</a></li><li><a href="https://www.spiegel.de/politik/neukoellner-linker-ahmed-abed-vertrat-mehrfach-terrorsymphatisanten-ibrahim-vor-gericht-a-ab87687b-d693-4cd9-a610-8933708c25b2#ref=rss" target="_blank" rel="noopener">Neuköllner Linker Ahmed Abed vertrat mehrfach Terrorsympathisanten Ibrahim vor Gericht</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-11/07/zugausfaelle-zwischen-hamburg-und-neumuenster" target="_blank" rel="noopener">Zugausfälle: Zugausfälle zwischen Hamburg und Neumünster</a></li><li><a href="https://www.zeit.de/news/2026-11/07/erste-glaetteunfaelle-in-niederbayern" target="_blank" rel="noopener">Überfrierende Nässe: Erste Glätteunfälle in Niederbayern</a></li><li><a href="https://www.zeit.de/news/2026-11/07/verdacht-auf-tumorbildung-bei-kindern-durch-gentherapie" target="_blank" rel="noopener">Arzneimittelbehörde prüft: Verdacht auf Tumorbildung bei Kindern durch Gentherapie</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/politik/midterms-niederlage-republikaner-einwanderung-ice-susie-wiles-demokraten-li.3575293" target="_blank" rel="noopener">USA: Trump holt den Hardliner an seine Seite</a></li><li><a href="https://www.sueddeutsche.de/politik/usa-news-liveblog-midterms-trump-oval-office-denkmal-kalifornien-klage-li.3573278" target="_blank" rel="noopener">Midterms 2026: US-Regierung gibt im Streit mit Kalifornien auf</a></li><li><a href="https://www.sueddeutsche.de/politik/landtagswahlen-deutschland-sachsen-anhalt-ulrich-siegmund-berlin-vanessa-emde-li.3540501" target="_blank" rel="noopener">Newsblog zu den Landtagswahlen: Siegmund schließt mehrere Wahlgänge nicht mehr aus</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/gesellschaft/menschen/zeugen-der-halloween-krawalle-in-frankfurt-jugendliche-berichten-von-der-eskalation-accg-201654411.html" target="_blank" rel="noopener">Krawalle in Frankfurt: „Keine Ahnung, warum man das immer auf die Herkunft schieben muss“</a></li><li><a href="https://www.faz.net/aktuell/rhein-main/frankfurt/frankfurter-krawallnacht-bei-pluenderungen-waere-ich-gerne-dabei-gewesen-accg-201654785.html" target="_blank" rel="noopener">Aufarbeitung der Krawalle: „Bei den Plünderungen wäre ich gern dabei gewesen“</a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/frankreichs-start-up-szene-wie-paris-zur-tech-weltspitze-aufstieg-accg-201654742.html" target="_blank" rel="noopener">Paris bis Silicon Valley: Wo Frankreich Weltspitze ist</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/wirtschaft/plus6aeeecf75c7ccdedbffd2958/us-zoelle-im-zweifel-gegen-deutschland-warum-america-first-seinen-schrecken-nicht-verliert.html" target="_blank" rel="noopener">Im Zweifel gegen Deutschland – Warum „America First“ seinen Schrecken nicht verliert</a></li><li><a href="https://www.welt.de/sport/basketball/article6aeefbefbd9dc1882a99eab6/nba-taylor-swift-kein-fan-der-new-york-knicks-es-wirkt-schon-ein-wenig-inszeniert.html" target="_blank" rel="noopener">Taylor Swift ein Fan der New York Knicks? – „Es wirkt schon ein wenig inszeniert“</a></li><li><a href="https://www.welt.de/politik/video6aeefcd267e48945bd052aa3/iran-demos-in-frankfurt-rund-1500-menschen-demonstrieren-auf-dem-roemerplatz-schah-sohn-nimmt-preis-entgegen.html" target="_blank" rel="noopener">„Rund 1500 Menschen demonstrieren auf dem Römerplatz“ – Schah-Sohn nimmt Preis entgegen</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Journalistische-Entgleisungen/!6227534/" target="_blank" rel="noopener">Journalistische Entgleisungen: Ein bisschen mehr Respekt, bitte!</a></li><li><a href="https://taz.de/Ansage-der-Berliner-Linkspartei/!6228309/" target="_blank" rel="noopener">Ansage der Berliner Linkspartei: Mit Emde soll Ende sein</a></li><li><a href="https://taz.de/Spiegel-skandalisiert-Linke-Engagement/!6228217/" target="_blank" rel="noopener">„Spiegel“ skandalisiert Linke-Engagement: Linke pocht auf den Rechtsstaat</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.zeit.de/news/2026-11/07/zugausfaelle-zwischen-hamburg-und-neumuenster" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Zugausfälle: Zugausfälle zwischen Hamburg und Neumünster</span></a></li><li><a href="https://www.zeit.de/news/2026-11/07/erste-glaetteunfaelle-in-niederbayern" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Überfrierende Nässe: Erste Glätteunfälle in Niederbayern</span></a></li><li><a href="https://www.zeit.de/news/2026-11/07/verdacht-auf-tumorbildung-bei-kindern-durch-gentherapie" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Arzneimittelbehörde prüft: Verdacht auf Tumorbildung bei Kindern durch Gentherapie</span></a></li><li><a href="https://www.spiegel.de/wirtschaft/staroekonomin-mariana-mazzucato-die-techbranche-ist-nichts-anderes-als-die-mafia-a-385ed8b4-1e39-48d4-adc1-bd129b76f28e#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Starökonomin Mariana Mazzucato: »Die Techbranche ist nichts anderes als die Mafia«</span></a></li><li><a href="https://www.deutschlandfunk.de/reza-pahlavi-nimmt-stellvertretend-freiheitspreis-fuer-iranisches-volk-entgegen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Frankfurt am Main - Reza Pahlavi nimmt stellvertretend Freiheitspreis für iranisches Volk entgegen</span></a></li><li><a href="https://www.deutschlandfunk.de/peking-bestaetigt-gespraeche-ueber-treffen-von-xi-trump-und-putin-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">USA Russland China - Peking bestätigt Gespräche über Treffen von Xi, Trump und Putin</span></a></li><li><a href="https://www.deutschlandfunk.de/russen-greifen-ukrainische-energieversorung-mit-raketen-an-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Russen greifen ukrainische Energieversorung mit Raketen an</span></a></li><li><a href="https://www.deutschlandfunk.de/gefaehrliche-metallteile-in-halloween-suessigkeiten-polizei-prueft-einfluss-von-sozialen-medien-oder-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Europaweite Vorfälle - Gefährliche Metallteile in Halloween-Süßigkeiten: Polizei prüft Einfluss von Sozialen Medien oder Chatgruppen</span></a></li><li><a href="https://www.deutschlandfunk.de/chilenischer-oscar-regisseur-sebasti-n-lelio-ist-gestorben-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Eine fantastische Frau&quot; - Chilenischer Oscar-Regisseur Sebastián Lelio ist gestorben</span></a></li><li><a href="https://www.deutschlandfunk.de/viele-tote-nach-angriffen-auf-markt-im-jemen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Provinz Taiz - Viele Tote nach Angriffen auf Markt im Jemen</span></a></li><li><a href="https://www.deutschlandfunk.de/sachsen-will-schutzkonzepte-gegen-sexuelle-gewalt-an-schulen-verpflichtend-machen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Missbrauch - Sachsen will Schutzkonzepte gegen sexuelle Gewalt an Schulen verpflichtend machen</span></a></li><li><a href="https://www.deutschlandfunk.de/letzter-gletscher-in-allgaeuer-alpen-fliesst-nicht-mehr-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Schwarzmilzferner - Letzter Gletscher in Allgäuer Alpen fließt nicht mehr</span></a></li><li><a href="https://www.deutschlandfunk.de/evangelische-kirche-stellt-eigene-rolle-bei-der-wiedervereinigung-infrage-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Jahrestag - Evangelische Kirche stellt eigene Rolle bei der Wiedervereinigung infrage</span></a></li><li><a href="https://www.deutschlandfunk.de/gewerkschaft-kritisiert-haftstrafe-nach-angriff-auf-polizisten-bei-fussball-krawallen-in-magdeburg-a-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Versuchter Mord - Gewerkschaft kritisiert Haftstrafe nach Angriff auf Polizisten bei Fußball-Krawallen in Magdeburg als zu mild</span></a></li><li><a href="https://www.deutschlandfunk.de/anfeindungen-schmaehungen-pfiffe-fussballer-timo-werner-gibt-einblicke-in-seelenleben-ich-war-wirkli-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Hass auf RB Leipzig - Anfeindungen, Schmähungen, Pfiffe: Fußballer Timo Werner gibt Einblicke in Seelenleben - &quot;Ich war wirklich am Boden&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/kinderjury-zeichnet-kakadu-beitrag-aus-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Kindernothilfe - Kinderjury zeichnet Kakadu-Beitrag aus</span></a></li><li><a href="https://www.deutschlandfunk.de/deutsche-welle-kritisiert-fahndung-nach-journalistinnen-in-belarus-108.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Pressefreiheit - Deutsche Welle kritisiert Fahndung nach Journalistinnen in Belarus</span></a></li><li><a href="https://www.deutschlandfunk.de/eu-fuehrt-nach-babymilch-rueckrufen-strengere-lebensmittelstandards-ein-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Brüssel - EU führt nach Babymilch-Rückrufen strengere Lebensmittelstandards ein</span></a></li><li><a href="https://www.deutschlandfunk.de/3-8-millionen-neuseelaender-waehlen-neues-parlament-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Enges Rennen - 3,8 Millionen Neuseeländer wählen neues Parlament</span></a></li><li><a href="https://www.deutschlandfunk.de/tiktok-widerspricht-vorwuefen-der-eu-kommission-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Suchtgefahr - Tiktok widerspricht Vorwüfen der EU-Kommission</span></a></li><li><a href="https://www.deutschlandfunk.de/gebietsweise-stark-bewoelkt-oder-zaeher-hochnebel-im-osten-laenger-sonnig-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wetter - Gebietsweise stark bewölkt oder zäher Hochnebel, im Osten länger sonnig</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/frankreichs-start-up-szene-wie-paris-zur-tech-weltspitze-aufstieg-accg-201654742.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Paris bis Silicon Valley: Wo Frankreich Weltspitze ist</span></a></li><li><a href="https://www.faz.net/aktuell/rhein-main/frankfurt/oper-frankfurt-magdalena-hinterdobler-singt-in-le-roi-arthus-accg-201654137.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Magdalena Hinterdobler: „Die Rolle schlüpft in mich“</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 07.11.2026 um 12:48 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
