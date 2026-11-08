@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 08.11.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Sunday, 08. November 2026 &middot; 13:00 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">293 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Polen - Justiz bezeichnet Todesschüsse von Krakau als Terror</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/justiz-bezeichnet-todesschuesse-von-krakau-als-terror-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Polen - Justiz bezeichnet Todesschüsse von Krakau als Terror</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/krakau-schuesse-trauer-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Schüsse in Krakau: Staatsanwaltschaft geht Terrorismusverdacht nach</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/polen-krakau-schuesse-schuetze-tote-verletzte-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Krakau: Polen ermittelt wegen Terror - was bekannt ist</span></a></li><li><a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-11/schuesse-krakau-polen-tote-verletzte" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Polen: Was über die Schüsse in Kraków bekannt ist</span></a></li><li><a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-11/schuesse-krakau-polen-tote-verletzte" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Polen: Was über die Schüsse in Kraków bekannt ist</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/attentat-in-krakau-tusk-spricht-von-terrorismus-accg-201661603.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Attentat in Polen: Nach Schüssen in Krakau: Ministerpräsident Tusk spricht von „Terrorismus“</span></a></li><li><a href="https://www.spiegel.de/ausland/krakau-was-ueber-die-todesschuesse-in-polen-bekannt-ist-a-6e500316-9e7e-4af2-988a-b86fa65a7801#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Krakau: Was über die Todesschüsse in Polen bekannt ist</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Jerusalem - Israels Präsident Herzog beauftragt Oppositionspolitiker Eisenkot mit Regierungsbildung</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:67%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/israels-praesident-herzog-beauftragt-oppositionspolitiker-eisenkot-mit-regierungsbildung-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Jerusalem - Israels Präsident Herzog beauftragt Oppositionspolitiker Eisenkot mit Regierungsbildung</span></a></li><li><a href="https://www.tagesschau.de/video/video-1680146.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Israels Präsident Herzog will Oppositionspolitiker Eisenkot Auftrag zur Regierungsbildung erteilen</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/regierungsbildung-israel-eisenkot-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Oppositionsführer Eisenkot soll Israels neue Regierung bilden</span></a></li><li><a href="https://www.sueddeutsche.de/politik/liveblog-nahost-israel-eisenkot-regierungsbildung-li.3571386" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Newsblog zu Nahost: Eisenkot in Israel mit Regierungsbildung beauftragt</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/regierungsbildung-israel-herzog-eisenkot-netanjahu-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Herzog will Eisenkot mit Regierungsbildung beauftragen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>UFC - Trump will Kampfsportverbandschef Dana White als Pressesprecher</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:67%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/trump-will-kampfsportverbandschef-dana-white-als-pressesprecher-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">UFC - Trump will Kampfsportverbandschef Dana White als Pressesprecher</span></a></li><li><a href="https://www.tagesschau.de/video/video-1680156.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">&quot;Aus Käfigkampf-Branche&quot;, Felix Edeha, ARD-aktuell, zu Dana White als möglichen neuen Pressesprecher Trumps</span></a></li><li><a href="https://taz.de/Pressesprecher-von-Trump/!6228367/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Pressesprecher von Trump: US-Präsident will Posten mit Kampfsportler besetzen</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/trump-sprecher-white-ufc-kampfsport-spekulationen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Trump will Kampfsportunternehmer White als Pressesprecher</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/trump-dana-white-pressesprecher-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Trump will &quot;gewalttätigen Kämpfer&quot; als Pressesprecher</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Asien - Erdbeben in Japan: Berichte über mindestens 22 Verletzte</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:67%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/erdbeben-in-japan-berichte-ueber-mindestens-22-verletzte-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Asien - Erdbeben in Japan: Berichte über mindestens 22 Verletzte</span></a></li><li><a href="https://www.zdfheute.de/panorama/japan-erdbeben-nachbeben-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Starkes Erdbeben erschüttert Japan</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/erdbeben-der-staerke-5-7-in-japan-dutzende-verletzte-accg-201662478.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Dutzende Verletzte: Erdbeben der Stärke 5,7 erschüttert Japan</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/japan-erdbeben-aichi-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Mehr als 20 Verletzte nach Erdbeben in Zentraljapan</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>146.000 demonstrieren - Frankreich: Erneut Ausschreitungen und Gewalt bei Protesten</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:67%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/frankreich-erneut-ausschreitungen-und-gewalt-bei-protesten-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">146.000 demonstrieren - Frankreich: Erneut Ausschreitungen und Gewalt bei Protesten</span></a></li><li><a href="https://www.faz.net/video/protest-in-frankreich-streiks-an-hochschulen-geplant-201662838.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Ausschreitungen: Protest gegen Sparpolitik in Frankreich schlägt in Gewalt um</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/frankreich-protest-bildung-kosten-festnahmen-gelbwesten-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Frankreich: Tausende protestieren erneut gegen die Regierung</span></a></li><li><a href="https://taz.de/Proteste-in-Frankreich/!6228240/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Proteste in Frankreich: Die Macht der Kaufkraft</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Skandal um Ueno-Bank - Staatsanwaltschaft in Paraguay erhebt Anklage - abgesetzter Präsident Peña in Untersuchungshaft</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/staatsanwaltschaft-in-paraguay-erhebt-anklage-abgesetzter-praesident-pe-a-in-untersuchungshaft-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Skandal um Ueno-Bank - Staatsanwaltschaft in Paraguay erhebt Anklage - abgesetzter Präsident Peña in Untersuchungshaft</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/staatsanwaltschaft-in-paraguay-erhebt-anklage-gegen-abgesetzten-praesidenten-accg-201662152.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">U-Haft: Staatsanwaltschaft in Paraguay erhebt Anklage gegen abgesetzten Präsidenten</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/ermittlungen-paraguay-pena-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bankenkrise: Anklage gegen Paraguays Ex-Präsidenten</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Interview der Woche - Pistorius sieht Personalplanung der Bundeswehr auf gutem Weg - erstmal keine Wehrpflicht nötig</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/pistorius-sieht-personalplanung-der-bundeswehr-auf-gutem-weg-erstmal-keine-wehrpflicht-noetig-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Interview der Woche - Pistorius sieht Personalplanung der Bundeswehr auf gutem Weg - erstmal keine Wehrpflicht nötig</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/pistorius-bundeswehr-wehrpflicht-freiwillige-anzahl-ausreichend-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Wehrpflicht: Pistorius sieht derzeit keinen Bedarf</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/bundeswehr-diskussion-wehrpflicht-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Pistorius rechnet derzeit nicht mit Rückkehr zur Wehrpflicht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Berlin - Linken-Abgeordnete Emde weist Rückzugsforderung des Landesvorstands zurück</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/linken-abgeordnete-emde-weist-rueckzugsforderung-des-landesvorstands-zurueck-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Berlin - Linken-Abgeordnete Emde weist Rückzugsforderung des Landesvorstands zurück</span></a></li><li><a href="https://taz.de/Streit-um-Linken-Abgeordnete/!6228366/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Streit um Linken-Abgeordnete: Emde weist Rückzugsforderung des Vorstands zurück</span></a></li><li><a href="https://www.welt.de/politik/video6af04d001125adfe9365c4bb/regierungsbildung-in-berlin-linke-politikerin-emde-weist-rueckzugsforderung-des-vorstands-zurueck.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Linke-Politikerin Emde weist Rückzugsforderung des Vorstands zurück</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Saudi-Arabien - Gebäude des saudischen Ölkonzerns Aramco bei Huthi-Angriff beschädigt</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/gebaeude-des-saudischen-oelkonzerns-aramco-bei-huthi-angriff-beschaedigt-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Saudi-Arabien - Gebäude des saudischen Ölkonzerns Aramco bei Huthi-Angriff beschädigt</span></a></li><li><a href="https://www.spiegel.de/ausland/saudi-arabien-gebaeude-von-oelkonzern-aramco-infolge-von-huthi-angriff-beschaedigt-a-9419f509-2640-4fc3-b535-46c4ad20089d#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Saudi-Arabien: Gebäude von Ölkonzern Aramco infolge von Huthi-Angriff beschädigt</span></a></li><li><a href="https://taz.de/-Nachrichten-im-Nahost-Krieg-/!6228373/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">+++ Nachrichten im Nahost-Krieg +++: Huthi-Angriffe in Saudi-Arabien</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Linke in Berlin: Vanessa Emde will ihr Mandat »selbstverständlich« weiter ausüben</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/politik/deutschland/linke-in-berlin-vanessa-emde-will-ihr-mandat-selbstverstaendlich-weiter-ausueben-a-9bb6975c-39a9-468b-a250-32db18215b24#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Linke in Berlin: Vanessa Emde will ihr Mandat »selbstverständlich« weiter ausüben</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6af03ecad487d5232edf09bd/vanessa-emde-selbstverstaendlich-werde-ich-mein-mandat-weiter-ausueben.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Selbstverständlich werde ich mein Mandat weiter ausüben!“ – Emde reagiert auf Rückzugsforderung</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-emde-weigert-sich-auf-ihr-mandat-zu-verzichten-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: Emde weigert sich, auf ihr Mandat zu verzichten</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>„Nee, danke, ciao“ – Füllkrug bricht ZDF-Interview ab</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/sport/article6af03d70a389bc337cfc9c60/niclas-fuellkrug-nee-danke-ciao-werder-stuermer-bricht-zdf-interview-ab.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Nee, danke, ciao“ – Füllkrug bricht ZDF-Interview ab</span></a></li><li><a href="https://www.zdfheute.de/video/fuellkrug-interview-sportstudio-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Füllkrug bricht ZDF-Interview ab: &quot;Nee, danke, ciao&quot;</span></a></li><li><a href="https://www.spiegel.de/sport/fussball/niclas-fuellkrug-bricht-zdf-interview-nach-niederlage-gegen-stuttgart-ab-a-39f4cb91-23f0-48ce-bf75-92e16b182a1b#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Niclas Füllkrug bricht ZDF-Interview nach Niederlage gegen Stuttgart ab</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>2:1 in Mainz: Erst die Kür, dann die Pflicht für den FC Bayern</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:50%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/sport/fussball/bundesliga/bundesliga-fc-bayern-bleibt-tabellenfuehrer-und-verliert-manuel-neuer-accg-201304352.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">2:1 in Mainz: Erst die Kür, dann die Pflicht für den FC Bayern</span></a></li><li><a href="https://www.sueddeutsche.de/sport/bayern-mainz-bundesliga-neuer-verletzung-li.3576329" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">FC Bayern gewinnt 2:1 in Mainz: Ein Sieg im Angstauswärtsspiel und die nächste Neuer-Verletzung</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-bundesliga/bundesliga-9-spieltag-bayern-muenchen-auswaertssieg-mainz-05-kimmich-karl-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Bayern bezahlt hohen Preis für Sieg in Mainz</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Golf von Oman - US-Militär beschießt Handelsschiff</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/us-militaer-beschiesst-handelsschiff-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Golf von Oman - US-Militär beschießt Handelsschiff</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/usa-iran-seeblockade-angriff-handelsschiff-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">US-Militär attackiert Handelsschiff im Golf von Oman</span></a></li><li><a href="https://www.tagesschau.de/video/video-1680114.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">US-Militär greift Handelsschiff im Golf von Oman an</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Schneider wirbt fürs E-Auto – und fährt selbst einen 13 Jahre alten Diesel</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/politik/video6af04ee080d3a1c6aa66cf89/umweltminister-schneider-wirbt-fuers-e-auto-und-faehrt-selbst-einen-13-jahre-alten-diesel.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Schneider wirbt fürs E-Auto – und fährt selbst einen 13 Jahre alten Diesel</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6af0361fd487d5232edf091c/umweltminister-schneider-wirbt-fuers-e-auto-und-faehrt-selbst-einen-13-jahre-alten-diesel.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Schneider wirbt fürs E-Auto – und fährt selbst einen 13 Jahre alten Diesel</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/klima-nachhaltigkeit/umweltminister-carsten-schneider-privat-fahren-wir-einen-13-jahre-alten-diesel-accg-201653839.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Umweltminister Schneider: „Privat fahren wir einen 13 Jahre alten Diesel“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Ukraine-Krieg - Erneut russischer Angriff auf ukrainische Energieversorgung - 600.000 Menschen ohne Strom</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/erneut-russischer-angriff-auf-ukrainische-energieversorgung-600-000-menschen-ohne-strom-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Erneut russischer Angriff auf ukrainische Energieversorgung - 600.000 Menschen ohne Strom</span></a></li><li><a href="https://www.tagesschau.de/video/video-1680170.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Massive Stromausfälle nach russischen Angriffen auf Ukraine</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Bericht - Bislang kaum Geld aus Sondervermögen in Bildungs-, Betreuungs- und Wissenschaftsinfrastruktur geflossen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bislang-kaum-geld-aus-sondervermoegen-in-bildungs-betreuungs-und-wissenschaftsinfrastruktur-geflosse-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bericht - Bislang kaum Geld aus Sondervermögen in Bildungs-, Betreuungs- und Wissenschaftsinfrastruktur geflossen</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/sondervermoegen-bildungsinfrastruktur-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Medienbericht: Kaum Geld aus Sondervermögen in Bildungsinfrastruktur geflossen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Südamerika-Reise - Papst Leo XIV. feiert Messe in Paysandú</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/papst-leo-xiv-feiert-messe-in-paysand-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Südamerika-Reise - Papst Leo XIV. feiert Messe in Paysandú</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/papst-leo-suedamerika-uruguay-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Papst Leo XIV. setzt Südamerika-Reise fort</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Auszeichnung - Ehemaliger US-General Ben Hodges erhält Point-Alpha-Preis 2026</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/ehemaliger-us-general-ben-hodges-erhaelt-point-alpha-preis-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Auszeichnung - Ehemaliger US-General Ben Hodges erhält Point-Alpha-Preis 2026</span></a></li><li><a href="https://www.faz.net/aktuell/rhein-main/point-alpha-preis-an-ex-general-ben-hodges-verliehen-aktuelle-nachrichten-aus-frankfurt-hessen-faz-19735361.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Rhein-Main-Liveblog: Point-Alpha-Preis an Ex-General Ben Hodges verliehen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Aktuelles zum Krieg in der Ukraine</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://taz.de/Kulturzerstoerung-Ukraine/!6224209/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Kulturzerstörung Ukraine: Russlands Krieg gegen die Bücher</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>USA unter Trump: Trump setzt das Justizministerium auf die Demokraten an</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/liveticker-usa-unter-trump-trump-beauftragt-justizministerium-mit-untersuchung-gegen-demokraten-faz-19444916.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">USA unter Trump: Trump setzt das Justizministerium auf die Demokraten an</span></a></li><li><a href="https://www.spiegel.de/ausland/usa-donald-trump-weist-justizministerium-an-unliebsame-demokraten-zu-untersuchen-a-c5f98176-36ff-41ad-88a9-511276a4b746#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">USA: Donald Trump weist Justizministerium an, unliebsame Demokraten zu untersuchen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Liveblog Nahost: Laut Iran brennen zwei Öltanker in der Straße von Hormus</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/politik/ausland/liveblog-nahost-laut-iran-brennen-zwei-oeltanker-in-der-strasse-von-hormus-faz-200583539.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Nahost: Laut Iran brennen zwei Öltanker in der Straße von Hormus</span></a></li><li><a href="https://www.zdfheute.de/video/panorama-bandar-abbas-fischer-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Straße von Hormus: Fischer kämpfen in Iran ums Überleben</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/ausland/europa/russland-nordkorea-104.html" target="_blank" rel="noopener">Leiharbeiter: Nordkoreas Geldquelle in Russland</a></li><li><a href="https://www.tagesschau.de/video/video-1680154.html" target="_blank" rel="noopener">&quot;In kritischem Zustand&quot;, Palina Milling, ARD Warschau, zu mutmaßlichem Attentäter von Krakau</a></li><li><a href="https://www.tagesschau.de/video/video-1680136.html" target="_blank" rel="noopener">Schusswaffenangriff im polnischen Krakau laut Regierung Terrorakt</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/ausland/usa-trump-zweifel-midterms-demokraten-drohung-untersuchung-100.html" target="_blank" rel="noopener">Trump zweifelt nun doch am Midterms-Ergebnis</a></li><li><a href="https://www.zdfheute.de/politik/ausland/trump-dana-white-pressesprecher-100.html" target="_blank" rel="noopener">Trump will &quot;gewalttätigen Kämpfer&quot; als Pressesprecher</a></li><li><a href="https://www.zdfheute.de/panorama/e-bike-fatbike-verkehr-gefahr-risiko-100.html" target="_blank" rel="noopener">Vorsicht Fatbike: Wie die E-Bikes zum Verkehrsrisiko werden</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/grossbauprojekte-brennerbasistunnel-und-fehmarnbelttunnel-von-cyberattacken-betroffen-102.html" target="_blank" rel="noopener">Infrastruktur - Großbauprojekte Brennerbasistunnel und Fehmarnbelttunnel von Cyberattacken betroffen</a></li><li><a href="https://www.deutschlandfunk.de/bislang-kaum-geld-aus-sondervermoegen-in-bildungs-betreuungs-und-wissenschaftsinfrastruktur-geflosse-100.html" target="_blank" rel="noopener">Bericht - Bislang kaum Geld aus Sondervermögen in Bildungs-, Betreuungs- und Wissenschaftsinfrastruktur geflossen</a></li><li><a href="https://www.deutschlandfunk.de/justiz-bezeichnet-todesschuesse-von-krakau-als-terror-100.html" target="_blank" rel="noopener">Polen - Justiz bezeichnet Todesschüsse von Krakau als Terror</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/kultur/daniel-kehlmann-in-new-york-der-schriftsteller-als-repraesentant-a-c5d53cf8-fbb7-404e-8060-2700e787acf6#ref=rss" target="_blank" rel="noopener">Daniel Kehlmann in New York: Der Schriftsteller als Repräsentant</a></li><li><a href="https://www.spiegel.de/ausland/krakau-was-ueber-die-todesschuesse-in-polen-bekannt-ist-a-6e500316-9e7e-4af2-988a-b86fa65a7801#ref=rss" target="_blank" rel="noopener">Krakau: Was über die Todesschüsse in Polen bekannt ist</a></li><li><a href="https://www.spiegel.de/politik/deutschland/linke-in-berlin-vanessa-emde-will-ihr-mandat-selbstverstaendlich-weiter-ausueben-a-9bb6975c-39a9-468b-a250-32db18215b24#ref=rss" target="_blank" rel="noopener">Linke in Berlin: Vanessa Emde will ihr Mandat »selbstverständlich« weiter ausüben</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-11/08/gaza-debatte-der-gruenen-hamburg-warnt-vor-antisemitismus" target="_blank" rel="noopener">Landesparteitag: Grüne stimmen gegen Anerkennung eines Genozids in Gaza</a></li><li><a href="https://www.zeit.de/news/2026-11/08/bilder-des-tages" target="_blank" rel="noopener">Fotografie: Bilder des Tages</a></li><li><a href="https://www.zeit.de/news/2026-11/08/unheimlich-schoene-atmosphaere-wagner-schwaermt-von-sve-fans" target="_blank" rel="noopener">Bundesliga: «Unheimlich schöne Atmosphäre»: Wagner schwärmt von SVE-Fans</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/wirtschaft/tesla-cybertruck-li.3575597" target="_blank" rel="noopener">Gescheitertes Tesla-Projekt: Musks Fantasien</a></li><li><a href="https://www.sueddeutsche.de/politik/wolfgang-holzhauser-hey-wolfi-rechtsextremismus-social-media-afd-buch-li.3572063" target="_blank" rel="noopener">„Wie wir Extremisten den Stecker ziehen“: Lachen gegen radikale Rechte</a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/jensen-huang-nvidia-affaere-china-spionin-li.3576581" target="_blank" rel="noopener">Jensen Huang: Nvidia-Chef soll Beziehung mit chinesischer Spionin gehabt haben</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/politik/wahl-in-berlin/linke-versuchung-spd-und-die-regierungsbildung-in-berlin-accg-201648143.html" target="_blank" rel="noopener">Regierung in Berlin: Die rote Versuchung</a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-emde-weigert-sich-auf-ihr-mandat-zu-verzichten-faz-110093143.html" target="_blank" rel="noopener">Deutschland Liveblog: Emde weigert sich, auf ihr Mandat zu verzichten</a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/klima-nachhaltigkeit/umweltminister-carsten-schneider-privat-fahren-wir-einen-13-jahre-alten-diesel-accg-201653839.html" target="_blank" rel="noopener">Umweltminister Schneider: „Privat fahren wir einen 13 Jahre alten Diesel“</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/politik/ausland/video6af05b6e80d3a1c6aa66d0a8/reza-pahlavi-militaerschlaege-sind-fuer-uns-eine-moeglichkeit-den-unterdrueckungsapparat-des-regimes-zu-schwaechen.html" target="_blank" rel="noopener">„Militärschläge sind für uns eine Möglichkeit, den Unterdrückungsapparat des Regimes zu schwächen“</a></li><li><a href="https://www.welt.de/sport/handball/article6af03a9980d3a1c6aa66cdb6/johannes-golla-sehr-auf-tapetenwechsel-gefreut-handball-kapitaen-spricht-ueber-wechselposse.html" target="_blank" rel="noopener">„Ich habe mich sehr auf den Tapetenwechsel gefreut“ – Golla spricht über Wechselposse</a></li><li><a href="https://www.welt.de/politik/video6af058f780d3a1c6aa66d066/emde-will-mandat-behalten-linkspartei-muesste-nun-mal-eine-art-brandmauer-gegen-emde-aufbauen.html" target="_blank" rel="noopener">„Linkspartei müsste nun mal eine Art Brandmauer gegen Emde aufbauen“</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Leak-bei-Projekt-Ein-Prozent/!6228327/" target="_blank" rel="noopener">Leak bei Projekt „Ein Prozent“: AfD-Geld fließt in rechtsextremen Verein</a></li><li><a href="https://taz.de/Schusswaffenangriff-in-Krakau/!6228328/" target="_blank" rel="noopener">Schusswaffenangriff in Krakau: Mutmaßlicher Täter tötete zunächst Eltern und Schwester</a></li><li><a href="https://taz.de/Palaestina-Fahne-vor-dem-Bundestag/!6228451/" target="_blank" rel="noopener">Palästina-Fahne vor dem Bundestag: Aktivist ersetzt Deutschland-Fahne</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.spiegel.de/ausland/europa-wie-junge-menschen-fuer-eine-bessere-zukunft-kaempfen-nur-gute-nachrichten-a-b3cb5034-b82e-4e2d-84d2-c29f7fc5818b#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Europa: Wie junge Menschen für eine bessere Zukunft kämpfen – nur gute Nachrichten</span></a></li><li><a href="https://www.deutschlandfunk.de/grossbauprojekte-brennerbasistunnel-und-fehmarnbelttunnel-von-cyberattacken-betroffen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Infrastruktur - Großbauprojekte Brennerbasistunnel und Fehmarnbelttunnel von Cyberattacken betroffen</span></a></li><li><a href="https://www.deutschlandfunk.de/fdp-vorsitzender-kubicki-stellt-wirtschaftswachstum-ins-zentrum-der-parteipolitik-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Digitaler Bundesparteitag - FDP-Vorsitzender Kubicki stellt Wirtschaftswachstum ins Zentrum der Parteipolitik</span></a></li><li><a href="https://www.deutschlandfunk.de/drei-maenner-wegen-des-vorwurfs-der-beteiligung-an-regierungskritischen-protesten-hingerichtet-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Iran - Drei Männer wegen des Vorwurfs der Beteiligung an regierungskritischen Protesten hingerichtet</span></a></li><li><a href="https://www.deutschlandfunk.de/heute-rheinisches-derby-koeln-empfaengt-leverkusen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Fußball-Bundesliga - Heute rheinisches Derby: Köln empfängt Leverkusen</span></a></li><li><a href="https://www.deutschlandfunk.de/gedenktafel-in-moskau-erinnert-jetzt-an-ddr-spionagechef-markus-wolf-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Russland - Gedenktafel in Moskau erinnert jetzt an DDR-Spionagechef Markus Wolf</span></a></li><li><a href="https://www.deutschlandfunk.de/cdu-praesidium-beraet-in-berlin-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Steinmeier-Nachfolge - CDU-Präsidium berät in Berlin</span></a></li><li><a href="https://www.deutschlandfunk.de/klingbeil-laesst-erneute-kandidatur-offen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Diskussion um SPD-Vorsitz - Klingbeil lässt erneute Kandidatur offen</span></a></li><li><a href="https://www.deutschlandfunk.de/inakzeptabel-hessens-wirtschaftsminister-mansoori-spd-kritisiert-europaminister-pentz-cdu-fuer-onlin-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Rassismusdebatte - &quot;Inakzeptabel&quot;: Hessens Wirtschaftsminister Mansoori (SPD) kritisiert Europaminister Pentz (CDU) für Online-Kommentar</span></a></li><li><a href="https://www.deutschlandfunk.de/huthis-melden-27-tote-und-36-verletzte-nach-luftangriffen-auf-dorf-im-jemen-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Pro-iranische Miliz - Huthis melden 27 Tote und 36 Verletzte nach Luftangriffen auf Dorf im Jemen</span></a></li><li><a href="https://www.deutschlandfunk.de/soeder-brauchen-wieder-echte-wehrpflicht-110.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundeswehr - Söder: &quot;Brauchen wieder echte Wehrpflicht&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/eishockey-wm-in-deutschland-mit-russland-weltverband-iihf-spielt-auf-zeit-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach CAS-Urteil - Eishockey-WM in Deutschland mit Russland? Weltverband IIHF spielt auf Zeit</span></a></li><li><a href="https://www.deutschlandfunk.de/verbreitet-stark-bewoelkt-oder-trueb-oertlich-etwas-regen-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Wetter - Verbreitet stark bewölkt oder trüb, örtlich etwas Regen</span></a></li><li><a href="https://www.zeit.de/news/2026-11/08/gaza-debatte-der-gruenen-hamburg-warnt-vor-antisemitismus" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Landesparteitag: Grüne stimmen gegen Anerkennung eines Genozids in Gaza</span></a></li><li><a href="https://www.zeit.de/news/2026-11/08/bilder-des-tages" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Fotografie: Bilder des Tages</span></a></li><li><a href="https://www.zeit.de/news/2026-11/08/unheimlich-schoene-atmosphaere-wagner-schwaermt-von-sve-fans" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Bundesliga: «Unheimlich schöne Atmosphäre»: Wagner schwärmt von SVE-Fans</span></a></li><li><a href="https://taz.de/Palaestina-Fahne-vor-dem-Bundestag/!6228451/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Palästina-Fahne vor dem Bundestag: Aktivist ersetzt Deutschland-Fahne</span></a></li><li><a href="https://www.zeit.de/news/2026-11/08/maenner-kippen-15-kilo-zement-in-brunnen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Verunreinigung: Männer kippen 15 Kilo Zement in Brunnen</span></a></li><li><a href="https://www.zeit.de/news/2026-11/08/leipzigs-gruda-stolz-auf-klopp-anruf-raum-mit-kampfansage" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Fußball-Bundesliga: Leipzigs Gruda stolz auf Klopp-Anruf - Raum mit Kampfansage</span></a></li><li><a href="https://www.zeit.de/news/2026-11/08/pfefferspray-angriff-nach-rassistischen-beleidigungen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Täter und Opfer kennen sich: Pfefferspray-Angriff nach rassistischen Beleidigungen</span></a></li><li><a href="https://taz.de/Parlamentswahl-in-Neuseeland/!6228377/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Parlamentswahl in Neuseeland: Vorübergehende Pattsituation</span></a></li><li><a href="https://www.zeit.de/news/2026-11/08/mehrere-e-scooter-fahrer-gegen-die-regeln-unterwegs" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Polizei: Mehrere E-Scooter-Fahrer gegen die Regeln unterwegs</span></a></li><li><a href="https://www.zeit.de/news/2026-11/08/schuesse-auf-autohaus-in-koeln" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Kriminalität: Schüsse auf Autohaus in Köln</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 08.11.2026 um 13:00 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
