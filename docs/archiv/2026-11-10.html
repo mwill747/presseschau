@@ -1,0 +1,520 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 10.11.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Tuesday, 10. November 2026 &middot; 14:36 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">368 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Angeklagte im Fall Fabian zu lebenslanger Haft verurteilt</h3>
+          <div class="zaehler">
+            <b>7</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/inland/regional/mecklenburgvorpommern/urteil-im-fall-fabian-gina-h-zu-lebenslanger-haft-verurteilt,aktuellmv-438.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Angeklagte im Fall Fabian zu lebenslanger Haft verurteilt</span></a></li><li><a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-11/lebenslange-haft-im-prozess-um-mord-an-achtjaehrigem-fabian" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Fall Fabian : Lebenslange Haft im Prozess um Mord an achtjährigem Fabian</span></a></li><li><a href="https://www.welt.de/vermischtes/video6af3031342c2bfde5b9928df/achtjaehriger-getoetet-mordfall-fabian-gina-h-zu-lebenslanger-haft-verurteilt.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Mordfall Fabian – Gina H. zu lebenslanger Haft verurteilt</span></a></li><li><a href="https://www.sueddeutsche.de/panorama/fabian-urteil-mordprozess-li.3578094" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Mordprozess: Lebenslange Haftstrafe für Angeklagte im Fall Fabian</span></a></li><li><a href="https://www.zdfheute.de/panorama/kriminalitaet/lebenslange-haft-prozess-mord-fabian-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Mord an Fabian: Angeklagte zu lebenslanger Haft verurteilt</span></a></li><li><a href="https://www.spiegel.de/panorama/justiz/fall-fabian-gina-h-zu-lebenslanger-haft-verurteilt-a-04259c80-a4fe-4a3d-8a0d-5df5831fd894#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Fall Fabian: Gina H. zu lebenslanger Haft verurteilt</span></a></li><li><a href="https://www.welt.de/vermischtes/article6af300a4f0b67a4b24663fa7/fabian-8-getoetet-gina-h-zu-lebenslanger-haft-verurteilt.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Mordfall Fabian – Gina H. zu Höchststrafe verurteilt</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/fabian-prozess-gina-h-zu-lebenslanger-haft-verurteilt-accg-201667320.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Fabian-Prozess: Gina H. zu lebenslanger Haft verurteilt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Schüsse in der Hamburger Hafencity - Verdächtiger tot aufgefunden</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:86%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/inland/regional/hamburg/verletzte-nach-schuessen-in-der-hamburger-hafencity,schuesse-170.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Schüsse in der Hamburger Hafencity - Verdächtiger tot aufgefunden</span></a></li><li><a href="https://www.welt.de/vermischtes/video6af317a2d7afd5ab8c0522e8/6af308e6d7afd5ab8c051e1c-zwei-tote-in-wohnung-bei-reutlingen-gefunden-polizei-prueft-verbindung-zu-fall-in-hamburg.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Zwei Tote in Wohnung bei Reutlingen gefunden – Polizei prüft Verbindung zu Fall in Hamburg</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/badenwuerttemberg/schuesse-hamburg-verbindungen-reutlingen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Zwei Tote in Baden-Württemberg: Polizei prüft Verbindungen zu Schüssen in Hamburg</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/schuesse-in-der-hamburger-hafencity-zwei-menschen-verletzt-accg-201669087.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Hamburg: Zwei Verletzte durch Schüsse in der Hafencity – Tatverdächtiger tot aufgefunden</span></a></li><li><a href="https://www.spiegel.de/panorama/justiz/hamburg-grosseinsatz-an-der-elbphilharmonie-zwei-verletzte-a-35b60686-e12a-4b73-a71b-9c73e75ad21a#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Hamburg: Verdächtiger tot in Elbphilharmonie gefunden</span></a></li><li><a href="https://www.welt.de/regionales/hamburg/article6af2e76bd7afd5ab8c050039/hamurg-zwei-verletzte-nach-schuessen-in-hafencity-tatverdaechtiger-tot-in-elphi-hotel-gefunden.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Zwei Verletzte nach Schüssen in Hamburg – Tatverdächtiger tot in „Elphi“-Hotel gefunden</span></a></li><li><a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-11/schuesse-elbphilharmonie-hamburg-polizei-raeumung-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Schüsse nahe Elbphilharmonie: Tatverdächtiger nach Schüssen in Hamburg tot aufgefunden</span></a></li><li><a href="https://www.zdfheute.de/video/hamburg-polizeieinsatz-verletzte-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Hamburg: Zwei Verletzte nach Schüssen bei Elbphilharmonie</span></a></li><li><a href="https://www.welt.de/vermischtes/article6af308e6d7afd5ab8c051e1c/baden-wuerttemberg-zwei-tote-in-wohnung-bei-reutlingen-gefunden-polizei-prueft-verbindung-zur-elbphilharmonie.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Zwei Tote in Wohnung bei Reutlingen gefunden – Polizei prüft Verbindung zu Fall in Hamburg</span></a></li><li><a href="https://www.zdfheute.de/panorama/kriminalitaet/schiesserei-hamburg-elbphilharmonie-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Schüsse in Hamburger Hafencity - Tatverdächtiger ist tot</span></a></li><li><a href="https://www.tagesschau.de/video/video-1681332.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Polizeieinsatz an Elbphilharmonie: Schüsse vor Hamburger Wohnhaus</span></a></li><li><a href="https://www.welt.de/vermischtes/video6af2ffbc42c2bfde5b992872/zwei-verletzte-in-klinik-sek-einsatz-nach-schuessen-in-hamburg-elbphilharmonie-wird-geraeumt.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">SEK-Einsatz nach Schüssen in Hamburg – Elbphilharmonie wird geräumt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Abu Dhabi: Verhandlungen über ein Ende des Krieges</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/video/abu-dhabi-verhandlungen-ueber-ein-ende-des-krieges-201669565.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Abu Dhabi: Verhandlungen über ein Ende des Krieges</span></a></li><li><a href="https://www.deutschlandfunk.de/trilaterale-gespraeche-ueber-ende-des-ukraine-kriegs-sollen-morgen-fortgesetzt-werden-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Abu Dhabi - Trilaterale Gespräche über Ende des Ukraine-Kriegs sollen morgen fortgesetzt werden</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/ukraine-verhandlungen-abu-dhabi-104.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Was von den Ukraine-Gesprächen in Abu Dhabi zu erwarten ist</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/dreiergespraeche-usa-russland-ukraine-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Verhandlungen in Abu Dhabi über Ende des Ukraine-Krieges haben begonnen</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/ukraine-erwartungen-gespraeche-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Gespräche in Abu Dhabi: Gedämpfte Erwartungen der Ukraine</span></a></li><li><a href="https://taz.de/Trilaterales-Treffen-in-Abu-Dhabi/!6228640/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Trilaterales Treffen in Abu Dhabi: Europäer mit am Tisch? Von wegen!</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Supermärkte - Frankreich macht iranische Revolutionsgarden für Cyberangriffe auf Kühlsysteme verantwortlich</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/frankreich-macht-iranische-revolutionsgarden-fuer-cyberangriffe-auf-kuehlsysteme-verantwortlich-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Supermärkte - Frankreich macht iranische Revolutionsgarden für Cyberangriffe auf Kühlsysteme verantwortlich</span></a></li><li><a href="https://www.tagesschau.de/tagesschau_20_uhr/video-1681012.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Sabotage an Kühlanlagen: Paris sieht iranische Revolutionsgarde hinter Angriffen</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/kuehlanlagen-cyberangriffe-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Frankreich macht Iran für Cyberangriffe auf Supermarkt-Kühltruhen verantwortlich</span></a></li><li><a href="https://taz.de/Frankreich-sieht-Iran-hinter-Angriff-auf-Kuehlanlagen/!6228832/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Angriffe auf Kühlanlagen: Frankreich macht Revolutionsgarden als Urheber aus</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/frankreich-kuehlsysteme-attacken-iran-revolutionsgarden-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Paris: Iran für Kühlanlagen-Cyberangriffe verantwortlich</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Papst Leo XIV. besucht Argentinien: Triumphzug des Papstes durch Argentiniens Hauptstadt</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Papst-Leo-XIV-besucht-Argentinien/!6228854/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Papst Leo XIV. besucht Argentinien: Triumphzug des Papstes durch Argentiniens Hauptstadt</span></a></li><li><a href="https://www.sueddeutsche.de/politik/papst-leo-xiv-argentinien-javier-milei-buenos-aires-2026-li.3577559" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Leo XIV. auf Reisen: Die Argentinier feiern den Papstbesuch wie eine Erlösung</span></a></li><li><a href="https://www.tagesschau.de/multimedia/bilder/blickpunkte-10558.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Statue von Papst Leo XIV., Kimchi, Chinesische Teekette</span></a></li><li><a href="https://www.zdfheute.de/panorama/papst-leo-messe-rekord-besucher-buenos-aires-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Zweieinhalb Millionen Menschen bei Papstmesse in Buenos Aires</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/papst-leo-argentinien-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Buenos Aires: Papst Leo XIV. feiert Messe vor zwei Millionen Menschen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Rekord - Sportvereine haben über 30 Millionen Mitglieder</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/sportvereine-haben-ueber-30-millionen-mitglieder-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Rekord - Sportvereine haben über 30 Millionen Mitglieder</span></a></li><li><a href="https://www.zdfheute.de/panorama/sport-vereine-deutschland-mitglieder-rekord-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Deutsche Sportvereine haben so viele Mitglieder wie nie</span></a></li><li><a href="https://www.tagesschau.de/inland/gesellschaft/sportvereine-mitglieder-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Sportvereine in Deutschland haben so viele Mitglieder wie noch nie</span></a></li><li><a href="https://www.faz.net/aktuell/sport/mehr-sport/vereinssport-in-deutschland-diese-sportarten-wachsen-besonders-accg-201668298.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Rekordmarke: 30 Millionen Deutsche machen Sport im Verein</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Leute: Eignet sich Ilse Aigner als Tattoo?</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/panorama/ilse-aigner-tattoo-joerg-thadeusz-meghan-erling-haaland-promis-li.3578076" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Leute: Eignet sich Ilse Aigner als Tattoo?</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/merz-aigner-bundespraesidentin-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Merz verteidigt Ablauf der Nominierung von Aigner</span></a></li><li><a href="https://www.tagesschau.de/tagesthemen/video-1681076.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Nach langem Zögern: Merz nominiert Aigner als Bundespräsidenten-Kandidatin</span></a></li><li><a href="https://www.zdfheute.de/video/politik-aigner-merz-soeder-streit-nominierung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Ilse Aigner nominiert: Worüber Merz und Söder jetzt streiten</span></a></li><li><a href="https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5246569" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">20 Jahre Synagoge &quot;Ohel Jakob&quot; - Rede Ilse Aigner</span></a></li><li><a href="https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5246503" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Klüssendorf: SPD wird Ilse Aigner unterstützen</span></a></li><li><a href="https://www.phoenix.de/steinmeiers-nachfolge-a-5246374.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Ilse Aigner will &quot;Nähe zu den Menschen...mit Herz und Verstand&quot;</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Polizei - Razzia gegen Schusswaffenkriminalität in Berlin - auch &quot;Hells Angels&quot;-Vereinsheim durchsucht</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/razzia-gegen-schusswaffenkriminalitaet-in-berlin-auch-hells-angels-vereinsheim-durchsucht-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Polizei - Razzia gegen Schusswaffenkriminalität in Berlin - auch &quot;Hells Angels&quot;-Vereinsheim durchsucht</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/hansa-rostock-wohnungen-durchsucht-nach-mutmasslichem-hakenkreuz-foto-accg-201668499.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Nach Hakenkreuz-Foto: Wohnungen von Hansa-Hooligans durchsucht</span></a></li><li><a href="https://www.zdfheute.de/panorama/berlin-grossrazzia-hells-angels-polizei-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Polizei durchsucht Wohnungen - auch &quot;Hells Angels&quot; im Visier</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/berlin-polizei-durchsucht-hells-angels-vereinsheim-bei-grosseinsatz-201667611.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Sondereinheit: Polizei durchsucht Hells-Angels-Vereinsheim und weitere Objekte in Berlin</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Regulierung - Nach Hackerangriff durch OpenAI-Agenten: Australien will Regeln für Tech-Konzerne verschärfen</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/nach-hackerangriff-durch-openai-agenten-australien-will-regeln-fuer-tech-konzerne-verschaerfen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Regulierung - Nach Hackerangriff durch OpenAI-Agenten: Australien will Regeln für Tech-Konzerne verschärfen</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/australien-ki-regulieren-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Australien will nach Hackerangriff strengere Regeln für KI-Firmen</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/anthony-albanese-kuendigt-neue-ki-aufsichtsbehoerde-fuer-australien-an-accg-201668423.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Neue Aufsichtsbehörde: Australien kündigt strengere Regeln für KI-Firmen an</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Umstrittener Jubel - BVB kündigt Gespräch an - Nmecha verteidigt Torjubel</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bvb-kuendigt-gespraech-an-nmecha-verteidigt-torjubel-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Umstrittener Jubel - BVB kündigt Gespräch an - Nmecha verteidigt Torjubel</span></a></li><li><a href="https://www.sportschau.de/regional/wdr/wdr-bvb-fordert-nmecha-zu-torjubel-verzicht-auf-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">BVB fordert Nmecha zu Torjubel-Verzicht auf</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-nations-league/nmecha-torjubel-klopp-gespraech-dfb-team-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Klopp spricht mit Nmecha über umstrittenen Torjubel</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Mögliche Spionageaffäre - Trump: FBI ermittelt im Zusammenhang mit Nvidia-Chef Huang</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/trump-fbi-ermittelt-im-zusammenhang-mit-nvidia-chef-huang-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Mögliche Spionageaffäre - Trump: FBI ermittelt im Zusammenhang mit Nvidia-Chef Huang</span></a></li><li><a href="https://www.faz.net/video/fbi-ermittelt-wegen-spionage-verdacht-bei-nvidia-chef-huang-201669264.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Anleger klagen: FBI ermittelt wegen Spionage-Verdacht bei Nvidia-Chef Huang</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/faq-nvidia-spionage-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Affäre von Nvidia-Chef Huang: Darum geht es beim Spionage-Verdacht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Bulgarien - Elf Tote und 48 Verletzte bei Massenkarambolage auf Autobahn</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/elf-tote-und-48-verletzte-bei-massenkarambolage-auf-autobahn-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bulgarien - Elf Tote und 48 Verletzte bei Massenkarambolage auf Autobahn</span></a></li><li><a href="https://www.welt.de/vermischtes/article6af2f782f0b67a4b24663e52/bulgarien-dichter-nebel-verursacht-massenkarambolage-elf-tote.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Dichter Nebel verursacht Massenkarambolage – elf Tote in Bulgarien</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/elf-tote-bei-massenkarambolage-auf-autobahn-in-bulgarien-accg-201669209.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Dutzende Verletzte: Elf Tote bei Massenkarambolage auf Autobahn in Bulgarien</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Krieg in der Ukraine: Ukraine: Gespräche mit Russland und USA werden am Mittwoch fortgesetzt</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-verhandlungen-kiew-moskau-usa-abu-dhabi-li.3571967" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Krieg in der Ukraine: Ukraine: Gespräche mit Russland und USA werden am Mittwoch fortgesetzt</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.zeit.de/politik/ausland/ukraine-krieg-news-liveblog" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Krieg gegen die Ukraine: Russland lehnt Waffenruhe in der Ukraine vorerst ab</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Nach Zusammenbruch: Vincent Kompany ist zurück auf dem Bayern-Gelände</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/sport/fussball/bundesliga/fc-bayern-muenchen-vincent-kompany-ist-zurueck-auf-dem-gelaende-201669729.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Nach Zusammenbruch: Vincent Kompany ist zurück auf dem Bayern-Gelände</span></a></li><li><a href="https://www.welt.de/sport/fussball/bundesliga/fc-bayern-muenchen/article6af2f9f742c2bfde5b992775/fc-bayern-vincent-kompany-zurueck-auf-bayern-gelaende-er-traegt-eine-armschlinge.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Kompany zurück auf dem Bayern-Gelände – mit einer Armschlinge</span></a></li><li><a href="https://www.spiegel.de/sport/fussball/vincent-kompany-fc-bayern-trainer-nach-hirnhautreizung-offenbar-zurueck-a-e9a326ad-212b-4414-b4c7-2cc5aa40c471#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Vincent Kompany: FC Bayern-Trainer nach Hirnhautreizung offenbar zurück</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Patricia Schlesinger: Ex-RBB-Intendantin Schlesinger lässt Vorwürfe vor Gericht zurückweisen</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/feuilleton/2026-11/patricia-schlesinger-rbb-prozess-generalstaatsanwaltschaft-berlin-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Patricia Schlesinger: Ex-RBB-Intendantin Schlesinger lässt Vorwürfe vor Gericht zurückweisen</span></a></li><li><a href="https://www.tagesschau.de/video/video-1681316.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Prozessauftakt wegen Untreue gegen frühere RBB-Intendantin Schlesinger</span></a></li><li><a href="https://www.spiegel.de/wirtschaft/patricia-schlesinger-ard-skandal-um-fruehere-rbb-intendantin-vor-gericht-a-dcab2715-07d7-4f56-8125-ea704b86ec98#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Patricia Schlesinger: ARD-Skandal um frühere RBB-Intendantin vor Gericht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>USA unter Trump: Hegseth nennt Amtsenthebungsverfahren „Angriff auf Trump“</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/liveticker-usa-unter-trump-hegseth-nennt-amtsenthebungsverfahren-angriff-auf-trump-faz-19444916.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">USA unter Trump: Hegseth nennt Amtsenthebungsverfahren „Angriff auf Trump“</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/amtsenthebung-verfahren-pete-hegseth-usa-trump-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Wird Hegseth zum Bauernopfer für Trump?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Bundespräsidentenwahl: Aigner legt sich mit der AfD an</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/news/2026-11/10/aigner-legt-sich-mit-der-afd-an" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Bundespräsidentenwahl: Aigner legt sich mit der AfD an</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/aigner-vorstellung-bundestagsfraktionen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Aigner stellt sich Fraktionen vor - nicht bei AfD und Linken</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>USA - Kaliforniens Wähler lehnen Milliardärssteuer ab</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/kaliforniens-waehler-lehnen-milliardaerssteuer-ab-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">USA - Kaliforniens Wähler lehnen Milliardärssteuer ab</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/kalifornien-milliardaerssteuer-abgelehnt-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Kalifornier lehnen Milliardärssteuer ab</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Neue Zolldaten - Chinas Handelsüberschuss knackt erneut die Billionen-Schwelle</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/chinas-handelsueberschuss-knackt-erneut-die-billionen-schwelle-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Neue Zolldaten - Chinas Handelsüberschuss knackt erneut die Billionen-Schwelle</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/weltwirtschaft/china-export-handel-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Chinas Handelsüberschuss überschreitet erneut die Billionenmarke</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Kandidatur als Bundespräsidentin - Aigner stellt sich bei Bundestagsfraktionen vor</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/aigner-stellt-sich-bei-bundestagsfraktionen-vor-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Kandidatur als Bundespräsidentin - Aigner stellt sich bei Bundestagsfraktionen vor</span></a></li><li><a href="https://taz.de/Aigner-als-Bundespraesidentin/!6228591/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Aigner als Bundespräsidentin: Plan A wie Aigner, was sonst?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Bundesagentur für Arbeit - Nahles: Rund 800.000 Jobs in Deutschland könnten aufgrund von KI wegfallen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/nahles-rund-800-000-jobs-in-deutschland-koennten-aufgrund-von-ki-wegfallen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundesagentur für Arbeit - Nahles: Rund 800.000 Jobs in Deutschland könnten aufgrund von KI wegfallen</span></a></li><li><a href="https://www.spiegel.de/wirtschaft/unternehmen/ki-andrea-nahles-rechnet-mit-verlust-von-800-000-jobs-a-64556960-bdcf-4d85-becc-93ef14bb937e#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">KI: Andrea Nahles rechnet mit Verlust von 800.000 Jobs</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>&quot;Global Carbon Project&quot; - CO2-Ausstoß aus fossilen Brennstoffen sinkt leicht - insgesamt steigen klimaschädliche Emissionen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/co2-ausstoss-aus-fossilen-brennstoffen-sinkt-leicht-insgesamt-steigen-klimaschaedliche-emissionen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Global Carbon Project&quot; - CO2-Ausstoß aus fossilen Brennstoffen sinkt leicht - insgesamt steigen klimaschädliche Emissionen</span></a></li><li><a href="https://www.faz.net/aktuell/wissen/erde-klima/global-carbon-project-mehr-co-trotz-sinkendem-oelverbrauch-accg-201669349.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Global Carbon Project: Die globalen CO₂-Emissionen steigen trotz Rückgang beim Öl</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">23</span>
+          <h3>USA - Republikanischer Abgeordneter stellt Antrag auf Amtsenthebung von Verteidigungsminister Hegseth</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/republikanischer-abgeordneter-stellt-antrag-auf-amtsenthebung-von-verteidigungsminister-hegseth-120.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">USA - Republikanischer Abgeordneter stellt Antrag auf Amtsenthebung von Verteidigungsminister Hegseth</span></a></li><li><a href="https://taz.de/Antrag-auf-Amtsenthebung/!6228836/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Antrag auf Amtsenthebung: Teile der Republikaner wollen Hegseth loswerden</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">24</span>
+          <h3>Slowakischer Regierungschef wirft Merz „Erpressung“ vor</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/politik/ausland/article6af315ced7afd5ab8c0522b1/streit-um-ukraine-finanzierung-slowakischer-regierungschef-wirft-merz-erpressung-vor.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Slowakischer Regierungschef wirft Merz „Erpressung“ vor</span></a></li><li><a href="https://taz.de/-Nachrichten-im-Ukraine-Krieg-/!6228837/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">+++ Nachrichten im Ukraine-Krieg +++: Slowakischer Regierungschef wirft Merz „Erpressung“ vor</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">25</span>
+          <h3>FIFA-Machtkampf: Fordert Wenger Präsident Infantino heraus?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sportschau.de/fussball/fordert-wenger-praesident-infantino-heraus,fifa-infantino-wenger-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">FIFA-Machtkampf: Fordert Wenger Präsident Infantino heraus?</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-fifa-infantino-wenger-erwaegt-kandidatur-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">FIFA-Machtkampf mit Infantino: Bringt Wenger die Wende?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">26</span>
+          <h3>Vier junge Menschen sterben bei Autounfall in NRW</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/vermischtes/video6af2f2c442c2bfde5b992535/16-bis-19-jahre-alt-vier-junge-menschen-sterben-bei-autounfall-in-nrw.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Vier junge Menschen sterben bei Autounfall in NRW</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/kreis-soest-vier-tote-nach-autounfall-accg-201668086.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Kreis Soest: Vier junge Menschen sterben bei Autounfall</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">27</span>
+          <h3>Republikaner Massie will Hegseth des Amtes entheben</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/ausland/amerika/usa-amtsenthebungsverfahren-hegseth-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Republikaner Massie will Hegseth des Amtes entheben</span></a></li><li><a href="https://www.spiegel.de/ausland/pete-hegseth-republikaner-thomas-massie-beantragt-impeachment-einleitung-a-5552197f-623a-4f28-a3e4-df481021d55d#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Pete Hegseth: Republikaner Thomas Massie beantragt Impeachment-Einleitung</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">28</span>
+          <h3>Weltklimakonferenz in Antalya: Erster Tag, erster Konflikt</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/ausland/cop-136.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Weltklimakonferenz in Antalya: Erster Tag, erster Konflikt</span></a></li><li><a href="https://taz.de/Weltklimakonferenz-in-Antalya/!6228590/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Weltklimakonferenz in Antalya: Staaten streiten schon jetzt übers Geld</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">29</span>
+          <h3>Vergewaltigung und sexualisierte Gewalt: Jahrelange Haft für Russell Brand</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Vergewaltigung-und-sexualisierte-Gewalt/!6228589/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Vergewaltigung und sexualisierte Gewalt: Jahrelange Haft für Russell Brand</span></a></li><li><a href="https://www.tagesschau.de/ausland/russell-brand-strafmass-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Russell Brand zu mehr als zehn Jahren Haft verurteilt</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/ausland/amerika/usa-masern-102.html" target="_blank" rel="noopener">Masernkrise in den USA: Mehr Verunsicherung, mehr Infektionen</a></li><li><a href="https://www.tagesschau.de/multimedia/livestreams/livestream-ts24-104.html" target="_blank" rel="noopener">Livestream: Die Nachrichten auf tagesschau24</a></li><li><a href="https://www.tagesschau.de/video/video-1681332.html" target="_blank" rel="noopener">Polizeieinsatz an Elbphilharmonie: Schüsse vor Hamburger Wohnhaus</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/panorama/kriminalitaet/lebenslange-haft-prozess-mord-fabian-100.html" target="_blank" rel="noopener">Mord an Fabian: Angeklagte zu lebenslanger Haft verurteilt</a></li><li><a href="https://www.zdfheute.de/panorama/kriminalitaet/fabian-gina-h-mordfall-guestrow-100.html" target="_blank" rel="noopener">Gina H. streitet Tat ab, Indizien sprechen gegen sie</a></li><li><a href="https://www.zdfheute.de/politik/deutschland/eishockey-boykott-russland-wm-deutschland-politik-100.html" target="_blank" rel="noopener">Russland soll wieder mitspielen: Eishockey-WM auf der Kippe</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/trilaterale-gespraeche-ueber-ende-des-ukraine-kriegs-sollen-morgen-fortgesetzt-werden-102.html" target="_blank" rel="noopener">Abu Dhabi - Trilaterale Gespräche über Ende des Ukraine-Kriegs sollen morgen fortgesetzt werden</a></li><li><a href="https://www.deutschlandfunk.de/aussenminister-der-g7-staaten-beraten-ueber-unterstuetzung-der-ukraine-102.html" target="_blank" rel="noopener">Paris - Außenminister der G7-Staaten beraten über Unterstützung der Ukraine</a></li><li><a href="https://www.deutschlandfunk.de/linken-fraktionschefin-von-angern-tritt-bei-ministerpraesidentenwahl-gegen-afd-politiker-siegmund-an-102.html" target="_blank" rel="noopener">Sachsen-Anhalt - Linken-Fraktionschefin von Angern tritt bei Ministerpräsidentenwahl gegen AfD-Politiker Siegmund an</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/wirtschaft/leihmutterschaft-diese-agenturchefin-traegt-selbst-kinder-fuer-andere-aus-a-ac098ee7-cf15-4e26-936c-9c56997ffa0d#ref=rss" target="_blank" rel="noopener">Leihmutterschaft: Diese Agenturchefin trägt selbst Kinder für andere aus</a></li><li><a href="https://www.spiegel.de/panorama/justiz/fall-fabian-gina-h-zu-lebenslanger-haft-verurteilt-a-04259c80-a4fe-4a3d-8a0d-5df5831fd894#ref=rss" target="_blank" rel="noopener">Fall Fabian: Gina H. zu lebenslanger Haft verurteilt</a></li><li><a href="https://www.spiegel.de/wissenschaft/technik/dark-eagle-hyperschallwaffe-oder-usa-ist-immer-noch-nicht-voll-einsatzbereit-a-241e9bcd-c0cc-4da3-8b62-ef07f7628cfb#ref=rss" target="_blank" rel="noopener">Dark Eagle: Hyperschallwaffe oder USA ist immer noch nicht voll einsatzbereit</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-11/10/streit-im-lebensmittelmarkt-endet-mit-messerstichen" target="_blank" rel="noopener">Kriminalität: Streit im Lebensmittelmarkt endet mit Messerstichen</a></li><li><a href="https://www.zeit.de/news/2026-11/10/polizei-macht-weitere-angaben-nach-leichenfund-in-eningen" target="_blank" rel="noopener">Kriminalität: Polizei macht weitere Angaben nach Leichenfund in Eningen</a></li><li><a href="https://www.zeit.de/news/2026-11/10/a8-nach-unfall-komplett-gesperrt" target="_blank" rel="noopener">Vollsperrung bei Irschenberg: Lkw brennt - Autobahn 8 stundenlang gesperrt</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/wirtschaft/sz-wirtschaftsgipfel-2026-liveblog-li.3575578" target="_blank" rel="noopener">SZ Wirtschaftsgipfel: Papperger äußert sich zum Kurssturz der Rheinmetall-Aktie</a></li><li><a href="https://www.sueddeutsche.de/politik/bundeshaushalt-kosten-ruestung-e-autos-zuckersteuer-li.3577961" target="_blank" rel="noopener">Bundeshaushalt 2027: Milliardenwünsche in letzter Minute</a></li><li><a href="https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-verhandlungen-kiew-moskau-usa-abu-dhabi-li.3571967" target="_blank" rel="noopener">Krieg in der Ukraine: Ukraine: Gespräche mit Russland und USA werden am Mittwoch fortgesetzt</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukrainische-hacker-erbeuten-russische-statistik-offiziell-angeblich-450-000-russische-kriegstote-accg-201668474.html" target="_blank" rel="noopener">Statistikamt gehackt: 450.000 Russen sollen im Ukrainekrieg umgekommen sein</a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/russland-weint-krokodilstraenen-ueber-westliches-militaermanoever-201666394.html" target="_blank" rel="noopener">Koalition der Willigen: Russische Krokodilstränen</a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/liveticker-usa-unter-trump-hegseth-nennt-amtsenthebungsverfahren-angriff-auf-trump-faz-19444916.html" target="_blank" rel="noopener">USA unter Trump: Hegseth nennt Amtsenthebungsverfahren „Angriff auf Trump“</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/wirtschaft/article6af3083842c2bfde5b99298b/steuererklaerung-klingbeil-will-laut-bericht-steuerklassen-iii-und-v-streichen.html" target="_blank" rel="noopener">Neue Pläne für Ehepaare – Klingbeil will laut Bericht Steuerklassen III und V streichen</a></li><li><a href="https://www.welt.de/wirtschaft/video6af3082042c2bfde5b992985/boerse-am-mittag-die-demokraten-wissen-auch-an-ki-geht-kein-weg-vorbei.html" target="_blank" rel="noopener">„Die Demokraten wissen auch, an KI geht kein Weg vorbei“</a></li><li><a href="https://www.welt.de/politik/deutschland/article6af30cd83dec13f748a58d14/auftakt-im-rbb-prozess-verteidiger-sieht-patricia-schlesinger-als-suendenbock.html" target="_blank" rel="noopener">Verteidiger sieht Ex-RBB-Intendantin Schlesinger als Sündenbock</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Klimakatastrophe-im-Pazifik/!6228858/" target="_blank" rel="noopener">Klimakatastrophe im Pazifik: Noch helfen Mangos und Melonen gegen den Durst</a></li><li><a href="https://taz.de/Jugendproteste-in-Europa-Der-Denkfehler-der-Maenner-die-sich-ueber-Linke-empoeren/!6228573/" target="_blank" rel="noopener">Jugendproteste in Europa: Eine Wut, die so viel will</a></li><li><a href="https://taz.de/Volkabstimmung-ueber-Reichensteuer-in-Kalifornien-scheitert/!6228844/" target="_blank" rel="noopener">US-Bundesstaat Kalifornien: Volksabstimmung über Reichensteuer scheitert</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/sz-wirtschaftsgipfel-2026-liveblog-li.3575578" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">SZ Wirtschaftsgipfel: Papperger äußert sich zum Kurssturz der Rheinmetall-Aktie</span></a></li><li><a href="https://www.zeit.de/news/2026-11/10/streit-im-lebensmittelmarkt-endet-mit-messerstichen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Kriminalität: Streit im Lebensmittelmarkt endet mit Messerstichen</span></a></li><li><a href="https://www.zeit.de/news/2026-11/10/polizei-macht-weitere-angaben-nach-leichenfund-in-eningen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Kriminalität: Polizei macht weitere Angaben nach Leichenfund in Eningen</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/henkel-bleibt-in-kauflaune-201669566.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Konsumgüterkonzern: Henkel bleibt in Kauflaune</span></a></li><li><a href="https://www.zeit.de/news/2026-11/10/a8-nach-unfall-komplett-gesperrt" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Vollsperrung bei Irschenberg: Lkw brennt - Autobahn 8 stundenlang gesperrt</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/take-two-setzt-alle-hoffnung-auf-gta-6-201668629.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">„Grand Theft Auto“: Take-Two setzt alle Hoffnung auf „GTA 6“</span></a></li><li><a href="https://www.zeit.de/news/2026-11/10/koalitionsverhandlungen-in-mv-abgeschlossen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Rot-rot-grünes Bündnis: Koalitionsverhandlungen in MV abgeschlossen</span></a></li><li><a href="https://www.zeit.de/news/2026-11/10/anthropic-peilt-boersenbewertung-von-einer-billion-dollar-an" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Künstliche Intelligenz: KI-Firma Anthropic plant Börsengang mit Billionen-Bewertung</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/musik-und-buehne/theater/nicholas-ofczarek-bringt-hotel-savoy-ans-burgtheater-201664955.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Theater in Wien: In den Fallstricken der Klischees</span></a></li><li><a href="https://www.zeit.de/news/2026-11/10/mario-goetze-zurueck-im-eintracht-training" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Fußball-Bundesliga: Mario Götze zurück im Eintracht-Training</span></a></li><li><a href="https://www.zeit.de/news/2026-11/10/vogelpark-marlow-vermisst-weisskopfseeadler-arizona" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Tierpark: Vogelpark Marlow vermisst Weißkopfseeadler «Arizona»</span></a></li><li><a href="https://www.sueddeutsche.de/politik/bundeshaushalt-kosten-ruestung-e-autos-zuckersteuer-li.3577961" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Bundeshaushalt 2027: Milliardenwünsche in letzter Minute</span></a></li><li><a href="https://www.welt.de/wirtschaft/article6af3083842c2bfde5b99298b/steuererklaerung-klingbeil-will-laut-bericht-steuerklassen-iii-und-v-streichen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Neue Pläne für Ehepaare – Klingbeil will laut Bericht Steuerklassen III und V streichen</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-eva-von-angern-tritt-in-sachsen-anhalt-gegen-ulrich-siegmund-auf-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: Ulrich Siegmund bekommt Gegenkandidatin in Sachsen-Anhalt</span></a></li><li><a href="https://www.deutschlandfunk.de/aussenminister-der-g7-staaten-beraten-ueber-unterstuetzung-der-ukraine-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Paris - Außenminister der G7-Staaten beraten über Unterstützung der Ukraine</span></a></li><li><a href="https://www.deutschlandfunk.de/linken-fraktionschefin-von-angern-tritt-bei-ministerpraesidentenwahl-gegen-afd-politiker-siegmund-an-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Sachsen-Anhalt - Linken-Fraktionschefin von Angern tritt bei Ministerpräsidentenwahl gegen AfD-Politiker Siegmund an</span></a></li><li><a href="https://www.deutschlandfunk.de/verbaende-und-gewerkschaften-warnen-vor-kuerzungen-im-sozialen-bereich-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Haushalt - Verbände und Gewerkschaften warnen vor Kürzungen im sozialen Bereich</span></a></li><li><a href="https://www.deutschlandfunk.de/staatsakt-fuer-aiwanger-in-muenchen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bayern - Staatsakt für Aiwanger in München</span></a></li><li><a href="https://www.deutschlandfunk.de/nach-ueberschwemmungen-welthungerhilfe-fordert-mehr-geld-fuer-gaza-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Humanitäre Hilfe - Nach Überschwemmungen: Welthungerhilfe fordert mehr Geld für Gaza</span></a></li><li><a href="https://www.deutschlandfunk.de/vdma-fassungslos-ueber-bundesregierung-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Maschinenbau-Gipfel in Berlin - VDMA &quot;fassungslos&quot; über Bundesregierung</span></a></li><li><a href="https://www.deutschlandfunk.de/milliardengeschaeft-rechenzentren-gewinnsprung-dank-des-ki-booms-bei-chiphersteller-infineon-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Dax-Konzern - Milliardengeschäft Rechenzentren: Gewinnsprung dank des KI-Booms bei Chiphersteller Infineon</span></a></li><li><a href="https://www.deutschlandfunk.de/bundespraesident-steinmeier-besorgt-ueber-fortschreitende-saekularisierung-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Synode der Evangelischen Kirche - Bundespräsident Steinmeier besorgt über fortschreitende Säkularisierung</span></a></li><li><a href="https://www.deutschlandfunk.de/litauen-verschaerft-kontrollen-von-russischem-und-belarussischem-getreide-monatelange-verzoegerungen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Litauen verschärft Kontrollen von russischem und belarussischem Getreide - monatelange Verzögerungen erwartet</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 10.11.2026 um 14:36 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
