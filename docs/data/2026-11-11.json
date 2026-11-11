@@ -1,0 +1,4526 @@
+{
+  "stand": "2026-11-11T13:49:20.758573+01:00",
+  "stunden": 26,
+  "fehler": {},
+  "themen": [
+    {
+      "titel": "Dunkelfeldstudie - Sexuelle Belästigung in der Bundeswehr verbreiteter als bislang bekannt - Pistorius: \"Null Toleranz\"",
+      "medien": [
+        "Deutschlandfunk",
+        "FAZ",
+        "Spiegel",
+        "Welt",
+        "ZDFheute",
+        "tagesschau",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Dunkelfeldstudie - Sexuelle Belästigung in der Bundeswehr verbreiteter als bislang bekannt - Pistorius: \"Null Toleranz\"",
+          "link": "https://www.deutschlandfunk.de/sexuelle-belaestigung-in-der-bundeswehr-verbreiteter-als-bislang-bekannt-pistorius-null-toleranz-100.html"
+        },
+        {
+          "quelle": "taz",
+          "titel": "Sexualisierte Gewalt in der Bundeswehr: Drei- bis sechsmal mehr Fälle als gemeldet",
+          "link": "https://taz.de/Sexualisierte-Gewalt-in-der-Bundeswehr/!6229222/"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Pistorius pocht auf \"null Toleranz\" gegenüber sexualisiertem Fehlverhalten in Bundeswehr",
+          "link": "https://www.tagesschau.de/inland/innenpolitik/bundeswehr-dunkelfeldstudie-102.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "„Es gibt Null Toleranz“: Studie zeigt Ausmaß sexueller Belästigung in der Bundeswehr",
+          "link": "https://www.faz.net/video/studie-zeigt-ausmass-sexueller-belaestigung-in-der-bundeswehr-201672800.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Dunkelfeldstudie bei der Bundeswehr - Viele Fälle von sexualisiertem Fehlverhalten",
+          "link": "https://www.tagesschau.de/investigativ/ndr-wdr/bundeswehr-sexuelle-belaestigung-100.html"
+        },
+        {
+          "quelle": "Welt",
+          "titel": "Studie zeigt Ausmaß sexueller Belästigung in der Bundeswehr – Pistorius kündigt „null Toleranz“ an",
+          "link": "https://www.welt.de/politik/deutschland/video6af43557c45061d752ba5ecf/unerfreuliche-wahrheiten-studie-zeigt-ausmass-sexueller-belaestigung-in-der-bundeswehr-pistorius-kuendigt-null-toleranz-an.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Pistorius: \"Null Toleranz bei sexuellem Fehlverhalten in der Bundeswehr\"",
+          "link": "https://www.phoenix.de/sendungen/ereignisse/phoenix-vor-ort/ua-boris-pistorius-bundes-a-5240705.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Bundeswehr-Studie offenbart Ausmaß sexueller Belästigung",
+          "link": "https://www.zdfheute.de/politik/deutschland/bundeswehr-dunkelfeldstudie-sexuelle-belaestigung-boris-pistorius-100.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Deutschland Liveblog: Viel mehr sexuelle Belästigung in Bundeswehr als bisher bekannt",
+          "link": "https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-sexuelle-belaestigung-bei-bundeswehr-viel-haeufiger-als-gemeldet-faz-110093143.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Sexualisierte Gewalt bei der Bundeswehr: Pistorius stellt Studie vor",
+          "link": "https://www.tagesschau.de/video/video-1681838.html"
+        },
+        {
+          "quelle": "Spiegel",
+          "titel": "Bundeswehr - sexuelle Belästigung: Dunkelfeldstudie liefert erschütternde Zahlen",
+          "link": "https://www.spiegel.de/politik/deutschland/bundeswehr-sexuelle-belaestigung-dunkelfeldstudie-liefert-erschuetternde-zahlen-a-96511e9a-1184-4cfa-8485-6fc6ceb1a5da#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "USA - Amtsenthebungsverfahren gegen Verteidigungsminister Hegseth scheitert im Repräsentantenhaus",
+      "medien": [
+        "Deutschlandfunk",
+        "FAZ",
+        "ZDFheute",
+        "tagesschau",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "USA - Amtsenthebungsverfahren gegen Verteidigungsminister Hegseth scheitert im Repräsentantenhaus",
+          "link": "https://www.deutschlandfunk.de/amtsenthebungsverfahren-gegen-verteidigungsminister-hegseth-scheitert-im-repraesentantenhaus-100.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Hegseth wies Vorwürfe zurück: US-Repräsentantenhaus stoppt Amtsenthebungsverfahren gegen Verteidigungsminister Hegseth",
+          "link": "https://www.faz.net/video/us-repraesentantenhaus-stoppt-amtsenthebungsverfahren-gegen-verteidigungsminister-hegseth-201672694.html"
+        },
+        {
+          "quelle": "taz",
+          "titel": "Antrag scheitert an Repubilkanern: Amtsenthebung Hegseths im US-Repräsentantenhaus gestoppt",
+          "link": "https://taz.de/Amtsenthebung-Hegseths-im-US-Repraesentantenhaus-gestoppt/!6229121/"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Amtsenthebung von Hegseth gestoppt - die Vorwürfe bleiben",
+          "link": "https://www.zdfheute.de/politik/ausland/hegseth-usa-verteidigungsminister-amtsenthebung-stopp-100.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "US-Repräsentantenhaus lehnt Amtsenthebungsverfahren gegen Hegseth ab",
+          "link": "https://www.tagesschau.de/ausland/amerika/hegseth-amtsenthebungsverfahren-gestoppt-100.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Hegseth: Antrag auf Amtsenthebung ist eine \"Farce\"",
+          "link": "https://www.zdfheute.de/video/hegseth-amt-us-verteidigungsminister-video-100.html"
+        },
+        {
+          "quelle": "taz",
+          "titel": "Amtsenthebungsverfahren gegen Hegseth: Klare öffentliche Meinung",
+          "link": "https://taz.de/Amtsenthebungsverfahren-gegen-Hegseth/!6228916/"
+        }
+      ]
+    },
+    {
+      "titel": "Krieg gegen die Ukraine - Drohnenalarm im Baltikum und in Finnland",
+      "medien": [
+        "Deutschlandfunk",
+        "Süddeutsche",
+        "ZDFheute",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Krieg gegen die Ukraine - Drohnenalarm im Baltikum und in Finnland",
+          "link": "https://www.deutschlandfunk.de/drohnenalarm-im-baltikum-und-in-finnland-100.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Aktuelles zum Krieg in der Ukraine",
+          "link": "https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html"
+        },
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Krieg in der Ukraine: Ukraine-Gespräche beendet – Fortsetzung soll folgen",
+          "link": "https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-verhandlungen-kiew-moskau-usa-abu-dhabi-beendet-li.3571967"
+        },
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Krieg in der Ukraine: Putin zum EU-Gipfel? Das wäre mal eine Idee",
+          "link": "https://www.sueddeutsche.de/meinung/ukraine-russland-europa-usa-abu-dhabi-kommentar-li.3578666"
+        },
+        {
+          "quelle": "taz",
+          "titel": "1.722 Tage Krieg in der Ukraine: Stürmer und Verteidiger",
+          "link": "https://taz.de/1721-Tage-Krieg-in-der-Ukraine/!6228296/"
+        }
+      ]
+    },
+    {
+      "titel": "Arbeitsagentur - Arbeitslosigkeit bei Akademikern auf Höchststand",
+      "medien": [
+        "Deutschlandfunk",
+        "Welt",
+        "tagesschau",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Arbeitsagentur - Arbeitslosigkeit bei Akademikern auf Höchststand",
+          "link": "https://www.deutschlandfunk.de/arbeitslosigkeit-bei-akademikern-auf-hoechststand-104.html"
+        },
+        {
+          "quelle": "Welt",
+          "titel": "Zahl der arbeitslosen Akademiker erreicht Höchststand",
+          "link": "https://www.welt.de/wirtschaft/video6af45f03c45061d752ba64fe/studium-und-beruf-zahl-der-arbeitslosen-akademiker-erreicht-hoechststand.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Zahl der arbeitslosen Akademiker auf Höchststand",
+          "link": "https://www.tagesschau.de/wirtschaft/arbeitsmarkt/arbeitslosigkeit-akademiker-rekord-100.html"
+        },
+        {
+          "quelle": "taz",
+          "titel": "Arbeitsmarkt in Deutschland: Zahl der arbeitslosen Akademiker erreicht Höchststand",
+          "link": "https://taz.de/Zahl-der-arbeitslosen-Akademiker-erreicht-Hoechststand/!6229138/"
+        }
+      ]
+    },
+    {
+      "titel": "Wirtschaft - Siemens Energy macht 4,1 Milliarden Euro Gewinn",
+      "medien": [
+        "Deutschlandfunk",
+        "FAZ",
+        "Zeit Online",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Wirtschaft - Siemens Energy macht 4,1 Milliarden Euro Gewinn",
+          "link": "https://www.deutschlandfunk.de/siemens-energy-macht-4-1-milliarden-euro-gewinn-100.html"
+        },
+        {
+          "quelle": "Zeit Online",
+          "titel": "Siemens Energy: Gewinnsprung auf 4,1 Milliarden bei Siemens Energy",
+          "link": "https://www.zeit.de/wirtschaft/2026-11/siemens-energy-gewinn-gasturbinen-stromnetz-siemens-gamesa-gxe"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Hoher Energiebedarf: Siemens Energy strotzt vor Zuversicht",
+          "link": "https://www.faz.net/aktuell/wirtschaft/klima-nachhaltigkeit/nach-rekordjahr-strotzt-siemens-energy-vor-zuversicht-accg-201671693.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Boom bei Windkraft und Rechenzentren beschert Siemens Energy Rekordjahr",
+          "link": "https://www.tagesschau.de/wirtschaft/unternehmen/siemens-bilanz-energie-strom-ki-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ukraine-Verhandlungen: US-Unterhändler wollen Putin am Donnerstag in Moskau treffen",
+      "medien": [
+        "FAZ",
+        "Welt",
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Ukraine-Verhandlungen: US-Unterhändler wollen Putin am Donnerstag in Moskau treffen",
+          "link": "https://www.zeit.de/politik/ausland/2026-11/us-unterhaendler-wollen-putin-donnerstag-in-moskau-treffen"
+        },
+        {
+          "quelle": "Welt",
+          "titel": "US-Gesandte wollen am Donnerstag Putin in Moskau treffen – Gefangenenaustausch vereinbart",
+          "link": "https://www.welt.de/politik/ausland/video6af45abedb4e2fa8f6eb7507/gespraeche-in-abu-dhabi-us-gesandte-wollen-am-donnerstag-putin-in-moskau-treffen-gefangenenaustausch-vereinbart.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Liveblog Ukrainekrieg: US-Gesandte reisen zu Treffen mit Putin nach Moskau – auch Gespräch mit Selenskyj geplant",
+          "link": "https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-us-gesandte-reisen-zu-treffen-mit-putin-nach-moskau-auch-gespraech-mit-selenskyj-geplant-faz-110683325.html"
+        },
+        {
+          "quelle": "Welt",
+          "titel": "US-Gesandte wollen am Donnerstag Putin in Moskau treffen – Gefangenenaustausch vereinbart",
+          "link": "https://www.welt.de/politik/ausland/article6af45237c45061d752ba632c/ukraine-krieg-us-gesandte-wollen-am-donnerstag-putin-in-moskau-treffen-gefangenenaustausch-vereinbart.html"
+        }
+      ]
+    },
+    {
+      "titel": "Tatverdächtiger stirbt in Krankenhaus – Lisas Eltern nehmen Abschied von ihrer Tochter",
+      "medien": [
+        "FAZ",
+        "Welt",
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Tatverdächtiger stirbt in Krankenhaus – Lisas Eltern nehmen Abschied von ihrer Tochter",
+          "link": "https://www.welt.de/vermischtes/article6af42b77e22aeb948141f72e/lisa-t-13-aus-berlin-getoetet-tatverdaechtiger-stirbt-in-krankenhaus-lisas-eltern-nehmen-abschied-von-ihrer-tochter.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Tatverdächtiger im Fall Lisa gestorben",
+          "link": "https://www.zdfheute.de/panorama/kriminalitaet/schuelerin-berlin-lisa-verdaechtiger-tot-100.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Berlin: Getötete Lisa T. – Verdächtiger ist gestorben",
+          "link": "https://www.faz.net/aktuell/gesellschaft/kriminalitaet/tatverdaechtiger-im-fall-lisa-t-ist-gestorben-accg-201672261.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Getötete Lisa in Berlin: Tatverdächtiger war vorbestraft",
+          "link": "https://www.zdfheute.de/panorama/kriminalitaet/schuelerin-berlin-leiche-gefunden-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Schüler evakuiert – Bombendrohungen an Hunderten Schulen in Italien",
+      "medien": [
+        "Spiegel",
+        "Welt",
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Schüler evakuiert – Bombendrohungen an Hunderten Schulen in Italien",
+          "link": "https://www.welt.de/vermischtes/article6af4578ee22aeb948141fc32/italien-schueler-evakuiert-bombendrohungen-an-hunderten-schulen.html"
+        },
+        {
+          "quelle": "Zeit Online",
+          "titel": "Italien: Mindestens 300 italienische Schulen nach Bombenwarnung evakuiert",
+          "link": "https://www.zeit.de/politik/ausland/2026-11/italien-bombendrohungen-schulen-evakuierung-hybride-kriegsfuehrung-gxe"
+        },
+        {
+          "quelle": "Spiegel",
+          "titel": "Italien: Hunderte Schulen nach Bombendrohungen evakuiert – Giorgia Meloni gibt Entwarnung",
+          "link": "https://www.spiegel.de/panorama/italien-hunderte-schulen-nach-bombendrohungen-evakuiert-giorgia-meloni-gibt-entwarnung-a-433e0b93-6d27-4a12-ac2d-541340193af3#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Ilse Aigner: CSU-Politikerin soll sich auch der AfD als Bundespräsidentin stellen",
+      "medien": [
+        "Spiegel",
+        "Süddeutsche",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Ilse Aigner: CSU-Politikerin soll sich auch der AfD als Bundespräsidentin stellen",
+          "link": "https://www.spiegel.de/politik/deutschland/ilse-aigner-csu-politikerin-soll-sich-auch-der-afd-als-bundespraesidentin-stellen-a-ce13a8fe-bd6a-41b1-b264-aa148d264541#ref=rss"
+        },
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Technikerin, Ministerin, Landtagspräsidentin: Stationen aus dem Leben von Ilse Aigner",
+          "link": "https://www.sueddeutsche.de/bayern/ilse-aigner-bundespraesidentenwahl-biografie-csu-bundespraesidentin-li.3577580"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Ilse Aigner stellt sich den Bundestagsfraktionen vor",
+          "link": "https://www.tagesschau.de/inland/innenpolitik/aigner-fraktionen-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Schüsse in Hamburg: Der Schwiegertochter lauerte er in der Tiefgarage auf",
+      "medien": [
+        "FAZ",
+        "ZDFheute",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Schüsse in Hamburg: Der Schwiegertochter lauerte er in der Tiefgarage auf",
+          "link": "https://www.faz.net/aktuell/gesellschaft/kriminalitaet/erbstreit-als-motiv-unternehmer-erschiesst-familie-und-begeht-suizid-accg-201672606.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Schüsse in Hamburg: Verdächtiger tot, weitere Leichen in Süddeutschland",
+          "link": "https://www.tagesschau.de/inland/gesellschaft/hamburg-elbphilharmonie-eningen-schuesse-100.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Schüsse in Hamburg: Tatverdächtiger ist tot",
+          "link": "https://www.zdfheute.de/video/hamburg-hilpert-verletzte-polizei-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Abu Dhabi - Ende der Beratungen zwischen USA, Ukraine und Russland: Weitere Gespräche angekündigt",
+      "medien": [
+        "Deutschlandfunk",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Abu Dhabi - Ende der Beratungen zwischen USA, Ukraine und Russland: Weitere Gespräche angekündigt",
+          "link": "https://www.deutschlandfunk.de/ende-der-beratungen-zwischen-usa-ukraine-und-russland-weitere-gespraeche-angekuendigt-100.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Silke Diettrich, ARD Moskau, zum Tag zwei der Gespräche zwischen Russland und der Ukraine in Abu Dhabi",
+          "link": "https://www.tagesschau.de/video/video-1681872.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Erster Tag der Ukraine-Gespräche in Abu Dhabi beendet",
+          "link": "https://www.tagesschau.de/tagesthemen/video-1681722.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wiederaufbau Kunsteisbahn: Fünf Jahre Bauzeit: Eiskanal am Königssee glänzt wieder",
+      "medien": [
+        "FAZ",
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Wiederaufbau Kunsteisbahn: Fünf Jahre Bauzeit: Eiskanal am Königssee glänzt wieder",
+          "link": "https://www.zeit.de/news/2026-11/11/nach-zerstoerung-eiskanal-am-koenigssee-wiedereroeffnet"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Fünf Jahre Bauzeit: Bahn frei im Eiskanal am Königssee",
+          "link": "https://www.faz.net/aktuell/sport/wintersport/eiskanal-am-koenigssee-nach-fuenf-jahren-wieder-wettkampftauglich-accg-201672030.html"
+        }
+      ]
+    },
+    {
+      "titel": "Gesundheitsministerium - Ältere Beschäftigte mehr als 30 Tage im Jahr krank",
+      "medien": [
+        "Deutschlandfunk",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Gesundheitsministerium - Ältere Beschäftigte mehr als 30 Tage im Jahr krank",
+          "link": "https://www.deutschlandfunk.de/aeltere-beschaeftigte-mehr-als-30-tage-im-jahr-krank-100.html"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Medienbericht: Ältere Beschäftigte doppelt so häufig krankgeschrieben",
+          "link": "https://www.tagesschau.de/wirtschaft/arbeitsmarkt/krankenstand-aeltere-beschaeftigte-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Integrationsbericht - Bundesbeauftragte Pawlik: Integration nicht kaputt sparen",
+      "medien": [
+        "Deutschlandfunk",
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Integrationsbericht - Bundesbeauftragte Pawlik: Integration nicht kaputt sparen",
+          "link": "https://www.deutschlandfunk.de/bundesbeauftragte-pawlik-integration-nicht-kaputt-sparen-100.html"
+        },
+        {
+          "quelle": "Spiegel",
+          "titel": "Integrationsbericht: Wie gut funktioniert Integration in Deutschland",
+          "link": "https://www.spiegel.de/panorama/gesellschaft/integrationsbericht-wie-gut-funktioniert-integration-in-deutschland-a-f9bafde8-bf89-4ad9-968a-fc6dd2d8c36a#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Kabinett - Bundesregierung beschließt strategische Gasreserve",
+      "medien": [
+        "Deutschlandfunk",
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Kabinett - Bundesregierung beschließt strategische Gasreserve",
+          "link": "https://www.deutschlandfunk.de/bundesregierung-beschliesst-strategische-gasreserve-102.html"
+        },
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Newsblog zur Bundespolitik: Kabinett beschließt Gasreserve - aber erst ab nächstem Winter",
+          "link": "https://www.sueddeutsche.de/politik/bundesregierung-deutschland-gasspeicher-li.3568524"
+        }
+      ]
+    },
+    {
+      "titel": "Stacy Keach - \"Mike Hammer\"-Darsteller stirbt mit 85 Jahren",
+      "medien": [
+        "Deutschlandfunk",
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Stacy Keach - \"Mike Hammer\"-Darsteller stirbt mit 85 Jahren",
+          "link": "https://www.deutschlandfunk.de/mike-hammer-darsteller-stirbt-mit-85-jahren-100.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Stacy Keach: Der Mann für den zweiten Blick",
+          "link": "https://www.faz.net/aktuell/feuilleton/medien-und-film/serien/mike-hammer-schauspieler-stacy-keach-mit-85-jahren-gestorben-accg-201671969.html"
+        }
+      ]
+    },
+    {
+      "titel": "Berliner Linke: Emde bekommt Rückenwind aus Neukölln – aber nicht von allen Abgeordneten",
+      "medien": [
+        "FAZ",
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Berliner Linke: Emde bekommt Rückenwind aus Neukölln – aber nicht von allen Abgeordneten",
+          "link": "https://www.faz.net/aktuell/politik/inland/neukoellner-linke-stellt-sich-hinter-vanessa-emde-accg-201671031.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Berliner Linke will Vanessa Emde aus Fraktion ausschließen",
+          "link": "https://www.zdfheute.de/politik/deutschland/linke-ausschluss-vanessa-emde-abgeordnete-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Russland und Ukraine vereinbaren großen Gefangenenaustausch",
+      "medien": [
+        "Spiegel",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Russland und Ukraine vereinbaren großen Gefangenenaustausch",
+          "link": "https://www.spiegel.de/ausland/russland-und-ukraine-vereinbaren-grossen-gefangenenaustausch-a-ac5871d0-5d90-41d1-a1f6-2a2b78462bd6#ref=rss"
+        },
+        {
+          "quelle": "taz",
+          "titel": "+++ Nachrichten im Ukraine-Krieg +++: Russland und Ukraine einigen sich auf Gefangenenaustausch",
+          "link": "https://taz.de/Nach-dem-Treffen-in-Abu-Dhabi-Das-ist-der-aktuelle-Stand-im-Ukraine-Krieg/!6229123/"
+        }
+      ]
+    },
+    {
+      "titel": "Papst Leo in Argentinien: Klartext gegen Mileis Kettensägen-Politik",
+      "medien": [
+        "FAZ",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Papst Leo in Argentinien: Klartext gegen Mileis Kettensägen-Politik",
+          "link": "https://www.tagesschau.de/ausland/amerika/papst-argentinien-milei-100.html"
+        },
+        {
+          "quelle": "FAZ",
+          "titel": "Leo in Argentinien: Der Papst brauchte keinen Beichtstuhl für Milei",
+          "link": "https://www.faz.net/aktuell/politik/ausland/leo-xiv-in-argentinien-der-papst-braucht-keinen-beichtstuhl-fuer-milei-201669969.html"
+        }
+      ]
+    },
+    {
+      "titel": "Champions League: FC Bayern dringt in Spitzengruppe vor",
+      "medien": [
+        "ZDFheute",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Champions League: FC Bayern dringt in Spitzengruppe vor",
+          "link": "https://www.sportschau.de/regional/br/br-sieg-in-paris-fc-bayern-frauen-dringen-in-cl-spitzengruppe-vor-102.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Champions League: Bayern-Frauen zu stark für PSG",
+          "link": "https://www.zdfheute.de/sport/fussball-frauen-champions-league-paris-saint-germain-bayern-muenchen-tore-ergebnis-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Angeklagte im Fall Fabian zu lebenslanger Haft verurteilt",
+      "medien": [
+        "ZDFheute",
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Angeklagte im Fall Fabian zu lebenslanger Haft verurteilt",
+          "link": "https://www.tagesschau.de/inland/regional/mecklenburgvorpommern/urteil-im-mordfall-fabian-gina-h-zu-lebenslanger-haft-verurteilt,aktuellmv-438.html"
+        },
+        {
+          "quelle": "ZDFheute",
+          "titel": "Mord an Fabian: Angeklagte zu lebenslanger Haft verurteilt",
+          "link": "https://www.zdfheute.de/panorama/kriminalitaet/lebenslange-haft-prozess-mord-fabian-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Rot-Rot-Grün in Mecklenburg-Vorpommern: Schwesig marschiert durch",
+      "medien": [
+        "tagesschau",
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Rot-Rot-Grün in Mecklenburg-Vorpommern: Schwesig marschiert durch",
+          "link": "https://taz.de/Rot-Rot-Gruen-in-Mecklenburg-Vorpommern/!6228883/"
+        },
+        {
+          "quelle": "tagesschau",
+          "titel": "Mecklenburg-Vorpommern: Rot-Rot-Grün einigt sich auf Koalitionsvertrag",
+          "link": "https://www.tagesschau.de/inland/regional/mecklenburgvorpommern/rot-rot-gruen-in-mv-setzt-auf-zusammenhalt-zuversicht-und-zukunft,mvlandtag-114.html"
+        }
+      ]
+    },
+    {
+      "titel": "Entdecken Sie das ZDF-Nachrichtenstudio",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Entdecken Sie das ZDF-Nachrichtenstudio",
+          "link": "https://3d.zdf.de/nachrichten-studio-design/"
+        }
+      ]
+    },
+    {
+      "titel": "Aktuelle Pressemitteilungen des ZDF",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Aktuelle Pressemitteilungen des ZDF",
+          "link": "https://presseportal.zdf.de/pressemitteilungen/"
+        }
+      ]
+    },
+    {
+      "titel": "Großrazzia in HEssen: Polizei stellt Schusswaffen, Munition und Bargeld sicher",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Großrazzia in HEssen: Polizei stellt Schusswaffen, Munition und Bargeld sicher",
+          "link": "https://www.faz.net/aktuell/rhein-main/region-und-hessen/violence-as-a-service-polizei-stellt-bei-grossrazzia-in-hessen-schusswaffen-sicher-accg-201673209.html"
+        }
+      ]
+    },
+    {
+      "titel": "Präsidentenwahl: Elf Weltmeistertitel, sieben Olympia-Medaillen – und jetzt der Élysée?",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Präsidentenwahl: Elf Weltmeistertitel, sieben Olympia-Medaillen – und jetzt der Élysée?",
+          "link": "https://www.faz.net/aktuell/politik/ausland/teddy-riner-kandidiert-fuer-das-praesidentenamt-in-frankreich-accg-201670228.html"
+        }
+      ]
+    },
+    {
+      "titel": "Drogenfahndung: Drei Kilo Kokain auf A3 gefunden - 42-Jähriger in U-Haft",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Drogenfahndung: Drei Kilo Kokain auf A3 gefunden - 42-Jähriger in U-Haft",
+          "link": "https://www.zeit.de/news/2026-11/11/drei-kilo-kokain-auf-a3-gefunden-42-jaehriger-in-u-haft"
+        }
+      ]
+    },
+    {
+      "titel": "In Vorort von Cleveland: Swift und Kelce dürfen Hecke um Anwesen ziehen",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "In Vorort von Cleveland: Swift und Kelce dürfen Hecke um Anwesen ziehen",
+          "link": "https://www.faz.net/aktuell/gesellschaft/smalltalk/taylor-swift-und-travis-kelce-duerfen-hecke-um-anwesen-ziehen-accg-201673181.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ein gestricktes Weihnachtsfest: Paris läutet die Weihnachtssaison ein",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Ein gestricktes Weihnachtsfest: Paris läutet die Weihnachtssaison ein",
+          "link": "https://www.zeit.de/video/2026-11/ein-gestricktes-weihnachtsfest-paris-laeutet-die-weihnachtssaison-ein"
+        }
+      ]
+    },
+    {
+      "titel": "Rückruf bei Tonies: Tonies ruft Spielfigur mit Kinderliedern von Helene Fischer zurück",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Rückruf bei Tonies: Tonies ruft Spielfigur mit Kinderliedern von Helene Fischer zurück",
+          "link": "https://www.zeit.de/wirtschaft/2026-11/tonies-rueckruf-helene-fischer-hoerfigur-kindern-erstickungsgefahr-gxe"
+        }
+      ]
+    },
+    {
+      "titel": "Verhärtete Fronten: Metall-Tarifrunde: IG Metall plant 24-Stunden-Warnstreiks",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Verhärtete Fronten: Metall-Tarifrunde: IG Metall plant 24-Stunden-Warnstreiks",
+          "link": "https://www.zeit.de/news/2026-11/11/metall-tarifrunde-ig-metall-plant-24-stunden-warnstreiks"
+        }
+      ]
+    },
+    {
+      "titel": "Digital Fairness Act - EU will digitalen Verbraucherschutz stärken",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Digital Fairness Act - EU will digitalen Verbraucherschutz stärken",
+          "link": "https://www.tagesschau.de/wirtschaft/verbraucher/eu-digital-fairness-act-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Marktbericht: Der DAX-Rally geht die Puste aus",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Marktbericht: Der DAX-Rally geht die Puste aus",
+          "link": "https://www.tagesschau.de/wirtschaft/finanzen/dax-rally-geht-puste-aus-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Spuren führen nach Bayern: Frau in Hamburg getötet - Verdächtiger war ausreisepflichtig",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Spuren führen nach Bayern: Frau in Hamburg getötet - Verdächtiger war ausreisepflichtig",
+          "link": "https://www.zeit.de/news/2026-11/11/frau-in-hamburg-getoetet-verdaechtiger-war-ausreisepflichtig"
+        }
+      ]
+    },
+    {
+      "titel": "Iran-Krieg und Nahost-Konflikt: Alle Nachrichten im Liveblog",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Iran-Krieg und Nahost-Konflikt: Alle Nachrichten im Liveblog",
+          "link": "https://www.zdfheute.de/politik/ausland/iran-israel-usa-angriff-liveblog-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Tucker Carlson: Die irre Alternative zu Donald Trump",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Tucker Carlson: Die irre Alternative zu Donald Trump",
+          "link": "https://www.faz.net/aktuell/feuilleton/medien-und-film/medienpolitik/tucker-carlson-schwingt-sich-zum-vermeintlichen-anti-trump-auf-accg-201671537.html"
+        }
+      ]
+    },
+    {
+      "titel": "Antalya - Weltklimakonferenz: Gipfeltreffen zahlreicher Staats- und Regierungschefs eröffnet - Merz nicht dabei",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Antalya - Weltklimakonferenz: Gipfeltreffen zahlreicher Staats- und Regierungschefs eröffnet - Merz nicht dabei",
+          "link": "https://www.deutschlandfunk.de/weltklimakonferenz-gipfeltreffen-zahlreicher-staats-und-regierungschefs-eroeffnet-merz-nicht-dabei-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Europa - Flut von Droh-Mails gegen Schulen in Italien, Nordirland und Schottland",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Europa - Flut von Droh-Mails gegen Schulen in Italien, Nordirland und Schottland",
+          "link": "https://www.deutschlandfunk.de/flut-von-droh-mails-gegen-schulen-in-italien-nordirland-und-schottland-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Autoritarismus-Studie - Unzufriedenheit mit der Demokratie in Deutschland wächst",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Autoritarismus-Studie - Unzufriedenheit mit der Demokratie in Deutschland wächst",
+          "link": "https://www.deutschlandfunk.de/unzufriedenheit-mit-der-demokratie-in-deutschland-waechst-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Brüssel - EU-Kommission will Verbraucherrechte stärken - Abonnements im Internet sollen einfacher zu kündigen sein",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Brüssel - EU-Kommission will Verbraucherrechte stärken - Abonnements im Internet sollen einfacher zu kündigen sein",
+          "link": "https://www.deutschlandfunk.de/eu-kommission-will-verbraucherrechte-staerken-abonnements-im-internet-sollen-einfacher-zu-kuendigen--100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Verteidigungsministerium - Bundeswehr will keine chinesischen Drohnen mehr bei Übungen nutzen",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Verteidigungsministerium - Bundeswehr will keine chinesischen Drohnen mehr bei Übungen nutzen",
+          "link": "https://www.deutschlandfunk.de/bundeswehr-will-keine-chinesischen-drohnen-mehr-bei-uebungen-nutzen-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "\"Führungskräfte sind im Fokus\" - Mögliche Spionageaffäre um Nvidia-Chef löst auch in Deutschland Besorgnis aus",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "\"Führungskräfte sind im Fokus\" - Mögliche Spionageaffäre um Nvidia-Chef löst auch in Deutschland Besorgnis aus",
+          "link": "https://www.deutschlandfunk.de/moegliche-spionageaffaere-um-nvidia-chef-loest-auch-in-deutschland-besorgnis-aus-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Generalstreik in Spanien - Gewerkschaften sprechen von hoher Beteiligung - Nahverkehr in Barcelona wurde lahmgelegt",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Generalstreik in Spanien - Gewerkschaften sprechen von hoher Beteiligung - Nahverkehr in Barcelona wurde lahmgelegt",
+          "link": "https://www.deutschlandfunk.de/gewerkschaften-sprechen-von-hoher-beteiligung-nahverkehr-in-barcelona-wurde-lahmgelegt-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Tübingen - Oberbürgermeister Palmer verzichtet vorerst auf öffentliche Auftritte",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Tübingen - Oberbürgermeister Palmer verzichtet vorerst auf öffentliche Auftritte",
+          "link": "https://www.deutschlandfunk.de/oberbuergermeister-palmer-verzichtet-vorerst-auf-oeffentliche-auftritte-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Karneval - Auftakt zur fünften Jahreszeit",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Karneval - Auftakt zur fünften Jahreszeit",
+          "link": "https://www.deutschlandfunk.de/auftakt-zur-fuenften-jahreszeit-128.html"
+        }
+      ]
+    },
+    {
+      "titel": "Umweltorganisationen - Deutschland liegt in neuem Klimaschutz-Index nur noch auf Rang 25",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Umweltorganisationen - Deutschland liegt in neuem Klimaschutz-Index nur noch auf Rang 25",
+          "link": "https://www.deutschlandfunk.de/deutschland-liegt-in-neuem-klimaschutz-index-nur-noch-auf-rang-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Etatfragen - EU-Haushalt für 2027 steht",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Etatfragen - EU-Haushalt für 2027 steht",
+          "link": "https://www.deutschlandfunk.de/eu-haushalt-fuer-2027-steht-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Unwetter - Sturmwarnung: Portugal schließt Schulen und Behörden",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Unwetter - Sturmwarnung: Portugal schließt Schulen und Behörden",
+          "link": "https://www.deutschlandfunk.de/sturmwarnung-portugal-schliesst-schulen-und-behoerden-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Cyberkriminalität - Erneut Hackerangriff auf Uni: Tausende Datensätze an Universität Tübingen betroffen",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Cyberkriminalität - Erneut Hackerangriff auf Uni: Tausende Datensätze an Universität Tübingen betroffen",
+          "link": "https://www.deutschlandfunk.de/erneut-hackerangriff-auf-uni-tausende-datensaetze-an-universitaet-tuebingen-betroffen-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Gaming - Download-Freigabe von \"GTA 6\" sorgt für erhöhten Datenverkehr im Internet",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Gaming - Download-Freigabe von \"GTA 6\" sorgt für erhöhten Datenverkehr im Internet",
+          "link": "https://www.deutschlandfunk.de/download-freigabe-von-gta-6-sorgt-fuer-erhoehten-datenverkehr-im-internet-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Champions-League der Frauen - Bayern gewinnen in Paris und sind auf Viertelfinalkurs",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Champions-League der Frauen - Bayern gewinnen in Paris und sind auf Viertelfinalkurs",
+          "link": "https://www.deutschlandfunk.de/bayern-gewinnen-in-paris-und-sind-auf-viertelfinalkurs-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Konjunkturerwartung - Wirtschaftsweise legen Jahresgutachten vor",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Konjunkturerwartung - Wirtschaftsweise legen Jahresgutachten vor",
+          "link": "https://www.deutschlandfunk.de/wirtschaftsweise-legen-jahresgutachten-vor-132.html"
+        }
+      ]
+    },
+    {
+      "titel": "Medienberichte - US-Finanzminister Bessent verlegt Wohnsitz wegen Bedrohung aus Iran auf Militärstützpunkt",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Medienberichte - US-Finanzminister Bessent verlegt Wohnsitz wegen Bedrohung aus Iran auf Militärstützpunkt",
+          "link": "https://www.deutschlandfunk.de/us-finanzminister-bessent-verlegt-wohnsitz-wegen-bedrohung-aus-iran-auf-militaerstuetzpunkt-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "USA - Drei mutmaßlich vom Iran unterstützte Terror-Helfer angeklagt",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "USA - Drei mutmaßlich vom Iran unterstützte Terror-Helfer angeklagt",
+          "link": "https://www.deutschlandfunk.de/drei-mutmasslich-vom-iran-unterstuetzte-terror-helfer-angeklagt-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ukraine-Krieg - Europäischer Rechnungshof kritisiert Defizite bei Sanktionen gegen Russland - Immer noch erhebliches Handelsvolumen",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Ukraine-Krieg - Europäischer Rechnungshof kritisiert Defizite bei Sanktionen gegen Russland - Immer noch erhebliches Handelsvolumen",
+          "link": "https://www.deutschlandfunk.de/europaeischer-rechnungshof-kritisiert-defizite-bei-sanktionen-gegen-russland-immer-noch-erhebliches--102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Reformpläne - Mehrere Bundesländer wollen Justiz besser gegen Extremisten schützen",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Reformpläne - Mehrere Bundesländer wollen Justiz besser gegen Extremisten schützen",
+          "link": "https://www.deutschlandfunk.de/mehrere-bundeslaender-wollen-justiz-besser-gegen-extremisten-schuetzen-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Bericht - Fast 17.000 Anträge auf Kriegsdienstverweigerung in diesem Jahr",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Bericht - Fast 17.000 Anträge auf Kriegsdienstverweigerung in diesem Jahr",
+          "link": "https://www.deutschlandfunk.de/fast-17-000-antraege-auf-kriegsdienstverweigerung-in-diesem-jahr-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Großbritannien - US-Soldat wegen mutmaßlicher Spionage für Russland festgenommen",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Großbritannien - US-Soldat wegen mutmaßlicher Spionage für Russland festgenommen",
+          "link": "https://www.deutschlandfunk.de/us-soldat-wegen-mutmasslicher-spionage-fuer-russland-festgenommen-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wetter - Im Norden Hochnebel, sonst gebietsweise Regen",
+      "medien": [
+        "Deutschlandfunk"
+      ],
+      "artikel": [
+        {
+          "quelle": "Deutschlandfunk",
+          "titel": "Wetter - Im Norden Hochnebel, sonst gebietsweise Regen",
+          "link": "https://www.deutschlandfunk.de/im-norden-hochnebel-sonst-gebietsweise-regen-110.html"
+        }
+      ]
+    },
+    {
+      "titel": "Großes Energieprojekt: Abwärme aus Rechenzentrum soll 1.100 Wohnungen heizen",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Großes Energieprojekt: Abwärme aus Rechenzentrum soll 1.100 Wohnungen heizen",
+          "link": "https://www.zeit.de/news/2026-11/11/abwaerme-aus-rechenzentrum-soll-1-100-wohnungen-heizen"
+        }
+      ]
+    },
+    {
+      "titel": "Kunst: Merkel lässt sich Berliner Plattenbau zeigen",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Kunst: Merkel lässt sich Berliner Plattenbau zeigen",
+          "link": "https://www.zeit.de/news/2026-11/11/merkel-laesst-sich-berliner-plattenbau-zeigen"
+        }
+      ]
+    },
+    {
+      "titel": "Eklat um Video: Myanmars Militärregierung droht dem deutschen Geschäftsträger",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Eklat um Video: Myanmars Militärregierung droht dem deutschen Geschäftsträger",
+          "link": "https://www.faz.net/aktuell/politik/ausland/nach-kritik-deutscher-diplomat-in-myanmar-einbestellt-accg-201672056.html"
+        }
+      ]
+    },
+    {
+      "titel": "Stellenanzeige: Die NASA sucht: Astronaut (m/w/d)",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Stellenanzeige: Die NASA sucht: Astronaut (m/w/d)",
+          "link": "https://www.faz.net/aktuell/wissen/weltraum/nasa-such-astronaut-m-w-d-was-in-der-stellenanzeige-steht-accg-201672875.html"
+        }
+      ]
+    },
+    {
+      "titel": "Neue Hackordnung: „Made by China“ überschattet „Made in Germany“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Neue Hackordnung: „Made by China“ überschattet „Made in Germany“",
+          "link": "https://www.faz.net/aktuell/wirtschaft/unternehmen/made-by-china-chinesische-unternehmen-setzen-auf-produktion-in-deutschland-201669303.html"
+        }
+      ]
+    },
+    {
+      "titel": "Mercedes-Chef Ola Källenius fordert deutliche Zugeständnisse von Gewerkschaften",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Mercedes-Chef Ola Källenius fordert deutliche Zugeständnisse von Gewerkschaften",
+          "link": "https://www.spiegel.de/wirtschaft/mercedes-chef-ola-kaellenius-fodert-deutliche-zugestaendnisse-von-geberkschaften-a-d04b053c-3e0d-4c70-90b1-ff2df11b3358#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Prozess: Ex-Chef: Keine Anzeichen für Missbrauchstaten von Kinderarzt",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Prozess: Ex-Chef: Keine Anzeichen für Missbrauchstaten von Kinderarzt",
+          "link": "https://www.zeit.de/news/2026-11/11/ex-chef-keine-anzeichen-fuer-missbrauchstaten-von-kinderarzt"
+        }
+      ]
+    },
+    {
+      "titel": "Bundeskartellamt kritisiert Gebührenpolitik von PayPal",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Bundeskartellamt kritisiert Gebührenpolitik von PayPal",
+          "link": "https://www.tagesschau.de/wirtschaft/verbraucher/paypal-bundeskartellamt-gebuehren-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "\"Unsere Pflicht ist es, uns gegen die Dunkelheit zu stellen\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "\"Unsere Pflicht ist es, uns gegen die Dunkelheit zu stellen\"",
+          "link": "https://www.zdfheute.de/panorama/u2-band-50-jahre-rockgeschichte-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Konzentrierter Blick aus jüdischer Perspektive",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Konzentrierter Blick aus jüdischer Perspektive",
+          "link": "https://www.welt.de/regionales/hamburg/article6af459fce22aeb948141fc95/altonaer-museum-konzentrierter-blick-aus-juedischer-perspektive.html"
+        }
+      ]
+    },
+    {
+      "titel": "Altersvorsorge: 5700 Euro für den Versicherungsvermittler",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Altersvorsorge: 5700 Euro für den Versicherungsvermittler",
+          "link": "https://www.faz.net/aktuell/finanzen/mein-depot/altersvorsorge-mit-tuecken-wie-luisa-mueller-gegen-onesty-finance-gewann-accg-201646358.html"
+        }
+      ]
+    },
+    {
+      "titel": "Schlagzeilen",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Schlagzeilen",
+          "link": "https://www.zdfheute.de/newsticker/schlagzeilen-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Schauspieler Stacy Keach: Der Mann für den zweiten Blick",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Schauspieler Stacy Keach: Der Mann für den zweiten Blick",
+          "link": "https://www.faz.net/aktuell/feuilleton/medien-und-film/kino/ein-mann-der-grautoene-schauspieler-stacy-keach-gestorben-accg-201672505.html"
+        }
+      ]
+    },
+    {
+      "titel": "Dunkelfeldstudie der Bundeswehr: 72 Prozent der Soldatinnen bei der Bundeswehr verbal belästigt",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Dunkelfeldstudie der Bundeswehr: 72 Prozent der Soldatinnen bei der Bundeswehr verbal belästigt",
+          "link": "https://www.zeit.de/gesellschaft/2026-11/dunkelfeldstudie-bundeswehr-sexuelle-belaestigung-boris-pistorius-gxe"
+        }
+      ]
+    },
+    {
+      "titel": "Comeback-Gerüchte um Lindsey Vonn: High Heels oder Skischuhe?",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Comeback-Gerüchte um Lindsey Vonn: High Heels oder Skischuhe?",
+          "link": "https://www.sueddeutsche.de/sport/lindsey-vonn-ski-comeback-operation-li.3578480"
+        }
+      ]
+    },
+    {
+      "titel": "Wie trotz Blockade der Straße von Hormus Öl aus der Region fließt",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Wie trotz Blockade der Straße von Hormus Öl aus der Region fließt",
+          "link": "https://www.tagesschau.de/wirtschaft/energie/iran-krieg-oel-golfstaaten-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Verbraucherschutz: EU-Kommission plant Recht auf menschlichen Kundenservice im Internet",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Verbraucherschutz: EU-Kommission plant Recht auf menschlichen Kundenservice im Internet",
+          "link": "https://www.zeit.de/wirtschaft/2026-11/eu-verbraucherschutz-digital-fairness-act-online-abos-michael-mcgrath-gxe"
+        }
+      ]
+    },
+    {
+      "titel": "Vorschlag der IG Metall: Källenius signalisiert Gesprächsbereitschaft im Tarifstreit",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Vorschlag der IG Metall: Källenius signalisiert Gesprächsbereitschaft im Tarifstreit",
+          "link": "https://www.sueddeutsche.de/wirtschaft/ola-kaellenius-ig-metall-mercedes-li.3578717"
+        }
+      ]
+    },
+    {
+      "titel": "SZ Wirtschaftsgipfel: Jetzt live: Klingbeil spricht über die Zukunft der deutschen Finanzpolitik",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "SZ Wirtschaftsgipfel: Jetzt live: Klingbeil spricht über die Zukunft der deutschen Finanzpolitik",
+          "link": "https://www.sueddeutsche.de/wirtschaft/sz-wirtschaftsgipfel-2026-liveblog-li.3575578"
+        }
+      ]
+    },
+    {
+      "titel": "Jetzt fordert Grün-Rot-Rot, dass Palmer sich auf den Innendienst beschränkt",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Jetzt fordert Grün-Rot-Rot, dass Palmer sich auf den Innendienst beschränkt",
+          "link": "https://www.welt.de/politik/deutschland/plus6af44e4d50175c81de7a1780/vorwuerfe-sexueller-uebergriffe-jetzt-fordert-gruen-rot-rot-dass-palmer-sich-auf-den-innendienst-beschraenkt.html"
+        }
+      ]
+    },
+    {
+      "titel": "Die besten Witzbilder der WELT – Putins Sensations-Kompromiss",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Die besten Witzbilder der WELT – Putins Sensations-Kompromiss",
+          "link": "https://www.welt.de/satire/article256400460/witzbild-aktuell-iran-macht-trump-top-angebot.html"
+        }
+      ]
+    },
+    {
+      "titel": "Atmosphärenphysik: Polarwirbel jetzt schon vor dem Zusammenbruch: Was ist da los?",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Atmosphärenphysik: Polarwirbel jetzt schon vor dem Zusammenbruch: Was ist da los?",
+          "link": "https://www.sueddeutsche.de/wissen/polarwirbel-nordpol-stratosphaere-kaelteeinbruch-atmosphaerenphysik-li.3578700"
+        }
+      ]
+    },
+    {
+      "titel": "Integration: 81 Prozent identifizieren sich mit Deutschland",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Integration: 81 Prozent identifizieren sich mit Deutschland",
+          "link": "https://www.zdfheute.de/politik/integration-integrationsbericht-migration-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Wir sind traurig, dass du uns verlässt“ – EU will Tricks bei Online-Kündigungen stoppen",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Wir sind traurig, dass du uns verlässt“ – EU will Tricks bei Online-Kündigungen stoppen",
+          "link": "https://www.welt.de/wirtschaft/article6af4460ae22aeb948141fa47/abo-kuendigen-wir-sind-traurig-dass-du-uns-verlaesst-eu-will-tricks-bei-online-kuendigungen-stoppen.html"
+        }
+      ]
+    },
+    {
+      "titel": "Attentäter von Krakau: Warum es Streit um das Tatmotiv gibt",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Attentäter von Krakau: Warum es Streit um das Tatmotiv gibt",
+          "link": "https://www.zdfheute.de/politik/ausland/krakau-attentat-motiv-desinformation-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Längere Befristung, weniger Kündigungsschutz – Schweitzer legt Entwurf für Arbeitsmarktreform vor",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Längere Befristung, weniger Kündigungsschutz – Schweitzer legt Entwurf für Arbeitsmarktreform vor",
+          "link": "https://www.welt.de/politik/deutschland/article6af4466ce22aeb948141fa5e/spd-arbeitsminister-laengere-befristung-weniger-kuendigungsschutz-schweitzer-legt-entwurf-fuer-arbeitsmarktreform-vor.html"
+        }
+      ]
+    },
+    {
+      "titel": "Folgen der Coronapandemie: Pandemiestress könnte Jugendliche schneller altern lassen",
+      "medien": [
+        "Zeit Online"
+      ],
+      "artikel": [
+        {
+          "quelle": "Zeit Online",
+          "titel": "Folgen der Coronapandemie: Pandemiestress könnte Jugendliche schneller altern lassen",
+          "link": "https://www.zeit.de/gesundheit/2026-11/max-planck-institut-psychiatrie-jugendliche-altern-corona-epigenetik-gxe"
+        }
+      ]
+    },
+    {
+      "titel": "EKD-Synode in Würzburg: Wie die Kirche Demokratie stärken will",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "EKD-Synode in Würzburg: Wie die Kirche Demokratie stärken will",
+          "link": "https://www.tagesschau.de/inland/gesellschaft/ekd-synode-122.html"
+        }
+      ]
+    },
+    {
+      "titel": "Rhein-Main-Liveblog: Stromausfall legt Gerichte in Frankfurt lahm",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Rhein-Main-Liveblog: Stromausfall legt Gerichte in Frankfurt lahm",
+          "link": "https://www.faz.net/aktuell/rhein-main/stromausfall-legt-gerichte-in-frankfurt-lahm-aktuelle-nachrichten-aus-frankfurt-hessen-faz-19735361.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Es ist so ein bisschen ein Wetteifern in der AfD, wer die radikalsten Forderungen macht“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Es ist so ein bisschen ein Wetteifern in der AfD, wer die radikalsten Forderungen macht“",
+          "link": "https://www.welt.de/mediathek/talk/meine-welt-meine-meinung/video6af4524dc45061d752ba6331/abschiebepolitik-es-ist-so-ein-bisschen-ein-wetteifern-in-der-afd-wer-die-radikalsten-forderungen-macht.html"
+        }
+      ]
+    },
+    {
+      "titel": "Missbrauchsfälle: Der Papst trifft in Peru nicht nur auf Freunde",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Missbrauchsfälle: Der Papst trifft in Peru nicht nur auf Freunde",
+          "link": "https://www.faz.net/aktuell/politik/ausland/papst-leo-xiv-trifft-in-peru-nicht-nur-auf-freunde-accg-201667736.html"
+        }
+      ]
+    },
+    {
+      "titel": "Bund der Steuerzahler kritisiert Ministeriums-Ausgaben für Dekoration",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Bund der Steuerzahler kritisiert Ministeriums-Ausgaben für Dekoration",
+          "link": "https://www.welt.de/politik/deutschland/video6af45030e22aeb948141fb54/mehrere-millionen-euro-fuer-dekoration-bund-der-steuerzahler-kritisiert-ministeriums-ausgaben.html"
+        }
+      ]
+    },
+    {
+      "titel": "Warum eingewanderte Frauen so viel seltener arbeiten",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Warum eingewanderte Frauen so viel seltener arbeiten",
+          "link": "https://www.welt.de/politik/deutschland/plus6af33c79b9cef129a20e14e0/integration-warum-eingewanderte-frauen-so-viel-seltener-arbeiten.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Wenn Trump eine Lame Duck wird, ist er auch kein Asset mehr für Putin“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Wenn Trump eine Lame Duck wird, ist er auch kein Asset mehr für Putin“",
+          "link": "https://www.welt.de/politik/ausland/video6af451a7e22aeb948141fb77/ukraine-krieg-wenn-trump-eine-lame-duck-wird-ist-er-auch-kein-asset-mehr-fuer-putin.html"
+        }
+      ]
+    },
+    {
+      "titel": "Fußball-Liveblog: Klopp: „Ich wusste nicht, dass die wissen, wer ich bin“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Fußball-Liveblog: Klopp: „Ich wusste nicht, dass die wissen, wer ich bin“",
+          "link": "https://www.faz.net/aktuell/sport/fussball/liveticker-nationalmannschaft-juergen-klopp-spricht-ueber-neue-fans-faz-201651368.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wetter Deutschland: Wolken, Temperaturen, Wind und Aussichten",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Wetter Deutschland: Wolken, Temperaturen, Wind und Aussichten",
+          "link": "https://www.tagesschau.de/wetter/deutschland/wettervorhersage-deutschland-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Ich etablierte ein effizientes Logistik-System in der EU“, so der Leipzig-Drahtzieher im Lebenslauf",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Ich etablierte ein effizientes Logistik-System in der EU“, so der Leipzig-Drahtzieher im Lebenslauf",
+          "link": "https://www.welt.de/politik/deutschland/plus6af1d96d79e1656222c37b4e/verdaechtiger-gru-agent-levushkin-ich-etablierte-ein-effizientes-logistik-system-in-der-eu.html"
+        }
+      ]
+    },
+    {
+      "titel": "Besucherbergwerk im Erzgebirge: Statt Silber finden sich jetzt Rosinen im Stollen",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Besucherbergwerk im Erzgebirge: Statt Silber finden sich jetzt Rosinen im Stollen",
+          "link": "https://taz.de/Ausflugsziel-in-der-Weihnachtszeit-Hier-gibt-es-Stollen-aus-dem-Stollen/!6224186/"
+        }
+      ]
+    },
+    {
+      "titel": "Hessischer Landtag: CDU-Kandidat gewählt, AfD-Fraktion nicht geschlossen",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Hessischer Landtag: CDU-Kandidat gewählt, AfD-Fraktion nicht geschlossen",
+          "link": "https://www.faz.net/aktuell/rhein-main/region-und-hessen/vizepraesident-des-hessischen-landtags-afd-kandidat-fehlt-stimme-aus-den-eigenen-reihen-accg-201672293.html"
+        }
+      ]
+    },
+    {
+      "titel": "Tausende feiern Fastnachtsbeginn in Mainz",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Tausende feiern Fastnachtsbeginn in Mainz",
+          "link": "https://www.zdfheute.de/video/panorama-fastnacht-saisonbeginn-mainz-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Das Milliarden-Business am Straßenrand",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Das Milliarden-Business am Straßenrand",
+          "link": "https://www.zdfheute.de/video/panorama-china-live-streaming-boom-video-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Grippe-Impfung: Wer sich jetzt impfen lassen sollte",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Grippe-Impfung: Wer sich jetzt impfen lassen sollte",
+          "link": "https://www.zdfheute.de/ratgeber/gesundheit/grippe-impfung-experte-sander-stiko-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Es ist wirklich Wahnsinn, die Stimmung ist grandios“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Es ist wirklich Wahnsinn, die Stimmung ist grandios“",
+          "link": "https://www.welt.de/vermischtes/video6af4407ac45061d752ba60a7/karnevalsstart-in-koeln-es-ist-wirklich-wahnsinn-die-stimmung-ist-grandios.html"
+        }
+      ]
+    },
+    {
+      "titel": "Die Fakten hinter der verblüffenden Verbindung zwischen Alzheimer und Krebs",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Die Fakten hinter der verblüffenden Verbindung zwischen Alzheimer und Krebs",
+          "link": "https://www.welt.de/gesundheit/plus6a844c36a87e8142c31d3ec5/medizin-die-fakten-hinter-der-verblueffenden-verbindung-zwischen-alzheimer-und-krebs.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Wirklich irre“ – Grüne warnen bei Reform des Unterhaltsvorschusses vor negativen Arbeitsanreizen",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Wirklich irre“ – Grüne warnen bei Reform des Unterhaltsvorschusses vor negativen Arbeitsanreizen",
+          "link": "https://www.welt.de/politik/deutschland/plus6af42ad950175c81de7a136b/einkommensgrenze-wirklich-irre-gruene-warnen-bei-reform-des-unterhaltsvorschusses-vor-negativen-arbeitsanreizen.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ukraine-Verhandlungen: Russland plant kein Treffen mit Europäern",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Ukraine-Verhandlungen: Russland plant kein Treffen mit Europäern",
+          "link": "https://www.tagesschau.de/ausland/asien/ukraine-russland-abu-dhabi-eu-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Von Klopp ersten Trainingseinheiten war ich schon überrascht“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Von Klopp ersten Trainingseinheiten war ich schon überrascht“",
+          "link": "https://www.welt.de/sport/fussball/article6af327c7f0b67a4b24664790/marc-andre-ter-stegen-von-klopp-ersten-trainingseinheiten-war-ich-schon-ueberrascht.html"
+        }
+      ]
+    },
+    {
+      "titel": "Route du Rhum: Corentin Horeau siegt in Rekordzeit, Herrmann vor Podium",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Route du Rhum: Corentin Horeau siegt in Rekordzeit, Herrmann vor Podium",
+          "link": "https://www.spiegel.de/sport/route-du-rhum-corentin-horeau-siegt-in-rekordzeit-herrmann-vor-podium-a-1f84cd4e-c173-403b-b00e-bb137f44a93f#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Iris Sayram, ARD Berlin, zu Konsequenzen aus der Dunkelfeldstudie über sexualisiertes Fehlverhalten bei der Bundeswehr",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Iris Sayram, ARD Berlin, zu Konsequenzen aus der Dunkelfeldstudie über sexualisiertes Fehlverhalten bei der Bundeswehr",
+          "link": "https://www.tagesschau.de/video/video-1681938.html"
+        }
+      ]
+    },
+    {
+      "titel": "Karneval: Der 11.11. in Köln, Düsseldorf und Co. in Bildern",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Karneval: Der 11.11. in Köln, Düsseldorf und Co. in Bildern",
+          "link": "https://www.spiegel.de/panorama/karneval-der-11-11-in-koeln-duesseldorf-und-co-in-bildern-a-26c80160-00f6-44c7-a069-de3320812548#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Fitness im Alltag: Diesen Einfluss hat Treppensteigen auf die Gesundheit",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Fitness im Alltag: Diesen Einfluss hat Treppensteigen auf die Gesundheit",
+          "link": "https://www.faz.net/aktuell/besser-leben/gesundheit/so-viel-einfluss-hat-treppensteigen-auf-die-gesundheit-accg-201650519.html"
+        }
+      ]
+    },
+    {
+      "titel": "Umweltzerstörung in Argentinien: Der Sand, das Gas und die Korruption",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Umweltzerstörung in Argentinien: Der Sand, das Gas und die Korruption",
+          "link": "https://taz.de/Umweltzerstoerung-in-Argentinien/!6224134/"
+        }
+      ]
+    },
+    {
+      "titel": "Eispaar Hase/Volodin: Lockerungsübung mit Ronald Reagan auf dem Eis",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Eispaar Hase/Volodin: Lockerungsübung mit Ronald Reagan auf dem Eis",
+          "link": "https://www.faz.net/aktuell/sport/wintersport/minerva-hase-und-volodin-weltmeister-starten-bei-skate-america-accg-201668497.html"
+        }
+      ]
+    },
+    {
+      "titel": "Psychologie: Ich bin gut und du auch",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Psychologie: Ich bin gut und du auch",
+          "link": "https://www.sueddeutsche.de/wissen/psychologie-selbstwert-li.3575373"
+        }
+      ]
+    },
+    {
+      "titel": "Eine Art Schnäppchen: Pinker Diamant für mehr als 13 Millionen versteigert",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Eine Art Schnäppchen: Pinker Diamant für mehr als 13 Millionen versteigert",
+          "link": "https://www.faz.net/aktuell/gesellschaft/smalltalk/pinker-bulgari-diamant-fuer-13-millionen-bei-christie-s-versteigert-accg-201672792.html"
+        }
+      ]
+    },
+    {
+      "titel": "Antike GenderFrage: War dieser britannische Keltenfürst eine Frau?",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Antike GenderFrage: War dieser britannische Keltenfürst eine Frau?",
+          "link": "https://www.faz.net/aktuell/wissen/archaeologie-altertum/verica-war-der-keltenfuerst-von-britannien-eine-frau-201659694.html"
+        }
+      ]
+    },
+    {
+      "titel": "tagesschau in 100 Sekunden",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "tagesschau in 100 Sekunden",
+          "link": "https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1681934.html"
+        }
+      ]
+    },
+    {
+      "titel": "Edmonton Oilers: Nicht von dieser Welt",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Edmonton Oilers: Nicht von dieser Welt",
+          "link": "https://www.faz.net/aktuell/sport/mehr-sport/connor-mcdavid-und-leon-draisaitl-dominieren-die-nhl-accg-201669547.html"
+        }
+      ]
+    },
+    {
+      "titel": "Jahresgutachten: \"Deutliche konjunkturelle Erholung\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Jahresgutachten: \"Deutliche konjunkturelle Erholung\"",
+          "link": "https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5247054"
+        }
+      ]
+    },
+    {
+      "titel": "Wenn Klimaschutz überfordert",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Wenn Klimaschutz überfordert",
+          "link": "https://www.tagesschau.de/wissen/klima/klimaschutz-212.html"
+        }
+      ]
+    },
+    {
+      "titel": "\"Tankrabatt\" drückt Inflation im Oktober",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "\"Tankrabatt\" drückt Inflation im Oktober",
+          "link": "https://www.tagesschau.de/wirtschaft/konjunktur/inflation-tankrabatt-spritpreise-oktober-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Es geht nicht mehr nur um Neukölln oder Kreuzberg, sondern zieht sich durch ganz Berlin“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Es geht nicht mehr nur um Neukölln oder Kreuzberg, sondern zieht sich durch ganz Berlin“",
+          "link": "https://www.welt.de/politik/deutschland/video6af43a6fc45061d752ba5f72/delikte-mit-schusswaffen-es-geht-nicht-mehr-nur-um-neukoelln-oder-kreuzberg-sondern-zieht-sich-durch-ganz-berlin.html"
+        }
+      ]
+    },
+    {
+      "titel": "Nach den Wahlsieg der AfD: Wie geht es der Kulturszene in Sachsen-Anhalt?",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Nach den Wahlsieg der AfD: Wie geht es der Kulturszene in Sachsen-Anhalt?",
+          "link": "https://taz.de/Nach-den-Wahlsieg-der-AfD/!6228900/"
+        }
+      ]
+    },
+    {
+      "titel": "Hamburg wächst weiter – und wird deutlich älter",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Hamburg wächst weiter – und wird deutlich älter",
+          "link": "https://www.welt.de/regionales/hamburg/article6af4421fc45061d752ba60f3/bevoelkerung-hamburg-waechst-weiter-und-wird-deutlich-aelter.html"
+        }
+      ]
+    },
+    {
+      "titel": "Verbraucherschutz: EU-Kommission will Abo-Kündigungen im Netz erleichtern",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Verbraucherschutz: EU-Kommission will Abo-Kündigungen im Netz erleichtern",
+          "link": "https://www.sueddeutsche.de/wirtschaft/abo-kuendigung-online-eu-kommission-digital-fairness-act-li.3578792"
+        }
+      ]
+    },
+    {
+      "titel": "Leute: Bullshit-Verhalten ist verboten",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Leute: Bullshit-Verhalten ist verboten",
+          "link": "https://www.sueddeutsche.de/panorama/promis-florence-pugh-maenner-misogynie-filmset-li.3578715"
+        }
+      ]
+    },
+    {
+      "titel": "Kochbuch „Oma kocht“: So gelingen Rinderrouladen und Schweinebraten",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Kochbuch „Oma kocht“: So gelingen Rinderrouladen und Schweinebraten",
+          "link": "https://www.faz.net/aktuell/rhein-main/region-und-hessen/kochbuch-oma-kocht-so-gelingen-spargelroellchen-und-schweinebraten-accg-201660069.html"
+        }
+      ]
+    },
+    {
+      "titel": "Finanzkriminalität: Gemeinsam gegen Betrug: Großbanken wollen Daten teilen",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Finanzkriminalität: Gemeinsam gegen Betrug: Großbanken wollen Daten teilen",
+          "link": "https://www.sueddeutsche.de/wirtschaft/banken-betrug-deutsche-bank-commerzbank-sparkassen-li.3578233"
+        }
+      ]
+    },
+    {
+      "titel": "TV- und Kinderbuchautor: Vorwürfe sexuellen Missbrauchs gegen TV-Komiker Walliams",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "TV- und Kinderbuchautor: Vorwürfe sexuellen Missbrauchs gegen TV-Komiker Walliams",
+          "link": "https://www.faz.net/aktuell/feuilleton/medien-und-film/medienpolitik/vorwuerfe-sexueller-uebergriffe-gegen-tv-komiker-david-walliams-accg-201671922.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ein überraschend einfacher Trick verhindert, dass Bettwanzen sich im Schlafzimmer einnisten",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Ein überraschend einfacher Trick verhindert, dass Bettwanzen sich im Schlafzimmer einnisten",
+          "link": "https://www.welt.de/gesundheit/article6af1c9efc422fb6d38f47e52/ein-ueberraschend-einfacher-trick-verhindert-dass-bettwanzen-sich-im-schlafzimmer-einnisten.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wir brauchen nicht weniger Nmechas, sondern mehr",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Wir brauchen nicht weniger Nmechas, sondern mehr",
+          "link": "https://www.welt.de/debatte/plus6af42a38c45061d752ba5dc7/christliche-werte-wir-brauchen-nicht-weniger-nmechas-sondern-mehr.html"
+        }
+      ]
+    },
+    {
+      "titel": "Die Frau, ohne die Brecht nie Brecht geworden wäre",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Die Frau, ohne die Brecht nie Brecht geworden wäre",
+          "link": "https://www.welt.de/kultur/kino/article6af2e78042c2bfde5b990bf9/helene-weigel-die-frau-ohne-die-brecht-nie-brecht-geworden-waere.html"
+        }
+      ]
+    },
+    {
+      "titel": "Luftfahrt: Teuer fliegen, bequem sitzen",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Luftfahrt: Teuer fliegen, bequem sitzen",
+          "link": "https://www.sueddeutsche.de/wirtschaft/singapore-airlines-investition-sitze-recaro-li.3575249"
+        }
+      ]
+    },
+    {
+      "titel": "„Sie nutzen die Atmosphäre von: In Deutschland, da kann ich mich austoben“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Sie nutzen die Atmosphäre von: In Deutschland, da kann ich mich austoben“",
+          "link": "https://www.welt.de/vermischtes/article6af4208250175c81de7a127a/markus-lanz-sie-nutzen-die-atmosphaere-von-in-deutschland-da-kann-ich-mich-austoben-sagt-der-polizeigewerkschafter.html"
+        }
+      ]
+    },
+    {
+      "titel": "»Harry Potter«-Serie: Der neue Snape hat die Filme nicht gesehen",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "»Harry Potter«-Serie: Der neue Snape hat die Filme nicht gesehen",
+          "link": "https://www.spiegel.de/kultur/tv/harry-potter-serie-der-neue-snape-hat-die-filme-nicht-gesehen-a-d74426ad-ad1e-40e2-9d3f-4f473c355ac2#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Zur Vorbereitung auf das Dschungelcamp reist Wayne Rooney nur in der Business Class",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Zur Vorbereitung auf das Dschungelcamp reist Wayne Rooney nur in der Business Class",
+          "link": "https://www.welt.de/sport/fussball/article6af41f1950175c81de7a126b/wayne-rooney-zur-vorbereitung-auf-das-dschungelcamp-reist-der-star-nur-business-class.html"
+        }
+      ]
+    },
+    {
+      "titel": "Bernard-Henri Lévy: „Mit Leuten, die einem die Knochen brechen möchten, kann man keine Einigung finden“",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Bernard-Henri Lévy: „Mit Leuten, die einem die Knochen brechen möchten, kann man keine Einigung finden“",
+          "link": "https://www.sueddeutsche.de/wirtschaft/frankreich-proteste-li.3565008"
+        }
+      ]
+    },
+    {
+      "titel": "So nimmt Russland Rüstungsfirmen ins Visier",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "So nimmt Russland Rüstungsfirmen ins Visier",
+          "link": "https://www.zdfheute.de/politik/ruestungsindustrie-hybride-angriffe-russland-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Vigdis Hjorths neuer Roman: So trinken sie alle Tage",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Vigdis Hjorths neuer Roman: So trinken sie alle Tage",
+          "link": "https://www.faz.net/aktuell/feuilleton/buecher/literatur/trinken-in-der-literatur-vidgis-hjorts-der-gute-mensch-von-sandvika-201262119.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Herr Selenskyj sollte darauf bestehen, dass die EU massiv bei diesen Gesprächen beteiligt ist“",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "„Herr Selenskyj sollte darauf bestehen, dass die EU massiv bei diesen Gesprächen beteiligt ist“",
+          "link": "https://www.welt.de/politik/ausland/video6af441c3c45061d752ba60dc/ukraine-gespraeche-in-abu-dhabi-herr-selenskyj-sollte-darauf-bestehen-dass-die-eu-massiv-bei-diesen-gespraechen-beteiligt-ist.html"
+        }
+      ]
+    },
+    {
+      "titel": "Künstliche Intelligenz: Rüstungsfirma Helsing stellt KI-Plattform für den Krieg vor",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Künstliche Intelligenz: Rüstungsfirma Helsing stellt KI-Plattform für den Krieg vor",
+          "link": "https://www.spiegel.de/politik/kuenstliche-intelligenz-ruestungsfirma-helsing-stellt-ki-plattform-fuer-den-krieg-vor-a-1f8e1735-bf78-4eba-b1d0-5e89239888c3#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Bikar und Bokak: Ein Naturparadies im Pazifik zeigt, was andere Orte verloren haben",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Bikar und Bokak: Ein Naturparadies im Pazifik zeigt, was andere Orte verloren haben",
+          "link": "https://www.spiegel.de/wissenschaft/natur/bikar-und-bokak-ein-naturparadies-im-pazifik-zeigt-was-andere-orte-verloren-haben-a-2c03b3d5-f01b-4d5b-bb26-6ad4def818d1#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Krisenschutz: Regierung bringt Gasreserve für Deutschland auf den Weg",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Krisenschutz: Regierung bringt Gasreserve für Deutschland auf den Weg",
+          "link": "https://www.faz.net/aktuell/wirtschaft/regierung-beschliesst-gasreserve-antworten-auf-die-wichtigsten-fragen-accg-201672367.html"
+        }
+      ]
+    },
+    {
+      "titel": "Panne im Bildungsministerium – Thüringens Schüler bekommen einen zusätzlichen freien Tag",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Panne im Bildungsministerium – Thüringens Schüler bekommen einen zusätzlichen freien Tag",
+          "link": "https://www.welt.de/politik/deutschland/article6af4311be22aeb948141f7b3/thueringen-panne-im-bildungsministerium-schueler-bekommen-einen-zusaetzlichen-freien-tag.html"
+        }
+      ]
+    },
+    {
+      "titel": "Kreistag lehnt Einspruch von AfD-Politiker nach Wahlausschluss ab",
+      "medien": [
+        "Welt"
+      ],
+      "artikel": [
+        {
+          "quelle": "Welt",
+          "titel": "Kreistag lehnt Einspruch von AfD-Politiker nach Wahlausschluss ab",
+          "link": "https://www.welt.de/politik/deutschland/article6af424b2e22aeb948141f6ad/landratswahl-friesland-kreistag-lehnt-einspruch-von-afd-politiker-nach-wahlausschluss-ab.html"
+        }
+      ]
+    },
+    {
+      "titel": "Business-Ticker: Kartellamt macht Paypal-Händlern Hoffnung",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Business-Ticker: Kartellamt macht Paypal-Händlern Hoffnung",
+          "link": "https://www.faz.net/aktuell/wirtschaft/unternehmen/business-liveticker-paypal-konditoinen-im-visier-des-kartellamts-faz-200452404.html"
+        }
+      ]
+    },
+    {
+      "titel": "\"Elfter Elfter\": Start in die närrische Jahreszeit",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "\"Elfter Elfter\": Start in die närrische Jahreszeit",
+          "link": "https://www.zdfheute.de/panorama/karneval-fasching-fastnacht-elfter-elfter-beginn-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Schulden in China: Am Ende kam Hu mit seinem Bagger",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Schulden in China: Am Ende kam Hu mit seinem Bagger",
+          "link": "https://www.faz.net/aktuell/gesellschaft/menschen/mit-dem-bagger-gegen-das-amt-protestaktion-in-fengdong-accg-201671311.html"
+        }
+      ]
+    },
+    {
+      "titel": "Basketball-WM der Frauen: Fiebich führte Deutschland mit Bruch im Mittelfuß zum Rekorderfolg",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Basketball-WM der Frauen: Fiebich führte Deutschland mit Bruch im Mittelfuß zum Rekorderfolg",
+          "link": "https://www.spiegel.de/sport/basketball/basketball-wm-der-frauen-fiebich-fuehrte-deutschland-mit-bruch-im-mittelfuss-zum-rekorderfolg-a-09effaad-61c3-411b-ba48-193a47b5460e#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Reportagebuch DR Kongo: Der Alltag neben dem Krieg",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Reportagebuch DR Kongo: Der Alltag neben dem Krieg",
+          "link": "https://taz.de/Reportagebuch-DR-Kongo/!6226774/"
+        }
+      ]
+    },
+    {
+      "titel": "Fifa-Machtkampf: Und der Herausforderer von Infantino ist … Arsène Wenger! Oder?",
+      "medien": [
+        "Süddeutsche"
+      ],
+      "artikel": [
+        {
+          "quelle": "Süddeutsche",
+          "titel": "Fifa-Machtkampf: Und der Herausforderer von Infantino ist … Arsène Wenger! Oder?",
+          "link": "https://www.sueddeutsche.de/sport/fifa-infantino-wenger-wahl-herausforderer-li.3578668"
+        }
+      ]
+    },
+    {
+      "titel": "Problemfall Abfall: Der Müll der anderen",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Problemfall Abfall: Der Müll der anderen",
+          "link": "https://taz.de/Woher-kommt-der-illegale-Muell-in-Bremens-Strassen-Eine-Spurensuche/!6220288/"
+        }
+      ]
+    },
+    {
+      "titel": "USA: Baby überlebt rund 24 Stunden in vergrabener Box",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "USA: Baby überlebt rund 24 Stunden in vergrabener Box",
+          "link": "https://www.faz.net/aktuell/gesellschaft/kriminalitaet/baby-in-hundebox-vergraben-rettung-in-south-carolina-accg-201672153.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wegwerfagenten: Rüstungsmanager im Visier",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Wegwerfagenten: Rüstungsmanager im Visier",
+          "link": "https://www.zdfheute.de/video/politik-wegwerfagenten-ruestung-frontal-video-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Österreich: Schwere Vorwürfe gegen Barmherzige Brüder wegen Medikamentenabrechnung",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Österreich: Schwere Vorwürfe gegen Barmherzige Brüder wegen Medikamentenabrechnung",
+          "link": "https://www.spiegel.de/wirtschaft/oesterreich-schwere-vorwuerfe-gegen-barmherzige-brueder-wegen-medikamentenabrechnung-a-a02875a4-40a2-438a-bffc-0c8a97c4aef7#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Wie deutsche Rüstungsmanager bedroht werden",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Wie deutsche Rüstungsmanager bedroht werden",
+          "link": "https://www.zdfheute.de/video/frontal/frontal-inside-bedrohung-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Liveblog Nahost: US-Finanzminister Bessent zieht auf Militärbasis",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Liveblog Nahost: US-Finanzminister Bessent zieht auf Militärbasis",
+          "link": "https://www.faz.net/aktuell/politik/ausland/liveblog-nahost-us-finanzminister-bessent-zieht-auf-militaerbasis-faz-200583539.html"
+        }
+      ]
+    },
+    {
+      "titel": "Massenfestnahmen in Moskau: „Wie Mäuse in einem Käfig“",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Massenfestnahmen in Moskau: „Wie Mäuse in einem Käfig“",
+          "link": "https://taz.de/Massenfestnahmen-in-Moskau/!6228674/"
+        }
+      ]
+    },
+    {
+      "titel": "Raphaël Glucksmann: Der Sohn des Philosophen will Präsident werden",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Raphaël Glucksmann: Der Sohn des Philosophen will Präsident werden",
+          "link": "https://www.faz.net/aktuell/feuilleton/debatten/wahlkampf-in-frankreich-wer-ist-raphael-glucksmann-accg-201668087.html"
+        }
+      ]
+    },
+    {
+      "titel": "Politischer Wahlkampf auf Social Media: Brasilien verhängt Strafe gegen Meta",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Politischer Wahlkampf auf Social Media: Brasilien verhängt Strafe gegen Meta",
+          "link": "https://taz.de/Politischer-Wahlkampf-auf-Social-Media/!6229126/"
+        }
+      ]
+    },
+    {
+      "titel": "Regierungsbildung weiter unklar: Neues Parlament in Israel vereidigt",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Regierungsbildung weiter unklar: Neues Parlament in Israel vereidigt",
+          "link": "https://www.faz.net/video/neues-parlament-in-israel-vereidigt-201672246.html"
+        }
+      ]
+    },
+    {
+      "titel": "Goethe-Universität: Warum weniger Fachbereiche gut sein können",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Goethe-Universität: Warum weniger Fachbereiche gut sein können",
+          "link": "https://www.faz.net/aktuell/rhein-main/frankfurt/uni-frankfurt-warum-weniger-fachbereiche-sinnvoll-sein-koennen-201649807.html"
+        }
+      ]
+    },
+    {
+      "titel": "Autoritarismus-Studie: Die Deutschen erfasst eine Sehnsucht nach der Apokalypse",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Autoritarismus-Studie: Die Deutschen erfasst eine Sehnsucht nach der Apokalypse",
+          "link": "https://www.faz.net/aktuell/politik/autoritarismus-studie-deutsche-immer-unzufriedener-mit-demokratie-accg-201669494.html"
+        }
+      ]
+    },
+    {
+      "titel": "Pubertät: Warum meine 13-Jährige »Pretty Woman« noch nicht sehen soll",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Pubertät: Warum meine 13-Jährige »Pretty Woman« noch nicht sehen soll",
+          "link": "https://www.spiegel.de/familie/pubertaet-warum-meine-13-jaehrige-pretty-woman-noch-nicht-sehen-soll-a-84feb35d-20d5-49c0-9301-c8a640fbdedd#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Demokraten in den USA: Übertragbares Erfolgsrezept",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Demokraten in den USA: Übertragbares Erfolgsrezept",
+          "link": "https://taz.de/US-Midterms-Die-Menschen-haben-genug-von-Polarisierung-und-gegenseitiger-Abwertung/!6228886/"
+        }
+      ]
+    },
+    {
+      "titel": "Plattdeutsche Buchmesse in Hamburg: Unter Platt Protern",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Plattdeutsche Buchmesse in Hamburg: Unter Platt Protern",
+          "link": "https://taz.de/Plattdeutsche-Buchmesse-in-Hamburg/!6228229/"
+        }
+      ]
+    },
+    {
+      "titel": "Autosammlung Vatikan: Göttliche Garage",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Autosammlung Vatikan: Göttliche Garage",
+          "link": "https://www.faz.net/aktuell/technik-motor/motor/goettliche-garage-die-besondere-autosammlung-des-vatikan-accg-201642924.html"
+        }
+      ]
+    },
+    {
+      "titel": "Karnevalist Jacques Tilly: \"Trump ist ein Problemfall\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Karnevalist Jacques Tilly: \"Trump ist ein Problemfall\"",
+          "link": "https://www.zdfheute.de/panorama/karneval-jacques-tilly-satire-trump-putin-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Karneval Köln im Regen, Route du Rhum - Destination Guadeloupe, Dal-See in Srinagar",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Karneval Köln im Regen, Route du Rhum - Destination Guadeloupe, Dal-See in Srinagar",
+          "link": "https://www.tagesschau.de/multimedia/bilder/blickpunkte-10560.html"
+        }
+      ]
+    },
+    {
+      "titel": "Profite von Rüstungskonzernen - Linke will Übergewinne besteuern",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Profite von Rüstungskonzernen - Linke will Übergewinne besteuern",
+          "link": "https://www.tagesschau.de/inland/innenpolitik/linke-uebergewinne-ruestungskonzerne-steuer-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "US-Justizministerium: Drei Männer wegen Terrorunterstützung angeklagt",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "US-Justizministerium: Drei Männer wegen Terrorunterstützung angeklagt",
+          "link": "https://www.tagesschau.de/ausland/amerika/usa-anklage-unterstuetzung-terroranschlaege-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Gefahr in der Leitung: Was hilft gegen Legionellen im Trinkwasser?",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Gefahr in der Leitung: Was hilft gegen Legionellen im Trinkwasser?",
+          "link": "https://www.faz.net/aktuell/wirtschaft/immobilien-wohnen/energie-heizung/legionellen-im-trinkwasser-was-bewohner-und-eigentuemer-tun-koennen-accg-201621803.html"
+        }
+      ]
+    },
+    {
+      "titel": "Künstler Nicolas Daubanes in Karlsruhe: Sägt man das Gefängnisgitter an, entsteht Eisenpulver",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Künstler Nicolas Daubanes in Karlsruhe: Sägt man das Gefängnisgitter an, entsteht Eisenpulver",
+          "link": "https://taz.de/Kuenstler-Nicolas-Daubanes-in-Karlsruhe/!6228831/"
+        }
+      ]
+    },
+    {
+      "titel": "Trigema-Chefin Bonita Grupp: „Der Kanzler darf jetzt nicht einknicken“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Trigema-Chefin Bonita Grupp: „Der Kanzler darf jetzt nicht einknicken“",
+          "link": "https://www.faz.net/aktuell/wirtschaft/unternehmen/trigema-co-chefin-bonita-grupp-spricht-mit-der-f-a-z-ueber-die-rolle-von-politik-und-unternehmern-accg-201664761.html"
+        }
+      ]
+    },
+    {
+      "titel": "Podcast 15 Minuten: Influencer-Werbung, Sportvereine, Passkeys",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Podcast 15 Minuten: Influencer-Werbung, Sportvereine, Passkeys",
+          "link": "https://www.tagesschau.de/multimedia/podcast/15-minuten/podcast-15-minuten-influencer-werbung-sportvereine-passkeys-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Jailscraper“: Wolkenkratzer statt Strafkolonie",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "„Jailscraper“: Wolkenkratzer statt Strafkolonie",
+          "link": "https://www.faz.net/aktuell/wirtschaft/immobilien-wohnen/bauen-kaufen/rikers-island-new-york-plant-das-hoechste-gefaengnis-der-welt-accg-201630901.html"
+        }
+      ]
+    },
+    {
+      "titel": "„Hi, Baby“-Kolumne: Mein Partner, der emotionale Boxsack",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "„Hi, Baby“-Kolumne: Mein Partner, der emotionale Boxsack",
+          "link": "https://www.faz.net/aktuell/besser-leben/stil/warum-mein-partner-manchmal-der-emotionale-boxsack-ist-accg-201670236.html"
+        }
+      ]
+    },
+    {
+      "titel": "Youth Games in Dakar: Die Spiele kommen nach Afrika – aber zu welchem Preis?",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Youth Games in Dakar: Die Spiele kommen nach Afrika – aber zu welchem Preis?",
+          "link": "https://www.faz.net/aktuell/sport/fussball/olympische-jugendspiele-in-dakar-historisch-aber-wessen-zukunft-accg-201650952.html"
+        }
+      ]
+    },
+    {
+      "titel": "DB verzögert brückenbau: Ein Skandal in Darmstadt",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "DB verzögert brückenbau: Ein Skandal in Darmstadt",
+          "link": "https://www.faz.net/aktuell/rhein-main/frankfurt/darmstadt-deutsche-bahn-verzoegert-bau-der-rheinstrassenbruecke-201669708.html"
+        }
+      ]
+    },
+    {
+      "titel": "Selinunt auf Sizilien: Wo das alte Griechenland noch eine Wunderwelt ist",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Selinunt auf Sizilien: Wo das alte Griechenland noch eine Wunderwelt ist",
+          "link": "https://www.faz.net/aktuell/feuilleton/kunst-und-architektur/archaeologie/spur-der-steine/selinunt-auf-sizilien-wo-das-alte-griechenland-noch-eine-wunderwelt-ist-accg-201624968.html"
+        }
+      ]
+    },
+    {
+      "titel": "Klimaschutz-Index: Deutschland fällt auf Platz 25",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Klimaschutz-Index: Deutschland fällt auf Platz 25",
+          "link": "https://www.zdfheute.de/wissen/klimaschutz-index-deutschland-vergleich-erneuerbare-energien-energieverbrauch-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Kerstin Preiwuß „Wir alle“: Alle überkommt immer häufiger das Heulen",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Kerstin Preiwuß „Wir alle“: Alle überkommt immer häufiger das Heulen",
+          "link": "https://taz.de/Kerstin-Preiwuss-Wir-alle/!6226778/"
+        }
+      ]
+    },
+    {
+      "titel": "Klimaschutz-Exporte: Deutschland auf zweitem Platz hinter China",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Klimaschutz-Exporte: Deutschland auf zweitem Platz hinter China",
+          "link": "https://www.faz.net/aktuell/wirtschaft/klima-nachhaltigkeit/china-und-deutschland-sind-die-technologie-champions-fuer-den-klimaschutz-accg-201671717.html"
+        }
+      ]
+    },
+    {
+      "titel": "Die Wahrheit: Geölte Unterhosen",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Die Wahrheit: Geölte Unterhosen",
+          "link": "https://taz.de/Die-Wahrheit/!6228860/"
+        }
+      ]
+    },
+    {
+      "titel": "Private Equity: Das Milliardengeschäft mit den Kindern",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Private Equity: Das Milliardengeschäft mit den Kindern",
+          "link": "https://www.faz.net/aktuell/sport/mehr-sport/private-equity-wie-investoren-den-us-jugendsport-veraendern-accg-201654002.html"
+        }
+      ]
+    },
+    {
+      "titel": "Verkehrsforscherin über Nahverkehr: „Der Bus muss so kommen, dass man nicht lange wartet“",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Verkehrsforscherin über Nahverkehr: „Der Bus muss so kommen, dass man nicht lange wartet“",
+          "link": "https://taz.de/Wie-wird-der-OePNV-auch-in-laendlichen-Regionen-attraktiv-Das-sagt-eine-Verkehrsforscherin/!6228324/"
+        }
+      ]
+    },
+    {
+      "titel": "Paraglider hängt in Stromleitung fest",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Paraglider hängt in Stromleitung fest",
+          "link": "https://www.zdfheute.de/video/indien-paragleiter-stromleitung-video-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Rechtsruck im Klassenzimmer: Wenn rechts angesagt ist",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Rechtsruck im Klassenzimmer: Wenn rechts angesagt ist",
+          "link": "https://taz.de/Sachsen-Wie-der-gesellschaftliche-Rechtsruck-zunehmend-den-Schulalltag-praegt/!6228618/"
+        }
+      ]
+    },
+    {
+      "titel": "Immobilien: Der unheimliche Aufstieg des Maklers Evernest",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Immobilien: Der unheimliche Aufstieg des Maklers Evernest",
+          "link": "https://www.manager-magazin.de/unternehmen/immobilien-der-unheimliche-aufstieg-des-maklers-evernest-a-12f69d68-1f3e-43bd-9ab9-fa27c461b524#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Omid Nouripour: Vanessa Emde ist \"das kalte Grauen\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Omid Nouripour: Vanessa Emde ist \"das kalte Grauen\"",
+          "link": "https://www.zdfheute.de/politik/deutschland/lanz-nouripour-gueler-berlin-linke-emde-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Prompts für KI im Browser: Claude, bitte kündige mein Netflix-Abo",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Prompts für KI im Browser: Claude, bitte kündige mein Netflix-Abo",
+          "link": "https://www.faz.net/premium/digitalwirtschaft/ki-akademie/claude-bitte-kuendige-mein-netflix-abo-das-kann-der-browser-agent-accg-201669985.html"
+        }
+      ]
+    },
+    {
+      "titel": "Nach dem Telefonat: Putin kann auch zuhören, sagt Alexander Stubb",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Nach dem Telefonat: Putin kann auch zuhören, sagt Alexander Stubb",
+          "link": "https://www.faz.net/aktuell/politik/ukraine/putin-kann-auch-zuhoeren-alexander-stubb-verteidigt-telefonat-mit-russlands-praesidenten-accg-201666647.html"
+        }
+      ]
+    },
+    {
+      "titel": "Zahl der Kriegsdienstverweigerer steigt weiter deutlich",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Zahl der Kriegsdienstverweigerer steigt weiter deutlich",
+          "link": "https://www.tagesschau.de/inland/kriegsdienstverweigerer-steigend-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Künstliche Intelligenz im Büro: Die 20 besten Prompts, um Microsoft Copilot optimal zu nutzen",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Künstliche Intelligenz im Büro: Die 20 besten Prompts, um Microsoft Copilot optimal zu nutzen",
+          "link": "https://www.faz.net/premium/digitalwirtschaft/ki-akademie/microsoft-copilot-optimal-nutzen-die-20-besten-prompts-accg-201665213.html"
+        }
+      ]
+    },
+    {
+      "titel": "The General Data Company: Drei Europäer verkaufen das Gedächtnis des deutschen Mittelstands an KI-Labore",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "The General Data Company: Drei Europäer verkaufen das Gedächtnis des deutschen Mittelstands an KI-Labore",
+          "link": "https://www.faz.net/premium/digitalwirtschaft/kuenstliche-intelligenz/deutsches-industriewissen-fuer-ki-labore-start-up-kauft-mittelstaendlern-alte-daten-ab-accg-201668551.html"
+        }
+      ]
+    },
+    {
+      "titel": "Lehrjahre in Gefahr: KI trifft bisher nur die Berufseinsteiger",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Lehrjahre in Gefahr: KI trifft bisher nur die Berufseinsteiger",
+          "link": "https://www.faz.net/premium/digitalwirtschaft/kuenstliche-intelligenz/ki-verdraengt-berufseinsteiger-34-000-stellen-fehlen-accg-201669934.html"
+        }
+      ]
+    },
+    {
+      "titel": "11KM-Podcast: Millionen tote Rehe und Hirsche für den Klimawald?",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "11KM-Podcast: Millionen tote Rehe und Hirsche für den Klimawald?",
+          "link": "https://www.tagesschau.de/podcast-11km-klimaschutz-rehe-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Für wen sich das Altersvorsorgedepot lohnt",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Für wen sich das Altersvorsorgedepot lohnt",
+          "link": "https://www.zdfheute.de/ratgeber/altersvorsorgedepot-2027-riester-rente-reform-ueberblick-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wie Krebsgenesene vor Nachteilen geschützt werden sollen",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Wie Krebsgenesene vor Nachteilen geschützt werden sollen",
+          "link": "https://www.zdfheute.de/ratgeber/krebs-versicherung-diskriminierung-recht-auf-vergessen-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wie Spaniens Mieterbewegung für den Generalstreik mobilisiert",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Wie Spaniens Mieterbewegung für den Generalstreik mobilisiert",
+          "link": "https://www.tagesschau.de/ausland/europa/spanien-generalstreik-mieterbewegung-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Nachtodkontakt: „Sohn, an das Totsein muss man sich erst gewöhnen“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Nachtodkontakt: „Sohn, an das Totsein muss man sich erst gewöhnen“",
+          "link": "https://www.faz.net/aktuell/wissen/leben-gene/wenn-tote-zurueckkehren-was-steckt-hinter-geistererlebnissen-accg-201646772.html"
+        }
+      ]
+    },
+    {
+      "titel": "Tom Liebscher-Lucz: \"Auf Konstanz kommt es an\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Tom Liebscher-Lucz: \"Auf Konstanz kommt es an\"",
+          "link": "https://www.zdfheute.de/sport/youth-olympic-games-sportler-uebergang-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "F.A.Z. Frühdenker: Wie entwickelt sich die deutsche Wirtschaft?",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "F.A.Z. Frühdenker: Wie entwickelt sich die deutsche Wirtschaft?",
+          "link": "https://www.faz.net/podcasts/f-a-z-podcast-fruehdenker/wie-entwickelt-sich-die-deutsche-wirtschaft-f-a-z-fruehdenker-201671206.html"
+        }
+      ]
+    },
+    {
+      "titel": "Krawalle in Deutschland: Wen Politiker meinen, wenn sie von »Chaoten« sprechen",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Krawalle in Deutschland: Wen Politiker meinen, wenn sie von »Chaoten« sprechen",
+          "link": "https://www.spiegel.de/kultur/krawalle-in-deutschland-wen-politiker-meinen-wenn-sie-von-chaoten-sprechen-a-2fd2977b-0b8a-4864-a3da-9be25e4e7b73#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Stellenabbau: Reicht die Abfindung bis zur Rente?",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Stellenabbau: Reicht die Abfindung bis zur Rente?",
+          "link": "https://www.faz.net/aktuell/finanzen/abfindung-bis-zur-rente-so-rechnet-sich-der-fruehe-ausstieg-accg-201648049.html"
+        }
+      ]
+    },
+    {
+      "titel": "Taekwondo-Kämpfer holen Gold und Bronze",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Taekwondo-Kämpfer holen Gold und Bronze",
+          "link": "https://www.zdfheute.de/video/zdf-morgenmagazin/yog-taekwondo-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Rennrodler Felix Loch: \"Vorfreude ist riesig\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Rennrodler Felix Loch: \"Vorfreude ist riesig\"",
+          "link": "https://www.zdfheute.de/video/zdf-morgenmagazin/felix-loch-188.html"
+        }
+      ]
+    },
+    {
+      "titel": "Kommentar: Aigner hätte auch zu AfD und Linken gehen müssen",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Kommentar: Aigner hätte auch zu AfD und Linken gehen müssen",
+          "link": "https://www.tagesschau.de/inland/innenpolitik/aigner-bundespraesidentin-kein-besuch-bei-afd-linke-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "\"Geisterspiel\" in Serbien: DFB darf 50 Fans mitbringen",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "\"Geisterspiel\" in Serbien: DFB darf 50 Fans mitbringen",
+          "link": "https://www.sportschau.de/fussball/nationalmannschaft/50-deutsche-fans-beim-geisterspiel-in-serbien,serbien-fussball-stadion-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Beendruckendes Ritual: Der \"Tila\" der Cook Islands",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Beendruckendes Ritual: Der \"Tila\" der Cook Islands",
+          "link": "https://www.zdfheute.de/sport/video/yog-beachhandball-tali-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Maschinenbaugipfel: Kann der Einsatz von KI für Aufwind in der Branche sorgen?",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Maschinenbaugipfel: Kann der Einsatz von KI für Aufwind in der Branche sorgen?",
+          "link": "https://www.tagesschau.de/tagesthemen/video-1681736.html"
+        }
+      ]
+    },
+    {
+      "titel": "tagesthemen",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "tagesthemen",
+          "link": "https://www.tagesschau.de/tagesthemen/tt-12978.html"
+        }
+      ]
+    },
+    {
+      "titel": "\"GTA VI\": Download-Start für gefeiertes Videospiel",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "\"GTA VI\": Download-Start für gefeiertes Videospiel",
+          "link": "https://www.tagesschau.de/tagesthemen/video-1681730.html"
+        }
+      ]
+    },
+    {
+      "titel": "Erster Tag der Ukraine-Gespräche: Keine Ergebnisse, aber Hoffnung für Gefangene",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Erster Tag der Ukraine-Gespräche: Keine Ergebnisse, aber Hoffnung für Gefangene",
+          "link": "https://www.tagesschau.de/ausland/asien/ukraine-russland-krieg-gespraeche-abu-dhabi-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Linken-Fraktion: Emde soll ausgeschlossen werden",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Linken-Fraktion: Emde soll ausgeschlossen werden",
+          "link": "https://www.zdfheute.de/video/politik-emde-linke-kritik-partei-ausschluss-video-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Trauermesse nach Zugunglück mit 69 Toten in Spanien",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Trauermesse nach Zugunglück mit 69 Toten in Spanien",
+          "link": "https://www.tagesschau.de/ausland/europa/trauermesse-spanien-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ringen um den Haushalt 2027: Knackpunkt für die Koalition – und den Kanzler",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Ringen um den Haushalt 2027: Knackpunkt für die Koalition – und den Kanzler",
+          "link": "https://www.faz.net/aktuell/wirtschaft/knackpunkt-fuer-die-koalition-und-den-kanzler-201669108.html"
+        }
+      ]
+    },
+    {
+      "titel": "Mammutprozesse: Justitia im Schneckentempo",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Mammutprozesse: Justitia im Schneckentempo",
+          "link": "https://www.faz.net/aktuell/politik/schlesinger-block-etc-warum-dauern-strafprozesse-immer-so-lange-201669212.html"
+        }
+      ]
+    },
+    {
+      "titel": "Fußfessel selbst entfernt: Thomas Markle erneut festgenommen",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Fußfessel selbst entfernt: Thomas Markle erneut festgenommen",
+          "link": "https://www.zdfheute.de/panorama/kriminalitaet/thomas-markle-fussfessel-kindesmissbrauch-verdacht-meghan-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "CEUTA: Die Folgen für Europas Asylpolitik",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "CEUTA: Die Folgen für Europas Asylpolitik",
+          "link": "https://www.zdfheute.de/video/frontal/ceuta-und-die-folgen-fuer-europas-asylpolitik-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wirecard: Lehren aus dem Wirtschaftsskandal",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Wirecard: Lehren aus dem Wirtschaftsskandal",
+          "link": "https://www.zdfheute.de/video/frontal/wirecard-prozess-vor-abschluss-lehren-aus-dem-wirtschaftsskandal-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "AfD-Schlammschlacht in NRW",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "AfD-Schlammschlacht in NRW",
+          "link": "https://www.zdfheute.de/video/frontal/afd-schlammschlacht-in-nrw-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Rüstungsmanager im Visier russischer Agenten",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Rüstungsmanager im Visier russischer Agenten",
+          "link": "https://www.zdfheute.de/video/frontal/ruestungsunternehmen-im-visier-russischer-agenten-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Bedrohte Rüstungsfirmen | AfD-Schlammschlacht",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Bedrohte Rüstungsfirmen | AfD-Schlammschlacht",
+          "link": "https://www.zdf.de/video/magazine/frontal-das-magazin-100/frontal-vom-10-november-2026-100"
+        }
+      ]
+    },
+    {
+      "titel": "Streit um EU-Hilfen für Ukraine: Fico kritisiert Merz scharf",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Streit um EU-Hilfen für Ukraine: Fico kritisiert Merz scharf",
+          "link": "https://www.zdfheute.de/politik/ausland/eu-ukraine-finanzierung-streit-fico-merz-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "tagesschau",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "tagesschau",
+          "link": "https://www.tagesschau.de/tagesschau_20_uhr/ts-82020.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ablenkung am Steuer: Diskussion über bundesweite Handy-Blitzer",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Ablenkung am Steuer: Diskussion über bundesweite Handy-Blitzer",
+          "link": "https://www.tagesschau.de/tagesschau_20_uhr/video-1681668.html"
+        }
+      ]
+    },
+    {
+      "titel": "Honeytrapping und Midlifecrisis: Jensen Huang verstehen",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Honeytrapping und Midlifecrisis: Jensen Huang verstehen",
+          "link": "https://taz.de/Wurde-Nvidia-Tech-Bro-Jensen-Huang-am-Cockring-durch-die-Manege-gezogen/!6228899/"
+        }
+      ]
+    },
+    {
+      "titel": "UN-Klimakonferenz in der Türkei: Erdoğan freut sich über neue Ölfelder",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "UN-Klimakonferenz in der Türkei: Erdoğan freut sich über neue Ölfelder",
+          "link": "https://taz.de/UN-Klimakonferenz-in-der-Tuerkei/!6228894/"
+        }
+      ]
+    },
+    {
+      "titel": "Regierunsgchef Netanjahu: Das Ende in Sicht",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Regierunsgchef Netanjahu: Das Ende in Sicht",
+          "link": "https://taz.de/Koalitionsverhandlungen-in-Israel-Das-Ende-von-Netanjahu-ist-in-Sicht/!6228970/"
+        }
+      ]
+    },
+    {
+      "titel": "Nach der Parlamentswahl in Israel: Der Anfang vom Ende?",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Nach der Parlamentswahl in Israel: Der Anfang vom Ende?",
+          "link": "https://taz.de/Nach-der-Parlamentswahl-in-Israel/!6228920/"
+        }
+      ]
+    },
+    {
+      "titel": "Kunstkriminalität: Diebstahl auf der Art Cologne",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Kunstkriminalität: Diebstahl auf der Art Cologne",
+          "link": "https://www.faz.net/aktuell/feuilleton/kunstmarkt/diebstahl-auf-der-art-cologne-201671021.html"
+        }
+      ]
+    },
+    {
+      "titel": "Linksbündnis in Mecklenburg-Vorpommern: Kein Modell, aber eine Chance",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Linksbündnis in Mecklenburg-Vorpommern: Kein Modell, aber eine Chance",
+          "link": "https://taz.de/Geraeuschlose-Regierungsbildung-in-Mecklenburg-Vorpommern-Kein-Modell-aber-eine-Chance/!6224315/"
+        }
+      ]
+    },
+    {
+      "titel": "Geplatzter Diesel-Deal: Trump erleidet Schiffbruch",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Geplatzter Diesel-Deal: Trump erleidet Schiffbruch",
+          "link": "https://taz.de/Geplatzter-Diesel-Deal/!6228989/"
+        }
+      ]
+    },
+    {
+      "titel": "Ansturm auf Elektroautos: Mehr Förderung und längere Förderzeiten",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Ansturm auf Elektroautos: Mehr Förderung und längere Förderzeiten",
+          "link": "https://taz.de/Ansturm-auf-Elektroautos/!6228868/"
+        }
+      ]
+    },
+    {
+      "titel": "Verhandlungen in Abu Dhabi: Europa am Katzentisch",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Verhandlungen in Abu Dhabi: Europa am Katzentisch",
+          "link": "https://taz.de/Verhandlungen-in-Abu-Dhabi/!6228877/"
+        }
+      ]
+    },
+    {
+      "titel": "Verhandlungen in Abu Dhabi: Hoffnungen auf einen Getreide-Deal",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Verhandlungen in Abu Dhabi: Hoffnungen auf einen Getreide-Deal",
+          "link": "https://taz.de/Verhandlungen-in-Abu-Dhabi/!6228876/"
+        }
+      ]
+    },
+    {
+      "titel": "Martin McDonagh über „Wild Horse Nine“: „Das ist mir beim Käseessen eingefallen“",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Martin McDonagh über „Wild Horse Nine“: „Das ist mir beim Käseessen eingefallen“",
+          "link": "https://taz.de/Regisseur-Martin-McDonagh-zu-Wild-Horse-Nine-Das-ist-mir-beim-Kaeseessen-eingefallen/!6228721/"
+        }
+      ]
+    },
+    {
+      "titel": "Debatte um Linkspartei-Politikerin Emde: Ihr wird zu viel Bedeutung beigemessen",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Debatte um Linkspartei-Politikerin Emde: Ihr wird zu viel Bedeutung beigemessen",
+          "link": "https://taz.de/Die-umstrittene-Linken-Politikerin-Vanessa-Emde-wird-viel-zu-wichtig-genommen/!6228907/"
+        }
+      ]
+    },
+    {
+      "titel": "Gentrifizierung in NYC: New Yorks letzte Runde?",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Gentrifizierung in NYC: New Yorks letzte Runde?",
+          "link": "https://taz.de/Gentrifizierung-in-NYC/!6225606/"
+        }
+      ]
+    },
+    {
+      "titel": "Album von Endless Wellness aus Wien: Vielleicht ist das Internet schuld?",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Album von Endless Wellness aus Wien: Vielleicht ist das Internet schuld?",
+          "link": "https://taz.de/Album-von-Endless-Wellness-aus-Wien/!6228550/"
+        }
+      ]
+    },
+    {
+      "titel": "Eishockey-WM: Deutschland schlägt Tschechien und steht im Viertelfinale",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Eishockey-WM: Deutschland schlägt Tschechien und steht im Viertelfinale",
+          "link": "https://www.sportschau.de/eishockey/wm/welcke-zwillinge-fuehren-deutschland-ins-wm-viertelfinale,deutschland-tschechien-spielbericht-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Volkswagen in Sachsen: „In Wahrheit gibt es einen knallharten Standortwettbewerb“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Volkswagen in Sachsen: „In Wahrheit gibt es einen knallharten Standortwettbewerb“",
+          "link": "https://www.faz.net/aktuell/wirtschaft/ministerpraesident-kretschmer-kaempft-um-vw-standort-zwickau-201658885.html"
+        }
+      ]
+    },
+    {
+      "titel": "Weg zum Triathlon: „Zu hektisches Atmen kann Seitenstechen begünstigen“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Weg zum Triathlon: „Zu hektisches Atmen kann Seitenstechen begünstigen“",
+          "link": "https://www.faz.net/aktuell/sport/sport-tipps/sport-tipps-auf-dem-weg-zum-triathlon-was-tun-gegen-seitenstechen-201648072.html"
+        }
+      ]
+    },
+    {
+      "titel": "Toll! Wie konnte Trump verlieren?",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Toll! Wie konnte Trump verlieren?",
+          "link": "https://www.zdf.de/video/magazine/frontal-toll-satire-von-doye-und-wiemers-100/satire-toll-trump-verliert-midterms-102"
+        }
+      ]
+    },
+    {
+      "titel": "Gedämpfte Stimmung in NRW: Womit die CDU-Basis hadert",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Gedämpfte Stimmung in NRW: Womit die CDU-Basis hadert",
+          "link": "https://www.zdfheute.de/politik/deutschland/landtagswahl-nrw-2027-cdu-afd-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Rot-rot-grüner Koalitionsvertrag steht",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Rot-rot-grüner Koalitionsvertrag steht",
+          "link": "https://www.zdfheute.de/politik/deutschland/mecklenburg-vorpommern-koalitionsvertrag-rot-rot-gruen-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Lagarde-Nachfolge: Der Kunstfan und der Stones-Anhänger",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Lagarde-Nachfolge: Der Kunstfan und der Stones-Anhänger",
+          "link": "https://www.faz.net/aktuell/finanzen/finanzmarkt/klaas-knot-und-pablo-hernandez-de-cos-wer-folgt-lagarde-an-der-ezb-spitze-201668961.html"
+        }
+      ]
+    },
+    {
+      "titel": "Paralympics-Siegerin Liebhardt stirbt mit 44 Jahren",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Paralympics-Siegerin Liebhardt stirbt mit 44 Jahren",
+          "link": "https://www.zdfheute.de/sport/video/paralympics-siegerin-franziska-liebhardt-gestorben-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Bericht: BVB fordert Nmecha zu Verzicht auf Jubel-Geste auf",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Bericht: BVB fordert Nmecha zu Verzicht auf Jubel-Geste auf",
+          "link": "https://www.zdfheute.de/sport/fussball-nations-league/nmecha-torjubel-klopp-gespraech-dfb-team-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Deutsche Eishockey-Frauen mit Überraschungssieg bei WM",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Deutsche Eishockey-Frauen mit Überraschungssieg bei WM",
+          "link": "https://www.zdfheute.de/sport/eishockey-wm-frauen-tschechien-deutschland-ergebnis-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ceuta: Politischer Streit, menschliche Schicksale",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Ceuta: Politischer Streit, menschliche Schicksale",
+          "link": "https://www.zdfheute.de/politik/ausland/ceuta-massenflucht-streit-folgen-europa-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Fake News zu Absage von Martinsumzügen gehen viral",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Fake News zu Absage von Martinsumzügen gehen viral",
+          "link": "https://www.zdfheute.de/panorama/faktencheck-st-martin-lichterfest-umbenennung-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wie alle von Füllkrugs Rückkehr profitieren können",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Wie alle von Füllkrugs Rückkehr profitieren können",
+          "link": "https://www.zdfheute.de/sport/fussball-nationalmannschaft-nations-league-niclas-fuellkrug-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "\"KI hat viele Chancen, den Energieverbrauch zu reduzieren\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "\"KI hat viele Chancen, den Energieverbrauch zu reduzieren\"",
+          "link": "https://www.zdfheute.de/politik/ausland/ki-boom-energieverbrauch-reduzieren-experte-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Özdemir über Roth: Alte Doppelspitze, neuer Streit",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Özdemir über Roth: Alte Doppelspitze, neuer Streit",
+          "link": "https://taz.de/Oezdemir-ueber-Roth/!6229104/"
+        }
+      ]
+    },
+    {
+      "titel": "Fall Fabian: So bewertet Profiler Petermann das Urteil",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Fall Fabian: So bewertet Profiler Petermann das Urteil",
+          "link": "https://www.zdfheute.de/panorama/kriminalitaet/mordfall-fabian-urteil-taeterin-motiv-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Will Aigner wirklich Brücken bauen?",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Will Aigner wirklich Brücken bauen?",
+          "link": "https://www.zdfheute.de/politik/deutschland/aigner-bundespraesidentin-linke-afd-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ukraine-gespräche: Putin muss sich bewegen",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Ukraine-gespräche: Putin muss sich bewegen",
+          "link": "https://www.faz.net/aktuell/politik/ausland/friedensgespraeche-in-abu-dhabi-putin-muss-sich-bewegen-201669660.html"
+        }
+      ]
+    },
+    {
+      "titel": "Flucht nach Ceuta - Wer steckt dahinter?",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Flucht nach Ceuta - Wer steckt dahinter?",
+          "link": "https://www.zdf.de/video/reportagen/die-spur-224/migration-ceuta-flucht-europa-100"
+        }
+      ]
+    },
+    {
+      "titel": "Sitzung des schwarz-roten Senats: Gaebler ganz gelassen",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Sitzung des schwarz-roten Senats: Gaebler ganz gelassen",
+          "link": "https://taz.de/Sitzung-des-schwarz-roten-Senats/!6228105/"
+        }
+      ]
+    },
+    {
+      "titel": "Schwarz-rote Rentenreform: Keine Krise, nur Umlage",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Schwarz-rote Rentenreform: Keine Krise, nur Umlage",
+          "link": "https://taz.de/Schwarz-rote-Rentenreform/!6228873/"
+        }
+      ]
+    },
+    {
+      "titel": "Linke in Berlin: Mit Emdes Ausschluss wäre es nicht getan",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Linke in Berlin: Mit Emdes Ausschluss wäre es nicht getan",
+          "link": "https://www.faz.net/aktuell/politik/inland/vanessa-emde-warum-ihr-ausschluss-die-linkspartei-nicht-rettet-201669725.html"
+        }
+      ]
+    },
+    {
+      "titel": "Linke über Regierung in Sachsen-Anhalt: „Wir sind die antifaschistische Alternative“",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Linke über Regierung in Sachsen-Anhalt: „Wir sind die antifaschistische Alternative“",
+          "link": "https://taz.de/Linke-ueber-Regierung-in-Sachsen-Anhalt/!6228949/"
+        }
+      ]
+    },
+    {
+      "titel": "Wadephul warnt Iran vor hybriden Angriffen",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Wadephul warnt Iran vor hybriden Angriffen",
+          "link": "https://www.tagesschau.de/ausland/wadephul-iran-102.html"
+        }
+      ]
+    },
+    {
+      "titel": "Explodierende Projektkosten in Hamburg: Peinliche Fragen für Rot-Grün",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Explodierende Projektkosten in Hamburg: Peinliche Fragen für Rot-Grün",
+          "link": "https://taz.de/Explodierende-Projektkosten-in-Hamburg/!6228867/"
+        }
+      ]
+    },
+    {
+      "titel": "Restaurierter Film von Ken Russell: „Die Teufel“ von Berlin",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Restaurierter Film von Ken Russell: „Die Teufel“ von Berlin",
+          "link": "https://taz.de/Ken-Russells-Film-Die-Teufel-restauriert-Hexenverfolgungen-sind-wieder-in---gerade-in-Berlin/!6228841/"
+        }
+      ]
+    },
+    {
+      "titel": "Booker Prize für Postapokalyptiker: Ein alter Mann, der das nicht mehr erwartet hätte",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Booker Prize für Postapokalyptiker: Ein alter Mann, der das nicht mehr erwartet hätte",
+          "link": "https://taz.de/Booker-Prize-fuer-Postapokalyptiker/!6228968/"
+        }
+      ]
+    },
+    {
+      "titel": "Kapitalmarkt-Fachmann Engels: „Eine Eurokrise 2.0 wird es nächstes Jahr nicht geben“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Kapitalmarkt-Fachmann Engels: „Eine Eurokrise 2.0 wird es nächstes Jahr nicht geben“",
+          "link": "https://www.faz.net/aktuell/finanzen/finanzmarkt/frank-engels-zu-frankreich-in-le-pen-eine-eurokrise-2-0-wird-es-naechstes-jahr-nicht-geben-201669185.html"
+        }
+      ]
+    },
+    {
+      "titel": "Kritik an Statements von Claudia Roth: Sich von der Last der Geschichte befreien",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Kritik an Statements von Claudia Roth: Sich von der Last der Geschichte befreien",
+          "link": "https://taz.de/Kritik-an-Statements-von-Claudia-Roth/!6228991/"
+        }
+      ]
+    },
+    {
+      "titel": "Hamburg: Mutmaßlicher Schütze tot, weitere Leichen gefunden",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Hamburg: Mutmaßlicher Schütze tot, weitere Leichen gefunden",
+          "link": "https://www.zdfheute.de/panorama/kriminalitaet/schiesserei-hamburg-elbphilharmonie-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Französischer Impressionist: Renoir-Zeichnung gilt doch nicht als eine Fälschung",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Französischer Impressionist: Renoir-Zeichnung gilt doch nicht als eine Fälschung",
+          "link": "https://www.faz.net/aktuell/feuilleton/kunstmarkt/renoir-zeichnung-gilt-doch-nicht-als-eine-faelschung-201670797.html"
+        }
+      ]
+    },
+    {
+      "titel": "Vier Teenager sterben bei Autounfall in Südwestfalen",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Vier Teenager sterben bei Autounfall in Südwestfalen",
+          "link": "https://www.zdfheute.de/panorama/teenager-unfall-suedwestfalen-tote-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Steinmeier-Nachfolge: Aigners AfD-Prüfung beginnt an Tag eins",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Steinmeier-Nachfolge: Aigners AfD-Prüfung beginnt an Tag eins",
+          "link": "https://www.faz.net/aktuell/politik/inland/kuenftige-bundespraesidentin-die-afd-pruefung-hat-fuer-aigner-schon-begonnen-201669743.html"
+        }
+      ]
+    },
+    {
+      "titel": "Digitale Assistenten: Die Fernbedienung ruft die Pflegerin",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Digitale Assistenten: Die Fernbedienung ruft die Pflegerin",
+          "link": "https://www.faz.net/aktuell/rhein-main/region-und-hessen/digitale-helfer-fuer-senioren-fernbedienung-ruft-den-pfleger-201644067.html"
+        }
+      ]
+    },
+    {
+      "titel": "Laufenten halten Wohnviertel \"schneckenfrei\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Laufenten halten Wohnviertel \"schneckenfrei\"",
+          "link": "https://www.zdfheute.de/video/laufenten-gehen-gassi-dortmund-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Rhein-Main-Feierabendbriefing: Krawallnacht in Frankfurt: Polizei nennt Herkunft der Tatverdächtigen",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Rhein-Main-Feierabendbriefing: Krawallnacht in Frankfurt: Polizei nennt Herkunft der Tatverdächtigen",
+          "link": "https://www.faz.net/podcasts/rhein-main-feierabendbriefing/krawallnacht-in-frankfurt-polizei-nennt-herkunft-der-tatverdaechtigen-201670660.html"
+        }
+      ]
+    },
+    {
+      "titel": "Disability Studies in der Krise: Ungeliebte Antithese",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Disability Studies in der Krise: Ungeliebte Antithese",
+          "link": "https://taz.de/Disability-Studies-in-der-Krise/!6227558/"
+        }
+      ]
+    },
+    {
+      "titel": "Tote nach Massencrash in Bulgarien",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Tote nach Massencrash in Bulgarien",
+          "link": "https://www.zdfheute.de/video/bulgarien-unfall-verkehr-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Deutschland und Ungarn: Immer noch kein einfacher Partner",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Deutschland und Ungarn: Immer noch kein einfacher Partner",
+          "link": "https://taz.de/Deutschland-und-Ungarn/!6229020/"
+        }
+      ]
+    },
+    {
+      "titel": "Affäre von Nvidia-Chef: FBI ermittelt",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Affäre von Nvidia-Chef: FBI ermittelt",
+          "link": "https://www.zdfheute.de/video/wirtschaft-nvidia-fbi-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Aktuelles aus den Fraktionen - Aigner bei der SPD",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Aktuelles aus den Fraktionen - Aigner bei der SPD",
+          "link": "https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5246967"
+        }
+      ]
+    },
+    {
+      "titel": "Maschinenbauer \"fassungslos\" über Bundesregierung",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Maschinenbauer \"fassungslos\" über Bundesregierung",
+          "link": "https://www.tagesschau.de/wirtschaft/maschinenbaugipfel-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Bericht der Pfandbriefbanken: Höhere Bauzinsen bremsen die Immobilienpreise",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Bericht der Pfandbriefbanken: Höhere Bauzinsen bremsen die Immobilienpreise",
+          "link": "https://www.faz.net/aktuell/finanzen/finanzmarkt/immobilienpreise-in-deutschland-bauzinsen-bremsen-den-markt-201665254.html"
+        }
+      ]
+    },
+    {
+      "titel": "Anthropic peilt Börsen-Bewertung von über einer Billion Dollar an",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Anthropic peilt Börsen-Bewertung von über einer Billion Dollar an",
+          "link": "https://www.tagesschau.de/wirtschaft/unternehmen/anthropic-boerse-kuenstliche-intelligenz-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Wirtschaftspodcast: Was wird aus den KI-Aktien?",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Wirtschaftspodcast: Was wird aus den KI-Aktien?",
+          "link": "https://www.faz.net/podcasts/wirtschaftspodcast/wirtschaftspodcast-was-wird-aus-den-ki-aktien-201666717.html"
+        }
+      ]
+    },
+    {
+      "titel": "Prozess gegen Patricia Schlesinger: Dit kann dauern",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Prozess gegen Patricia Schlesinger: Dit kann dauern",
+          "link": "https://taz.de/Prozess-gegen-Patricia-Schlesinger/!6228969/"
+        }
+      ]
+    },
+    {
+      "titel": "Deutschland fällt beim Klimaschutz weiter zurück",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Deutschland fällt beim Klimaschutz weiter zurück",
+          "link": "https://www.zdfheute.de/video/wissen-klimaschutz-index-deutschland-video-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Bundeshaushalt 2027: Stromsteuer elektrisiert Koalition",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Bundeshaushalt 2027: Stromsteuer elektrisiert Koalition",
+          "link": "https://taz.de/Bundeshaushalt-2027/!6228864/"
+        }
+      ]
+    },
+    {
+      "titel": "Album von Jens Friebe: Wiederholung mit Anxiety-Potenzial",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Album von Jens Friebe: Wiederholung mit Anxiety-Potenzial",
+          "link": "https://taz.de/Album-von-Jens-Friebe/!6228861/"
+        }
+      ]
+    },
+    {
+      "titel": "Linkspartei und Vanessa Emde: Neuer Schritt in Richtung Ausschluss",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Linkspartei und Vanessa Emde: Neuer Schritt in Richtung Ausschluss",
+          "link": "https://taz.de/Linkspartei-und-Vanessa-Emde/!6228859/"
+        }
+      ]
+    },
+    {
+      "titel": "Judoka will Frankreichs Präsident werden: Politisches Leichtgewicht",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Judoka will Frankreichs Präsident werden: Politisches Leichtgewicht",
+          "link": "https://taz.de/Judoka-will-Frankreichs-Praesident-werden/!6228875/"
+        }
+      ]
+    },
+    {
+      "titel": "Plastik: Wie sich Silikone recyceln lassen",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Plastik: Wie sich Silikone recyceln lassen",
+          "link": "https://www.faz.net/aktuell/wissen/physik-mehr/plastikrecycling-silikon-in-seine-chemischen-bausteine-zerlegt-accg-201635533.html"
+        }
+      ]
+    },
+    {
+      "titel": "Sport in Deutschland: Die gebremste Bürgerbewegung",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Sport in Deutschland: Die gebremste Bürgerbewegung",
+          "link": "https://www.faz.net/aktuell/sport/sportpolitik/dosb-mitglieder-wie-die-groesste-buergerbewegung-stark-werden-koennte-201668905.html"
+        }
+      ]
+    },
+    {
+      "titel": "Aktuelles aus den Fraktionen - u.a. Aigner bei der Union",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Aktuelles aus den Fraktionen - u.a. Aigner bei der Union",
+          "link": "https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5246943"
+        }
+      ]
+    },
+    {
+      "titel": "Patricia Schlesinger: Verteidiger nennt Ex-RBB-Intendantin »Sündenbock«",
+      "medien": [
+        "Spiegel"
+      ],
+      "artikel": [
+        {
+          "quelle": "Spiegel",
+          "titel": "Patricia Schlesinger: Verteidiger nennt Ex-RBB-Intendantin »Sündenbock«",
+          "link": "https://www.spiegel.de/wirtschaft/patricia-schlesinger-verteidiger-nennt-ex-rbb-intendantin-suendenbock-a-ee426ceb-4949-429c-a65a-75cb824a2423#ref=rss"
+        }
+      ]
+    },
+    {
+      "titel": "Proteste vor Haus bei Kiew: Keine Belege für ein ukrainisches Foltergefängnis",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Proteste vor Haus bei Kiew: Keine Belege für ein ukrainisches Foltergefängnis",
+          "link": "https://www.tagesschau.de/faktenfinder/ukraine-angebliches-foltergefaengnis-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Pilzesuchen mit Kindern: „Papa, wie willst du denn in der Wildnis überleben?“",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Pilzesuchen mit Kindern: „Papa, wie willst du denn in der Wildnis überleben?“",
+          "link": "https://www.faz.net/aktuell/besser-leben/essen/pilze-sammeln-warum-alle-in-meiner-familie-es-lieben-nur-ich-nicht-201647349.html"
+        }
+      ]
+    },
+    {
+      "titel": "Warum Merz die Entscheidung herauszögerte",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Warum Merz die Entscheidung herauszögerte",
+          "link": "https://www.zdfheute.de/video/politix/aigner-merz-soeder-bundespraesidentin-politix-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Ungarns Ministerpräsident Magyar trifft Merz",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Ungarns Ministerpräsident Magyar trifft Merz",
+          "link": "https://www.phoenix.de/staatsbesuch-aus-ungarn-a-5246557.html"
+        }
+      ]
+    },
+    {
+      "titel": "Bayern-Trainer Kompany zurück an der Säbener Straße",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Bayern-Trainer Kompany zurück an der Säbener Straße",
+          "link": "https://www.zdfheute.de/sport/fussball-bundesliga/bundesliga-kompany-rueckkehr-saebener-strasse-zusammenbruch-genesung-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Sanierung des Schienennetzes: Deutsche Bahn wird immer langsamer beim Ausbau",
+      "medien": [
+        "taz"
+      ],
+      "artikel": [
+        {
+          "quelle": "taz",
+          "titel": "Sanierung des Schienennetzes: Deutsche Bahn wird immer langsamer beim Ausbau",
+          "link": "https://taz.de/Sanierung-des-Schienennetzes/!6228863/"
+        }
+      ]
+    },
+    {
+      "titel": "Hörgerät im Test: Doktohrarbeit",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Hörgerät im Test: Doktohrarbeit",
+          "link": "https://www.faz.net/aktuell/technik-motor/digital/hoergeraet-im-test-das-neue-phonak-audeo-eon-sphere-201633191.html"
+        }
+      ]
+    },
+    {
+      "titel": "Immobilien vor Gericht: Angekündigter Schlüsseleinwurf gilt als Wohnungsrückgabe",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Immobilien vor Gericht: Angekündigter Schlüsseleinwurf gilt als Wohnungsrückgabe",
+          "link": "https://www.faz.net/aktuell/wirtschaft/immobilien-wohnen/mieten-vermieten/immobilien-angekuendigter-schluesseleinwurf-als-wohnungsrueckgabe-accg-201609230.html"
+        }
+      ]
+    },
+    {
+      "titel": "NAch TechAusverkauf: Sinkender Ölpreis treibt Rekordjagd des Dax an",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "NAch TechAusverkauf: Sinkender Ölpreis treibt Rekordjagd des Dax an",
+          "link": "https://www.faz.net/aktuell/finanzen/finanzmarkt/dax-auf-rekordjagd-sinkender-oelpreis-und-ki-comeback-treiben-kurse-accg-201668899.html"
+        }
+      ]
+    },
+    {
+      "titel": "Unsere „Lieblinge des Jahres“: Das sind die Besten in Küche und Keller",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Unsere „Lieblinge des Jahres“: Das sind die Besten in Küche und Keller",
+          "link": "https://www.faz.net/aktuell/besser-leben/essen/wer-sind-die-herausragenden-koeche-und-winzer-2026-201655342.html"
+        }
+      ]
+    },
+    {
+      "titel": "Carl Spitzweg auf dem Kunstmarkt: Mit ihm können Sammler mehr als einen Blumentopf gewinnen",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Carl Spitzweg auf dem Kunstmarkt: Mit ihm können Sammler mehr als einen Blumentopf gewinnen",
+          "link": "https://www.faz.net/aktuell/feuilleton/kunstmarkt/carl-spitzweg-auf-dem-auktionsmarkt-aktuell-bei-karl-faber-und-van-ham-accg-201644019.html"
+        }
+      ]
+    },
+    {
+      "titel": "Magyar: \"Unser Ziel ist, Ungarn zurück zu Europa zu bringen\"",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Magyar: \"Unser Ziel ist, Ungarn zurück zu Europa zu bringen\"",
+          "link": "https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5246932"
+        }
+      ]
+    },
+    {
+      "titel": "Bund will offenbar E-Auto-Prämie um 917 Millionen Euro aufstocken",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Bund will offenbar E-Auto-Prämie um 917 Millionen Euro aufstocken",
+          "link": "https://www.tagesschau.de/wirtschaft/verbraucher/e-autos-kaufpraemie-bundesregierung-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Australien will nach Hackerangriff strengere Regeln für KI-Firmen",
+      "medien": [
+        "tagesschau"
+      ],
+      "artikel": [
+        {
+          "quelle": "tagesschau",
+          "titel": "Australien will nach Hackerangriff strengere Regeln für KI-Firmen",
+          "link": "https://www.tagesschau.de/wirtschaft/australien-ki-regulieren-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Verband: Lage auf Mietmarkt spitzt sich weiter zu",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Verband: Lage auf Mietmarkt spitzt sich weiter zu",
+          "link": "https://www.zdfheute.de/wirtschaft/mieten-anstieg-wohnraum-preis-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Kolumne „Nine To Five“: Doof getroffen",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Kolumne „Nine To Five“: Doof getroffen",
+          "link": "https://www.faz.net/aktuell/karriere-hochschule/gruppenfotos-im-businessnetzwerk-wer-glaenzt-wer-leidet-accg-201652324.html"
+        }
+      ]
+    },
+    {
+      "titel": "Global Carbon Project: Die globalen CO₂-Emissionen steigen trotz Rückgang beim Öl",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Global Carbon Project: Die globalen CO₂-Emissionen steigen trotz Rückgang beim Öl",
+          "link": "https://www.faz.net/aktuell/wissen/erde-klima/global-carbon-project-mehr-co-trotz-sinkendem-oelverbrauch-accg-201669349.html"
+        }
+      ]
+    },
+    {
+      "titel": "Fabian-Prozess: Für die Richter ist „völlig klar“, dass Gina H. die Mörderin ist",
+      "medien": [
+        "FAZ"
+      ],
+      "artikel": [
+        {
+          "quelle": "FAZ",
+          "titel": "Fabian-Prozess: Für die Richter ist „völlig klar“, dass Gina H. die Mörderin ist",
+          "link": "https://www.faz.net/aktuell/gesellschaft/kriminalitaet/fabian-prozess-gina-h-zu-lebenslanger-haft-verurteilt-accg-201667320.html"
+        }
+      ]
+    },
+    {
+      "titel": "Lindsey Vonn ist nervös: Neunte Operation steht bevor",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Lindsey Vonn ist nervös: Neunte Operation steht bevor",
+          "link": "https://www.zdfheute.de/panorama/prominente/stars-promi-news-bilder-november-2026-100.html"
+        }
+      ]
+    },
+    {
+      "titel": "Lanz zu KI: Warum der Boom US-Bürger belastet",
+      "medien": [
+        "ZDFheute"
+      ],
+      "artikel": [
+        {
+          "quelle": "ZDFheute",
+          "titel": "Lanz zu KI: Warum der Boom US-Bürger belastet",
+          "link": "https://www.zdfheute.de/video/lanz-und-precht-ki-boom-usa-video-100.html"
+        }
+      ]
+    }
+  ],
+  "pro_quelle": {
+    "tagesschau": [
+      {
+        "titel": "Dunkelfeldstudie bei der Bundeswehr - Viele Fälle von sexualisiertem Fehlverhalten",
+        "link": "https://www.tagesschau.de/investigativ/ndr-wdr/bundeswehr-sexuelle-belaestigung-100.html"
+      },
+      {
+        "titel": "Pistorius pocht auf \"null Toleranz\" gegenüber sexualisiertem Fehlverhalten in Bundeswehr",
+        "link": "https://www.tagesschau.de/inland/innenpolitik/bundeswehr-dunkelfeldstudie-102.html"
+      },
+      {
+        "titel": "Sexualisierte Gewalt bei der Bundeswehr: Pistorius stellt Studie vor",
+        "link": "https://www.tagesschau.de/video/video-1681838.html"
+      }
+    ],
+    "ZDFheute": [
+      {
+        "titel": "So nimmt Russland Rüstungsfirmen ins Visier",
+        "link": "https://www.zdfheute.de/politik/ruestungsindustrie-hybride-angriffe-russland-100.html"
+      },
+      {
+        "titel": "Bundeswehr-Studie offenbart Ausmaß sexueller Belästigung",
+        "link": "https://www.zdfheute.de/politik/deutschland/bundeswehr-dunkelfeldstudie-sexuelle-belaestigung-boris-pistorius-100.html"
+      },
+      {
+        "titel": "Attentäter von Krakau: Warum es Streit um das Tatmotiv gibt",
+        "link": "https://www.zdfheute.de/politik/ausland/krakau-attentat-motiv-desinformation-100.html"
+      }
+    ],
+    "Deutschlandfunk": [
+      {
+        "titel": "Abu Dhabi - Ende der Beratungen zwischen USA, Ukraine und Russland: Weitere Gespräche angekündigt",
+        "link": "https://www.deutschlandfunk.de/ende-der-beratungen-zwischen-usa-ukraine-und-russland-weitere-gespraeche-angekuendigt-100.html"
+      },
+      {
+        "titel": "Antalya - Weltklimakonferenz: Gipfeltreffen zahlreicher Staats- und Regierungschefs eröffnet - Merz nicht dabei",
+        "link": "https://www.deutschlandfunk.de/weltklimakonferenz-gipfeltreffen-zahlreicher-staats-und-regierungschefs-eroeffnet-merz-nicht-dabei-100.html"
+      },
+      {
+        "titel": "Europa - Flut von Droh-Mails gegen Schulen in Italien, Nordirland und Schottland",
+        "link": "https://www.deutschlandfunk.de/flut-von-droh-mails-gegen-schulen-in-italien-nordirland-und-schottland-100.html"
+      }
+    ],
+    "Spiegel": [
+      {
+        "titel": "Integrationsbericht: Wie gut funktioniert Integration in Deutschland",
+        "link": "https://www.spiegel.de/panorama/gesellschaft/integrationsbericht-wie-gut-funktioniert-integration-in-deutschland-a-f9bafde8-bf89-4ad9-968a-fc6dd2d8c36a#ref=rss"
+      },
+      {
+        "titel": "Künstliche Intelligenz: Rüstungsfirma Helsing stellt KI-Plattform für den Krieg vor",
+        "link": "https://www.spiegel.de/politik/kuenstliche-intelligenz-ruestungsfirma-helsing-stellt-ki-plattform-fuer-den-krieg-vor-a-1f8e1735-bf78-4eba-b1d0-5e89239888c3#ref=rss"
+      },
+      {
+        "titel": "Ilse Aigner: CSU-Politikerin soll sich auch der AfD als Bundespräsidentin stellen",
+        "link": "https://www.spiegel.de/politik/deutschland/ilse-aigner-csu-politikerin-soll-sich-auch-der-afd-als-bundespraesidentin-stellen-a-ce13a8fe-bd6a-41b1-b264-aa148d264541#ref=rss"
+      }
+    ],
+    "Zeit Online": [
+      {
+        "titel": "Drogenfahndung: Drei Kilo Kokain auf A3 gefunden - 42-Jähriger in U-Haft",
+        "link": "https://www.zeit.de/news/2026-11/11/drei-kilo-kokain-auf-a3-gefunden-42-jaehriger-in-u-haft"
+      },
+      {
+        "titel": "Wiederaufbau Kunsteisbahn: Fünf Jahre Bauzeit: Eiskanal am Königssee glänzt wieder",
+        "link": "https://www.zeit.de/news/2026-11/11/nach-zerstoerung-eiskanal-am-koenigssee-wiedereroeffnet"
+      },
+      {
+        "titel": "Ein gestricktes Weihnachtsfest: Paris läutet die Weihnachtssaison ein",
+        "link": "https://www.zeit.de/video/2026-11/ein-gestricktes-weihnachtsfest-paris-laeutet-die-weihnachtssaison-ein"
+      }
+    ],
+    "Süddeutsche": [
+      {
+        "titel": "Comeback-Gerüchte um Lindsey Vonn: High Heels oder Skischuhe?",
+        "link": "https://www.sueddeutsche.de/sport/lindsey-vonn-ski-comeback-operation-li.3578480"
+      },
+      {
+        "titel": "Vorschlag der IG Metall: Källenius signalisiert Gesprächsbereitschaft im Tarifstreit",
+        "link": "https://www.sueddeutsche.de/wirtschaft/ola-kaellenius-ig-metall-mercedes-li.3578717"
+      },
+      {
+        "titel": "SZ Wirtschaftsgipfel: Jetzt live: Klingbeil spricht über die Zukunft der deutschen Finanzpolitik",
+        "link": "https://www.sueddeutsche.de/wirtschaft/sz-wirtschaftsgipfel-2026-liveblog-li.3575578"
+      }
+    ],
+    "FAZ": [
+      {
+        "titel": "Missbrauchsfälle: Der Papst trifft in Peru nicht nur auf Freunde",
+        "link": "https://www.faz.net/aktuell/politik/ausland/papst-leo-xiv-trifft-in-peru-nicht-nur-auf-freunde-accg-201667736.html"
+      },
+      {
+        "titel": "Leo in Argentinien: Der Papst brauchte keinen Beichtstuhl für Milei",
+        "link": "https://www.faz.net/aktuell/politik/ausland/leo-xiv-in-argentinien-der-papst-braucht-keinen-beichtstuhl-fuer-milei-201669969.html"
+      },
+      {
+        "titel": "Krisenschutz: Regierung bringt Gasreserve für Deutschland auf den Weg",
+        "link": "https://www.faz.net/aktuell/wirtschaft/regierung-beschliesst-gasreserve-antworten-auf-die-wichtigsten-fragen-accg-201672367.html"
+      }
+    ],
+    "Welt": [
+      {
+        "titel": "Konzentrierter Blick aus jüdischer Perspektive",
+        "link": "https://www.welt.de/regionales/hamburg/article6af459fce22aeb948141fc95/altonaer-museum-konzentrierter-blick-aus-juedischer-perspektive.html"
+      },
+      {
+        "titel": "Zahl der arbeitslosen Akademiker erreicht Höchststand",
+        "link": "https://www.welt.de/wirtschaft/video6af45f03c45061d752ba64fe/studium-und-beruf-zahl-der-arbeitslosen-akademiker-erreicht-hoechststand.html"
+      },
+      {
+        "titel": "Schüler evakuiert – Bombendrohungen an Hunderten Schulen in Italien",
+        "link": "https://www.welt.de/vermischtes/article6af4578ee22aeb948141fc32/italien-schueler-evakuiert-bombendrohungen-an-hunderten-schulen.html"
+      }
+    ],
+    "taz": [
+      {
+        "titel": "Nach den Wahlsieg der AfD: Wie geht es der Kulturszene in Sachsen-Anhalt?",
+        "link": "https://taz.de/Nach-den-Wahlsieg-der-AfD/!6228900/"
+      },
+      {
+        "titel": "Rechtsruck im Klassenzimmer: Wenn rechts angesagt ist",
+        "link": "https://taz.de/Sachsen-Wie-der-gesellschaftliche-Rechtsruck-zunehmend-den-Schulalltag-praegt/!6228618/"
+      },
+      {
+        "titel": "Umweltzerstörung in Argentinien: Der Sand, das Gas und die Korruption",
+        "link": "https://taz.de/Umweltzerstoerung-in-Argentinien/!6224134/"
+      }
+    ]
+  }
+}
