@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 12.11.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Thursday, 12. November 2026 &middot; 14:51 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">369 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Erstmals seit 1982 - Demokrat Scott Colom holt laut Medien Senatssitz in Mississippi</h3>
+          <div class="zaehler">
+            <b>7</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/demokrat-scott-colom-holt-laut-medien-senatssitz-in-mississippi-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Erstmals seit 1982 - Demokrat Scott Colom holt laut Medien Senatssitz in Mississippi</span></a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/schwarz-demokrat-senator-von-mississippi-wie-scott-colom-zum-ziel-kam-accg-201676113.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Scott Colom: Schwarz, Demokrat, Senator von Mississippi – wie hat Colom das geschafft?</span></a></li><li><a href="https://taz.de/US-Kongresswahlen/!6229412/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">US-Kongresswahlen: Schwarzer Demokrat gewinnt Senatssitz in Mississippi</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/usa-mississippi-scott-colom-midterms-demokraten-senat-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Erstmals seit 1982 gewinnt wieder Demokrat in Mississippi</span></a></li><li><a href="https://www.spiegel.de/ausland/midterms-in-den-usa-mississippi-wie-scott-colom-trotz-aller-widerstaende-siegte-a-edaaf9b7-8649-49f9-ba5e-a4657d9f51cc#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Mississippi und die Midterms: Wie Scott Colom trotz aller Widerstände siegte</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/demokrat-mississippi-sieg-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Historischer Sieg: Demokrat Colom holt Senatssitz in Mississippi</span></a></li><li><a href="https://www.sueddeutsche.de/politik/usa-news-liveblog-demokrat-scott-colom-mississippi-senat-li.3578585" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">USA: Demokrat gewinnt Senatssitz in Mississippi</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Unglück in Brooklyn: Mindestens zwei Tote bei Hauseinsturz in New York</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/news/2026-11/12/mindestens-zwei-tote-bei-hauseinsturz-in-new-york" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Unglück in Brooklyn: Mindestens zwei Tote bei Hauseinsturz in New York</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/new-york-wohnhaus-stuerzt-ein-mindestens-sechs-tote-accg-201677500.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Brooklyn: Wohnhaus stürzt ein – mindestens sechs Tote</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/new-york-gebaeude-einsturz-104.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Im Stadtteil Brooklyn: Tote und Verletzte nach Gebäudeeinsturz in New York</span></a></li><li><a href="https://www.zdfheute.de/video/panorama-new-york-gebaeudeeinsturz-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Mehrstöckiges Wohnhaus stürzt in Brooklyn ein</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>IG Metall kündigt Warnstreiks an: Es wird wieder gestreikt!</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/IG-Metall-kuendigt-Warnstreiks-an/!6229550/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">IG Metall kündigt Warnstreiks an: Es wird wieder gestreikt!</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/ig-metall-warnstreik-metallindustrie-elektroindustrie-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">IG Metall kündigt ganztägige Warnstreiks an</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/ig-metall-streiks-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">IG Metall beschließt erstmals seit acht Jahren ganztägige Streiks</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/business-liveticker-ig-metall-beschliesst-ganztaegige-warnstreiks-faz-200452404.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Business-Ticker: IG Metall beschließt ganztägige Warnstreiks</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Jensen Huang: Nvidia bereitet offenbar Trennung von Huang vor</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/wirtschaft/zweite-affaere-nvidia-bereitet-offenbar-trennung-von-jensen-huang-vor-201674834.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Jensen Huang: Nvidia bereitet offenbar Trennung von Huang vor</span></a></li><li><a href="https://www.spiegel.de/wirtschaft/unternehmen/nvidia-jensen-huang-steht-beim-chip-konzern-vor-dem-aus-wer-auf-ihn-folgen-koennte-a-ab681d07-4346-42de-810e-15b6e63c4568#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Nvidia: Wer könnte beim Techgigant auf Jensen Huang folgen?</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/unternehmen/nvidia-bericht-chefwechsel-jensen-huang-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Nvidia-Aufsichtsrat berät offenbar über Absetzung von Huang</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/nvidia-affaere-leitete-jensen-huang-illegal-chips-nach-china-um-accg-201674198.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Jensen Huang: Der Nvidia-Chef, die Chinesin und der Leerverkäufer</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Ukraine-Gespräche - Merz bekräftigt Forderung nach EU-weiter Ukraine-Unterstützung - US-Gesandte treffen Putin</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/merz-bekraeftigt-forderung-nach-eu-weiter-ukraine-unterstuetzung-us-gesandte-treffen-putin-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Gespräche - Merz bekräftigt Forderung nach EU-weiter Ukraine-Unterstützung - US-Gesandte treffen Putin</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6af5a80950175c81de7a336d/russischer-angriffskrieg-merz-fordert-europa-auf-die-finanzluecke-der-ukraine-zu-schliessen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Merz fordert Europa auf, die Finanzlücke der Ukraine zu schließen</span></a></li><li><a href="https://taz.de/Merz-und-der-EU-Haushalt/!6229182/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Merz und der EU-Haushalt: Ein Bärendienst für die Ukraine</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Sechs Tage im Outback vermisst – 17-Jähriger überlebt mit Chips und Bachwasser</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/vermischtes/article6af5997450175c81de7a31ba/australien-sechs-tage-im-outback-vermisst-17-jaehriger-ueberlebt-mit-chips-und-bachwasser.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Sechs Tage im Outback vermisst – 17-Jähriger überlebt mit Chips und Bachwasser</span></a></li><li><a href="https://www.faz.net/video/australien-jugendlicher-ueberlebt-sechs-tage-im-outback-201677337.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">emotionale Wiedervereinigung: Jugendlicher überlebt sechs Tage im Outback</span></a></li><li><a href="https://www.tagesschau.de/ausland/australien-teenager-wildnis-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Jugendlicher überlebt sechs Tage im australischen Outback</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Sexualisierte Gewalt in der Bundeswehr: Ein Schlaglicht im Dunkelfeld</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Sexualisierte-Gewalt-in-der-Bundeswehr/!6229270/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Sexualisierte Gewalt in der Bundeswehr: Ein Schlaglicht im Dunkelfeld</span></a></li><li><a href="https://www.zdfheute.de/video/belaestigung-bundeswehr-video-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Studie zu sexualisiertem Fehlverhalten in der Bundeswehr</span></a></li><li><a href="https://www.sueddeutsche.de/politik/podcast-nachrichten-auf-den-punkt-bundeswehr-sexualisierte-gewalt-dunkelfeldstudie-li.3578712" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Podcast: „Auf den Punkt“: Ausmaß sexualisierter Gewalt bei Bundeswehr größer als gedacht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Keine Senkung der Stromsteuer: Bei der Union &quot;hat es ordentlich geknallt&quot;</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/inland/innenpolitik/haushalt-kompromisse-stromsteuer-reaktionen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Keine Senkung der Stromsteuer: Bei der Union &quot;hat es ordentlich geknallt&quot;</span></a></li><li><a href="https://www.sueddeutsche.de/politik/stromsteuer-fraktionssitzung-cdu-csu-haushalt-merz-li.3579249" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Haushaltsdebatte: „Es hat auch ordentlich geknallt“</span></a></li><li><a href="https://www.sueddeutsche.de/politik/bundesregierung-deutschland-haushalt-debatte-cdu-csu-middelberg-li.3568524" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Newsblog zur Bundespolitik: Middelberg: In Haushaltsdebatte der Union hat es „ordentlich geknallt“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Zoll soll schlagkräftiger werden – Bundestag beschließt neue Befugnisse</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/wirtschaft/zoll-soll-schlagkraeftiger-werden-bundestag-beschliesst-neue-befugnisse-a-60710faa-d41e-4228-9e70-93f77bb5d02d#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Zoll soll schlagkräftiger werden – Bundestag beschließt neue Befugnisse</span></a></li><li><a href="https://www.zeit.de/politik/deutschland/2026-11/zoll-gesetz-befugnisse-geldwaesche-organisierte-kriminalitaet" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Finanzkriminalität: Bundestag beschließt mehr Befugnisse für den Zoll</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Zehntausende Spanier protestieren gegen Wohnungsnot</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/video/spanien-wohnungsnot-generalstreik-video-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Zehntausende Spanier protestieren gegen Wohnungsnot</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/spanien-proteste-wohnungsnot-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Demonstrationen in Spanien: Zehntausende protestieren gegen Wohnungskrise</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Stromsteuer: Kretschmer kritisiert Hängepartie um Stromsteuer</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/news/2026-11/12/kretschmer-kritisiert-haengepartie-um-stromsteuer" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Stromsteuer: Kretschmer kritisiert Hängepartie um Stromsteuer</span></a></li><li><a href="https://www.spiegel.de/wirtschaft/stromsteuer-wirtschaft-kritisiert-schlingerkurs-der-regierung-a-1b53162b-b41a-4462-9e5c-896a8a327156#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Stromsteuer: Wirtschaft kritisiert Schlingerkurs der Regierung</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Präsidentin - Ex-SPD-Abgeordnete und Lehrerin Nina Hauer: Erste Frau an der Spitze der Bundeszentrale für politische Bildung</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/ex-spd-abgeordnete-und-lehrerin-nina-hauer-erste-frau-an-der-spitze-der-bundeszentrale-fuer-politisc-108.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Präsidentin - Ex-SPD-Abgeordnete und Lehrerin Nina Hauer: Erste Frau an der Spitze der Bundeszentrale für politische Bildung</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/bundeszentrale-fuer-politische-bildung-ausrichtung-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Neuausrichtung der Bundeszentrale für politische Bildung sorgt für Streit</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Drohmails - Neue Bombendrohungen gegen Schulen in Italien - Regierung ruft zu Ruhe auf</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/neue-bombendrohungen-gegen-schulen-in-italien-regierung-ruft-zu-ruhe-auf-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Drohmails - Neue Bombendrohungen gegen Schulen in Italien - Regierung ruft zu Ruhe auf</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/bombendrohungen-italien-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bombendrohungen an Tausenden Schulen in Italien und Großbritannien</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Sachverständigenrat - Wirtschaftsweise erwarten für 2026 und 2027 wieder deutlich höheres Wachstum</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/wirtschaftsweise-erwarten-fuer-2026-und-2027-wieder-deutlich-hoeheres-wachstum-116.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Sachverständigenrat - Wirtschaftsweise erwarten für 2026 und 2027 wieder deutlich höheres Wachstum</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/konjunktur/wirtschaftsweise-jahresgutachten-2026-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Wirtschaftsweise korrigieren Wachstumsprognose deutlich nach oben</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Börsen-Rekord - Dax knackt Marke von 27.000 Punkten</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/dax-knackt-marke-von-27-000-punkten-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Börsen-Rekord - Dax knackt Marke von 27.000 Punkten</span></a></li><li><a href="https://www.faz.net/aktuell/finanzen/dax-erreicht-neues-rekordhoch-und-uebersteigt-27-000-punkte-accg-201675767.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutsche Börse: Dax erreicht neues Rekordhoch – und übersteigt 27.000 Punkte</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Bevölkerung - Die Welt geht morgen nicht unter</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/die-welt-geht-morgen-nicht-unter-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bevölkerung - Die Welt geht morgen nicht unter</span></a></li><li><a href="https://www.spiegel.de/wissenschaft/weltuntergang-am-13-11-2026-morgen-geht-die-welt-unter-haben-forscher-im-jahr-1960-ausgerechnet-a-e3320094-6ff1-44eb-bf28-71886b4cb830#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Weltuntergang am 13.11.2026: Morgen geht die Welt unter, haben Forscher im Jahr 1960 ausgerechnet</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Aktuelles zum Krieg in der Ukraine</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-selenskij-stoerungen-starshield-li.3571967" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Krieg in der Ukraine: Selenskij: Störungen bei Satellitendienst Starshield an gesamter Front</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Scarlett Johansson bekommt so schlechte Angebote, dass sie ganze Filme infrage stellt</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/kultur/kino/scarlett-johansson-bekommt-so-schlechte-angebote-dass-sie-ganze-filme-infrage-stellt-a-5357d12e-f2e8-4258-9b86-7685ae6f176a#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Scarlett Johansson bekommt so schlechte Angebote, dass sie ganze Filme infrage stellt</span></a></li><li><a href="https://www.zdf.de/video/portraits/the-true-story-of-100/zdfinfo-the-true-story-of-scarlett-johansson-100" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Scarlett Johansson</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Bundesregierung: Auf diesen Haushalt lässt sich nicht mal mit Kamillentee gut anstoßen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/meinung/bundesregierung-haushalt-union-spd-merz-kommentar-li.3579258" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Bundesregierung: Auf diesen Haushalt lässt sich nicht mal mit Kamillentee gut anstoßen</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/bundesregierung-haushalt-kompromisse-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Worauf sich die Bundesregierung beim Haushalt geeinigt hat</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>DFB: »Ballers in God« teilten Jürgen-Klopp-Video ohne Zustimmung</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/sport/fussball/fussball-ballers-in-god-teilten-juergen-klopp-video-dem-dfb-zufolge-ohne-zustimmung-a-4807256e-ced6-44a9-80ab-9b03b6a19b67#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">DFB: »Ballers in God« teilten Jürgen-Klopp-Video ohne Zustimmung</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/liveticker-nationalmannschaft-ballers-in-god-nutzt-juergen-klopp-aussagen-faz-201651368.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Fußball-Liveblog: Posts mit Klopp bei „Ballers in God“ ohne seine Zustimmung</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>+++ Nachrichten zum Ukraine-Krieg +++: Kushner und Witkoff bei Putin in Moskau</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/-Nachrichten-zum-Ukraine-Krieg-/!6229424/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">+++ Nachrichten zum Ukraine-Krieg +++: Kushner und Witkoff bei Putin in Moskau</span></a></li><li><a href="https://www.faz.net/podcasts/f-a-z-podcast-fruehdenker/putin-trifft-us-gesandte-in-moskau-was-wird-verhandelt-faz-fruehdenker-201674798.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">F.A.Z. Frühdenker: Was besprechen Kushner und Witkoff mit Putin in Moskau?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>Theologe zu Torjubel: „Felix Nmecha ist mit seiner Popularität ein wichtiger Türöffner“</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/sport/fussball/felix-nmecha-theologe-erklaert-ballers-of-god-und-jubel-geste-von-bvb-spieler-201673244.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Theologe zu Torjubel: „Felix Nmecha ist mit seiner Popularität ein wichtiger Türöffner“</span></a></li><li><a href="https://www.zdfheute.de/video/fussball-felix-nmecha-torjubel-kritik-bvb-dortmund-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">BVB reagiert auf Torjubel von Nmecha</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/ausland/europa/irland-europaeische-gemeinschaft-100.html" target="_blank" rel="noopener">EPG-Treffen in Irland: Europa will mit an den Tisch</a></li><li><a href="https://www.tagesschau.de/ausland/europa/europa-sicherheitsarchitektur-russland-usa-100.html" target="_blank" rel="noopener">&quot;Sicherheitsordnung&quot;: Warum übernehmen die USA Russlands Forderung?</a></li><li><a href="https://www.tagesschau.de/video/video-1682520.html" target="_blank" rel="noopener">ARD-Korrespondent zu Haushaltskompromiss: Wo Union und SPD sparen wollen und wo nicht</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/ausland/usa-trump-weisses-haus-pressesprecher-100.html" target="_blank" rel="noopener">Nach Angebot für Dana White: Trump sucht neuen Pressesprecher</a></li><li><a href="https://www.zdfheute.de/politik/fahrschule-fahrlehrer-missbrauch-uebergriffe-100.html" target="_blank" rel="noopener">&quot;Wenn du das jetzt richtig machst, dann knutsche ich dich&quot;</a></li><li><a href="https://www.zdfheute.de/politik/deutschland/berlin-linke-miete-senken-wahlversprechen-100.html" target="_blank" rel="noopener">Mietkosten: Bricht die Berliner Linke ihr Wahlversprechen?</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/merz-bekraeftigt-forderung-nach-eu-weiter-ukraine-unterstuetzung-us-gesandte-treffen-putin-100.html" target="_blank" rel="noopener">Ukraine-Gespräche - Merz bekräftigt Forderung nach EU-weiter Ukraine-Unterstützung - US-Gesandte treffen Putin</a></li><li><a href="https://www.deutschlandfunk.de/ukraine-meldet-erneut-drosselungen-bei-starshield-100.html" target="_blank" rel="noopener">Militärischer Internetdienst - Ukraine meldet erneut Drosselungen bei Starshield</a></li><li><a href="https://www.deutschlandfunk.de/bundestag-beschliesst-gesetz-zur-frueheren-foerderung-von-kindern-100.html" target="_blank" rel="noopener">Gesetzespläne - Bundestag beschließt Gesetz zur früheren Förderung von Kindern</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/ausland/usa-pete-hegseth-wie-die-demokraten-das-impeachment-verkorksten-a-dc77fa79-6a82-43b9-9223-592591128419#ref=rss" target="_blank" rel="noopener">USA – Pete Hegseth: Wie die Demokraten das Impeachment verkorksten</a></li><li><a href="https://www.spiegel.de/ausland/midterms-in-den-usa-mississippi-wie-scott-colom-trotz-aller-widerstaende-siegte-a-edaaf9b7-8649-49f9-ba5e-a4657d9f51cc#ref=rss" target="_blank" rel="noopener">Mississippi und die Midterms: Wie Scott Colom trotz aller Widerstände siegte</a></li><li><a href="https://www.spiegel.de/wirtschaft/unternehmen/nvidia-jensen-huang-steht-beim-chip-konzern-vor-dem-aus-wer-auf-ihn-folgen-koennte-a-ab681d07-4346-42de-810e-15b6e63c4568#ref=rss" target="_blank" rel="noopener">Nvidia: Wer könnte beim Techgigant auf Jensen Huang folgen?</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-11/12/mindestens-zwei-tote-bei-hauseinsturz-in-new-york" target="_blank" rel="noopener">Unglück in Brooklyn: Mindestens zwei Tote bei Hauseinsturz in New York</a></li><li><a href="https://www.zeit.de/news/2026-11/12/mann-erleidet-verbrennungen-beim-arbeiten-an-baugrube" target="_blank" rel="noopener">Lichtbogen entstanden: Mann erleidet Verbrennungen beim Arbeiten an Baugrube</a></li><li><a href="https://www.zeit.de/news/2026-11/12/ovg-deponie-in-duisburg-darf-nicht-errichtet-werden" target="_blank" rel="noopener">Gerichtsentscheidung: OVG: Deponie in Duisburg darf nicht errichtet werden</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/panorama/russell-brand-schamhaare-viktor-wynd-museum-urteil-vergewaltigung-promis-li.3579259" target="_blank" rel="noopener">Leute: Londoner Kuriositätenmuseum wirft Schamhaare von Russell Brand weg</a></li><li><a href="https://www.sueddeutsche.de/meinung/bundesregierung-haushalt-union-spd-merz-kommentar-li.3579258" target="_blank" rel="noopener">Bundesregierung: Auf diesen Haushalt lässt sich nicht mal mit Kamillentee gut anstoßen</a></li><li><a href="https://www.sueddeutsche.de/politik/stromsteuer-fraktionssitzung-cdu-csu-haushalt-merz-li.3579249" target="_blank" rel="noopener">Haushaltsdebatte: „Es hat auch ordentlich geknallt“</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/schwarz-demokrat-senator-von-mississippi-wie-scott-colom-zum-ziel-kam-accg-201676113.html" target="_blank" rel="noopener">Scott Colom: Schwarz, Demokrat, Senator von Mississippi – wie hat Colom das geschafft?</a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/trumps-pitbull-wer-ist-jim-jordan-201673098.html" target="_blank" rel="noopener">Jim Jordan: Sie nennen ihn respektvoll Pitbull</a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/streit-um-den-haushalt-fuer-die-cdu-ist-dieses-ergebnis-ein-desaster-201676036.html" target="_blank" rel="noopener">Beratungen zum Haushalt: Für die CDU ist dieses Ergebnis ein Desaster</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/politik/deutschland/video6af5bb91d2f851d14ad01484/haushaltsplanungen-die-cdu-hat-wieder-sehr-viel-gegeben-und-sich-mit-kleinigkeiten-begnuegt.html" target="_blank" rel="noopener">„Die CDU hat wieder sehr viel gegeben und sich mit Kleinigkeiten begnügt“</a></li><li><a href="https://www.welt.de/vermischtes/article6af566a75596369bf0edc087/tuttlingen-schlimme-szenen-jugendgangs-gehen-mit-eisenstangen-los-cdu-politiker-fordert-mehr-abschiebungen.html" target="_blank" rel="noopener">Jugendgangs gehen mit Eisenstangen aufeinander los – CDU-Politiker fordert mehr Abschiebungen</a></li><li><a href="https://www.welt.de/politik/deutschland/article6af5b3e6d2f851d14ad013b2/migrationsbericht-deutschland-bei-dauerhafter-zuwanderung-auf-platz-zwei-der-oecd-laender.html" target="_blank" rel="noopener">Deutschland bei dauerhafter Zuwanderung auf Platz zwei der OECD-Länder</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Weltklimakonferenz-in-Antalya/!6229417/" target="_blank" rel="noopener">Weltklimakonferenz in Antalya: Australiens Premier verschweigt die Kohle</a></li><li><a href="https://taz.de/Die-Hoelle-von-Gaza-Eine-Doku-erzaehlt-was-Aerztinnen-mitansehen-mussten/!6229215/" target="_blank" rel="noopener">Dokumentarfilm über Gaza: Die einzigen Zeugen</a></li><li><a href="https://taz.de/Papst-Leo-XIV-in-Suedamerika/!6229422/" target="_blank" rel="noopener">Papst Leo XIV. in Südamerika: Begrenzte Empathie</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.faz.net/aktuell/finanzen/dax-knackt-27-000-punkte-es-ist-an-der-zeit-einzusteigen-201676897.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Dax-Hoch: Es ist an der Zeit einzusteigen. Jetzt!</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/niedersachsen/attacke-mit-auto-in-empelde-opfer-in-lebensgefahr-mann-stellt-sich,empelde-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Mann fährt Auto in Menschengruppe - drei Verletzte</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/musik-und-buehne/konzert/karl-bruckmaier-zum-70-201670800.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">karl bruckmaier wird 70: Der Barbier von Bob Dylan</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/immobilien-wohnen/bauen-kaufen/immobilien-umbau-braucht-zustimmung-des-anderen-eigentuemers-accg-201272356.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Immobilien vor Gericht: Umbau der Doppelhaushälfte braucht Zustimmung des anderen Eigentümers</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/das-ki-risiko-von-siemens-201676275.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Siemens: Das KI-Risiko</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/start-up-agile-robots-ist-8-5-milliarden-dollar-wert-accg-201676518.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Robotik-Start-up: Agile Robots wird mit 8,5 Milliarden Dollar bewertet</span></a></li><li><a href="https://www.zeit.de/news/2026-11/12/mann-erleidet-verbrennungen-beim-arbeiten-an-baugrube" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Lichtbogen entstanden: Mann erleidet Verbrennungen beim Arbeiten an Baugrube</span></a></li><li><a href="https://www.welt.de/politik/deutschland/video6af5bb91d2f851d14ad01484/haushaltsplanungen-die-cdu-hat-wieder-sehr-viel-gegeben-und-sich-mit-kleinigkeiten-begnuegt.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Die CDU hat wieder sehr viel gegeben und sich mit Kleinigkeiten begnügt“</span></a></li><li><a href="https://www.faz.net/aktuell/wissen/ab-in-die-botanik/pilzesammeln-wann-wird-der-waldausflug-zur-straftat-accg-201650749.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Botanik-Kolumne: Sind Sie ein Pilz-Plünderer?</span></a></li><li><a href="https://www.welt.de/vermischtes/article6af566a75596369bf0edc087/tuttlingen-schlimme-szenen-jugendgangs-gehen-mit-eisenstangen-los-cdu-politiker-fordert-mehr-abschiebungen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Jugendgangs gehen mit Eisenstangen aufeinander los – CDU-Politiker fordert mehr Abschiebungen</span></a></li><li><a href="https://www.zeit.de/news/2026-11/12/ovg-deponie-in-duisburg-darf-nicht-errichtet-werden" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Gerichtsentscheidung: OVG: Deponie in Duisburg darf nicht errichtet werden</span></a></li><li><a href="https://www.zeit.de/news/2026-11/12/radfahrer-stirbt-nach-sturz-mit-fahrrad-in-herzberg" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Radfahrer wurde reanimiert: Radfahrer stirbt nach Sturz mit Fahrrad in Herzberg</span></a></li><li><a href="https://www.tagesschau.de/tagesschau_in_100_sekunden/video-1682616.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">tagesschau in 100 Sekunden</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6af5b3e6d2f851d14ad013b2/migrationsbericht-deutschland-bei-dauerhafter-zuwanderung-auf-platz-zwei-der-oecd-laender.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Deutschland bei dauerhafter Zuwanderung auf Platz zwei der OECD-Länder</span></a></li><li><a href="https://www.zeit.de/wissenschaft/2026-11/durchbruch-beim-yang-mills-millennium-problem-ki-schliesst-jahrzehntealte-luecke-im-fundament-der-physik" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Yang-Mills-Theorien: KI löst wohl Teile eines weiteren Millennium-Problems der Mathematik</span></a></li><li><a href="https://taz.de/Woelfe-in-Brandenburg/!6229459/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Wölfe in Brandenburg: Auf Riss folgt Abschuss</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/finanzen/marktbericht-dax-rekord-siemens-ki-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">DAX auf Rekordhoch - Anleger vertrauen deutscher Wachstumsstory</span></a></li><li><a href="https://www.zeit.de/news/2026-11/12/bericht-ruestungsansiedlung-in-sangerhausen-gescheitert" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Unternehmen sagt ab: Bericht: Rüstungsansiedlung in Sangerhausen gescheitert</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/irland-europaeische-gemeinschaft-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">EPG-Treffen in Irland: Europa will mit an den Tisch</span></a></li><li><a href="https://www.welt.de/politik/deutschland/plus6ae8b718b3f0fa60211d67ff/marx21-ein-bisschen-sektenstruktur-wie-trotzkisten-bei-linkspartei-und-gewerkschaften-mitmischen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Ein bisschen Sektenstruktur“ – wie Trotzkisten bei Linkspartei und Gewerkschaften mitmischen</span></a></li><li><a href="https://www.zeit.de/politik/ausland/2026-11/frankreich-ki-militaer-verteidigung-usa-nato" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Künstliche Intelligenz : Frankreich plant internationales Zentrum für Militär-KI</span></a></li><li><a href="https://www.welt.de/sport/formel1/article6af5b48fd2f851d14ad013c6/lewis-hamilton-heftige-kritik-an-israel-drei-jahre-des-voelkermords-sind-entsetzlich.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Hamilton vergleicht Gaza mit einem „Freiluftgefängnis“</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/auto-faehrt-in-niedersachsen-in-menschengruppe-verdaechtiger-stellt-sich-accg-201675003.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Niedersachsen: Verdächtiger stellt sich nach Fahrt in Menschengruppe</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 12.11.2026 um 14:51 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
