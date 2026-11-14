@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 14.11.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Saturday, 14. November 2026 &middot; 13:18 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">348 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Ukraine - Selenskyj: USA haben Gebietsabtretungen an Russland im Gegenzug für eine NATO-Mitgliedschaft ins Gespräch gebracht</h3>
+          <div class="zaehler">
+            <b>7</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/selenskyj-usa-haben-gebietsabtretungen-an-russland-im-gegenzug-fuer-eine-nato-mitgliedschaft-ins-ges-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine - Selenskyj: USA haben Gebietsabtretungen an Russland im Gegenzug für eine NATO-Mitgliedschaft ins Gespräch gebracht</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/nato-mitgliedschaft-usa-ukraine-krieg-russland-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Selenskyj berichtet von US-Vorstoß in Friedensgesprächen</span></a></li><li><a href="https://www.welt.de/politik/ausland/video6af839a39985884ef7d788d8/ukraine-nato-beitritt-gegen-donbass-verzicht-selenskyj-berichtet-von-brisantem-vorstoss-der-usa.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Nato-Beitritt gegen Donbass-Verzicht? Selenskyj berichtet von brisantem Vorstoß der USA</span></a></li><li><a href="https://www.zeit.de/politik/ausland/2026-11/nato-beitritt-ukraine-usa-wolodymyr-selenskyj-gebietsverzicht-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Nato-Beitritt der Ukraine: USA schlagen laut Selenskyj Nato-Beitritt gegen Gebietsabtritt vor</span></a></li><li><a href="https://www.zeit.de/politik/ausland/ukraine-krieg-news-liveblog" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Krieg gegen die Ukraine: USA sehen laut Selenskyj Nato-Beitritt gegen Gebietsabtritt als Option</span></a></li><li><a href="https://www.welt.de/politik/ausland/article6af8344f9849eea0701e292f/ukraine-nato-beitritt-gegen-donbass-verzicht-selenskyj-berichtet-von-brisantem-vorstoss-der-usa.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Nato-Beitritt gegen Donbass-Verzicht? Selenskyj berichtet von brisantem Vorstoß der USA</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-selenskyj-usa-bringen-nato-beitritt-fuer-gebietsverzicht-ins-spiel-faz-110683325.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Ukrainekrieg: Selenskyj: USA bringen NATO-Beitritt für Gebietsverzicht ins Spiel</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-usa-russland-europa-verhandlungen-putin-europaeische-union-li.3571967" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Krieg in der Ukraine: EU einig: Verhandlungsteam für Gespräche mit Russland steht</span></a></li><li><a href="https://taz.de/Krieg-gegen-die-Ukraine/!6224431/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Krieg gegen die Ukraine: Auch in Abu Dhabi spielt der Kreml erfolgreich auf Zeit</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Trauerfeier - Angehörige und Wegbegleiter nehmen Abschied von Aiwanger</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:86%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/angehoerige-und-wegbegleiter-nehmen-abschied-von-aiwanger-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Trauerfeier - Angehörige und Wegbegleiter nehmen Abschied von Aiwanger</span></a></li><li><a href="https://www.sueddeutsche.de/bayern/hubert-aiwanger-trauerfeier-requiem-trauerstaatsakt-muenchen-frauenkirche-bilder-li.3580437" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Requiem in der Frauenkirche: Abschied von Hubert Aiwanger</span></a></li><li><a href="https://www.tagesschau.de/inland/aiwanger-trauerfeier-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Trauerakt in München: Große Anteilnahme bei Abschied von Aiwanger</span></a></li><li><a href="https://www.spiegel.de/politik/muenchen-mehr-als-1000-trauergaeste-nehmen-abschied-von-hubert-aiwanger-a-e986f8ab-d9b9-4faf-adf7-d167c63eb24b#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">München: Mehr als 1000 Trauergäste nehmen Abschied von Hubert Aiwanger</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6af82f6d389d31d8c8a800f5/hubert-aiwanger-sarg-in-weiss-blau-boellerschuesse-zum-abschied-1-000-trauergaeste-nehmen-abschied-vom-freie-waehler-chef.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Sarg in Weiß-Blau, Böllerschüsse zum Abschied – 1000 Trauergäste nehmen Abschied von Aiwanger</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/aiwanger-staatsakt-trauerfeier-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Abschied von Hubert Aiwanger</span></a></li><li><a href="https://www.sueddeutsche.de/bayern/hubert-aiwanger-tod-staatsakt-trauerfeier-liebfrauendom-muenchen-markus-soeder-livestream-li.3578802" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">München: Staatsakt für Hubert Aiwanger beginnt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Apec-Gipfel - US-Regierung: Trump trifft Putin und Xi am kommenden Donnerstag</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:71%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/us-regierung-trump-trifft-putin-und-xi-am-kommenden-donnerstag-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Apec-Gipfel - US-Regierung: Trump trifft Putin und Xi am kommenden Donnerstag</span></a></li><li><a href="https://www.tagesschau.de/video/video-1683696.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Weißes Haus kündigt Treffen von Trump, Xi und Putin an</span></a></li><li><a href="https://taz.de/Historischer-Dreier-beim-APEC-Gipfel/!6230035/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Historischer Dreier beim APEC-Gipfel: Treffen sich Trump, Putin und Xi …</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/treffen-trump-putin-xi-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Weißes Haus kündigt Dreiertreffen von Trump mit Putin und Xi an</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/usa-dreiertreffen-trump-xi-putin-china-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Weißes Haus: Trump trifft sich mit Putin und Xi in China</span></a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/liveticker-usa-unter-trump-weisses-haus-kuendigt-dreiertreffen-trumps-mit-xi-und-putin-an-faz-19444916.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">USA unter Trump: Weißes Haus kündigt Dreiertreffen Trumps mit Xi und Putin an</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Technische Störung - Flugverbot in den USA wieder aufgehoben</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:71%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/flugverbot-in-den-usa-wieder-aufgehoben-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Technische Störung - Flugverbot in den USA wieder aufgehoben</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/usa-flugstopp-landesweit-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Landesweiter Flugstopp in den USA wieder aufgehoben</span></a></li><li><a href="https://www.sueddeutsche.de/politik/usa-news-liveblog-flugsicherheit-flugstop-landesweit-sicherheit-li.3578585" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">USA: US-Luftfahrtbehörde hebt landesweiten Flugstopp wieder auf</span></a></li><li><a href="https://www.tagesschau.de/eilmeldung/usa-flugverbot-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">US-Luftfahrtbehörde stoppt alle Starts in den USA</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/auto-verkehr/us-luftfahrtbehoerde-faa-stoppt-fluege-in-den-gesamten-usa-201682407.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Kommunikationsstörung: Landesweites US-Flugverbot wieder aufgehoben – in Europa droht noch Chaos</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>USA - Frachter rammt Flusskreuzfahrtschiff in New Orleans - 30 Passagiere im Krankenhaus</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/frachter-rammt-flusskreuzfahrtschiff-in-new-orleans-30-passagiere-im-krankenhaus-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">USA - Frachter rammt Flusskreuzfahrtschiff in New Orleans - 30 Passagiere im Krankenhaus</span></a></li><li><a href="https://www.faz.net/video/tanker-rammt-raddampfer-american-heritage-auf-dem-mississippi-201683195.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">NEW ORLEANS: Tanker rammt Kreuzfahrtschiff: Alle Passagiere aus dem Wasser gerettet</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/ungluecke/kollision-auf-dem-mississippi-tanker-rammt-flusskreuzfahrtschiff-bei-new-orleans-201682330.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">New orleans: „Ein Wunder“: Keine Toten nach Schiffsunglück</span></a></li><li><a href="https://www.zdfheute.de/panorama/unfall-frachter-kreuzfahrtschiff-new-orleans-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">New Orleans: Alle Menschen nach Schiffsunglück in Sicherheit</span></a></li><li><a href="https://www.tagesschau.de/ausland/kreuzfahrtschiff-unfall-new-orleans-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">US-Flusskreuzfahrtschiff kentert nach Zusammenprall in New Orleans</span></a></li><li><a href="https://www.zdfheute.de/video/panorama-kreuzfahrtschiff-tanker-video-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Frachter rammt Kreuzfahrtschiff</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>BND und Verfassungsschutz: Bundestag beschließt „Jahrhundertreform“ der Geheimdienste</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:57%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/BND-und-Verfassungsschutz/!6229998/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">BND und Verfassungsschutz: Bundestag beschließt „Jahrhundertreform“ der Geheimdienste</span></a></li><li><a href="https://www.faz.net/video/bundestag-billigt-geheimdienstreform-201680839.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">BERLIN: Bundestag billigt Geheimdienstreform</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/nachrichtendienst-reform-bundestag-bnd-gesetz-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Bundestag beschließt große Geheimdienstreform</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/nachrichtendienst-reform-beschlossen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bundestag beschließt Reform: Mehr Befugnisse für die Nachrichtendienste</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Kassenärzte erwarten Selbstzahler-Termine für gesetzlich Versicherte</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:43%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/wirtschaft/video6af8393a9849eea0701e2980/wegen-honorarkuerzung-kassenaerzte-erwarten-selbstzahler-termine-fuer-gesetzlich-versicherte.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Kassenärzte erwarten Selbstzahler-Termine für gesetzlich Versicherte</span></a></li><li><a href="https://www.welt.de/wirtschaft/article6af8277a389d31d8c8a8005c/honorarkuerzung-kassenaerzte-rechnen-mit-selbstzahler-terminen-fuer-kassenpatienten.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Kassenärzte erwarten Selbstzahler-Termine für gesetzlich Versicherte</span></a></li><li><a href="https://www.tagesschau.de/inland/gesetzlich-versicherte-behandlung-selbstzahler-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Kassenärzte-Chef erwartet mehr Selbstzahler-Termine für gesetzlich Versicherte</span></a></li><li><a href="https://www.spiegel.de/wirtschaft/soziales/kassenaerzte-schlagen-selbstzahler-termine-fuer-kassenpatienten-vor-a-4282bfbb-79a4-447b-b77b-812ed98bfc04#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Kassenärzte schlagen Selbstzahler-Termine für Kassenpatienten vor</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Peru - Papst Leo XIV. feiert Messe mit 500.000 Gläubigen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/papst-leo-xiv-feiert-messe-mit-500-000-glaeubigen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Peru - Papst Leo XIV. feiert Messe mit 500.000 Gläubigen</span></a></li><li><a href="https://www.tagesschau.de/video/video-1683706.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Papst Leo besucht ehemalige Diözese in Peru</span></a></li><li><a href="https://www.tagesschau.de/multimedia/bilder/blickpunkte-10566.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Schlafender Passagier, Möwen in Travemünde, Papst Leo XIV.</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Bundesweite Regel - Deutsche Bahn zieht positive Bilanz bei Alkoholverbot an Bahnhöfen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/deutsche-bahn-zieht-positive-bilanz-bei-alkoholverbot-an-bahnhoefen-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundesweite Regel - Deutsche Bahn zieht positive Bilanz bei Alkoholverbot an Bahnhöfen</span></a></li><li><a href="https://www.tagesschau.de/video/video-1683704.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bahn zieht positive Bilanz bei Alkoholverbot an Bahnhöfen</span></a></li><li><a href="https://www.tagesschau.de/inland/gesellschaft/bahn-alkohol-verbot-bilanz-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bahn zieht positive Bilanz zu Alkoholverbot an Bahnhöfen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Koalition - Diskussion um Senkung der Stromsteuer geht weiter</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/diskussion-um-senkung-der-stromsteuer-geht-weiter-110.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Koalition - Diskussion um Senkung der Stromsteuer geht weiter</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/haushalt-koalition-geht-auf-zahnfleisch-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Kommentar zum Haushalt: Die Koalition geht auf dem Zahnfleisch</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Mecklenburg-Vorpommern - Parteitage: Auch Grüne stimmen Koalitionsvertrag mit SPD und Linken zu</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/parteitage-auch-gruene-stimmen-koalitionsvertrag-mit-spd-und-linken-zu-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Mecklenburg-Vorpommern - Parteitage: Auch Grüne stimmen Koalitionsvertrag mit SPD und Linken zu</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/mecklenburg-vorpommern-linke-stimmt-koalitionsvertrag-zu-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Linke stimmt Koalitionsvertrag mit SPD und Grünen zu</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>CSU will Abschläge für Frührentner erhöhen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/wirtschaft/soziales/csu-will-abschlaege-fuer-fruehrentner-erhoehen-a-e30254e8-833b-4ad1-ab30-a6114735d64b#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">CSU will Abschläge für Frührentner erhöhen</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6af8397c9849eea0701e298d/fruehrente-das-ist-ueberfaellig-csu-kuendigt-hoehere-abschlaege-an.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Das ist überfällig“ – CSU kündigt höhere Abschläge bei Frührente an</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Veraltete Technik sorgte für Flugchaos in den USA</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/video/video-1683694.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Veraltete Technik sorgte für Flugchaos in den USA</span></a></li><li><a href="https://taz.de/Luftverkehr-in-den-USA/!6230034/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Luftverkehr in den USA: Technik-Panne sorgt für Tausende Flugausfälle</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>3:1 der DFB-Elf in Belgrad: Skurriles Tiki-Taka im Schlamm</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/sport/deutschland-serbien-nations-league-li.3580419" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">3:1 der DFB-Elf in Belgrad: Skurriles Tiki-Taka im Schlamm</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-nations-league/video/serbien-deutschland-highlights-maenner-zusammenfassung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">DFB-Elf gewinnt die Regenschlacht von Belgrad</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Einzelkritik Serbien gegen Deutschland: Gruda zockt, ter Stegen wackelt</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sportschau.de/fussball/nationalmannschaft/der-geile-zocker-zockt-ter-stegen-wackelt,einzelkritik-serbien-deutschland-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Einzelkritik Serbien gegen Deutschland: Gruda zockt, ter Stegen wackelt</span></a></li><li><a href="https://www.sueddeutsche.de/sport/deutschland-serbien-einzelkritik-li.3580324" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">DFB-Team in der Einzelkritik: Serbien hält Gruda beim Torschuss den Regenschirm</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>AfD will Ex-Fußballprofi Berthold als Bundespräsidenten nominieren</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/inland/innenpolitik/berthold-afd-wahl-bundespraesident-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">AfD will Ex-Fußballprofi Berthold als Bundespräsidenten nominieren</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/wahl-bundespraesident-afd-kandidat-thomas-berthold-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">AfD will Fußball-Weltmeister als Bundespräsidenten nominieren</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Cyberangriff auf Quantum Systems: Wie wurde der Drohnenhersteller zum Ziel?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:29%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/quantum-systems-cyberangriff-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Cyberangriff auf Quantum Systems: Wie wurde der Drohnenhersteller zum Ziel?</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/unternehmen/cyberangriff-quantum-systems-ruestungs-start-up-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Quantum Systems: Cyberangriff auf deutschen Drohnenhersteller</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/inland/aiwanger-trauerfeier-100.html" target="_blank" rel="noopener">Trauerakt in München: Große Anteilnahme bei Abschied von Aiwanger</a></li><li><a href="https://www.tagesschau.de/video/video-1683694.html" target="_blank" rel="noopener">Veraltete Technik sorgte für Flugchaos in den USA</a></li><li><a href="https://www.tagesschau.de/video/video-1683696.html" target="_blank" rel="noopener">Weißes Haus kündigt Treffen von Trump, Xi und Putin an</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/ausland/nato-mitgliedschaft-usa-ukraine-krieg-russland-100.html" target="_blank" rel="noopener">Selenskyj berichtet von US-Vorstoß in Friedensgesprächen</a></li><li><a href="https://www.zdfheute.de/politik/ausland/analyse-russland-europa-sicherheit-ukraine-krieg-100.html" target="_blank" rel="noopener">Zwei unvereinbare Vorstellungen von Europa</a></li><li><a href="https://www.zdfheute.de/politik/ausland/usa-flugstopp-landesweit-100.html" target="_blank" rel="noopener">Landesweiter Flugstopp in den USA wieder aufgehoben</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/parteitage-auch-gruene-stimmen-koalitionsvertrag-mit-spd-und-linken-zu-100.html" target="_blank" rel="noopener">Mecklenburg-Vorpommern - Parteitage: Auch Grüne stimmen Koalitionsvertrag mit SPD und Linken zu</a></li><li><a href="https://www.deutschlandfunk.de/rheinland-pfalz-schnieder-mit-98-prozent-erneut-zum-cdu-vositzenden-gewaehlt-100.html" target="_blank" rel="noopener">Landesparteitag - Rheinland-Pfalz: Schnieder mit 98 Prozent erneut zum CDU-Vositzenden gewählt</a></li><li><a href="https://www.deutschlandfunk.de/spd-forderte-strengere-regeln-fuer-spritpreisdeckel-100.html" target="_blank" rel="noopener">Raffineriekrise - SPD forderte strengere Regeln für Spritpreisdeckel</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/ausland/ukraine-krieg-wenn-der-strom-anspringt-laeuft-jedes-familienmitglied-im-hause-babytsch-los-a-69cee47c-930f-4e3a-8c80-3b28ae753ea7#ref=rss" target="_blank" rel="noopener">Ukraine-Krieg: Wenn der Strom anspringt, läuft jedes Familienmitglied im Hause Babytsch los</a></li><li><a href="https://www.spiegel.de/ausland/tuerkei-ekrem-imamoglu-aus-dem-gefaengnis-meinen-woechentlichen-anruf-nutze-ich-um-die-stimmen-meiner-familie-zu-hoeren-a-3c161fdb-6119-4c60-b0aa-fbd4864ba73e#ref=rss" target="_blank" rel="noopener">Türkei – Ekrem İmamoğlu aus dem Gefängnis: »Meinen wöchentlichen Anruf nutze ich, um die Stimmen meiner Familie zu hören«</a></li><li><a href="https://www.spiegel.de/politik/deutschland/ilse-aigner-csu-als-bundespraesidentin-ein-grosses-missverstaendnis-kolumne-a-9a10a4b5-917f-4872-aa69-7b3b1e7c208c#ref=rss" target="_blank" rel="noopener">Ilse Aigner (CSU) als Bundespräsidentin: Ein großes Missverständnis – Kolumne</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-11/14/grosse-mehrheit-fuer-schnieder-als-cdu-landeschef" target="_blank" rel="noopener">Größte Regierungspartei: Große Mehrheit für Schnieder als CDU-Landeschef</a></li><li><a href="https://www.zeit.de/news/2026-11/14/winterglaette-bei-sietow-anhaenger-prallt-in-gegenverkehr" target="_blank" rel="noopener">Unfall: Winterglätte bei Sietow: Anhänger prallt in Gegenverkehr</a></li><li><a href="https://www.zeit.de/news/2026-11/14/rund-500-kilogramm-schwere-palette-stuerzt-auf-arbeiter" target="_blank" rel="noopener">Arbeitsunfall in Deizisau: Rund 500 Kilogramm schwere Palette stürzt auf Arbeiter</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/bayern/bayern-aiwanger-trauerfeier-liebfrauendom-staatsakt-soeder-aigner-li.3580451" target="_blank" rel="noopener">Requiem und Staatsakt: Söder würdigt Aiwanger als „echtes bayerisches Original und Vollblutpolitiker“</a></li><li><a href="https://www.sueddeutsche.de/bayern/hubert-aiwanger-trauerfeier-requiem-trauerstaatsakt-muenchen-frauenkirche-bilder-li.3580437" target="_blank" rel="noopener">Requiem in der Frauenkirche: Abschied von Hubert Aiwanger</a></li><li><a href="https://www.sueddeutsche.de/politik/papst-leo-xiv-peru-li.3577629" target="_blank" rel="noopener">Papst in Lateinamerika: „Padre Roberto“ ist zurück in Peru</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/wirtschaft/mehr-wirtschaft/csu-bestimmt-berliner-sozialpolitik-wie-markus-soeder-die-koalition-lenkt-accg-201678995.html" target="_blank" rel="noopener">Reformen: Die Macht aus Bayern</a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/ilse-aigner-die-mutter-des-bayerischen-start-up-wunders-accg-201669728.html" target="_blank" rel="noopener">Bundespräsidentin in spe: Die Mutter des bayerischen Start-up-Wunders</a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-selenskyj-usa-bringen-nato-beitritt-fuer-gebietsverzicht-ins-spiel-faz-110683325.html" target="_blank" rel="noopener">Liveblog Ukrainekrieg: Selenskyj: USA bringen NATO-Beitritt für Gebietsverzicht ins Spiel</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/politik/deutschland/plus6af6e2485a72dceba1d61399/kampf-gegen-illegale-migration-auf-diesem-land-ruhen-deutschlands-abschiebe-hoffnungen.html" target="_blank" rel="noopener">Auf diesem Land ruhen Deutschlands Abschiebe-Hoffnungen</a></li><li><a href="https://www.welt.de/sport/fussball/video6af83041389d31d8c8a8011c/nationalmannschaft-alle-haben-gezeigt-wie-sehr-sie-bock-haben-zu-zocken.html" target="_blank" rel="noopener">„Alle haben gezeigt, wie sehr sie Bock haben zu zocken“</a></li><li><a href="https://www.welt.de/politik/deutschland/video6af847fe389d31d8c8a8030f/stromsteuer-es-geht-um-die-handlungsfaehigkeit-die-glaubwuerdigkeit-und-die-autoritaet-des-kanzlers.html" target="_blank" rel="noopener">„Es geht um die Handlungsfähigkeit, die Glaubwürdigkeit und die Autorität des Kanzlers“</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Abschiebung-von-Menschen-mit-Behinderung/!6224531/" target="_blank" rel="noopener">Abschiebung von Menschen mit Behinderung: Wie krank ist krank genug?</a></li><li><a href="https://taz.de/Stadtgespraech-aus-Moskau/!6224381/" target="_blank" rel="noopener">Stadtgespräch aus Moskau: Von Lügen und Siegesfantasien</a></li><li><a href="https://taz.de/Chinas-Drohgebaerden-gegen-Taiwan/!6230039/" target="_blank" rel="noopener">Chinas Drohgebärden gegen Taiwan: Militärübung als „stille Einschüchterung“</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.deutschlandfunk.de/rheinland-pfalz-schnieder-mit-98-prozent-erneut-zum-cdu-vositzenden-gewaehlt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Landesparteitag - Rheinland-Pfalz: Schnieder mit 98 Prozent erneut zum CDU-Vositzenden gewählt</span></a></li><li><a href="https://www.deutschlandfunk.de/spd-forderte-strengere-regeln-fuer-spritpreisdeckel-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Raffineriekrise - SPD forderte strengere Regeln für Spritpreisdeckel</span></a></li><li><a href="https://www.deutschlandfunk.de/microsoft-gibt-ende-der-weltweiten-stoerungen-bekannt-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Cloud-Dienste - Microsoft gibt Ende der weltweiten Störungen bekannt</span></a></li><li><a href="https://www.deutschlandfunk.de/ermittlungen-gegen-ehemaligen-minister-ungarische-behoerden-finden-17-6-millionen-euro-in-bar-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Orbán - Ermittlungen gegen ehemaligen Minister: Ungarische Behörden finden 17,6 Millionen Euro in bar</span></a></li><li><a href="https://www.deutschlandfunk.de/plaene-abzuege-bei-fruehrente-sollen-von-0-3-auf-0-4-prozent-pro-monat-steigen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Rente - Pläne: Abzüge bei Frührente sollen von 0,3 auf 0,4 Prozent pro Monat steigen</span></a></li><li><a href="https://www.deutschlandfunk.de/bsw-will-landesspitze-neu-aufstellen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Sachsen-Anhalt - BSW will Landesspitze neu aufstellen</span></a></li><li><a href="https://www.deutschlandfunk.de/krampe-linke-afd-bekommt-ueberwachungsstaat-schluesselfertig-hingehalten-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Sicherheitsbehörden - Krampe (Linke): AfD bekommt Überwachungsstaat &quot;schlüsselfertig hingehalten&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/ruanda-soll-erster-standort-fuer-eu-abschiebezentrum-werden-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Migration - Ruanda soll erster Standort für EU-Abschiebezentrum werden</span></a></li><li><a href="https://www.deutschlandfunk.de/cdu-landeschef-lechner-fordert-senkung-der-stromsteuer-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Niedersachsen - CDU-Landeschef Lechner fordert Senkung der Stromsteuer</span></a></li><li><a href="https://www.deutschlandfunk.de/gruenen-europaabgeordneter-lagodinsky-fuer-putin-laeuft-es-gut-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Friedensgespräche - Grünen-Europaabgeordneter Lagodinsky: Für Putin läuft es gut</span></a></li><li><a href="https://www.deutschlandfunk.de/fuehrende-oekonomen-warnen-belastungen-in-die-zukunft-verschoben-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Einigung für 2027 - Führende Ökonomen warnen: Belastungen in die Zukunft verschoben</span></a></li><li><a href="https://www.deutschlandfunk.de/genehmigte-demonstrationen-zur-halbzeit-der-uno-klimakonferenz-angekuendigt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Türkei - Genehmigte Demonstrationen zur Halbzeit der UNO-Klimakonferenz angekündigt</span></a></li><li><a href="https://www.deutschlandfunk.de/linke-parteichef-pantisano-verteidigt-verfahren-zu-berliner-abgeordneten-emde-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ausschluss geplant - Linke-Parteichef Pantisano verteidigt Verfahren zu Berliner Abgeordneten Emde</span></a></li><li><a href="https://www.deutschlandfunk.de/niederlaendische-minderheitsregierung-haelt-vorerst-ministerpraesident-jetten-grundlegender-neustart-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Den Haag - Niederländische Minderheitsregierung hält vorerst - Ministerpräsident Jetten: Grundlegender Neustart nötig</span></a></li><li><a href="https://www.deutschlandfunk.de/microsoft-probleme-gingen-auf-netzwerk-update-zurueck-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Weltweite Störung - Microsoft: Probleme gingen auf Netzwerk-Update zurück</span></a></li><li><a href="https://www.deutschlandfunk.de/us-finanzminister-bessent-macht-handelsminister-lutnick-fuer-chip-lieferungen-nach-china-verantwortl-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nvidia-Skandal - US-Finanzminister Bessent macht Handelsminister Lutnick für Chip-Lieferungen nach China verantwortlich</span></a></li><li><a href="https://www.deutschlandfunk.de/bundestagspraesidentin-kloeckner-will-mitarbeiter-des-parlaments-staerker-durchleuchten-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Interview der Woche - Bundestagspräsidentin Klöckner will Mitarbeiter des Parlaments stärker durchleuchten</span></a></li><li><a href="https://www.deutschlandfunk.de/bund-will-nach-medienberichten-bei-atomfirma-urenco-einsteigen-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Militärische Bedeutung - Bund will nach Medienberichten bei Atomfirma Urenco einsteigen</span></a></li><li><a href="https://www.deutschlandfunk.de/spanischer-fussballverband-zwoelf-spiele-sperre-fuer-torwart-owono-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach tragischem Tod - Spanischer Fußballverband: Zwölf Spiele Sperre für Torwart Owono</span></a></li><li><a href="https://www.deutschlandfunk.de/kretzschmar-hofft-auf-schub-handball-noch-zu-provinziell-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Vor Heim-WM - Kretzschmar hofft auf Schub: &quot;Handball noch zu provinziell&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/el-ni-o-brasilianischer-bundesstaat-par-ruft-nach-tausenden-waldbraenden-den-umweltnotstand-aus-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Klimaauswirkungen - El Niño: Brasilianischer Bundesstaat Pará ruft nach Tausenden Waldbränden den Umweltnotstand aus</span></a></li><li><a href="https://www.deutschlandfunk.de/kitschkrieg-fordert-feste-quote-fuer-deutschsprachige-musik-im-radio-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Kritik an &quot;1Live&quot; - Kitschkrieg fordert feste Quote für deutschsprachige Musik im Radio</span></a></li><li><a href="https://www.deutschlandfunk.de/was-sich-beim-elterngeld-aendern-soll-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Familienleistung - Was sich beim Elterngeld ändern soll</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 14.11.2026 um 13:18 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
