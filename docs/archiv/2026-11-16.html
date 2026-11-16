@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 16.11.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Monday, 16. November 2026 &middot; 14:48 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">332 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Mecklenburg-Vorpommern - Schwesig als Ministerpräsidentin wiedergewählt</h3>
+          <div class="zaehler">
+            <b>8</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/schwesig-als-ministerpraesidentin-wiedergewaehlt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Mecklenburg-Vorpommern - Schwesig als Ministerpräsidentin wiedergewählt</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/eilmeldung-schwesig-ministerpraesidentin-mecklenburg-vorpommern-wiedergewaehlt-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">SPD-Politikerin Schwesig erneut zur Ministerpräsidentin gewählt</span></a></li><li><a href="https://www.tagesschau.de/video/video-1684656.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">&lt;strong&gt;Schwesig erneut zur Ministerpräsidentin von Mecklenburg-Vorpommern gewählt&lt;/strong&gt;</span></a></li><li><a href="https://www.welt.de/politik/deutschland/video6afafd8404d5cec509c6cd9f/landtag-mecklenburg-vorpommern-manuela-schwesig-erneut-zur-ministerpraesidentin-gewaehlt.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Manuela Schwesig erneut zur Ministerpräsidentin gewählt</span></a></li><li><a href="https://www.zeit.de/politik/deutschland/2026-11/manuela-schwesig-wahl-ministerpraesidentin-mecklenburg-vorpommern" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Mecklenburg-Vorpommern: Manuela Schwesig bleibt Ministerpräsidentin in Mecklenburg-Vorpommern</span></a></li><li><a href="https://www.sueddeutsche.de/politik/landtagswahlen-deutschland-mecklenburg-vorpommern-koalitionsvertrag-gruene-spd-linke-schwesig-li.3540501" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Newsblog zu den Landtagswahlen: Schwesig erneut zur Ministerpräsidentin gewählt</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/manuela-schwesig-spd-mecklenburg-vorpommern-wahl-ministerpraesidentin-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Die Baustellen für Ministerpräsidentin Schwesig</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6afaf57204d5cec509c6cc41/manuela-schwesig-zur-ministerpraesidentin-mecklenburg-vorpommerns-gewaehlt.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Manuela Schwesig erneut zur Ministerpräsidentin gewählt – erstmals Rot-Rot-Grün im Landtag</span></a></li><li><a href="https://www.spiegel.de/politik/deutschland/mecklenburg-vorpommern-manuela-schwesig-erneut-zur-ministerpraesidentin-gewaehlt-a-223a2d1e-3809-43fb-977a-73be20bcfac9#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Mecklenburg-Vorpommern: Manuela Schwesig erneut zur Ministerpräsidentin gewählt</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/spd-vorsitz-hubertus-heil-kandidiert-doch-manuela-schwesig-entscheidet-accg-201687155.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">SPD-Vorsitz: Das entscheidet Manuela Schwesig</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Banken - EU-Kommission: Unicredit darf Commerzbank übernehmen</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:75%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/eu-kommission-unicredit-darf-commerzbank-uebernehmen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Banken - EU-Kommission: Unicredit darf Commerzbank übernehmen</span></a></li><li><a href="https://www.zeit.de/news/2026-11/16/eu-gibt-unicredit-gruenes-licht-fuer-commerzbank-uebernahme" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Finanzbranche: EU gibt Unicredit grünes Licht für Commerzbank-Übernahme</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/unternehmen/unicredit-commerzbank-uebernahme-eu-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">EU genehmigt Unicredit Übernahme von Commerzbank</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/commerzbank-unicredit-eu-genehmigung-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">EU gibt UniCredit grünes Licht für Commerzbank-Übernahme</span></a></li><li><a href="https://www.welt.de/wirtschaft/article6afae08c04d5cec509c6a14d/commerzbank-eu-kommission-genehmigt-uebernahme-durch-unicredit-ohne-auflagen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Ohne Auflagen“ – EU-Kommission genehmigt Übernahme der Commerzbank durch Unicredit</span></a></li><li><a href="https://www.tagesschau.de/video/video-1684602.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">EU gibt grünes Licht für Commerzbank-Übernahme</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/business-liveticker-eu-gibt-unicredit-gruenes-licht-fuer-commerzbank-uebernahme-faz-200452404.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Business-Ticker: EU genehmigt Commerzbank-Übernahme durch Unicredit</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Nations League: Italiens Fußball ist zurück auf dem Boden der Tatsachen</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/sport/italien-nations-league-niederlage-belgien-mancini-li.3581043" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Nations League: Italiens Fußball ist zurück auf dem Boden der Tatsachen</span></a></li><li><a href="https://www.sueddeutsche.de/sport/england-nations-league-tuchel-sieg-spanien-li.3581042" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">England in der Nations League: Tuchel bejubelt den „Statement-Sieg“</span></a></li><li><a href="https://www.sportschau.de/fussball/nationsleague/furioses-england-stoppt-spaniens-rekordserie,spielbericht-spanien-england-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Nations League: Furioses England stoppt Spaniens Rekordserie</span></a></li><li><a href="https://www.zdfheute.de/briefing/zdfsportstudio-update/dfb-klopp-nations-league-wintersport-aicher-revierderby-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Sport-Wochenende: Nations League und Weltcup-Sieg</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-nations-league/video/spanien-england-highlights-maenner-zusammenfassung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">England beendet Spaniens Super-Serie</span></a></li><li><a href="https://www.sportschau.de/fussball/nationalmannschaft/so-erreicht-klopp-mit-dem-dfb-team-noch-viertelfinale,artikel-nations-league-viertelfinale-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Nations League: So kommt das DFB-Team ins Viertelfinale</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Merz erwartet Einigung zur Stromsteuer im Koalitionsausschuss</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/inland/innenpolitik/merz-stromsteuer-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Merz erwartet Einigung zur Stromsteuer im Koalitionsausschuss</span></a></li><li><a href="https://www.spiegel.de/politik/deutschland/stromsteuer-friedrich-merz-erwartet-einigung-im-koalitionsausschuss-a-f168982c-79b8-49e6-9ab2-dc870587a27c#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Stromsteuer: Friedrich Merz erwartet Einigung im Koalitionsausschuss</span></a></li><li><a href="https://www.welt.de/politik/deutschland/video6afaee43534897c599cb354e/treffen-mit-soeder-wir-wissen-dass-wir-liefern-muessen-merz-kuendigt-einigung-bei-stromsteuersenkung-an.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Wir wissen, dass wir liefern müssen“ – Merz kündigt Einigung bei Stromsteuersenkung an</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6afae63304d5cec509c6b2ca/friedrich-merz-wir-wissen-dass-wir-liefern-muessen-kanzler-kuendigt-einigung-bei-stromsteuersenkung-an.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Wir wissen, dass wir liefern müssen“ – Merz kündigt Einigung bei Stromsteuersenkung an</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Golf-Region - Bericht: Dritter US-Flugzeugträger erreicht Nahen Osten</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bericht-dritter-us-flugzeugtraeger-erreicht-nahen-osten-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Golf-Region - Bericht: Dritter US-Flugzeugträger erreicht Nahen Osten</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/usa-flugzeugtraeger-nahost-102.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Dritter US-Flugzeugträger erreicht laut Medienberichten Nahen Osten</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/liveblog-nahost-jemenitische-armee-zieht-sich-von-bab-al-mandab-zurueck-faz-200583539.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Nahost: Dritter US-Flugzeugträger erreicht Nahen Osten</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Nach Treffen mit Söder - Merz: Stromsteuersenkung wird morgen beschlossen</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/merz-stromsteuersenkung-wird-morgen-beschlossen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Treffen mit Söder - Merz: Stromsteuersenkung wird morgen beschlossen</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/haushalt-soeder-stromsteuer-moeglich-koalition-muetterrente-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Söder hält Stromsteuersenkung doch noch für möglich</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/soeder-csu-koalition-haushalt-stromsteuer-muetterrente-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Söder: Stromsteuersenkung ist &quot;Glaubwürdigkeitsfrage&quot;</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Deutsche Asylpolitik - &quot;Return Hubs&quot;: Worum es bei dem geplanten Abschiebezentrum in Ruanda geht</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/return-hubs-worum-es-bei-dem-geplanten-abschiebezentrum-in-ruanda-geht-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Deutsche Asylpolitik - &quot;Return Hubs&quot;: Worum es bei dem geplanten Abschiebezentrum in Ruanda geht</span></a></li><li><a href="https://www.spiegel.de/politik/deutschland/return-hub-in-ruanda-sind-alexander-dobrindts-geplante-abschiebezentren-erlaubt-a-76d37dd4-0662-4e2c-bf9a-a9922102bb07#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Return Hub in Ruanda: Sind Alexander Dobrindts geplante Abschiebezentren erlaubt?</span></a></li><li><a href="https://taz.de/Abschiebelager-in-Ruanda/!6230295/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Abschiebezentrum in Ruanda: SPD-Abgeordnete und Grünen-Chef gegen „Return Hubs“</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Union: Merz stellt vollständige Senkung der Stromsteuer in Aussicht</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/news/2026-11/16/soeder-bekraeftigt-unions-forderung-nach-stromsteuersenkung" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Union: Merz stellt vollständige Senkung der Stromsteuer in Aussicht</span></a></li><li><a href="https://www.sueddeutsche.de/politik/bundesregierung-liveblog-merz-stromsteuer-li.3580621" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Bundespolitik: Merz fordert vollständige Senkung der Stromsteuer</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-merz-rechnet-mit-senkung-der-stromsteuer-im-jahr-2027-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: Merz rechnet mit Senkung der Stromsteuer im Jahr 2027</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>„Hat nicht funktioniert“ – Britischer Premierminister erklärt Brexit-Deal für gescheitert</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:38%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/politik/ausland/article6afaf1f604d5cec509c6cbbf/brexit-britischer-premierminister-erklaert-johnson-deal-fuer-gescheitert-hat-nicht-funktioniert.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Hat nicht funktioniert“ – Britischer Premierminister erklärt Brexit-Deal für gescheitert</span></a></li><li><a href="https://www.spiegel.de/ausland/andy-burnham-britischer-premierminister-erklaert-brexit-fuer-gescheitert-a-ca924ef5-f2b7-43b8-81eb-0b5e219f10ff#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Andy Burnham: Britischer Premierminister erklärt Brexit für gescheitert</span></a></li><li><a href="https://taz.de/Britische-Beziehungen-zur-EU/!6230303/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Britische Beziehungen zur EU: Andy Burnham erklärt Johnsons Brexit-Deal für gescheitert</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Israel: Opposition spricht von »versuchtem Staatsstreich« durch Benjamin Netanyahu</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/ausland/israel-opposition-spricht-von-versuchtem-staatsstreich-durch-benjamin-netanyahu-a-b08a0580-e6bf-430b-bee2-25ce834b21fa#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Israel: Opposition spricht von »versuchtem Staatsstreich« durch Benjamin Netanyahu</span></a></li><li><a href="https://www.zeit.de/politik/ausland/2026-11/israel-benjamin-netanjahu-wahleinmischung-vorwurf-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Parlamentswahl in Israel: Opposition wirft Benjamin Netanjahu »versuchten Staatsstreich« vor</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Resistenzen - WHO warnt vor zunehmender Unwirksamkeit von Antibiotika</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/who-warnt-vor-zunehmender-unwirksamkeit-von-antibiotika-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Resistenzen - WHO warnt vor zunehmender Unwirksamkeit von Antibiotika</span></a></li><li><a href="https://www.tagesschau.de/wissen/gesundheit/who-antibiotika-resistenzen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">WHO warnt vor wachsenden Antibiotika-Resistenzen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>COP31 - Beschlussentwurf für Weltklimakonferenz veröffentlicht</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/beschlussentwurf-fuer-weltklimakonferenz-veroeffentlicht-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">COP31 - Beschlussentwurf für Weltklimakonferenz veröffentlicht</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/cop-klimagipfel-schneider-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Entscheidende Woche bei der Weltklimakonferenz COP31 beginnt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Parteien - BSW-Mitgründer fordern Distanz zur AfD</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bsw-mitgruender-fordern-distanz-zur-afd-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Parteien - BSW-Mitgründer fordern Distanz zur AfD</span></a></li><li><a href="https://taz.de/Richtungsstreit-im-BSW/!6230294/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Richtungsstreit im BSW: Gründungsmitglieder des BSW fordern Distanz zur AfD</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Facebook-Mutterkonzern - Verlegerverbände mahnen Meta wegen Nutzungsbedingungen ab</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/verlegerverbaende-mahnen-meta-wegen-nutzungsbedingungen-ab-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Facebook-Mutterkonzern - Verlegerverbände mahnen Meta wegen Nutzungsbedingungen ab</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/medien-und-film/medienpolitik/presseverbaende-bdzv-und-mvfp-mahnen-meta-ab-accg-201687223.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Wegen neuer Klauseln: Deutsche Presseverbände mahnen Meta ab</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Während Klopp Infantino frontal angreift, läuft dessen Gegnern die Zeit davon</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/sport/fussball/article6afafe13534897c599cb37da/fifa-praesident-waehrend-klopp-infantino-frontal-angreift-laeuft-dessen-gegnern-die-zeit-davon.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Während Klopp Infantino frontal angreift, läuft dessen Gegnern die Zeit davon</span></a></li><li><a href="https://www.zdfheute.de/sport/video/fussball-klopp-infantino-fifa-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Klopp: Infantino schlimmer als Blatter</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Gérard Depardieu entschuldigt sich für sexuelle Übergriffe</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/panorama/prominente/gerard-depardieu-frankreich-sexuelle-belaestigung-uebergriffe-entschuldigung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Gérard Depardieu entschuldigt sich für sexuelle Übergriffe</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/gerard-depardieu-entschuldigt-sich-fuer-sexuelle-uebergriffe-accg-201687031.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Missbrauchsprozess: Gérard Depardieu entschuldigt sich für sexuelle Übergriffe</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Französische Soldaten sollen seit Monaten in der Ukraine sein</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/politik/ausland/article6afae8ac5dc4e94a2532a539/ukraine-krieg-franzoesische-soldaten-sollen-seit-monaten-in-der-ukraine-sein.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Französische Soldaten sollen seit Monaten in der Ukraine sein</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-berichte-franzoesische-soldaten-in-der-ukraine-praesent-faz-110683325.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Ukrainekrieg: Berichte: Französische Soldaten in der Ukraine präsent</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Abschiebezentrum in Ruanda: Bundesregierung prüft weiter mögliches Abschiebezentrum in Ruanda</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/politik/ausland/2026-11/abschiebezentrum-ruanda-bundesregierung-spd-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Abschiebezentrum in Ruanda: Bundesregierung prüft weiter mögliches Abschiebezentrum in Ruanda</span></a></li><li><a href="https://www.tagesschau.de/ausland/afrika/ruanda-abschiebezentrum-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Mögliche Abkommen: Eignet sich Ruanda für Abschiebezentren?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Glenn Close: Riesenfreude über Ehren-Oscar</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/panorama/prominente/stars-promi-news-bilder-november-2026-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Glenn Close: Riesenfreude über Ehren-Oscar</span></a></li><li><a href="https://www.tagesschau.de/multimedia/bilder/blickpunkte-10570.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Ehren-Oscar für Glenn Close, Chhath-Puja-Fest, Literaturnobelpreisträger Miguel Ángel Asturias</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Tschechien: Massenproteste gegen Rundfunkreform</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:25%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/tschechien-demo-medien-reform-protest-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Tschechien: Massenproteste gegen Rundfunkreform</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/demo-tschechien-rundfunk-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Massenprotest gegen Rundfunkreform in Tschechien</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/inland/innenpolitik/eilmeldung-schwesig-ministerpraesidentin-mecklenburg-vorpommern-wiedergewaehlt-100.html" target="_blank" rel="noopener">SPD-Politikerin Schwesig erneut zur Ministerpräsidentin gewählt</a></li><li><a href="https://www.tagesschau.de/video/video-1684456.html" target="_blank" rel="noopener">Cyberangriffe: Präsident des Bundeskriminalamts zu hybriden Bedrohungen</a></li><li><a href="https://www.tagesschau.de/video/video-1684560.html" target="_blank" rel="noopener">Ukraine: Vorbereitung auf Kriegswinter</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/deutschland/manuela-schwesig-spd-mecklenburg-vorpommern-wahl-ministerpraesidentin-100.html" target="_blank" rel="noopener">Die Baustellen für Ministerpräsidentin Schwesig</a></li><li><a href="https://www.zdfheute.de/politik/ausland/abschiebezentren-ruanda-kritik-eu-100.html" target="_blank" rel="noopener">Abschiebezentrum in Ruanda: Was hinter den EU-Plänen steckt</a></li><li><a href="https://www.zdfheute.de/politik/killerroboter-autonome-waffensysteme-regelen-konferenz-genf-100.html" target="_blank" rel="noopener">Ringen um Regeln für &quot;Killerroboter&quot;: Darum geht es</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/merz-stromsteuersenkung-wird-morgen-beschlossen-102.html" target="_blank" rel="noopener">Nach Treffen mit Söder - Merz: Stromsteuersenkung wird morgen beschlossen</a></li><li><a href="https://www.deutschlandfunk.de/schwesig-als-ministerpraesidentin-wiedergewaehlt-100.html" target="_blank" rel="noopener">Mecklenburg-Vorpommern - Schwesig als Ministerpräsidentin wiedergewählt</a></li><li><a href="https://www.deutschlandfunk.de/eu-kommission-unicredit-darf-commerzbank-uebernehmen-102.html" target="_blank" rel="noopener">Banken - EU-Kommission: Unicredit darf Commerzbank übernehmen</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/panorama/justiz/schleswig-holstein-tanja-k-ist-seit-20-monaten-verschwunden-spur-fuehrt-zum-mann-a-17aa9e4c-23f7-4c2b-98d2-268b12451341#ref=rss" target="_blank" rel="noopener">Schleswig-Holstein: Tanja K. ist seit 20 Monaten verschwunden – Spur führt zum Mann</a></li><li><a href="https://www.spiegel.de/politik/deutschland/mecklenburg-vorpommern-manuela-schwesig-erneut-zur-ministerpraesidentin-gewaehlt-a-223a2d1e-3809-43fb-977a-73be20bcfac9#ref=rss" target="_blank" rel="noopener">Mecklenburg-Vorpommern: Manuela Schwesig erneut zur Ministerpräsidentin gewählt</a></li><li><a href="https://www.spiegel.de/politik/deutschland/stromsteuer-friedrich-merz-erwartet-einigung-im-koalitionsausschuss-a-f168982c-79b8-49e6-9ab2-dc870587a27c#ref=rss" target="_blank" rel="noopener">Stromsteuer: Friedrich Merz erwartet Einigung im Koalitionsausschuss</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/politik/deutschland/2026-11/frauke-brosius-gersdorf-spd-bundespraesidentin-ilse-aigner" target="_blank" rel="noopener">Wahl der Bundespräsidentin: SPD nominiert Frauke Brosius-Gersdorf als Wahlfrau</a></li><li><a href="https://www.zeit.de/news/2026-11/16/lokfuehrerin-faehrt-mit-zug-gegen-prellbock" target="_blank" rel="noopener">Ursache unklar: Lokführerin fährt mit Zug gegen Prellbock</a></li><li><a href="https://www.zeit.de/news/2026-11/16/soeder-bekraeftigt-unions-forderung-nach-stromsteuersenkung" target="_blank" rel="noopener">Union: Merz stellt vollständige Senkung der Stromsteuer in Aussicht</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/politik/bundesregierung-liveblog-merz-stromsteuer-li.3580621" target="_blank" rel="noopener">Bundespolitik: Merz fordert vollständige Senkung der Stromsteuer</a></li><li><a href="https://www.sueddeutsche.de/politik/strafprozesse-reform-hubig-expertenkommission-plaene-auswirkungen-li.3579018" target="_blank" rel="noopener">Justiz: Der große Plan, um Gerichtsprozesse schneller zu machen</a></li><li><a href="https://www.sueddeutsche.de/kultur/klage-disney-iron-man-tobias-meister-synchronsprecher-geld-li.3578143" target="_blank" rel="noopener">Film: Die deutsche Stimme von „Iron Man“ verklagt Disney</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/wirtschaft/innovation-durch-rente-so-wird-die-altersvorsorge-umgekrempelt-201673615.html" target="_blank" rel="noopener">Anlage der Kapitalrente: Macht uns die Rente bald innovativer?</a></li><li><a href="https://www.faz.net/aktuell/finanzen/millionaerin-mit-geldproblem-muss-eine-61-jaehrige-witwe-noch-arbeiten-accg-201673616.html" target="_blank" rel="noopener">Mein Geld: „Muss ich als Millionärin noch arbeiten?“</a></li><li><a href="https://www.faz.net/aktuell/finanzen/lohnt-das-altersvorsorgedepot-im-vergleich-zum-etf-201652753.html" target="_blank" rel="noopener">Altersvorsorge-Rechner: Mehrere Hundert Euro pro Monat Unterschied im Ruhestand möglich</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/sport/fussball/article6afafe13534897c599cb37da/fifa-praesident-waehrend-klopp-infantino-frontal-angreift-laeuft-dessen-gegnern-die-zeit-davon.html" target="_blank" rel="noopener">Während Klopp Infantino frontal angreift, läuft dessen Gegnern die Zeit davon</a></li><li><a href="https://www.welt.de/politik/ausland/article6afaf5c204d5cec509c6cc54/polen-jugendliche-neonazis-sollen-anschlaege-geplant-haben.html" target="_blank" rel="noopener">Sprengstoffmaterial gefunden – drei jugendliche Neonazis in Polen festgenommen</a></li><li><a href="https://www.welt.de/satire/article6afad28f9849eea0701e49b6/un-klimakonferenz-beschliesst-gta-6-fuer-alle.html" target="_blank" rel="noopener">Durchbruch bei Klimakonferenz – GTA VI für alle</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Kind-in-Berlin-vom-Bus-ueberfahren-Ist-Radfahren-fuer-Kinder-zu-gefaehrlich/!6230318/" target="_blank" rel="noopener">Kind im Berliner Verkehr überfahren: Sie fühlte sich sicher – und ist jetzt tot</a></li><li><a href="https://taz.de/Grosse-Proteste-in-Tschechien/!6230312/" target="_blank" rel="noopener">Große Proteste in Tschechien: Hunderttausende gegen 4:36</a></li><li><a href="https://taz.de/Sehnsucht-nach-Wirtschaftswachsstum/!6224395/" target="_blank" rel="noopener">Sehnsucht nach Wirtschaftswachsstum: Wirtschaft ist Psychologie? Dann mal los!</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/tesla-investiert-drei-milliarden-euro-in-gigafactory-gruenheide-accg-201687612.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Automobilindustrie: Tesla investiert drei Milliarden Euro in Grünheide</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/menschen/william-und-catherine-besuchen-indien-accg-201688143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Dreitägige Reise: William und Catherine besuchen Indien</span></a></li><li><a href="https://taz.de/Flausch-und-Kuchen/!6230497/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Flausch und Kuchen: Heimlich verklebtes Fell befummeln</span></a></li><li><a href="https://www.zeit.de/politik/deutschland/2026-11/frauke-brosius-gersdorf-spd-bundespraesidentin-ilse-aigner" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Wahl der Bundespräsidentin: SPD nominiert Frauke Brosius-Gersdorf als Wahlfrau</span></a></li><li><a href="https://www.deutschlandfunk.de/blauer-schokoladen-nikolaus-der-afd-loest-unmut-aus-vereinnahmung-christlicher-symbole-beklagt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Religion - Blauer Schokoladen-Nikolaus der AfD löst Unmut aus: Vereinnahmung christlicher Symbole beklagt</span></a></li><li><a href="https://www.deutschlandfunk.de/kritik-aus-spd-bundestagsfraktion-an-plaenen-zu-abschiebezentren-in-ruanda-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Migration - Kritik aus SPD-Bundestagsfraktion an Plänen zu Abschiebezentren in Ruanda</span></a></li><li><a href="https://www.deutschlandfunk.de/voelkerrechtler-verweist-auf-offene-fragen-bei-abschiebezentren-in-ruanda-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Migration - Völkerrechtler verweist auf offene Fragen bei Abschiebezentren in Ruanda</span></a></li><li><a href="https://www.deutschlandfunk.de/afd-interne-debatte-ueber-migrationspolitik-entbrannt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Zwischenwahlen in USA - AfD-interne Debatte über Migrationspolitik entbrannt</span></a></li><li><a href="https://www.deutschlandfunk.de/verfassungschutzbericht-sieht-rechtsextremismus-in-thueringen-etabliert-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">2025 - Verfassungschutzbericht sieht Rechtsextremismus in Thüringen etabliert</span></a></li><li><a href="https://www.deutschlandfunk.de/csu-chef-soeder-schliesst-verzicht-auf-erhoehung-der-muetterrente-aus-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Debatte über Stromsteuer - CSU-Chef Söder schließt Verzicht auf Erhöhung der Mütterrente aus</span></a></li><li><a href="https://www.deutschlandfunk.de/deutsche-stromkonzerne-nutzen-ihre-marktmacht-in-gaspreis-krise-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Müncher Ifo-Institut - Deutsche Stromkonzerne nutzen ihre Marktmacht in Gaspreis-Krise</span></a></li><li><a href="https://www.deutschlandfunk.de/wahrheitskommission-zum-voelkermord-an-den-jesiden-nimmt-arbeit-auf-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Berlin - Wahrheitskommission zum Völkermord an den Jesiden nimmt Arbeit auf</span></a></li><li><a href="https://www.deutschlandfunk.de/bericht-zahl-der-psychisch-kranken-bundeswehr-soldaten-gestiegen-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bilanz - Bericht: Zahl der psychisch kranken Bundeswehr-Soldaten gestiegen</span></a></li><li><a href="https://www.deutschlandfunk.de/katholischer-jugendverband-laesst-sexuelle-gewalt-untersuchen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Düsseldorf - Katholischer Jugendverband lässt sexuelle Gewalt untersuchen</span></a></li><li><a href="https://www.deutschlandfunk.de/bnd-spionageaffaere-hannings-ex-assistent-nutzte-offenbar-fahrer-und-leibwaechter-fuer-akten-schmugg-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Medienbericht - BND-Spionageaffäre: Hannings Ex-Assistent nutzte offenbar Fahrer und Leibwächter für Akten-Schmuggel</span></a></li><li><a href="https://www.deutschlandfunk.de/nach-brandstiftung-an-reichelt-auto-polizei-prueft-mutmassliches-bekennerschreiben-aus-linksextremer-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Nius&quot;-Chef - Nach Brandstiftung an Reichelt-Auto: Polizei prüft mutmaßliches Bekennerschreiben aus linksextremer Szene</span></a></li><li><a href="https://www.deutschlandfunk.de/vulcan-rakete-versagt-nach-start-amazon-verliert-40-leo-satelliten-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Raumfahrt - Vulcan-Rakete versagt nach Start, Amazon verliert 40 &quot;Leo&quot;-Satelliten</span></a></li><li><a href="https://www.deutschlandfunk.de/china-bestaetigt-gesondertes-treffen-zwischen-trump-putin-und-xi-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Apec-Gipfel - China bestätigt gesondertes Treffen zwischen Trump, Putin und Xi</span></a></li><li><a href="https://www.deutschlandfunk.de/128-laender-beraten-ab-montag-ueber-beschraenkungen-fuer-ki-waffensysteme-und-killerroboter-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Genf - 128 Länder beraten ab Montag über Beschränkungen für KI-Waffensysteme und Killerroboter</span></a></li><li><a href="https://www.deutschlandfunk.de/kap-verde-praesident-neves-wiedergewaehlt-erste-frau-als-kandidatin-unterliegt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Westafrikanischer Inselstaat - Kap-Verde-Präsident Neves wiedergewählt - erste Frau als Kandidatin unterliegt</span></a></li><li><a href="https://www.deutschlandfunk.de/beratungen-ueber-stahl-niedersachsens-wirtschaftsminister-tonne-beklagt-umgehung-von-eu-zoellen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Salzgitter - Beratungen über Stahl: Niedersachsens Wirtschaftsminister Tonne beklagt Umgehung von EU-Zöllen</span></a></li><li><a href="https://www.deutschlandfunk.de/schleswig-holsteins-staatskanzleichef-schroedter-fordert-mehr-digitale-resilienz-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Digitalisierung - Schleswig-Holsteins Staatskanzleichef Schrödter fordert mehr digitale Resilienz</span></a></li><li><a href="https://www.deutschlandfunk.de/russische-besatzungesbhoerden-melden-ukrainische-angriff-auf-krim-bruecke-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Russische Besatzungesbhörden melden ukrainische Angriff auf Krim-Brücke</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 16.11.2026 um 14:48 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
