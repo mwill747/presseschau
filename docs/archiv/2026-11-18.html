@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 18.11.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Wednesday, 18. November 2026 &middot; 15:17 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">378 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>USA - Demokraten gewinnen auch Senatssitz in Alaska</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/demokraten-gewinnen-auch-senatssitz-in-alaska-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">USA - Demokraten gewinnen auch Senatssitz in Alaska</span></a></li><li><a href="https://www.faz.net/video/klare-mehrheit-fuer-demokraten-im-us-senat-201694573.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Peltola gewinnt in Alaska: Klare Mehrheit für Demokraten im US-Senat</span></a></li><li><a href="https://taz.de/Demokratin-gewinnt-Senatssitz-in-Alaska/!6231020/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Demokratin gewinnt Senatssitz in Alaska: Demokraten erzielen größten Sitzgewinn im Senat seit 1958</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/midterms-usa-alaska-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">US-Midterms: Demokraten gewinnen auch Senatssitz in Alaska</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/alaska-demokratin-peltola-senat-midterms-usa-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Midterms: Demokraten erobern Senatssitz in Alaska</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Apec-Gipfel in Shenzhen: Chinas Xi schenkt Putin die große Propaganda-Bühne</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:80%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Apec-Gipfel-in-Shenzhen/!6231090/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Apec-Gipfel in Shenzhen: Chinas Xi schenkt Putin die große Propaganda-Bühne</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/apec-gipfel-shenzen-trump-xi-putin-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">APEC-Gipfel in Shenzhen: Xi umarmt Trump - Putin schon da</span></a></li><li><a href="https://www.welt.de/politik/ausland/plus6afd7199a883f861e533063f/dreiergipfel-in-china-ein-neuer-jalta-moment-was-trump-xi-und-putin-in-shenzhen-verhandeln.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Ein neuer Jalta-Moment? Was Trump, Xi und Putin in Shenzhen verhandeln</span></a></li><li><a href="https://www.tagesschau.de/video/video-1685790.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Jörg Endriss, ARD Peking, zum Treffen von Putin und Xi in Shenzen</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/apec-gipfel-in-shenzen-applaus-fuer-wladimir-putin-von-westlichen-wirtschaftsbossen-accg-201693370.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">APEC-Gipfel in Shenzhen: Langer Applaus für Putin</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/apec-trump-putin-xi-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Treffen von Trump, Xi und Putin: Rüstung, KI - und ein heikles Thema</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/putin-empfindlich-getroffen-was-der-angriff-auf-die-krim-bruecke-bedeutet-201691161.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Krim-Brücke: Ein empfindlicher Treffer gegen Putin</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Koalitionsausschuss - CDU, CSU und SPD einigen sich auf Senkung der Stromsteuer</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:80%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/cdu-csu-und-spd-einigen-sich-auf-senkung-der-stromsteuer-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Koalitionsausschuss - CDU, CSU und SPD einigen sich auf Senkung der Stromsteuer</span></a></li><li><a href="https://www.sueddeutsche.de/politik/bundeshaushalt-stromsteuer-koalitionsausschuss-ergebnis-2027-li.3581995" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Bundesregierung: Koalition quält sich zur Stromsteuersenkung</span></a></li><li><a href="https://www.tagesschau.de/video/video-1685738.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Koalition einigt sich auf Stromsteuersenkung für alle</span></a></li><li><a href="https://www.faz.net/video/koalition-einigt-sich-auf-senkung-der-stromsteuer-201694053.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Verabschiedung des Bundeshaushalts: Koalition einigt sich auf Senkung der Stromsteuer</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Chiphersteller - Nvidia hat Umsatz und Gewinn etwa verdoppelt</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:80%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/nvidia-hat-umsatz-und-gewinn-etwa-verdoppelt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Chiphersteller - Nvidia hat Umsatz und Gewinn etwa verdoppelt</span></a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/nvidia-quartalszahlen-ki-chips-umsatz-rueckkehr-jensen-huang-li.3582422" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Chip-Konzern: Nvidia verdoppelt Umsatz und Gewinn</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/nvidia-quartalsergebnisse-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Neue Quartalszahlen: Nvidia verdoppelt Umsatz und Gewinn</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/unternehmen/nvidia-quartalsbilanz-umsatz-verdopplung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Trotz Führungskrise: Nvidia verdoppelt Umsatz und Gewinn</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>&quot;Ziemlich dumm&quot; - Pistorius weist US-Kritik an Ukraine nach Angriff auf Krim-Brücke zurück</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:80%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/pistorius-weist-us-kritik-an-ukraine-nach-angriff-auf-krim-bruecke-zurueck-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Ziemlich dumm&quot; - Pistorius weist US-Kritik an Ukraine nach Angriff auf Krim-Brücke zurück</span></a></li><li><a href="https://taz.de/Streit-ueber-Angriffe-tief-in-Russland/!6231095/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Streit über Angriffe tief in Russland: Pistorius nennt US-Einwände „ziemlich dumm“</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/pistorius-ukraine-angriffe-usa-kritik-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">&quot;Ziemlich dumm&quot;: Pistorius reagiert auf US-Kritik an ukrainischen Angriffen</span></a></li><li><a href="https://www.spiegel.de/ausland/ukraine-so-gelang-der-ukraine-der-einsturz-der-kertschbruecke-a-7f0b9aa4-abb6-4a53-b33d-669b89aeadb6#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Ukraine: So brachten Angriffe die Krim-Brücke zum Einstürzen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>FC Bayern München: Vincent Kompany gegen Köln wohl zurück auf Bayern-Bank</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:80%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/sport/2026-11/vincent-kompany-fc-bayern-muenchen-hirnhautreizung-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">FC Bayern München: Vincent Kompany gegen Köln wohl zurück auf Bayern-Bank</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-bundesliga/bundesliga-vincent-kompany-bayern-muenchen-1-fc-koeln-rueckkehr-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Kompany gegen Köln vor Rückkehr auf die Bayern-Bank</span></a></li><li><a href="https://www.welt.de/sport/fussball/bundesliga/article6afd9b52bb7e7a6679f92e59/fc-bayern-nach-zusammenbruch-und-klinikaufenthalt-rueckkehr-von-kompany-gegen-koeln.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Nach Zusammenbruch und Klinikaufenthalt – Rückkehr von Kompany gegen Köln</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/kunstmarkt/van-ham-in-koeln-wiederentdeckter-michiel-sweerts-fuehrt-fine-art-auktion-an-accg-201681635.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">auktionen in Köln: Zurück zur Natur</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Keine Neuauszählung: Warum das BSW in Karlsruhe nicht durchgedrungen ist</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:80%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/politik/inland/wahlpruefung-warum-das-bsw-in-karlsruhe-scheiterte-201694265.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Keine Neuauszählung: Warum das BSW in Karlsruhe nicht durchgedrungen ist</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/bsw-beschwerde-abgelehnt-bundestagswahl-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Keine Neuauszählung: BSW scheitert mit Wahlprüfungsbeschwerde</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/bsw-klage-bundestagswahl-gescheitert-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">BSW scheitert mit Beschwerde zu Bundestagswahl</span></a></li><li><a href="https://taz.de/Bundesverfassungsgericht/!6231041/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Bundesverfassungsgericht: BSW scheitert mit Wahlbeschwerde</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Aktuelles zum Krieg in der Ukraine</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:60%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.deutschlandfunk.de/wadephul-europa-muss-bei-friedensgespraechen-mit-am-tisch-sitzen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Krieg gegen die Ukraine - Wadephul: Europa muss bei Friedensgesprächen mit am Tisch sitzen</span></a></li><li><a href="https://www.deutschlandfunk.de/vier-tote-nach-russischem-angriff-auf-ukrainische-hafenstadt-odessa-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Krieg in der Ukraine - Vier Tote nach russischem Angriff auf ukrainische Hafenstadt Odessa</span></a></li><li><a href="https://www.deutschlandfunk.de/religionsbeauftragter-rachel-russland-verletzt-in-den-besetzten-gebieten-der-ukraine-religions-und-w-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Aktueller Bericht - Religionsbeauftragter Rachel: Russland verletzt in den besetzten Gebieten der Ukraine Religions- und Weltanschauungsfreiheit</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/krim-bruecke-152.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Krieg gegen die Ukraine: Wie schwer ist die Krim-Brücke getroffen?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Koalitionsausschuss: Merz drückt Stromsteuersenkung durch - aber nur halb</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:60%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/news/2026-11/18/koalitionsspitzen-verhandeln-bis-tief-in-die-nacht" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Koalitionsausschuss: Merz drückt Stromsteuersenkung durch - aber nur halb</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/cdu-und-spd-warum-friedrich-merz-die-koalition-nicht-aufgeben-darf-201693892.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Koalitionsausschuss: Für die Union muss es weiter heißen: Merz macht’s</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/stromsteuersenkung-acht-stunden-fuer-eine-schnelle-einigung-201694001.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Koalitionsausschuss: Um Mitternacht hat Merz erst mal genug</span></a></li><li><a href="https://www.spiegel.de/politik/deutschland/friedrich-merz-wie-es-zum-eklat-im-koalitionsausschuss-kam-a-19224f50-63a2-4c09-92b8-0c2ead8e291d#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Friedrich Merz: Wie es zum Eklat im Koalitionsausschuss kam</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Ukraine-Krieg - Von der Leyen schlägt neues Darlehen für die Ukraine von 45 Milliarden Euro vor</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:60%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/von-der-leyen-schlaegt-neues-darlehen-fuer-die-ukraine-von-45-milliarden-euro-vor-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Von der Leyen schlägt neues Darlehen für die Ukraine von 45 Milliarden Euro vor</span></a></li><li><a href="https://www.welt.de/politik/ausland/article6afda2dcbb7e7a6679f92f64/streit-um-eu-schuldenaufnahme-bis-zu-45-milliarden-euro-von-der-leyen-praesentiert-neuen-plan-fuer-ukraine-kredit.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Bis zu 45 Milliarden Euro – Von der Leyen präsentiert neuen Plan für Ukraine-Kredit</span></a></li><li><a href="https://www.spiegel.de/wirtschaft/ukraine-krieg-warum-die-eu-ueber-weitere-45-milliarden-euro-fuer-kyjiw-streitet-a-b8ec6864-59d7-4bb8-9cbf-1f31d61632cb#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Ukraine-Krieg: Warum die EU über weitere 45 Milliarden Euro für Kyjiw streitet</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>Forensiker-Untersuchung: Wurde Epstein doch ermordet?</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:60%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/jeffrey-epstein-ermordet-mediziner-freeman-sieht-zeichen-einer-strangulation-accg-201693759.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Forensiker-Untersuchung: Wurde Epstein doch ermordet?</span></a></li><li><a href="https://www.zdfheute.de/panorama/kriminalitaet/epstein-autopsie-suizid-freeman-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Fall Jeffrey Epstein: Forensiker widerspricht Suizid-Befund</span></a></li><li><a href="https://taz.de/US-Forensiker-widerspricht-der-offiziellen-These-vom-Suizid-Wurde-Jeffrey-Epstein-doch-ermordet/!6230922/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">US-Forensiker widerspricht Suizid-These: Wurde Jeffrey Epstein doch ermordet?</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Neuer Parlamentspräsident in Israel: Der Wind hat sich gedreht</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Neuer-Parlamentspraesident-in-Israel/!6231039/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Neuer Parlamentspräsident in Israel: Der Wind hat sich gedreht</span></a></li><li><a href="https://www.tagesschau.de/video/video-1685798.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Israels Parlamentspräsident gewählt</span></a></li><li><a href="https://taz.de/Neuer-Parlamentspraesident-in-Israel/!6231021/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Neuer Parlamentspräsident in Israel: Erster Schritt zu Netanjahus Entmachtung</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/israel-knesset-praesident-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Israels Knesset: Eisenkot-Verbündeter als Parlamentspräsident gewählt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Filmemacher: Regisseur Herrmann Zschoche ist tot</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/news/2026-11/18/regisseur-herrmann-zschoche-ist-tot" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Filmemacher: Regisseur Herrmann Zschoche ist tot</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/medien-und-film/kino/zum-tod-des-filmregisseurs-herrmann-zschoche-201694781.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Herrmann Zschoche: Ein Romantiker im Widerstand</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Raumsonde - Voyager 1 einen Lichttag von der Erde entfernt</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/voyager-1-einen-lichttag-von-der-erde-entfernt-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Raumsonde - Voyager 1 einen Lichttag von der Erde entfernt</span></a></li><li><a href="https://www.tagesschau.de/wissen/technologie/voyager-1-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">So weit wie noch nie: Raumsonde &quot;Voyager 1&quot; - einen Lichttag von Erde entfernt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Justitz - Urteil zu Verbandsklage gegen DAZN erwartet</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/urteil-zu-verbandsklage-gegen-dazn-erwartet-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Justitz - Urteil zu Verbandsklage gegen DAZN erwartet</span></a></li><li><a href="https://www.zdfheute.de/panorama/dazn-urteil-streamingdienst-preiserhoehungen-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Urteil gegen Streamingdienst DAZN erwartet</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Deutsche Wildtierstiftung - Fransenfledermaus ist &quot;Tier des Jahres 2027&quot;</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/fransenfledermaus-ist-tier-des-jahres-2027-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Deutsche Wildtierstiftung - Fransenfledermaus ist &quot;Tier des Jahres 2027&quot;</span></a></li><li><a href="https://www.zdfheute.de/panorama/fledermaus-tier-des-jahres-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Fransenfledermaus ist Tier des Jahres</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Milliarden Euro für die Bahn - Verkehrsminister Bilger will Verwendung stärker kontrollieren</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/verkehrsminister-bilger-will-verwendung-staerker-kontrollieren-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Milliarden Euro für die Bahn - Verkehrsminister Bilger will Verwendung stärker kontrollieren</span></a></li><li><a href="https://www.zeit.de/wirtschaft/2026-11/leistungsvereinbarung-deutsche-bahn-steffen-bilger-infrago-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Bahnsanierung: Bilger will die Bahn zukünftig strenger kontrollieren</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Prozess gestartet: Sohn tötete Mitschüler in Offenburg - tragen Eltern Schuld?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/news/2026-11/18/sohn-toetete-mitschueler-in-offenburg-tragen-eltern-schuld" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Prozess gestartet: Sohn tötete Mitschüler in Offenburg - tragen Eltern Schuld?</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/kriminalitaet/erschossener-mitschueler-in-offenburg-eltern-stehen-vor-gericht-201694864.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Prozessauftakt: Sohn tötete Mitschüler – Eltern sollen die Waffe nicht richtig gesichert haben</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Grand Theft Auto VI: Rettet GTA 6 die Gaming-Branche?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/rettet-gta-vi-die-gaming-branche-201665027.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Grand Theft Auto VI: Rettet GTA 6 die Gaming-Branche?</span></a></li><li><a href="https://taz.de/Stromsteuer/!6231014/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Stromsteuersenkung: Einigung vor GTA VI</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Julio Iglesias: Vorwurf sexueller Übergriffe – spanische Justiz ermittelt</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/panorama/julio-iglesias-vorwurf-sexueller-uebergriffe-spanische-justiz-ermittelt-a-f5880ee8-cf1c-42cf-b05c-ba69db2ed4c0#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Julio Iglesias: Vorwurf sexueller Übergriffe – spanische Justiz ermittelt</span></a></li><li><a href="https://www.faz.net/aktuell/gesellschaft/menschen/julio-iglesias-strafverfahren-wegen-sexueller-uebergriffe-eroeffnet-201695153.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Vorwurf sexueller Übergriffe: Ermittlungen gegen Schlagersänger Julio Iglesias</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Regierung erleichtert Befristungen von Jobs</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/wirtschaft/jobbefristungen-kabinett-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Regierung erleichtert Befristungen von Jobs</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6afd8431fc384ca056385fad/kabinettsbeschluesse-regierung-erleichtert-job-befristungen-und-lockert-kuendigungsschutz-fuer-topverdiener.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Regierung erleichtert Job-Befristungen und lockert Kündigungsschutz für Topverdiener</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>„Absolutes Rätsel, warum Merz und die Bundesregierung nicht die Sicherheitsgefahr sehen“</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/politik/deutschland/plus6afd5d2fa883f861e5330307/atomprojekt-mit-russland-absolutes-raetsel-warum-merz-und-die-bundesregierung-nicht-die-sicherheitsgefahr-sehen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Absolutes Rätsel, warum Merz und die Bundesregierung nicht die Sicherheitsgefahr sehen“</span></a></li><li><a href="https://www.sueddeutsche.de/politik/stromsteuersenkung-friedrich-merz-koalitionsausschuss-lars-klingbeil-bundesregierung-li.3582340" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Bundesregierung: Und dann packt Merz seine Sachen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">23</span>
+          <h3>Xi Jinping empfängt Donald Trump persönlich am Flughafen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/ausland/xi-jinping-empfaengt-donald-trump-persoenlich-am-flughafen-a-1c046d0b-75bb-4cce-b787-1c29134402f7#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Xi Jinping empfängt Donald Trump persönlich am Flughafen</span></a></li><li><a href="https://www.faz.net/aktuell/politik/usa-unter-trump/liveticker-usa-unter-trump-xi-empfaengt-trump-persoenlich-am-flughafen-faz-19444916.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">USA unter Trump: Xi empfängt Trump persönlich am Flughafen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">24</span>
+          <h3>Reform des Sorgerechts: Kein Umgangsrecht mehr für gewalttätigen Elternteil</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Reform-des-Sorgerechts/!6231148/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Reform des Sorgerechts: Kein Umgangsrecht mehr für gewalttätigen Elternteil</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/gesetzentwurf-sorgerecht-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Sorgerechtsreform: Kein Umgangsrecht mehr für gewalttätigen Elternteil</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">25</span>
+          <h3>Chipkonzern: Nvidia: Jensen Huang kommt nicht zurück</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/nach-ruecktritt-nvidia-gruender-huang-erwaegt-rueckkehr-auf-ceo-posten-201692517.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Chipkonzern: Nvidia: Jensen Huang kommt nicht zurück</span></a></li><li><a href="https://taz.de/Nach-Spionageskandal/!6231027/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Nach Spionageskandal: Nvidia will Huang nicht zurückholen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">26</span>
+          <h3>Linken-Vorstand beantragt Ausschluss der Abgeordneten Emde</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:40%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/inland/regional/berlin/emde-ausschluss-linke-antrag-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Linken-Vorstand beantragt Ausschluss der Abgeordneten Emde</span></a></li><li><a href="https://taz.de/Linken-Abgeordnete-Vanessa-Emde/!6230738/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Linken-Abgeordnete Vanessa Emde: Ausschluss aus Fraktion beantragt</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/ausland/asien/apec-gipfel-shenzen-trump-xi-putin-100.html" target="_blank" rel="noopener">APEC-Gipfel in Shenzhen: Xi umarmt Trump - Putin schon da</a></li><li><a href="https://www.tagesschau.de/ausland/asien/apec-trump-putin-xi-100.html" target="_blank" rel="noopener">Treffen von Trump, Xi und Putin: Rüstung, KI - und ein heikles Thema</a></li><li><a href="https://www.tagesschau.de/video/video-1685738.html" target="_blank" rel="noopener">Koalition einigt sich auf Stromsteuersenkung für alle</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/wirtschaft/deutsche-bank-doepfner-springer-100.html" target="_blank" rel="noopener">So lief der Steuer-Deal um Springer-Chef Döpfner</a></li><li><a href="https://www.zdfheute.de/politik/koalition-merz-kanzler-klingbeil-cdu-csu-stromsteuer-100.html" target="_blank" rel="noopener">Das hat den Kanzler viel politisches Kapital gekostet</a></li><li><a href="https://www.zdfheute.de/wirtschaft/gta-6-verzoegerung-urlaubsantraege-hack-leak-100.html" target="_blank" rel="noopener">Der steinige Weg zur Veröffentlichung von GTA 6</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/was-bedeutet-die-senkung-der-stromsteuer-fuer-privathaushalte-kommunen-und-unternehmen-100.html" target="_blank" rel="noopener">Koalitionseinigung - Was bedeutet die Senkung der Stromsteuer für Privathaushalte, Kommunen und Unternehmen?</a></li><li><a href="https://www.deutschlandfunk.de/so-setzt-sich-der-strompreis-in-deutschland-zusammen-100.html" target="_blank" rel="noopener">Senkung der Steuer - So setzt sich der Strompreis in Deutschland zusammen</a></li><li><a href="https://www.deutschlandfunk.de/cdu-csu-und-spd-einigen-sich-auf-senkung-der-stromsteuer-102.html" target="_blank" rel="noopener">Koalitionsausschuss - CDU, CSU und SPD einigen sich auf Senkung der Stromsteuer</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/politik/deutschland/friedrich-merz-wie-es-zum-eklat-im-koalitionsausschuss-kam-a-19224f50-63a2-4c09-92b8-0c2ead8e291d#ref=rss" target="_blank" rel="noopener">Friedrich Merz: Wie es zum Eklat im Koalitionsausschuss kam</a></li><li><a href="https://www.spiegel.de/karriere/lehrer-und-arbeitszeit-wie-viel-lehrkraefte-wirklich-arbeiten-a-0cc4be12-4aa5-40fe-bcc6-f8b2d5d34c3f#ref=rss" target="_blank" rel="noopener">Lehrer und Arbeitszeit: Wie viel Lehrkräfte wirklich arbeiten</a></li><li><a href="https://www.spiegel.de/wirtschaft/unternehmen/deutsche-bank-so-stimmt-die-bank-mitarbeitende-auf-die-berichterstattung-ein-a-eb701341-d665-4e23-9db1-335d39547474#ref=rss" target="_blank" rel="noopener">Deutsche Bank: So stimmt die Bank Mitarbeitende auf die Berichterstattung ein</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-11/18/regisseur-herrmann-zschoche-ist-tot" target="_blank" rel="noopener">Filmemacher: Regisseur Herrmann Zschoche ist tot</a></li><li><a href="https://www.zeit.de/news/2026-11/18/koalitionsspitzen-verhandeln-bis-tief-in-die-nacht" target="_blank" rel="noopener">Koalitionsausschuss: Merz drückt Stromsteuersenkung durch - aber nur halb</a></li><li><a href="https://www.zeit.de/news/2026-11/18/linke-wirft-maier-zu-wenig-handeln-gegen-rechts-vor" target="_blank" rel="noopener">Parteien: Linke wirft Maier zu wenig Handeln gegen Rechts vor</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/muenchen/muenchen-haushalt-sozial-sparen-liste-kuerzen-li.3579566" target="_blank" rel="noopener">Sparmaßnahmen in München: 41 Millionen Euro weniger: Das ist die Sozial-Streichliste der Stadt</a></li><li><a href="https://www.sueddeutsche.de/wirtschaft/spritpreisdeckel-tankrabatt-benzinpreis-diesel-koalition-li.3582423" target="_blank" rel="noopener">Spritpreise: Das Problem mit dem Deckel</a></li><li><a href="https://www.sueddeutsche.de/meinung/muenchen-urteil-mietpreisbremse-kommentar-li.3582312" target="_blank" rel="noopener">München: Dieses Urteil bedeutet: Wehrt euch, Mieter</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/politik/inland/stromsteuersenkung-acht-stunden-fuer-eine-schnelle-einigung-201694001.html" target="_blank" rel="noopener">Koalitionsausschuss: Um Mitternacht hat Merz erst mal genug</a></li><li><a href="https://www.faz.net/aktuell/politik/inland/cdu-und-spd-warum-friedrich-merz-die-koalition-nicht-aufgeben-darf-201693892.html" target="_blank" rel="noopener">Koalitionsausschuss: Für die Union muss es weiter heißen: Merz macht’s</a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/was-die-niedrigere-stromsteuer-fuer-sie-im-alltag-bedeutet-accg-201694284.html" target="_blank" rel="noopener">Strom, Tanken, Einkommensteuer: Was die Stromsteuer-Einigung für Sie im Alltag bedeutet</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/regionales/hamburg/article6afdaa8f97d08a88fa8a3d15/kulturpolitik-reeperbahn-festival-gerettet.html" target="_blank" rel="noopener">Reeperbahn Festival gerettet</a></li><li><a href="https://www.welt.de/regionales/hamburg/article6afda95b97d08a88fa8a3ce9/wehrpflichtprotest-verfassungsschutz-warnt-vor-linksextremisten-bei-genz-demo.html" target="_blank" rel="noopener">Verfassungsschutz warnt vor Linksextremisten bei GenZ-Demo</a></li><li><a href="https://www.welt.de/sport/fussball/article6afd9ddfbb7e7a6679f92eac/nationalmannschaft-der-klopp-aufschwung-offenbart-nagelsmanns-eklatantesten-fehler.html" target="_blank" rel="noopener">Der Klopp-Aufschwung offenbart Nagelsmanns eklatanteste Fehlentscheidung</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Neuer-Parlamentspraesident-in-Israel/!6231039/" target="_blank" rel="noopener">Neuer Parlamentspräsident in Israel: Der Wind hat sich gedreht</a></li><li><a href="https://taz.de/Apec-Gipfel-in-Shenzhen/!6231090/" target="_blank" rel="noopener">Apec-Gipfel in Shenzhen: Chinas Xi schenkt Putin die große Propaganda-Bühne</a></li><li><a href="https://taz.de/Reform-des-Sorgerechts/!6231148/" target="_blank" rel="noopener">Reform des Sorgerechts: Kein Umgangsrecht mehr für gewalttätigen Elternteil</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.tagesschau.de/tagesschau/ts-82148.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">tagesschau</span></a></li><li><a href="https://taz.de/UN-Klimakonferenz-in-Antalya-Schmaehpreis-fuer-die-EU/!6231154/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">UN-Klimakonferenz in Antalya: Das Fossil des Tages geht an die EU</span></a></li><li><a href="https://www.zeit.de/news/2026-11/18/linke-wirft-maier-zu-wenig-handeln-gegen-rechts-vor" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Parteien: Linke wirft Maier zu wenig Handeln gegen Rechts vor</span></a></li><li><a href="https://www.zdfheute.de/panorama/wetter-sturm-regen-rettungseinsaetze-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Umgestürzte Bäume, gesperrte Gleise und noch mehr Regen</span></a></li><li><a href="https://taz.de/Alternativgipfel-zur-Weltklimakonferenz/!6231123/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Alternativgipfel zur Weltklimakonferenz: Ein Gipfel zwischen Trauerarbeit und Zuversicht</span></a></li><li><a href="https://www.deutschlandfunk.de/was-bedeutet-die-senkung-der-stromsteuer-fuer-privathaushalte-kommunen-und-unternehmen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Koalitionseinigung - Was bedeutet die Senkung der Stromsteuer für Privathaushalte, Kommunen und Unternehmen?</span></a></li><li><a href="https://www.deutschlandfunk.de/so-setzt-sich-der-strompreis-in-deutschland-zusammen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Senkung der Steuer - So setzt sich der Strompreis in Deutschland zusammen</span></a></li><li><a href="https://www.deutschlandfunk.de/xi-wirbt-fuer-engere-zusammenarbeit-chinas-und-russlands-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Treffen in Shenzen - Xi wirbt für engere Zusammenarbeit Chinas und Russlands</span></a></li><li><a href="https://www.deutschlandfunk.de/nach-ablehnung-der-bsw-beschwerde-union-regt-reform-der-wahlpruefung-an-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundestagswahl - Nach Ablehnung der BSW-Beschwerde: Union regt Reform der Wahlprüfung an</span></a></li><li><a href="https://www.deutschlandfunk.de/europas-stromnetze-sollen-schneller-wachsen-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">EU-Einigung - Europas Stromnetze sollen schneller wachsen</span></a></li><li><a href="https://www.deutschlandfunk.de/deutlich-mehr-e-lkw-auf-deutschen-strassen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Verkehr - Deutlich mehr E-Lkw auf deutschen Straßen</span></a></li><li><a href="https://www.deutschlandfunk.de/bundesjustizministerin-hubig-legt-entwurf-fuer-besseren-schutz-von-kindern-nach-haeuslicher-gewalt-i-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Sorge- und Umgangsrecht - Bundesjustizministerin Hubig legt Entwurf für besseren Schutz von Kindern nach häuslicher Gewalt in der Partnerschaft vor</span></a></li><li><a href="https://www.deutschlandfunk.de/bund-startet-kampagne-gegen-sexualisierte-gewalt-im-internet-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Aufklärung - Bund startet Kampagne gegen sexualisierte Gewalt im Internet</span></a></li><li><a href="https://www.deutschlandfunk.de/bundeskabinett-beschliesst-arbeitsrechtliche-anpassungen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Befristete Anstellungen und Kündigungsschutz - Bundeskabinett beschließt arbeitsrechtliche Anpassungen</span></a></li><li><a href="https://www.deutschlandfunk.de/kabinett-billigt-vorschlag-fuer-brunnermeier-als-ezb-chefvolkswirt-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Personalentscheidung - Kabinett billigt Vorschlag für Brunnermeier als EZB-Chefvolkswirt</span></a></li><li><a href="https://www.deutschlandfunk.de/proteste-gegen-kuerzungen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Demokratie leben&quot; - Proteste gegen Kürzungen</span></a></li><li><a href="https://www.deutschlandfunk.de/kaukasus-bundesaussenminister-wadephul-besucht-heute-armenien-112.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Außenpolitik - Kaukasus: Bundesaußenminister Wadephul besucht heute Armenien</span></a></li><li><a href="https://www.deutschlandfunk.de/europaeische-eigentuemerstruktur-fuer-tiktok-europageschaeft-deutschland-und-oesterreich-kuendigen-i-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Sorge um Daten und Einflussnahme - Europäische Eigentümerstruktur für TikTok-Europageschäft: Deutschland und Österreich kündigen Initiative an</span></a></li><li><a href="https://www.deutschlandfunk.de/wuest-gegen-evonik-uebernahme-durch-basf-das-ist-keine-pommesbude-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Unternehmen - Wüst gegen Evonik-Übernahme durch BASF: &quot;Das ist keine Pommesbude&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/bundesentwicklungsministern-alabali-radovan-steht-konzept-der-abschiebezentren-in-ruanda-kritisch-ge-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Return Hubs&quot; - Bundesentwicklungsministern Alabali Radovan steht Konzept der Abschiebezentren in Ruanda kritisch gegenüber</span></a></li><li><a href="https://www.deutschlandfunk.de/siedlungsvorhaben-im-westjordanland-kann-vorerst-nicht-weiter-verfolgt-werden-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Israel - Siedlungsvorhaben im Westjordanland kann vorerst nicht weiter verfolgt werden</span></a></li><li><a href="https://www.deutschlandfunk.de/sozialleistungen-sollen-kuenftig-unkomplizierter-an-beduerftige-fliessen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundesregierung - Sozialleistungen sollen künftig unkomplizierter an Bedürftige fließen</span></a></li><li><a href="https://www.deutschlandfunk.de/bund-startet-kampagne-gegen-sexualisierte-gewalt-im-internet-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Aufklärung - Bund startet Kampagne gegen sexualisierte Gewalt im Internet</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 18.11.2026 um 15:17 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
