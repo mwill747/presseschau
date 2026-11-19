@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 19.11.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Thursday, 19. November 2026 &middot; 15:31 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">381 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Shenzhen - Xi auf Dreier-Gipfel mit Putin und Trump: &quot;Alles tun, um einen Atomkrieg zu verhindern&quot;</h3>
+          <div class="zaehler">
+            <b>9</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/xi-auf-dreier-gipfel-mit-putin-und-trump-alles-tun-um-einen-atomkrieg-zu-verhindern-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Shenzhen - Xi auf Dreier-Gipfel mit Putin und Trump: &quot;Alles tun, um einen Atomkrieg zu verhindern&quot;</span></a></li><li><a href="https://www.deutschlandfunk.de/ukrainischer-angriff-auf-krim-bruecke-zugverkehr-soll-am-nachmittag-wieder-aufgenommen-werden-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Ukrainischer Angriff auf Krim-Brücke: Zugverkehr soll am Nachmittag wieder aufgenommen werden</span></a></li><li><a href="https://www.tagesschau.de/video/video-1686490.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Jörg Endriss, ARD Peking, zzt. Shenzhen/China, zu den Gesprächen zwischen Trump, Putin und Xi über die Ukraine und Atomwaffen</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.zeit.de/politik/ausland/2026-11/putin-donald-trump-xi-jinping-shenzhen-ukraine-gipfel" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Krieg gegen die Ukraine: Wladimir Putin schlägt Treffen mit Vertretern Europas in Moskau vor</span></a></li><li><a href="https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5249013" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Dreiertreffen von Xi, Trump und Putin</span></a></li><li><a href="https://www.welt.de/politik/video6afef3c4ee91e990acae6c13/dreiergipfel-das-war-fuer-wladimir-putin-ein-prestige-gewinn.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Das war für Wladimir Putin ein Prestige-Gewinn“</span></a></li><li><a href="https://www.welt.de/politik/ausland/article6afeef7439a3e8110f0e233b/ukraine-krieg-putin-laedt-europaeer-nach-moskau-ein-und-droht-der-ukraine-nach-angriff-auf-krim-bruecke.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Putin lädt Europäer nach Moskau ein – und droht der Ukraine nach Angriff auf Krim-Brücke</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-putin-habe-europaeer-zu-gespraechen-nach-moskau-eingeladen-faz-110683325.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Ukrainekrieg: Putin: Habe Europäer zu Gesprächen nach Moskau eingeladen</span></a></li><li><a href="https://www.welt.de/politik/ausland/video6afeec23c1e8003ef73c44c8/historischer-dreiergipfel-fuer-wladimir-putin-ist-dieses-treffen-ein-propagandistischer-riesenerfolg.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Für Wladimir Putin ist dieses Treffen ein propagandistischer Riesenerfolg“</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/gipfel-trump-putin-xi-shenzhen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Putin, Xi und Trump: Appelle für Weltfrieden und gegen Atomkrieg</span></a></li><li><a href="https://www.sueddeutsche.de/politik/usa-russland-china-gipfel-li.3582658" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Dreiergipfel in Shenzhen: Xi, Trump und Putin liefern imposante Bilder – und wenig Ergebnisse</span></a></li><li><a href="https://www.welt.de/politik/ausland/video6afee483c1e8003ef73c43f4/historisches-dreiertreffen-die-gemeinsame-erklaerung-zum-frieden-von-putin-xi-und-trump.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Die gemeinsame „Erklärung zum Frieden“ von Putin, Xi und Trump</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/xi-trump-putin-friedenserklaerung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Trump, Putin und Xi wollen Dialog über atomare Risiken</span></a></li><li><a href="https://www.welt.de/politik/ausland/article6afedaf64d1895cf2a8f11c7/trump-xi-und-putin-die-gemeinsame-erklaerung-zum-frieden-im-wortlaut.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Die gemeinsame „Erklärung zum Frieden“ von Putin, Xi und Trump im Wortlaut</span></a></li><li><a href="https://www.sueddeutsche.de/meinung/ukraine-angriff-krim-bruecke-russland-kommentar-li.3582975" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Angriffe auf Krim-Brücke: Dieser Erfolg sei der Ukraine gegönnt. Aber entschieden ist damit nichts</span></a></li><li><a href="https://www.spiegel.de/ausland/apec-gipfel-in-shenzhen-china-so-laeuft-der-gipfel-mit-donald-trump-xi-jinping-und-wladimir-putin-a-b4e9137d-42fa-4ff0-9d36-08df392ffbce#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Donald Trump, Wladimir Putin und Xi JIngping: Die fünf Lehren aus dem Treffen in China</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/krim-bruecke-angriff-ukraine-zugverkehr-gestoppt-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Krim-Brücke nach ukrainischem Angriff erneut gesperrt</span></a></li><li><a href="https://www.sueddeutsche.de/politik/apec-gipfel-2026-dreiertreffen-shenzhen-trump-xi-jinping-putin-li.3582583" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Historisches Treffen: Putin, Trump und Xi beenden Dreiergipfel</span></a></li><li><a href="https://taz.de/-Treffen-von-Putin-Trump-und-XI-/!6231342/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">+++ Treffen von Putin, Trump und XI +++: Erst spricht Putin von Frieden, dann droht er mit Angriffen</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/apec-treffen-xi-putin-trump-themen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Xi, Trump und Putin: Drei Perspektiven, viele Differenzen</span></a></li><li><a href="https://www.faz.net/video/xi-empfaengt-trump-vor-dreiergipfel-mit-putin-201695968.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Kritik am Westen: Xi empfängt Trump vor Dreiergipfel mit Putin</span></a></li><li><a href="https://www.spiegel.de/ausland/donald-trump-xi-jinping-und-wladimir-putin-treffen-sich-in-china-kevin-rudd-warnt-vor-krieg-um-taiwan-a-c792d2a4-7cd2-4477-ad07-a65ab2f8d078#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Donald Trump, Xi Jinping und Wladimir Putin treffen sich in China: Kevin Rudd warnt vor Krieg um Taiwan</span></a></li><li><a href="https://taz.de/Apec-Gipfel-in-Shenzhen/!6231090/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Apec-Gipfel in Shenzhen: Chinas Xi schenkt Putin die große Propaganda-Bühne</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Urteil in Den Haag - Internationaler Gerichtshof macht Myanmar verantwortlich für Völkermord an Rohingya</h3>
+          <div class="zaehler">
+            <b>8</b>
+            <div class="balken"><i style="width:89%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/internationaler-gerichtshof-macht-myanmar-verantwortlich-fuer-voelkermord-an-rohingya-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Urteil in Den Haag - Internationaler Gerichtshof macht Myanmar verantwortlich für Völkermord an Rohingya</span></a></li><li><a href="https://www.tagesschau.de/video/video-1686452.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Internationaler Gerichtshof stuft Verbrechen gegen die Rohingya in Myanmar als Völkermord ein</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/urteil-voelkermord-rohingya-myanmar-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Internationaler Gerichtshof: Vorgehen Myanmars gegen Rohingya war Völkermord</span></a></li><li><a href="https://taz.de/Internationaler-Gerichtshof-urteilt/!6231504/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Internationaler Gerichtshof urteilt: Das war Völkermord</span></a></li><li><a href="https://www.welt.de/politik/ausland/article6afed9cb39a3e8110f0e2047/myanmar-internationaler-gerichtshof-stuft-verbrechen-an-rohingya-als-voelkermord-ein.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">UN-Gericht spricht Myanmar des Völkermords an den Rohingya schuldig</span></a></li><li><a href="https://www.spiegel.de/ausland/myanmar-uno-gericht-stuft-vorgehen-gegen-rohingya-als-voelkermord-ein-a-7879b8b5-7b90-49e2-98b7-bcc5e96fa85c#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Myanmar: Uno-Gericht stuft Vorgehen gegen Rohingya als Völkermord ein</span></a></li><li><a href="https://www.sueddeutsche.de/politik/myanmar-internationaler-gerichtshof-den-haag-urteil-rohingya-voelkermord-li.3581811" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Internationale Justiz: UN-Gericht: Myanmar hat Völkermord an den Rohingya begangen</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/myanmar-rohingya-voelkermord-internationaler-gerichtshof-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Myanmar für Rohingya-Völkermord verantwortlich</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ausland/internationaler-gerichtshof-myanmar-verantwortlich-fuer-voelkermord-an-rohingya-accg-201697448.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Muslimische Minderheit: Internationaler Gerichtshof: Myanmar beging Völkermord an Rohingya</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Klingbeil und Orcel - Einigung mit UniCredit: Bundesregierung will Übernahme der Commerzbank nun unterstützen</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:56%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/einigung-mit-unicredit-bundesregierung-will-uebernahme-der-commerzbank-nun-unterstuetzen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Klingbeil und Orcel - Einigung mit UniCredit: Bundesregierung will Übernahme der Commerzbank nun unterstützen</span></a></li><li><a href="https://www.zeit.de/news/2026-11/19/bund-trifft-einigung-mit-unicredit-bei-commerzbank-uebernahme" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Widerstand aufgegeben: Bund trifft Einigung mit Unicredit bei Commerzbank-Übernahme</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/commerzbank-besser-mit-unicredit-ohne-staat-201697515.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Einigung um Commerzbank: Besser mit Unicredit und ohne Staat</span></a></li><li><a href="https://www.faz.net/video/bundesregierung-stimmt-fuer-commerzbank-uebernahme-201697940.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">übernahme durch Unicredit: Bundesregierung stimmt für Commerzbank-Übernahme</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/commerzbank-uebernahme-unicredit-bundesregierung-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Commerzbank-Deal steht: Unicredit und Bund sind sich einig</span></a></li><li><a href="https://www.faz.net/aktuell/finanzen/bundesregierung-und-unicredit-verstaendigen-sich-ueber-commerzbank-accg-201697258.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Vor Übernahme: Bundesregierung und Unicredit verständigen sich über Commerzbank</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/unicredit-bundesregierung-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Commerzbank-Übernahme: Bundesregierung und UniCredit einigen sich</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Generalstaatsanwaltschaft Düsseldorf - Vorwurf: Schüler soll Terroranschlag auf Moschee mit Waffen aus 3-D-Drucker geplant haben</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:56%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/vorwurf-schueler-soll-terroranschlag-auf-moschee-mit-waffen-aus-3-d-drucker-geplant-haben-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Generalstaatsanwaltschaft Düsseldorf - Vorwurf: Schüler soll Terroranschlag auf Moschee mit Waffen aus 3-D-Drucker geplant haben</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/liveticker-bundespolitik-schueler-soll-terroranschlag-geplant-haben-mit-waffen-aus-dem-3d-drucker-faz-110093143.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Deutschland Liveblog: Schüler soll Terroranschlag geplant haben – mit Waffen aus dem 3D-Drucker</span></a></li><li><a href="https://www.spiegel.de/panorama/justiz/eslohe-in-nrw-schueler-soll-anschlag-auf-moschee-geplant-haben-a-117ae85b-7a19-4d6e-9abe-b077ef25cbcf#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Eslohe: Schüler soll Anschlag auf Moschee mit 3D-Waffen geplant haben</span></a></li><li><a href="https://taz.de/Verdacht-auf-rechten-Terror-in-NRW/!6231365/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Verdacht auf rechten Terror in NRW: Schüler soll Terroranschlag auf Moschee geplant haben</span></a></li><li><a href="https://www.tagesschau.de/inland/regional/nordrheinwestfalen/schueler-anschlagsplan-moschee-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">18-jähriger Schüler soll Anschlag auf Moschee geplant haben</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Kriminalität - EU-Kommission war Ziel von Cyberangriff mit Künstlicher Intelligenz</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/eu-kommission-war-ziel-von-cyberangriff-mit-kuenstlicher-intelligenz-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Kriminalität - EU-Kommission war Ziel von Cyberangriff mit Künstlicher Intelligenz</span></a></li><li><a href="https://www.deutschlandfunk.de/eu-kommission-war-ziel-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">KI-gestützter Cyberangriff - EU-Kommission war Ziel</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/cyberangriff-eu-kommission-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">KI-gestützter Cyberangriff auf EU-Kommission</span></a></li><li><a href="https://www.spiegel.de/netzwelt/web/kuenstliche-intelligenz-eu-kommission-meldet-cyberangriff-mit-ki-unterstuetzung-a-66df04e3-c522-481a-91f9-102fade52242#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Künstliche Intelligenz: EU-Kommission meldet Cyberangriff mit KI-Unterstützung</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Kunstmarkt - Sotheby&#x27;s: Van-Gogh-Gemälde erzielt bei Autkion in New York Rekordpreis von 190,4 Millionen Dollar</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/sotheby-s-van-gogh-gemaelde-erzielt-bei-autkion-in-new-york-rekordpreis-von-190-4-millionen-dollar-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Kunstmarkt - Sotheby&#x27;s: Van-Gogh-Gemälde erzielt bei Autkion in New York Rekordpreis von 190,4 Millionen Dollar</span></a></li><li><a href="https://www.tagesschau.de/kultur/van-gogh-bluehende-kastanienbaeume-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">190,4 Millionen Dollar: Teuerstes van-Gogh-Gemälde verkauft</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/kunstmarkt/zuschlag-bei-165-millionen-dollar-rekordauktion-fuer-vincent-van-gogh-bei-sotheby-s-in-new-york-accg-201696575.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Rekordauktion in New York: Zuschlag bei 165 Millionen Dollar für Vincent van Gogh</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/kunstmarkt/85-8-millionen-dollar-auktionsrekord-fuer-wassily-kandinsky-201695613.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Auktionen in New York: Neuer Rekordpreis für Kandinsky</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>&quot;Save the Children&quot; - 589 Millionen Kinder lebten 2025 in Konfliktgebieten</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/589-millionen-kinder-lebten-2025-in-konfliktgebieten-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Save the Children&quot; - 589 Millionen Kinder lebten 2025 in Konfliktgebieten</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/kinder-konfliktgebiete-save-the-children-hoechststand-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Höchststand: 589 Millionen Kinder leben in Konfliktgebieten</span></a></li><li><a href="https://www.tagesschau.de/ausland/kinder-konfliktgebiete-106.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Save the Children: Fast jedes vierte Kind lebt in einem Konfliktgebiet</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Tarifkonflikt - IG Metall ruft erstmals seit acht Jahren wieder zu ganztägigem Warnstreik auf</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/ig-metall-ruft-erstmals-seit-acht-jahren-wieder-zu-ganztaegigem-warnstreik-auf-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Tarifkonflikt - IG Metall ruft erstmals seit acht Jahren wieder zu ganztägigem Warnstreik auf</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/arm-und-reich/metallbranche-vor-groesstem-warnstreik-seit-acht-jahren-201698884.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Arbeitskampf: Warnstreiks der Metaller treffen Audi und BMW</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/arbeitsmarkt/warnstreik-ig-metall-124.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Warnstreiks der IG Metall</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>USA - Demokraten nominieren Fraktionschef Jeffries für das Amt des Repräsentantenhaus-Sprechers</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/demokraten-nominieren-fraktionschef-jeffries-fuer-das-amt-des-repraesentantenhaus-sprechers-110.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">USA - Demokraten nominieren Fraktionschef Jeffries für das Amt des Repräsentantenhaus-Sprechers</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/midterms-usa-hakeem-jeffries-repraesentantenhaus-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Hakeem Jeffries soll Chef des US-Repräsentantenhauses werden</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/jeffries-nominiert-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Demokraten nominieren Jeffries als Chef des US-Repräsentantenhauses</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>&quot;Grand Theft Auto&quot; - Computerspiel GTA 6 auch in Deutschland erschienen – was steckt hinter dem Erfolg?</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/computerspiel-gta-6-auch-in-deutschland-erschienen-was-steckt-hinter-dem-erfolg-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Grand Theft Auto&quot; - Computerspiel GTA 6 auch in Deutschland erschienen – was steckt hinter dem Erfolg?</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/gta-6-warum-gibt-es-keinen-deutschen-videospiel-blockbuster-201687565.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Grand Theft Auto VI: Wo bleibt das deutsche GTA?</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/spiele-gta-sechs-neuerscheinung-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">&quot;Grand Theft Auto VI: Was hinter dem weltweiten Hype um GTA steckt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>«Koalition der Willigen»: US-Unterhändler lobt «produktives Treffen» mit Merz</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/news/2026-11/19/selenskyj-zu-treffen-mit-koalition-der-willigen-eingetroffen" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">«Koalition der Willigen»: US-Unterhändler lobt «produktives Treffen» mit Merz</span></a></li><li><a href="https://www.tagesschau.de/video/video-1686484.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Markus Preiß, ARD Berlin, zum Treffen der &quot;Koalition der Willigen&quot; in Berlin</span></a></li><li><a href="https://taz.de/Koalition-der-Willigen-in-Berlin/!6231331/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">„Koalition der Willigen“ in Berlin: Die große Merz-Show</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>AfD erwägt, Wahl von Ministerpräsident in Sachsen-Anhalt vorzuziehen</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.mdr.de/nachrichten/sachsen-anhalt/landtagswahl/wahl-ministerpraesident-zeitpunkt,afd-siegmund-114.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">AfD erwägt, Wahl von Ministerpräsident in Sachsen-Anhalt vorzuziehen</span></a></li><li><a href="https://www.sueddeutsche.de/politik/landtagswahlen-deutschland-sachsen-anhalt-ministerpraesidentenwahl-siegmund-afd-li.3540501" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Newsblog zu den Landtagswahlen: AfD erwägt frühere Ministerpräsidentenwahl in Sachsen-Anhalt</span></a></li><li><a href="https://www.spiegel.de/politik/deutschland/sachsen-anhalt-ulrich-siegmund-will-sich-womoeglich-frueher-als-ministerpraesident-zur-wahl-stellen-a-bf8a38d0-a303-407d-805c-5b288c41d7dc#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">AfD: Ulrich Siegmund will sich womöglich früher als Ministerpräsident zur Wahl stellen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>Liveticker zu Gipfeln: ++ Kushner und Witkoff in Berlin angekommen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/newsticker/liveblog-apec-gipfel-xi-trump-putin-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Liveticker zu Gipfeln: ++ Kushner und Witkoff in Berlin angekommen</span></a></li><li><a href="https://www.welt.de/politik/ausland/article6afee7819c68d2fcf0c7ce60/ukraine-us-unterhaendler-kushner-und-witkoff-zu-gipfel-in-berlin-eingetroffen-treffen-mit-merz-geplant.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Ukraine-Gipfel in Berlin – Kushner, Witkoff und Selenskyj sind angekommen</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/ukraine-unterstuetzung-treffen-berlin-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Ukraine-Gipfel in Berlin: Mit Diplomatie und Druck</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>„Ich bin sehr gesund“ – Bayern-Coach Kompany ist zurück</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/sport/fussball/video6afef875ee91e990acae6ccc/fc-bayern-muenchen-ich-bin-sehr-gesund-bayern-coach-kompany-ist-zurueck.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Ich bin sehr gesund“ – Bayern-Coach Kompany ist zurück</span></a></li><li><a href="https://www.welt.de/wirtschaft/video6afee5db39a3e8110f0e222d/anthropic-boersengang-ich-kann-mir-vorstellen-dass-wir-sehr-hohe-erste-kurse-sehen-werden.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Ich kann mir vorstellen, dass wir sehr hohe erste Kurse sehen werden“</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-bundesliga/bundesliga-vincent-kompany-bayern-muenchen-1-fc-koeln-pressekonferenz-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Kompany: &quot;Ich bin sehr gesund&quot;</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Außenpolitik - Dänisches Parlament ratifiziert Sicherheitsabkommen mit den USA und Grönland</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/daenisches-parlament-ratifiziert-sicherheitsabkommen-mit-den-usa-und-groenland-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Außenpolitik - Dänisches Parlament ratifiziert Sicherheitsabkommen mit den USA und Grönland</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/parlament-in-daenemark-ratifiziert-groenland-abkommen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Dänisches Parlament ratifiziert Grönland-Deal mit Trump</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Nahost - Israels Armee beginnt neuen Einsatz im Gazastreifen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/israels-armee-beginnt-neuen-einsatz-im-gazastreifen-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nahost - Israels Armee beginnt neuen Einsatz im Gazastreifen</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/israel-gaza-bodenoffensive-104.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Israels Armee startet Einsatz in von Hamas kontrolliertem Gebiet</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Gaming: So gut ist »GTA VI« wirklich</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/digital/games/2026-11/gaming-gta-vi-test-review-digitalpodcast" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Gaming: So gut ist »GTA VI« wirklich</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/digitales/gta-rockstar-games-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Welche Erwartungen die Gaming-Branche mit GTA VI verbindet</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Gen Z redet - Oberbürgermeister will regeln</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/politik/deutschland/gen-z-demo-stuttgart-cdu-nopper-jugendliche-gespraech-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Gen Z redet - Oberbürgermeister will regeln</span></a></li><li><a href="https://www.faz.net/aktuell/feuilleton/debatten/gen-z-regelt-wie-geht-es-mit-den-jugendprotesten-weiter-accg-201690506.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Neue JugendProteste: „Gen Z regelt“ will weitermachen – trotz erster Risse</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Musk über Wahlkampfspenden: &quot;Komme mir dumm vor&quot;</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/wirtschaft/elon-musk-wahlkampfspenden-maga-dumm-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Musk über Wahlkampfspenden: &quot;Komme mir dumm vor&quot;</span></a></li><li><a href="https://www.tagesschau.de/ausland/amerika/musk-spenden-republikaner-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Musk bereut offenbar Wahlkampfspenden an Republikaner</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Neuer James Bond: Pierce Brosnan glaubt an Robert Pattinson</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zdfheute.de/panorama/prominente/stars-promi-news-bilder-november-2026-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Neuer James Bond: Pierce Brosnan glaubt an Robert Pattinson</span></a></li><li><a href="https://www.spiegel.de/kultur/kino/james-bond-wo-robert-pattinson-als-007-glaenzt-und-wo-er-fehlen-wird-a-a72a2b55-3fab-4abc-a6c4-0f14b94920d7#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">James Bond: Wo Robert Pattinson als 007 glänzt – und wo er fehlen wird</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Gericht: Preiserhöhungs-Klausel von DAZN unwirksam</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/wirtschaft/verbraucher/dazn-preise-urteil-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Gericht: Preiserhöhungs-Klausel von DAZN unwirksam</span></a></li><li><a href="https://www.zdfheute.de/panorama/dazn-urteil-streamingdienst-preiserhoehungen-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Gericht kippt Preiserhöhungen bei DAZN</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/anthropic-firmenportrait-claude-boersengang-100.html" target="_blank" rel="noopener">Firmenporträt: Anthropics halsbrecherischer Aufstieg</a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/anthropic-boersengang-aktie-100.html" target="_blank" rel="noopener">Anthropic-Börsengang wird Musk-Rekord übertreffen</a></li><li><a href="https://www.tagesschau.de/video/video-1686338.html" target="_blank" rel="noopener">&quot;Für Putin Rückkehr auf die Weltbühne&quot;, ARD-Reporter zum Dreiergipfel</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/ausland/dreier-gipfel-trump-putin-xi-interview-dgap-100.html" target="_blank" rel="noopener">Dreiertreffen steht &quot;für veränderte internationale Ordnung&quot;</a></li><li><a href="https://www.zdfheute.de/politik/ausland/xi-trump-putin-friedenserklaerung-100.html" target="_blank" rel="noopener">Trump, Putin und Xi wollen Dialog über atomare Risiken</a></li><li><a href="https://www.zdfheute.de/video/zdfheute-live/dreiergipfel-china-weltordnung-klauser-steimer-video-100.html" target="_blank" rel="noopener">Russlands &quot;Rückkehr auf die große Bühne&quot;</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/ukraine-hilfe-zahlreiche-staats-und-regierungschefs-tagen-im-kanzleramt-auch-selenskyj-angereist-100.html" target="_blank" rel="noopener">&quot;Koalition der Willigen&quot; - Ukraine-Hilfe: Zahlreiche Staats- und Regierungschefs tagen im Kanzleramt - auch Selenskyj angereist</a></li><li><a href="https://www.deutschlandfunk.de/internationaler-gerichtshof-macht-myanmar-verantwortlich-fuer-voelkermord-an-rohingya-100.html" target="_blank" rel="noopener">Urteil in Den Haag - Internationaler Gerichtshof macht Myanmar verantwortlich für Völkermord an Rohingya</a></li><li><a href="https://www.deutschlandfunk.de/was-bedeutet-das-igh-urteil-gegen-myanmar-100.html" target="_blank" rel="noopener">Den Haag - Was bedeutet das IGH-Urteil gegen Myanmar?</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/wirtschaft/unternehmen/mercedes-benz-droht-dem-autobauer-ein-verkaufsverbot-in-den-usa-a-9c646c3d-96e2-4808-93e3-c3e8970d0e01#ref=rss" target="_blank" rel="noopener">Mercedes-Benz: Droht dem Autobauer ein Verkaufsverbot in den USA?</a></li><li><a href="https://www.spiegel.de/ausland/apec-gipfel-in-shenzhen-china-so-laeuft-der-gipfel-mit-donald-trump-xi-jinping-und-wladimir-putin-a-b4e9137d-42fa-4ff0-9d36-08df392ffbce#ref=rss" target="_blank" rel="noopener">Donald Trump, Wladimir Putin und Xi JIngping: Die fünf Lehren aus dem Treffen in China</a></li><li><a href="https://www.spiegel.de/ausland/myanmar-uno-gericht-stuft-vorgehen-gegen-rohingya-als-voelkermord-ein-a-7879b8b5-7b90-49e2-98b7-bcc5e96fa85c#ref=rss" target="_blank" rel="noopener">Myanmar: Uno-Gericht stuft Vorgehen gegen Rohingya als Völkermord ein</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/digital/games/2026-11/gaming-gta-vi-test-review-digitalpodcast" target="_blank" rel="noopener">Gaming: So gut ist »GTA VI« wirklich</a></li><li><a href="https://www.zeit.de/politik/2026-11/schwarz-rote-koalition-stromsteuer-bundeshaushalt-politikpodcast" target="_blank" rel="noopener">Schwarz-rote Koalition: »Der Kanzler saß oben allein und hat Chips gegessen«</a></li><li><a href="https://www.zeit.de/2026/50/personaldebatten-spd-parteivorsitz-lars-klingbeil-manuela-schwesig" target="_blank" rel="noopener">Personaldebatten: Jetzt mal was Anderes</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/wirtschaft/anthropic-boersengang-ki-aktien-tech-unternehmen-nasdaq-li.3582964" target="_blank" rel="noopener">Geldanlage: „Der Börsengang von Anthropic ist Segen und Fluch zugleich“</a></li><li><a href="https://www.sueddeutsche.de/meinung/gta-6-videospiele-kunst-kommentar-games-kommentar-li.3582609" target="_blank" rel="noopener">„GTA 6“: Ja, Videospiele sind Kunst</a></li><li><a href="https://www.sueddeutsche.de/meinung/shenzhen-china-apec-gipfel-freihandel-sonderwirtschaftszone-li.3582960" target="_blank" rel="noopener">Aktuelles Lexikon: Was ist Shenzhen?</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/politik/ausland/putin-trump-und-xi-in-shenzhen-gipfel-mit-vagen-ergebnissen-201697032.html" target="_blank" rel="noopener">Treffen in Shenzhen: Drei Männer, vier Gemeinsamkeiten</a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-putin-habe-europaeer-zu-gespraechen-nach-moskau-eingeladen-faz-110683325.html" target="_blank" rel="noopener">Liveblog Ukrainekrieg: Putin: Habe Europäer zu Gesprächen nach Moskau eingeladen</a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/holosolis-neue-solar-gigafactory-im-elsass-soll-europa-unabhaengiger-von-china-machen-accg-201668873.html" target="_blank" rel="noopener">Milliardenprojekt in Frankreich: Eine neue Gigafactory für Solarzellen – im Elsass</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/politik/deutschland/plus6afeac63ed542f4c39176e44/umgang-mit-afd-wie-die-fdp-die-brandmauer-neu-definieren-will.html" target="_blank" rel="noopener">Wie die FDP die „Brandmauer“ neu definieren will</a></li><li><a href="https://www.welt.de/videos/video6aff00aac1e8003ef73c47dc/gipfel-in-china-zwei-grossmaechte-und-ein-hochstapler.html" target="_blank" rel="noopener">„Zwei Großmächte und ein Hochstapler“</a></li><li><a href="https://www.welt.de/politik/deutschland/article6afed5c572bc92eb4665e5f5/bremerhaven-polizei-bricht-tuer-mit-brecheisen-auf-abschiebeversuch-aus-kirchenasyl-scheitert.html" target="_blank" rel="noopener">Polizei bricht Tür mit Brecheisen auf – Abschiebeversuch aus Kirchenasyl scheitert</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Kinder-mit-ADHS/!6228834/" target="_blank" rel="noopener">Kinder mit ADHS: „Dieses System ist zum Verzweifeln“</a></li><li><a href="https://taz.de/EU-Gipfel-Andy-Burnham-wagt-sich-zurueck-in-den-Brexit-Streit/!6231088/" target="_blank" rel="noopener">EU-Gipfel mit Großbritannien: Burnham wagt sich zurück in den Brexit-Streit</a></li><li><a href="https://taz.de/-Treffen-von-Putin-Trump-und-XI-/!6231342/" target="_blank" rel="noopener">+++ Treffen von Putin, Trump und XI +++: Erst spricht Putin von Frieden, dann droht er mit Angriffen</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.deutschlandfunk.de/ukraine-hilfe-zahlreiche-staats-und-regierungschefs-tagen-im-kanzleramt-auch-selenskyj-angereist-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Koalition der Willigen&quot; - Ukraine-Hilfe: Zahlreiche Staats- und Regierungschefs tagen im Kanzleramt - auch Selenskyj angereist</span></a></li><li><a href="https://www.deutschlandfunk.de/was-bedeutet-das-igh-urteil-gegen-myanmar-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Den Haag - Was bedeutet das IGH-Urteil gegen Myanmar?</span></a></li><li><a href="https://www.deutschlandfunk.de/versicherungsverband-schaetzt-schaeden-nach-ausschreitungen-in-frankreich-auf-207-millionen-euro-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Proteste am 17. Oktober - Versicherungsverband schätzt Schäden nach Ausschreitungen in Frankreich auf 207 Millionen Euro</span></a></li><li><a href="https://www.deutschlandfunk.de/weltbevoelkerungsbericht-2026-dokumentiert-groessere-unsicherheiten-bei-jungen-menschen-weltweit-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Arbeitssuche und Lebensplanung - Weltbevölkerungsbericht 2026 dokumentiert größere Unsicherheiten bei jungen Menschen weltweit</span></a></li><li><a href="https://www.deutschlandfunk.de/mutmasslich-fuehrende-mitglieder-einer-schleuserbande-in-rheinland-pfalz-festgenommen-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundespolizei - Mutmaßlich führende Mitglieder einer Schleuserbande in Rheinland-Pfalz festgenommen</span></a></li><li><a href="https://www.deutschlandfunk.de/panama-droht-mit-blockade-von-beschluessen-neuer-entwurf-spart-fossile-brennstoffe-aus-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Klimakonferenz - Panama droht mit Blockade von Beschlüssen - neuer Entwurf spart fossile Brennstoffe aus</span></a></li><li><a href="https://www.deutschlandfunk.de/oberster-gerichtshof-in-suedkorea-hebt-verurteilung-von-frueherem-ministerpraesidenten-han-auf-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ausrufung des Kriegsrechts - Oberster Gerichtshof in Südkorea hebt Verurteilung von früherem Ministerpräsidenten Han auf</span></a></li><li><a href="https://www.deutschlandfunk.de/eu-verschiebt-methan-regeln-fuer-import-fossiler-energien-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Beginn erst 2029 - EU verschiebt Methan-Regeln für Import fossiler Energien</span></a></li><li><a href="https://www.deutschlandfunk.de/landesweite-hochschul-aufnahmepruefung-in-suedkorea-sogar-flugzeuge-duerfen-voruebergehend-nicht-sta-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Suneung&quot; - Landesweite Hochschul-Aufnahmeprüfung in Südkorea - sogar Flugzeuge dürfen vorübergehend nicht starten</span></a></li><li><a href="https://www.deutschlandfunk.de/anthropic-erzielt-bei-boersengang-rekorderloes-und-ueberfluegelt-spacex-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">KI-Software Claude - Anthropic erzielt bei Börsengang Rekorderlös - und überflügelt SpaceX</span></a></li><li><a href="https://www.deutschlandfunk.de/deutschland-startet-initiative-zur-vermeidung-von-treibhausgas-sf-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Klimakonferenz in Antalya - Deutschland startet Initiative zur Vermeidung von Treibhausgas SF6</span></a></li><li><a href="https://www.deutschlandfunk.de/boot-mit-fluechtlingen-vor-lampedusa-gekentert-6-jaehrige-vermisst-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Mittelmeer - Boot mit Flüchtlingen vor Lampedusa gekentert - 6-Jährige vermisst</span></a></li><li><a href="https://www.deutschlandfunk.de/suedkorea-steigt-durch-ki-boom-zum-export-billionaer-auf-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Handelsministerium - Südkorea steigt durch KI-Boom zum Export-Billionär auf</span></a></li><li><a href="https://www.deutschlandfunk.de/hackerangriff-auf-systeme-der-eu-kommission-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Medienbericht - Hackerangriff auf Systeme der EU-Kommission</span></a></li><li><a href="https://www.deutschlandfunk.de/preise-fuer-haushaltsenergie-von-2020-bis-2025-um-fast-50-prozent-gestiegen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Statistisches Bundesamt - Preise für Haushaltsenergie von 2020 bis 2025 um fast 50 Prozent gestiegen</span></a></li><li><a href="https://www.deutschlandfunk.de/saudi-arabien-wehrt-huthi-angriff-ab-schaeden-im-finanzzentrum-von-riad-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Miliz im Jemen - Saudi-Arabien wehrt Huthi-Angriff ab - Schäden im Finanzzentrum von Riad</span></a></li><li><a href="https://www.deutschlandfunk.de/immer-mehr-ki-klagen-an-sozialgerichten-sachsen-und-hessen-schlagen-gebuehr-vor-kritik-von-sozialver-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Justizministerkonferenz - Immer mehr KI-Klagen an Sozialgerichten: Sachsen und Hessen schlagen Gebühr vor - Kritik von Sozialverband</span></a></li><li><a href="https://www.deutschlandfunk.de/reform-des-arbeitsrechts-dgb-vorsitzende-fahimi-warnt-vor-laengeren-befristungen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Nach Kabinettsbeschluss - Reform des Arbeitsrechts: DGB-Vorsitzende Fahimi warnt vor längeren Befristungen</span></a></li><li><a href="https://www.deutschlandfunk.de/dobrindt-stellt-lagebericht-vor-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Sicherheit in der Informationstechnik - Dobrindt stellt Lagebericht vor</span></a></li><li><a href="https://www.deutschlandfunk.de/e-mail-anbieter-warnen-vor-spam-mails-rund-um-black-friday-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Black Week - E-Mail-Anbieter warnen vor Spam-Mails rund um Black Friday</span></a></li><li><a href="https://www.deutschlandfunk.de/rechnungshof-eu-unternimmt-zu-wenig-gegen-ewigkeitschemikalien-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">PFAS - Rechnungshof: EU unternimmt zu wenig gegen Ewigkeitschemikalien</span></a></li><li><a href="https://www.deutschlandfunk.de/abgeloester-praesident-des-verfassungsgerichts-verliert-immunitaet-108.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Polen - Abgelöster Präsident des Verfassungsgerichts verliert Immunität</span></a></li><li><a href="https://www.deutschlandfunk.de/pistorius-besucht-gedenkstaette-auschwitz-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Polen-Reise - Pistorius besucht Gedenkstätte Auschwitz</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 19.11.2026 um 15:31 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
