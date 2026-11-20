@@ -1,0 +1,468 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Presseschau — 20.11.2026</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F6F7F9;--surface:#FFFFFF;--ink:#161B22;--ink-soft:#4B5563;
+  --ink-faint:#7A8592;--line:#DDE2E8;--line-soft:#E9EDF1;--accent:#125C6E;
+  --bar-bg:#E4E9EE;--warn:#9A6109;--warn-bg:#F7EEDC;--ok:#2F6B45;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+    --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+    --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101418;--surface:#171C22;--ink:#E8ECF1;--ink-soft:#AAB4C0;
+  --ink-faint:#7C8794;--line:#2A323B;--line-soft:#222931;--accent:#63BACC;
+  --bar-bg:#252D36;--warn:#D9A441;--warn-bg:#33280F;--ok:#79C295;
+}
+*{box-sizing:border-box;}
+body{background:var(--ground);color:var(--ink);margin:0;padding:0 20px 80px;
+ font-family:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+ font-size:16.5px;line-height:1.6;}
+.wrap{max-width:840px;margin:0 auto;}
+header{padding:48px 0 20px;border-bottom:2px solid var(--ink);margin-bottom:12px;}
+.datum{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.14em;
+ text-transform:uppercase;color:var(--accent);margin:0 0 14px;}
+h1{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:clamp(2rem,5.5vw,2.9rem);line-height:1.05;margin:0 0 12px;
+ letter-spacing:-.015em;}
+.unterzeile{font-family:"Newsreader",Georgia,serif;font-size:1.12rem;
+ color:var(--ink-soft);margin:0;max-width:60ch;}
+.methode{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ color:var(--ink-faint);padding-top:12px;margin:0 0 44px;}
+section{margin-bottom:52px;}
+h2{font-family:"Newsreader",Georgia,serif;font-weight:600;font-size:1.55rem;
+ margin:0 0 4px;}
+.hinweis{font-size:.92rem;color:var(--ink-faint);margin:0 0 24px;
+ padding-bottom:12px;border-bottom:1px solid var(--line);max-width:64ch;}
+.thema{background:var(--surface);border:1px solid var(--line);
+ padding:22px 24px;margin-bottom:14px;}
+.kopf{display:flex;gap:16px;align-items:flex-start;margin-bottom:14px;}
+.nr{font-family:"IBM Plex Mono",monospace;font-size:12px;color:var(--ink-faint);
+ padding-top:6px;}
+.thema h3{font-family:"Newsreader",Georgia,serif;font-weight:600;
+ font-size:1.3rem;line-height:1.22;margin:0;flex:1;text-wrap:balance;}
+.zaehler{display:flex;flex-direction:column;align-items:flex-end;gap:5px;
+ min-width:92px;padding-top:4px;}
+.zaehler b{font-family:"IBM Plex Mono",monospace;font-size:1.1rem;
+ font-weight:500;color:var(--accent);line-height:1;
+ font-variant-numeric:tabular-nums;}
+.zaehler span{font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);}
+.balken{width:92px;height:4px;background:var(--bar-bg);}
+.balken i{display:block;height:100%;background:var(--accent);}
+ul.belege,ul.einzeln{list-style:none;margin:0;padding:14px 0 0;
+ border-top:1px solid var(--line-soft);display:flex;flex-direction:column;}
+ul.einzeln{border-top:none;padding-top:0;}
+ul.belege li,ul.einzeln li{border-bottom:1px solid var(--line-soft);}
+ul.belege li:last-child,ul.einzeln li:last-child{border-bottom:none;}
+ul.belege a,ul.einzeln a{display:grid;grid-template-columns:125px 1fr;gap:14px;
+ padding:9px 0;text-decoration:none;color:var(--ink-soft);
+ transition:color .12s;}
+ul.belege a:hover,ul.einzeln a:hover{color:var(--accent);}
+ul.belege a:focus-visible,ul.einzeln a:focus-visible{outline:2px solid var(--accent);
+ outline-offset:2px;}
+.medium{font-family:"IBM Plex Mono",monospace;font-size:11px;
+ letter-spacing:.04em;color:var(--ink-faint);padding-top:3px;}
+.schlagzeile{font-size:.95rem;}
+.spalten{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+ gap:14px;}
+.spalte{background:var(--surface);border:1px solid var(--line);padding:16px 18px;}
+.spalte h4{font-family:"IBM Plex Mono",monospace;font-size:10.5px;
+ letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+ margin:0 0 10px;font-weight:500;}
+.spalte ol{margin:0;padding-left:18px;font-size:.9rem;}
+.spalte li{margin-bottom:8px;}
+.spalte li:last-child{margin:0;}
+.spalte a{color:var(--ink-soft);text-decoration:none;}
+.spalte a:hover{color:var(--accent);}
+.fehlt{color:var(--ink-faint);list-style:none;margin-left:-18px;}
+.warnung{background:var(--warn-bg);border-left:3px solid var(--warn);
+ padding:16px 20px;font-size:.92rem;}
+.warnung p{margin:0 0 8px;}
+.warnung ul{margin:0;padding-left:20px;}
+.ok{font-size:.92rem;color:var(--ok);margin:0;}
+.leer{color:var(--ink-soft);}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:.83rem;
+ color:var(--ink-faint);max-width:66ch;}
+@media (max-width:520px){
+  ul.belege a,ul.einzeln a{grid-template-columns:1fr;gap:2px;}
+  .medium{padding-top:0;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <p class="datum">Friday, 20. November 2026 &middot; 15:09 Uhr</p>
+  <h1>Presseschau</h1>
+  <p class="unterzeile">Sortiert danach, wie viele Redaktionen dasselbe Thema führen.</p>
+</header>
+<p class="methode">358 Meldungen aus 9 Quellen &middot; Zeitfenster 26 Stunden</p>
+
+<section>
+  <h2>Was mehrere bringen</h2>
+  <p class="hinweis">Der Balken zeigt die Zahl der Redaktionen. Darunter jede Schlagzeile einzeln — so siehst du, wie unterschiedlich dieselbe Meldung betitelt wird.</p>
+  
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">01</span>
+          <h3>Ukraine-Krieg - Russische Flugobjekte in Polen: NATO sichert Unterstützung zu</h3>
+          <div class="zaehler">
+            <b>9</b>
+            <div class="balken"><i style="width:100%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/russische-flugobjekte-in-polen-nato-sichert-unterstuetzung-zu-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Russische Flugobjekte in Polen: NATO sichert Unterstützung zu</span></a></li><li><a href="https://www.deutschlandfunk.de/naechtlicher-russischer-angriff-mit-400-drohnen-auf-die-ukraine-polen-ermittelt-nach-einschlag-russi-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Nächtlicher russischer Angriff mit 400 Drohnen auf die Ukraine - Polen ermittelt nach Einschlag russischer Rakete</span></a></li><li><a href="https://www.tagesschau.de/video/video-1687030.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Mehrere russische Flugobjekte in polnischen Luftraum eingedrungen</span></a></li><li><a href="https://www.zeit.de/politik/ausland/2026-11/russland-raketen-luftraumverletzung-polen-ukraine-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Krieg gegen die Ukraine: Russische Marschflugkörper stürzen in Polen ab</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/ukraine-russland-konflikt-blog-102.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelles zum Krieg in der Ukraine</span></a></li><li><a href="https://www.welt.de/politik/ausland/article6afffac1be487c543774694d/polen-meldet-absturz-mehrerer-russischer-flugobjekte-nato-verurteilt-luftraumverletzungen.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Polen meldet Absturz mehrerer russischer Flugobjekte – Nato verurteilt Luftraumverletzungen</span></a></li><li><a href="https://taz.de/Russische-Raketen-in-Polen-abgestuerzt/!6231772/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Russische Raketen in Polen abgestürzt: Drei Fundorte, zwei mutmaßliche Raketen und eine Drohne</span></a></li><li><a href="https://www.spiegel.de/ausland/polen-meldet-absturz-von-drei-russischen-flugobjekten-a-590c07a8-aff7-45f3-bc77-38cc81cffb65#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Polen meldet Absturz von drei russischen Flugobjekten</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-liveticker-tote-und-verletzte-bei-russischen-angriffen-auf-bruecken-in-kiew-faz-110683325.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Liveblog Ukrainekrieg: Marschflugkörper in Polen abgestürzt</span></a></li><li><a href="https://www.sueddeutsche.de/politik/ukraine-krieg-newsblog-polen-russland-luftraum-li.3571967" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Krieg in der Ukraine: Polens Regierung: Russische Flugobjekte verletzen Luftraum</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">02</span>
+          <h3>Tarifkonflikt - 24-Stunden Warnstreiks der IG Metall: &quot;Die Produktion ruht&quot;</h3>
+          <div class="zaehler">
+            <b>6</b>
+            <div class="balken"><i style="width:67%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/24-stunden-warnstreiks-der-ig-metall-die-produktion-ruht-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Tarifkonflikt - 24-Stunden Warnstreiks der IG Metall: &quot;Die Produktion ruht&quot;</span></a></li><li><a href="https://www.zeit.de/news/2026-11/20/ig-metall-setzt-erneut-auf-warnstreiks" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Metall- und Elektroindustrie: IG Metall setzt erneut auf Warnstreiks</span></a></li><li><a href="https://taz.de/Metall--und-Elektroindustrie/!6231753/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Metall- und Elektroindustrie: IG Metall erhöht den Druck</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/warnstreiks-24-stunden-ig-metall-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">IG Metall beginnt erste 24-Stunden-Streiks seit acht Jahren</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/arbeitsmarkt/warnstreik-ig-metall-126.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Arbeitskampf: 24-Stunden-Warnstreiks der IG Metall gestartet</span></a></li><li><a href="https://taz.de/Tarifverhandlungen-bei-Volkswagen/!6231595/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Tarifverhandlungen bei Volkswagen: Vorstand legt IG Metall „Giftliste“ vor</span></a></li><li><a href="https://www.zdfheute.de/wirtschaft/unternehmen/vw-ig-metall-tarifstreit-35-stunden-woche-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Die Kriegserklärung – VW und IG Metall auf Konfrontationskurs</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/tesla-gegen-ig-metall-warum-werkleiter-thierig-vor-gericht-muss-201698697.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Tesla gegen IG Metall: Fortsetzung folgt</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/arbeitsmarkt/warnstreik-ig-metall-124.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Warnstreiks der IG Metall</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">03</span>
+          <h3>Auslosung - Deutschland spielt im Viertelfinale der Nations League gegen Belgien</h3>
+          <div class="zaehler">
+            <b>5</b>
+            <div class="balken"><i style="width:56%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/deutschland-spielt-im-viertelfinale-der-nations-league-gegen-belgien-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Auslosung - Deutschland spielt im Viertelfinale der Nations League gegen Belgien</span></a></li><li><a href="https://www.sportschau.de/fussball/nationsleague/deutschland-trifft-im-viertelfinale-auf-belgien,nations-league-auslosung-104.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Nations League: Deutschland trifft im Viertelfinale auf Belgien</span></a></li><li><a href="https://www.spiegel.de/sport/fussball/nations-league-deutschland-trifft-auf-belgien-und-kevin-de-bruyne-a-c92fa99f-e865-4c42-901d-9bb1e0dfa622#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Nations League: Deutschland trifft auf Belgien und Kevin De Bruyne</span></a></li><li><a href="https://www.zdfheute.de/sport/fussball-nations-league-auslosung-viertelfinale-deutschland-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Nations League: Deutschland muss gegen Belgien ran</span></a></li><li><a href="https://www.faz.net/aktuell/sport/fussball/liveticker-nationalmannschaft-deutschland-gegen-belgien-im-viertelfinale-faz-201651368.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Fußball-Liveblog: Deutschland trifft in Nations League auf Belgien</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">04</span>
+          <h3>Landtag - Sachsen-Anhalt: AfD-Politiker Siegmund will bereits am 8. Dezember als Ministerpräsident kandidieren</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:44%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/sachsen-anhalt-afd-politiker-siegmund-will-bereits-am-8-dezember-als-ministerpraesident-kandidieren-110.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Landtag - Sachsen-Anhalt: AfD-Politiker Siegmund will bereits am 8. Dezember als Ministerpräsident kandidieren</span></a></li><li><a href="https://www.deutschlandfunk.de/afd-erhaelt-zwei-sitze-im-parlamentarischen-kontrollgremium-in-sachsen-anhalt-106.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Landtag - AfD erhält zwei Sitze im Parlamentarischen Kontrollgremium in Sachsen-Anhalt</span></a></li><li><a href="https://www.mdr.de/nachrichten/sachsen-anhalt/landtagswahl/wahl-ministerpraesident-zeitpunkt-video-social-media-einschaetzung-mp-wahl,afd-siegmund-114.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">AfD lässt laut Siegmund Wahl von Ministerpräsident in Sachsen-Anhalt vorziehen</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/sachsen-anhalt-wahl-ministerpraesident-termin-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">AfD in Sachsen-Anhalt: Mit Gaming-Romantik an die Macht?</span></a></li><li><a href="https://taz.de/AfD-Kandidat-in-Sachsen-Anhalt/!6231426/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">AfD-Kandidat in Sachsen-Anhalt: Siegmunds Schlingerkurs</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">05</span>
+          <h3>Bundesrat - Führerschein soll billiger werden</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:44%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/fuehrerschein-soll-billiger-werden-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundesrat - Führerschein soll billiger werden</span></a></li><li><a href="https://www.deutschlandfunk.de/reform-der-notfallversorgung-kann-in-kraft-treten-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundesrat - Reform der Notfallversorgung kann in Kraft treten</span></a></li><li><a href="https://www.zeit.de/politik/deutschland/2026-11/bundesrat-reformen-fuehrerschein-cyberabwehr-notfallversorgung-altersvorsorge-kinder-sprachtests-kitas-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Gesetzesreformen: Bundesrat billigt Reformen zu Führerschein, Cyberabwehr und Notfällen</span></a></li><li><a href="https://taz.de/Entlastung-fuer-Krankenhaeuser/!6231792/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Entlastung für Krankenhäuser: Bundesrat billigt Reform der Notfallversorgung</span></a></li><li><a href="https://www.sueddeutsche.de/politik/bundesregierung-liveblog-koalitionsausschuss-stromsteuer-fruehstartrente-li.3580621" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Bundespolitik: Frühstartrente, Reform der Notfallversorgung: Was der Bundesrat beschließt – und was nicht</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">06</span>
+          <h3>Galeria - Drei Filialen werden geschlossen</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:44%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/drei-filialen-werden-geschlossen-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Galeria - Drei Filialen werden geschlossen</span></a></li><li><a href="https://www.zeit.de/wirtschaft/2026-11/galeria-filialschliessungen-berlin-kurfuerstendamm-koeln-muenchen-gxe" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Kaufhauskette: Galeria schließt drei weitere Filialen</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/galerie-schliessung-filialen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Galeria schließt drei Filialen - und noch viele mehr?</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/galeria-schliesst-filialen-in-berlin-koeln-und-muenchen-accg-201702040.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">400 Mitarbeiter betroffen: Galeria schließt Filialen in Berlin, Köln und München</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">07</span>
+          <h3>Koalition der Willigen: Die Europäer sind sich einig – dann ruft Trump aus der „Air Force One“ an</h3>
+          <div class="zaehler">
+            <b>4</b>
+            <div class="balken"><i style="width:44%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.sueddeutsche.de/politik/ukraine-konferenz-berlin-friedrich-merz-europa-donald-trump-jared-kushner-li.3582903" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Koalition der Willigen: Die Europäer sind sich einig – dann ruft Trump aus der „Air Force One“ an</span></a></li><li><a href="https://taz.de/Koalition-der-Willigen-in-Berlin/!6231596/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">„Koalition der Willigen“ in Berlin: Ein Bröckchen Mauer und viel Soli</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukraine-gipfel-in-berlin-warum-donald-trump-mittendrin-anruft-201698553.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Koalition der Willigen: Der Gipfel im Schatten des Gipfels</span></a></li><li><a href="https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5249068" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Ukraine-Hilfen: Ergebnisse des Treffens der &quot;Koalition der Willigen&quot;</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">08</span>
+          <h3>Geopolitik-briefing: Mit dem Atomkoffer zum Gipfeltreffen: Trump, Putin und Xi in Shenzhen</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/podcasts/nico-lange/apec-gipfel-in-shenzhen-was-folgt-aus-dem-gipfel-von-trump-putin-und-xi-201701357.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Geopolitik-briefing: Mit dem Atomkoffer zum Gipfeltreffen: Trump, Putin und Xi in Shenzhen</span></a></li><li><a href="https://www.tagesschau.de/ausland/us-reaktionen-dreiergipfel-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Kritik aus den USA nach Treffen Trumps mit Xi und Putin</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/illner-gabriel-masala-lagodinsky-rudyak-dreier-gipfel-trump-putin-xi-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Trump, Putin, Xi: Wie sich die Weltordnung neu sortiert</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/trump-xi-putin-shenzen-ergebnis-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Trump, Xi und Putin: Große Worte, wenig Konkretes</span></a></li><li><a href="https://www.tagesschau.de/ausland/asien/dreiergipfel-xi-trump-putin-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Dreiergipfel in Shenzhen: Xis Choreografie - assistiert von Trump und Putin</span></a></li><li><a href="https://www.zdfheute.de/video/dreiergipfel-friedenserklaerung-video-100-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">&quot;Friedenserklärung&quot; von Putin, Xi und Trump</span></a></li><li><a href="https://www.phoenix.de/php/mediaplayer/vod_embed.php?cmsid=5249013" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Dreiertreffen von Xi, Trump und Putin</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">09</span>
+          <h3>Vermittlungsausschuss - Bundesrat stoppt Startchancengesetz</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bundesrat-stoppt-startchancengesetz-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Vermittlungsausschuss - Bundesrat stoppt Startchancengesetz</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/bundesrat-stoppt-startchancen-und-qualitaetsentwicklungsgesetz-accg-201701241.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Bildung in Kitas: Priens wichtigstes Projekt scheitert vorerst im Bundesrat</span></a></li><li><a href="https://www.tagesschau.de/inland/innenpolitik/bundesrat-startchancengesetz-fruehstartrente-notfallreform-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Bundesrat stoppt &quot;Startchancengesetz&quot; vorerst</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">10</span>
+          <h3>Türkei - Urteil hindert Erdogan-Herausforderer Imamoglu an Präsidentschaftskandidatur - Gericht bestätigt Aberkennung des Diploms</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/urteil-hindert-erdogan-herausforderer-imamoglu-an-praesidentschaftskandidatur-gericht-bestaetigt-abe-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Türkei - Urteil hindert Erdogan-Herausforderer Imamoglu an Präsidentschaftskandidatur - Gericht bestätigt Aberkennung des Diploms</span></a></li><li><a href="https://www.tagesschau.de/ausland/europa/tuerkei-imamoglu-104.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Urteil hindert İmamoğlu an Präsidentschaftskandidatur in der Türkei</span></a></li><li><a href="https://www.zdfheute.de/politik/ausland/tuerkei-imamoglu-istanbul-diplom-praesidentschaftskandidatur-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Türkei: Imamoglu droht das politische Aus</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">11</span>
+          <h3>KI-Firma - Anthropic startet mit kräftigem Kursplus an der Börse</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/anthropic-startet-mit-kraeftigem-kursplus-an-der-boerse-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">KI-Firma - Anthropic startet mit kräftigem Kursplus an der Börse</span></a></li><li><a href="https://www.faz.net/aktuell/finanzen/boersenstart-anthropic-gelingt-kurssprung-um-34-prozent-201699078.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">17 Prozent Kursplus: Fulminanter Börsenstart für Anthropic</span></a></li><li><a href="https://www.spiegel.de/wirtschaft/anthropic-kann-den-negativtrend-an-den-boersen-nicht-aufhalten-a-2ebc6562-4f98-4fe9-9efe-f4a8a0b805fe#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Anthropic kann den Negativtrend an den Börsen nicht aufhalten</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">12</span>
+          <h3>Rhein-Main-Liveblog: Protesttag in Frankfurt: „Gen Z regelt“ läuft nun doch durch die Stadt</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/rhein-main/jugendproteste-in-frankfurt-gen-z-aendert-plaene-und-zieht-mit-tausenden-teilnehmern-durch-die-stadt-aktuelle-nachrichten-aus-frankfurt-hessen-faz-19735361.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Rhein-Main-Liveblog: Protesttag in Frankfurt: „Gen Z regelt“ läuft nun doch durch die Stadt</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/gen-z-regelt-neue-proteste-freitag-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Wo heute neue Proteste von &quot;Gen Z regelt&quot; stattfinden</span></a></li><li><a href="https://www.tagesschau.de/inland/gesellschaft/gen-z-regelt-proteste-106.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Protest von &quot;Gen Z regelt&quot;: Eine zersplitterte Bewegung</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">13</span>
+          <h3>„In der Gesamtgemengelage leidet Anthropic trotz Börsengang erstmal mit“</h3>
+          <div class="zaehler">
+            <b>3</b>
+            <div class="balken"><i style="width:33%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/wirtschaft/video6b00358d39a3e8110f0e3e4f/tech-beben-in-der-gesamtgemengelage-leidet-anthropic-trotz-boersengang-erstmal-mit.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„In der Gesamtgemengelage leidet Anthropic trotz Börsengang erstmal mit“</span></a></li><li><a href="https://taz.de/Der-groesste-Boersengang-der-Geschichte-Gross-groesser-Anthropic/!6231351/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Börsengang von KI-Unternehmen: Groß, größer, Anthropic</span></a></li><li><a href="https://www.faz.net/aktuell/finanzen/boersen-maerkte/anthropic-boersengang-warum-deutschland-aufwachen-muss-201698877.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Börsengang von Anthropic: Der Weckruf für Deutschland</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">14</span>
+          <h3>Gen Z regelt: Tausende junge Menschen demonstrieren auf dem Alexanderplatz</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-11/genz-regelt-proteste-live" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Gen Z regelt: Tausende junge Menschen demonstrieren auf dem Alexanderplatz</span></a></li><li><a href="https://www.deutschlandfunk.de/junge-menschen-demonstrieren-in-zahlreichen-staedten-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">&quot;Gen Z regelt&quot; und Schülerkonferenz - Junge Menschen demonstrieren in zahlreichen Städten</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">15</span>
+          <h3>Gipfel in Brüssel - EU und Großbritannien vereinbaren Annäherung in vielen Bereichen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/eu-und-grossbritannien-vereinbaren-annaeherung-in-vielen-bereichen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Gipfel in Brüssel - EU und Großbritannien vereinbaren Annäherung in vielen Bereichen</span></a></li><li><a href="https://www.tagesschau.de/video/video-1687028.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Tina Hassel, ARD Brüssel, zum Gipfeltreffen zwischen der EU und Großbritannien</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">16</span>
+          <h3>Luftverkehr - Lufthansa will 1.000 Stellen an Drehkreuzen streichen und Flotte auf Kurz- und Mittelstrecken verkleinern</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/lufthansa-will-1-000-stellen-an-drehkreuzen-streichen-und-flotte-auf-kurz-und-mittelstrecken-verklei-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Luftverkehr - Lufthansa will 1.000 Stellen an Drehkreuzen streichen und Flotte auf Kurz- und Mittelstrecken verkleinern</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/lufthansa-1000-stellen-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Medienberichte: Lufthansa will 1.000 Stellen streichen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">17</span>
+          <h3>Kriminalität - EU-Kommission war Ziel von Cyberangriff mit Künstlicher Intelligenz</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/eu-kommission-war-ziel-von-cyberangriff-mit-kuenstlicher-intelligenz-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Kriminalität - EU-Kommission war Ziel von Cyberangriff mit Künstlicher Intelligenz</span></a></li><li><a href="https://www.zdfheute.de/politik/deutschland/eu-kommission-cyberangriff-ki-100.html" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">KI-gestützter Cyberangriff gegen EU-Kommission</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">18</span>
+          <h3>Berlin - Bundesfamilienministerin Prien will Jungen und Männer bei Gleichstellungspolitik in den Blick nehmen</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/bundesfamilienministerin-prien-will-jungen-und-maenner-bei-gleichstellungspolitik-in-den-blick-nehme-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Berlin - Bundesfamilienministerin Prien will Jungen und Männer bei Gleichstellungspolitik in den Blick nehmen</span></a></li><li><a href="https://www.faz.net/aktuell/politik/inland/karin-prien-fordert-gleichstellungspolitik-fuer-jungen-und-maenner-accg-201701120.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Konferenz in Berlin: Prien will Gleichstellungspolitik für Jungen und Männer</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">19</span>
+          <h3>Rohingya - Bürgerrechtsorganisationen begrüßen Völkermord-Urteil</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.deutschlandfunk.de/buergerrechtsorganisationen-begruessen-voelkermord-urteil-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Rohingya - Bürgerrechtsorganisationen begrüßen Völkermord-Urteil</span></a></li><li><a href="https://taz.de/Nach-Voelkermord-Urteil/!6231774/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Nach Völkermord-Urteil: Malaysia plant Umsiedlung von 10.000 Rohingya in die Türkei</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">20</span>
+          <h3>Gespräche mit Russland ja - aber wo?</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.tagesschau.de/ausland/asien/russland-ukraine-gespraeche-europa-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Gespräche mit Russland ja - aber wo?</span></a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukrainekrieg-europa-bereitet-sich-auf-gespraeche-mit-russland-vor-accg-201701260.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Ukraine-Verhandlungen: Europäer bereiten sich auf Gespräche mit Russland vor</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">21</span>
+          <h3>Energiewende in der Lausitz: Das höchste Windrad der Welt</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Energiewende-in-der-Lausitz/!6231786/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Energiewende in der Lausitz: Das höchste Windrad der Welt</span></a></li><li><a href="https://www.faz.net/aktuell/wirtschaft/klima-nachhaltigkeit/hoechstes-windrad-der-welt-gicon-nimmt-anlage-in-der-lausitz-in-betrieb-201697941.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Lausitz: Höchstes Windrad der Welt soll in Betrieb gehen</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">22</span>
+          <h3>Annalena Baerbock wird Beraterin</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.spiegel.de/wirtschaft/annalena-baerbock-wird-beraterin-a-b0f7d531-e5ac-4a88-bf02-35894245c6f4#ref=rss" target="_blank" rel="noopener"><span class="medium">Spiegel</span><span class="schlagzeile">Annalena Baerbock wird Beraterin</span></a></li><li><a href="https://www.welt.de/politik/deutschland/article6b00372ebe487c5437747171/annalena-baerbock-geostrategische-expertise-ex-aussenministerin-hat-neuen-beraterjob.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">„Geostrategische Expertise“ – Annalena Baerbock hat neuen Beraterjob</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">23</span>
+          <h3>Tennis-Legende Jimmy Connors an Krebs erkrankt</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.welt.de/sport/tennis/article6b0025dbb237b5b41c9a2599/benutzt-sonnencreme-tennis-legende-jimmy-connors-an-krebs-erkrankt.html" target="_blank" rel="noopener"><span class="medium">Welt</span><span class="schlagzeile">Tennis-Legende Jimmy Connors an Krebs erkrankt</span></a></li><li><a href="https://www.faz.net/aktuell/sport/mehr-sport/jimmy-connors-ex-tennis-star-gibt-krebserkrankung-in-podcast-bekannt-accg-201701694.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Grand-Slam-Gewinner: Tennis-Legende Jimmy Connors an Krebs erkrankt</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">24</span>
+          <h3>Abgesagte Evonik-übernahme: Die Pommes-Pleite der BASF</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/uebernahme-von-evonik-abgesagt-die-pommes-pleite-der-basf-201701517.html" target="_blank" rel="noopener"><span class="medium">FAZ</span><span class="schlagzeile">Abgesagte Evonik-übernahme: Die Pommes-Pleite der BASF</span></a></li><li><a href="https://www.tagesschau.de/wirtschaft/unternehmen/basf-evonik-uebernahme-absage-100.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">BASF bläst Evonik-Übernahme ab</span></a></li></ul>
+      </article>
+
+      <article class="thema">
+        <div class="kopf">
+          <span class="nr">25</span>
+          <h3>Pistorius besucht Auschwitz: Minister für Verteidigung und Antifaschismus</h3>
+          <div class="zaehler">
+            <b>2</b>
+            <div class="balken"><i style="width:22%"></i></div>
+            <span>Medien</span>
+          </div>
+        </div>
+        <ul class="belege"><li><a href="https://taz.de/Pistorius-besucht-Auschwitz/!6231727/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Pistorius besucht Auschwitz: Minister für Verteidigung und Antifaschismus</span></a></li><li><a href="https://www.sueddeutsche.de/politik/boris-pistorius-auschwitz-afd-verbotsverfahren-verteidigungsminister-spd-li.3583141" target="_blank" rel="noopener"><span class="medium">Süddeutsche</span><span class="schlagzeile">Verteidigungsminister: Warum Boris Pistorius gerade jetzt Auschwitz besucht</span></a></li></ul>
+      </article>
+</section>
+
+<section>
+  <h2>Die Aufmacher je Medium</h2>
+  <p class="hinweis">Die jeweils ersten drei Meldungen aus jedem Feed, unabhängig vom Ranking oben.</p>
+  <div class="spalten"><div class="spalte"><h4>tagesschau</h4><ol><li><a href="https://www.tagesschau.de/ausland/europa/absturz-russische-flugobjekte-polen-100.html" target="_blank" rel="noopener">Polen wirft Russland gezielte Provokation vor</a></li><li><a href="https://www.tagesschau.de/ausland/asien/russland-ukraine-gespraeche-europa-100.html" target="_blank" rel="noopener">Gespräche mit Russland ja - aber wo?</a></li><li><a href="https://www.tagesschau.de/ausland/ukraine-russland-angriffe-bruecken-100.html" target="_blank" rel="noopener">Tote bei russischen Angriffen auf mehrere Brücken in Kiew</a></li></ol></div><div class="spalte"><h4>ZDFheute</h4><ol><li><a href="https://www.zdfheute.de/politik/deutschland/gen-z-proteste-schulpolitik-militaerdienst-liveblog-100.html" target="_blank" rel="noopener">Gen-Z-Proteste: Hohes Polizeiaufgebot in vielen Städten</a></li><li><a href="https://www.zdfheute.de/politik/deutschland/proteste-gen-z-regelt-interview-100.html" target="_blank" rel="noopener">Experte: Protestbewegung hat enorm an Rückhalt verloren</a></li><li><a href="https://www.zdfheute.de/politik/spd-parteivorsitz-schwesig-klingbeil-heil-100.html" target="_blank" rel="noopener">SPD-Vorsitz: Warten auf &quot;Manu&quot;</a></li></ol></div><div class="spalte"><h4>Deutschlandfunk</h4><ol><li><a href="https://www.deutschlandfunk.de/verhandlungen-bei-weltklimakonferenz-festgefahren-eu-fordert-aenderungen-100.html" target="_blank" rel="noopener">Antalya - Verhandlungen bei Weltklimakonferenz festgefahren - EU fordert Änderungen</a></li><li><a href="https://www.deutschlandfunk.de/eu-und-grossbritannien-vereinbaren-annaeherung-in-vielen-bereichen-100.html" target="_blank" rel="noopener">Gipfel in Brüssel - EU und Großbritannien vereinbaren Annäherung in vielen Bereichen</a></li><li><a href="https://www.deutschlandfunk.de/pistorius-einladung-von-putin-auszuschlagen-waere-das-falsche-signal-moskau-als-ort-komme-aber-nicht-100.html" target="_blank" rel="noopener">Ukraine-Krieg - Pistorius: Einladung von Putin auszuschlagen, wäre das falsche Signal - Moskau als Ort komme aber nicht in Frage</a></li></ol></div><div class="spalte"><h4>Spiegel</h4><ol><li><a href="https://www.spiegel.de/wirtschaft/deutsche-bank-wie-carsten-maschmeyer-zum-risikokunden-wurde-a-b7def544-3f6e-47e6-b740-1975f7c94243#ref=rss" target="_blank" rel="noopener">Deutsche Bank: Wie Carsten Maschmeyer zum Risikokunden wurde</a></li><li><a href="https://www.spiegel.de/panorama/gesellschaft/gen-z-regelt-so-laufen-die-proteste-newsblog-a-5b6f94e2-5b27-476e-966d-50850ad73956#ref=rss" target="_blank" rel="noopener">»Gen Z regelt«: Jugend geht auf die Straße – Wiener Polizei nimmt Demonstrierende fest</a></li><li><a href="https://www.spiegel.de/ausland/polen-meldet-absturz-von-drei-russischen-flugobjekten-a-590c07a8-aff7-45f3-bc77-38cc81cffb65#ref=rss" target="_blank" rel="noopener">Polen meldet Absturz von drei russischen Flugobjekten</a></li></ol></div><div class="spalte"><h4>Zeit Online</h4><ol><li><a href="https://www.zeit.de/news/2026-11/20/weihnachtsmaerkte-wie-bewertet-die-polizei-die-gefahr" target="_blank" rel="noopener">Sicherheit: Weihnachtsmärkte: Wie bewertet die Polizei die Gefahr?</a></li><li><a href="https://www.zeit.de/gesellschaft/zeitgeschehen/2026-11/genz-regelt-proteste-live" target="_blank" rel="noopener">Gen Z regelt: Tausende junge Menschen demonstrieren auf dem Alexanderplatz</a></li><li><a href="https://www.zeit.de/news/2026-11/20/neue-jugendproteste-prien-zeigt-verstaendnis" target="_blank" rel="noopener">Demos und Schulstreiks: Neuer Jugendprotest für bessere Bildung und Zukunftschancen</a></li></ol></div><div class="spalte"><h4>Süddeutsche</h4><ol><li><a href="https://www.sueddeutsche.de/politik/bundesregierung-merz-cdu-koalition-fehler-li.3583146" target="_blank" rel="noopener">Schwarz-rote Koalition: Erstaunlich, wie schlecht selbst in der CDU über Merz geredet wird</a></li><li><a href="https://www.sueddeutsche.de/sport/vuskovic-hsv-epo-doping-zweifel-test-sar-page-studie-li.3583171" target="_blank" rel="noopener">Zweifel an Epo-Analytik: Beweise gegen Mario Vuskovic? Reichen wir nach …</a></li><li><a href="https://www.sueddeutsche.de/politik/ukraine-konferenz-berlin-friedrich-merz-europa-donald-trump-jared-kushner-li.3582903" target="_blank" rel="noopener">Koalition der Willigen: Die Europäer sind sich einig – dann ruft Trump aus der „Air Force One“ an</a></li></ol></div><div class="spalte"><h4>FAZ</h4><ol><li><a href="https://www.faz.net/aktuell/wirtschaft/unternehmen/black-friday-2026-diese-tipps-sollte-jeder-kennen-accg-201699822.html" target="_blank" rel="noopener">bLACK week: Wie viel Rabatt ist drin in der Schnäppchenwoche?</a></li><li><a href="https://www.faz.net/aktuell/politik/ukraine/ukrainekrieg-europa-bereitet-sich-auf-gespraeche-mit-russland-vor-accg-201701260.html" target="_blank" rel="noopener">Ukraine-Verhandlungen: Europäer bereiten sich auf Gespräche mit Russland vor</a></li><li><a href="https://www.faz.net/aktuell/feuilleton/debatten/putin-xi-und-trump-warum-der-jalta-vergleich-falsch-ist-201701674.html" target="_blank" rel="noopener">Treffen in Shenzhen: Jalta ist der falsche Vergleich</a></li></ol></div><div class="spalte"><h4>Welt</h4><ol><li><a href="https://www.welt.de/politik/video6b0049cd5842ff528b9e1bff/aufruf-von-mirze-edis-weiss-er-dass-der-wohlstand-jeden-tag-hart-erarbeitet-wird.html" target="_blank" rel="noopener">„Weiß er, dass der Wohlstand jeden Tag hart erarbeitet wird?“</a></li><li><a href="https://www.welt.de/politik/ausland/plus6aff067739a3e8110f0e2758/lettischer-ministerpraesident-die-lage-eskaliert-das-ist-es-womit-wir-es-an-europas-ostgrenze-zu-tun-haben.html" target="_blank" rel="noopener">„Die Lage eskaliert. Das ist es, womit wir es an Europas Ostgrenze zu tun haben“</a></li><li><a href="https://www.welt.de/politik/deutschland/plus6afffabebe487c5437746947/differenzen-ueber-ukraine-kurs-nicht-wirklich-passend-pistorius-entschuldigt-sich-fuer-dumm-aeusserung-ueber-pentagon-vertreter.html" target="_blank" rel="noopener">„Nicht wirklich passend“ – Pistorius entschuldigt sich für „Dumm“-Äußerung über Pentagon-Vertreter</a></li></ol></div><div class="spalte"><h4>taz</h4><ol><li><a href="https://taz.de/Progressive-Christen-in-den-USA/!6231350/" target="_blank" rel="noopener">Progressive Christen in den USA: Demokratische Auferstehung</a></li><li><a href="https://taz.de/Internationaler-Protesttag-in-Italien/!6231430/" target="_blank" rel="noopener">Internationaler Protesttag in Italien: Flecktarn auf Mailands Straßen</a></li><li><a href="https://taz.de/Energiewende-in-der-Lausitz/!6231786/" target="_blank" rel="noopener">Energiewende in der Lausitz: Das höchste Windrad der Welt</a></li></ol></div></div>
+</section>
+
+<section>
+  <h2>Nur bei einem Haus</h2>
+  <p class="hinweis">Meldungen, die heute sonst niemand führt.</p>
+  <ul class="einzeln"><li><a href="https://3d.zdf.de/nachrichten-studio-design/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Entdecken Sie das ZDF-Nachrichtenstudio</span></a></li><li><a href="https://presseportal.zdf.de/pressemitteilungen/" target="_blank" rel="noopener"><span class="medium">ZDFheute</span><span class="schlagzeile">Aktuelle Pressemitteilungen des ZDF</span></a></li><li><a href="https://www.tagesschau.de/inland/gesellschaft/jugendproteste-114.html" target="_blank" rel="noopener"><span class="medium">tagesschau</span><span class="schlagzeile">Jugendliche erneut zu Tausenden auf den Straßen</span></a></li><li><a href="https://taz.de/Ungewoehnliche-Bitte/!6231444/" target="_blank" rel="noopener"><span class="medium">taz</span><span class="schlagzeile">Ungewöhnliche Bitte: Russische Eltern suchen Hilfe bei Melania Trump</span></a></li><li><a href="https://www.zeit.de/news/2026-11/20/weihnachtsmaerkte-wie-bewertet-die-polizei-die-gefahr" target="_blank" rel="noopener"><span class="medium">Zeit Online</span><span class="schlagzeile">Sicherheit: Weihnachtsmärkte: Wie bewertet die Polizei die Gefahr?</span></a></li><li><a href="https://www.deutschlandfunk.de/verhandlungen-bei-weltklimakonferenz-festgefahren-eu-fordert-aenderungen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Antalya - Verhandlungen bei Weltklimakonferenz festgefahren - EU fordert Änderungen</span></a></li><li><a href="https://www.deutschlandfunk.de/pistorius-einladung-von-putin-auszuschlagen-waere-das-falsche-signal-moskau-als-ort-komme-aber-nicht-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Ukraine-Krieg - Pistorius: Einladung von Putin auszuschlagen, wäre das falsche Signal - Moskau als Ort komme aber nicht in Frage</span></a></li><li><a href="https://www.deutschlandfunk.de/sicherheitsbehoerden-erhalten-mehr-befugnisse-bei-cyberabwehr-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bundesrat - Sicherheitsbehörden erhalten mehr Befugnisse bei Cyberabwehr</span></a></li><li><a href="https://www.deutschlandfunk.de/mehr-als-20-staaten-fordern-globalen-ausstieg-aus-fossilen-energien-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Weltklimakonferenz - Mehr als 20 Staaten fordern globalen Ausstieg aus fossilen Energien</span></a></li><li><a href="https://www.deutschlandfunk.de/in-heidelberg-gibt-es-das-erste-kirchliche-bestattungsinstitut-deutschlands-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Trauer - In Heidelberg gibt es das erste kirchliche Bestattungsinstitut Deutschlands</span></a></li><li><a href="https://www.deutschlandfunk.de/freie-waehler-wollen-aiwanger-nachfolge-rasch-klaeren-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Bayern - Freie Wähler wollen Aiwanger-Nachfolge rasch klären</span></a></li><li><a href="https://www.deutschlandfunk.de/beruechtigtes-gefaengnis-rikers-island-soll-bis-2032-geschlossen-werden-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">New York - Berüchtigtes Gefängnis Rikers Island soll bis 2032 geschlossen werden</span></a></li><li><a href="https://www.deutschlandfunk.de/deutsch-ukrainische-wirtschaftsforum-merz-fordert-kiew-zu-weiteren-reformen-auf-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Deutsch-ukrainische Wirtschaftsforum: Merz fordert Kiew zu weiteren Reformen auf</span></a></li><li><a href="https://www.deutschlandfunk.de/bahn-will-fahrtzeit-zwischen-berlin-und-wolfsburg-verkuerzen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Verkehr - Bahn will Fahrtzeit zwischen Berlin und Wolfsburg verkürzen</span></a></li><li><a href="https://www.deutschlandfunk.de/bundesrat-billigt-fruehstartrente-und-digitale-brieftasche-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Länderkammer - Bundesrat billigt Frühstartrente und digitale Brieftasche</span></a></li><li><a href="https://www.deutschlandfunk.de/russland-nimmt-ukrainische-bruecken-ins-visier-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Raketenangriffe - Russland nimmt ukrainische Brücken ins Visier</span></a></li><li><a href="https://www.deutschlandfunk.de/myanmar-weist-voelkermordurteil-als-ungerecht-zurueck-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Internationaler Gerichtshof - Myanmar weist Völkermordurteil als ungerecht zurück</span></a></li><li><a href="https://www.deutschlandfunk.de/weltklimagipfel-in-der-tuerkei-vor-dem-abschluss-unterzeichnung-gemeinsamer-abschlusserkaerung-noch--100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">COP31 - Weltklimagipfel in der Türkei vor dem Abschluss - Unterzeichnung gemeinsamer Abschlusserkärung noch ungewiss</span></a></li><li><a href="https://www.deutschlandfunk.de/wadephul-begruesst-erklaerung-chinas-russlands-und-der-usa-zur-vermeidung-eines-atomkrieges-104.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Treffen in Shenzhen - Wadephul begrüßt Erklärung Chinas, Russlands und der USA zur Vermeidung eines Atomkrieges</span></a></li><li><a href="https://www.deutschlandfunk.de/erzeugerpreise-stark-gestiegen-8-1-hoeher-als-im-oktober-des-vorjahres-102.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Statistisches Bundesamt - Erzeugerpreise stark gestiegen - 8,1 höher als im Oktober des Vorjahres</span></a></li><li><a href="https://www.deutschlandfunk.de/flaechendeckende-vernachlaessigung-verbaende-rufen-politik-zum-tag-der-kinderrechte-zum-handeln-auf-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Gesellschaft - &quot;Flächendeckende Vernachlässigung&quot;: Verbände rufen Politik zum Tag der Kinderrechte zum Handeln auf</span></a></li><li><a href="https://www.deutschlandfunk.de/caritas-praesidentin-vorlesen-zeigt-kindern-dass-sie-geliebt-werden-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Aktionstag - Caritas-Präsidentin: Vorlesen zeigt Kindern, dass sie geliebt werden</span></a></li><li><a href="https://www.deutschlandfunk.de/mehr-transparenz-eu-plant-drei-neue-kategorien-fuer-nachhaltige-etfs-fonds-und-andere-finanzprodukte-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">ESG - Mehr Transparenz: EU plant drei neue Kategorien für nachhaltige ETFs, Fonds und andere Finanzprodukte</span></a></li><li><a href="https://www.deutschlandfunk.de/spritklau-landeskriminalaemter-registrieren-teils-massive-zunahmen-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Medienbericht - Spritklau: Landeskriminalämter registrieren teils massive Zunahmen</span></a></li><li><a href="https://www.deutschlandfunk.de/emir-von-katar-zu-staatsbesuch-erwartet-empfang-mit-militaerischen-ehren-100.html" target="_blank" rel="noopener"><span class="medium">Deutschlandfunk</span><span class="schlagzeile">Berlin - Emir von Katar zu Staatsbesuch erwartet - Empfang mit militärischen Ehren</span></a></li></ul>
+</section>
+
+<section>
+  <h2>Quellenstatus</h2>
+  <p class="hinweis">Damit du merkst, wenn ein Feed stillschweigend ausfällt.</p>
+  <p class="ok">Alle Quellen haben geantwortet.</p>
+</section>
+
+<footer>
+  Automatisch erzeugt am 20.11.2026 um 15:09 Uhr.
+  Ausgegeben werden ausschließlich Überschriften, Medienname und Link —
+  kein Artikeltext. Zusammengefasst wird nichts.
+</footer>
+
+</div>
+</body>
+</html>
